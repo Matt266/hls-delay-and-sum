@@ -1,0 +1,1 @@
+# Delay and Sum implementation in Vitis HLS
