@@ -1,11 +1,16 @@
-#include "DelayAndSum.hpp"
+#include <array>
 #include <iostream> 
 #include <fstream>
+
+#include "TestData.hpp"
+#include "DelayAndSum.hpp"
 
 int main(){
     int ret = 0;
 
-    std::ifstream fs("test_fstream.txt", std::ifstream::in);
-    
+    for(unsigned int i = 0; i < NUM_ANGLES; i++){
+        DelayAndSum()
+    }
+
     return ret;
 }

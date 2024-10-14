@@ -1,0 +1,58 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlsrun_csim_summary, at 10/14/24 07:52:45
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum -config C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg -cmdlineconfig C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline
+INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Mon Oct 14 07:52:47 +0200 2024
+INFO: [HLS 200-10] In directory 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum'
+INFO: [HLS 200-2005] Using work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+WARNING: [HLS 200-2001] file not found 'GenerateData.jlum.hpp' see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+WARNING: [HLS 200-2001] file not found 'generatetestdata.jl' see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+WARNING: [HLS 200-2001] file not found 'GenerateTestData.jl' see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+WARNING: [HLS 200-40] Cannot find design file 'GenerateTestData.jl'
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=GenerateData.jlum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+WARNING: [HLS 200-40] Cannot find test bench file 'GenerateData.jlum.hpp'
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=generatetestdata.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+WARNING: [HLS 200-40] Cannot find test bench file 'generatetestdata.jl'
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+WARNING: [HLS 200-1998] cannot find relative file path '../../GenerateData.jlum.hpp' in directory(s): C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum
+WARNING: [HLS 200-1998] cannot find relative file path '../../generatetestdata.jl' in directory(s): C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum
+INFO: [SIM 211-200] Executing Code Analyzer instead of classic HLS C simulation
+INFO: [SIM 211-200] Compiling source code DelayAndSum.cpp as hardware code with instrumentation
+INFO: [SIM 211-200] Compiling source code stub.cpp as hardware code with instrumentation
+INFO: [SIM 211-200] Compiling source code DelayAndSumTB.cpp as test bench code with instrumentation
+INFO: [SIM 211-200] Compiling source code stub.cpp as test bench code with instrumentation
+INFO: [SIM 211-200] Compiling source code DelayAndSum.cpp as test bench code with instrumentation
+INFO: [SIM 211-200] Linking hardware code
+INFO: [SIM 211-200] Transforming hardware bitcode
+INFO: [SIM 211-200] Linking executable
+INFO: [SIM 211-200] Determining source code dependencies
+INFO: [SIM 211-200] Generating static call graph
+INFO: [SIM 211-200] Analyzing Interfaces
+slxcmd:0:0: error: No such file 'C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\generatedata.jlum.hpp'. Required to run 'copy C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\generatedata.jlum.hpp,C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\generatetestdata.jl,C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\generatetestdata.jl,C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\generate_test_data.jl to C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\csim\code_analyzer\tracing\csim\build'
+ERROR: [SIM 211-200] Code Analyzer execution failed. Consider running the classic C simulation instead by disabling the hls.csim.code_analyzer option in the config file.
+ERROR: Problem running csim: child process exited abnormally
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 0 seconds. Total elapsed time: 12.902 seconds; peak allocated memory: 230.785 MB.

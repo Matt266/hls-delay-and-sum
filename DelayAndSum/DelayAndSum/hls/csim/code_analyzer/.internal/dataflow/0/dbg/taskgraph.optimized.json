@@ -1,0 +1,171 @@
+[
+    {
+        "name": "_Z3topPi",
+        "df_function": "%F326",
+        "df_type": "Function",
+        "project": "SLX",
+        "processes": {
+            "1": {
+                "id": "1",
+                "name": "Artificial<Start>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\stub.cpp",
+                        "line": 1,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\stub.cpp",
+                        "line": 3,
+                        "column": 1
+                    }
+                },
+                "display_name": "<START>",
+                "kind": "start"
+            },
+            "2": {
+                "id": "2",
+                "name": "Artificial<End>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\stub.cpp",
+                        "line": 1,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\stub.cpp",
+                        "line": 3,
+                        "column": 1
+                    }
+                },
+                "display_name": "<END>",
+                "kind": "end"
+            },
+            "3": {
+                "id": "3",
+                "name": "Region<OutlineCall(R2 top) BB 'codeRepl' [Atomic] 'Outline_T3_F326_R2_Atomic'>",
+                "display_name": "Process 1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\stub.cpp",
+                                    "line": 1,
+                                    "column": 0
+                                },
+                                "id": "VId_254_*0(0,32)arg",
+                                "name": "(*a)",
+                                "display_name": "int *a"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 0
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\stub.cpp",
+                                    "line": 2,
+                                    "column": 5
+                                },
+                                "id": "VId_255_*0(0,32)arg",
+                                "name": "{Return}",
+                                "display_name": "int {Return}"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 1
+                        }
+                    ]
+                },
+                "subregions": [
+                    {
+                        "id": "%F327_R1",
+                        "description": "<function entry>"
+                    }
+                ],
+                "subdataflow": []
+            }
+        },
+        "channels": {
+            "(*a)_RAW_1_3_#0": {
+                "name": "(*a)_RAW_1_3_#0",
+                "variable_id": "VId_254_*0(0,32)arg",
+                "variable_name": "(*a)",
+                "declaration": "int *a",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\stub.cpp",
+                    "line": 1,
+                    "column": 0
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "{Return}_RAW_3_2_#1": {
+                "name": "{Return}_RAW_3_2_#1",
+                "variable_id": "VId_255_*0(0,32)arg",
+                "variable_name": "{Return}",
+                "declaration": "int {Return}",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\stub.cpp",
+                    "line": 2,
+                    "column": 5
+                },
+                "source": "3",
+                "sink": "2"
+            }
+        },
+        "control": [
+            {
+                "source": "1",
+                "sink": "3"
+            },
+            {
+                "source": "3",
+                "sink": "2"
+            }
+        ]
+    }
+]

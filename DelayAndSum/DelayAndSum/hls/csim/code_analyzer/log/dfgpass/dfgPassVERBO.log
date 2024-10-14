@@ -1,0 +1,167 @@
+dfgPass::INFOR: DFG Pass going to run on Module: C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\csim\code_analyzer\.internal\instrument\app_0\project.symbols.bc
+dfgPass::INFOR:     Getting ProgramContainer for application app
+dfgPass::INFOR:     Parsing the provided input trace files...
+dfgPass::INFOR:     Initializing InstructionCounter...
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond66
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body68
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body
+dfgPass::VERBO:         - memlocal of :dataInReal:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :weightsReal:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - arrayctor.loop3
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - arrayctor.loop
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN11ap_int_baseILi36ELb1EE18checkOverflowBaseCIiEEvT_ is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi36ELb1ELb1EE10set_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     _ZN10ap_privateILi36ELb1ELb1EE12check_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi34ELb1ELb1EE10set_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi34ELb1ELb1EE12check_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi33ELb1ELb1EE10set_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     _ZN10ap_privateILi33ELb1ELb1EE12check_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi64ELb1ELb1EE10set_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi64ELb1ELb1EE12check_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi32ELb1ELb1EE10set_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     _ZN10ap_privateILi32ELb1ELb1EE12check_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - arrayctor.loop35
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - arrayctor.loop24
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - arrayctor.loop9
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - arrayctor.loop
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi16ELb1ELb1EE10set_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     _ZN10ap_privateILi16ELb1ELb1EE12check_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::INFOR:     Parsing trace...
+dfgPass::INFOR:     End of the trace parse
+dfgPass::INFOR: Saving ProgramContainer...

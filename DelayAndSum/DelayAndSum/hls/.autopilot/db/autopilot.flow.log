@@ -1,0 +1,1708 @@
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 07:35:08 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id WARNING @200-2001@%s%s GenerateData.jlum.hpp see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+WARNING: [HLS 200-2001] file not found 'GenerateData.jlum.hpp' see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=GenerateData.jlum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=GenerateData.jlum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files -tb GenerateData.jlum.hpp 
+WARNING: [HLS 200-40] Cannot find test bench file 'GenerateData.jlum.hpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 7.178 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.18 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 7.43 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     config_csim -code_analyzer=1 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 7.535 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     send_msg_by_id WARNING @200-1998@%s%s ../../GenerateData.jlum.hpp C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum 
+WARNING: [HLS 200-1998] cannot find relative file path '../../GenerateData.jlum.hpp' in directory(s): C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum
+INFO-FLOW: ::SLX::run_csim failed: child process exited abnormally
+INFO-FLOW: Caught error in csim_design: Problem running csim: child process exited abnormally
+    while executing
+"error "Problem running $stage: $result""
+    (procedure "::AP::hls_slx_hook" line 54)
+    invoked from within
+"::AP::hls_slx_hook csim $config_value_dict replace_flow"
+    (procedure "ap_internal_csim_design" line 104)
+    invoked from within
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 2.128 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 07:40:52 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id WARNING @200-2001@%s%s GenerateData.jlum.hpp see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+WARNING: [HLS 200-2001] file not found 'GenerateData.jlum.hpp' see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=GenerateData.jlum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=GenerateData.jlum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files -tb GenerateData.jlum.hpp 
+WARNING: [HLS 200-40] Cannot find test bench file 'GenerateData.jlum.hpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 4.749 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.152 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 4.97 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     config_csim -code_analyzer=1 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 5.066 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     send_msg_by_id WARNING @200-1998@%s%s ../../GenerateData.jlum.hpp C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum 
+WARNING: [HLS 200-1998] cannot find relative file path '../../GenerateData.jlum.hpp' in directory(s): C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum
+INFO-FLOW: ::SLX::run_csim failed: child process exited abnormally
+INFO-FLOW: Caught error in csim_design: Problem running csim: child process exited abnormally
+    while executing
+"error "Problem running $stage: $result""
+    (procedure "::AP::hls_slx_hook" line 54)
+    invoked from within
+"::AP::hls_slx_hook csim $config_value_dict replace_flow"
+    (procedure "ap_internal_csim_design" line 104)
+    invoked from within
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 2.17 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 07:50:41 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id WARNING @200-2001@%s%s GenerateData.jlum.hpp see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+WARNING: [HLS 200-2001] file not found 'GenerateData.jlum.hpp' see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=GenerateData.jlum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=GenerateData.jlum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files -tb GenerateData.jlum.hpp 
+WARNING: [HLS 200-40] Cannot find test bench file 'GenerateData.jlum.hpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/GenerateTestData.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(19) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(19)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 2.092 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.241 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     config_csim -code_analyzer=1 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.336 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     send_msg_by_id WARNING @200-1998@%s%s ../../GenerateData.jlum.hpp C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum 
+WARNING: [HLS 200-1998] cannot find relative file path '../../GenerateData.jlum.hpp' in directory(s): C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum
+INFO-FLOW: ::SLX::run_csim failed: child process exited abnormally
+INFO-FLOW: Caught error in csim_design: Problem running csim: child process exited abnormally
+    while executing
+"error "Problem running $stage: $result""
+    (procedure "::AP::hls_slx_hook" line 54)
+    invoked from within
+"::AP::hls_slx_hook csim $config_value_dict replace_flow"
+    (procedure "ap_internal_csim_design" line 104)
+    invoked from within
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 32.602 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 07:52:47 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id WARNING @200-2001@%s%s GenerateData.jlum.hpp see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+WARNING: [HLS 200-2001] file not found 'GenerateData.jlum.hpp' see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     send_msg_by_id WARNING @200-2001@%s%s generatetestdata.jl see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+WARNING: [HLS 200-2001] file not found 'generatetestdata.jl' see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     send_msg_by_id WARNING @200-2001@%s%s GenerateTestData.jl see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+WARNING: [HLS 200-2001] file not found 'GenerateTestData.jl' see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files GenerateTestData.jl 
+WARNING: [HLS 200-40] Cannot find design file 'GenerateTestData.jl'
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(19) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(19)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(20) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(20)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=GenerateData.jlum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=GenerateData.jlum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb GenerateData.jlum.hpp 
+WARNING: [HLS 200-40] Cannot find test bench file 'GenerateData.jlum.hpp'
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generatetestdata.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generatetestdata.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files -tb generatetestdata.jl 
+WARNING: [HLS 200-40] Cannot find test bench file 'generatetestdata.jl'
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Command     send_msg_by_id done; 0.463 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 2.095 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.239 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=1 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.819 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     send_msg_by_id WARNING @200-1998@%s%s ../../GenerateData.jlum.hpp C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum 
+WARNING: [HLS 200-1998] cannot find relative file path '../../GenerateData.jlum.hpp' in directory(s): C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum
+Execute     send_msg_by_id WARNING @200-1998@%s%s ../../generatetestdata.jl C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum 
+WARNING: [HLS 200-1998] cannot find relative file path '../../generatetestdata.jl' in directory(s): C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/solution C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum
+INFO-FLOW: ::SLX::run_csim failed: child process exited abnormally
+INFO-FLOW: Caught error in csim_design: Problem running csim: child process exited abnormally
+    while executing
+"error "Problem running $stage: $result""
+    (procedure "::AP::hls_slx_hook" line 54)
+    invoked from within
+"::AP::hls_slx_hook csim $config_value_dict replace_flow"
+    (procedure "ap_internal_csim_design" line 104)
+    invoked from within
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 9.135 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 07:54:14 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id WARNING @200-2001@%s%s GenerateTestData.jl see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+WARNING: [HLS 200-2001] file not found 'GenerateTestData.jl' see [hls] from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=GenerateTestData.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files GenerateTestData.jl 
+WARNING: [HLS 200-40] Cannot find design file 'GenerateTestData.jl'
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(19) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(19)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 1.964 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.107 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=1 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.192 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO-FLOW: ::SLX::run_csim failed: child process exited abnormally
+INFO-FLOW: Caught error in csim_design: Problem running csim: child process exited abnormally
+    while executing
+"error "Problem running $stage: $result""
+    (procedure "::AP::hls_slx_hook" line 54)
+    invoked from within
+"::AP::hls_slx_hook csim $config_value_dict replace_flow"
+    (procedure "ap_internal_csim_design" line 104)
+    invoked from within
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 2.547 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 07:54:52 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 2.216 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.378 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=1 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.478 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO-FLOW: SLX proc replaces csim
+Command   csim_design done; 11.641 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 08:10:33 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 2.183 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.351 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=1 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.455 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO-FLOW: SLX proc replaces csim
+Command   csim_design done; 3.12 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 08:11:36 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 3.094 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.107 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 3.275 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=1 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 3.41 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO-FLOW: ::SLX::run_csim failed: child process exited abnormally
+INFO-FLOW: Caught error in csim_design: Problem running csim: child process exited abnormally
+    while executing
+"error "Problem running $stage: $result""
+    (procedure "::AP::hls_slx_hook" line 54)
+    invoked from within
+"::AP::hls_slx_hook csim $config_value_dict replace_flow"
+    (procedure "ap_internal_csim_design" line 104)
+    invoked from within
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 9.1 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 08:16:21 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 3.595 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.119 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 3.801 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=1 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 3.989 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO-FLOW: ::SLX::run_csim failed: child process exited abnormally
+INFO-FLOW: Caught error in csim_design: Problem running csim: child process exited abnormally
+    while executing
+"error "Problem running $stage: $result""
+    (procedure "::AP::hls_slx_hook" line 54)
+    invoked from within
+"::AP::hls_slx_hook csim $config_value_dict replace_flow"
+    (procedure "ap_internal_csim_design" line 104)
+    invoked from within
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 4.297 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 08:20:01 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 2.072 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.239 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.353 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 8.316 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 08:21:08 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 1.837 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.993 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.079 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 2.484 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 08:22:18 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 2.397 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.544 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.639 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 6.046 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 08:23:28 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 2.42 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.116 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.147 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.661 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.766 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 2.632 sec.
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 5.779 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 08:30:19 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 2.071 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.235 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.334 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 0.895 sec.
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 3.447 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 08:38:30 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=stub.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/stub.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=generate_test_data.jl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/generate_test_data.jl' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 2.036 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.205 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.317 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 0.722 sec.
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 1.352 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls opened at Mon Oct 14 15:25:39 +0200 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+Execute     add_files C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=TestData.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=TestData.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+Execute     add_files -tb C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/TestData.hpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/TestData.hpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=top' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+Execute     set_top top 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx\Vitis_HLS\2024.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 1.99 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.145 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+Execute     create_clock -period 200MHz 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+Execute     config_csim -code_analyzer=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+Execute     config_csim -sanitize_address=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+Execute     config_csim -sanitize_undefined=0 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.237 sec.
+Execute   apply_ini C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline 
+Execute   csim_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 0.803 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 8.22 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 

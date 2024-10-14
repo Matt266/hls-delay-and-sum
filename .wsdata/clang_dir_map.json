@@ -1,8 +1,6 @@
 {
   "workspaceRoot": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum",
   "mapping": {
-    "DelayAndSum\\GenerateData.jlum.hpp": "DelayAndSum",
-    "DelayAndSum\\GenerateTestData.jl": "DelayAndSum",
     "DelayAndSum\\DelayAndSum.hpp": "DelayAndSum",
     "DelayAndSum\\DelayAndSumTB.cpp": "DelayAndSum",
     "DelayAndSum\\DelayAndSum.cpp": "DelayAndSum"
