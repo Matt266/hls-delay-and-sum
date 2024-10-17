@@ -1,8 +1,8 @@
 #ifndef __TEST_DATA_HPP__
 #define __TEST_DATA_HPP__
 
-constexpr size_t ARRAY_LENGTH = 4;
-constexpr size_t NUM_ANGLES = 10;
+constexpr unsigned int ARRAY_LENGTH = 4;
+constexpr unsigned int NUM_ANGLES = 10;
 
 constexpr double weights_real[ARRAY_LENGTH] = {-0.01050975354911683, 0.21473299713986604, 0.21473299713986604, -0.01050975354911683};
 constexpr double weights_imag[ARRAY_LENGTH] = {-0.2497789924720188, -0.12802241967456432, 0.12802241967456432, 0.2497789924720188};

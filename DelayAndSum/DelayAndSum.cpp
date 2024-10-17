@@ -1,37 +1,73 @@
 #include "DelayAndSum.hpp"
 
-void DelayAndSum(StreamInputVector &input,
-				 StreamOutputVector &output,
-                 WeightVector *w
+void DelayAndSum(
+    float *w1_real,
+    float *w1_imag,
+    float *w2_real,
+    float *w2_imag,
+    float *w3_real,
+    float *w3_imag,
+    float *w4_real,
+    float *w4_imag,
+    hls::stream<float> &in1_real,
+    hls::stream<float> &in1_imag,
+    hls::stream<float> &in2_real,
+    hls::stream<float> &in2_imag,
+    hls::stream<float> &in3_real,
+    hls::stream<float> &in3_imag,
+    hls::stream<float> &in4_real,
+    hls::stream<float> &in4_imag,
+    hls::stream<float> &out_real,
+    hls::stream<float> &out_imag
 ){
 	#pragma HLS top name=DelayAndSum
 	
 	//AXI Stream Inputs
-    #pragma HLS disaggregate variable = input.data_real
-    #pragma HLS disaggregate variable = input.data_imag
-	#pragma HLS INTERFACE mode=axis port=input.data_real[0]
-	#pragma HLS INTERFACE mode=axis port=input.data_real[1]
-	#pragma HLS INTERFACE mode=axis port=input.data_real[2]
-	#pragma HLS INTERFACE mode=axis port=input.data_real[3]
-	#pragma HLS INTERFACE mode=axis port=input.data_imag[0]
-	#pragma HLS INTERFACE mode=axis port=input.data_imag[1]
-	#pragma HLS INTERFACE mode=axis port=input.data_imag[2]
-	#pragma HLS INTERFACE mode=axis port=input.data_imag[3]
+	#pragma HLS INTERFACE mode=axis port=in1_real
+    #pragma HLS INTERFACE mode=axis port=in1_imag
+	#pragma HLS INTERFACE mode=axis port=in2_real
+    #pragma HLS INTERFACE mode=axis port=in2_imag
+	#pragma HLS INTERFACE mode=axis port=in3_real
+    #pragma HLS INTERFACE mode=axis port=in3_imag
+	#pragma HLS INTERFACE mode=axis port=in4_real
+    #pragma HLS INTERFACE mode=axis port=in4_imag
 
     //AXI Stream Outputs
-    #pragma HLS INTERFACE mode=axis port=output.data_real
-    #pragma HLS INTERFACE mode=axis port=output.data_imag
+    #pragma HLS INTERFACE mode=axis port=out_real
+    #pragma HLS INTERFACE mode=axis port=out_imag
 	
 	//AXI Lite Interface
-	#pragma HLS INTERFACE mode=s_axilite port=w
+	#pragma HLS INTERFACE mode=s_axilite port=w1_real
+    #pragma HLS INTERFACE mode=s_axilite port=w1_imag
+    #pragma HLS INTERFACE mode=s_axilite port=w2_real
+    #pragma HLS INTERFACE mode=s_axilite port=w2_imag
+    #pragma HLS INTERFACE mode=s_axilite port=w3_real
+    #pragma HLS INTERFACE mode=s_axilite port=w3_imag
+    #pragma HLS INTERFACE mode=s_axilite port=w4_real
+    #pragma HLS INTERFACE mode=s_axilite port=w4_imag
+
 
     #pragma HLS DATAFLOW
     #pragma HLS pipeline II=1
-    	
-	//Pipeline Function
-    #pragma HLS DATAFLOW
-	#pragma HLS pipeline II=1
-	
+
+    float in1_real_buffer = in1_real.read();
+    float in1_imag_buffer = in1_imag.read();
+    float in2_real_buffer = in2_real.read();
+    float in2_imag_buffer = in2_imag.read();
+    float in3_real_buffer = in3_real.read();
+    float in3_imag_buffer = in3_imag.read();
+    float in4_real_buffer = in4_real.read();
+    float in4_imag_buffer = in4_imag.read();
+
+    float w1_real_buffer = *w1_real;
+    float w1_imag_buffer = *w1_imag;
+    float w2_real_buffer = *w2_real;
+    float w2_imag_buffer = *w2_imag;
+    float w3_real_buffer = *w3_real;
+    float w3_imag_buffer = *w3_imag;
+    float w4_real_buffer = *w4_real;
+    float w4_imag_buffer = *w4_imag;
+
 	/*Complex Conjugate Multiplication:
 	 a*conj(b) = (a_real + j*a_imag)*(b_real - j*b_imag) 
 	 = (a_real*b_real + a_imag*b_imag) + j*(a_imag*b_real - a_real*b_imag)
@@ -39,25 +75,15 @@ void DelayAndSum(StreamInputVector &input,
 	 Bitwidth adjustments:
 	 Multiplication: double the bitwidth, Addition: bitwidth increases by one (carry bit)
 	*/
-	ap_int<2*inBitwidth+1> weightedInReal[numChannels];
-	ap_int<2*inBitwidth+1> weightedInImag[numChannels]; 
-	for(int i = 0; i < numChannels; ++i){
-		#pragma HLS unroll
-		weightedInReal[i] = dataInReal[i]*weightsReal[i] + dataInImag[i]*weightsImag[i];
-		weightedInImag[i] = dataInImag[i]*weightsReal[i] - dataInReal[i]*weightsImag[i];
-	}
-	
-	ap_int<outBitwidth> channelSumReal;
-	ap_int<outBitwidth> channelSumImag;
-	
-	channelSumReal = 0;
-	channelSumImag = 0;
-	for(int i = 0; i < numChannels; ++i){
-		channelSumReal += weightedInReal[i];
-		channelSumImag += weightedInImag[i];
-	}
-	
-	dataOutReal = channelSumReal;
-	dataOutImag = channelSumImag;
-	
+
+    out_real << (in1_real_buffer * w1_real_buffer + in1_imag_buffer * w1_imag_buffer
+                +in2_real_buffer * w2_real_buffer + in2_imag_buffer * w2_imag_buffer
+                +in3_real_buffer * w3_real_buffer + in3_imag_buffer * w3_imag_buffer
+                +in4_real_buffer * w4_real_buffer + in4_imag_buffer * w4_imag_buffer);
+
+
+    out_imag << (in1_imag_buffer * w1_real_buffer - in1_real_buffer * w1_imag_buffer
+                +in2_imag_buffer * w2_real_buffer - in2_real_buffer * w2_imag_buffer
+                +in3_imag_buffer * w3_real_buffer - in3_real_buffer * w3_imag_buffer
+                +in4_imag_buffer * w4_real_buffer - in4_real_buffer * w4_imag_buffer);
 }
