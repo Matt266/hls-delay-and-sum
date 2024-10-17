@@ -71,9 +71,6 @@ void DelayAndSum(
 	/*Complex Conjugate Multiplication:
 	 a*conj(b) = (a_real + j*a_imag)*(b_real - j*b_imag) 
 	 = (a_real*b_real + a_imag*b_imag) + j*(a_imag*b_real - a_real*b_imag)
-	
-	 Bitwidth adjustments:
-	 Multiplication: double the bitwidth, Addition: bitwidth increases by one (carry bit)
 	*/
 
     out_real << (in1_real_buffer * w1_real_buffer + in1_imag_buffer * w1_imag_buffer
