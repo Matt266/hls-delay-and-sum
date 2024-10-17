@@ -74,14 +74,15 @@ int main(){
         out_imag >> outputs_imag[i];
     }
 
-    double margin = 1e-8;
+    // margin slightly (10%) larger than machine epsilon (precision of used datatype)
+    double margin = 1.1*pow(2,-15);
     for(unsigned int i = 0; i < NUM_ANGLES; i++){
-        if(abs(results_real[i]-outputs_real[i]) <= margin){
+        if(abs(results_real[i]-outputs_real[i].to_double()) <= margin){
             ret = 0;
         } else {
             ret = 1;
         }
-        if(abs(results_imag[i]-outputs_imag[i]) <= margin){
+        if(abs(results_imag[i]-outputs_imag[i].to_double()) <= margin){
             ret = 0;
         } else {
             ret = 1;

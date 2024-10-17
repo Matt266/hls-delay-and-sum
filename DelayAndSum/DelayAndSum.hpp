@@ -5,8 +5,8 @@
 #include <ap_fixed.h>
 #include <hls_stream.h>
 
-typedef float in_t;
-typedef float out_t;
+typedef ap_fixed<16,1> in_t;
+typedef ap_fixed<16,1> out_t;
 
 void DelayAndSum(
     in_t *w1_real,
