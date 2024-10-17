@@ -5,27 +5,27 @@
 #include "TestData.hpp"
 #include "DelayAndSum.hpp"
 
-hls::stream<float> in1_real;
-hls::stream<float> in1_imag;
-hls::stream<float> in2_real;
-hls::stream<float> in2_imag;
-hls::stream<float> in3_real;
-hls::stream<float> in3_imag;
-hls::stream<float> in4_real;
-hls::stream<float> in4_imag;
-hls::stream<float> out_real;
-hls::stream<float> out_imag;
-float w1_real;
-float w1_imag;
-float w2_real;
-float w2_imag;
-float w3_real;
-float w3_imag;
-float w4_real;
-float w4_imag;
+hls::stream<in_t> in1_real;
+hls::stream<in_t> in1_imag;
+hls::stream<in_t> in2_real;
+hls::stream<in_t> in2_imag;
+hls::stream<in_t> in3_real;
+hls::stream<in_t> in3_imag;
+hls::stream<in_t> in4_real;
+hls::stream<in_t> in4_imag;
+hls::stream<out_t> out_real;
+hls::stream<out_t> out_imag;
+in_t w1_real;
+in_t w1_imag;
+in_t w2_real;
+in_t w2_imag;
+in_t w3_real;
+in_t w3_imag;
+in_t w4_real;
+in_t w4_imag;
 
-float outputs_real[NUM_ANGLES];
-float outputs_imag[NUM_ANGLES];
+out_t outputs_real[NUM_ANGLES];
+out_t outputs_imag[NUM_ANGLES];
 
 int main(){
     int ret = 0;
@@ -74,7 +74,7 @@ int main(){
         out_imag >> outputs_imag[i];
     }
 
-    float margin = 1e-8;
+    double margin = 1e-8;
     for(unsigned int i = 0; i < NUM_ANGLES; i++){
         if(abs(results_real[i]-outputs_real[i]) <= margin){
             ret = 0;

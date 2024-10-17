@@ -1,24 +1,24 @@
 #include "DelayAndSum.hpp"
 
 void DelayAndSum(
-    float *w1_real,
-    float *w1_imag,
-    float *w2_real,
-    float *w2_imag,
-    float *w3_real,
-    float *w3_imag,
-    float *w4_real,
-    float *w4_imag,
-    hls::stream<float> &in1_real,
-    hls::stream<float> &in1_imag,
-    hls::stream<float> &in2_real,
-    hls::stream<float> &in2_imag,
-    hls::stream<float> &in3_real,
-    hls::stream<float> &in3_imag,
-    hls::stream<float> &in4_real,
-    hls::stream<float> &in4_imag,
-    hls::stream<float> &out_real,
-    hls::stream<float> &out_imag
+    in_t *w1_real,
+    in_t *w1_imag,
+    in_t *w2_real,
+    in_t *w2_imag,
+    in_t *w3_real,
+    in_t *w3_imag,
+    in_t *w4_real,
+    in_t *w4_imag,
+    hls::stream<in_t> &in1_real,
+    hls::stream<in_t> &in1_imag,
+    hls::stream<in_t> &in2_real,
+    hls::stream<in_t> &in2_imag,
+    hls::stream<in_t> &in3_real,
+    hls::stream<in_t> &in3_imag,
+    hls::stream<in_t> &in4_real,
+    hls::stream<in_t> &in4_imag,
+    hls::stream<out_t> &out_real,
+    hls::stream<out_t> &out_imag
 ){
 	#pragma HLS top name=DelayAndSum
 	
@@ -50,23 +50,23 @@ void DelayAndSum(
     #pragma HLS DATAFLOW
     #pragma HLS pipeline II=1
 
-    float in1_real_buffer = in1_real.read();
-    float in1_imag_buffer = in1_imag.read();
-    float in2_real_buffer = in2_real.read();
-    float in2_imag_buffer = in2_imag.read();
-    float in3_real_buffer = in3_real.read();
-    float in3_imag_buffer = in3_imag.read();
-    float in4_real_buffer = in4_real.read();
-    float in4_imag_buffer = in4_imag.read();
+    in_t in1_real_buffer = in1_real.read();
+    in_t in1_imag_buffer = in1_imag.read();
+    in_t in2_real_buffer = in2_real.read();
+    in_t in2_imag_buffer = in2_imag.read();
+    in_t in3_real_buffer = in3_real.read();
+    in_t in3_imag_buffer = in3_imag.read();
+    in_t in4_real_buffer = in4_real.read();
+    in_t in4_imag_buffer = in4_imag.read();
 
-    float w1_real_buffer = *w1_real;
-    float w1_imag_buffer = *w1_imag;
-    float w2_real_buffer = *w2_real;
-    float w2_imag_buffer = *w2_imag;
-    float w3_real_buffer = *w3_real;
-    float w3_imag_buffer = *w3_imag;
-    float w4_real_buffer = *w4_real;
-    float w4_imag_buffer = *w4_imag;
+    in_t w1_real_buffer = *w1_real;
+    in_t w1_imag_buffer = *w1_imag;
+    in_t w2_real_buffer = *w2_real;
+    in_t w2_imag_buffer = *w2_imag;
+    in_t w3_real_buffer = *w3_real;
+    in_t w3_imag_buffer = *w3_imag;
+    in_t w4_real_buffer = *w4_real;
+    in_t w4_imag_buffer = *w4_imag;
 
 	/*Complex Conjugate Multiplication:
 	 a*conj(b) = (a_real + j*a_imag)*(b_real - j*b_imag) 
