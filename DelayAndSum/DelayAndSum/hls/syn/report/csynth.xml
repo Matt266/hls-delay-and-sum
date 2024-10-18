@@ -1,0 +1,1194 @@
+<profile>
+    <ReportVersion>
+        <Version>2024.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynquplusRFSOC</ProductFamily>
+        <Part>xczu48dr-ffvg1517-2-e</Part>
+        <TopModelName>DelayAndSum</TopModelName>
+        <TargetClockPeriod>5.00</TargetClockPeriod>
+        <ClockUncertainty>1.35</ClockUncertainty>
+        <TargetInitiationInterval>1</TargetInitiationInterval>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>yes</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>3.380</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>10</Best-caseLatency>
+            <Average-caseLatency>10</Average-caseLatency>
+            <Worst-caseLatency>10</Worst-caseLatency>
+            <Best-caseRealTimeLatency>50.000 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>50.000 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>50.000 ns</Worst-caseRealTimeLatency>
+            <PipelineInitiationInterval>1</PipelineInitiationInterval>
+            <PipelineDepth>11</PipelineDepth>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>DelayAndSum.cpp:49</SourceLocation>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>16</DSP>
+            <FF>1247</FF>
+            <LUT>664</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>2160</BRAM_18K>
+            <DSP>4272</DSP>
+            <FF>850560</FF>
+            <LUT>425280</LUT>
+            <URAM>80</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>s_axi_control_AWVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>7</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WSTRB</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>7</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>DelayAndSum</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>DelayAndSum</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>DelayAndSum</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>DelayAndSum</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>DelayAndSum</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>DelayAndSum</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in1_real_TVALID</name>
+            <Object>in1_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in1_real_TDATA</name>
+            <Object>in1_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in1_real_TREADY</name>
+            <Object>in1_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in1_imag_TVALID</name>
+            <Object>in1_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in1_imag_TDATA</name>
+            <Object>in1_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in1_imag_TREADY</name>
+            <Object>in1_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in2_real_TVALID</name>
+            <Object>in2_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in2_real_TDATA</name>
+            <Object>in2_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in2_real_TREADY</name>
+            <Object>in2_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in2_imag_TVALID</name>
+            <Object>in2_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in2_imag_TDATA</name>
+            <Object>in2_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in2_imag_TREADY</name>
+            <Object>in2_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in3_real_TVALID</name>
+            <Object>in3_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in3_real_TDATA</name>
+            <Object>in3_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in3_real_TREADY</name>
+            <Object>in3_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in3_imag_TVALID</name>
+            <Object>in3_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in3_imag_TDATA</name>
+            <Object>in3_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in3_imag_TREADY</name>
+            <Object>in3_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in4_real_TVALID</name>
+            <Object>in4_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in4_real_TDATA</name>
+            <Object>in4_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in4_real_TREADY</name>
+            <Object>in4_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in4_imag_TVALID</name>
+            <Object>in4_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in4_imag_TDATA</name>
+            <Object>in4_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in4_imag_TREADY</name>
+            <Object>in4_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_real_TREADY</name>
+            <Object>out_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_real_TDATA</name>
+            <Object>out_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_real_TVALID</name>
+            <Object>out_real</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_imag_TREADY</name>
+            <Object>out_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_imag_TDATA</name>
+            <Object>out_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_imag_TVALID</name>
+            <Object>out_imag</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>DelayAndSum</ModuleName>
+            <BindInstances>mac_muladd_16s_16s_31s_31_4_1_U3 mul_16s_16s_31_1_1_U1 mac_muladd_16s_16s_31s_31_4_1_U3 mac_muladd_16s_16s_31ns_31_4_1_U5 mac_muladd_16s_16s_31ns_31_4_1_U5 mac_muladd_16s_16s_31ns_31_4_1_U7 mac_muladd_16s_16s_31ns_31_4_1_U7 mac_muladd_16s_16s_31ns_31_4_1_U9 mac_muladd_16s_16s_31ns_31_4_1_U9 mac_muladd_16s_16s_31ns_31_4_1_U11 mac_muladd_16s_16s_31ns_31_4_1_U11 mac_muladd_16s_16s_31ns_31_4_1_U13 mac_muladd_16s_16s_31ns_31_4_1_U13 mac_muladd_16s_16s_31ns_31_4_1_U15 mac_muladd_16s_16s_31ns_31_4_1_U15 mul_16s_16s_31_1_1_U2 mac_mulsub_16s_16s_31s_31_4_1_U4 mac_mulsub_16s_16s_31s_31_4_1_U4 mac_muladd_16s_16s_31ns_31_4_1_U6 mac_muladd_16s_16s_31ns_31_4_1_U6 mac_mulsub_16s_16s_31ns_31_4_1_U8 mac_mulsub_16s_16s_31ns_31_4_1_U8 mac_muladd_16s_16s_31ns_31_4_1_U10 mac_muladd_16s_16s_31ns_31_4_1_U10 mac_mulsub_16s_16s_31ns_31_4_1_U12 mac_mulsub_16s_16s_31ns_31_4_1_U12 mac_muladd_16s_16s_31ns_31_4_1_U14 mac_muladd_16s_16s_31ns_31_4_1_U14 mac_mulsub_16s_16s_31ns_31_4_1_U16 mac_mulsub_16s_16s_31ns_31_4_1_U16 control_s_axi_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>DelayAndSum</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>3.380</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>10</Best-caseLatency>
+                    <Average-caseLatency>10</Average-caseLatency>
+                    <Worst-caseLatency>10</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>50.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>50.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>50.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>11</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>DelayAndSum.cpp:49</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>2160</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>16</DSP>
+                    <AVAIL_DSP>4272</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>1247</FF>
+                    <AVAIL_FF>850560</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>664</LUT>
+                    <AVAIL_LUT>425280</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>80</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31s_31_4_1_U3" SOURCE="DelayAndSum.cpp:74" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln74" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_31_1_1_U1" SOURCE="DelayAndSum.cpp:74" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln74_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31s_31_4_1_U3" SOURCE="DelayAndSum.cpp:74" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln74" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U5" SOURCE="DelayAndSum.cpp:75" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln75" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U5" SOURCE="DelayAndSum.cpp:75" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln75" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U7" SOURCE="DelayAndSum.cpp:75" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln75_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U7" SOURCE="DelayAndSum.cpp:75" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln75_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U9" SOURCE="DelayAndSum.cpp:76" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln76" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U9" SOURCE="DelayAndSum.cpp:76" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln76" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U11" SOURCE="DelayAndSum.cpp:76" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln76_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U11" SOURCE="DelayAndSum.cpp:76" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln76_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U13" SOURCE="DelayAndSum.cpp:77" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln77" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U13" SOURCE="DelayAndSum.cpp:77" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln77" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U15" SOURCE="DelayAndSum.cpp:77" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln77_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U15" SOURCE="DelayAndSum.cpp:77" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln77_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_31_1_1_U2" SOURCE="DelayAndSum.cpp:80" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln80" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_31s_31_4_1_U4" SOURCE="DelayAndSum.cpp:80" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln80_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_31s_31_4_1_U4" SOURCE="DelayAndSum.cpp:80" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln80" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U6" SOURCE="DelayAndSum.cpp:81" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln81" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U6" SOURCE="DelayAndSum.cpp:81" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln81" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_31ns_31_4_1_U8" SOURCE="DelayAndSum.cpp:81" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln81_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_31ns_31_4_1_U8" SOURCE="DelayAndSum.cpp:81" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln81" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U10" SOURCE="DelayAndSum.cpp:82" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln82" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U10" SOURCE="DelayAndSum.cpp:82" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln82" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_31ns_31_4_1_U12" SOURCE="DelayAndSum.cpp:82" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln82_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_31ns_31_4_1_U12" SOURCE="DelayAndSum.cpp:82" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln82" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U14" SOURCE="DelayAndSum.cpp:83" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln83" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_31ns_31_4_1_U14" SOURCE="DelayAndSum.cpp:83" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln83" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_31ns_31_4_1_U16" SOURCE="DelayAndSum.cpp:83" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln83_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="mac_mulsub_16s_16s_31ns_31_4_1_U16" SOURCE="DelayAndSum.cpp:83" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln83" VISIBLE="true"/>
+                <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_export description="4 channel delay and sum beamformer" display_name="DelayAndSum" output="C:UsersmattOneDriveDokumente__MasterVivadoVitis_HLSDelayAndSumDelayAndSumDelayAndSumDelayAndSum.zip"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="w1_real" index="0" direction="in" srcType="ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="w1_real" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="w1_imag" index="1" direction="in" srcType="ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="w1_imag" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="w2_real" index="2" direction="in" srcType="ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="w2_real" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="w2_imag" index="3" direction="in" srcType="ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="w2_imag" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="w3_real" index="4" direction="in" srcType="ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="w3_real" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="w3_imag" index="5" direction="in" srcType="ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="w3_imag" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="w4_real" index="6" direction="in" srcType="ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="w4_real" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="w4_imag" index="7" direction="in" srcType="ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="w4_imag" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in1_real" index="8" direction="in" srcType="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="in1_real" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in1_imag" index="9" direction="in" srcType="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="in1_imag" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in2_real" index="10" direction="in" srcType="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="in2_real" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in2_imag" index="11" direction="in" srcType="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="in2_imag" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in3_real" index="12" direction="in" srcType="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="in3_real" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in3_imag" index="13" direction="in" srcType="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="in3_imag" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in4_real" index="14" direction="in" srcType="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="in4_real" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in4_imag" index="15" direction="in" srcType="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="in4_imag" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_real" index="16" direction="out" srcType="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="out_real" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_imag" index="17" direction="out" srcType="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="out_imag" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="7" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x10" name="w1_real" access="W" description="Data signal of w1_real" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="w1_real" access="W" description="Bit 15 to 0 of w1_real"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x18" name="w1_imag" access="W" description="Data signal of w1_imag" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="w1_imag" access="W" description="Bit 15 to 0 of w1_imag"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x20" name="w2_real" access="W" description="Data signal of w2_real" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="w2_real" access="W" description="Bit 15 to 0 of w2_real"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x28" name="w2_imag" access="W" description="Data signal of w2_imag" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="w2_imag" access="W" description="Bit 15 to 0 of w2_imag"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x30" name="w3_real" access="W" description="Data signal of w3_real" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="w3_real" access="W" description="Bit 15 to 0 of w3_real"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x38" name="w3_imag" access="W" description="Data signal of w3_imag" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="w3_imag" access="W" description="Bit 15 to 0 of w3_imag"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x40" name="w4_real" access="W" description="Data signal of w4_real" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="w4_real" access="W" description="Bit 15 to 0 of w4_real"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x48" name="w4_imag" access="W" description="Data signal of w4_imag" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="w4_imag" access="W" description="Bit 15 to 0 of w4_imag"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="w1_real"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24" argName="w1_imag"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32" argName="w2_real"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40" argName="w2_imag"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="48" argName="w3_real"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="56" argName="w3_imag"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64" argName="w4_real"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="72" argName="w4_imag"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control:in1_real:in1_imag:in2_real:in2_imag:in3_real:in3_imag:in4_real:in4_imag:out_real:out_imag</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="in1_real" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="16" portPrefix="in1_real_">
+            <ports>
+                <port>in1_real_TDATA</port>
+                <port>in1_real_TREADY</port>
+                <port>in1_real_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in1_real"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in1_imag" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="16" portPrefix="in1_imag_">
+            <ports>
+                <port>in1_imag_TDATA</port>
+                <port>in1_imag_TREADY</port>
+                <port>in1_imag_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in1_imag"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in2_real" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="16" portPrefix="in2_real_">
+            <ports>
+                <port>in2_real_TDATA</port>
+                <port>in2_real_TREADY</port>
+                <port>in2_real_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in2_real"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in2_imag" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="16" portPrefix="in2_imag_">
+            <ports>
+                <port>in2_imag_TDATA</port>
+                <port>in2_imag_TREADY</port>
+                <port>in2_imag_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in2_imag"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in3_real" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="16" portPrefix="in3_real_">
+            <ports>
+                <port>in3_real_TDATA</port>
+                <port>in3_real_TREADY</port>
+                <port>in3_real_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in3_real"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in3_imag" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="16" portPrefix="in3_imag_">
+            <ports>
+                <port>in3_imag_TDATA</port>
+                <port>in3_imag_TREADY</port>
+                <port>in3_imag_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in3_imag"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in4_real" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="16" portPrefix="in4_real_">
+            <ports>
+                <port>in4_real_TDATA</port>
+                <port>in4_real_TREADY</port>
+                <port>in4_real_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in4_real"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in4_imag" type="axi4stream" busTypeName="axis" mode="slave" direction="in" dataWidth="16" portPrefix="in4_imag_">
+            <ports>
+                <port>in4_imag_TDATA</port>
+                <port>in4_imag_TREADY</port>
+                <port>in4_imag_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in4_imag"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="out_real" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="16" portPrefix="out_real_">
+            <ports>
+                <port>out_real_TDATA</port>
+                <port>out_real_TREADY</port>
+                <port>out_real_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="out_real"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="out_imag" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="16" portPrefix="out_imag_">
+            <ports>
+                <port>out_imag_TDATA</port>
+                <port>out_imag_TREADY</port>
+                <port>out_imag_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="out_imag"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE Interfaces">
+                <table>
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_control">32, 7, 16, 0</column>
+                </table>
+            </item>
+            <item name="S_AXILITE Registers">
+                <table>
+                    <keys size="6">Interface, Register, Offset, Width, Access, Description</keys>
+                    <column name="s_axi_control">w1_real, 0x10, 32, W, Data signal of w1_real</column>
+                    <column name="s_axi_control">w1_imag, 0x18, 32, W, Data signal of w1_imag</column>
+                    <column name="s_axi_control">w2_real, 0x20, 32, W, Data signal of w2_real</column>
+                    <column name="s_axi_control">w2_imag, 0x28, 32, W, Data signal of w2_imag</column>
+                    <column name="s_axi_control">w3_real, 0x30, 32, W, Data signal of w3_real</column>
+                    <column name="s_axi_control">w3_imag, 0x38, 32, W, Data signal of w3_imag</column>
+                    <column name="s_axi_control">w4_real, 0x40, 32, W, Data signal of w4_real</column>
+                    <column name="s_axi_control">w4_imag, 0x48, 32, W, Data signal of w4_imag</column>
+                </table>
+            </item>
+            <item name="AXIS">
+                <table>
+                    <keys size="6">Interface, Direction, Register Mode, TDATA, TREADY, TVALID</keys>
+                    <column name="in1_imag">in, both, 16, 1, 1</column>
+                    <column name="in1_real">in, both, 16, 1, 1</column>
+                    <column name="in2_imag">in, both, 16, 1, 1</column>
+                    <column name="in2_real">in, both, 16, 1, 1</column>
+                    <column name="in3_imag">in, both, 16, 1, 1</column>
+                    <column name="in3_real">in, both, 16, 1, 1</column>
+                    <column name="in4_imag">in, both, 16, 1, 1</column>
+                    <column name="in4_real">in, both, 16, 1, 1</column>
+                    <column name="out_imag">out, both, 16, 1, 1</column>
+                    <column name="out_real">out, both, 16, 1, 1</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="w1_real">in, ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="w1_imag">in, ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="w2_real">in, ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="w2_imag">in, ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="w3_real">in, ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="w3_imag">in, ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="w4_real">in, ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="w4_imag">in, ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="in1_real">in, stream&lt;ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt; 0&gt;&amp;</column>
+                    <column name="in1_imag">in, stream&lt;ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt; 0&gt;&amp;</column>
+                    <column name="in2_real">in, stream&lt;ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt; 0&gt;&amp;</column>
+                    <column name="in2_imag">in, stream&lt;ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt; 0&gt;&amp;</column>
+                    <column name="in3_real">in, stream&lt;ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt; 0&gt;&amp;</column>
+                    <column name="in3_imag">in, stream&lt;ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt; 0&gt;&amp;</column>
+                    <column name="in4_real">in, stream&lt;ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt; 0&gt;&amp;</column>
+                    <column name="in4_imag">in, stream&lt;ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt; 0&gt;&amp;</column>
+                    <column name="out_real">out, stream&lt;ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt; 0&gt;&amp;</column>
+                    <column name="out_imag">out, stream&lt;ap_fixed&lt;16 1 AP_TRN AP_WRAP 0&gt; 0&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
+                    <column name="w1_real">s_axi_control, register, name=w1_real offset=0x10 range=32</column>
+                    <column name="w1_imag">s_axi_control, register, name=w1_imag offset=0x18 range=32</column>
+                    <column name="w2_real">s_axi_control, register, name=w2_real offset=0x20 range=32</column>
+                    <column name="w2_imag">s_axi_control, register, name=w2_imag offset=0x28 range=32</column>
+                    <column name="w3_real">s_axi_control, register, name=w3_real offset=0x30 range=32</column>
+                    <column name="w3_imag">s_axi_control, register, name=w3_imag offset=0x38 range=32</column>
+                    <column name="w4_real">s_axi_control, register, name=w4_real offset=0x40 range=32</column>
+                    <column name="w4_imag">s_axi_control, register, name=w4_imag offset=0x48 range=32</column>
+                    <column name="in1_real">in1_real, interface, </column>
+                    <column name="in1_imag">in1_imag, interface, </column>
+                    <column name="in2_real">in2_real, interface, </column>
+                    <column name="in2_imag">in2_imag, interface, </column>
+                    <column name="in3_real">in3_real, interface, </column>
+                    <column name="in3_imag">in3_imag, interface, </column>
+                    <column name="in4_real">in4_real, interface, </column>
+                    <column name="in4_imag">in4_imag, interface, </column>
+                    <column name="out_real">out_real, interface, </column>
+                    <column name="out_imag">out_imag, interface, </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <PragmaReport>
+        <Pragma type="top" location="DelayAndSum.cpp:23" status="valid" parentFunction="delayandsum" variable="" isDirective="0" options="name=DelayAndSum"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:26" status="valid" parentFunction="delayandsum" variable="in1_real" isDirective="0" options="mode=axis port=in1_real"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:27" status="valid" parentFunction="delayandsum" variable="in1_imag" isDirective="0" options="mode=axis port=in1_imag"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:28" status="valid" parentFunction="delayandsum" variable="in2_real" isDirective="0" options="mode=axis port=in2_real"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:29" status="valid" parentFunction="delayandsum" variable="in2_imag" isDirective="0" options="mode=axis port=in2_imag"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:30" status="valid" parentFunction="delayandsum" variable="in3_real" isDirective="0" options="mode=axis port=in3_real"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:31" status="valid" parentFunction="delayandsum" variable="in3_imag" isDirective="0" options="mode=axis port=in3_imag"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:32" status="valid" parentFunction="delayandsum" variable="in4_real" isDirective="0" options="mode=axis port=in4_real"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:33" status="valid" parentFunction="delayandsum" variable="in4_imag" isDirective="0" options="mode=axis port=in4_imag"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:36" status="valid" parentFunction="delayandsum" variable="out_real" isDirective="0" options="mode=axis port=out_real"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:37" status="valid" parentFunction="delayandsum" variable="out_imag" isDirective="0" options="mode=axis port=out_imag"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:40" status="valid" parentFunction="delayandsum" variable="w1_real" isDirective="0" options="mode=s_axilite port=w1_real"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:41" status="valid" parentFunction="delayandsum" variable="w1_imag" isDirective="0" options="mode=s_axilite port=w1_imag"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:42" status="valid" parentFunction="delayandsum" variable="w2_real" isDirective="0" options="mode=s_axilite port=w2_real"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:43" status="valid" parentFunction="delayandsum" variable="w2_imag" isDirective="0" options="mode=s_axilite port=w2_imag"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:44" status="valid" parentFunction="delayandsum" variable="w3_real" isDirective="0" options="mode=s_axilite port=w3_real"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:45" status="valid" parentFunction="delayandsum" variable="w3_imag" isDirective="0" options="mode=s_axilite port=w3_imag"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:46" status="valid" parentFunction="delayandsum" variable="w4_real" isDirective="0" options="mode=s_axilite port=w4_real"/>
+        <Pragma type="interface" location="DelayAndSum.cpp:47" status="valid" parentFunction="delayandsum" variable="w4_imag" isDirective="0" options="mode=s_axilite port=w4_imag"/>
+        <Pragma type="pipeline" location="DelayAndSum.cpp:49" status="valid" parentFunction="delayandsum" variable="" isDirective="0" options="II=1"/>
+    </PragmaReport>
+</profile>
+

@@ -1,0 +1,209 @@
+
+
+================================================================
+== Synthesis Summary Report of 'DelayAndSum'
+================================================================
++ General Information: 
+    * Date:           Fri Oct 18 13:22:01 2024
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        DelayAndSum
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynquplusRFSOC
+    * Target device:  xczu48dr-ffvg1517-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------+------+------+---------+--------+----------+---------+------+----------+------+----------+------------+-----------+-----+
+    |    Modules    | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |          |            |           |     |
+    |    & Loops    | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |     FF     |    LUT    | URAM|
+    +---------------+------+------+---------+--------+----------+---------+------+----------+------+----------+------------+-----------+-----+
+    |+ DelayAndSum  |     -|  0.27|       10|  50.000|         -|        1|     -|       yes|     -|  16 (~0%)|  1247 (~0%)|  664 (~0%)|    -|
+    +---------------+------+------+---------+--------+----------+---------+------+----------+------+----------+------------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+------------------------+
+| Interface     | Register | Offset | Width | Access | Description            |
++---------------+----------+--------+-------+--------+------------------------+
+| s_axi_control | w1_real  | 0x10   | 32    | W      | Data signal of w1_real |
+| s_axi_control | w1_imag  | 0x18   | 32    | W      | Data signal of w1_imag |
+| s_axi_control | w2_real  | 0x20   | 32    | W      | Data signal of w2_real |
+| s_axi_control | w2_imag  | 0x28   | 32    | W      | Data signal of w2_imag |
+| s_axi_control | w3_real  | 0x30   | 32    | W      | Data signal of w3_real |
+| s_axi_control | w3_imag  | 0x38   | 32    | W      | Data signal of w3_imag |
+| s_axi_control | w4_real  | 0x40   | 32    | W      | Data signal of w4_real |
+| s_axi_control | w4_imag  | 0x48   | 32    | W      | Data signal of w4_imag |
++---------------+----------+--------+-------+--------+------------------------+
+
+* AXIS
++-----------+-----------+---------------+-------+--------+--------+
+| Interface | Direction | Register Mode | TDATA | TREADY | TVALID |
++-----------+-----------+---------------+-------+--------+--------+
+| in1_imag  | in        | both          | 16    | 1      | 1      |
+| in1_real  | in        | both          | 16    | 1      | 1      |
+| in2_imag  | in        | both          | 16    | 1      | 1      |
+| in2_real  | in        | both          | 16    | 1      | 1      |
+| in3_imag  | in        | both          | 16    | 1      | 1      |
+| in3_real  | in        | both          | 16    | 1      | 1      |
+| in4_imag  | in        | both          | 16    | 1      | 1      |
+| in4_real  | in        | both          | 16    | 1      | 1      |
+| out_imag  | out       | both          | 16    | 1      | 1      |
+| out_real  | out       | both          | 16    | 1      | 1      |
++-----------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------------------------------------------+
+| Argument | Direction | Datatype                                        |
++----------+-----------+-------------------------------------------------+
+| w1_real  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
+| w1_imag  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
+| w2_real  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
+| w2_imag  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
+| w3_real  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
+| w3_imag  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
+| w4_real  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
+| w4_imag  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
+| in1_real | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| in1_imag | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| in2_real | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| in2_imag | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| in3_real | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| in3_imag | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| in4_real | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| in4_imag | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| out_real | out       | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| out_imag | out       | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
++----------+-----------+-------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+-----------------------------------+
+| Argument | HW Interface  | HW Type   | HW Info                           |
++----------+---------------+-----------+-----------------------------------+
+| w1_real  | s_axi_control | register  | name=w1_real offset=0x10 range=32 |
+| w1_imag  | s_axi_control | register  | name=w1_imag offset=0x18 range=32 |
+| w2_real  | s_axi_control | register  | name=w2_real offset=0x20 range=32 |
+| w2_imag  | s_axi_control | register  | name=w2_imag offset=0x28 range=32 |
+| w3_real  | s_axi_control | register  | name=w3_real offset=0x30 range=32 |
+| w3_imag  | s_axi_control | register  | name=w3_imag offset=0x38 range=32 |
+| w4_real  | s_axi_control | register  | name=w4_real offset=0x40 range=32 |
+| w4_imag  | s_axi_control | register  | name=w4_imag offset=0x48 range=32 |
+| in1_real | in1_real      | interface |                                   |
+| in1_imag | in1_imag      | interface |                                   |
+| in2_real | in2_real      | interface |                                   |
+| in2_imag | in2_imag      | interface |                                   |
+| in3_real | in3_real      | interface |                                   |
+| in3_imag | in3_imag      | interface |                                   |
+| in4_real | in4_real      | interface |                                   |
+| in4_imag | in4_imag      | interface |                                   |
+| out_real | out_real      | interface |                                   |
+| out_imag | out_imag      | interface |                                   |
++----------+---------------+-----------+-----------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+------------+-----+-----------+---------+
+| Name                                 | DSP | Pragma | Variable   | Op  | Impl      | Latency |
++--------------------------------------+-----+--------+------------+-----+-----------+---------+
+| + DelayAndSum                        | 16  |        |            |     |           |         |
+|   mac_muladd_16s_16s_31s_31_4_1_U3   | 1   |        | mul_ln74   | mul | dsp_slice | 3       |
+|   mul_16s_16s_31_1_1_U1              | 1   |        | mul_ln74_1 | mul | auto      | 0       |
+|   mac_muladd_16s_16s_31s_31_4_1_U3   | 1   |        | add_ln74   | add | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U5  | 1   |        | mul_ln75   | mul | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U5  | 1   |        | add_ln75   | add | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U7  | 1   |        | mul_ln75_1 | mul | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U7  | 1   |        | add_ln75_1 | add | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U9  | 1   |        | mul_ln76   | mul | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U9  | 1   |        | add_ln76   | add | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U11 | 1   |        | mul_ln76_1 | mul | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U11 | 1   |        | add_ln76_1 | add | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U13 | 1   |        | mul_ln77   | mul | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U13 | 1   |        | add_ln77   | add | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U15 | 1   |        | mul_ln77_1 | mul | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U15 | 1   |        | add_ln77_1 | add | dsp_slice | 3       |
+|   mul_16s_16s_31_1_1_U2              | 1   |        | mul_ln80   | mul | auto      | 0       |
+|   mac_mulsub_16s_16s_31s_31_4_1_U4   | 1   |        | mul_ln80_1 | mul | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31s_31_4_1_U4   | 1   |        | sub_ln80   | sub | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U6  | 1   |        | mul_ln81   | mul | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U6  | 1   |        | add_ln81   | add | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U8  | 1   |        | mul_ln81_1 | mul | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U8  | 1   |        | sub_ln81   | sub | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U10 | 1   |        | mul_ln82   | mul | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U10 | 1   |        | add_ln82   | add | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U12 | 1   |        | mul_ln82_1 | mul | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U12 | 1   |        | sub_ln82   | sub | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U14 | 1   |        | mul_ln83   | mul | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U14 | 1   |        | add_ln83   | add | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U16 | 1   |        | mul_ln83_1 | mul | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U16 | 1   |        | sub_ln83   | sub | dsp_slice | 3       |
++--------------------------------------+-----+--------+------------+-----+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + DelayAndSum     |           |           | 0    | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------+---------------------------------------------+
+| Type      | Options                     | Location                                    |
++-----------+-----------------------------+---------------------------------------------+
+| top       | name=DelayAndSum            | DelayAndSum.cpp:23 in delayandsum           |
+| interface | mode=axis port=in1_real     | DelayAndSum.cpp:26 in delayandsum, in1_real |
+| interface | mode=axis port=in1_imag     | DelayAndSum.cpp:27 in delayandsum, in1_imag |
+| interface | mode=axis port=in2_real     | DelayAndSum.cpp:28 in delayandsum, in2_real |
+| interface | mode=axis port=in2_imag     | DelayAndSum.cpp:29 in delayandsum, in2_imag |
+| interface | mode=axis port=in3_real     | DelayAndSum.cpp:30 in delayandsum, in3_real |
+| interface | mode=axis port=in3_imag     | DelayAndSum.cpp:31 in delayandsum, in3_imag |
+| interface | mode=axis port=in4_real     | DelayAndSum.cpp:32 in delayandsum, in4_real |
+| interface | mode=axis port=in4_imag     | DelayAndSum.cpp:33 in delayandsum, in4_imag |
+| interface | mode=axis port=out_real     | DelayAndSum.cpp:36 in delayandsum, out_real |
+| interface | mode=axis port=out_imag     | DelayAndSum.cpp:37 in delayandsum, out_imag |
+| interface | mode=s_axilite port=w1_real | DelayAndSum.cpp:40 in delayandsum, w1_real  |
+| interface | mode=s_axilite port=w1_imag | DelayAndSum.cpp:41 in delayandsum, w1_imag  |
+| interface | mode=s_axilite port=w2_real | DelayAndSum.cpp:42 in delayandsum, w2_real  |
+| interface | mode=s_axilite port=w2_imag | DelayAndSum.cpp:43 in delayandsum, w2_imag  |
+| interface | mode=s_axilite port=w3_real | DelayAndSum.cpp:44 in delayandsum, w3_real  |
+| interface | mode=s_axilite port=w3_imag | DelayAndSum.cpp:45 in delayandsum, w3_imag  |
+| interface | mode=s_axilite port=w4_real | DelayAndSum.cpp:46 in delayandsum, w4_real  |
+| interface | mode=s_axilite port=w4_imag | DelayAndSum.cpp:47 in delayandsum, w4_imag  |
+| pipeline  | II=1                        | DelayAndSum.cpp:49 in delayandsum           |
++-----------+-----------------------------+---------------------------------------------+
+
+

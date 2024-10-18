@@ -46,8 +46,6 @@ void DelayAndSum(
     #pragma HLS INTERFACE mode=s_axilite port=w4_real
     #pragma HLS INTERFACE mode=s_axilite port=w4_imag
 
-
-    #pragma HLS DATAFLOW
     #pragma HLS pipeline II=1
 
     in_t in1_real_buffer = in1_real.read();

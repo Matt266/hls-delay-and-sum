@@ -1,0 +1,66 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=DelayAndSum" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=DelayAndSum" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=in1_real" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=in1_imag" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=in2_real" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=in2_imag" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=in3_real" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=in3_imag" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=in4_real" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=in4_imag" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=out_real" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=out_imag" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w1_real" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:41:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w1_imag" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:42:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w2_real" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:43:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w2_imag" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:44:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w3_real" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w3_imag" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w4_real" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:47:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=w4_imag" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DelayAndSum.cpp:49:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="DelayAndSum" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,1122 @@
+{
+  "Top": "DelayAndSum",
+  "RtlTop": "DelayAndSum",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "DelayAndSum_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_hs",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "zynquplus",
+    "Device": "xczu48dr",
+    "Package": "-ffvg1517",
+    "Speed": "-2-e",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "w1_real": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "w1_real",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "w1_imag": {
+      "index": "1",
+      "direction": "in",
+      "srcType": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "w1_imag",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "w2_real": {
+      "index": "2",
+      "direction": "in",
+      "srcType": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "w2_real",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "w2_imag": {
+      "index": "3",
+      "direction": "in",
+      "srcType": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "w2_imag",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "w3_real": {
+      "index": "4",
+      "direction": "in",
+      "srcType": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "w3_real",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "w3_imag": {
+      "index": "5",
+      "direction": "in",
+      "srcType": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "w3_imag",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "w4_real": {
+      "index": "6",
+      "direction": "in",
+      "srcType": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "w4_real",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "w4_imag": {
+      "index": "7",
+      "direction": "in",
+      "srcType": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "w4_imag",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "in1_real": {
+      "index": "8",
+      "direction": "in",
+      "srcType": "stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "in1_real",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "in1_imag": {
+      "index": "9",
+      "direction": "in",
+      "srcType": "stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "in1_imag",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "in2_real": {
+      "index": "10",
+      "direction": "in",
+      "srcType": "stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "in2_real",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "in2_imag": {
+      "index": "11",
+      "direction": "in",
+      "srcType": "stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "in2_imag",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "in3_real": {
+      "index": "12",
+      "direction": "in",
+      "srcType": "stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "in3_real",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "in3_imag": {
+      "index": "13",
+      "direction": "in",
+      "srcType": "stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "in3_imag",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "in4_real": {
+      "index": "14",
+      "direction": "in",
+      "srcType": "stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "in4_real",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "in4_imag": {
+      "index": "15",
+      "direction": "in",
+      "srcType": "stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "in4_imag",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "out_real": {
+      "index": "16",
+      "direction": "out",
+      "srcType": "stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "out_real",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "out_imag": {
+      "index": "17",
+      "direction": "out",
+      "srcType": "stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>&",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "out_imag",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_csim -code_analyzer=0",
+      "config_csim -sanitize_address=0",
+      "config_csim -sanitize_undefined=0",
+      "config_export -description {4 channel delay and sum beamformer}",
+      "config_export -display_name=DelayAndSum",
+      "config_export -output=C:UsersmattOneDriveDokumente__MasterVivadoVitis_HLSDelayAndSumDelayAndSumDelayAndSumDelayAndSum.zip",
+      "config_export -format=ip_catalog",
+      "config_export -flow=none"
+    ],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "DelayAndSum"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "5",
+    "Uncertainty": "1.35",
+    "IsCombinational": "0",
+    "II": "1",
+    "Latency": "10"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "DelayAndSum",
+    "Version": "1.0",
+    "DisplayName": "DelayAndSum",
+    "Revision": "2113783343",
+    "Description": "4 channel delay and sum beamformer",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_DelayAndSum_1_0.zip"
+  },
+  "Files": {
+    "CSource": [
+      "..\/..\/DelayAndSum.cpp",
+      "..\/..\/DelayAndSum.hpp"
+    ],
+    "TestBench": [
+      "..\/..\/DelayAndSumTB.cpp",
+      "..\/..\/TestData.hpp"
+    ],
+    "Vhdl": [
+      "impl\/vhdl\/DelayAndSum_control_s_axi.vhd",
+      "impl\/vhdl\/DelayAndSum_mac_muladd_16s_16s_31ns_31_4_1.vhd",
+      "impl\/vhdl\/DelayAndSum_mac_muladd_16s_16s_31s_31_4_1.vhd",
+      "impl\/vhdl\/DelayAndSum_mac_mulsub_16s_16s_31ns_31_4_1.vhd",
+      "impl\/vhdl\/DelayAndSum_mac_mulsub_16s_16s_31s_31_4_1.vhd",
+      "impl\/vhdl\/DelayAndSum_mul_16s_16s_31_1_1.vhd",
+      "impl\/vhdl\/DelayAndSum_regslice_both.vhd",
+      "impl\/vhdl\/DelayAndSum.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/DelayAndSum_control_s_axi.v",
+      "impl\/verilog\/DelayAndSum_hls_deadlock_idx0_monitor.v",
+      "impl\/verilog\/DelayAndSum_hls_deadlock_kernel_monitor_top.vh",
+      "impl\/verilog\/DelayAndSum_mac_muladd_16s_16s_31ns_31_4_1.v",
+      "impl\/verilog\/DelayAndSum_mac_muladd_16s_16s_31s_31_4_1.v",
+      "impl\/verilog\/DelayAndSum_mac_mulsub_16s_16s_31ns_31_4_1.v",
+      "impl\/verilog\/DelayAndSum_mac_mulsub_16s_16s_31s_31_4_1.v",
+      "impl\/verilog\/DelayAndSum_mul_16s_16s_31_1_1.v",
+      "impl\/verilog\/DelayAndSum_regslice_both.v",
+      "impl\/verilog\/DelayAndSum.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/DelayAndSum_v1_0\/data\/DelayAndSum.mdd",
+      "impl\/misc\/drivers\/DelayAndSum_v1_0\/data\/DelayAndSum.tcl",
+      "impl\/misc\/drivers\/DelayAndSum_v1_0\/data\/DelayAndSum.yaml",
+      "impl\/misc\/drivers\/DelayAndSum_v1_0\/src\/CMakeLists.txt",
+      "impl\/misc\/drivers\/DelayAndSum_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/DelayAndSum_v1_0\/src\/xdelayandsum.c",
+      "impl\/misc\/drivers\/DelayAndSum_v1_0\/src\/xdelayandsum.h",
+      "impl\/misc\/drivers\/DelayAndSum_v1_0\/src\/xdelayandsum_hw.h",
+      "impl\/misc\/drivers\/DelayAndSum_v1_0\/src\/xdelayandsum_linux.c",
+      "impl\/misc\/drivers\/DelayAndSum_v1_0\/src\/xdelayandsum_sinit.c"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/DelayAndSum.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": []
+  },
+  "Interfaces": {
+    "s_axi_control": {
+      "type": "axi4lite",
+      "busTypeName": "aximm",
+      "mode": "slave",
+      "dataWidth": "32",
+      "addrWidth": "7",
+      "portPrefix": "s_axi_control_",
+      "paramPrefix": "C_S_AXI_CONTROL_",
+      "ports": [
+        "s_axi_control_ARADDR",
+        "s_axi_control_ARREADY",
+        "s_axi_control_ARVALID",
+        "s_axi_control_AWADDR",
+        "s_axi_control_AWREADY",
+        "s_axi_control_AWVALID",
+        "s_axi_control_BREADY",
+        "s_axi_control_BRESP",
+        "s_axi_control_BVALID",
+        "s_axi_control_RDATA",
+        "s_axi_control_RREADY",
+        "s_axi_control_RRESP",
+        "s_axi_control_RVALID",
+        "s_axi_control_WDATA",
+        "s_axi_control_WREADY",
+        "s_axi_control_WSTRB",
+        "s_axi_control_WVALID"
+      ],
+      "registers": [
+        {
+          "offset": "0x10",
+          "name": "w1_real",
+          "access": "W",
+          "description": "Data signal of w1_real",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "16",
+              "name": "w1_real",
+              "access": "W",
+              "description": "Bit 15 to 0 of w1_real"
+            },
+            {
+              "offset": "16",
+              "width": "16",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x18",
+          "name": "w1_imag",
+          "access": "W",
+          "description": "Data signal of w1_imag",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "16",
+              "name": "w1_imag",
+              "access": "W",
+              "description": "Bit 15 to 0 of w1_imag"
+            },
+            {
+              "offset": "16",
+              "width": "16",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x20",
+          "name": "w2_real",
+          "access": "W",
+          "description": "Data signal of w2_real",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "16",
+              "name": "w2_real",
+              "access": "W",
+              "description": "Bit 15 to 0 of w2_real"
+            },
+            {
+              "offset": "16",
+              "width": "16",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x28",
+          "name": "w2_imag",
+          "access": "W",
+          "description": "Data signal of w2_imag",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "16",
+              "name": "w2_imag",
+              "access": "W",
+              "description": "Bit 15 to 0 of w2_imag"
+            },
+            {
+              "offset": "16",
+              "width": "16",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x30",
+          "name": "w3_real",
+          "access": "W",
+          "description": "Data signal of w3_real",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "16",
+              "name": "w3_real",
+              "access": "W",
+              "description": "Bit 15 to 0 of w3_real"
+            },
+            {
+              "offset": "16",
+              "width": "16",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x38",
+          "name": "w3_imag",
+          "access": "W",
+          "description": "Data signal of w3_imag",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "16",
+              "name": "w3_imag",
+              "access": "W",
+              "description": "Bit 15 to 0 of w3_imag"
+            },
+            {
+              "offset": "16",
+              "width": "16",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x40",
+          "name": "w4_real",
+          "access": "W",
+          "description": "Data signal of w4_real",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "16",
+              "name": "w4_real",
+              "access": "W",
+              "description": "Bit 15 to 0 of w4_real"
+            },
+            {
+              "offset": "16",
+              "width": "16",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x48",
+          "name": "w4_imag",
+          "access": "W",
+          "description": "Data signal of w4_imag",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "16",
+              "name": "w4_imag",
+              "access": "W",
+              "description": "Bit 15 to 0 of w4_imag"
+            },
+            {
+              "offset": "16",
+              "width": "16",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "16",
+          "argName": "w1_real"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "24",
+          "argName": "w1_imag"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "32",
+          "argName": "w2_real"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "40",
+          "argName": "w2_imag"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "48",
+          "argName": "w3_real"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "56",
+          "argName": "w3_imag"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "64",
+          "argName": "w4_real"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "72",
+          "argName": "w4_imag"
+        }
+      ]
+    },
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {
+        "ASSOCIATED_BUSIF": "s_axi_control:in1_real:in1_imag:in2_real:in2_imag:in3_real:in3_imag:in4_real:in4_imag:out_real:out_imag",
+        "ASSOCIATED_RESET": "ap_rst_n"
+      },
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "busTypeName": "acc_handshake",
+      "mode": "slave",
+      "portMap": {
+        "ap_start": "start",
+        "ap_done": "done",
+        "ap_idle": "idle",
+        "ap_ready": "ready"
+      },
+      "ports": [
+        "ap_done",
+        "ap_idle",
+        "ap_ready",
+        "ap_start"
+      ]
+    },
+    "in1_real": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "16",
+      "portPrefix": "in1_real_",
+      "ports": [
+        "in1_real_TDATA",
+        "in1_real_TREADY",
+        "in1_real_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "in1_real"
+        }]
+    },
+    "in1_imag": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "16",
+      "portPrefix": "in1_imag_",
+      "ports": [
+        "in1_imag_TDATA",
+        "in1_imag_TREADY",
+        "in1_imag_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "in1_imag"
+        }]
+    },
+    "in2_real": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "16",
+      "portPrefix": "in2_real_",
+      "ports": [
+        "in2_real_TDATA",
+        "in2_real_TREADY",
+        "in2_real_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "in2_real"
+        }]
+    },
+    "in2_imag": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "16",
+      "portPrefix": "in2_imag_",
+      "ports": [
+        "in2_imag_TDATA",
+        "in2_imag_TREADY",
+        "in2_imag_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "in2_imag"
+        }]
+    },
+    "in3_real": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "16",
+      "portPrefix": "in3_real_",
+      "ports": [
+        "in3_real_TDATA",
+        "in3_real_TREADY",
+        "in3_real_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "in3_real"
+        }]
+    },
+    "in3_imag": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "16",
+      "portPrefix": "in3_imag_",
+      "ports": [
+        "in3_imag_TDATA",
+        "in3_imag_TREADY",
+        "in3_imag_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "in3_imag"
+        }]
+    },
+    "in4_real": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "16",
+      "portPrefix": "in4_real_",
+      "ports": [
+        "in4_real_TDATA",
+        "in4_real_TREADY",
+        "in4_real_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "in4_real"
+        }]
+    },
+    "in4_imag": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "direction": "in",
+      "dataWidth": "16",
+      "portPrefix": "in4_imag_",
+      "ports": [
+        "in4_imag_TDATA",
+        "in4_imag_TREADY",
+        "in4_imag_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "in4_imag"
+        }]
+    },
+    "out_real": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "direction": "out",
+      "dataWidth": "16",
+      "portPrefix": "out_real_",
+      "ports": [
+        "out_real_TDATA",
+        "out_real_TREADY",
+        "out_real_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "out_real"
+        }]
+    },
+    "out_imag": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "direction": "out",
+      "dataWidth": "16",
+      "portPrefix": "out_imag_",
+      "ports": [
+        "out_imag_TDATA",
+        "out_imag_TREADY",
+        "out_imag_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "out_imag"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "s_axi_control_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_AWADDR": {
+      "dir": "in",
+      "width": "7"
+    },
+    "s_axi_control_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_control_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_control_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_ARADDR": {
+      "dir": "in",
+      "width": "7"
+    },
+    "s_axi_control_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_control_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_control_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in1_real_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in1_real_TDATA": {
+      "dir": "in",
+      "width": "16"
+    },
+    "in1_real_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in1_imag_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in1_imag_TDATA": {
+      "dir": "in",
+      "width": "16"
+    },
+    "in1_imag_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in2_real_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in2_real_TDATA": {
+      "dir": "in",
+      "width": "16"
+    },
+    "in2_real_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in2_imag_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in2_imag_TDATA": {
+      "dir": "in",
+      "width": "16"
+    },
+    "in2_imag_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in3_real_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in3_real_TDATA": {
+      "dir": "in",
+      "width": "16"
+    },
+    "in3_real_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in3_imag_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in3_imag_TDATA": {
+      "dir": "in",
+      "width": "16"
+    },
+    "in3_imag_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in4_real_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in4_real_TDATA": {
+      "dir": "in",
+      "width": "16"
+    },
+    "in4_real_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in4_imag_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in4_imag_TDATA": {
+      "dir": "in",
+      "width": "16"
+    },
+    "in4_imag_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "out_real_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "out_real_TDATA": {
+      "dir": "out",
+      "width": "16"
+    },
+    "out_real_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "out_imag_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "out_imag_TDATA": {
+      "dir": "out",
+      "width": "16"
+    },
+    "out_imag_TVALID": {
+      "dir": "out",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "DelayAndSum",
+      "BindInstances": "mac_muladd_16s_16s_31s_31_4_1_U3 mul_16s_16s_31_1_1_U1 mac_muladd_16s_16s_31s_31_4_1_U3 mac_muladd_16s_16s_31ns_31_4_1_U5 mac_muladd_16s_16s_31ns_31_4_1_U5 mac_muladd_16s_16s_31ns_31_4_1_U7 mac_muladd_16s_16s_31ns_31_4_1_U7 mac_muladd_16s_16s_31ns_31_4_1_U9 mac_muladd_16s_16s_31ns_31_4_1_U9 mac_muladd_16s_16s_31ns_31_4_1_U11 mac_muladd_16s_16s_31ns_31_4_1_U11 mac_muladd_16s_16s_31ns_31_4_1_U13 mac_muladd_16s_16s_31ns_31_4_1_U13 mac_muladd_16s_16s_31ns_31_4_1_U15 mac_muladd_16s_16s_31ns_31_4_1_U15 mul_16s_16s_31_1_1_U2 mac_mulsub_16s_16s_31s_31_4_1_U4 mac_mulsub_16s_16s_31s_31_4_1_U4 mac_muladd_16s_16s_31ns_31_4_1_U6 mac_muladd_16s_16s_31ns_31_4_1_U6 mac_mulsub_16s_16s_31ns_31_4_1_U8 mac_mulsub_16s_16s_31ns_31_4_1_U8 mac_muladd_16s_16s_31ns_31_4_1_U10 mac_muladd_16s_16s_31ns_31_4_1_U10 mac_mulsub_16s_16s_31ns_31_4_1_U12 mac_mulsub_16s_16s_31ns_31_4_1_U12 mac_muladd_16s_16s_31ns_31_4_1_U14 mac_muladd_16s_16s_31ns_31_4_1_U14 mac_mulsub_16s_16s_31ns_31_4_1_U16 mac_mulsub_16s_16s_31ns_31_4_1_U16 control_s_axi_U"
+    },
+    "Info": {"DelayAndSum": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }},
+    "Metrics": {"DelayAndSum": {
+        "Latency": {
+          "LatencyBest": "10",
+          "LatencyAvg": "10",
+          "LatencyWorst": "10",
+          "PipelineII": "1",
+          "PipelineDepth": "11",
+          "PipelineType": "yes"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "1.35",
+          "Estimate": "3.380"
+        },
+        "Area": {
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "2160",
+          "UTIL_BRAM": "0",
+          "DSP": "16",
+          "AVAIL_DSP": "4272",
+          "UTIL_DSP": "~0",
+          "FF": "1247",
+          "AVAIL_FF": "850560",
+          "UTIL_FF": "~0",
+          "LUT": "664",
+          "AVAIL_LUT": "425280",
+          "UTIL_LUT": "~0",
+          "URAM": "0",
+          "AVAIL_URAM": "80",
+          "UTIL_URAM": "0"
+        }
+      }}
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2024-10-18 13:23:09 +0200",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2024.1"
+  }
+}
