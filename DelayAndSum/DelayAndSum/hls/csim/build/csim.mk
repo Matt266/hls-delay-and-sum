@@ -23,7 +23,7 @@ __USE_VCXX_CLANG__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../DelayAndSumTB.cpp ../../../../DelayAndSum.cpp
+HLS_SOURCES = ../../../../DelayAndSumTB.cpp ../../../../CalculateWeights.cpp ../../../../DelayAndSum.cpp
 
 override TARGET := csim.exe
 
@@ -61,7 +61,7 @@ IFLAG += -D__SIM_FIR__
 
 IFLAG += -D__SIM_DDS__
 
-IFLAG += -D__DSP48E1__
+IFLAG += -D__DSP48E2__
 LFLAG += -Wl,--stack,0x40000000
 IFLAG += -g
 IFLAG += -DNT
@@ -89,6 +89,12 @@ $(ObjDir)/DelayAndSumTB.o: ../../../../DelayAndSumTB.cpp $(ObjDir)/.dir
 	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/DelayAndSumTB.d
+
+$(ObjDir)/CalculateWeights.o: ../../../../CalculateWeights.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../CalculateWeights.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/CalculateWeights.d
 
 $(ObjDir)/DelayAndSum.o: ../../../../DelayAndSum.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../DelayAndSum.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

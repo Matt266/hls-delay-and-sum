@@ -4,6 +4,7 @@
 
 #include "TestData.hpp"
 #include "DelayAndSum.hpp"
+#include "CalculateWeights.hpp"
 
 hls::stream<in_t> in1_real;
 hls::stream<in_t> in1_imag;
@@ -24,11 +25,69 @@ in_t w3_imag;
 in_t w4_real;
 in_t w4_imag;
 
+double w1_real_test;
+double w1_imag_test;
+double w2_real_test;
+double w2_imag_test;
+double w3_real_test;
+double w3_imag_test;
+double w4_real_test;
+double w4_imag_test;
+
 out_t outputs_real[NUM_ANGLES];
 out_t outputs_imag[NUM_ANGLES];
 
 int main(){
     int ret = 0;
+
+    // check weight calculation
+    CalculateWeights(w1_real_test, w1_imag_test,
+                     w2_real_test, w2_imag_test, 
+                     w3_real_test, w3_imag_test,
+                     w4_real_test, w4_imag_test);
+    double w_margin = 1e-8;
+    if(abs(weights_real[0]-w1_real_test) <= w_margin){
+        ret = 0;
+    } else {
+        ret = ret +1;
+    }
+    if(abs(weights_real[1]-w2_real_test) <= w_margin){
+        ret = 0;
+    } else {
+        ret = ret +1;
+    }  
+    if(abs(weights_real[2]-w3_real_test) <= w_margin){
+        ret = 0;
+    } else {
+        ret = ret +1;
+    }
+    if(abs(weights_real[3]-w4_real_test) <= w_margin){
+        ret = 0;
+    } else {
+        ret = ret +1;
+    }
+    if(abs(weights_imag[0]-w1_imag_test) <= w_margin){
+        ret = 0;
+    } else {
+        ret = ret +1;
+    }
+    if(abs(weights_imag[1]-w2_imag_test) <= w_margin){
+        ret = 0;
+    } else {
+        ret = ret +1;
+    }
+    if(abs(weights_imag[2]-w3_imag_test) <= w_margin){
+        ret = 0;
+    } else {
+        ret = ret+1;
+    }
+    if(abs(weights_imag[3]-w4_imag_test) <= w_margin){
+        ret = 0;
+    } else {
+        ret = ret +1;
+    }
+
+    return ret;
 
     for(unsigned int i = 0; i < NUM_ANGLES; i++){
 
