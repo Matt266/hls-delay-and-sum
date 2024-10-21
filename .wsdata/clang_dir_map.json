@@ -4,6 +4,7 @@
     "DelayAndSum\\CalculateWeights.cpp": "DelayAndSum",
     "DelayAndSum\\TestData.hpp": "DelayAndSum",
     "DelayAndSum\\DelayAndSum.hpp": "DelayAndSum",
+    "DelayAndSum\\CalculateWeights.hpp": "DelayAndSum",
     "DelayAndSum\\DelayAndSumTB.cpp": "DelayAndSum",
     "DelayAndSum\\DelayAndSum.cpp": "DelayAndSum"
   }

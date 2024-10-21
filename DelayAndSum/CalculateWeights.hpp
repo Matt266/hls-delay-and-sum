@@ -1,16 +1,18 @@
 #ifndef __CALCULATE_WEIGHTS_HPP
 #define __CALCULATE_WEIGHTS_HPP
 
+#include "DelayAndSum.hpp"
+
 void CalculateWeights(
     //in_t angle,
-    double &w1_real,
-    double &w1_imag,
-    double &w2_real,
-    double &w2_imag,
-    double &w3_real,
-    double &w3_imag,
-    double &w4_real,
-    double &w4_imag
+    in_t &w1_real,
+    in_t &w1_imag,
+    in_t &w2_real,
+    in_t &w2_imag,
+    in_t &w3_real,
+    in_t &w3_imag,
+    in_t &w4_real,
+    in_t &w4_imag
 );
 
 #endif //__CALCULATE_WEIGHTS_HPP
