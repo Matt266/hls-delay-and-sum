@@ -18,4 +18,5 @@ obj/DelayAndSum.o: ../../../../DelayAndSum.cpp \
   C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_int_special.h \
   C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_fixed_ref.h \
   C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_fixed_special.h \
-  C:/Xilinx/Vitis_HLS/2024.1/include/hls_stream.h
+  C:/Xilinx/Vitis_HLS/2024.1/include/hls_stream.h \
+  ../../../../CalculateWeights.hpp
