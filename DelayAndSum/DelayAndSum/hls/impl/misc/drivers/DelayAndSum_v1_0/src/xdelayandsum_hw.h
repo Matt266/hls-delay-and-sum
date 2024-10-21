@@ -11,7 +11,7 @@
 // 0x08 : reserved
 // 0x0c : reserved
 // 0x10 : Data signal of phi
-//        bit 15~0 - phi[15:0] (Read/Write)
+//        bit 11~0 - phi[11:0] (Read/Write)
 //        others   - reserved
 // 0x14 : reserved
 // 0x18 : Data signal of xpos1
@@ -33,7 +33,7 @@
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define XDELAYANDSUM_CONTROL_ADDR_PHI_DATA   0x10
-#define XDELAYANDSUM_CONTROL_BITS_PHI_DATA   16
+#define XDELAYANDSUM_CONTROL_BITS_PHI_DATA   12
 #define XDELAYANDSUM_CONTROL_ADDR_XPOS1_DATA 0x18
 #define XDELAYANDSUM_CONTROL_BITS_XPOS1_DATA 16
 #define XDELAYANDSUM_CONTROL_ADDR_XPOS2_DATA 0x20

@@ -1,12 +1,12 @@
 #include <hls_math.h>
 #include "CalculateWeights.hpp"
 
-void CalculateElement(in2_t phi, in2_t xpos, in1_t &w_real, in1_t &w_imag){
+void CalculateElement(in2_t phi, in3_t xpos, in1_t &w_real, in1_t &w_imag){
     constexpr double pi = 3.14159265359;
     constexpr double c_0 = 299792458; // in m/s
     constexpr double f_c = 3750000000; //in Hz
     constexpr double mm_to_m = 1000; // adjust xfactor from mm to m
-    const in2_t k = 2*pi*f_c/c_0*mm_to_m;
+    const in3_t k = 2*pi*f_c/c_0*mm_to_m;
 
     // -1 in complex exponent and -1 from propagation direction (incoming wave) 
     // cancel each other out
@@ -19,10 +19,10 @@ void CalculateWeights(
     in2_t phi,
     
     // in mm
-    in2_t xpos1,
-    in2_t xpos2,
-    in2_t xpos3,
-    in2_t xpos4,
+    in3_t xpos1,
+    in3_t xpos2,
+    in3_t xpos3,
+    in3_t xpos4,
 
     // 
     in1_t &w1_real,

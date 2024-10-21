@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "10/18/24 13:22:57",
- "timestampMillis": "2673724055",
+ "dateTimestamp": "10/21/24 15:54:45",
+ "timestampMillis": "2942032714",
  "buildStep": {
-  "cmdId": "f9addaf9-ca6a-4db8-ae27-d828a494676f",
+  "cmdId": "16ea87de-121f-424a-bc4c-ff6925b404bd",
   "name": "vitis-run",
   "logFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\logs\\DelayAndSum.steps.log",
   "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\hls_config.cfg --work_dir DelayAndSum ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "10/18/24 13:22:57",
- "timestampMillis": "2673724056",
+ "dateTimestamp": "10/21/24 15:54:45",
+ "timestampMillis": "2942032714",
  "status": {
-  "cmdId": "f9addaf9-ca6a-4db8-ae27-d828a494676f",
+  "cmdId": "16ea87de-121f-424a-bc4c-ff6925b404bd",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "10/18/24 13:23:08",
- "timestampMillis": "2673735275",
+ "dateTimestamp": "10/21/24 15:54:50",
+ "timestampMillis": "2942037879",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -65,7 +65,9 @@
     },
     "sources": [
      "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
-     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.hpp"
+     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.hpp",
+     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\CalculateWeights.cpp",
+     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\CalculateWeights.hpp"
     ],
     "psSources": [],
     "cuNames": [],
@@ -81,10 +83,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "10/18/24 13:23:08",
- "timestampMillis": "2673735280",
+ "dateTimestamp": "10/21/24 15:54:50",
+ "timestampMillis": "2942037881",
  "buildStep": {
-  "cmdId": "59d2591a-3a38-4e27-8c07-59ea493fafed",
+  "cmdId": "a8115af4-6094-45a0-a682-b699aeff9107",
   "name": "export_design",
   "logFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\hls.log",
   "commandLine": "export_design -flow none",
@@ -100,10 +102,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "10/18/24 13:23:08",
- "timestampMillis": "2673735281",
+ "dateTimestamp": "10/21/24 15:54:50",
+ "timestampMillis": "2942037882",
  "status": {
-  "cmdId": "59d2591a-3a38-4e27-8c07-59ea493fafed",
+  "cmdId": "a8115af4-6094-45a0-a682-b699aeff9107",
   "state": "CS_RUNNING"
  }
 }
@@ -111,10 +113,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "10/18/24 13:23:37",
- "timestampMillis": "2673764474",
+ "dateTimestamp": "10/21/24 15:55:17",
+ "timestampMillis": "2942064585",
  "status": {
-  "cmdId": "59d2591a-3a38-4e27-8c07-59ea493fafed",
+  "cmdId": "a8115af4-6094-45a0-a682-b699aeff9107",
   "state": "CS_PASSED"
  }
 }
@@ -122,10 +124,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "10/18/24 13:23:37",
- "timestampMillis": "2673764806",
+ "dateTimestamp": "10/21/24 15:55:17",
+ "timestampMillis": "2942064755",
  "status": {
-  "cmdId": "f9addaf9-ca6a-4db8-ae27-d828a494676f",
+  "cmdId": "16ea87de-121f-424a-bc4c-ff6925b404bd",
   "state": "CS_PASSED"
  }
 }
@@ -133,8 +135,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "10/18/24 13:23:37",
- "timestampMillis": "2673764807",
+ "dateTimestamp": "10/21/24 15:55:17",
+ "timestampMillis": "2942064755",
  "report": {
   "path": "",
   "name": "",
@@ -147,8 +149,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "10/18/24 13:23:37",
- "timestampMillis": "2673764808",
+ "dateTimestamp": "10/21/24 15:55:17",
+ "timestampMillis": "2942064755",
  "report": {
   "path": "",
   "name": "",

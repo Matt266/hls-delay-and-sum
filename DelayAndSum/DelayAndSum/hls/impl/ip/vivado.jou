@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Oct 21 15:54:54 2024
+# Process ID: 11700
+# Current directory: C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/impl/ip/vivado.log
+# Journal file: C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/impl/ip\vivado.jou
+# Running On        :Laptop-Matt
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz
+# CPU Frequency     :2995 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16872 MB
+# Swap memory       :22548 MB
+# Total Virtual     :39420 MB
+# Available Virtual :24845 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

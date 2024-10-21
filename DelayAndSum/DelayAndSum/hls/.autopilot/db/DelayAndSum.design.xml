@@ -14,17 +14,17 @@
 <TargetClockPeriod>5.00</TargetClockPeriod>
 <ClockUncertainty>1.35</ClockUncertainty>
 <TargetInitiationInterval>1</TargetInitiationInterval>
-<EstimatedClockPeriod>3.591</EstimatedClockPeriod>
+<EstimatedClockPeriod>3.587</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>53</Best-caseLatency>
-<Average-caseLatency>53</Average-caseLatency>
-<Worst-caseLatency>53</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.265 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.265 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.265 us</Worst-caseRealTimeLatency>
+<Best-caseLatency>50</Best-caseLatency>
+<Average-caseLatency>50</Average-caseLatency>
+<Worst-caseLatency>50</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.250 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.250 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.250 us</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>54</PipelineDepth>
+<PipelineDepth>51</PipelineDepth>
 <PipelineType>yes</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
@@ -41,10 +41,10 @@
 <DSP>63</DSP>
 <AVAIL_DSP>4272</AVAIL_DSP>
 <UTIL_DSP>1</UTIL_DSP>
-<FF>25050</FF>
+<FF>24782</FF>
 <AVAIL_FF>850560</AVAIL_FF>
 <UTIL_FF>2</UTIL_FF>
-<LUT>69331</LUT>
+<LUT>68266</LUT>
 <AVAIL_LUT>425280</AVAIL_LUT>
 <UTIL_LUT>16</UTIL_LUT>
 <URAM>0</URAM>

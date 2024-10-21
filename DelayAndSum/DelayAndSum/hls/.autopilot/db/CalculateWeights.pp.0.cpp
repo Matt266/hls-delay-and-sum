@@ -27283,7 +27283,14 @@ class stream : public stream<__STREAM_T__, 0> {
 # 7 "./DelayAndSum.hpp" 2
 
 typedef ap_fixed<16,1> in1_t;
-typedef ap_fixed<16,8> in2_t;
+
+
+
+
+
+typedef ap_fixed<12,4> in2_t;
+typedef ap_fixed<16,8> in3_t;
+
 typedef ap_fixed<16,1> out_t;
 
 void DelayAndSum(
@@ -27291,10 +27298,10 @@ void DelayAndSum(
     in2_t *phi,
 
 
-    in2_t *xpos1,
-    in2_t *xpos2,
-    in2_t *xpos3,
-    in2_t *xpos4,
+    in3_t *xpos1,
+    in3_t *xpos2,
+    in3_t *xpos3,
+    in3_t *xpos4,
 
 
     hls::stream<in1_t> &in1_real,
@@ -27315,10 +27322,10 @@ void CalculateWeights(
     in2_t phi,
 
 
-    in2_t xpos1,
-    in2_t xpos2,
-    in2_t xpos3,
-    in2_t xpos4,
+    in3_t xpos1,
+    in3_t xpos2,
+    in3_t xpos3,
+    in3_t xpos4,
 
 
     in1_t &w1_real,
@@ -27332,13 +27339,13 @@ void CalculateWeights(
 );
 # 3 "CalculateWeights.cpp" 2
 
-constexpr double pi = 3.14159265359;
-constexpr double c_0 = 299792458;
-constexpr double f_c = 3750000000;
-constexpr double mm_to_m = 1000;
-const in2_t k = 2*pi*f_c/c_0*mm_to_m;
+void CalculateElement(in2_t phi, in3_t xpos, in1_t &w_real, in1_t &w_imag){
+    constexpr double pi = 3.14159265359;
+    constexpr double c_0 = 299792458;
+    constexpr double f_c = 3750000000;
+    constexpr double mm_to_m = 1000;
+    const in3_t k = 2*pi*f_c/c_0*mm_to_m;
 
-void CalculateElement(in2_t phi, in2_t xpos, in1_t &w_real, in1_t &w_imag){
 
 
     w_real = hls::cos(k*hls::cos(phi)*xpos)/4;
@@ -27350,10 +27357,10 @@ void CalculateWeights(
     in2_t phi,
 
 
-    in2_t xpos1,
-    in2_t xpos2,
-    in2_t xpos3,
-    in2_t xpos4,
+    in3_t xpos1,
+    in3_t xpos2,
+    in3_t xpos3,
+    in3_t xpos4,
 
 
     in1_t &w1_real,

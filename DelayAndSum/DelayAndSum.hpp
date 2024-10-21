@@ -10,8 +10,9 @@ typedef ap_fixed<16,1> in1_t;
 // Used for calculation of weight vector
 // sin and cos from hls_math (CORDIC) are used
 // increasing the bitwidth drastically increases LUT usage
-// 16% with ap_fixed<16,8> and 64% for ap_fixed<32,8>
-typedef ap_fixed<16,8> in2_t;
+// 16% with ap_fixed<16,8> and 64% for ap_fixed<32,8> for in2_t and in3_t
+typedef ap_fixed<12,4> in2_t;
+typedef ap_fixed<16,8> in3_t;
 
 typedef ap_fixed<16,1> out_t;
 
@@ -20,10 +21,10 @@ void DelayAndSum(
     in2_t *phi,
     
     // in mm
-    in2_t *xpos1,
-    in2_t *xpos2,
-    in2_t *xpos3,
-    in2_t *xpos4,
+    in3_t *xpos1,
+    in3_t *xpos2,
+    in3_t *xpos3,
+    in3_t *xpos4,
 
     //
     hls::stream<in1_t> &in1_real,

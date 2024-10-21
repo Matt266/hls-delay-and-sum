@@ -16,7 +16,7 @@ set C_modelName {DelayAndSum}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
 set C_modelArgList {
-	{ phi int 16 regular {axi_slave 0}  }
+	{ phi int 12 regular {axi_slave 0}  }
 	{ xpos1 int 16 regular {axi_slave 0}  }
 	{ xpos2 int 16 regular {axi_slave 0}  }
 	{ xpos3 int 16 regular {axi_slave 0}  }
@@ -36,7 +36,7 @@ set hasAXIMCache 0
 set hasAXIML2Cache 0
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
-	{ "Name" : "phi", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":23}} , 
+	{ "Name" : "phi", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 12, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":23}} , 
  	{ "Name" : "xpos1", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":24}, "offset_end" : {"in":31}} , 
  	{ "Name" : "xpos2", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":32}, "offset_end" : {"in":39}} , 
  	{ "Name" : "xpos3", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":47}} , 
@@ -170,7 +170,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "53", "EstimateLatencyMin" : "53", "EstimateLatencyMax" : "53",
+		"VariableLatency" : "0", "ExactLatency" : "50", "EstimateLatencyMin" : "50", "EstimateLatencyMax" : "50",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -223,7 +223,7 @@ set RtlHierarchyInfo {[
 	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_34ns_62ns_94_3_1_U6", "Parent" : "0"},
 	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_34ns_62ns_94_3_1_U7", "Parent" : "0"},
 	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_34ns_62ns_94_3_1_U8", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16ns_26ns_41_1_1_U9", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_12ns_18ns_29_1_1_U9", "Parent" : "0"},
 	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_10_1_1_U10", "Parent" : "0"},
 	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_10s_11ns_21_1_1_U11", "Parent" : "0"},
 	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_21s_16s_36_1_1_U12", "Parent" : "0"},
@@ -240,7 +240,7 @@ set RtlHierarchyInfo {[
 	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_26_1_1_U23", "Parent" : "0"},
 	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_31_1_1_U24", "Parent" : "0"},
 	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_31_1_1_U25", "Parent" : "0"},
-	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16ns_8ns_18ns_18_4_1_U26", "Parent" : "0"},
+	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_12ns_4ns_14ns_14_4_1_U26", "Parent" : "0"},
 	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31s_31_4_1_U27", "Parent" : "0"},
 	{"ID" : "29", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_mulsub_16s_16s_31s_31_4_1_U28", "Parent" : "0"},
 	{"ID" : "30", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U29", "Parent" : "0"},
@@ -283,13 +283,13 @@ set ArgLastReadFirstWriteLatency {
 		in3_imag {Type I LastRead 0 FirstWrite -1}
 		in4_real {Type I LastRead 0 FirstWrite -1}
 		in4_imag {Type I LastRead 0 FirstWrite -1}
-		out_real {Type O LastRead -1 FirstWrite 52}
-		out_imag {Type O LastRead -1 FirstWrite 52}}}
+		out_real {Type O LastRead -1 FirstWrite 49}
+		out_imag {Type O LastRead -1 FirstWrite 49}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "53", "Max" : "53"}
+	{"Name" : "Latency", "Min" : "50", "Max" : "50"}
 	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 

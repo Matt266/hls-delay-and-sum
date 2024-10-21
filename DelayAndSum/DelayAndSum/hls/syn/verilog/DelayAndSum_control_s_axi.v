@@ -31,7 +31,7 @@ module DelayAndSum_control_s_axi
     output wire [1:0]                    RRESP,
     output wire                          RVALID,
     input  wire                          RREADY,
-    output wire [15:0]                   phi,
+    output wire [11:0]                   phi,
     output wire [15:0]                   xpos1,
     output wire [15:0]                   xpos2,
     output wire [15:0]                   xpos3,
@@ -45,7 +45,7 @@ module DelayAndSum_control_s_axi
 // 0x08 : reserved
 // 0x0c : reserved
 // 0x10 : Data signal of phi
-//        bit 15~0 - phi[15:0] (Read/Write)
+//        bit 11~0 - phi[11:0] (Read/Write)
 //        others   - reserved
 // 0x14 : reserved
 // 0x18 : Data signal of xpos1
@@ -100,7 +100,7 @@ localparam
     wire                          ar_hs;
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
-    reg  [15:0]                   int_phi = 'b0;
+    reg  [11:0]                   int_phi = 'b0;
     reg  [15:0]                   int_xpos1 = 'b0;
     reg  [15:0]                   int_xpos2 = 'b0;
     reg  [15:0]                   int_xpos3 = 'b0;
@@ -198,7 +198,7 @@ always @(posedge ACLK) begin
             rdata <= 'b0;
             case (raddr)
                 ADDR_PHI_DATA_0: begin
-                    rdata <= int_phi[15:0];
+                    rdata <= int_phi[11:0];
                 end
                 ADDR_XPOS1_DATA_0: begin
                     rdata <= int_xpos1[15:0];
@@ -224,13 +224,13 @@ assign xpos1 = int_xpos1;
 assign xpos2 = int_xpos2;
 assign xpos3 = int_xpos3;
 assign xpos4 = int_xpos4;
-// int_phi[15:0]
+// int_phi[11:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_phi[15:0] <= 0;
+        int_phi[11:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_PHI_DATA_0)
-            int_phi[15:0] <= (WDATA[31:0] & wmask) | (int_phi[15:0] & ~wmask);
+            int_phi[11:0] <= (WDATA[31:0] & wmask) | (int_phi[11:0] & ~wmask);
     end
 end
 

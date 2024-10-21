@@ -8,10 +8,10 @@ void CalculateWeights(
     in2_t phi,
     
     // in m
-    in2_t xpos1,
-    in2_t xpos2,
-    in2_t xpos3,
-    in2_t xpos4,
+    in3_t xpos1,
+    in3_t xpos2,
+    in3_t xpos3,
+    in3_t xpos4,
 
     // 
     in1_t &w1_real,

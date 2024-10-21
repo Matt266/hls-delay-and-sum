@@ -16,10 +16,10 @@ hls::stream<out_t> out_real;
 hls::stream<out_t> out_imag;
 
 in2_t phi = 70 * 2*pi/360;
-in2_t xpos1 = -60; // mm
-in2_t xpos2 = -20; // mm
-in2_t xpos3 = 20; // mm
-in2_t xpos4 = 60; // mm
+in3_t xpos1 = -60; // mm
+in3_t xpos2 = -20; // mm
+in3_t xpos3 = 20; // mm
+in3_t xpos4 = 60; // mm
 
 out_t outputs_real[NUM_ANGLES];
 out_t outputs_imag[NUM_ANGLES];

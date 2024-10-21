@@ -12,7 +12,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name DelayAndSum_mul_16ns_26ns_41_1_1
+set name DelayAndSum_mul_12ns_18ns_29_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
@@ -47,7 +47,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_mac_muladd_16ns_8ns_18ns_18_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+	::AP::rtl_comp_handler DelayAndSum_mac_muladd_12ns_4ns_14ns_14_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
@@ -112,7 +112,7 @@ set axilite_register_dict [dict create]
 set port_control {
 phi { 
 	dir I
-	width 16
+	width 12
 	depth 1
 	mode ap_none
 	offset 16
