@@ -4,7 +4,7 @@ set moduleIsExternC "1"
 set rawDecl ""
 set globalVariable ""
 set PortList ""
-set PortName "w1_real"
+set PortName "phi"
 set BitWidth "16"
 set ArrayOpt ""
 set Const "0"
@@ -16,7 +16,7 @@ set Interface "wire"
 set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "w1_imag"
+set PortName "xpos1"
 set BitWidth "16"
 set ArrayOpt ""
 set Const "0"
@@ -28,7 +28,7 @@ set Interface "wire"
 set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "w2_real"
+set PortName "xpos2"
 set BitWidth "16"
 set ArrayOpt ""
 set Const "0"
@@ -40,7 +40,7 @@ set Interface "wire"
 set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "w2_imag"
+set PortName "xpos3"
 set BitWidth "16"
 set ArrayOpt ""
 set Const "0"
@@ -52,43 +52,7 @@ set Interface "wire"
 set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "w3_real"
-set BitWidth "16"
-set ArrayOpt ""
-set Const "0"
-set Volatile "1"
-set Pointer "1"
-set Reference "0"
-set Dims [list 0]
-set Interface "wire"
-set DataType "void"
-set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
-lappend PortList $Port
-set PortName "w3_imag"
-set BitWidth "16"
-set ArrayOpt ""
-set Const "0"
-set Volatile "1"
-set Pointer "1"
-set Reference "0"
-set Dims [list 0]
-set Interface "wire"
-set DataType "void"
-set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
-lappend PortList $Port
-set PortName "w4_real"
-set BitWidth "16"
-set ArrayOpt ""
-set Const "0"
-set Volatile "1"
-set Pointer "1"
-set Reference "0"
-set Dims [list 0]
-set Interface "wire"
-set DataType "void"
-set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
-lappend PortList $Port
-set PortName "w4_imag"
+set PortName "xpos4"
 set BitWidth "16"
 set ArrayOpt ""
 set Const "0"

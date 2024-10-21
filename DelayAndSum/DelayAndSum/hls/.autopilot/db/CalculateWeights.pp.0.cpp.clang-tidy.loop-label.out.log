@@ -1,0 +1,728 @@
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:5930:7: warning: Added loop label VITIS_LOOP_1223_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1223_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:5930:7: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:6904:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:6904:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:6918:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:6918:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:6932:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:6932:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:8549:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:8549:7: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12685:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12686:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12687:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K2 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12688:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K3 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12689:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K4 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12719:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K0 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12720:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K1 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12721:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K2 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12722:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K3 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12723:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K4 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12724:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K0 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12725:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K1 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12726:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K2 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12727:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K3 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12728:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K4 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12778:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                      ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12779:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                      ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12780:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K2 type=ROM_1P impl=LUTRAM
+                                                                      ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12807:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K0 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12808:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K1 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12809:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K2 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12810:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K0 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12811:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K1 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12812:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K2 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12848:73: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=first_order_fixed_16::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                        ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:12849:73: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=first_order_fixed_16::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                        ^
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13123:5: warning: Added loop label VITIS_LOOP_61_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_61_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13123:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13169:5: warning: Added loop label VITIS_LOOP_117_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_117_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13169:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13332:9: warning: Added loop label VITIS_LOOP_289_1:   [xilinx-label-all-loops]
+        for(int i=0;i<W-1;i++){
+        ^~~
+        VITIS_LOOP_289_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13332:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13484:9: warning: Added loop label VITIS_LOOP_449_1:   [xilinx-label-all-loops]
+        for(int i=0;i<W-1;i++){
+        ^~~
+        VITIS_LOOP_449_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13484:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13664:5: warning: Added loop label VITIS_LOOP_629_1:   [xilinx-label-all-loops]
+    for(int i=0;i<W+1;i++){
+    ^~~
+    VITIS_LOOP_629_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13664:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13668:5: warning: Added loop label VITIS_LOOP_633_2:   [xilinx-label-all-loops]
+    for(int i=0;i<W+1;i++){
+    ^~~
+    VITIS_LOOP_633_2: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13668:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13778:5: warning: Added loop label VITIS_LOOP_743_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_743_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13778:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13868:7: warning: Added loop label VITIS_LOOP_840_1:   [xilinx-label-all-loops]
+      for(int i=0;i<W-1;i++){
+      ^~~
+      VITIS_LOOP_840_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13868:7: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13887:7: warning: Added loop label VITIS_LOOP_859_2:   [xilinx-label-all-loops]
+      for(int i=0;i<W-1;i++){
+      ^~~
+      VITIS_LOOP_859_2: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:13887:7: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14177:5: warning: Added loop label VITIS_LOOP_1173_1:   [xilinx-label-all-loops]
+    for(int i=0; i<Nmax; i++) {
+    ^~~
+    VITIS_LOOP_1173_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14177:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14260:5: warning: Added loop label VITIS_LOOP_1256_1:   [xilinx-label-all-loops]
+    for(int i=0; i<Nmax; i++) {
+    ^~~
+    VITIS_LOOP_1256_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14260:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14666:13: warning: Added loop label VITIS_LOOP_68_1:   [xilinx-label-all-loops]
+            for (int j = 3; j >= I_+1; j--) {
+            ^~~
+            VITIS_LOOP_68_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14666:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14672:17: warning: Added loop label VITIS_LOOP_74_2:   [xilinx-label-all-loops]
+                for (int j = 3; j >= I_+1; j--){
+                ^~~
+                VITIS_LOOP_74_2: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14672:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14676:17: warning: Added loop label VITIS_LOOP_78_3:   [xilinx-label-all-loops]
+                for (int j = I_; j >= 0; j--){
+                ^~~
+                VITIS_LOOP_78_3: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14676:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14724:13: warning: Added loop label VITIS_LOOP_145_4:   [xilinx-label-all-loops]
+            for (int j = 9; j >= I_+4; j--) {
+            ^~~
+            VITIS_LOOP_145_4: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14724:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14730:17: warning: Added loop label VITIS_LOOP_151_5:   [xilinx-label-all-loops]
+                for (int j = 9; j >= I_+4; j--){
+                ^~~
+                VITIS_LOOP_151_5: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14730:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14734:17: warning: Added loop label VITIS_LOOP_155_6:   [xilinx-label-all-loops]
+                for (int j = I_+3; j >= 0; j--){
+                ^~~
+                VITIS_LOOP_155_6: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14734:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14749:9: warning: Added loop label VITIS_LOOP_170_7:   [xilinx-label-all-loops]
+        for (int j = 14; j < 22; j++){
+        ^~~
+        VITIS_LOOP_170_7: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14749:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14757:17: warning: Added loop label VITIS_LOOP_178_8:   [xilinx-label-all-loops]
+                for (int j = 0; j < 22; j++){
+                ^~~
+                VITIS_LOOP_178_8: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14757:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14822:13: warning: Added loop label VITIS_LOOP_243_9:   [xilinx-label-all-loops]
+            for (int j = 21; j >= I_+10; j--) {
+            ^~~
+            VITIS_LOOP_243_9: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14822:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14828:17: warning: Added loop label VITIS_LOOP_249_10:   [xilinx-label-all-loops]
+                for (int j = 21; j >= I_+10; j--) {
+                ^~~
+                VITIS_LOOP_249_10: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14828:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14832:17: warning: Added loop label VITIS_LOOP_253_11:   [xilinx-label-all-loops]
+                for (int j = I_+9; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_253_11: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14832:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14847:9: warning: Added loop label VITIS_LOOP_268_12:   [xilinx-label-all-loops]
+        for (int j = 27; j < 46; j++){
+        ^~~
+        VITIS_LOOP_268_12: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14847:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14855:17: warning: Added loop label VITIS_LOOP_276_13:   [xilinx-label-all-loops]
+                for (int j = 0; j < 46; j++) {
+                ^~~
+                VITIS_LOOP_276_13: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:14855:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15084:13: warning: Added loop label VITIS_LOOP_505_14:   [xilinx-label-all-loops]
+            for (int j = 45; j >= I_+22; j--) {
+            ^~~
+            VITIS_LOOP_505_14: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15084:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15090:17: warning: Added loop label VITIS_LOOP_511_15:   [xilinx-label-all-loops]
+                for (int j = 45; j >= I_+22; j--){
+                ^~~
+                VITIS_LOOP_511_15: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15090:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15094:17: warning: Added loop label VITIS_LOOP_515_16:   [xilinx-label-all-loops]
+                for (int j = I_+21; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_515_16: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15094:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15104:9: warning: Added loop label VITIS_LOOP_525_17:   [xilinx-label-all-loops]
+        for (int j = 32-F_; j < 32+I_; j++){
+        ^~~
+        VITIS_LOOP_525_17: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15104:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15108:9: warning: Added loop label VITIS_LOOP_529_18:   [xilinx-label-all-loops]
+        for (int j = 32+I_; j <= 64; j++){
+        ^~~
+        VITIS_LOOP_529_18: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15108:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15118:9: warning: Added loop label VITIS_LOOP_539_19:   [xilinx-label-all-loops]
+        for (int j = 37; j < 64; j++) {
+        ^~~
+        VITIS_LOOP_539_19: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15118:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15126:17: warning: Added loop label VITIS_LOOP_547_20:   [xilinx-label-all-loops]
+                for (int j = 0; j < 64; j++){
+                ^~~
+                VITIS_LOOP_547_20: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15126:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15487:13: warning: Added loop label VITIS_LOOP_908_21:   [xilinx-label-all-loops]
+            for (int j = 63; j >= I_+31; j--) {
+            ^~~
+            VITIS_LOOP_908_21: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15487:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15493:17: warning: Added loop label VITIS_LOOP_914_22:   [xilinx-label-all-loops]
+                for (int j = 63; j >= I_+31; j--) {
+                ^~~
+                VITIS_LOOP_914_22: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15493:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15497:17: warning: Added loop label VITIS_LOOP_918_23:   [xilinx-label-all-loops]
+                for (int j = I_+30; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_918_23: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15497:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15613:13: warning: Added loop label VITIS_LOOP_1034_1:   [xilinx-label-all-loops]
+            for (int j = 4; j >= I_+1; j--) {
+            ^~~
+            VITIS_LOOP_1034_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15613:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15619:17: warning: Added loop label VITIS_LOOP_1040_2:   [xilinx-label-all-loops]
+                for (int j = 4; j >= I_+1; j--) {
+                ^~~
+                VITIS_LOOP_1040_2: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15619:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15623:17: warning: Added loop label VITIS_LOOP_1044_3:   [xilinx-label-all-loops]
+                for (int j = I_; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1044_3: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15623:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15710:13: warning: Added loop label VITIS_LOOP_1131_4:   [xilinx-label-all-loops]
+            for (int j = 10; j >= I_+4; j--) {
+            ^~~
+            VITIS_LOOP_1131_4: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15710:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15716:17: warning: Added loop label VITIS_LOOP_1137_5:   [xilinx-label-all-loops]
+                for (int j = 10; j >= I_+4; j--) {
+                ^~~
+                VITIS_LOOP_1137_5: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15716:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15720:17: warning: Added loop label VITIS_LOOP_1141_6:   [xilinx-label-all-loops]
+                for (int j = I_+3; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1141_6: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15720:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15739:9: warning: Added loop label VITIS_LOOP_1160_7:   [xilinx-label-all-loops]
+        for (int j = wf+3; j < w-1; j++) {
+        ^~~
+        VITIS_LOOP_1160_7: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15739:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15746:17: warning: Added loop label VITIS_LOOP_1167_8:   [xilinx-label-all-loops]
+                for (int j = 0; j < 22; j++) {
+                ^~~
+                VITIS_LOOP_1167_8: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15746:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15862:13: warning: Added loop label VITIS_LOOP_1283_9:   [xilinx-label-all-loops]
+            for (int j = 22; j >= I_+10; j--) {
+            ^~~
+            VITIS_LOOP_1283_9: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15862:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15868:17: warning: Added loop label VITIS_LOOP_1289_10:   [xilinx-label-all-loops]
+                for (int j = 22; j >= I_+10; j--){
+                ^~~
+                VITIS_LOOP_1289_10: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15868:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15872:17: warning: Added loop label VITIS_LOOP_1293_11:   [xilinx-label-all-loops]
+                for (int j = I_+9; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1293_11: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15872:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15892:9: warning: Added loop label VITIS_LOOP_1313_12:   [xilinx-label-all-loops]
+        for (int j = wf+4; j < w-1; j++){
+        ^~~
+        VITIS_LOOP_1313_12: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15892:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15899:17: warning: Added loop label VITIS_LOOP_1320_13:   [xilinx-label-all-loops]
+                for (int j = 0; j < 46; j++) {
+                ^~~
+                VITIS_LOOP_1320_13: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:15899:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16161:13: warning: Added loop label VITIS_LOOP_1582_14:   [xilinx-label-all-loops]
+            for (int j = 46; j >= I_+22; j--) {
+            ^~~
+            VITIS_LOOP_1582_14: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16161:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16167:17: warning: Added loop label VITIS_LOOP_1588_15:   [xilinx-label-all-loops]
+                for (int j = 46; j >= I_+22; j--) {
+                ^~~
+                VITIS_LOOP_1588_15: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16167:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16171:17: warning: Added loop label VITIS_LOOP_1592_16:   [xilinx-label-all-loops]
+                for (int j = I_+21; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1592_16: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16171:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16195:9: warning: Added loop label VITIS_LOOP_1616_17:   [xilinx-label-all-loops]
+        for (int j = wf+5; j < w-1; j++){
+        ^~~
+        VITIS_LOOP_1616_17: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16195:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16202:17: warning: Added loop label VITIS_LOOP_1623_18:   [xilinx-label-all-loops]
+                for (int j = 0; j < 64; j++) {
+                ^~~
+                VITIS_LOOP_1623_18: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16202:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16632:13: warning: Added loop label VITIS_LOOP_2053_19:   [xilinx-label-all-loops]
+            for (int j = 64; j >= I_+31; j--) {
+            ^~~
+            VITIS_LOOP_2053_19: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16632:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16638:17: warning: Added loop label VITIS_LOOP_2059_20:   [xilinx-label-all-loops]
+                for (int j = 64; j >= I_+31; j--) {
+                ^~~
+                VITIS_LOOP_2059_20: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16638:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16642:17: warning: Added loop label VITIS_LOOP_2063_21:   [xilinx-label-all-loops]
+                for (int j = I_+30; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_2063_21: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16642:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16772:13: warning: Added loop label VITIS_LOOP_2193_1:   [xilinx-label-all-loops]
+            for(int j=3; j>=I+1; j--) {
+            ^~~
+            VITIS_LOOP_2193_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16772:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16779:17: warning: Added loop label VITIS_LOOP_2200_2:   [xilinx-label-all-loops]
+                for(int j=3; j>=I+1; j--) {
+                ^~~
+                VITIS_LOOP_2200_2: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16779:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16783:17: warning: Added loop label VITIS_LOOP_2204_3:   [xilinx-label-all-loops]
+                for(int j=I; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2204_3: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16783:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16830:13: warning: Added loop label VITIS_LOOP_2251_4:   [xilinx-label-all-loops]
+            for(int j=7; j>=3+I; j--) {
+            ^~~
+            VITIS_LOOP_2251_4: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16830:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16837:17: warning: Added loop label VITIS_LOOP_2258_5:   [xilinx-label-all-loops]
+                for(int j=7; j>=3+I; j--) {
+                ^~~
+                VITIS_LOOP_2258_5: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16837:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16841:17: warning: Added loop label VITIS_LOOP_2262_6:   [xilinx-label-all-loops]
+                for(int j=I+2; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2262_6: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16841:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16859:9: warning: Added loop label VITIS_LOOP_2280_7:   [xilinx-label-all-loops]
+        for(int j=11; j<16; j++) {
+        ^~~
+        VITIS_LOOP_2280_7: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16859:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16914:13: warning: Added loop label VITIS_LOOP_2335_8:   [xilinx-label-all-loops]
+            for(int j=15; j>=7+I; j--) {
+            ^~~
+            VITIS_LOOP_2335_8: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16914:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16921:17: warning: Added loop label VITIS_LOOP_2342_9:   [xilinx-label-all-loops]
+                for(int j=15; j>=7+I; j--) {
+                ^~~
+                VITIS_LOOP_2342_9: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16921:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16925:17: warning: Added loop label VITIS_LOOP_2346_10:   [xilinx-label-all-loops]
+                for(int j=6+I; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2346_10: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16925:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16943:9: warning: Added loop label VITIS_LOOP_2364_11:   [xilinx-label-all-loops]
+        for(int j=20; j<32; j++) {
+        ^~~
+        VITIS_LOOP_2364_11: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:16943:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17032:13: warning: Added loop label VITIS_LOOP_2453_12:   [xilinx-label-all-loops]
+            for(int j=31; j>=I+15; j--) {
+            ^~~
+            VITIS_LOOP_2453_12: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17032:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17039:17: warning: Added loop label VITIS_LOOP_2460_13:   [xilinx-label-all-loops]
+                for(int j=31; j>=I+15; j--) {
+                ^~~
+                VITIS_LOOP_2460_13: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17039:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17043:17: warning: Added loop label VITIS_LOOP_2464_14:   [xilinx-label-all-loops]
+                for(int j=I+14; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2464_14: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17043:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17053:9: warning: Added loop label VITIS_LOOP_2474_15:   [xilinx-label-all-loops]
+        for(int j=32-F; j<32+I; j++) {
+        ^~~
+        VITIS_LOOP_2474_15: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17053:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17057:9: warning: Added loop label VITIS_LOOP_2478_16:   [xilinx-label-all-loops]
+        for(int j=32+I; j<=64; j++) {
+        ^~~
+        VITIS_LOOP_2478_16: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17057:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17068:9: warning: Added loop label VITIS_LOOP_2489_17:   [xilinx-label-all-loops]
+        for(int j=37; j<64; j++) {
+        ^~~
+        VITIS_LOOP_2489_17: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17068:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17076:17: warning: Added loop label VITIS_LOOP_2497_18:   [xilinx-label-all-loops]
+                for(int j=0; j<64; j++) {
+                ^~~
+                VITIS_LOOP_2497_18: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17076:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17401:13: warning: Added loop label VITIS_LOOP_2822_19:   [xilinx-label-all-loops]
+            for(int j=63; j>=I+31; j--) {
+            ^~~
+            VITIS_LOOP_2822_19: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17401:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17408:17: warning: Added loop label VITIS_LOOP_2829_20:   [xilinx-label-all-loops]
+                for(int j=63; j>=I+31; j--) {
+                ^~~
+                VITIS_LOOP_2829_20: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17408:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17412:17: warning: Added loop label VITIS_LOOP_2833_21:   [xilinx-label-all-loops]
+                for(int j=I+30; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2833_21: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17412:17: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17500:4: warning: Added loop label VITIS_LOOP_2921_1:   [xilinx-label-all-loops]
+   for(int j = 5; j>=I_+2; j--) {
+   ^~~
+   VITIS_LOOP_2921_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17500:4: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17507:5: warning: Added loop label VITIS_LOOP_2928_2:   [xilinx-label-all-loops]
+    for(int j = 5; j>=I_+2; j--) {
+    ^~~
+    VITIS_LOOP_2928_2: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17507:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17511:5: warning: Added loop label VITIS_LOOP_2932_3:   [xilinx-label-all-loops]
+    for(int j = I_+1; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_2932_3: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17511:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17526:3: warning: Added loop label VITIS_LOOP_2947_4:   [xilinx-label-all-loops]
+  for(int j = 11; j >=7; j--) {
+  ^~~
+  VITIS_LOOP_2947_4: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17526:3: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17558:4: warning: Added loop label VITIS_LOOP_2979_5:   [xilinx-label-all-loops]
+   for(int j = 11; j >= I_+5; j--) {
+   ^~~
+   VITIS_LOOP_2979_5: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17558:4: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17565:5: warning: Added loop label VITIS_LOOP_2986_6:   [xilinx-label-all-loops]
+    for(int j = 11; j>= I_+5; j--) {
+    ^~~
+    VITIS_LOOP_2986_6: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17565:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17569:5: warning: Added loop label VITIS_LOOP_2990_7:   [xilinx-label-all-loops]
+    for(int j = I_+4; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_2990_7: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17569:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17584:3: warning: Added loop label VITIS_LOOP_3005_8:   [xilinx-label-all-loops]
+  for(int j = 25; j>=15; j--) {
+  ^~~
+  VITIS_LOOP_3005_8: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17584:3: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17634:4: warning: Added loop label VITIS_LOOP_3055_9:   [xilinx-label-all-loops]
+   for(int j = 25; j>= I_+12; j--) {
+   ^~~
+   VITIS_LOOP_3055_9: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17634:4: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17641:5: warning: Added loop label VITIS_LOOP_3062_10:   [xilinx-label-all-loops]
+    for(int j = 25; j>=I_+12; j--) {
+    ^~~
+    VITIS_LOOP_3062_10: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17641:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17645:5: warning: Added loop label VITIS_LOOP_3066_11:   [xilinx-label-all-loops]
+    for(int j = I_+11; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_3066_11: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17645:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17660:3: warning: Added loop label VITIS_LOOP_3081_12:   [xilinx-label-all-loops]
+  for(int j = 51; j >= 29; j--) {
+  ^~~
+  VITIS_LOOP_3081_12: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17660:3: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17797:4: warning: Added loop label VITIS_LOOP_3218_13:   [xilinx-label-all-loops]
+   for(int j = 51; j >= 25 + I_; j--) {
+   ^~~
+   VITIS_LOOP_3218_13: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17797:4: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17804:5: warning: Added loop label VITIS_LOOP_3225_14:   [xilinx-label-all-loops]
+    for(int j = 51; j>=25 + I_; j--) {
+    ^~~
+    VITIS_LOOP_3225_14: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17804:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17808:5: warning: Added loop label VITIS_LOOP_3229_15:   [xilinx-label-all-loops]
+    for(int j = 24 + I_; j >= 0; j--) {
+    ^~~
+    VITIS_LOOP_3229_15: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17808:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17823:3: warning: Added loop label VITIS_LOOP_3244_16:   [xilinx-label-all-loops]
+  for(int j = 63; j >= 36; j--) {
+  ^~~
+  VITIS_LOOP_3244_16: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17823:3: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17983:4: warning: Added loop label VITIS_LOOP_3404_17:   [xilinx-label-all-loops]
+   for(int j = 63; j >= 31 + I_; j--) {
+   ^~~
+   VITIS_LOOP_3404_17: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17983:4: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17990:5: warning: Added loop label VITIS_LOOP_3411_18:   [xilinx-label-all-loops]
+    for(int j = 63; j >= 31 + I_; j--) {
+    ^~~
+    VITIS_LOOP_3411_18: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17990:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17994:5: warning: Added loop label VITIS_LOOP_3415_19:   [xilinx-label-all-loops]
+    for(int j = 30 + I_; j >= 0; j--) {
+    ^~~
+    VITIS_LOOP_3415_19: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:17994:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:18709:13: warning: Added loop label VITIS_LOOP_703_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_703_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:18709:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:18927:13: warning: Added loop label VITIS_LOOP_921_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_921_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:18927:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:19344:13: warning: Added loop label VITIS_LOOP_1345_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_1345_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:19344:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:19664:9: warning: Added loop label VITIS_LOOP_240_1:   [xilinx-label-all-loops]
+        for ( int pos = msbr-1; pos >= 0; pos-- ) {
+        ^~~
+        VITIS_LOOP_240_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:19664:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:19692:9: warning: Added loop label VITIS_LOOP_268_2:   [xilinx-label-all-loops]
+        for ( int pos = -1; pos >= -F_-1; pos-- ) {
+        ^~~
+        VITIS_LOOP_268_2: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:19692:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20394:13: warning: Added loop label VITIS_LOOP_48_1:   [xilinx-label-all-loops]
+            for (int j = 0; j < W_-1; j++){
+            ^~~
+            VITIS_LOOP_48_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20394:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20447:5: warning: Added loop label VITIS_LOOP_109_2:   [xilinx-label-all-loops]
+    for (int j = F_l+F_+I_m-1; j < F_l+W_+5; j++){
+    ^~~
+    VITIS_LOOP_109_2: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20447:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20461:13: warning: Added loop label VITIS_LOOP_123_3:   [xilinx-label-all-loops]
+            for (int j = WO_m-1; j >= W_-1; j--) {
+            ^~~
+            VITIS_LOOP_123_3: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20461:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20491:13: warning: Added loop label VITIS_LOOP_153_4:   [xilinx-label-all-loops]
+            for (int j = W_-2; j >= 0; j--){
+            ^~~
+            VITIS_LOOP_153_4: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20491:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20576:12: warning: Added loop label VITIS_LOOP_281_1:   [xilinx-label-all-loops]
+           for(int i = wf_log+we_log-2; i > WI_e - 2; --i) {
+           ^~~
+           VITIS_LOOP_281_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20576:12: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20596:16: warning: Added loop label VITIS_LOOP_301_2:   [xilinx-label-all-loops]
+               for (int j = WO_e-1; j >= W_-1; j--) {
+               ^~~
+               VITIS_LOOP_301_2: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20596:16: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20610:20: warning: Added loop label VITIS_LOOP_315_3:   [xilinx-label-all-loops]
+                   for(int i = 0; i < W_-1; ++i) {
+                   ^~~
+                   VITIS_LOOP_315_3: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20610:20: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20703:12: warning: Added loop label VITIS_LOOP_433_1:   [xilinx-label-all-loops]
+           for (int j =WO_d-1; j >= W_-1; j--) {
+           ^~~
+           VITIS_LOOP_433_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20703:12: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20717:15: warning: Added loop label VITIS_LOOP_447_2:   [xilinx-label-all-loops]
+              for(int i = 0; i < W_-1; ++i) {
+              ^~~
+              VITIS_LOOP_447_2: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20717:15: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20837:13: warning: Added loop label VITIS_LOOP_33_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_33_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20837:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20961:13: warning: Added loop label VITIS_LOOP_183_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_183_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:20961:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21016:13: warning: Added loop label VITIS_LOOP_248_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_248_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21016:13: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21535:2: warning: Added loop label VITIS_LOOP_16_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_16_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21535:2: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21546:2: warning: Added loop label VITIS_LOOP_27_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_27_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21546:2: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21557:2: warning: Added loop label VITIS_LOOP_38_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_38_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21557:2: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21568:2: warning: Added loop label VITIS_LOOP_49_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_49_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21568:2: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21579:2: warning: Added loop label VITIS_LOOP_60_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_60_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21579:2: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21590:2: warning: Added loop label VITIS_LOOP_71_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_71_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21590:2: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21601:2: warning: Added loop label VITIS_LOOP_82_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_82_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21601:2: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21612:2: warning: Added loop label VITIS_LOOP_93_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_93_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:21612:2: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:23972:12: warning: Added loop label VITIS_LOOP_26_1:   [xilinx-label-all-loops]
+           for(int i = 0; i < W_-1; ++i) {
+           ^~~
+           VITIS_LOOP_26_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:23972:12: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:24036:7: warning: Added loop label VITIS_LOOP_40_1:   [xilinx-label-all-loops]
+      for(int pos = msbr - 1 ; pos >= -F-1; pos--) {
+      ^~~
+      VITIS_LOOP_40_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:24036:7: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:24153:9: warning: Added loop label VITIS_LOOP_49_1:   [xilinx-label-all-loops]
+        for(int pos = msbr - 1; pos >= 0; pos--) {
+        ^~~
+        VITIS_LOOP_49_1: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:24153:9: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:24178:5: warning: Added loop label VITIS_LOOP_81_2:   [xilinx-label-all-loops]
+    for(int pos = -1; pos >= -F-1; pos--) {
+    ^~~
+    VITIS_LOOP_81_2: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:24178:5: note: FIX-IT applied suggested code changes
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:24248:8: warning: Added loop label VITIS_LOOP_169_3:   [xilinx-label-all-loops]
+       for(int i = 0; i < W - 1; ++i) {
+       ^~~
+       VITIS_LOOP_169_3: 
+C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp:24248:8: note: FIX-IT applied suggested code changes

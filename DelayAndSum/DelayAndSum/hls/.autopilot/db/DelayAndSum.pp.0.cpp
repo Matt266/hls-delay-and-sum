@@ -6619,54 +6619,86 @@ class stream : public stream<__STREAM_T__, 0> {
 # 13 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\hls_stream.h" 2
 # 7 "./DelayAndSum.hpp" 2
 
-typedef ap_fixed<16,1> in_t;
+typedef ap_fixed<16,1> in1_t;
+typedef ap_fixed<16,8> in2_t;
 typedef ap_fixed<16,1> out_t;
 
 __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
-    in_t *w1_real,
-    in_t *w1_imag,
-    in_t *w2_real,
-    in_t *w2_imag,
-    in_t *w3_real,
-    in_t *w3_imag,
-    in_t *w4_real,
-    in_t *w4_imag,
-    hls::stream<in_t> &in1_real,
-    hls::stream<in_t> &in1_imag,
-    hls::stream<in_t> &in2_real,
-    hls::stream<in_t> &in2_imag,
-    hls::stream<in_t> &in3_real,
-    hls::stream<in_t> &in3_imag,
-    hls::stream<in_t> &in4_real,
-    hls::stream<in_t> &in4_imag,
+
+    in2_t *phi,
+
+
+    in2_t *xpos1,
+    in2_t *xpos2,
+    in2_t *xpos3,
+    in2_t *xpos4,
+
+
+    hls::stream<in1_t> &in1_real,
+    hls::stream<in1_t> &in1_imag,
+    hls::stream<in1_t> &in2_real,
+    hls::stream<in1_t> &in2_imag,
+    hls::stream<in1_t> &in3_real,
+    hls::stream<in1_t> &in3_imag,
+    hls::stream<in1_t> &in4_real,
+    hls::stream<in1_t> &in4_imag,
     hls::stream<out_t> &out_real,
     hls::stream<out_t> &out_imag
 );
 # 2 "DelayAndSum.cpp" 2
+# 1 "./CalculateWeights.hpp" 1
+
+
+
+
+
+void CalculateWeights(
+
+    in2_t phi,
+
+
+    in2_t xpos1,
+    in2_t xpos2,
+    in2_t xpos3,
+    in2_t xpos4,
+
+
+    in1_t &w1_real,
+    in1_t &w1_imag,
+    in1_t &w2_real,
+    in1_t &w2_imag,
+    in1_t &w3_real,
+    in1_t &w3_imag,
+    in1_t &w4_real,
+    in1_t &w4_imag
+);
+# 3 "DelayAndSum.cpp" 2
 
 __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
-    in_t *w1_real,
-    in_t *w1_imag,
-    in_t *w2_real,
-    in_t *w2_imag,
-    in_t *w3_real,
-    in_t *w3_imag,
-    in_t *w4_real,
-    in_t *w4_imag,
-    hls::stream<in_t> &in1_real,
-    hls::stream<in_t> &in1_imag,
-    hls::stream<in_t> &in2_real,
-    hls::stream<in_t> &in2_imag,
-    hls::stream<in_t> &in3_real,
-    hls::stream<in_t> &in3_imag,
-    hls::stream<in_t> &in4_real,
-    hls::stream<in_t> &in4_imag,
+
+    in2_t *phi,
+
+
+    in2_t *xpos1,
+    in2_t *xpos2,
+    in2_t *xpos3,
+    in2_t *xpos4,
+
+
+    hls::stream<in1_t> &in1_real,
+    hls::stream<in1_t> &in1_imag,
+    hls::stream<in1_t> &in2_real,
+    hls::stream<in1_t> &in2_imag,
+    hls::stream<in1_t> &in3_real,
+    hls::stream<in1_t> &in3_imag,
+    hls::stream<in1_t> &in4_real,
+    hls::stream<in1_t> &in4_imag,
     hls::stream<out_t> &out_real,
     hls::stream<out_t> &out_imag
 ){
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=DelayAndSum
-# 22 "DelayAndSum.cpp"
+# 25 "DelayAndSum.cpp"
 
 #pragma HLS top name=DelayAndSum
 
@@ -6685,48 +6717,53 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 #pragma HLS INTERFACE mode=axis port=out_imag
 
 
-#pragma HLS INTERFACE mode=s_axilite port=w1_real
-#pragma HLS INTERFACE mode=s_axilite port=w1_imag
-#pragma HLS INTERFACE mode=s_axilite port=w2_real
-#pragma HLS INTERFACE mode=s_axilite port=w2_imag
-#pragma HLS INTERFACE mode=s_axilite port=w3_real
-#pragma HLS INTERFACE mode=s_axilite port=w3_imag
-#pragma HLS INTERFACE mode=s_axilite port=w4_real
-#pragma HLS INTERFACE mode=s_axilite port=w4_imag
+#pragma HLS INTERFACE mode=s_axilite port=phi
+#pragma HLS INTERFACE mode=s_axilite port=xpos1
+#pragma HLS INTERFACE mode=s_axilite port=xpos2
+#pragma HLS INTERFACE mode=s_axilite port=xpos3
+#pragma HLS INTERFACE mode=s_axilite port=xpos4
 
 #pragma HLS pipeline II=1
 
- in_t in1_real_buffer = in1_real.read();
-    in_t in1_imag_buffer = in1_imag.read();
-    in_t in2_real_buffer = in2_real.read();
-    in_t in2_imag_buffer = in2_imag.read();
-    in_t in3_real_buffer = in3_real.read();
-    in_t in3_imag_buffer = in3_imag.read();
-    in_t in4_real_buffer = in4_real.read();
-    in_t in4_imag_buffer = in4_imag.read();
+ in1_t in1_real_buffer = in1_real.read();
+    in1_t in1_imag_buffer = in1_imag.read();
+    in1_t in2_real_buffer = in2_real.read();
+    in1_t in2_imag_buffer = in2_imag.read();
+    in1_t in3_real_buffer = in3_real.read();
+    in1_t in3_imag_buffer = in3_imag.read();
+    in1_t in4_real_buffer = in4_real.read();
+    in1_t in4_imag_buffer = in4_imag.read();
 
-    in_t w1_real_buffer = *w1_real;
-    in_t w1_imag_buffer = *w1_imag;
-    in_t w2_real_buffer = *w2_real;
-    in_t w2_imag_buffer = *w2_imag;
-    in_t w3_real_buffer = *w3_real;
-    in_t w3_imag_buffer = *w3_imag;
-    in_t w4_real_buffer = *w4_real;
-    in_t w4_imag_buffer = *w4_imag;
+    in2_t phi_buffer = *phi;
+    in2_t xpos1_buffer = *xpos1;
+    in2_t xpos2_buffer = *xpos2;
+    in2_t xpos3_buffer = *xpos3;
+    in2_t xpos4_buffer = *xpos4;
+
+    in1_t w1_real;
+    in1_t w1_imag;
+    in1_t w2_real;
+    in1_t w2_imag;
+    in1_t w3_real;
+    in1_t w3_imag;
+    in1_t w4_real;
+    in1_t w4_imag;
+
+    CalculateWeights(phi_buffer, xpos1_buffer, xpos2_buffer, xpos3_buffer, xpos4_buffer,
+                w1_real, w1_imag, w2_real, w2_imag, w3_real, w3_imag, w4_real, w4_imag);
 
 
 
 
 
 
-    out_real << (in1_real_buffer * w1_real_buffer + in1_imag_buffer * w1_imag_buffer
-                +in2_real_buffer * w2_real_buffer + in2_imag_buffer * w2_imag_buffer
-                +in3_real_buffer * w3_real_buffer + in3_imag_buffer * w3_imag_buffer
-                +in4_real_buffer * w4_real_buffer + in4_imag_buffer * w4_imag_buffer);
+    out_real << (in1_real_buffer * w1_real + in1_imag_buffer * w1_imag
+                +in2_real_buffer * w2_real + in2_imag_buffer * w2_imag
+                +in3_real_buffer * w3_real + in3_imag_buffer * w3_imag
+                +in4_real_buffer * w4_real + in4_imag_buffer * w4_imag);
 
-
-    out_imag << (in1_imag_buffer * w1_real_buffer - in1_real_buffer * w1_imag_buffer
-                +in2_imag_buffer * w2_real_buffer - in2_real_buffer * w2_imag_buffer
-                +in3_imag_buffer * w3_real_buffer - in3_real_buffer * w3_imag_buffer
-                +in4_imag_buffer * w4_real_buffer - in4_real_buffer * w4_imag_buffer);
+    out_imag << (in1_imag_buffer * w1_real - in1_real_buffer * w1_imag
+                +in2_imag_buffer * w2_real - in2_real_buffer * w2_imag
+                +in3_imag_buffer * w3_real - in3_real_buffer * w3_imag
+                +in4_imag_buffer * w4_real - in4_real_buffer * w4_imag);
 }

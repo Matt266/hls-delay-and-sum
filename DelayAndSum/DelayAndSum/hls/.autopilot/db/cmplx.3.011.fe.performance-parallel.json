@@ -1,14 +1,63 @@
 {
   "0": {
-    "basicblocks": 1,
+    "basicblocks": 1481,
     "calls": "",
     "file": "DelayAndSum.cpp",
-    "fileloc": 3,
-    "instructions": 115,
+    "fileloc": 4,
+    "instructions": 15179,
     "loads": {
-      "T": 8
+      "L": 2,
+      "T": 5
     },
     "name": "DelayAndSum",
-    "total_instructions": 115
+    "stores": {
+      "L": 152
+    },
+    "total_instructions": 15179
+  },
+  "1": {
+    "basicblocks": 127,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 51,
+    "instructions": 1021,
+    "loads": {
+      "L": 3
+    },
+    "name": "cordic_circ_apfixed<44, 3, 0>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 1021
+  },
+  "2": {
+    "basicblocks": 49,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 51,
+    "instructions": 760,
+    "loads": {
+      "L": 3
+    },
+    "name": "cordic_circ_apfixed<18, 3, 0>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 760
+  },
+  "3": {
+    "basicblocks": 19,
+    "calls": "1 1",
+    "file": "CalculateWeights.cpp",
+    "fileloc": 10,
+    "instructions": 173,
+    "loads": {
+      "L": 4
+    },
+    "name": "CalculateElement",
+    "stores": {
+      "L": 10
+    },
+    "total_instructions": 3907
   }
 }

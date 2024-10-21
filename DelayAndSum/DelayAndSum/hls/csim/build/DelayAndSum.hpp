@@ -6,14 +6,14 @@
 #include <hls_stream.h>
 
 typedef ap_fixed<16,1> in1_t;
-typedef ap_fixed<32, 8> in2_t;
+typedef ap_fixed<16,8> in2_t;
 typedef ap_fixed<16,1> out_t;
 
 void DelayAndSum(
     // in rad
     in2_t *phi,
     
-    // in m
+    // in mm
     in2_t *xpos1,
     in2_t *xpos2,
     in2_t *xpos3,

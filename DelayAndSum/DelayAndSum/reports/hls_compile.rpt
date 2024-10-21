@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'DelayAndSum'
 ================================================================
 + General Information: 
-    * Date:           Fri Oct 18 13:22:01 2024
+    * Date:           Mon Oct 21 14:59:44 2024
     * Version:        2024.1 (Build 5069499 on May 21 2024)
     * Project:        DelayAndSum
     * Solution:       hls (Vivado IP Flow Target)
@@ -15,12 +15,12 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +---------------+------+------+---------+--------+----------+---------+------+----------+------+----------+------------+-----------+-----+
-    |    Modules    | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |          |            |           |     |
-    |    & Loops    | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |     FF     |    LUT    | URAM|
-    +---------------+------+------+---------+--------+----------+---------+------+----------+------+----------+------------+-----------+-----+
-    |+ DelayAndSum  |     -|  0.27|       10|  50.000|         -|        1|     -|       yes|     -|  16 (~0%)|  1247 (~0%)|  664 (~0%)|    -|
-    +---------------+------+------+---------+--------+----------+---------+------+----------+------+----------+------------+-----------+-----+
+    +---------------+------+------+---------+---------+----------+---------+------+----------+------+---------+------------+-------------+-----+
+    |    Modules    | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |         |            |             |     |
+    |    & Loops    | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF     |     LUT     | URAM|
+    +---------------+------+------+---------+---------+----------+---------+------+----------+------+---------+------------+-------------+-----+
+    |+ DelayAndSum  |     -|  0.06|       53|  265.000|         -|        1|     -|       yes|     -|  63 (1%)|  25050 (2%)|  69331 (16%)|    -|
+    +---------------+------+------+---------+---------+----------+---------+------+----------+------+---------+------------+-------------+-----+
 
 
 ================================================================
@@ -30,22 +30,19 @@
 +---------------+------------+---------------+--------+----------+
 | Interface     | Data Width | Address Width | Offset | Register |
 +---------------+------------+---------------+--------+----------+
-| s_axi_control | 32         | 7             | 16     | 0        |
+| s_axi_control | 32         | 6             | 16     | 0        |
 +---------------+------------+---------------+--------+----------+
 
 * S_AXILITE Registers
-+---------------+----------+--------+-------+--------+------------------------+
-| Interface     | Register | Offset | Width | Access | Description            |
-+---------------+----------+--------+-------+--------+------------------------+
-| s_axi_control | w1_real  | 0x10   | 32    | W      | Data signal of w1_real |
-| s_axi_control | w1_imag  | 0x18   | 32    | W      | Data signal of w1_imag |
-| s_axi_control | w2_real  | 0x20   | 32    | W      | Data signal of w2_real |
-| s_axi_control | w2_imag  | 0x28   | 32    | W      | Data signal of w2_imag |
-| s_axi_control | w3_real  | 0x30   | 32    | W      | Data signal of w3_real |
-| s_axi_control | w3_imag  | 0x38   | 32    | W      | Data signal of w3_imag |
-| s_axi_control | w4_real  | 0x40   | 32    | W      | Data signal of w4_real |
-| s_axi_control | w4_imag  | 0x48   | 32    | W      | Data signal of w4_imag |
-+---------------+----------+--------+-------+--------+------------------------+
++---------------+----------+--------+-------+--------+----------------------+
+| Interface     | Register | Offset | Width | Access | Description          |
++---------------+----------+--------+-------+--------+----------------------+
+| s_axi_control | phi      | 0x10   | 32    | W      | Data signal of phi   |
+| s_axi_control | xpos1    | 0x18   | 32    | W      | Data signal of xpos1 |
+| s_axi_control | xpos2    | 0x20   | 32    | W      | Data signal of xpos2 |
+| s_axi_control | xpos3    | 0x28   | 32    | W      | Data signal of xpos3 |
+| s_axi_control | xpos4    | 0x30   | 32    | W      | Data signal of xpos4 |
++---------------+----------+--------+-------+--------+----------------------+
 
 * AXIS
 +-----------+-----------+---------------+-------+--------+--------+
@@ -80,14 +77,11 @@
 +----------+-----------+-------------------------------------------------+
 | Argument | Direction | Datatype                                        |
 +----------+-----------+-------------------------------------------------+
-| w1_real  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
-| w1_imag  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
-| w2_real  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
-| w2_imag  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
-| w3_real  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
-| w3_imag  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
-| w4_real  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
-| w4_imag  | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>*            |
+| phi      | in        | ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>*            |
+| xpos1    | in        | ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>*            |
+| xpos2    | in        | ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>*            |
+| xpos3    | in        | ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>*            |
+| xpos4    | in        | ap_fixed<16, 8, AP_TRN, AP_WRAP, 0>*            |
 | in1_real | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
 | in1_imag | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
 | in2_real | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
@@ -101,68 +95,1687 @@
 +----------+-----------+-------------------------------------------------+
 
 * SW-to-HW Mapping
-+----------+---------------+-----------+-----------------------------------+
-| Argument | HW Interface  | HW Type   | HW Info                           |
-+----------+---------------+-----------+-----------------------------------+
-| w1_real  | s_axi_control | register  | name=w1_real offset=0x10 range=32 |
-| w1_imag  | s_axi_control | register  | name=w1_imag offset=0x18 range=32 |
-| w2_real  | s_axi_control | register  | name=w2_real offset=0x20 range=32 |
-| w2_imag  | s_axi_control | register  | name=w2_imag offset=0x28 range=32 |
-| w3_real  | s_axi_control | register  | name=w3_real offset=0x30 range=32 |
-| w3_imag  | s_axi_control | register  | name=w3_imag offset=0x38 range=32 |
-| w4_real  | s_axi_control | register  | name=w4_real offset=0x40 range=32 |
-| w4_imag  | s_axi_control | register  | name=w4_imag offset=0x48 range=32 |
-| in1_real | in1_real      | interface |                                   |
-| in1_imag | in1_imag      | interface |                                   |
-| in2_real | in2_real      | interface |                                   |
-| in2_imag | in2_imag      | interface |                                   |
-| in3_real | in3_real      | interface |                                   |
-| in3_imag | in3_imag      | interface |                                   |
-| in4_real | in4_real      | interface |                                   |
-| in4_imag | in4_imag      | interface |                                   |
-| out_real | out_real      | interface |                                   |
-| out_imag | out_imag      | interface |                                   |
-+----------+---------------+-----------+-----------------------------------+
++----------+---------------+-----------+---------------------------------+
+| Argument | HW Interface  | HW Type   | HW Info                         |
++----------+---------------+-----------+---------------------------------+
+| phi      | s_axi_control | register  | name=phi offset=0x10 range=32   |
+| xpos1    | s_axi_control | register  | name=xpos1 offset=0x18 range=32 |
+| xpos2    | s_axi_control | register  | name=xpos2 offset=0x20 range=32 |
+| xpos3    | s_axi_control | register  | name=xpos3 offset=0x28 range=32 |
+| xpos4    | s_axi_control | register  | name=xpos4 offset=0x30 range=32 |
+| in1_real | in1_real      | interface |                                 |
+| in1_imag | in1_imag      | interface |                                 |
+| in2_real | in2_real      | interface |                                 |
+| in2_imag | in2_imag      | interface |                                 |
+| in3_real | in3_real      | interface |                                 |
+| in3_imag | in3_imag      | interface |                                 |
+| in4_real | in4_real      | interface |                                 |
+| in4_imag | in4_imag      | interface |                                 |
+| out_real | out_real      | interface |                                 |
+| out_imag | out_imag      | interface |                                 |
++----------+---------------+-----------+---------------------------------+
 
 
 ================================================================
 == Bind Op Report
 ================================================================
-+--------------------------------------+-----+--------+------------+-----+-----------+---------+
-| Name                                 | DSP | Pragma | Variable   | Op  | Impl      | Latency |
-+--------------------------------------+-----+--------+------------+-----+-----------+---------+
-| + DelayAndSum                        | 16  |        |            |     |           |         |
-|   mac_muladd_16s_16s_31s_31_4_1_U3   | 1   |        | mul_ln74   | mul | dsp_slice | 3       |
-|   mul_16s_16s_31_1_1_U1              | 1   |        | mul_ln74_1 | mul | auto      | 0       |
-|   mac_muladd_16s_16s_31s_31_4_1_U3   | 1   |        | add_ln74   | add | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U5  | 1   |        | mul_ln75   | mul | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U5  | 1   |        | add_ln75   | add | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U7  | 1   |        | mul_ln75_1 | mul | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U7  | 1   |        | add_ln75_1 | add | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U9  | 1   |        | mul_ln76   | mul | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U9  | 1   |        | add_ln76   | add | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U11 | 1   |        | mul_ln76_1 | mul | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U11 | 1   |        | add_ln76_1 | add | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U13 | 1   |        | mul_ln77   | mul | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U13 | 1   |        | add_ln77   | add | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U15 | 1   |        | mul_ln77_1 | mul | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U15 | 1   |        | add_ln77_1 | add | dsp_slice | 3       |
-|   mul_16s_16s_31_1_1_U2              | 1   |        | mul_ln80   | mul | auto      | 0       |
-|   mac_mulsub_16s_16s_31s_31_4_1_U4   | 1   |        | mul_ln80_1 | mul | dsp_slice | 3       |
-|   mac_mulsub_16s_16s_31s_31_4_1_U4   | 1   |        | sub_ln80   | sub | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U6  | 1   |        | mul_ln81   | mul | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U6  | 1   |        | add_ln81   | add | dsp_slice | 3       |
-|   mac_mulsub_16s_16s_31ns_31_4_1_U8  | 1   |        | mul_ln81_1 | mul | dsp_slice | 3       |
-|   mac_mulsub_16s_16s_31ns_31_4_1_U8  | 1   |        | sub_ln81   | sub | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U10 | 1   |        | mul_ln82   | mul | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U10 | 1   |        | add_ln82   | add | dsp_slice | 3       |
-|   mac_mulsub_16s_16s_31ns_31_4_1_U12 | 1   |        | mul_ln82_1 | mul | dsp_slice | 3       |
-|   mac_mulsub_16s_16s_31ns_31_4_1_U12 | 1   |        | sub_ln82   | sub | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U14 | 1   |        | mul_ln83   | mul | dsp_slice | 3       |
-|   mac_muladd_16s_16s_31ns_31_4_1_U14 | 1   |        | add_ln83   | add | dsp_slice | 3       |
-|   mac_mulsub_16s_16s_31ns_31_4_1_U16 | 1   |        | mul_ln83_1 | mul | dsp_slice | 3       |
-|   mac_mulsub_16s_16s_31ns_31_4_1_U16 | 1   |        | sub_ln83   | sub | dsp_slice | 3       |
-+--------------------------------------+-----+--------+------------+-----+-----------+---------+
++---------------------------------------+-----+--------+----------------+-----------+-----------+---------+
+| Name                                  | DSP | Pragma | Variable       | Op        | Impl      | Latency |
++---------------------------------------+-----+--------+----------------+-----------+-----------+---------+
+| + DelayAndSum                         | 63  |        |                |           |           |         |
+|   sign0_fu_762_p2                     |     |        | sign0          | setgt     | auto      | 0       |
+|   sub_ln211_fu_768_p2                 |     |        | sub_ln211      | sub       | fabric    | 0       |
+|   inabs_fu_774_p3                     |     |        | inabs          | select    | auto_sel  | 0       |
+|   mul_16ns_26ns_41_1_1_U9             | 1   |        | mul_ln38       | mul       | auto      | 0       |
+|   mac_muladd_16ns_8ns_18ns_18_4_1_U26 | 1   |        | mul_ln42       | mul       | dsp_slice | 3       |
+|   mac_muladd_16ns_8ns_18ns_18_4_1_U26 | 1   |        | add_ln42       | add       | dsp_slice | 3       |
+|   sub_ln228_fu_851_p2                 |     |        | sub_ln228      | sub       | fabric    | 0       |
+|   icmp_ln225_fu_867_p2                |     |        | icmp_ln225     | seteq     | auto      | 0       |
+|   icmp_ln225_1_fu_872_p2              |     |        | icmp_ln225_1   | seteq     | auto      | 0       |
+|   or_ln225_fu_877_p2                  |     |        | or_ln225       | or        | auto      | 0       |
+|   z_2_fu_883_p3                       |     |        | z_2            | select    | auto_sel  | 0       |
+|   select_ln75_fu_903_p3               |     |        | select_ln75    | select    | auto_sel  | 0       |
+|   tz_fu_911_p2                        |     |        | tz             | add       | fabric    | 0       |
+|   select_ln76_fu_959_p3               |     |        | select_ln76    | select    | auto_sel  | 0       |
+|   select_ln77_fu_925_p3               |     |        | select_ln77    | select    | auto_sel  | 0       |
+|   select_ln81_fu_966_p3               |     |        | select_ln81    | select    | auto_sel  | 0       |
+|   select_ln82_fu_933_p3               |     |        | select_ln82    | select    | auto_sel  | 0       |
+|   tx_fu_973_p3                        |     |        | tx             | select    | auto_sel  | 0       |
+|   ty_fu_941_p3                        |     |        | ty             | select    | auto_sel  | 0       |
+|   tz_1_v_cast_fu_987_p3               |     |        | tz_1_v_cast    | select    | auto_sel  | 0       |
+|   tz_1_fu_994_p2                      |     |        | tz_1           | add       | fabric    | 0       |
+|   add_ln76_fu_1024_p2                 |     |        | add_ln76       | add       | fabric    | 0       |
+|   sub_ln77_fu_1030_p2                 |     |        | sub_ln77       | sub       | fabric    | 0       |
+|   sub_ln81_fu_1036_p2                 |     |        | sub_ln81       | sub       | fabric    | 0       |
+|   add_ln82_fu_1042_p2                 |     |        | add_ln82       | add       | fabric    | 0       |
+|   tx_1_fu_1048_p3                     |     |        | tx_1           | select    | auto_sel  | 0       |
+|   ty_1_fu_1060_p3                     |     |        | ty_1           | select    | auto_sel  | 0       |
+|   tz_2_v_cast_fu_1068_p3              |     |        | tz_2_v_cast    | select    | auto_sel  | 0       |
+|   tz_2_fu_1076_p2                     |     |        | tz_2           | add       | fabric    | 0       |
+|   add_ln76_1_fu_1118_p2               |     |        | add_ln76_1     | add       | fabric    | 0       |
+|   sub_ln77_1_fu_1124_p2               |     |        | sub_ln77_1     | sub       | fabric    | 0       |
+|   sub_ln81_1_fu_1130_p2               |     |        | sub_ln81_1     | sub       | fabric    | 0       |
+|   add_ln82_1_fu_1136_p2               |     |        | add_ln82_1     | add       | fabric    | 0       |
+|   tx_2_fu_1142_p3                     |     |        | tx_2           | select    | auto_sel  | 0       |
+|   ty_2_fu_1150_p3                     |     |        | ty_2           | select    | auto_sel  | 0       |
+|   tz_3_v_cast_fu_1158_p3              |     |        | tz_3_v_cast    | select    | auto_sel  | 0       |
+|   tz_3_fu_1166_p2                     |     |        | tz_3           | add       | fabric    | 0       |
+|   add_ln76_2_fu_1208_p2               |     |        | add_ln76_2     | add       | fabric    | 0       |
+|   sub_ln77_2_fu_1214_p2               |     |        | sub_ln77_2     | sub       | fabric    | 0       |
+|   sub_ln81_2_fu_1220_p2               |     |        | sub_ln81_2     | sub       | fabric    | 0       |
+|   add_ln82_2_fu_1226_p2               |     |        | add_ln82_2     | add       | fabric    | 0       |
+|   tx_3_fu_1232_p3                     |     |        | tx_3           | select    | auto_sel  | 0       |
+|   ty_3_fu_1237_p3                     |     |        | ty_3           | select    | auto_sel  | 0       |
+|   tz_4_v_cast_fu_1242_p3              |     |        | tz_4_v_cast    | select    | auto_sel  | 0       |
+|   tz_4_fu_1249_p2                     |     |        | tz_4           | add       | fabric    | 0       |
+|   add_ln76_3_fu_1294_p2               |     |        | add_ln76_3     | add       | fabric    | 0       |
+|   sub_ln77_3_fu_1300_p2               |     |        | sub_ln77_3     | sub       | fabric    | 0       |
+|   sub_ln81_3_fu_1306_p2               |     |        | sub_ln81_3     | sub       | fabric    | 0       |
+|   add_ln82_3_fu_1312_p2               |     |        | add_ln82_3     | add       | fabric    | 0       |
+|   tx_4_fu_1318_p3                     |     |        | tx_4           | select    | auto_sel  | 0       |
+|   ty_4_fu_1326_p3                     |     |        | ty_4           | select    | auto_sel  | 0       |
+|   tz_5_v_cast_fu_1334_p3              |     |        | tz_5_v_cast    | select    | auto_sel  | 0       |
+|   tz_5_fu_1342_p2                     |     |        | tz_5           | add       | fabric    | 0       |
+|   add_ln76_4_fu_1384_p2               |     |        | add_ln76_4     | add       | fabric    | 0       |
+|   sub_ln77_4_fu_1390_p2               |     |        | sub_ln77_4     | sub       | fabric    | 0       |
+|   sub_ln81_4_fu_1396_p2               |     |        | sub_ln81_4     | sub       | fabric    | 0       |
+|   add_ln82_4_fu_1402_p2               |     |        | add_ln82_4     | add       | fabric    | 0       |
+|   tx_5_fu_1408_p3                     |     |        | tx_5           | select    | auto_sel  | 0       |
+|   ty_5_fu_1416_p3                     |     |        | ty_5           | select    | auto_sel  | 0       |
+|   tz_6_v_cast_fu_1444_p3              |     |        | tz_6_v_cast    | select    | auto_sel  | 0       |
+|   tz_6_fu_1451_p2                     |     |        | tz_6           | add       | fabric    | 0       |
+|   add_ln76_5_fu_1470_p2               |     |        | add_ln76_5     | add       | fabric    | 0       |
+|   sub_ln77_5_fu_1475_p2               |     |        | sub_ln77_5     | sub       | fabric    | 0       |
+|   sub_ln81_5_fu_1480_p2               |     |        | sub_ln81_5     | sub       | fabric    | 0       |
+|   add_ln82_5_fu_1485_p2               |     |        | add_ln82_5     | add       | fabric    | 0       |
+|   tx_6_fu_1490_p3                     |     |        | tx_6           | select    | auto_sel  | 0       |
+|   ty_6_fu_1498_p3                     |     |        | ty_6           | select    | auto_sel  | 0       |
+|   tz_7_v_cast_fu_1506_p3              |     |        | tz_7_v_cast    | select    | auto_sel  | 0       |
+|   tz_7_fu_1514_p2                     |     |        | tz_7           | add       | fabric    | 0       |
+|   add_ln76_6_fu_1556_p2               |     |        | add_ln76_6     | add       | fabric    | 0       |
+|   sub_ln77_6_fu_1562_p2               |     |        | sub_ln77_6     | sub       | fabric    | 0       |
+|   sub_ln81_6_fu_1568_p2               |     |        | sub_ln81_6     | sub       | fabric    | 0       |
+|   add_ln82_6_fu_1574_p2               |     |        | add_ln82_6     | add       | fabric    | 0       |
+|   tx_7_fu_1580_p3                     |     |        | tx_7           | select    | auto_sel  | 0       |
+|   ty_7_fu_1588_p3                     |     |        | ty_7           | select    | auto_sel  | 0       |
+|   tz_8_v_cast_fu_1596_p3              |     |        | tz_8_v_cast    | select    | auto_sel  | 0       |
+|   tz_8_fu_1604_p2                     |     |        | tz_8           | add       | fabric    | 0       |
+|   add_ln76_7_fu_1646_p2               |     |        | add_ln76_7     | add       | fabric    | 0       |
+|   sub_ln77_7_fu_1652_p2               |     |        | sub_ln77_7     | sub       | fabric    | 0       |
+|   sub_ln81_7_fu_1658_p2               |     |        | sub_ln81_7     | sub       | fabric    | 0       |
+|   add_ln82_7_fu_1664_p2               |     |        | add_ln82_7     | add       | fabric    | 0       |
+|   tx_8_fu_1670_p3                     |     |        | tx_8           | select    | auto_sel  | 0       |
+|   ty_8_fu_1675_p3                     |     |        | ty_8           | select    | auto_sel  | 0       |
+|   tz_9_v_cast_fu_1680_p3              |     |        | tz_9_v_cast    | select    | auto_sel  | 0       |
+|   tz_9_fu_1687_p2                     |     |        | tz_9           | add       | fabric    | 0       |
+|   add_ln76_8_fu_1728_p2               |     |        | add_ln76_8     | add       | fabric    | 0       |
+|   sub_ln77_8_fu_1734_p2               |     |        | sub_ln77_8     | sub       | fabric    | 0       |
+|   sub_ln81_8_fu_1740_p2               |     |        | sub_ln81_8     | sub       | fabric    | 0       |
+|   add_ln82_8_fu_1746_p2               |     |        | add_ln82_8     | add       | fabric    | 0       |
+|   tx_9_fu_1752_p3                     |     |        | tx_9           | select    | auto_sel  | 0       |
+|   ty_9_fu_1760_p3                     |     |        | ty_9           | select    | auto_sel  | 0       |
+|   tz_10_v_cast_fu_1768_p3             |     |        | tz_10_v_cast   | select    | auto_sel  | 0       |
+|   tz_10_fu_1776_p2                    |     |        | tz_10          | add       | fabric    | 0       |
+|   add_ln76_9_fu_1818_p2               |     |        | add_ln76_9     | add       | fabric    | 0       |
+|   sub_ln77_9_fu_1824_p2               |     |        | sub_ln77_9     | sub       | fabric    | 0       |
+|   sub_ln81_9_fu_1830_p2               |     |        | sub_ln81_9     | sub       | fabric    | 0       |
+|   add_ln82_9_fu_1836_p2               |     |        | add_ln82_9     | add       | fabric    | 0       |
+|   tx_10_fu_1842_p3                    |     |        | tx_10          | select    | auto_sel  | 0       |
+|   ty_10_fu_1850_p3                    |     |        | ty_10          | select    | auto_sel  | 0       |
+|   tz_11_v_cast_fu_1878_p3             |     |        | tz_11_v_cast   | select    | auto_sel  | 0       |
+|   tz_11_fu_1885_p2                    |     |        | tz_11          | add       | fabric    | 0       |
+|   add_ln76_10_fu_1904_p2              |     |        | add_ln76_10    | add       | fabric    | 0       |
+|   sub_ln77_10_fu_1909_p2              |     |        | sub_ln77_10    | sub       | fabric    | 0       |
+|   sub_ln81_10_fu_1914_p2              |     |        | sub_ln81_10    | sub       | fabric    | 0       |
+|   add_ln82_10_fu_1919_p2              |     |        | add_ln82_10    | add       | fabric    | 0       |
+|   tx_11_fu_1924_p3                    |     |        | tx_11          | select    | auto_sel  | 0       |
+|   ty_11_fu_1932_p3                    |     |        | ty_11          | select    | auto_sel  | 0       |
+|   tz_12_v_cast_fu_1940_p3             |     |        | tz_12_v_cast   | select    | auto_sel  | 0       |
+|   tz_12_fu_1948_p2                    |     |        | tz_12          | add       | fabric    | 0       |
+|   add_ln76_11_fu_1990_p2              |     |        | add_ln76_11    | add       | fabric    | 0       |
+|   sub_ln77_11_fu_1996_p2              |     |        | sub_ln77_11    | sub       | fabric    | 0       |
+|   sub_ln81_11_fu_2002_p2              |     |        | sub_ln81_11    | sub       | fabric    | 0       |
+|   add_ln82_11_fu_2008_p2              |     |        | add_ln82_11    | add       | fabric    | 0       |
+|   tx_12_fu_2014_p3                    |     |        | tx_12          | select    | auto_sel  | 0       |
+|   ty_12_fu_2022_p3                    |     |        | ty_12          | select    | auto_sel  | 0       |
+|   tz_13_v_cast_fu_2030_p3             |     |        | tz_13_v_cast   | select    | auto_sel  | 0       |
+|   tz_13_fu_2038_p2                    |     |        | tz_13          | add       | fabric    | 0       |
+|   add_ln76_12_fu_2080_p2              |     |        | add_ln76_12    | add       | fabric    | 0       |
+|   sub_ln77_12_fu_2086_p2              |     |        | sub_ln77_12    | sub       | fabric    | 0       |
+|   add_ln78_fu_2104_p2                 |     |        | add_ln78       | add       | fabric    | 0       |
+|   sub_ln81_12_fu_2092_p2              |     |        | sub_ln81_12    | sub       | fabric    | 0       |
+|   add_ln82_12_fu_2098_p2              |     |        | add_ln82_12    | add       | fabric    | 0       |
+|   add_ln83_fu_2109_p2                 |     |        | add_ln83       | add       | fabric    | 0       |
+|   tx_13_fu_2114_p3                    |     |        | tx_13          | select    | auto_sel  | 0       |
+|   ty_13_fu_2119_p3                    |     |        | ty_13          | select    | auto_sel  | 0       |
+|   d_15_fu_2140_p3                     |     |        | d_15           | select    | auto_sel  | 0       |
+|   add_ln77_4_fu_2175_p2               |     |        | add_ln77_4     | add       | fabric    | 0       |
+|   sub_ln77_13_fu_2181_p2              |     |        | sub_ln77_13    | sub       | fabric    | 0       |
+|   select_ln58_fu_2195_p3              |     |        | select_ln58    | select    | auto_sel  | 0       |
+|   sub_ln77_14_fu_2211_p2              |     |        | sub_ln77_14    | sub       | fabric    | 0       |
+|   select_ln76_5_fu_2229_p3            |     |        | select_ln76_5  | select    | auto_sel  | 0       |
+|   select_ln76_6_fu_2237_p3            |     |        | select_ln76_6  | select    | auto_sel  | 0       |
+|   select_ln76_7_fu_2245_p3            |     |        | select_ln76_7  | select    | auto_sel  | 0       |
+|   add_ln76_13_fu_2257_p2              |     |        | add_ln76_13    | add       | fabric    | 0       |
+|   sub_ln82_fu_2263_p2                 |     |        | sub_ln82       | sub       | fabric    | 0       |
+|   add_ln82_13_fu_2269_p2              |     |        | add_ln82_13    | add       | fabric    | 0       |
+|   select_ln72_fu_2283_p3              |     |        | select_ln72    | select    | auto_sel  | 0       |
+|   select_ln58_1_fu_2299_p3            |     |        | select_ln58_1  | select    | auto_sel  | 0       |
+|   add_ln82_14_fu_2313_p2              |     |        | add_ln82_14    | add       | fabric    | 0       |
+|   select_ln58_2_fu_2331_p3            |     |        | select_ln58_2  | select    | auto_sel  | 0       |
+|   tx_179_fu_2345_p3                   |     |        | tx_179         | select    | auto_sel  | 0       |
+|   sub_ln254_fu_2363_p2                |     |        | sub_ln254      | sub       | fabric    | 0       |
+|   icmp_ln248_fu_2378_p2               |     |        | icmp_ln248     | seteq     | auto      | 0       |
+|   icmp_ln248_1_fu_2383_p2             |     |        | icmp_ln248_1   | seteq     | auto      | 0       |
+|   sparsemux_9_3_10_1_1_U10            |     |        | outcos_2       | sparsemux | auto      | 0       |
+|   mul_10s_11ns_21_1_1_U11             | 1   |        | mul_ln13       | mul       | auto      | 0       |
+|   mul_21s_16s_36_1_1_U12              | 1   |        | mul_ln13_1     | mul       | auto      | 0       |
+|   sign0_1_fu_2445_p2                  |     |        | sign0_1        | setgt     | auto      | 0       |
+|   sub_ln211_1_fu_2451_p2              |     |        | sub_ln211_1    | sub       | fabric    | 0       |
+|   inabs_1_fu_2456_p3                  |     |        | inabs_1        | select    | auto_sel  | 0       |
+|   mul_34ns_62ns_94_3_1_U5             | 8   |        | mul_ln38_1     | mul       | auto      | 2       |
+|   mul_9ns_43ns_44_2_1_U1              | 2   |        | mul_ln42_1     | mul       | auto      | 1       |
+|   add_ln42_1_fu_2672_p2               |     |        | add_ln42_1     | add       | fabric    | 0       |
+|   sub_ln228_1_fu_2705_p2              |     |        | sub_ln228_1    | sub       | fabric    | 0       |
+|   icmp_ln225_2_fu_2721_p2             |     |        | icmp_ln225_2   | seteq     | auto      | 0       |
+|   icmp_ln225_3_fu_2726_p2             |     |        | icmp_ln225_3   | seteq     | auto      | 0       |
+|   or_ln225_1_fu_2731_p2               |     |        | or_ln225_1     | or        | auto      | 0       |
+|   z_5_fu_2737_p3                      |     |        | z_5            | select    | auto_sel  | 0       |
+|   select_ln75_1_fu_2757_p3            |     |        | select_ln75_1  | select    | auto_sel  | 0       |
+|   tz_14_fu_2765_p2                    |     |        | tz_14          | add       | fabric    | 0       |
+|   select_ln76_1_fu_2791_p3            |     |        | select_ln76_1  | select    | auto_sel  | 0       |
+|   select_ln77_1_fu_2798_p3            |     |        | select_ln77_1  | select    | auto_sel  | 0       |
+|   select_ln81_1_fu_2805_p3            |     |        | select_ln81_1  | select    | auto_sel  | 0       |
+|   select_ln82_1_fu_2812_p3            |     |        | select_ln82_1  | select    | auto_sel  | 0       |
+|   tx_15_fu_2819_p3                    |     |        | tx_15          | select    | auto_sel  | 0       |
+|   ty_14_fu_2830_p3                    |     |        | ty_14          | select    | auto_sel  | 0       |
+|   tz_16_v_cast_fu_2841_p3             |     |        | tz_16_v_cast   | select    | auto_sel  | 0       |
+|   tz_15_fu_2848_p2                    |     |        | tz_15          | add       | fabric    | 0       |
+|   add_ln76_14_fu_2889_p2              |     |        | add_ln76_14    | add       | fabric    | 0       |
+|   sub_ln77_15_fu_2895_p2              |     |        | sub_ln77_15    | sub       | fabric    | 0       |
+|   sub_ln81_15_fu_2901_p2              |     |        | sub_ln81_15    | sub       | fabric    | 0       |
+|   add_ln82_15_fu_2907_p2              |     |        | add_ln82_15    | add       | fabric    | 0       |
+|   tx_16_fu_2913_p3                    |     |        | tx_16          | select    | auto_sel  | 0       |
+|   ty_15_fu_2925_p3                    |     |        | ty_15          | select    | auto_sel  | 0       |
+|   tz_17_v_cast_fu_2933_p3             |     |        | tz_17_v_cast   | select    | auto_sel  | 0       |
+|   tz_16_fu_2941_p2                    |     |        | tz_16          | add       | fabric    | 0       |
+|   add_ln76_15_fu_2983_p2              |     |        | add_ln76_15    | add       | fabric    | 0       |
+|   sub_ln77_16_fu_2989_p2              |     |        | sub_ln77_16    | sub       | fabric    | 0       |
+|   sub_ln81_16_fu_2995_p2              |     |        | sub_ln81_16    | sub       | fabric    | 0       |
+|   add_ln82_16_fu_3001_p2              |     |        | add_ln82_16    | add       | fabric    | 0       |
+|   tx_17_fu_3007_p3                    |     |        | tx_17          | select    | auto_sel  | 0       |
+|   ty_16_fu_3015_p3                    |     |        | ty_16          | select    | auto_sel  | 0       |
+|   tz_18_v_cast_fu_3043_p3             |     |        | tz_18_v_cast   | select    | auto_sel  | 0       |
+|   tz_17_fu_3050_p2                    |     |        | tz_17          | add       | fabric    | 0       |
+|   add_ln76_16_fu_3069_p2              |     |        | add_ln76_16    | add       | fabric    | 0       |
+|   sub_ln77_17_fu_3074_p2              |     |        | sub_ln77_17    | sub       | fabric    | 0       |
+|   sub_ln81_17_fu_3079_p2              |     |        | sub_ln81_17    | sub       | fabric    | 0       |
+|   add_ln82_17_fu_3084_p2              |     |        | add_ln82_17    | add       | fabric    | 0       |
+|   tx_18_fu_3089_p3                    |     |        | tx_18          | select    | auto_sel  | 0       |
+|   ty_17_fu_3097_p3                    |     |        | ty_17          | select    | auto_sel  | 0       |
+|   tz_19_v_cast_fu_3105_p3             |     |        | tz_19_v_cast   | select    | auto_sel  | 0       |
+|   tz_18_fu_3113_p2                    |     |        | tz_18          | add       | fabric    | 0       |
+|   add_ln76_17_fu_3159_p2              |     |        | add_ln76_17    | add       | fabric    | 0       |
+|   sub_ln77_18_fu_3165_p2              |     |        | sub_ln77_18    | sub       | fabric    | 0       |
+|   sub_ln81_18_fu_3171_p2              |     |        | sub_ln81_18    | sub       | fabric    | 0       |
+|   add_ln82_18_fu_3177_p2              |     |        | add_ln82_18    | add       | fabric    | 0       |
+|   tx_19_fu_3183_p3                    |     |        | tx_19          | select    | auto_sel  | 0       |
+|   ty_18_fu_3191_p3                    |     |        | ty_18          | select    | auto_sel  | 0       |
+|   tz_20_v_cast_fu_3199_p3             |     |        | tz_20_v_cast   | select    | auto_sel  | 0       |
+|   tz_19_fu_3207_p2                    |     |        | tz_19          | add       | fabric    | 0       |
+|   add_ln76_18_fu_3589_p2              |     |        | add_ln76_18    | add       | fabric    | 0       |
+|   sub_ln77_19_fu_3594_p2              |     |        | sub_ln77_19    | sub       | fabric    | 0       |
+|   sub_ln81_19_fu_3599_p2              |     |        | sub_ln81_19    | sub       | fabric    | 0       |
+|   add_ln82_19_fu_3604_p2              |     |        | add_ln82_19    | add       | fabric    | 0       |
+|   tx_20_fu_3609_p3                    |     |        | tx_20          | select    | auto_sel  | 0       |
+|   ty_19_fu_3616_p3                    |     |        | ty_19          | select    | auto_sel  | 0       |
+|   tz_21_v_cast_fu_3623_p3             |     |        | tz_21_v_cast   | select    | auto_sel  | 0       |
+|   tz_20_fu_3630_p2                    |     |        | tz_20          | add       | fabric    | 0       |
+|   add_ln76_19_fu_3671_p2              |     |        | add_ln76_19    | add       | fabric    | 0       |
+|   sub_ln77_20_fu_3677_p2              |     |        | sub_ln77_20    | sub       | fabric    | 0       |
+|   sub_ln81_20_fu_3683_p2              |     |        | sub_ln81_20    | sub       | fabric    | 0       |
+|   add_ln82_20_fu_3689_p2              |     |        | add_ln82_20    | add       | fabric    | 0       |
+|   tx_21_fu_3695_p3                    |     |        | tx_21          | select    | auto_sel  | 0       |
+|   ty_20_fu_3703_p3                    |     |        | ty_20          | select    | auto_sel  | 0       |
+|   tz_22_v_cast_fu_3711_p3             |     |        | tz_22_v_cast   | select    | auto_sel  | 0       |
+|   tz_21_fu_3719_p2                    |     |        | tz_21          | add       | fabric    | 0       |
+|   add_ln76_20_fu_4515_p2              |     |        | add_ln76_20    | add       | fabric    | 0       |
+|   sub_ln77_21_fu_4520_p2              |     |        | sub_ln77_21    | sub       | fabric    | 0       |
+|   sub_ln81_21_fu_4525_p2              |     |        | sub_ln81_21    | sub       | fabric    | 0       |
+|   add_ln82_21_fu_4530_p2              |     |        | add_ln82_21    | add       | fabric    | 0       |
+|   tx_22_fu_4535_p3                    |     |        | tx_22          | select    | auto_sel  | 0       |
+|   ty_21_fu_4542_p3                    |     |        | ty_21          | select    | auto_sel  | 0       |
+|   tz_23_v_cast_fu_4549_p3             |     |        | tz_23_v_cast   | select    | auto_sel  | 0       |
+|   tz_22_fu_4556_p2                    |     |        | tz_22          | add       | fabric    | 0       |
+|   add_ln76_21_fu_4597_p2              |     |        | add_ln76_21    | add       | fabric    | 0       |
+|   sub_ln77_22_fu_4603_p2              |     |        | sub_ln77_22    | sub       | fabric    | 0       |
+|   sub_ln81_22_fu_4609_p2              |     |        | sub_ln81_22    | sub       | fabric    | 0       |
+|   add_ln82_22_fu_4615_p2              |     |        | add_ln82_22    | add       | fabric    | 0       |
+|   tx_23_fu_4621_p3                    |     |        | tx_23          | select    | auto_sel  | 0       |
+|   ty_22_fu_4629_p3                    |     |        | ty_22          | select    | auto_sel  | 0       |
+|   tz_24_v_cast_fu_4637_p3             |     |        | tz_24_v_cast   | select    | auto_sel  | 0       |
+|   tz_23_fu_4645_p2                    |     |        | tz_23          | add       | fabric    | 0       |
+|   add_ln76_22_fu_5301_p2              |     |        | add_ln76_22    | add       | fabric    | 0       |
+|   sub_ln77_23_fu_5306_p2              |     |        | sub_ln77_23    | sub       | fabric    | 0       |
+|   sub_ln81_23_fu_5311_p2              |     |        | sub_ln81_23    | sub       | fabric    | 0       |
+|   add_ln82_23_fu_5316_p2              |     |        | add_ln82_23    | add       | fabric    | 0       |
+|   tx_24_fu_5321_p3                    |     |        | tx_24          | select    | auto_sel  | 0       |
+|   ty_23_fu_5328_p3                    |     |        | ty_23          | select    | auto_sel  | 0       |
+|   tz_25_v_cast_fu_4679_p3             |     |        | tz_25_v_cast   | select    | auto_sel  | 0       |
+|   tz_24_fu_4687_p2                    |     |        | tz_24          | add       | fabric    | 0       |
+|   add_ln76_23_fu_5363_p2              |     |        | add_ln76_23    | add       | fabric    | 0       |
+|   sub_ln77_24_fu_5369_p2              |     |        | sub_ln77_24    | sub       | fabric    | 0       |
+|   sub_ln81_24_fu_5375_p2              |     |        | sub_ln81_24    | sub       | fabric    | 0       |
+|   add_ln82_24_fu_5381_p2              |     |        | add_ln82_24    | add       | fabric    | 0       |
+|   tx_25_fu_5387_p3                    |     |        | tx_25          | select    | auto_sel  | 0       |
+|   ty_24_fu_5394_p3                    |     |        | ty_24          | select    | auto_sel  | 0       |
+|   tz_26_v_cast_fu_5401_p3             |     |        | tz_26_v_cast   | select    | auto_sel  | 0       |
+|   tz_25_fu_5408_p2                    |     |        | tz_25          | add       | fabric    | 0       |
+|   add_ln76_24_fu_6001_p2              |     |        | add_ln76_24    | add       | fabric    | 0       |
+|   sub_ln77_25_fu_6006_p2              |     |        | sub_ln77_25    | sub       | fabric    | 0       |
+|   sub_ln81_25_fu_6011_p2              |     |        | sub_ln81_25    | sub       | fabric    | 0       |
+|   add_ln82_25_fu_6016_p2              |     |        | add_ln82_25    | add       | fabric    | 0       |
+|   tx_26_fu_6021_p3                    |     |        | tx_26          | select    | auto_sel  | 0       |
+|   ty_25_fu_6028_p3                    |     |        | ty_25          | select    | auto_sel  | 0       |
+|   tz_27_v_cast_fu_5441_p3             |     |        | tz_27_v_cast   | select    | auto_sel  | 0       |
+|   tz_26_fu_5449_p2                    |     |        | tz_26          | add       | fabric    | 0       |
+|   add_ln76_25_fu_6063_p2              |     |        | add_ln76_25    | add       | fabric    | 0       |
+|   sub_ln77_26_fu_6069_p2              |     |        | sub_ln77_26    | sub       | fabric    | 0       |
+|   sub_ln81_26_fu_6075_p2              |     |        | sub_ln81_26    | sub       | fabric    | 0       |
+|   add_ln82_26_fu_6081_p2              |     |        | add_ln82_26    | add       | fabric    | 0       |
+|   tx_27_fu_6087_p3                    |     |        | tx_27          | select    | auto_sel  | 0       |
+|   ty_26_fu_6094_p3                    |     |        | ty_26          | select    | auto_sel  | 0       |
+|   tz_28_v_cast_fu_5463_p3             |     |        | tz_28_v_cast   | select    | auto_sel  | 0       |
+|   tz_27_fu_5471_p2                    |     |        | tz_27          | add       | fabric    | 0       |
+|   add_ln76_26_fu_6767_p2              |     |        | add_ln76_26    | add       | fabric    | 0       |
+|   sub_ln77_27_fu_6772_p2              |     |        | sub_ln77_27    | sub       | fabric    | 0       |
+|   sub_ln81_27_fu_6777_p2              |     |        | sub_ln81_27    | sub       | fabric    | 0       |
+|   add_ln82_27_fu_6782_p2              |     |        | add_ln82_27    | add       | fabric    | 0       |
+|   tx_28_fu_6787_p3                    |     |        | tx_28          | select    | auto_sel  | 0       |
+|   ty_27_fu_6794_p3                    |     |        | ty_27          | select    | auto_sel  | 0       |
+|   tz_29_v_cast_fu_6121_p3             |     |        | tz_29_v_cast   | select    | auto_sel  | 0       |
+|   tz_28_fu_6128_p2                    |     |        | tz_28          | add       | fabric    | 0       |
+|   add_ln76_27_fu_6829_p2              |     |        | add_ln76_27    | add       | fabric    | 0       |
+|   sub_ln77_28_fu_6835_p2              |     |        | sub_ln77_28    | sub       | fabric    | 0       |
+|   sub_ln81_28_fu_6841_p2              |     |        | sub_ln81_28    | sub       | fabric    | 0       |
+|   add_ln82_28_fu_6847_p2              |     |        | add_ln82_28    | add       | fabric    | 0       |
+|   tx_29_fu_6853_p3                    |     |        | tx_29          | select    | auto_sel  | 0       |
+|   ty_28_fu_6860_p3                    |     |        | ty_28          | select    | auto_sel  | 0       |
+|   tz_30_v_cast_fu_6141_p3             |     |        | tz_30_v_cast   | select    | auto_sel  | 0       |
+|   tz_29_fu_6149_p2                    |     |        | tz_29          | add       | fabric    | 0       |
+|   add_ln76_28_fu_7527_p2              |     |        | add_ln76_28    | add       | fabric    | 0       |
+|   sub_ln77_29_fu_7532_p2              |     |        | sub_ln77_29    | sub       | fabric    | 0       |
+|   sub_ln81_29_fu_7537_p2              |     |        | sub_ln81_29    | sub       | fabric    | 0       |
+|   add_ln82_29_fu_7542_p2              |     |        | add_ln82_29    | add       | fabric    | 0       |
+|   tx_30_fu_7547_p3                    |     |        | tx_30          | select    | auto_sel  | 0       |
+|   ty_29_fu_7554_p3                    |     |        | ty_29          | select    | auto_sel  | 0       |
+|   tz_31_v_cast_fu_6163_p3             |     |        | tz_31_v_cast   | select    | auto_sel  | 0       |
+|   tz_30_fu_6171_p2                    |     |        | tz_30          | add       | fabric    | 0       |
+|   add_ln76_29_fu_7589_p2              |     |        | add_ln76_29    | add       | fabric    | 0       |
+|   sub_ln77_30_fu_7595_p2              |     |        | sub_ln77_30    | sub       | fabric    | 0       |
+|   sub_ln81_30_fu_7601_p2              |     |        | sub_ln81_30    | sub       | fabric    | 0       |
+|   add_ln82_30_fu_7607_p2              |     |        | add_ln82_30    | add       | fabric    | 0       |
+|   tx_31_fu_7613_p3                    |     |        | tx_31          | select    | auto_sel  | 0       |
+|   ty_30_fu_7620_p3                    |     |        | ty_30          | select    | auto_sel  | 0       |
+|   tz_32_v_cast_fu_6887_p3             |     |        | tz_32_v_cast   | select    | auto_sel  | 0       |
+|   tz_31_fu_6894_p2                    |     |        | tz_31          | add       | fabric    | 0       |
+|   add_ln76_30_fu_8287_p2              |     |        | add_ln76_30    | add       | fabric    | 0       |
+|   sub_ln77_31_fu_8292_p2              |     |        | sub_ln77_31    | sub       | fabric    | 0       |
+|   sub_ln81_31_fu_8297_p2              |     |        | sub_ln81_31    | sub       | fabric    | 0       |
+|   add_ln82_31_fu_8302_p2              |     |        | add_ln82_31    | add       | fabric    | 0       |
+|   tx_32_fu_8307_p3                    |     |        | tx_32          | select    | auto_sel  | 0       |
+|   ty_31_fu_8314_p3                    |     |        | ty_31          | select    | auto_sel  | 0       |
+|   tz_33_v_cast_fu_6907_p3             |     |        | tz_33_v_cast   | select    | auto_sel  | 0       |
+|   tz_32_fu_6915_p2                    |     |        | tz_32          | add       | fabric    | 0       |
+|   add_ln76_31_fu_8349_p2              |     |        | add_ln76_31    | add       | fabric    | 0       |
+|   sub_ln77_32_fu_8355_p2              |     |        | sub_ln77_32    | sub       | fabric    | 0       |
+|   sub_ln81_32_fu_8361_p2              |     |        | sub_ln81_32    | sub       | fabric    | 0       |
+|   add_ln82_32_fu_8367_p2              |     |        | add_ln82_32    | add       | fabric    | 0       |
+|   tx_33_fu_8373_p3                    |     |        | tx_33          | select    | auto_sel  | 0       |
+|   ty_32_fu_8380_p3                    |     |        | ty_32          | select    | auto_sel  | 0       |
+|   tz_34_v_cast_fu_6929_p3             |     |        | tz_34_v_cast   | select    | auto_sel  | 0       |
+|   tz_33_fu_6937_p2                    |     |        | tz_33          | add       | fabric    | 0       |
+|   add_ln76_32_fu_9047_p2              |     |        | add_ln76_32    | add       | fabric    | 0       |
+|   sub_ln77_33_fu_9052_p2              |     |        | sub_ln77_33    | sub       | fabric    | 0       |
+|   sub_ln81_33_fu_9057_p2              |     |        | sub_ln81_33    | sub       | fabric    | 0       |
+|   add_ln82_33_fu_9062_p2              |     |        | add_ln82_33    | add       | fabric    | 0       |
+|   tx_34_fu_9067_p3                    |     |        | tx_34          | select    | auto_sel  | 0       |
+|   ty_33_fu_9074_p3                    |     |        | ty_33          | select    | auto_sel  | 0       |
+|   tz_35_v_cast_fu_7647_p3             |     |        | tz_35_v_cast   | select    | auto_sel  | 0       |
+|   tz_34_fu_7654_p2                    |     |        | tz_34          | add       | fabric    | 0       |
+|   add_ln76_33_fu_9109_p2              |     |        | add_ln76_33    | add       | fabric    | 0       |
+|   sub_ln77_34_fu_9115_p2              |     |        | sub_ln77_34    | sub       | fabric    | 0       |
+|   sub_ln81_34_fu_9121_p2              |     |        | sub_ln81_34    | sub       | fabric    | 0       |
+|   add_ln82_34_fu_9127_p2              |     |        | add_ln82_34    | add       | fabric    | 0       |
+|   tx_35_fu_9133_p3                    |     |        | tx_35          | select    | auto_sel  | 0       |
+|   ty_34_fu_9140_p3                    |     |        | ty_34          | select    | auto_sel  | 0       |
+|   tz_36_v_cast_fu_7667_p3             |     |        | tz_36_v_cast   | select    | auto_sel  | 0       |
+|   tz_35_fu_7675_p2                    |     |        | tz_35          | add       | fabric    | 0       |
+|   add_ln76_34_fu_9807_p2              |     |        | add_ln76_34    | add       | fabric    | 0       |
+|   sub_ln77_35_fu_9812_p2              |     |        | sub_ln77_35    | sub       | fabric    | 0       |
+|   sub_ln81_35_fu_9817_p2              |     |        | sub_ln81_35    | sub       | fabric    | 0       |
+|   add_ln82_35_fu_9822_p2              |     |        | add_ln82_35    | add       | fabric    | 0       |
+|   tx_36_fu_9827_p3                    |     |        | tx_36          | select    | auto_sel  | 0       |
+|   ty_35_fu_9834_p3                    |     |        | ty_35          | select    | auto_sel  | 0       |
+|   tz_37_v_cast_fu_7689_p3             |     |        | tz_37_v_cast   | select    | auto_sel  | 0       |
+|   tz_36_fu_7697_p2                    |     |        | tz_36          | add       | fabric    | 0       |
+|   add_ln76_35_fu_9869_p2              |     |        | add_ln76_35    | add       | fabric    | 0       |
+|   sub_ln77_36_fu_9875_p2              |     |        | sub_ln77_36    | sub       | fabric    | 0       |
+|   sub_ln81_36_fu_9881_p2              |     |        | sub_ln81_36    | sub       | fabric    | 0       |
+|   add_ln82_36_fu_9887_p2              |     |        | add_ln82_36    | add       | fabric    | 0       |
+|   tx_37_fu_9893_p3                    |     |        | tx_37          | select    | auto_sel  | 0       |
+|   ty_36_fu_9900_p3                    |     |        | ty_36          | select    | auto_sel  | 0       |
+|   tz_38_v_cast_fu_8407_p3             |     |        | tz_38_v_cast   | select    | auto_sel  | 0       |
+|   tz_37_fu_8414_p2                    |     |        | tz_37          | add       | fabric    | 0       |
+|   add_ln76_36_fu_10567_p2             |     |        | add_ln76_36    | add       | fabric    | 0       |
+|   sub_ln77_37_fu_10572_p2             |     |        | sub_ln77_37    | sub       | fabric    | 0       |
+|   sub_ln81_37_fu_10577_p2             |     |        | sub_ln81_37    | sub       | fabric    | 0       |
+|   add_ln82_37_fu_10582_p2             |     |        | add_ln82_37    | add       | fabric    | 0       |
+|   tx_38_fu_10587_p3                   |     |        | tx_38          | select    | auto_sel  | 0       |
+|   ty_37_fu_10594_p3                   |     |        | ty_37          | select    | auto_sel  | 0       |
+|   tz_39_v_cast_fu_8427_p3             |     |        | tz_39_v_cast   | select    | auto_sel  | 0       |
+|   tz_38_fu_8435_p2                    |     |        | tz_38          | add       | fabric    | 0       |
+|   add_ln76_37_fu_10629_p2             |     |        | add_ln76_37    | add       | fabric    | 0       |
+|   sub_ln77_38_fu_10635_p2             |     |        | sub_ln77_38    | sub       | fabric    | 0       |
+|   sub_ln81_38_fu_10641_p2             |     |        | sub_ln81_38    | sub       | fabric    | 0       |
+|   add_ln82_38_fu_10647_p2             |     |        | add_ln82_38    | add       | fabric    | 0       |
+|   tx_39_fu_10653_p3                   |     |        | tx_39          | select    | auto_sel  | 0       |
+|   ty_38_fu_10660_p3                   |     |        | ty_38          | select    | auto_sel  | 0       |
+|   tz_40_v_cast_fu_8449_p3             |     |        | tz_40_v_cast   | select    | auto_sel  | 0       |
+|   tz_39_fu_8457_p2                    |     |        | tz_39          | add       | fabric    | 0       |
+|   add_ln76_38_fu_11327_p2             |     |        | add_ln76_38    | add       | fabric    | 0       |
+|   sub_ln77_39_fu_11332_p2             |     |        | sub_ln77_39    | sub       | fabric    | 0       |
+|   sub_ln81_39_fu_11337_p2             |     |        | sub_ln81_39    | sub       | fabric    | 0       |
+|   add_ln82_39_fu_11342_p2             |     |        | add_ln82_39    | add       | fabric    | 0       |
+|   tx_40_fu_11347_p3                   |     |        | tx_40          | select    | auto_sel  | 0       |
+|   ty_39_fu_11354_p3                   |     |        | ty_39          | select    | auto_sel  | 0       |
+|   tz_41_v_cast_fu_9167_p3             |     |        | tz_41_v_cast   | select    | auto_sel  | 0       |
+|   tz_40_fu_9174_p2                    |     |        | tz_40          | add       | fabric    | 0       |
+|   add_ln76_39_fu_11389_p2             |     |        | add_ln76_39    | add       | fabric    | 0       |
+|   sub_ln77_40_fu_11395_p2             |     |        | sub_ln77_40    | sub       | fabric    | 0       |
+|   sub_ln81_40_fu_11401_p2             |     |        | sub_ln81_40    | sub       | fabric    | 0       |
+|   add_ln82_40_fu_11407_p2             |     |        | add_ln82_40    | add       | fabric    | 0       |
+|   tx_41_fu_11413_p3                   |     |        | tx_41          | select    | auto_sel  | 0       |
+|   ty_40_fu_11420_p3                   |     |        | ty_40          | select    | auto_sel  | 0       |
+|   tz_42_v_cast_fu_9187_p3             |     |        | tz_42_v_cast   | select    | auto_sel  | 0       |
+|   tz_41_fu_9195_p2                    |     |        | tz_41          | add       | fabric    | 0       |
+|   add_ln76_40_fu_12087_p2             |     |        | add_ln76_40    | add       | fabric    | 0       |
+|   sub_ln77_41_fu_12092_p2             |     |        | sub_ln77_41    | sub       | fabric    | 0       |
+|   sub_ln81_41_fu_12097_p2             |     |        | sub_ln81_41    | sub       | fabric    | 0       |
+|   add_ln82_41_fu_12102_p2             |     |        | add_ln82_41    | add       | fabric    | 0       |
+|   tx_42_fu_12107_p3                   |     |        | tx_42          | select    | auto_sel  | 0       |
+|   ty_41_fu_12114_p3                   |     |        | ty_41          | select    | auto_sel  | 0       |
+|   tz_43_v_cast_fu_9209_p3             |     |        | tz_43_v_cast   | select    | auto_sel  | 0       |
+|   tz_42_fu_9217_p2                    |     |        | tz_42          | add       | fabric    | 0       |
+|   add_ln76_41_fu_12149_p2             |     |        | add_ln76_41    | add       | fabric    | 0       |
+|   sub_ln77_42_fu_12155_p2             |     |        | sub_ln77_42    | sub       | fabric    | 0       |
+|   sub_ln81_42_fu_12161_p2             |     |        | sub_ln81_42    | sub       | fabric    | 0       |
+|   add_ln82_42_fu_12167_p2             |     |        | add_ln82_42    | add       | fabric    | 0       |
+|   tx_43_fu_12173_p3                   |     |        | tx_43          | select    | auto_sel  | 0       |
+|   ty_42_fu_12180_p3                   |     |        | ty_42          | select    | auto_sel  | 0       |
+|   tz_44_v_cast_fu_9927_p3             |     |        | tz_44_v_cast   | select    | auto_sel  | 0       |
+|   tz_43_fu_9934_p2                    |     |        | tz_43          | add       | fabric    | 0       |
+|   add_ln76_42_fu_12861_p2             |     |        | add_ln76_42    | add       | fabric    | 0       |
+|   sub_ln77_43_fu_12866_p2             |     |        | sub_ln77_43    | sub       | fabric    | 0       |
+|   sub_ln81_43_fu_12871_p2             |     |        | sub_ln81_43    | sub       | fabric    | 0       |
+|   add_ln82_43_fu_12876_p2             |     |        | add_ln82_43    | add       | fabric    | 0       |
+|   tx_44_fu_12881_p3                   |     |        | tx_44          | select    | auto_sel  | 0       |
+|   ty_43_fu_12888_p3                   |     |        | ty_43          | select    | auto_sel  | 0       |
+|   tz_45_v_cast_fu_9947_p3             |     |        | tz_45_v_cast   | select    | auto_sel  | 0       |
+|   tz_44_fu_9955_p2                    |     |        | tz_44          | add       | fabric    | 0       |
+|   add_ln76_43_fu_12923_p2             |     |        | add_ln76_43    | add       | fabric    | 0       |
+|   sub_ln77_44_fu_12929_p2             |     |        | sub_ln77_44    | sub       | fabric    | 0       |
+|   sub_ln81_44_fu_12935_p2             |     |        | sub_ln81_44    | sub       | fabric    | 0       |
+|   add_ln82_44_fu_12941_p2             |     |        | add_ln82_44    | add       | fabric    | 0       |
+|   tx_45_fu_12947_p3                   |     |        | tx_45          | select    | auto_sel  | 0       |
+|   ty_44_fu_12954_p3                   |     |        | ty_44          | select    | auto_sel  | 0       |
+|   tz_46_v_cast_fu_9969_p3             |     |        | tz_46_v_cast   | select    | auto_sel  | 0       |
+|   tz_45_fu_9977_p2                    |     |        | tz_45          | add       | fabric    | 0       |
+|   add_ln76_44_fu_13557_p2             |     |        | add_ln76_44    | add       | fabric    | 0       |
+|   sub_ln77_45_fu_13562_p2             |     |        | sub_ln77_45    | sub       | fabric    | 0       |
+|   sub_ln81_45_fu_13567_p2             |     |        | sub_ln81_45    | sub       | fabric    | 0       |
+|   add_ln82_45_fu_13572_p2             |     |        | add_ln82_45    | add       | fabric    | 0       |
+|   tx_46_fu_13577_p3                   |     |        | tx_46          | select    | auto_sel  | 0       |
+|   ty_45_fu_13584_p3                   |     |        | ty_45          | select    | auto_sel  | 0       |
+|   tz_47_v_cast_fu_10687_p3            |     |        | tz_47_v_cast   | select    | auto_sel  | 0       |
+|   tz_46_fu_10694_p2                   |     |        | tz_46          | add       | fabric    | 0       |
+|   add_ln76_45_fu_13619_p2             |     |        | add_ln76_45    | add       | fabric    | 0       |
+|   sub_ln77_46_fu_13625_p2             |     |        | sub_ln77_46    | sub       | fabric    | 0       |
+|   sub_ln81_46_fu_13631_p2             |     |        | sub_ln81_46    | sub       | fabric    | 0       |
+|   add_ln82_46_fu_13637_p2             |     |        | add_ln82_46    | add       | fabric    | 0       |
+|   tx_47_fu_13643_p3                   |     |        | tx_47          | select    | auto_sel  | 0       |
+|   ty_46_fu_13650_p3                   |     |        | ty_46          | select    | auto_sel  | 0       |
+|   tz_48_v_cast_fu_10707_p3            |     |        | tz_48_v_cast   | select    | auto_sel  | 0       |
+|   tz_47_fu_10715_p2                   |     |        | tz_47          | add       | fabric    | 0       |
+|   add_ln76_46_fu_14295_p2             |     |        | add_ln76_46    | add       | fabric    | 0       |
+|   sub_ln77_47_fu_14300_p2             |     |        | sub_ln77_47    | sub       | fabric    | 0       |
+|   sub_ln81_47_fu_14305_p2             |     |        | sub_ln81_47    | sub       | fabric    | 0       |
+|   add_ln82_47_fu_14310_p2             |     |        | add_ln82_47    | add       | fabric    | 0       |
+|   tx_48_fu_14315_p3                   |     |        | tx_48          | select    | auto_sel  | 0       |
+|   ty_47_fu_14322_p3                   |     |        | ty_47          | select    | auto_sel  | 0       |
+|   tz_49_v_cast_fu_10729_p3            |     |        | tz_49_v_cast   | select    | auto_sel  | 0       |
+|   tz_48_fu_10737_p2                   |     |        | tz_48          | add       | fabric    | 0       |
+|   add_ln76_47_fu_14357_p2             |     |        | add_ln76_47    | add       | fabric    | 0       |
+|   sub_ln77_48_fu_14363_p2             |     |        | sub_ln77_48    | sub       | fabric    | 0       |
+|   sub_ln81_48_fu_14369_p2             |     |        | sub_ln81_48    | sub       | fabric    | 0       |
+|   add_ln82_48_fu_14375_p2             |     |        | add_ln82_48    | add       | fabric    | 0       |
+|   tx_49_fu_14381_p3                   |     |        | tx_49          | select    | auto_sel  | 0       |
+|   ty_48_fu_14388_p3                   |     |        | ty_48          | select    | auto_sel  | 0       |
+|   tz_50_v_cast_fu_11447_p3            |     |        | tz_50_v_cast   | select    | auto_sel  | 0       |
+|   tz_49_fu_11454_p2                   |     |        | tz_49          | add       | fabric    | 0       |
+|   add_ln76_48_fu_14799_p2             |     |        | add_ln76_48    | add       | fabric    | 0       |
+|   sub_ln77_49_fu_14804_p2             |     |        | sub_ln77_49    | sub       | fabric    | 0       |
+|   sub_ln81_49_fu_14809_p2             |     |        | sub_ln81_49    | sub       | fabric    | 0       |
+|   add_ln82_49_fu_14814_p2             |     |        | add_ln82_49    | add       | fabric    | 0       |
+|   tx_50_fu_14819_p3                   |     |        | tx_50          | select    | auto_sel  | 0       |
+|   ty_49_fu_14826_p3                   |     |        | ty_49          | select    | auto_sel  | 0       |
+|   tz_51_v_cast_fu_11467_p3            |     |        | tz_51_v_cast   | select    | auto_sel  | 0       |
+|   tz_50_fu_11475_p2                   |     |        | tz_50          | add       | fabric    | 0       |
+|   add_ln76_49_fu_14861_p2             |     |        | add_ln76_49    | add       | fabric    | 0       |
+|   sub_ln77_50_fu_14867_p2             |     |        | sub_ln77_50    | sub       | fabric    | 0       |
+|   sub_ln81_50_fu_14873_p2             |     |        | sub_ln81_50    | sub       | fabric    | 0       |
+|   add_ln82_50_fu_14879_p2             |     |        | add_ln82_50    | add       | fabric    | 0       |
+|   tx_51_fu_14885_p3                   |     |        | tx_51          | select    | auto_sel  | 0       |
+|   ty_50_fu_14892_p3                   |     |        | ty_50          | select    | auto_sel  | 0       |
+|   tz_52_v_cast_fu_11489_p3            |     |        | tz_52_v_cast   | select    | auto_sel  | 0       |
+|   tz_51_fu_11497_p2                   |     |        | tz_51          | add       | fabric    | 0       |
+|   add_ln76_50_fu_15303_p2             |     |        | add_ln76_50    | add       | fabric    | 0       |
+|   sub_ln77_51_fu_15308_p2             |     |        | sub_ln77_51    | sub       | fabric    | 0       |
+|   sub_ln81_51_fu_15313_p2             |     |        | sub_ln81_51    | sub       | fabric    | 0       |
+|   add_ln82_51_fu_15318_p2             |     |        | add_ln82_51    | add       | fabric    | 0       |
+|   tx_52_fu_15323_p3                   |     |        | tx_52          | select    | auto_sel  | 0       |
+|   ty_51_fu_15330_p3                   |     |        | ty_51          | select    | auto_sel  | 0       |
+|   tz_53_v_cast_fu_12207_p3            |     |        | tz_53_v_cast   | select    | auto_sel  | 0       |
+|   tz_52_fu_12214_p2                   |     |        | tz_52          | add       | fabric    | 0       |
+|   add_ln76_51_fu_15365_p2             |     |        | add_ln76_51    | add       | fabric    | 0       |
+|   sub_ln77_52_fu_15371_p2             |     |        | sub_ln77_52    | sub       | fabric    | 0       |
+|   sub_ln81_52_fu_15377_p2             |     |        | sub_ln81_52    | sub       | fabric    | 0       |
+|   add_ln82_52_fu_15383_p2             |     |        | add_ln82_52    | add       | fabric    | 0       |
+|   tx_53_fu_15389_p3                   |     |        | tx_53          | select    | auto_sel  | 0       |
+|   ty_52_fu_15396_p3                   |     |        | ty_52          | select    | auto_sel  | 0       |
+|   tz_54_v_cast_fu_12227_p3            |     |        | tz_54_v_cast   | select    | auto_sel  | 0       |
+|   tz_53_fu_12235_p2                   |     |        | tz_53          | add       | fabric    | 0       |
+|   add_ln76_52_fu_15807_p2             |     |        | add_ln76_52    | add       | fabric    | 0       |
+|   sub_ln77_53_fu_15812_p2             |     |        | sub_ln77_53    | sub       | fabric    | 0       |
+|   add_ln78_1_fu_12249_p2              |     |        | add_ln78_1     | add       | fabric    | 0       |
+|   sub_ln81_53_fu_15817_p2             |     |        | sub_ln81_53    | sub       | fabric    | 0       |
+|   add_ln82_53_fu_15822_p2             |     |        | add_ln82_53    | add       | fabric    | 0       |
+|   add_ln83_1_fu_12255_p2              |     |        | add_ln83_1     | add       | fabric    | 0       |
+|   tx_54_fu_15827_p3                   |     |        | tx_54          | select    | auto_sel  | 0       |
+|   ty_53_fu_15834_p3                   |     |        | ty_53          | select    | auto_sel  | 0       |
+|   d_57_fu_12277_p3                    |     |        | d_57           | select    | auto_sel  | 0       |
+|   add_ln76_53_fu_15869_p2             |     |        | add_ln76_53    | add       | fabric    | 0       |
+|   sub_ln77_54_fu_15875_p2             |     |        | sub_ln77_54    | sub       | fabric    | 0       |
+|   select_ln58_3_fu_15889_p3           |     |        | select_ln58_3  | select    | auto_sel  | 0       |
+|   select_ln58_4_fu_15905_p3           |     |        | select_ln58_4  | select    | auto_sel  | 0       |
+|   add_ln77_5_fu_15913_p2              |     |        | add_ln77_5     | add       | fabric    | 0       |
+|   sub_ln72_fu_15919_p2                |     |        | sub_ln72       | sub       | fabric    | 0       |
+|   select_ln76_8_fu_16373_p3           |     |        | select_ln76_8  | select    | auto_sel  | 0       |
+|   add_ln76_54_fu_16381_p2             |     |        | add_ln76_54    | add       | fabric    | 0       |
+|   sub_ln81_54_fu_15925_p2             |     |        | sub_ln81_54    | sub       | fabric    | 0       |
+|   add_ln82_54_fu_15931_p2             |     |        | add_ln82_54    | add       | fabric    | 0       |
+|   select_ln72_1_fu_15945_p3           |     |        | select_ln72_1  | select    | auto_sel  | 0       |
+|   select_ln81_5_fu_15961_p3           |     |        | select_ln81_5  | select    | auto_sel  | 0       |
+|   sub_ln82_1_fu_15969_p2              |     |        | sub_ln82_1     | sub       | fabric    | 0       |
+|   add_ln82_55_fu_15975_p2             |     |        | add_ln82_55    | add       | fabric    | 0       |
+|   add_ln81_fu_16404_p2                |     |        | add_ln81       | add       | fabric    | 0       |
+|   tx_180_fu_16409_p3                  |     |        | tx_180         | select    | auto_sel  | 0       |
+|   sub_ln254_1_fu_16426_p2             |     |        | sub_ln254_1    | sub       | fabric    | 0       |
+|   icmp_ln248_2_fu_16442_p2            |     |        | icmp_ln248_2   | seteq     | auto      | 0       |
+|   icmp_ln248_3_fu_16447_p2            |     |        | icmp_ln248_3   | seteq     | auto      | 0       |
+|   sparsemux_9_3_26_1_1_U16            |     |        | outcos_5       | sparsemux | auto      | 0       |
+|   sub_ln13_fu_16979_p2                |     |        | sub_ln13       | sub       | fabric    | 0       |
+|   sub_ln13_1_fu_16995_p2              |     |        | sub_ln13_1     | sub       | fabric    | 0       |
+|   w1_real_fu_17014_p3                 |     |        | w1_real        | select    | auto_sel  | 0       |
+|   add_ln77_fu_16515_p2                |     |        | add_ln77       | add       | fabric    | 0       |
+|   select_ln58_5_fu_16528_p3           |     |        | select_ln58_5  | select    | auto_sel  | 0       |
+|   add_ln82_56_fu_16536_p2             |     |        | add_ln82_56    | add       | fabric    | 0       |
+|   ty_178_fu_16541_p3                  |     |        | ty_178         | select    | auto_sel  | 0       |
+|   sub_ln261_fu_16548_p2               |     |        | sub_ln261      | sub       | fabric    | 0       |
+|   sparsemux_9_3_26_1_1_U17            |     |        | outsin_2       | sparsemux | auto      | 0       |
+|   outsin_3_fu_17021_p2                |     |        | outsin_3       | sub       | fabric    | 0       |
+|   outsin_4_fu_17026_p3                |     |        | outsin_4       | select    | auto_sel  | 0       |
+|   sub_ln14_fu_17044_p2                |     |        | sub_ln14       | sub       | fabric    | 0       |
+|   sub_ln14_1_fu_17060_p2              |     |        | sub_ln14_1     | sub       | fabric    | 0       |
+|   w1_imag_fu_17090_p3                 |     |        | w1_imag        | select    | auto_sel  | 0       |
+|   mul_21s_16s_36_1_1_U13              | 1   |        | mul_ln13_2     | mul       | auto      | 0       |
+|   sign0_2_fu_2482_p2                  |     |        | sign0_2        | setgt     | auto      | 0       |
+|   sub_ln211_2_fu_2524_p2              |     |        | sub_ln211_2    | sub       | fabric    | 0       |
+|   inabs_2_fu_2529_p3                  |     |        | inabs_2        | select    | auto_sel  | 0       |
+|   mul_34ns_62ns_94_3_1_U6             | 8   |        | mul_ln38_2     | mul       | auto      | 2       |
+|   mul_9ns_43ns_44_2_1_U2              | 2   |        | mul_ln42_2     | mul       | auto      | 1       |
+|   add_ln42_2_fu_3248_p2               |     |        | add_ln42_2     | add       | fabric    | 0       |
+|   sub_ln228_2_fu_3281_p2              |     |        | sub_ln228_2    | sub       | fabric    | 0       |
+|   icmp_ln225_4_fu_3297_p2             |     |        | icmp_ln225_4   | seteq     | auto      | 0       |
+|   icmp_ln225_5_fu_3302_p2             |     |        | icmp_ln225_5   | seteq     | auto      | 0       |
+|   or_ln225_2_fu_3307_p2               |     |        | or_ln225_2     | or        | auto      | 0       |
+|   z_8_fu_3313_p3                      |     |        | z_8            | select    | auto_sel  | 0       |
+|   select_ln75_2_fu_3333_p3            |     |        | select_ln75_2  | select    | auto_sel  | 0       |
+|   tz_54_fu_3341_p2                    |     |        | tz_54          | add       | fabric    | 0       |
+|   select_ln76_2_fu_3753_p3            |     |        | select_ln76_2  | select    | auto_sel  | 0       |
+|   select_ln77_2_fu_3760_p3            |     |        | select_ln77_2  | select    | auto_sel  | 0       |
+|   select_ln81_2_fu_3767_p3            |     |        | select_ln81_2  | select    | auto_sel  | 0       |
+|   select_ln82_2_fu_3774_p3            |     |        | select_ln82_2  | select    | auto_sel  | 0       |
+|   tx_56_fu_3781_p3                    |     |        | tx_56          | select    | auto_sel  | 0       |
+|   ty_55_fu_3792_p3                    |     |        | ty_55          | select    | auto_sel  | 0       |
+|   tz_128_v_cast_fu_3803_p3            |     |        | tz_128_v_cast  | select    | auto_sel  | 0       |
+|   tz_55_fu_3810_p2                    |     |        | tz_55          | add       | fabric    | 0       |
+|   add_ln76_55_fu_3851_p2              |     |        | add_ln76_55    | add       | fabric    | 0       |
+|   sub_ln77_55_fu_3857_p2              |     |        | sub_ln77_55    | sub       | fabric    | 0       |
+|   sub_ln81_55_fu_3863_p2              |     |        | sub_ln81_55    | sub       | fabric    | 0       |
+|   add_ln82_57_fu_3869_p2              |     |        | add_ln82_57    | add       | fabric    | 0       |
+|   tx_57_fu_3875_p3                    |     |        | tx_57          | select    | auto_sel  | 0       |
+|   ty_56_fu_3887_p3                    |     |        | ty_56          | select    | auto_sel  | 0       |
+|   tz_129_v_cast_fu_3895_p3            |     |        | tz_129_v_cast  | select    | auto_sel  | 0       |
+|   tz_56_fu_3903_p2                    |     |        | tz_56          | add       | fabric    | 0       |
+|   add_ln76_56_fu_3945_p2              |     |        | add_ln76_56    | add       | fabric    | 0       |
+|   sub_ln77_56_fu_3951_p2              |     |        | sub_ln77_56    | sub       | fabric    | 0       |
+|   sub_ln81_56_fu_3957_p2              |     |        | sub_ln81_56    | sub       | fabric    | 0       |
+|   add_ln82_58_fu_3963_p2              |     |        | add_ln82_58    | add       | fabric    | 0       |
+|   tx_58_fu_3969_p3                    |     |        | tx_58          | select    | auto_sel  | 0       |
+|   ty_57_fu_3977_p3                    |     |        | ty_57          | select    | auto_sel  | 0       |
+|   tz_130_v_cast_fu_4701_p3            |     |        | tz_130_v_cast  | select    | auto_sel  | 0       |
+|   tz_57_fu_4708_p2                    |     |        | tz_57          | add       | fabric    | 0       |
+|   add_ln76_57_fu_4727_p2              |     |        | add_ln76_57    | add       | fabric    | 0       |
+|   sub_ln77_57_fu_4732_p2              |     |        | sub_ln77_57    | sub       | fabric    | 0       |
+|   sub_ln81_57_fu_4737_p2              |     |        | sub_ln81_57    | sub       | fabric    | 0       |
+|   add_ln82_59_fu_4742_p2              |     |        | add_ln82_59    | add       | fabric    | 0       |
+|   tx_59_fu_4747_p3                    |     |        | tx_59          | select    | auto_sel  | 0       |
+|   ty_58_fu_4755_p3                    |     |        | ty_58          | select    | auto_sel  | 0       |
+|   tz_131_v_cast_fu_4763_p3            |     |        | tz_131_v_cast  | select    | auto_sel  | 0       |
+|   tz_58_fu_4771_p2                    |     |        | tz_58          | add       | fabric    | 0       |
+|   add_ln76_58_fu_4817_p2              |     |        | add_ln76_58    | add       | fabric    | 0       |
+|   sub_ln77_58_fu_4823_p2              |     |        | sub_ln77_58    | sub       | fabric    | 0       |
+|   sub_ln81_58_fu_4829_p2              |     |        | sub_ln81_58    | sub       | fabric    | 0       |
+|   add_ln82_60_fu_4835_p2              |     |        | add_ln82_60    | add       | fabric    | 0       |
+|   tx_60_fu_4841_p3                    |     |        | tx_60          | select    | auto_sel  | 0       |
+|   ty_59_fu_4849_p3                    |     |        | ty_59          | select    | auto_sel  | 0       |
+|   tz_132_v_cast_fu_4857_p3            |     |        | tz_132_v_cast  | select    | auto_sel  | 0       |
+|   tz_59_fu_4865_p2                    |     |        | tz_59          | add       | fabric    | 0       |
+|   add_ln76_59_fu_5491_p2              |     |        | add_ln76_59    | add       | fabric    | 0       |
+|   sub_ln77_59_fu_5496_p2              |     |        | sub_ln77_59    | sub       | fabric    | 0       |
+|   sub_ln81_59_fu_5501_p2              |     |        | sub_ln81_59    | sub       | fabric    | 0       |
+|   add_ln82_61_fu_5506_p2              |     |        | add_ln82_61    | add       | fabric    | 0       |
+|   tx_61_fu_5511_p3                    |     |        | tx_61          | select    | auto_sel  | 0       |
+|   ty_60_fu_5518_p3                    |     |        | ty_60          | select    | auto_sel  | 0       |
+|   tz_133_v_cast_fu_5525_p3            |     |        | tz_133_v_cast  | select    | auto_sel  | 0       |
+|   tz_60_fu_5532_p2                    |     |        | tz_60          | add       | fabric    | 0       |
+|   add_ln76_60_fu_5573_p2              |     |        | add_ln76_60    | add       | fabric    | 0       |
+|   sub_ln77_60_fu_5579_p2              |     |        | sub_ln77_60    | sub       | fabric    | 0       |
+|   sub_ln81_60_fu_5585_p2              |     |        | sub_ln81_60    | sub       | fabric    | 0       |
+|   add_ln82_62_fu_5591_p2              |     |        | add_ln82_62    | add       | fabric    | 0       |
+|   tx_62_fu_5597_p3                    |     |        | tx_62          | select    | auto_sel  | 0       |
+|   ty_61_fu_5605_p3                    |     |        | ty_61          | select    | auto_sel  | 0       |
+|   tz_134_v_cast_fu_5613_p3            |     |        | tz_134_v_cast  | select    | auto_sel  | 0       |
+|   tz_61_fu_5621_p2                    |     |        | tz_61          | add       | fabric    | 0       |
+|   add_ln76_61_fu_6191_p2              |     |        | add_ln76_61    | add       | fabric    | 0       |
+|   sub_ln77_61_fu_6196_p2              |     |        | sub_ln77_61    | sub       | fabric    | 0       |
+|   sub_ln81_61_fu_6201_p2              |     |        | sub_ln81_61    | sub       | fabric    | 0       |
+|   add_ln82_63_fu_6206_p2              |     |        | add_ln82_63    | add       | fabric    | 0       |
+|   tx_63_fu_6211_p3                    |     |        | tx_63          | select    | auto_sel  | 0       |
+|   ty_62_fu_6218_p3                    |     |        | ty_62          | select    | auto_sel  | 0       |
+|   tz_135_v_cast_fu_6225_p3            |     |        | tz_135_v_cast  | select    | auto_sel  | 0       |
+|   tz_62_fu_6232_p2                    |     |        | tz_62          | add       | fabric    | 0       |
+|   add_ln76_62_fu_6273_p2              |     |        | add_ln76_62    | add       | fabric    | 0       |
+|   sub_ln77_62_fu_6279_p2              |     |        | sub_ln77_62    | sub       | fabric    | 0       |
+|   sub_ln81_62_fu_6285_p2              |     |        | sub_ln81_62    | sub       | fabric    | 0       |
+|   add_ln82_64_fu_6291_p2              |     |        | add_ln82_64    | add       | fabric    | 0       |
+|   tx_64_fu_6297_p3                    |     |        | tx_64          | select    | auto_sel  | 0       |
+|   ty_63_fu_6305_p3                    |     |        | ty_63          | select    | auto_sel  | 0       |
+|   tz_136_v_cast_fu_6313_p3            |     |        | tz_136_v_cast  | select    | auto_sel  | 0       |
+|   tz_63_fu_6321_p2                    |     |        | tz_63          | add       | fabric    | 0       |
+|   add_ln76_63_fu_6957_p2              |     |        | add_ln76_63    | add       | fabric    | 0       |
+|   sub_ln77_63_fu_6962_p2              |     |        | sub_ln77_63    | sub       | fabric    | 0       |
+|   sub_ln81_63_fu_6967_p2              |     |        | sub_ln81_63    | sub       | fabric    | 0       |
+|   add_ln82_65_fu_6972_p2              |     |        | add_ln82_65    | add       | fabric    | 0       |
+|   tx_65_fu_6977_p3                    |     |        | tx_65          | select    | auto_sel  | 0       |
+|   ty_64_fu_6984_p3                    |     |        | ty_64          | select    | auto_sel  | 0       |
+|   tz_137_v_cast_fu_6355_p3            |     |        | tz_137_v_cast  | select    | auto_sel  | 0       |
+|   tz_64_fu_6363_p2                    |     |        | tz_64          | add       | fabric    | 0       |
+|   add_ln76_64_fu_7019_p2              |     |        | add_ln76_64    | add       | fabric    | 0       |
+|   sub_ln77_64_fu_7025_p2              |     |        | sub_ln77_64    | sub       | fabric    | 0       |
+|   sub_ln81_64_fu_7031_p2              |     |        | sub_ln81_64    | sub       | fabric    | 0       |
+|   add_ln82_66_fu_7037_p2              |     |        | add_ln82_66    | add       | fabric    | 0       |
+|   tx_66_fu_7043_p3                    |     |        | tx_66          | select    | auto_sel  | 0       |
+|   ty_65_fu_7050_p3                    |     |        | ty_65          | select    | auto_sel  | 0       |
+|   tz_138_v_cast_fu_7057_p3            |     |        | tz_138_v_cast  | select    | auto_sel  | 0       |
+|   tz_65_fu_7064_p2                    |     |        | tz_65          | add       | fabric    | 0       |
+|   add_ln76_65_fu_7717_p2              |     |        | add_ln76_65    | add       | fabric    | 0       |
+|   sub_ln77_65_fu_7722_p2              |     |        | sub_ln77_65    | sub       | fabric    | 0       |
+|   sub_ln81_65_fu_7727_p2              |     |        | sub_ln81_65    | sub       | fabric    | 0       |
+|   add_ln82_67_fu_7732_p2              |     |        | add_ln82_67    | add       | fabric    | 0       |
+|   tx_67_fu_7737_p3                    |     |        | tx_67          | select    | auto_sel  | 0       |
+|   ty_66_fu_7744_p3                    |     |        | ty_66          | select    | auto_sel  | 0       |
+|   tz_139_v_cast_fu_7097_p3            |     |        | tz_139_v_cast  | select    | auto_sel  | 0       |
+|   tz_66_fu_7105_p2                    |     |        | tz_66          | add       | fabric    | 0       |
+|   add_ln76_66_fu_7779_p2              |     |        | add_ln76_66    | add       | fabric    | 0       |
+|   sub_ln77_66_fu_7785_p2              |     |        | sub_ln77_66    | sub       | fabric    | 0       |
+|   sub_ln81_66_fu_7791_p2              |     |        | sub_ln81_66    | sub       | fabric    | 0       |
+|   add_ln82_68_fu_7797_p2              |     |        | add_ln82_68    | add       | fabric    | 0       |
+|   tx_68_fu_7803_p3                    |     |        | tx_68          | select    | auto_sel  | 0       |
+|   ty_67_fu_7810_p3                    |     |        | ty_67          | select    | auto_sel  | 0       |
+|   tz_140_v_cast_fu_7119_p3            |     |        | tz_140_v_cast  | select    | auto_sel  | 0       |
+|   tz_67_fu_7127_p2                    |     |        | tz_67          | add       | fabric    | 0       |
+|   add_ln76_67_fu_8477_p2              |     |        | add_ln76_67    | add       | fabric    | 0       |
+|   sub_ln77_67_fu_8482_p2              |     |        | sub_ln77_67    | sub       | fabric    | 0       |
+|   sub_ln81_67_fu_8487_p2              |     |        | sub_ln81_67    | sub       | fabric    | 0       |
+|   add_ln82_69_fu_8492_p2              |     |        | add_ln82_69    | add       | fabric    | 0       |
+|   tx_69_fu_8497_p3                    |     |        | tx_69          | select    | auto_sel  | 0       |
+|   ty_68_fu_8504_p3                    |     |        | ty_68          | select    | auto_sel  | 0       |
+|   tz_141_v_cast_fu_7837_p3            |     |        | tz_141_v_cast  | select    | auto_sel  | 0       |
+|   tz_68_fu_7844_p2                    |     |        | tz_68          | add       | fabric    | 0       |
+|   add_ln76_68_fu_8539_p2              |     |        | add_ln76_68    | add       | fabric    | 0       |
+|   sub_ln77_68_fu_8545_p2              |     |        | sub_ln77_68    | sub       | fabric    | 0       |
+|   sub_ln81_68_fu_8551_p2              |     |        | sub_ln81_68    | sub       | fabric    | 0       |
+|   add_ln82_70_fu_8557_p2              |     |        | add_ln82_70    | add       | fabric    | 0       |
+|   tx_70_fu_8563_p3                    |     |        | tx_70          | select    | auto_sel  | 0       |
+|   ty_69_fu_8570_p3                    |     |        | ty_69          | select    | auto_sel  | 0       |
+|   tz_142_v_cast_fu_7857_p3            |     |        | tz_142_v_cast  | select    | auto_sel  | 0       |
+|   tz_69_fu_7865_p2                    |     |        | tz_69          | add       | fabric    | 0       |
+|   add_ln76_69_fu_9237_p2              |     |        | add_ln76_69    | add       | fabric    | 0       |
+|   sub_ln77_69_fu_9242_p2              |     |        | sub_ln77_69    | sub       | fabric    | 0       |
+|   sub_ln81_69_fu_9247_p2              |     |        | sub_ln81_69    | sub       | fabric    | 0       |
+|   add_ln82_71_fu_9252_p2              |     |        | add_ln82_71    | add       | fabric    | 0       |
+|   tx_71_fu_9257_p3                    |     |        | tx_71          | select    | auto_sel  | 0       |
+|   ty_70_fu_9264_p3                    |     |        | ty_70          | select    | auto_sel  | 0       |
+|   tz_143_v_cast_fu_7879_p3            |     |        | tz_143_v_cast  | select    | auto_sel  | 0       |
+|   tz_70_fu_7887_p2                    |     |        | tz_70          | add       | fabric    | 0       |
+|   add_ln76_70_fu_9299_p2              |     |        | add_ln76_70    | add       | fabric    | 0       |
+|   sub_ln77_70_fu_9305_p2              |     |        | sub_ln77_70    | sub       | fabric    | 0       |
+|   sub_ln81_70_fu_9311_p2              |     |        | sub_ln81_70    | sub       | fabric    | 0       |
+|   add_ln82_72_fu_9317_p2              |     |        | add_ln82_72    | add       | fabric    | 0       |
+|   tx_72_fu_9323_p3                    |     |        | tx_72          | select    | auto_sel  | 0       |
+|   ty_71_fu_9330_p3                    |     |        | ty_71          | select    | auto_sel  | 0       |
+|   tz_144_v_cast_fu_8597_p3            |     |        | tz_144_v_cast  | select    | auto_sel  | 0       |
+|   tz_71_fu_8604_p2                    |     |        | tz_71          | add       | fabric    | 0       |
+|   add_ln76_71_fu_9997_p2              |     |        | add_ln76_71    | add       | fabric    | 0       |
+|   sub_ln77_71_fu_10002_p2             |     |        | sub_ln77_71    | sub       | fabric    | 0       |
+|   sub_ln81_71_fu_10007_p2             |     |        | sub_ln81_71    | sub       | fabric    | 0       |
+|   add_ln82_73_fu_10012_p2             |     |        | add_ln82_73    | add       | fabric    | 0       |
+|   tx_73_fu_10017_p3                   |     |        | tx_73          | select    | auto_sel  | 0       |
+|   ty_72_fu_10024_p3                   |     |        | ty_72          | select    | auto_sel  | 0       |
+|   tz_145_v_cast_fu_8617_p3            |     |        | tz_145_v_cast  | select    | auto_sel  | 0       |
+|   tz_72_fu_8625_p2                    |     |        | tz_72          | add       | fabric    | 0       |
+|   add_ln76_72_fu_10059_p2             |     |        | add_ln76_72    | add       | fabric    | 0       |
+|   sub_ln77_72_fu_10065_p2             |     |        | sub_ln77_72    | sub       | fabric    | 0       |
+|   sub_ln81_72_fu_10071_p2             |     |        | sub_ln81_72    | sub       | fabric    | 0       |
+|   add_ln82_74_fu_10077_p2             |     |        | add_ln82_74    | add       | fabric    | 0       |
+|   tx_74_fu_10083_p3                   |     |        | tx_74          | select    | auto_sel  | 0       |
+|   ty_73_fu_10090_p3                   |     |        | ty_73          | select    | auto_sel  | 0       |
+|   tz_146_v_cast_fu_8639_p3            |     |        | tz_146_v_cast  | select    | auto_sel  | 0       |
+|   tz_73_fu_8647_p2                    |     |        | tz_73          | add       | fabric    | 0       |
+|   add_ln76_73_fu_10757_p2             |     |        | add_ln76_73    | add       | fabric    | 0       |
+|   sub_ln77_73_fu_10762_p2             |     |        | sub_ln77_73    | sub       | fabric    | 0       |
+|   sub_ln81_73_fu_10767_p2             |     |        | sub_ln81_73    | sub       | fabric    | 0       |
+|   add_ln82_75_fu_10772_p2             |     |        | add_ln82_75    | add       | fabric    | 0       |
+|   tx_75_fu_10777_p3                   |     |        | tx_75          | select    | auto_sel  | 0       |
+|   ty_74_fu_10784_p3                   |     |        | ty_74          | select    | auto_sel  | 0       |
+|   tz_147_v_cast_fu_9357_p3            |     |        | tz_147_v_cast  | select    | auto_sel  | 0       |
+|   tz_74_fu_9364_p2                    |     |        | tz_74          | add       | fabric    | 0       |
+|   add_ln76_74_fu_10819_p2             |     |        | add_ln76_74    | add       | fabric    | 0       |
+|   sub_ln77_74_fu_10825_p2             |     |        | sub_ln77_74    | sub       | fabric    | 0       |
+|   sub_ln81_74_fu_10831_p2             |     |        | sub_ln81_74    | sub       | fabric    | 0       |
+|   add_ln82_76_fu_10837_p2             |     |        | add_ln82_76    | add       | fabric    | 0       |
+|   tx_76_fu_10843_p3                   |     |        | tx_76          | select    | auto_sel  | 0       |
+|   ty_75_fu_10850_p3                   |     |        | ty_75          | select    | auto_sel  | 0       |
+|   tz_148_v_cast_fu_9377_p3            |     |        | tz_148_v_cast  | select    | auto_sel  | 0       |
+|   tz_75_fu_9385_p2                    |     |        | tz_75          | add       | fabric    | 0       |
+|   add_ln76_75_fu_11517_p2             |     |        | add_ln76_75    | add       | fabric    | 0       |
+|   sub_ln77_75_fu_11522_p2             |     |        | sub_ln77_75    | sub       | fabric    | 0       |
+|   sub_ln81_75_fu_11527_p2             |     |        | sub_ln81_75    | sub       | fabric    | 0       |
+|   add_ln82_77_fu_11532_p2             |     |        | add_ln82_77    | add       | fabric    | 0       |
+|   tx_77_fu_11537_p3                   |     |        | tx_77          | select    | auto_sel  | 0       |
+|   ty_76_fu_11544_p3                   |     |        | ty_76          | select    | auto_sel  | 0       |
+|   tz_149_v_cast_fu_9399_p3            |     |        | tz_149_v_cast  | select    | auto_sel  | 0       |
+|   tz_76_fu_9407_p2                    |     |        | tz_76          | add       | fabric    | 0       |
+|   add_ln76_76_fu_11579_p2             |     |        | add_ln76_76    | add       | fabric    | 0       |
+|   sub_ln77_76_fu_11585_p2             |     |        | sub_ln77_76    | sub       | fabric    | 0       |
+|   sub_ln81_76_fu_11591_p2             |     |        | sub_ln81_76    | sub       | fabric    | 0       |
+|   add_ln82_78_fu_11597_p2             |     |        | add_ln82_78    | add       | fabric    | 0       |
+|   tx_78_fu_11603_p3                   |     |        | tx_78          | select    | auto_sel  | 0       |
+|   ty_77_fu_11610_p3                   |     |        | ty_77          | select    | auto_sel  | 0       |
+|   tz_150_v_cast_fu_10117_p3           |     |        | tz_150_v_cast  | select    | auto_sel  | 0       |
+|   tz_77_fu_10124_p2                   |     |        | tz_77          | add       | fabric    | 0       |
+|   add_ln76_77_fu_12291_p2             |     |        | add_ln76_77    | add       | fabric    | 0       |
+|   sub_ln77_77_fu_12296_p2             |     |        | sub_ln77_77    | sub       | fabric    | 0       |
+|   sub_ln81_77_fu_12301_p2             |     |        | sub_ln81_77    | sub       | fabric    | 0       |
+|   add_ln82_79_fu_12306_p2             |     |        | add_ln82_79    | add       | fabric    | 0       |
+|   tx_79_fu_12311_p3                   |     |        | tx_79          | select    | auto_sel  | 0       |
+|   ty_78_fu_12318_p3                   |     |        | ty_78          | select    | auto_sel  | 0       |
+|   tz_151_v_cast_fu_10137_p3           |     |        | tz_151_v_cast  | select    | auto_sel  | 0       |
+|   tz_78_fu_10145_p2                   |     |        | tz_78          | add       | fabric    | 0       |
+|   add_ln76_78_fu_12353_p2             |     |        | add_ln76_78    | add       | fabric    | 0       |
+|   sub_ln77_78_fu_12359_p2             |     |        | sub_ln77_78    | sub       | fabric    | 0       |
+|   sub_ln81_78_fu_12365_p2             |     |        | sub_ln81_78    | sub       | fabric    | 0       |
+|   add_ln82_80_fu_12371_p2             |     |        | add_ln82_80    | add       | fabric    | 0       |
+|   tx_80_fu_12377_p3                   |     |        | tx_80          | select    | auto_sel  | 0       |
+|   ty_79_fu_12384_p3                   |     |        | ty_79          | select    | auto_sel  | 0       |
+|   tz_152_v_cast_fu_10159_p3           |     |        | tz_152_v_cast  | select    | auto_sel  | 0       |
+|   tz_79_fu_10167_p2                   |     |        | tz_79          | add       | fabric    | 0       |
+|   add_ln76_79_fu_12987_p2             |     |        | add_ln76_79    | add       | fabric    | 0       |
+|   sub_ln77_79_fu_12992_p2             |     |        | sub_ln77_79    | sub       | fabric    | 0       |
+|   sub_ln81_79_fu_12997_p2             |     |        | sub_ln81_79    | sub       | fabric    | 0       |
+|   add_ln82_81_fu_13002_p2             |     |        | add_ln82_81    | add       | fabric    | 0       |
+|   tx_81_fu_13007_p3                   |     |        | tx_81          | select    | auto_sel  | 0       |
+|   ty_80_fu_13014_p3                   |     |        | ty_80          | select    | auto_sel  | 0       |
+|   tz_153_v_cast_fu_10877_p3           |     |        | tz_153_v_cast  | select    | auto_sel  | 0       |
+|   tz_80_fu_10884_p2                   |     |        | tz_80          | add       | fabric    | 0       |
+|   add_ln76_80_fu_13049_p2             |     |        | add_ln76_80    | add       | fabric    | 0       |
+|   sub_ln77_80_fu_13055_p2             |     |        | sub_ln77_80    | sub       | fabric    | 0       |
+|   sub_ln81_80_fu_13061_p2             |     |        | sub_ln81_80    | sub       | fabric    | 0       |
+|   add_ln82_82_fu_13067_p2             |     |        | add_ln82_82    | add       | fabric    | 0       |
+|   tx_82_fu_13073_p3                   |     |        | tx_82          | select    | auto_sel  | 0       |
+|   ty_81_fu_13080_p3                   |     |        | ty_81          | select    | auto_sel  | 0       |
+|   tz_154_v_cast_fu_10897_p3           |     |        | tz_154_v_cast  | select    | auto_sel  | 0       |
+|   tz_81_fu_10905_p2                   |     |        | tz_81          | add       | fabric    | 0       |
+|   add_ln76_81_fu_13683_p2             |     |        | add_ln76_81    | add       | fabric    | 0       |
+|   sub_ln77_81_fu_13688_p2             |     |        | sub_ln77_81    | sub       | fabric    | 0       |
+|   sub_ln81_81_fu_13693_p2             |     |        | sub_ln81_81    | sub       | fabric    | 0       |
+|   add_ln82_83_fu_13698_p2             |     |        | add_ln82_83    | add       | fabric    | 0       |
+|   tx_83_fu_13703_p3                   |     |        | tx_83          | select    | auto_sel  | 0       |
+|   ty_82_fu_13710_p3                   |     |        | ty_82          | select    | auto_sel  | 0       |
+|   tz_155_v_cast_fu_10919_p3           |     |        | tz_155_v_cast  | select    | auto_sel  | 0       |
+|   tz_82_fu_10927_p2                   |     |        | tz_82          | add       | fabric    | 0       |
+|   add_ln76_82_fu_13745_p2             |     |        | add_ln76_82    | add       | fabric    | 0       |
+|   sub_ln77_82_fu_13751_p2             |     |        | sub_ln77_82    | sub       | fabric    | 0       |
+|   sub_ln81_82_fu_13757_p2             |     |        | sub_ln81_82    | sub       | fabric    | 0       |
+|   add_ln82_84_fu_13763_p2             |     |        | add_ln82_84    | add       | fabric    | 0       |
+|   tx_84_fu_13769_p3                   |     |        | tx_84          | select    | auto_sel  | 0       |
+|   ty_83_fu_13776_p3                   |     |        | ty_83          | select    | auto_sel  | 0       |
+|   tz_156_v_cast_fu_11637_p3           |     |        | tz_156_v_cast  | select    | auto_sel  | 0       |
+|   tz_83_fu_11644_p2                   |     |        | tz_83          | add       | fabric    | 0       |
+|   add_ln76_83_fu_14421_p2             |     |        | add_ln76_83    | add       | fabric    | 0       |
+|   sub_ln77_83_fu_14426_p2             |     |        | sub_ln77_83    | sub       | fabric    | 0       |
+|   sub_ln81_83_fu_14431_p2             |     |        | sub_ln81_83    | sub       | fabric    | 0       |
+|   add_ln82_85_fu_14436_p2             |     |        | add_ln82_85    | add       | fabric    | 0       |
+|   tx_85_fu_14441_p3                   |     |        | tx_85          | select    | auto_sel  | 0       |
+|   ty_84_fu_14448_p3                   |     |        | ty_84          | select    | auto_sel  | 0       |
+|   tz_157_v_cast_fu_11657_p3           |     |        | tz_157_v_cast  | select    | auto_sel  | 0       |
+|   tz_84_fu_11665_p2                   |     |        | tz_84          | add       | fabric    | 0       |
+|   add_ln76_84_fu_14483_p2             |     |        | add_ln76_84    | add       | fabric    | 0       |
+|   sub_ln77_84_fu_14489_p2             |     |        | sub_ln77_84    | sub       | fabric    | 0       |
+|   sub_ln81_84_fu_14495_p2             |     |        | sub_ln81_84    | sub       | fabric    | 0       |
+|   add_ln82_86_fu_14501_p2             |     |        | add_ln82_86    | add       | fabric    | 0       |
+|   tx_86_fu_14507_p3                   |     |        | tx_86          | select    | auto_sel  | 0       |
+|   ty_85_fu_14514_p3                   |     |        | ty_85          | select    | auto_sel  | 0       |
+|   tz_158_v_cast_fu_11679_p3           |     |        | tz_158_v_cast  | select    | auto_sel  | 0       |
+|   tz_85_fu_11687_p2                   |     |        | tz_85          | add       | fabric    | 0       |
+|   add_ln76_85_fu_14925_p2             |     |        | add_ln76_85    | add       | fabric    | 0       |
+|   sub_ln77_85_fu_14930_p2             |     |        | sub_ln77_85    | sub       | fabric    | 0       |
+|   sub_ln81_85_fu_14935_p2             |     |        | sub_ln81_85    | sub       | fabric    | 0       |
+|   add_ln82_87_fu_14940_p2             |     |        | add_ln82_87    | add       | fabric    | 0       |
+|   tx_87_fu_14945_p3                   |     |        | tx_87          | select    | auto_sel  | 0       |
+|   ty_86_fu_14952_p3                   |     |        | ty_86          | select    | auto_sel  | 0       |
+|   tz_159_v_cast_fu_12411_p3           |     |        | tz_159_v_cast  | select    | auto_sel  | 0       |
+|   tz_86_fu_12418_p2                   |     |        | tz_86          | add       | fabric    | 0       |
+|   add_ln76_86_fu_14987_p2             |     |        | add_ln76_86    | add       | fabric    | 0       |
+|   sub_ln77_86_fu_14993_p2             |     |        | sub_ln77_86    | sub       | fabric    | 0       |
+|   sub_ln81_86_fu_14999_p2             |     |        | sub_ln81_86    | sub       | fabric    | 0       |
+|   add_ln82_88_fu_15005_p2             |     |        | add_ln82_88    | add       | fabric    | 0       |
+|   tx_88_fu_15011_p3                   |     |        | tx_88          | select    | auto_sel  | 0       |
+|   ty_87_fu_15018_p3                   |     |        | ty_87          | select    | auto_sel  | 0       |
+|   tz_160_v_cast_fu_12431_p3           |     |        | tz_160_v_cast  | select    | auto_sel  | 0       |
+|   tz_87_fu_12439_p2                   |     |        | tz_87          | add       | fabric    | 0       |
+|   add_ln76_87_fu_15429_p2             |     |        | add_ln76_87    | add       | fabric    | 0       |
+|   sub_ln77_87_fu_15434_p2             |     |        | sub_ln77_87    | sub       | fabric    | 0       |
+|   sub_ln81_87_fu_15439_p2             |     |        | sub_ln81_87    | sub       | fabric    | 0       |
+|   add_ln82_89_fu_15444_p2             |     |        | add_ln82_89    | add       | fabric    | 0       |
+|   tx_89_fu_15449_p3                   |     |        | tx_89          | select    | auto_sel  | 0       |
+|   ty_88_fu_15456_p3                   |     |        | ty_88          | select    | auto_sel  | 0       |
+|   tz_161_v_cast_fu_12453_p3           |     |        | tz_161_v_cast  | select    | auto_sel  | 0       |
+|   tz_88_fu_12461_p2                   |     |        | tz_88          | add       | fabric    | 0       |
+|   add_ln76_88_fu_15491_p2             |     |        | add_ln76_88    | add       | fabric    | 0       |
+|   sub_ln77_88_fu_15497_p2             |     |        | sub_ln77_88    | sub       | fabric    | 0       |
+|   sub_ln81_88_fu_15503_p2             |     |        | sub_ln81_88    | sub       | fabric    | 0       |
+|   add_ln82_90_fu_15509_p2             |     |        | add_ln82_90    | add       | fabric    | 0       |
+|   tx_90_fu_15515_p3                   |     |        | tx_90          | select    | auto_sel  | 0       |
+|   ty_89_fu_15522_p3                   |     |        | ty_89          | select    | auto_sel  | 0       |
+|   tz_162_v_cast_fu_13107_p3           |     |        | tz_162_v_cast  | select    | auto_sel  | 0       |
+|   tz_89_fu_13114_p2                   |     |        | tz_89          | add       | fabric    | 0       |
+|   add_ln76_89_fu_15987_p2             |     |        | add_ln76_89    | add       | fabric    | 0       |
+|   sub_ln77_89_fu_15992_p2             |     |        | sub_ln77_89    | sub       | fabric    | 0       |
+|   sub_ln81_89_fu_15997_p2             |     |        | sub_ln81_89    | sub       | fabric    | 0       |
+|   add_ln82_91_fu_16002_p2             |     |        | add_ln82_91    | add       | fabric    | 0       |
+|   tx_91_fu_16007_p3                   |     |        | tx_91          | select    | auto_sel  | 0       |
+|   ty_90_fu_16014_p3                   |     |        | ty_90          | select    | auto_sel  | 0       |
+|   tz_163_v_cast_fu_13127_p3           |     |        | tz_163_v_cast  | select    | auto_sel  | 0       |
+|   tz_90_fu_13135_p2                   |     |        | tz_90          | add       | fabric    | 0       |
+|   add_ln76_90_fu_16049_p2             |     |        | add_ln76_90    | add       | fabric    | 0       |
+|   sub_ln77_90_fu_16055_p2             |     |        | sub_ln77_90    | sub       | fabric    | 0       |
+|   sub_ln81_90_fu_16061_p2             |     |        | sub_ln81_90    | sub       | fabric    | 0       |
+|   add_ln82_92_fu_16067_p2             |     |        | add_ln82_92    | add       | fabric    | 0       |
+|   tx_92_fu_16073_p3                   |     |        | tx_92          | select    | auto_sel  | 0       |
+|   ty_91_fu_16080_p3                   |     |        | ty_91          | select    | auto_sel  | 0       |
+|   tz_164_v_cast_fu_13149_p3           |     |        | tz_164_v_cast  | select    | auto_sel  | 0       |
+|   tz_91_fu_13157_p2                   |     |        | tz_91          | add       | fabric    | 0       |
+|   add_ln76_91_fu_16604_p2             |     |        | add_ln76_91    | add       | fabric    | 0       |
+|   sub_ln77_91_fu_16609_p2             |     |        | sub_ln77_91    | sub       | fabric    | 0       |
+|   sub_ln81_91_fu_16614_p2             |     |        | sub_ln81_91    | sub       | fabric    | 0       |
+|   add_ln82_93_fu_16619_p2             |     |        | add_ln82_93    | add       | fabric    | 0       |
+|   tx_93_fu_16624_p3                   |     |        | tx_93          | select    | auto_sel  | 0       |
+|   ty_92_fu_16631_p3                   |     |        | ty_92          | select    | auto_sel  | 0       |
+|   tz_165_v_cast_fu_13803_p3           |     |        | tz_165_v_cast  | select    | auto_sel  | 0       |
+|   tz_92_fu_13810_p2                   |     |        | tz_92          | add       | fabric    | 0       |
+|   add_ln76_92_fu_16666_p2             |     |        | add_ln76_92    | add       | fabric    | 0       |
+|   sub_ln77_92_fu_16672_p2             |     |        | sub_ln77_92    | sub       | fabric    | 0       |
+|   sub_ln81_92_fu_16678_p2             |     |        | sub_ln81_92    | sub       | fabric    | 0       |
+|   add_ln82_94_fu_16684_p2             |     |        | add_ln82_94    | add       | fabric    | 0       |
+|   tx_94_fu_16690_p3                   |     |        | tx_94          | select    | auto_sel  | 0       |
+|   ty_93_fu_16697_p3                   |     |        | ty_93          | select    | auto_sel  | 0       |
+|   tz_166_v_cast_fu_13823_p3           |     |        | tz_166_v_cast  | select    | auto_sel  | 0       |
+|   tz_93_fu_13831_p2                   |     |        | tz_93          | add       | fabric    | 0       |
+|   add_ln76_93_fu_17104_p2             |     |        | add_ln76_93    | add       | fabric    | 0       |
+|   sub_ln77_93_fu_17109_p2             |     |        | sub_ln77_93    | sub       | fabric    | 0       |
+|   add_ln78_2_fu_13845_p2              |     |        | add_ln78_2     | add       | fabric    | 0       |
+|   sub_ln81_93_fu_17114_p2             |     |        | sub_ln81_93    | sub       | fabric    | 0       |
+|   add_ln82_95_fu_17119_p2             |     |        | add_ln82_95    | add       | fabric    | 0       |
+|   add_ln83_2_fu_13851_p2              |     |        | add_ln83_2     | add       | fabric    | 0       |
+|   tx_95_fu_17124_p3                   |     |        | tx_95          | select    | auto_sel  | 0       |
+|   ty_94_fu_17131_p3                   |     |        | ty_94          | select    | auto_sel  | 0       |
+|   d_99_fu_13873_p3                    |     |        | d_99           | select    | auto_sel  | 0       |
+|   add_ln76_94_fu_17166_p2             |     |        | add_ln76_94    | add       | fabric    | 0       |
+|   sub_ln77_94_fu_17172_p2             |     |        | sub_ln77_94    | sub       | fabric    | 0       |
+|   select_ln58_6_fu_17186_p3           |     |        | select_ln58_6  | select    | auto_sel  | 0       |
+|   select_ln58_7_fu_17202_p3           |     |        | select_ln58_7  | select    | auto_sel  | 0       |
+|   add_ln77_6_fu_17210_p2              |     |        | add_ln77_6     | add       | fabric    | 0       |
+|   sub_ln72_1_fu_17216_p2              |     |        | sub_ln72_1     | sub       | fabric    | 0       |
+|   select_ln76_9_fu_17652_p3           |     |        | select_ln76_9  | select    | auto_sel  | 0       |
+|   add_ln76_95_fu_17660_p2             |     |        | add_ln76_95    | add       | fabric    | 0       |
+|   sub_ln81_94_fu_17222_p2             |     |        | sub_ln81_94    | sub       | fabric    | 0       |
+|   add_ln82_96_fu_17228_p2             |     |        | add_ln82_96    | add       | fabric    | 0       |
+|   select_ln72_2_fu_17242_p3           |     |        | select_ln72_2  | select    | auto_sel  | 0       |
+|   select_ln81_6_fu_17258_p3           |     |        | select_ln81_6  | select    | auto_sel  | 0       |
+|   sub_ln82_2_fu_17266_p2              |     |        | sub_ln82_2     | sub       | fabric    | 0       |
+|   add_ln82_97_fu_17272_p2             |     |        | add_ln82_97    | add       | fabric    | 0       |
+|   add_ln81_1_fu_17683_p2              |     |        | add_ln81_1     | add       | fabric    | 0       |
+|   tx_181_fu_17688_p3                  |     |        | tx_181         | select    | auto_sel  | 0       |
+|   sub_ln254_2_fu_17705_p2             |     |        | sub_ln254_2    | sub       | fabric    | 0       |
+|   icmp_ln248_4_fu_17721_p2            |     |        | icmp_ln248_4   | seteq     | auto      | 0       |
+|   icmp_ln248_5_fu_17726_p2            |     |        | icmp_ln248_5   | seteq     | auto      | 0       |
+|   sparsemux_9_3_26_1_1_U18            |     |        | outcos_8       | sparsemux | auto      | 0       |
+|   sub_ln13_2_fu_18382_p2              |     |        | sub_ln13_2     | sub       | fabric    | 0       |
+|   sub_ln13_3_fu_18398_p2              |     |        | sub_ln13_3     | sub       | fabric    | 0       |
+|   w2_real_fu_18417_p3                 |     |        | w2_real        | select    | auto_sel  | 0       |
+|   add_ln77_1_fu_17794_p2              |     |        | add_ln77_1     | add       | fabric    | 0       |
+|   select_ln58_8_fu_17807_p3           |     |        | select_ln58_8  | select    | auto_sel  | 0       |
+|   add_ln82_98_fu_17815_p2             |     |        | add_ln82_98    | add       | fabric    | 0       |
+|   ty_179_fu_17820_p3                  |     |        | ty_179         | select    | auto_sel  | 0       |
+|   sub_ln261_1_fu_17827_p2             |     |        | sub_ln261_1    | sub       | fabric    | 0       |
+|   sparsemux_9_3_26_1_1_U19            |     |        | outsin_7       | sparsemux | auto      | 0       |
+|   outsin_8_fu_18424_p2                |     |        | outsin_8       | sub       | fabric    | 0       |
+|   outsin_9_fu_18429_p3                |     |        | outsin_9       | select    | auto_sel  | 0       |
+|   sub_ln14_2_fu_18447_p2              |     |        | sub_ln14_2     | sub       | fabric    | 0       |
+|   sub_ln14_3_fu_18463_p2              |     |        | sub_ln14_3     | sub       | fabric    | 0       |
+|   w2_imag_fu_18493_p3                 |     |        | w2_imag        | select    | auto_sel  | 0       |
+|   mul_21s_16s_36_1_1_U14              | 1   |        | mul_ln13_3     | mul       | auto      | 0       |
+|   sign0_3_fu_2500_p2                  |     |        | sign0_3        | setgt     | auto      | 0       |
+|   sub_ln211_3_fu_2539_p2              |     |        | sub_ln211_3    | sub       | fabric    | 0       |
+|   inabs_3_fu_2544_p3                  |     |        | inabs_3        | select    | auto_sel  | 0       |
+|   mul_34ns_62ns_94_3_1_U7             | 8   |        | mul_ln38_3     | mul       | auto      | 2       |
+|   mul_9ns_43ns_44_2_1_U3              | 2   |        | mul_ln42_3     | mul       | auto      | 1       |
+|   add_ln42_3_fu_3362_p2               |     |        | add_ln42_3     | add       | fabric    | 0       |
+|   sub_ln228_3_fu_3395_p2              |     |        | sub_ln228_3    | sub       | fabric    | 0       |
+|   icmp_ln225_6_fu_3411_p2             |     |        | icmp_ln225_6   | seteq     | auto      | 0       |
+|   icmp_ln225_7_fu_3416_p2             |     |        | icmp_ln225_7   | seteq     | auto      | 0       |
+|   or_ln225_3_fu_3421_p2               |     |        | or_ln225_3     | or        | auto      | 0       |
+|   z_11_fu_3427_p3                     |     |        | z_11           | select    | auto_sel  | 0       |
+|   select_ln75_3_fu_3447_p3            |     |        | select_ln75_3  | select    | auto_sel  | 0       |
+|   tz_94_fu_3455_p2                    |     |        | tz_94          | add       | fabric    | 0       |
+|   select_ln76_3_fu_4005_p3            |     |        | select_ln76_3  | select    | auto_sel  | 0       |
+|   select_ln77_3_fu_4012_p3            |     |        | select_ln77_3  | select    | auto_sel  | 0       |
+|   select_ln81_3_fu_4019_p3            |     |        | select_ln81_3  | select    | auto_sel  | 0       |
+|   select_ln82_3_fu_4026_p3            |     |        | select_ln82_3  | select    | auto_sel  | 0       |
+|   tx_97_fu_4033_p3                    |     |        | tx_97          | select    | auto_sel  | 0       |
+|   ty_96_fu_4044_p3                    |     |        | ty_96          | select    | auto_sel  | 0       |
+|   tz_240_v_cast_fu_4055_p3            |     |        | tz_240_v_cast  | select    | auto_sel  | 0       |
+|   tz_95_fu_4062_p2                    |     |        | tz_95          | add       | fabric    | 0       |
+|   add_ln76_96_fu_4103_p2              |     |        | add_ln76_96    | add       | fabric    | 0       |
+|   sub_ln77_95_fu_4109_p2              |     |        | sub_ln77_95    | sub       | fabric    | 0       |
+|   sub_ln81_95_fu_4115_p2              |     |        | sub_ln81_95    | sub       | fabric    | 0       |
+|   add_ln82_99_fu_4121_p2              |     |        | add_ln82_99    | add       | fabric    | 0       |
+|   tx_98_fu_4127_p3                    |     |        | tx_98          | select    | auto_sel  | 0       |
+|   ty_97_fu_4139_p3                    |     |        | ty_97          | select    | auto_sel  | 0       |
+|   tz_241_v_cast_fu_4147_p3            |     |        | tz_241_v_cast  | select    | auto_sel  | 0       |
+|   tz_96_fu_4155_p2                    |     |        | tz_96          | add       | fabric    | 0       |
+|   add_ln76_97_fu_4197_p2              |     |        | add_ln76_97    | add       | fabric    | 0       |
+|   sub_ln77_96_fu_4203_p2              |     |        | sub_ln77_96    | sub       | fabric    | 0       |
+|   sub_ln81_96_fu_4209_p2              |     |        | sub_ln81_96    | sub       | fabric    | 0       |
+|   add_ln82_100_fu_4215_p2             |     |        | add_ln82_100   | add       | fabric    | 0       |
+|   tx_99_fu_4221_p3                    |     |        | tx_99          | select    | auto_sel  | 0       |
+|   ty_98_fu_4229_p3                    |     |        | ty_98          | select    | auto_sel  | 0       |
+|   tz_242_v_cast_fu_4899_p3            |     |        | tz_242_v_cast  | select    | auto_sel  | 0       |
+|   tz_97_fu_4906_p2                    |     |        | tz_97          | add       | fabric    | 0       |
+|   add_ln76_98_fu_4925_p2              |     |        | add_ln76_98    | add       | fabric    | 0       |
+|   sub_ln77_97_fu_4930_p2              |     |        | sub_ln77_97    | sub       | fabric    | 0       |
+|   sub_ln81_97_fu_4935_p2              |     |        | sub_ln81_97    | sub       | fabric    | 0       |
+|   add_ln82_101_fu_4940_p2             |     |        | add_ln82_101   | add       | fabric    | 0       |
+|   tx_100_fu_4945_p3                   |     |        | tx_100         | select    | auto_sel  | 0       |
+|   ty_99_fu_4953_p3                    |     |        | ty_99          | select    | auto_sel  | 0       |
+|   tz_243_v_cast_fu_4961_p3            |     |        | tz_243_v_cast  | select    | auto_sel  | 0       |
+|   tz_98_fu_4969_p2                    |     |        | tz_98          | add       | fabric    | 0       |
+|   add_ln76_99_fu_5015_p2              |     |        | add_ln76_99    | add       | fabric    | 0       |
+|   sub_ln77_98_fu_5021_p2              |     |        | sub_ln77_98    | sub       | fabric    | 0       |
+|   sub_ln81_98_fu_5027_p2              |     |        | sub_ln81_98    | sub       | fabric    | 0       |
+|   add_ln82_102_fu_5033_p2             |     |        | add_ln82_102   | add       | fabric    | 0       |
+|   tx_101_fu_5039_p3                   |     |        | tx_101         | select    | auto_sel  | 0       |
+|   ty_100_fu_5047_p3                   |     |        | ty_100         | select    | auto_sel  | 0       |
+|   tz_244_v_cast_fu_5055_p3            |     |        | tz_244_v_cast  | select    | auto_sel  | 0       |
+|   tz_99_fu_5063_p2                    |     |        | tz_99          | add       | fabric    | 0       |
+|   add_ln76_100_fu_5661_p2             |     |        | add_ln76_100   | add       | fabric    | 0       |
+|   sub_ln77_99_fu_5666_p2              |     |        | sub_ln77_99    | sub       | fabric    | 0       |
+|   sub_ln81_99_fu_5671_p2              |     |        | sub_ln81_99    | sub       | fabric    | 0       |
+|   add_ln82_103_fu_5676_p2             |     |        | add_ln82_103   | add       | fabric    | 0       |
+|   tx_102_fu_5681_p3                   |     |        | tx_102         | select    | auto_sel  | 0       |
+|   ty_101_fu_5688_p3                   |     |        | ty_101         | select    | auto_sel  | 0       |
+|   tz_245_v_cast_fu_5695_p3            |     |        | tz_245_v_cast  | select    | auto_sel  | 0       |
+|   tz_100_fu_5702_p2                   |     |        | tz_100         | add       | fabric    | 0       |
+|   add_ln76_101_fu_5743_p2             |     |        | add_ln76_101   | add       | fabric    | 0       |
+|   sub_ln77_100_fu_5749_p2             |     |        | sub_ln77_100   | sub       | fabric    | 0       |
+|   sub_ln81_100_fu_5755_p2             |     |        | sub_ln81_100   | sub       | fabric    | 0       |
+|   add_ln82_104_fu_5761_p2             |     |        | add_ln82_104   | add       | fabric    | 0       |
+|   tx_103_fu_5767_p3                   |     |        | tx_103         | select    | auto_sel  | 0       |
+|   ty_102_fu_5775_p3                   |     |        | ty_102         | select    | auto_sel  | 0       |
+|   tz_246_v_cast_fu_5783_p3            |     |        | tz_246_v_cast  | select    | auto_sel  | 0       |
+|   tz_101_fu_5791_p2                   |     |        | tz_101         | add       | fabric    | 0       |
+|   add_ln76_102_fu_6383_p2             |     |        | add_ln76_102   | add       | fabric    | 0       |
+|   sub_ln77_101_fu_6388_p2             |     |        | sub_ln77_101   | sub       | fabric    | 0       |
+|   sub_ln81_101_fu_6393_p2             |     |        | sub_ln81_101   | sub       | fabric    | 0       |
+|   add_ln82_105_fu_6398_p2             |     |        | add_ln82_105   | add       | fabric    | 0       |
+|   tx_104_fu_6403_p3                   |     |        | tx_104         | select    | auto_sel  | 0       |
+|   ty_103_fu_6410_p3                   |     |        | ty_103         | select    | auto_sel  | 0       |
+|   tz_247_v_cast_fu_6417_p3            |     |        | tz_247_v_cast  | select    | auto_sel  | 0       |
+|   tz_102_fu_6424_p2                   |     |        | tz_102         | add       | fabric    | 0       |
+|   add_ln76_103_fu_6465_p2             |     |        | add_ln76_103   | add       | fabric    | 0       |
+|   sub_ln77_102_fu_6471_p2             |     |        | sub_ln77_102   | sub       | fabric    | 0       |
+|   sub_ln81_102_fu_6477_p2             |     |        | sub_ln81_102   | sub       | fabric    | 0       |
+|   add_ln82_106_fu_6483_p2             |     |        | add_ln82_106   | add       | fabric    | 0       |
+|   tx_105_fu_6489_p3                   |     |        | tx_105         | select    | auto_sel  | 0       |
+|   ty_104_fu_6497_p3                   |     |        | ty_104         | select    | auto_sel  | 0       |
+|   tz_248_v_cast_fu_6505_p3            |     |        | tz_248_v_cast  | select    | auto_sel  | 0       |
+|   tz_103_fu_6513_p2                   |     |        | tz_103         | add       | fabric    | 0       |
+|   add_ln76_104_fu_7147_p2             |     |        | add_ln76_104   | add       | fabric    | 0       |
+|   sub_ln77_103_fu_7152_p2             |     |        | sub_ln77_103   | sub       | fabric    | 0       |
+|   sub_ln81_103_fu_7157_p2             |     |        | sub_ln81_103   | sub       | fabric    | 0       |
+|   add_ln82_107_fu_7162_p2             |     |        | add_ln82_107   | add       | fabric    | 0       |
+|   tx_106_fu_7167_p3                   |     |        | tx_106         | select    | auto_sel  | 0       |
+|   ty_105_fu_7174_p3                   |     |        | ty_105         | select    | auto_sel  | 0       |
+|   tz_249_v_cast_fu_6547_p3            |     |        | tz_249_v_cast  | select    | auto_sel  | 0       |
+|   tz_104_fu_6555_p2                   |     |        | tz_104         | add       | fabric    | 0       |
+|   add_ln76_105_fu_7209_p2             |     |        | add_ln76_105   | add       | fabric    | 0       |
+|   sub_ln77_104_fu_7215_p2             |     |        | sub_ln77_104   | sub       | fabric    | 0       |
+|   sub_ln81_104_fu_7221_p2             |     |        | sub_ln81_104   | sub       | fabric    | 0       |
+|   add_ln82_108_fu_7227_p2             |     |        | add_ln82_108   | add       | fabric    | 0       |
+|   tx_107_fu_7233_p3                   |     |        | tx_107         | select    | auto_sel  | 0       |
+|   ty_106_fu_7240_p3                   |     |        | ty_106         | select    | auto_sel  | 0       |
+|   tz_250_v_cast_fu_7247_p3            |     |        | tz_250_v_cast  | select    | auto_sel  | 0       |
+|   tz_105_fu_7254_p2                   |     |        | tz_105         | add       | fabric    | 0       |
+|   add_ln76_106_fu_7907_p2             |     |        | add_ln76_106   | add       | fabric    | 0       |
+|   sub_ln77_105_fu_7912_p2             |     |        | sub_ln77_105   | sub       | fabric    | 0       |
+|   sub_ln81_105_fu_7917_p2             |     |        | sub_ln81_105   | sub       | fabric    | 0       |
+|   add_ln82_109_fu_7922_p2             |     |        | add_ln82_109   | add       | fabric    | 0       |
+|   tx_108_fu_7927_p3                   |     |        | tx_108         | select    | auto_sel  | 0       |
+|   ty_107_fu_7934_p3                   |     |        | ty_107         | select    | auto_sel  | 0       |
+|   tz_251_v_cast_fu_7287_p3            |     |        | tz_251_v_cast  | select    | auto_sel  | 0       |
+|   tz_106_fu_7295_p2                   |     |        | tz_106         | add       | fabric    | 0       |
+|   add_ln76_107_fu_7969_p2             |     |        | add_ln76_107   | add       | fabric    | 0       |
+|   sub_ln77_106_fu_7975_p2             |     |        | sub_ln77_106   | sub       | fabric    | 0       |
+|   sub_ln81_106_fu_7981_p2             |     |        | sub_ln81_106   | sub       | fabric    | 0       |
+|   add_ln82_110_fu_7987_p2             |     |        | add_ln82_110   | add       | fabric    | 0       |
+|   tx_109_fu_7993_p3                   |     |        | tx_109         | select    | auto_sel  | 0       |
+|   ty_108_fu_8000_p3                   |     |        | ty_108         | select    | auto_sel  | 0       |
+|   tz_252_v_cast_fu_7309_p3            |     |        | tz_252_v_cast  | select    | auto_sel  | 0       |
+|   tz_107_fu_7317_p2                   |     |        | tz_107         | add       | fabric    | 0       |
+|   add_ln76_108_fu_8667_p2             |     |        | add_ln76_108   | add       | fabric    | 0       |
+|   sub_ln77_107_fu_8672_p2             |     |        | sub_ln77_107   | sub       | fabric    | 0       |
+|   sub_ln81_107_fu_8677_p2             |     |        | sub_ln81_107   | sub       | fabric    | 0       |
+|   add_ln82_111_fu_8682_p2             |     |        | add_ln82_111   | add       | fabric    | 0       |
+|   tx_110_fu_8687_p3                   |     |        | tx_110         | select    | auto_sel  | 0       |
+|   ty_109_fu_8694_p3                   |     |        | ty_109         | select    | auto_sel  | 0       |
+|   tz_253_v_cast_fu_8027_p3            |     |        | tz_253_v_cast  | select    | auto_sel  | 0       |
+|   tz_108_fu_8034_p2                   |     |        | tz_108         | add       | fabric    | 0       |
+|   add_ln76_109_fu_8729_p2             |     |        | add_ln76_109   | add       | fabric    | 0       |
+|   sub_ln77_108_fu_8735_p2             |     |        | sub_ln77_108   | sub       | fabric    | 0       |
+|   sub_ln81_108_fu_8741_p2             |     |        | sub_ln81_108   | sub       | fabric    | 0       |
+|   add_ln82_112_fu_8747_p2             |     |        | add_ln82_112   | add       | fabric    | 0       |
+|   tx_111_fu_8753_p3                   |     |        | tx_111         | select    | auto_sel  | 0       |
+|   ty_110_fu_8760_p3                   |     |        | ty_110         | select    | auto_sel  | 0       |
+|   tz_254_v_cast_fu_8047_p3            |     |        | tz_254_v_cast  | select    | auto_sel  | 0       |
+|   tz_109_fu_8055_p2                   |     |        | tz_109         | add       | fabric    | 0       |
+|   add_ln76_110_fu_9427_p2             |     |        | add_ln76_110   | add       | fabric    | 0       |
+|   sub_ln77_109_fu_9432_p2             |     |        | sub_ln77_109   | sub       | fabric    | 0       |
+|   sub_ln81_109_fu_9437_p2             |     |        | sub_ln81_109   | sub       | fabric    | 0       |
+|   add_ln82_113_fu_9442_p2             |     |        | add_ln82_113   | add       | fabric    | 0       |
+|   tx_112_fu_9447_p3                   |     |        | tx_112         | select    | auto_sel  | 0       |
+|   ty_111_fu_9454_p3                   |     |        | ty_111         | select    | auto_sel  | 0       |
+|   tz_255_v_cast_fu_8069_p3            |     |        | tz_255_v_cast  | select    | auto_sel  | 0       |
+|   tz_110_fu_8077_p2                   |     |        | tz_110         | add       | fabric    | 0       |
+|   add_ln76_111_fu_9489_p2             |     |        | add_ln76_111   | add       | fabric    | 0       |
+|   sub_ln77_110_fu_9495_p2             |     |        | sub_ln77_110   | sub       | fabric    | 0       |
+|   sub_ln81_110_fu_9501_p2             |     |        | sub_ln81_110   | sub       | fabric    | 0       |
+|   add_ln82_114_fu_9507_p2             |     |        | add_ln82_114   | add       | fabric    | 0       |
+|   tx_113_fu_9513_p3                   |     |        | tx_113         | select    | auto_sel  | 0       |
+|   ty_112_fu_9520_p3                   |     |        | ty_112         | select    | auto_sel  | 0       |
+|   tz_256_v_cast_fu_8787_p3            |     |        | tz_256_v_cast  | select    | auto_sel  | 0       |
+|   tz_111_fu_8794_p2                   |     |        | tz_111         | add       | fabric    | 0       |
+|   add_ln76_112_fu_10187_p2            |     |        | add_ln76_112   | add       | fabric    | 0       |
+|   sub_ln77_111_fu_10192_p2            |     |        | sub_ln77_111   | sub       | fabric    | 0       |
+|   sub_ln81_111_fu_10197_p2            |     |        | sub_ln81_111   | sub       | fabric    | 0       |
+|   add_ln82_115_fu_10202_p2            |     |        | add_ln82_115   | add       | fabric    | 0       |
+|   tx_114_fu_10207_p3                  |     |        | tx_114         | select    | auto_sel  | 0       |
+|   ty_113_fu_10214_p3                  |     |        | ty_113         | select    | auto_sel  | 0       |
+|   tz_257_v_cast_fu_8807_p3            |     |        | tz_257_v_cast  | select    | auto_sel  | 0       |
+|   tz_112_fu_8815_p2                   |     |        | tz_112         | add       | fabric    | 0       |
+|   add_ln76_113_fu_10249_p2            |     |        | add_ln76_113   | add       | fabric    | 0       |
+|   sub_ln77_112_fu_10255_p2            |     |        | sub_ln77_112   | sub       | fabric    | 0       |
+|   sub_ln81_112_fu_10261_p2            |     |        | sub_ln81_112   | sub       | fabric    | 0       |
+|   add_ln82_116_fu_10267_p2            |     |        | add_ln82_116   | add       | fabric    | 0       |
+|   tx_115_fu_10273_p3                  |     |        | tx_115         | select    | auto_sel  | 0       |
+|   ty_114_fu_10280_p3                  |     |        | ty_114         | select    | auto_sel  | 0       |
+|   tz_258_v_cast_fu_8829_p3            |     |        | tz_258_v_cast  | select    | auto_sel  | 0       |
+|   tz_113_fu_8837_p2                   |     |        | tz_113         | add       | fabric    | 0       |
+|   add_ln76_114_fu_10947_p2            |     |        | add_ln76_114   | add       | fabric    | 0       |
+|   sub_ln77_113_fu_10952_p2            |     |        | sub_ln77_113   | sub       | fabric    | 0       |
+|   sub_ln81_113_fu_10957_p2            |     |        | sub_ln81_113   | sub       | fabric    | 0       |
+|   add_ln82_117_fu_10962_p2            |     |        | add_ln82_117   | add       | fabric    | 0       |
+|   tx_116_fu_10967_p3                  |     |        | tx_116         | select    | auto_sel  | 0       |
+|   ty_115_fu_10974_p3                  |     |        | ty_115         | select    | auto_sel  | 0       |
+|   tz_259_v_cast_fu_9547_p3            |     |        | tz_259_v_cast  | select    | auto_sel  | 0       |
+|   tz_114_fu_9554_p2                   |     |        | tz_114         | add       | fabric    | 0       |
+|   add_ln76_115_fu_11009_p2            |     |        | add_ln76_115   | add       | fabric    | 0       |
+|   sub_ln77_114_fu_11015_p2            |     |        | sub_ln77_114   | sub       | fabric    | 0       |
+|   sub_ln81_114_fu_11021_p2            |     |        | sub_ln81_114   | sub       | fabric    | 0       |
+|   add_ln82_118_fu_11027_p2            |     |        | add_ln82_118   | add       | fabric    | 0       |
+|   tx_117_fu_11033_p3                  |     |        | tx_117         | select    | auto_sel  | 0       |
+|   ty_116_fu_11040_p3                  |     |        | ty_116         | select    | auto_sel  | 0       |
+|   tz_260_v_cast_fu_9567_p3            |     |        | tz_260_v_cast  | select    | auto_sel  | 0       |
+|   tz_115_fu_9575_p2                   |     |        | tz_115         | add       | fabric    | 0       |
+|   add_ln76_116_fu_11707_p2            |     |        | add_ln76_116   | add       | fabric    | 0       |
+|   sub_ln77_115_fu_11712_p2            |     |        | sub_ln77_115   | sub       | fabric    | 0       |
+|   sub_ln81_115_fu_11717_p2            |     |        | sub_ln81_115   | sub       | fabric    | 0       |
+|   add_ln82_119_fu_11722_p2            |     |        | add_ln82_119   | add       | fabric    | 0       |
+|   tx_118_fu_11727_p3                  |     |        | tx_118         | select    | auto_sel  | 0       |
+|   ty_117_fu_11734_p3                  |     |        | ty_117         | select    | auto_sel  | 0       |
+|   tz_261_v_cast_fu_9589_p3            |     |        | tz_261_v_cast  | select    | auto_sel  | 0       |
+|   tz_116_fu_9597_p2                   |     |        | tz_116         | add       | fabric    | 0       |
+|   add_ln76_117_fu_11769_p2            |     |        | add_ln76_117   | add       | fabric    | 0       |
+|   sub_ln77_116_fu_11775_p2            |     |        | sub_ln77_116   | sub       | fabric    | 0       |
+|   sub_ln81_116_fu_11781_p2            |     |        | sub_ln81_116   | sub       | fabric    | 0       |
+|   add_ln82_120_fu_11787_p2            |     |        | add_ln82_120   | add       | fabric    | 0       |
+|   tx_119_fu_11793_p3                  |     |        | tx_119         | select    | auto_sel  | 0       |
+|   ty_118_fu_11800_p3                  |     |        | ty_118         | select    | auto_sel  | 0       |
+|   tz_262_v_cast_fu_10307_p3           |     |        | tz_262_v_cast  | select    | auto_sel  | 0       |
+|   tz_117_fu_10314_p2                  |     |        | tz_117         | add       | fabric    | 0       |
+|   add_ln76_118_fu_12481_p2            |     |        | add_ln76_118   | add       | fabric    | 0       |
+|   sub_ln77_117_fu_12486_p2            |     |        | sub_ln77_117   | sub       | fabric    | 0       |
+|   sub_ln81_117_fu_12491_p2            |     |        | sub_ln81_117   | sub       | fabric    | 0       |
+|   add_ln82_121_fu_12496_p2            |     |        | add_ln82_121   | add       | fabric    | 0       |
+|   tx_120_fu_12501_p3                  |     |        | tx_120         | select    | auto_sel  | 0       |
+|   ty_119_fu_12508_p3                  |     |        | ty_119         | select    | auto_sel  | 0       |
+|   tz_263_v_cast_fu_10327_p3           |     |        | tz_263_v_cast  | select    | auto_sel  | 0       |
+|   tz_118_fu_10335_p2                  |     |        | tz_118         | add       | fabric    | 0       |
+|   add_ln76_119_fu_12543_p2            |     |        | add_ln76_119   | add       | fabric    | 0       |
+|   sub_ln77_118_fu_12549_p2            |     |        | sub_ln77_118   | sub       | fabric    | 0       |
+|   sub_ln81_118_fu_12555_p2            |     |        | sub_ln81_118   | sub       | fabric    | 0       |
+|   add_ln82_122_fu_12561_p2            |     |        | add_ln82_122   | add       | fabric    | 0       |
+|   tx_121_fu_12567_p3                  |     |        | tx_121         | select    | auto_sel  | 0       |
+|   ty_120_fu_12574_p3                  |     |        | ty_120         | select    | auto_sel  | 0       |
+|   tz_264_v_cast_fu_10349_p3           |     |        | tz_264_v_cast  | select    | auto_sel  | 0       |
+|   tz_119_fu_10357_p2                  |     |        | tz_119         | add       | fabric    | 0       |
+|   add_ln76_120_fu_13177_p2            |     |        | add_ln76_120   | add       | fabric    | 0       |
+|   sub_ln77_119_fu_13182_p2            |     |        | sub_ln77_119   | sub       | fabric    | 0       |
+|   sub_ln81_119_fu_13187_p2            |     |        | sub_ln81_119   | sub       | fabric    | 0       |
+|   add_ln82_123_fu_13192_p2            |     |        | add_ln82_123   | add       | fabric    | 0       |
+|   tx_122_fu_13197_p3                  |     |        | tx_122         | select    | auto_sel  | 0       |
+|   ty_121_fu_13204_p3                  |     |        | ty_121         | select    | auto_sel  | 0       |
+|   tz_265_v_cast_fu_11067_p3           |     |        | tz_265_v_cast  | select    | auto_sel  | 0       |
+|   tz_120_fu_11074_p2                  |     |        | tz_120         | add       | fabric    | 0       |
+|   add_ln76_121_fu_13239_p2            |     |        | add_ln76_121   | add       | fabric    | 0       |
+|   sub_ln77_120_fu_13245_p2            |     |        | sub_ln77_120   | sub       | fabric    | 0       |
+|   sub_ln81_120_fu_13251_p2            |     |        | sub_ln81_120   | sub       | fabric    | 0       |
+|   add_ln82_124_fu_13257_p2            |     |        | add_ln82_124   | add       | fabric    | 0       |
+|   tx_123_fu_13263_p3                  |     |        | tx_123         | select    | auto_sel  | 0       |
+|   ty_122_fu_13270_p3                  |     |        | ty_122         | select    | auto_sel  | 0       |
+|   tz_266_v_cast_fu_11087_p3           |     |        | tz_266_v_cast  | select    | auto_sel  | 0       |
+|   tz_121_fu_11095_p2                  |     |        | tz_121         | add       | fabric    | 0       |
+|   add_ln76_122_fu_13887_p2            |     |        | add_ln76_122   | add       | fabric    | 0       |
+|   sub_ln77_121_fu_13892_p2            |     |        | sub_ln77_121   | sub       | fabric    | 0       |
+|   sub_ln81_121_fu_13897_p2            |     |        | sub_ln81_121   | sub       | fabric    | 0       |
+|   add_ln82_125_fu_13902_p2            |     |        | add_ln82_125   | add       | fabric    | 0       |
+|   tx_124_fu_13907_p3                  |     |        | tx_124         | select    | auto_sel  | 0       |
+|   ty_123_fu_13914_p3                  |     |        | ty_123         | select    | auto_sel  | 0       |
+|   tz_267_v_cast_fu_11109_p3           |     |        | tz_267_v_cast  | select    | auto_sel  | 0       |
+|   tz_122_fu_11117_p2                  |     |        | tz_122         | add       | fabric    | 0       |
+|   add_ln76_123_fu_13949_p2            |     |        | add_ln76_123   | add       | fabric    | 0       |
+|   sub_ln77_122_fu_13955_p2            |     |        | sub_ln77_122   | sub       | fabric    | 0       |
+|   sub_ln81_122_fu_13961_p2            |     |        | sub_ln81_122   | sub       | fabric    | 0       |
+|   add_ln82_126_fu_13967_p2            |     |        | add_ln82_126   | add       | fabric    | 0       |
+|   tx_125_fu_13973_p3                  |     |        | tx_125         | select    | auto_sel  | 0       |
+|   ty_124_fu_13980_p3                  |     |        | ty_124         | select    | auto_sel  | 0       |
+|   tz_268_v_cast_fu_11827_p3           |     |        | tz_268_v_cast  | select    | auto_sel  | 0       |
+|   tz_123_fu_11834_p2                  |     |        | tz_123         | add       | fabric    | 0       |
+|   add_ln76_124_fu_14547_p2            |     |        | add_ln76_124   | add       | fabric    | 0       |
+|   sub_ln77_123_fu_14552_p2            |     |        | sub_ln77_123   | sub       | fabric    | 0       |
+|   sub_ln81_123_fu_14557_p2            |     |        | sub_ln81_123   | sub       | fabric    | 0       |
+|   add_ln82_127_fu_14562_p2            |     |        | add_ln82_127   | add       | fabric    | 0       |
+|   tx_126_fu_14567_p3                  |     |        | tx_126         | select    | auto_sel  | 0       |
+|   ty_125_fu_14574_p3                  |     |        | ty_125         | select    | auto_sel  | 0       |
+|   tz_269_v_cast_fu_11847_p3           |     |        | tz_269_v_cast  | select    | auto_sel  | 0       |
+|   tz_124_fu_11855_p2                  |     |        | tz_124         | add       | fabric    | 0       |
+|   add_ln76_125_fu_14609_p2            |     |        | add_ln76_125   | add       | fabric    | 0       |
+|   sub_ln77_124_fu_14615_p2            |     |        | sub_ln77_124   | sub       | fabric    | 0       |
+|   sub_ln81_124_fu_14621_p2            |     |        | sub_ln81_124   | sub       | fabric    | 0       |
+|   add_ln82_128_fu_14627_p2            |     |        | add_ln82_128   | add       | fabric    | 0       |
+|   tx_127_fu_14633_p3                  |     |        | tx_127         | select    | auto_sel  | 0       |
+|   ty_126_fu_14640_p3                  |     |        | ty_126         | select    | auto_sel  | 0       |
+|   tz_270_v_cast_fu_11869_p3           |     |        | tz_270_v_cast  | select    | auto_sel  | 0       |
+|   tz_125_fu_11877_p2                  |     |        | tz_125         | add       | fabric    | 0       |
+|   add_ln76_126_fu_15051_p2            |     |        | add_ln76_126   | add       | fabric    | 0       |
+|   sub_ln77_125_fu_15056_p2            |     |        | sub_ln77_125   | sub       | fabric    | 0       |
+|   sub_ln81_125_fu_15061_p2            |     |        | sub_ln81_125   | sub       | fabric    | 0       |
+|   add_ln82_129_fu_15066_p2            |     |        | add_ln82_129   | add       | fabric    | 0       |
+|   tx_128_fu_15071_p3                  |     |        | tx_128         | select    | auto_sel  | 0       |
+|   ty_127_fu_15078_p3                  |     |        | ty_127         | select    | auto_sel  | 0       |
+|   tz_271_v_cast_fu_12601_p3           |     |        | tz_271_v_cast  | select    | auto_sel  | 0       |
+|   tz_126_fu_12608_p2                  |     |        | tz_126         | add       | fabric    | 0       |
+|   add_ln76_127_fu_15113_p2            |     |        | add_ln76_127   | add       | fabric    | 0       |
+|   sub_ln77_126_fu_15119_p2            |     |        | sub_ln77_126   | sub       | fabric    | 0       |
+|   sub_ln81_126_fu_15125_p2            |     |        | sub_ln81_126   | sub       | fabric    | 0       |
+|   add_ln82_130_fu_15131_p2            |     |        | add_ln82_130   | add       | fabric    | 0       |
+|   tx_129_fu_15137_p3                  |     |        | tx_129         | select    | auto_sel  | 0       |
+|   ty_128_fu_15144_p3                  |     |        | ty_128         | select    | auto_sel  | 0       |
+|   tz_272_v_cast_fu_12621_p3           |     |        | tz_272_v_cast  | select    | auto_sel  | 0       |
+|   tz_127_fu_12629_p2                  |     |        | tz_127         | add       | fabric    | 0       |
+|   add_ln76_128_fu_15555_p2            |     |        | add_ln76_128   | add       | fabric    | 0       |
+|   sub_ln77_127_fu_15560_p2            |     |        | sub_ln77_127   | sub       | fabric    | 0       |
+|   sub_ln81_127_fu_15565_p2            |     |        | sub_ln81_127   | sub       | fabric    | 0       |
+|   add_ln82_131_fu_15570_p2            |     |        | add_ln82_131   | add       | fabric    | 0       |
+|   tx_130_fu_15575_p3                  |     |        | tx_130         | select    | auto_sel  | 0       |
+|   ty_129_fu_15582_p3                  |     |        | ty_129         | select    | auto_sel  | 0       |
+|   tz_273_v_cast_fu_12643_p3           |     |        | tz_273_v_cast  | select    | auto_sel  | 0       |
+|   tz_128_fu_12651_p2                  |     |        | tz_128         | add       | fabric    | 0       |
+|   add_ln76_129_fu_15617_p2            |     |        | add_ln76_129   | add       | fabric    | 0       |
+|   sub_ln77_128_fu_15623_p2            |     |        | sub_ln77_128   | sub       | fabric    | 0       |
+|   sub_ln81_128_fu_15629_p2            |     |        | sub_ln81_128   | sub       | fabric    | 0       |
+|   add_ln82_132_fu_15635_p2            |     |        | add_ln82_132   | add       | fabric    | 0       |
+|   tx_131_fu_15641_p3                  |     |        | tx_131         | select    | auto_sel  | 0       |
+|   ty_130_fu_15648_p3                  |     |        | ty_130         | select    | auto_sel  | 0       |
+|   tz_274_v_cast_fu_13297_p3           |     |        | tz_274_v_cast  | select    | auto_sel  | 0       |
+|   tz_129_fu_13304_p2                  |     |        | tz_129         | add       | fabric    | 0       |
+|   add_ln76_130_fu_16113_p2            |     |        | add_ln76_130   | add       | fabric    | 0       |
+|   sub_ln77_129_fu_16118_p2            |     |        | sub_ln77_129   | sub       | fabric    | 0       |
+|   sub_ln81_129_fu_16123_p2            |     |        | sub_ln81_129   | sub       | fabric    | 0       |
+|   add_ln82_133_fu_16128_p2            |     |        | add_ln82_133   | add       | fabric    | 0       |
+|   tx_132_fu_16133_p3                  |     |        | tx_132         | select    | auto_sel  | 0       |
+|   ty_131_fu_16140_p3                  |     |        | ty_131         | select    | auto_sel  | 0       |
+|   tz_275_v_cast_fu_13317_p3           |     |        | tz_275_v_cast  | select    | auto_sel  | 0       |
+|   tz_130_fu_13325_p2                  |     |        | tz_130         | add       | fabric    | 0       |
+|   add_ln76_131_fu_16175_p2            |     |        | add_ln76_131   | add       | fabric    | 0       |
+|   sub_ln77_130_fu_16181_p2            |     |        | sub_ln77_130   | sub       | fabric    | 0       |
+|   sub_ln81_130_fu_16187_p2            |     |        | sub_ln81_130   | sub       | fabric    | 0       |
+|   add_ln82_134_fu_16193_p2            |     |        | add_ln82_134   | add       | fabric    | 0       |
+|   tx_133_fu_16199_p3                  |     |        | tx_133         | select    | auto_sel  | 0       |
+|   ty_132_fu_16206_p3                  |     |        | ty_132         | select    | auto_sel  | 0       |
+|   tz_276_v_cast_fu_13339_p3           |     |        | tz_276_v_cast  | select    | auto_sel  | 0       |
+|   tz_131_fu_13347_p2                  |     |        | tz_131         | add       | fabric    | 0       |
+|   add_ln76_132_fu_16730_p2            |     |        | add_ln76_132   | add       | fabric    | 0       |
+|   sub_ln77_131_fu_16735_p2            |     |        | sub_ln77_131   | sub       | fabric    | 0       |
+|   sub_ln81_131_fu_16740_p2            |     |        | sub_ln81_131   | sub       | fabric    | 0       |
+|   add_ln82_135_fu_16745_p2            |     |        | add_ln82_135   | add       | fabric    | 0       |
+|   tx_134_fu_16750_p3                  |     |        | tx_134         | select    | auto_sel  | 0       |
+|   ty_133_fu_16757_p3                  |     |        | ty_133         | select    | auto_sel  | 0       |
+|   tz_277_v_cast_fu_14007_p3           |     |        | tz_277_v_cast  | select    | auto_sel  | 0       |
+|   tz_132_fu_14014_p2                  |     |        | tz_132         | add       | fabric    | 0       |
+|   add_ln76_133_fu_16792_p2            |     |        | add_ln76_133   | add       | fabric    | 0       |
+|   sub_ln77_132_fu_16798_p2            |     |        | sub_ln77_132   | sub       | fabric    | 0       |
+|   sub_ln81_132_fu_16804_p2            |     |        | sub_ln81_132   | sub       | fabric    | 0       |
+|   add_ln82_136_fu_16810_p2            |     |        | add_ln82_136   | add       | fabric    | 0       |
+|   tx_135_fu_16816_p3                  |     |        | tx_135         | select    | auto_sel  | 0       |
+|   ty_134_fu_16823_p3                  |     |        | ty_134         | select    | auto_sel  | 0       |
+|   tz_278_v_cast_fu_14027_p3           |     |        | tz_278_v_cast  | select    | auto_sel  | 0       |
+|   tz_133_fu_14035_p2                  |     |        | tz_133         | add       | fabric    | 0       |
+|   add_ln76_134_fu_17284_p2            |     |        | add_ln76_134   | add       | fabric    | 0       |
+|   sub_ln77_133_fu_17289_p2            |     |        | sub_ln77_133   | sub       | fabric    | 0       |
+|   add_ln78_3_fu_14049_p2              |     |        | add_ln78_3     | add       | fabric    | 0       |
+|   sub_ln81_133_fu_17294_p2            |     |        | sub_ln81_133   | sub       | fabric    | 0       |
+|   add_ln82_137_fu_17299_p2            |     |        | add_ln82_137   | add       | fabric    | 0       |
+|   add_ln83_3_fu_14055_p2              |     |        | add_ln83_3     | add       | fabric    | 0       |
+|   tx_136_fu_17304_p3                  |     |        | tx_136         | select    | auto_sel  | 0       |
+|   ty_135_fu_17311_p3                  |     |        | ty_135         | select    | auto_sel  | 0       |
+|   d_141_fu_14077_p3                   |     |        | d_141          | select    | auto_sel  | 0       |
+|   add_ln76_135_fu_17346_p2            |     |        | add_ln76_135   | add       | fabric    | 0       |
+|   sub_ln77_134_fu_17352_p2            |     |        | sub_ln77_134   | sub       | fabric    | 0       |
+|   select_ln58_9_fu_17366_p3           |     |        | select_ln58_9  | select    | auto_sel  | 0       |
+|   select_ln58_10_fu_17382_p3          |     |        | select_ln58_10 | select    | auto_sel  | 0       |
+|   add_ln77_7_fu_17390_p2              |     |        | add_ln77_7     | add       | fabric    | 0       |
+|   sub_ln72_2_fu_17396_p2              |     |        | sub_ln72_2     | sub       | fabric    | 0       |
+|   select_ln76_10_fu_17891_p3          |     |        | select_ln76_10 | select    | auto_sel  | 0       |
+|   add_ln76_136_fu_17899_p2            |     |        | add_ln76_136   | add       | fabric    | 0       |
+|   sub_ln81_134_fu_17402_p2            |     |        | sub_ln81_134   | sub       | fabric    | 0       |
+|   add_ln82_138_fu_17408_p2            |     |        | add_ln82_138   | add       | fabric    | 0       |
+|   select_ln72_3_fu_17422_p3           |     |        | select_ln72_3  | select    | auto_sel  | 0       |
+|   select_ln81_7_fu_17438_p3           |     |        | select_ln81_7  | select    | auto_sel  | 0       |
+|   sub_ln82_3_fu_17446_p2              |     |        | sub_ln82_3     | sub       | fabric    | 0       |
+|   add_ln82_139_fu_17452_p2            |     |        | add_ln82_139   | add       | fabric    | 0       |
+|   add_ln81_2_fu_17922_p2              |     |        | add_ln81_2     | add       | fabric    | 0       |
+|   tx_182_fu_17927_p3                  |     |        | tx_182         | select    | auto_sel  | 0       |
+|   sub_ln254_3_fu_17944_p2             |     |        | sub_ln254_3    | sub       | fabric    | 0       |
+|   icmp_ln248_6_fu_17960_p2            |     |        | icmp_ln248_6   | seteq     | auto      | 0       |
+|   icmp_ln248_7_fu_17965_p2            |     |        | icmp_ln248_7   | seteq     | auto      | 0       |
+|   sparsemux_9_3_26_1_1_U20            |     |        | outcos_11      | sparsemux | auto      | 0       |
+|   sub_ln13_4_fu_18504_p2              |     |        | sub_ln13_4     | sub       | fabric    | 0       |
+|   sub_ln13_5_fu_18520_p2              |     |        | sub_ln13_5     | sub       | fabric    | 0       |
+|   w3_real_fu_18539_p3                 |     |        | w3_real        | select    | auto_sel  | 0       |
+|   add_ln77_2_fu_18033_p2              |     |        | add_ln77_2     | add       | fabric    | 0       |
+|   select_ln58_11_fu_18046_p3          |     |        | select_ln58_11 | select    | auto_sel  | 0       |
+|   add_ln82_140_fu_18054_p2            |     |        | add_ln82_140   | add       | fabric    | 0       |
+|   ty_180_fu_18059_p3                  |     |        | ty_180         | select    | auto_sel  | 0       |
+|   sub_ln261_2_fu_18066_p2             |     |        | sub_ln261_2    | sub       | fabric    | 0       |
+|   sparsemux_9_3_26_1_1_U21            |     |        | outsin_12      | sparsemux | auto      | 0       |
+|   outsin_13_fu_18546_p2               |     |        | outsin_13      | sub       | fabric    | 0       |
+|   outsin_14_fu_18551_p3               |     |        | outsin_14      | select    | auto_sel  | 0       |
+|   sub_ln14_4_fu_18569_p2              |     |        | sub_ln14_4     | sub       | fabric    | 0       |
+|   sub_ln14_5_fu_18585_p2              |     |        | sub_ln14_5     | sub       | fabric    | 0       |
+|   w3_imag_fu_18615_p3                 |     |        | w3_imag        | select    | auto_sel  | 0       |
+|   mul_21s_16s_36_1_1_U15              | 1   |        | mul_ln13_4     | mul       | auto      | 0       |
+|   sign0_4_fu_2518_p2                  |     |        | sign0_4        | setgt     | auto      | 0       |
+|   sub_ln211_4_fu_2554_p2              |     |        | sub_ln211_4    | sub       | fabric    | 0       |
+|   inabs_4_fu_2559_p3                  |     |        | inabs_4        | select    | auto_sel  | 0       |
+|   mul_34ns_62ns_94_3_1_U8             | 8   |        | mul_ln38_4     | mul       | auto      | 2       |
+|   mul_9ns_43ns_44_2_1_U4              | 2   |        | mul_ln42_4     | mul       | auto      | 1       |
+|   add_ln42_4_fu_3476_p2               |     |        | add_ln42_4     | add       | fabric    | 0       |
+|   sub_ln228_4_fu_3509_p2              |     |        | sub_ln228_4    | sub       | fabric    | 0       |
+|   icmp_ln225_8_fu_3525_p2             |     |        | icmp_ln225_8   | seteq     | auto      | 0       |
+|   icmp_ln225_9_fu_3530_p2             |     |        | icmp_ln225_9   | seteq     | auto      | 0       |
+|   or_ln225_4_fu_3535_p2               |     |        | or_ln225_4     | or        | auto      | 0       |
+|   z_14_fu_3541_p3                     |     |        | z_14           | select    | auto_sel  | 0       |
+|   select_ln75_4_fu_3561_p3            |     |        | select_ln75_4  | select    | auto_sel  | 0       |
+|   tz_134_fu_3569_p2                   |     |        | tz_134         | add       | fabric    | 0       |
+|   select_ln76_4_fu_4257_p3            |     |        | select_ln76_4  | select    | auto_sel  | 0       |
+|   select_ln77_4_fu_4264_p3            |     |        | select_ln77_4  | select    | auto_sel  | 0       |
+|   select_ln81_4_fu_4271_p3            |     |        | select_ln81_4  | select    | auto_sel  | 0       |
+|   select_ln82_4_fu_4278_p3            |     |        | select_ln82_4  | select    | auto_sel  | 0       |
+|   tx_138_fu_4285_p3                   |     |        | tx_138         | select    | auto_sel  | 0       |
+|   ty_137_fu_4296_p3                   |     |        | ty_137         | select    | auto_sel  | 0       |
+|   tz_352_v_cast_fu_4307_p3            |     |        | tz_352_v_cast  | select    | auto_sel  | 0       |
+|   tz_135_fu_4314_p2                   |     |        | tz_135         | add       | fabric    | 0       |
+|   add_ln76_137_fu_4355_p2             |     |        | add_ln76_137   | add       | fabric    | 0       |
+|   sub_ln77_135_fu_4361_p2             |     |        | sub_ln77_135   | sub       | fabric    | 0       |
+|   sub_ln81_135_fu_4367_p2             |     |        | sub_ln81_135   | sub       | fabric    | 0       |
+|   add_ln82_141_fu_4373_p2             |     |        | add_ln82_141   | add       | fabric    | 0       |
+|   tx_139_fu_4379_p3                   |     |        | tx_139         | select    | auto_sel  | 0       |
+|   ty_138_fu_4391_p3                   |     |        | ty_138         | select    | auto_sel  | 0       |
+|   tz_353_v_cast_fu_4399_p3            |     |        | tz_353_v_cast  | select    | auto_sel  | 0       |
+|   tz_136_fu_4407_p2                   |     |        | tz_136         | add       | fabric    | 0       |
+|   add_ln76_138_fu_4449_p2             |     |        | add_ln76_138   | add       | fabric    | 0       |
+|   sub_ln77_136_fu_4455_p2             |     |        | sub_ln77_136   | sub       | fabric    | 0       |
+|   sub_ln81_136_fu_4461_p2             |     |        | sub_ln81_136   | sub       | fabric    | 0       |
+|   add_ln82_142_fu_4467_p2             |     |        | add_ln82_142   | add       | fabric    | 0       |
+|   tx_140_fu_4473_p3                   |     |        | tx_140         | select    | auto_sel  | 0       |
+|   ty_139_fu_4481_p3                   |     |        | ty_139         | select    | auto_sel  | 0       |
+|   tz_354_v_cast_fu_5097_p3            |     |        | tz_354_v_cast  | select    | auto_sel  | 0       |
+|   tz_137_fu_5104_p2                   |     |        | tz_137         | add       | fabric    | 0       |
+|   add_ln76_139_fu_5123_p2             |     |        | add_ln76_139   | add       | fabric    | 0       |
+|   sub_ln77_137_fu_5128_p2             |     |        | sub_ln77_137   | sub       | fabric    | 0       |
+|   sub_ln81_137_fu_5133_p2             |     |        | sub_ln81_137   | sub       | fabric    | 0       |
+|   add_ln82_143_fu_5138_p2             |     |        | add_ln82_143   | add       | fabric    | 0       |
+|   tx_141_fu_5143_p3                   |     |        | tx_141         | select    | auto_sel  | 0       |
+|   ty_140_fu_5151_p3                   |     |        | ty_140         | select    | auto_sel  | 0       |
+|   tz_355_v_cast_fu_5159_p3            |     |        | tz_355_v_cast  | select    | auto_sel  | 0       |
+|   tz_138_fu_5167_p2                   |     |        | tz_138         | add       | fabric    | 0       |
+|   add_ln76_140_fu_5213_p2             |     |        | add_ln76_140   | add       | fabric    | 0       |
+|   sub_ln77_138_fu_5219_p2             |     |        | sub_ln77_138   | sub       | fabric    | 0       |
+|   sub_ln81_138_fu_5225_p2             |     |        | sub_ln81_138   | sub       | fabric    | 0       |
+|   add_ln82_144_fu_5231_p2             |     |        | add_ln82_144   | add       | fabric    | 0       |
+|   tx_142_fu_5237_p3                   |     |        | tx_142         | select    | auto_sel  | 0       |
+|   ty_141_fu_5245_p3                   |     |        | ty_141         | select    | auto_sel  | 0       |
+|   tz_356_v_cast_fu_5253_p3            |     |        | tz_356_v_cast  | select    | auto_sel  | 0       |
+|   tz_139_fu_5261_p2                   |     |        | tz_139         | add       | fabric    | 0       |
+|   add_ln76_141_fu_5831_p2             |     |        | add_ln76_141   | add       | fabric    | 0       |
+|   sub_ln77_139_fu_5836_p2             |     |        | sub_ln77_139   | sub       | fabric    | 0       |
+|   sub_ln81_139_fu_5841_p2             |     |        | sub_ln81_139   | sub       | fabric    | 0       |
+|   add_ln82_145_fu_5846_p2             |     |        | add_ln82_145   | add       | fabric    | 0       |
+|   tx_143_fu_5851_p3                   |     |        | tx_143         | select    | auto_sel  | 0       |
+|   ty_142_fu_5858_p3                   |     |        | ty_142         | select    | auto_sel  | 0       |
+|   tz_357_v_cast_fu_5865_p3            |     |        | tz_357_v_cast  | select    | auto_sel  | 0       |
+|   tz_140_fu_5872_p2                   |     |        | tz_140         | add       | fabric    | 0       |
+|   add_ln76_142_fu_5913_p2             |     |        | add_ln76_142   | add       | fabric    | 0       |
+|   sub_ln77_140_fu_5919_p2             |     |        | sub_ln77_140   | sub       | fabric    | 0       |
+|   sub_ln81_140_fu_5925_p2             |     |        | sub_ln81_140   | sub       | fabric    | 0       |
+|   add_ln82_146_fu_5931_p2             |     |        | add_ln82_146   | add       | fabric    | 0       |
+|   tx_144_fu_5937_p3                   |     |        | tx_144         | select    | auto_sel  | 0       |
+|   ty_143_fu_5945_p3                   |     |        | ty_143         | select    | auto_sel  | 0       |
+|   tz_358_v_cast_fu_5953_p3            |     |        | tz_358_v_cast  | select    | auto_sel  | 0       |
+|   tz_141_fu_5961_p2                   |     |        | tz_141         | add       | fabric    | 0       |
+|   add_ln76_143_fu_6575_p2             |     |        | add_ln76_143   | add       | fabric    | 0       |
+|   sub_ln77_141_fu_6580_p2             |     |        | sub_ln77_141   | sub       | fabric    | 0       |
+|   sub_ln81_141_fu_6585_p2             |     |        | sub_ln81_141   | sub       | fabric    | 0       |
+|   add_ln82_147_fu_6590_p2             |     |        | add_ln82_147   | add       | fabric    | 0       |
+|   tx_145_fu_6595_p3                   |     |        | tx_145         | select    | auto_sel  | 0       |
+|   ty_144_fu_6602_p3                   |     |        | ty_144         | select    | auto_sel  | 0       |
+|   tz_359_v_cast_fu_6609_p3            |     |        | tz_359_v_cast  | select    | auto_sel  | 0       |
+|   tz_142_fu_6616_p2                   |     |        | tz_142         | add       | fabric    | 0       |
+|   add_ln76_144_fu_6657_p2             |     |        | add_ln76_144   | add       | fabric    | 0       |
+|   sub_ln77_142_fu_6663_p2             |     |        | sub_ln77_142   | sub       | fabric    | 0       |
+|   sub_ln81_142_fu_6669_p2             |     |        | sub_ln81_142   | sub       | fabric    | 0       |
+|   add_ln82_148_fu_6675_p2             |     |        | add_ln82_148   | add       | fabric    | 0       |
+|   tx_146_fu_6681_p3                   |     |        | tx_146         | select    | auto_sel  | 0       |
+|   ty_145_fu_6689_p3                   |     |        | ty_145         | select    | auto_sel  | 0       |
+|   tz_360_v_cast_fu_6697_p3            |     |        | tz_360_v_cast  | select    | auto_sel  | 0       |
+|   tz_143_fu_6705_p2                   |     |        | tz_143         | add       | fabric    | 0       |
+|   add_ln76_145_fu_7337_p2             |     |        | add_ln76_145   | add       | fabric    | 0       |
+|   sub_ln77_143_fu_7342_p2             |     |        | sub_ln77_143   | sub       | fabric    | 0       |
+|   sub_ln81_143_fu_7347_p2             |     |        | sub_ln81_143   | sub       | fabric    | 0       |
+|   add_ln82_149_fu_7352_p2             |     |        | add_ln82_149   | add       | fabric    | 0       |
+|   tx_147_fu_7357_p3                   |     |        | tx_147         | select    | auto_sel  | 0       |
+|   ty_146_fu_7364_p3                   |     |        | ty_146         | select    | auto_sel  | 0       |
+|   tz_361_v_cast_fu_6739_p3            |     |        | tz_361_v_cast  | select    | auto_sel  | 0       |
+|   tz_144_fu_6747_p2                   |     |        | tz_144         | add       | fabric    | 0       |
+|   add_ln76_146_fu_7399_p2             |     |        | add_ln76_146   | add       | fabric    | 0       |
+|   sub_ln77_144_fu_7405_p2             |     |        | sub_ln77_144   | sub       | fabric    | 0       |
+|   sub_ln81_144_fu_7411_p2             |     |        | sub_ln81_144   | sub       | fabric    | 0       |
+|   add_ln82_150_fu_7417_p2             |     |        | add_ln82_150   | add       | fabric    | 0       |
+|   tx_148_fu_7423_p3                   |     |        | tx_148         | select    | auto_sel  | 0       |
+|   ty_147_fu_7430_p3                   |     |        | ty_147         | select    | auto_sel  | 0       |
+|   tz_362_v_cast_fu_7437_p3            |     |        | tz_362_v_cast  | select    | auto_sel  | 0       |
+|   tz_145_fu_7444_p2                   |     |        | tz_145         | add       | fabric    | 0       |
+|   add_ln76_147_fu_8097_p2             |     |        | add_ln76_147   | add       | fabric    | 0       |
+|   sub_ln77_145_fu_8102_p2             |     |        | sub_ln77_145   | sub       | fabric    | 0       |
+|   sub_ln81_145_fu_8107_p2             |     |        | sub_ln81_145   | sub       | fabric    | 0       |
+|   add_ln82_151_fu_8112_p2             |     |        | add_ln82_151   | add       | fabric    | 0       |
+|   tx_149_fu_8117_p3                   |     |        | tx_149         | select    | auto_sel  | 0       |
+|   ty_148_fu_8124_p3                   |     |        | ty_148         | select    | auto_sel  | 0       |
+|   tz_363_v_cast_fu_7477_p3            |     |        | tz_363_v_cast  | select    | auto_sel  | 0       |
+|   tz_146_fu_7485_p2                   |     |        | tz_146         | add       | fabric    | 0       |
+|   add_ln76_148_fu_8159_p2             |     |        | add_ln76_148   | add       | fabric    | 0       |
+|   sub_ln77_146_fu_8165_p2             |     |        | sub_ln77_146   | sub       | fabric    | 0       |
+|   sub_ln81_146_fu_8171_p2             |     |        | sub_ln81_146   | sub       | fabric    | 0       |
+|   add_ln82_152_fu_8177_p2             |     |        | add_ln82_152   | add       | fabric    | 0       |
+|   tx_150_fu_8183_p3                   |     |        | tx_150         | select    | auto_sel  | 0       |
+|   ty_149_fu_8190_p3                   |     |        | ty_149         | select    | auto_sel  | 0       |
+|   tz_364_v_cast_fu_7499_p3            |     |        | tz_364_v_cast  | select    | auto_sel  | 0       |
+|   tz_147_fu_7507_p2                   |     |        | tz_147         | add       | fabric    | 0       |
+|   add_ln76_149_fu_8857_p2             |     |        | add_ln76_149   | add       | fabric    | 0       |
+|   sub_ln77_147_fu_8862_p2             |     |        | sub_ln77_147   | sub       | fabric    | 0       |
+|   sub_ln81_147_fu_8867_p2             |     |        | sub_ln81_147   | sub       | fabric    | 0       |
+|   add_ln82_153_fu_8872_p2             |     |        | add_ln82_153   | add       | fabric    | 0       |
+|   tx_151_fu_8877_p3                   |     |        | tx_151         | select    | auto_sel  | 0       |
+|   ty_150_fu_8884_p3                   |     |        | ty_150         | select    | auto_sel  | 0       |
+|   tz_365_v_cast_fu_8217_p3            |     |        | tz_365_v_cast  | select    | auto_sel  | 0       |
+|   tz_148_fu_8224_p2                   |     |        | tz_148         | add       | fabric    | 0       |
+|   add_ln76_150_fu_8919_p2             |     |        | add_ln76_150   | add       | fabric    | 0       |
+|   sub_ln77_148_fu_8925_p2             |     |        | sub_ln77_148   | sub       | fabric    | 0       |
+|   sub_ln81_148_fu_8931_p2             |     |        | sub_ln81_148   | sub       | fabric    | 0       |
+|   add_ln82_154_fu_8937_p2             |     |        | add_ln82_154   | add       | fabric    | 0       |
+|   tx_152_fu_8943_p3                   |     |        | tx_152         | select    | auto_sel  | 0       |
+|   ty_151_fu_8950_p3                   |     |        | ty_151         | select    | auto_sel  | 0       |
+|   tz_366_v_cast_fu_8237_p3            |     |        | tz_366_v_cast  | select    | auto_sel  | 0       |
+|   tz_149_fu_8245_p2                   |     |        | tz_149         | add       | fabric    | 0       |
+|   add_ln76_151_fu_9617_p2             |     |        | add_ln76_151   | add       | fabric    | 0       |
+|   sub_ln77_149_fu_9622_p2             |     |        | sub_ln77_149   | sub       | fabric    | 0       |
+|   sub_ln81_149_fu_9627_p2             |     |        | sub_ln81_149   | sub       | fabric    | 0       |
+|   add_ln82_155_fu_9632_p2             |     |        | add_ln82_155   | add       | fabric    | 0       |
+|   tx_153_fu_9637_p3                   |     |        | tx_153         | select    | auto_sel  | 0       |
+|   ty_152_fu_9644_p3                   |     |        | ty_152         | select    | auto_sel  | 0       |
+|   tz_367_v_cast_fu_8259_p3            |     |        | tz_367_v_cast  | select    | auto_sel  | 0       |
+|   tz_150_fu_8267_p2                   |     |        | tz_150         | add       | fabric    | 0       |
+|   add_ln76_152_fu_9679_p2             |     |        | add_ln76_152   | add       | fabric    | 0       |
+|   sub_ln77_150_fu_9685_p2             |     |        | sub_ln77_150   | sub       | fabric    | 0       |
+|   sub_ln81_150_fu_9691_p2             |     |        | sub_ln81_150   | sub       | fabric    | 0       |
+|   add_ln82_156_fu_9697_p2             |     |        | add_ln82_156   | add       | fabric    | 0       |
+|   tx_154_fu_9703_p3                   |     |        | tx_154         | select    | auto_sel  | 0       |
+|   ty_153_fu_9710_p3                   |     |        | ty_153         | select    | auto_sel  | 0       |
+|   tz_368_v_cast_fu_8977_p3            |     |        | tz_368_v_cast  | select    | auto_sel  | 0       |
+|   tz_151_fu_8984_p2                   |     |        | tz_151         | add       | fabric    | 0       |
+|   add_ln76_153_fu_10377_p2            |     |        | add_ln76_153   | add       | fabric    | 0       |
+|   sub_ln77_151_fu_10382_p2            |     |        | sub_ln77_151   | sub       | fabric    | 0       |
+|   sub_ln81_151_fu_10387_p2            |     |        | sub_ln81_151   | sub       | fabric    | 0       |
+|   add_ln82_157_fu_10392_p2            |     |        | add_ln82_157   | add       | fabric    | 0       |
+|   tx_155_fu_10397_p3                  |     |        | tx_155         | select    | auto_sel  | 0       |
+|   ty_154_fu_10404_p3                  |     |        | ty_154         | select    | auto_sel  | 0       |
+|   tz_369_v_cast_fu_8997_p3            |     |        | tz_369_v_cast  | select    | auto_sel  | 0       |
+|   tz_152_fu_9005_p2                   |     |        | tz_152         | add       | fabric    | 0       |
+|   add_ln76_154_fu_10439_p2            |     |        | add_ln76_154   | add       | fabric    | 0       |
+|   sub_ln77_152_fu_10445_p2            |     |        | sub_ln77_152   | sub       | fabric    | 0       |
+|   sub_ln81_152_fu_10451_p2            |     |        | sub_ln81_152   | sub       | fabric    | 0       |
+|   add_ln82_158_fu_10457_p2            |     |        | add_ln82_158   | add       | fabric    | 0       |
+|   tx_156_fu_10463_p3                  |     |        | tx_156         | select    | auto_sel  | 0       |
+|   ty_155_fu_10470_p3                  |     |        | ty_155         | select    | auto_sel  | 0       |
+|   tz_370_v_cast_fu_9019_p3            |     |        | tz_370_v_cast  | select    | auto_sel  | 0       |
+|   tz_153_fu_9027_p2                   |     |        | tz_153         | add       | fabric    | 0       |
+|   add_ln76_155_fu_11137_p2            |     |        | add_ln76_155   | add       | fabric    | 0       |
+|   sub_ln77_153_fu_11142_p2            |     |        | sub_ln77_153   | sub       | fabric    | 0       |
+|   sub_ln81_153_fu_11147_p2            |     |        | sub_ln81_153   | sub       | fabric    | 0       |
+|   add_ln82_159_fu_11152_p2            |     |        | add_ln82_159   | add       | fabric    | 0       |
+|   tx_157_fu_11157_p3                  |     |        | tx_157         | select    | auto_sel  | 0       |
+|   ty_156_fu_11164_p3                  |     |        | ty_156         | select    | auto_sel  | 0       |
+|   tz_371_v_cast_fu_9737_p3            |     |        | tz_371_v_cast  | select    | auto_sel  | 0       |
+|   tz_154_fu_9744_p2                   |     |        | tz_154         | add       | fabric    | 0       |
+|   add_ln76_156_fu_11199_p2            |     |        | add_ln76_156   | add       | fabric    | 0       |
+|   sub_ln77_154_fu_11205_p2            |     |        | sub_ln77_154   | sub       | fabric    | 0       |
+|   sub_ln81_154_fu_11211_p2            |     |        | sub_ln81_154   | sub       | fabric    | 0       |
+|   add_ln82_160_fu_11217_p2            |     |        | add_ln82_160   | add       | fabric    | 0       |
+|   tx_158_fu_11223_p3                  |     |        | tx_158         | select    | auto_sel  | 0       |
+|   ty_157_fu_11230_p3                  |     |        | ty_157         | select    | auto_sel  | 0       |
+|   tz_372_v_cast_fu_9757_p3            |     |        | tz_372_v_cast  | select    | auto_sel  | 0       |
+|   tz_155_fu_9765_p2                   |     |        | tz_155         | add       | fabric    | 0       |
+|   add_ln76_157_fu_11897_p2            |     |        | add_ln76_157   | add       | fabric    | 0       |
+|   sub_ln77_155_fu_11902_p2            |     |        | sub_ln77_155   | sub       | fabric    | 0       |
+|   sub_ln81_155_fu_11907_p2            |     |        | sub_ln81_155   | sub       | fabric    | 0       |
+|   add_ln82_161_fu_11912_p2            |     |        | add_ln82_161   | add       | fabric    | 0       |
+|   tx_159_fu_11917_p3                  |     |        | tx_159         | select    | auto_sel  | 0       |
+|   ty_158_fu_11924_p3                  |     |        | ty_158         | select    | auto_sel  | 0       |
+|   tz_373_v_cast_fu_9779_p3            |     |        | tz_373_v_cast  | select    | auto_sel  | 0       |
+|   tz_156_fu_9787_p2                   |     |        | tz_156         | add       | fabric    | 0       |
+|   add_ln76_158_fu_11959_p2            |     |        | add_ln76_158   | add       | fabric    | 0       |
+|   sub_ln77_156_fu_11965_p2            |     |        | sub_ln77_156   | sub       | fabric    | 0       |
+|   sub_ln81_156_fu_11971_p2            |     |        | sub_ln81_156   | sub       | fabric    | 0       |
+|   add_ln82_162_fu_11977_p2            |     |        | add_ln82_162   | add       | fabric    | 0       |
+|   tx_160_fu_11983_p3                  |     |        | tx_160         | select    | auto_sel  | 0       |
+|   ty_159_fu_11990_p3                  |     |        | ty_159         | select    | auto_sel  | 0       |
+|   tz_374_v_cast_fu_10497_p3           |     |        | tz_374_v_cast  | select    | auto_sel  | 0       |
+|   tz_157_fu_10504_p2                  |     |        | tz_157         | add       | fabric    | 0       |
+|   add_ln76_159_fu_12671_p2            |     |        | add_ln76_159   | add       | fabric    | 0       |
+|   sub_ln77_157_fu_12676_p2            |     |        | sub_ln77_157   | sub       | fabric    | 0       |
+|   sub_ln81_157_fu_12681_p2            |     |        | sub_ln81_157   | sub       | fabric    | 0       |
+|   add_ln82_163_fu_12686_p2            |     |        | add_ln82_163   | add       | fabric    | 0       |
+|   tx_161_fu_12691_p3                  |     |        | tx_161         | select    | auto_sel  | 0       |
+|   ty_160_fu_12698_p3                  |     |        | ty_160         | select    | auto_sel  | 0       |
+|   tz_375_v_cast_fu_10517_p3           |     |        | tz_375_v_cast  | select    | auto_sel  | 0       |
+|   tz_158_fu_10525_p2                  |     |        | tz_158         | add       | fabric    | 0       |
+|   add_ln76_160_fu_12733_p2            |     |        | add_ln76_160   | add       | fabric    | 0       |
+|   sub_ln77_158_fu_12739_p2            |     |        | sub_ln77_158   | sub       | fabric    | 0       |
+|   sub_ln81_158_fu_12745_p2            |     |        | sub_ln81_158   | sub       | fabric    | 0       |
+|   add_ln82_164_fu_12751_p2            |     |        | add_ln82_164   | add       | fabric    | 0       |
+|   tx_162_fu_12757_p3                  |     |        | tx_162         | select    | auto_sel  | 0       |
+|   ty_161_fu_12764_p3                  |     |        | ty_161         | select    | auto_sel  | 0       |
+|   tz_376_v_cast_fu_10539_p3           |     |        | tz_376_v_cast  | select    | auto_sel  | 0       |
+|   tz_159_fu_10547_p2                  |     |        | tz_159         | add       | fabric    | 0       |
+|   add_ln76_161_fu_13367_p2            |     |        | add_ln76_161   | add       | fabric    | 0       |
+|   sub_ln77_159_fu_13372_p2            |     |        | sub_ln77_159   | sub       | fabric    | 0       |
+|   sub_ln81_159_fu_13377_p2            |     |        | sub_ln81_159   | sub       | fabric    | 0       |
+|   add_ln82_165_fu_13382_p2            |     |        | add_ln82_165   | add       | fabric    | 0       |
+|   tx_163_fu_13387_p3                  |     |        | tx_163         | select    | auto_sel  | 0       |
+|   ty_162_fu_13394_p3                  |     |        | ty_162         | select    | auto_sel  | 0       |
+|   tz_377_v_cast_fu_11257_p3           |     |        | tz_377_v_cast  | select    | auto_sel  | 0       |
+|   tz_160_fu_11264_p2                  |     |        | tz_160         | add       | fabric    | 0       |
+|   add_ln76_162_fu_13429_p2            |     |        | add_ln76_162   | add       | fabric    | 0       |
+|   sub_ln77_160_fu_13435_p2            |     |        | sub_ln77_160   | sub       | fabric    | 0       |
+|   sub_ln81_160_fu_13441_p2            |     |        | sub_ln81_160   | sub       | fabric    | 0       |
+|   add_ln82_166_fu_13447_p2            |     |        | add_ln82_166   | add       | fabric    | 0       |
+|   tx_164_fu_13453_p3                  |     |        | tx_164         | select    | auto_sel  | 0       |
+|   ty_163_fu_13460_p3                  |     |        | ty_163         | select    | auto_sel  | 0       |
+|   tz_378_v_cast_fu_11277_p3           |     |        | tz_378_v_cast  | select    | auto_sel  | 0       |
+|   tz_161_fu_11285_p2                  |     |        | tz_161         | add       | fabric    | 0       |
+|   add_ln76_163_fu_14091_p2            |     |        | add_ln76_163   | add       | fabric    | 0       |
+|   sub_ln77_161_fu_14096_p2            |     |        | sub_ln77_161   | sub       | fabric    | 0       |
+|   sub_ln81_161_fu_14101_p2            |     |        | sub_ln81_161   | sub       | fabric    | 0       |
+|   add_ln82_167_fu_14106_p2            |     |        | add_ln82_167   | add       | fabric    | 0       |
+|   tx_165_fu_14111_p3                  |     |        | tx_165         | select    | auto_sel  | 0       |
+|   ty_164_fu_14118_p3                  |     |        | ty_164         | select    | auto_sel  | 0       |
+|   tz_379_v_cast_fu_11299_p3           |     |        | tz_379_v_cast  | select    | auto_sel  | 0       |
+|   tz_162_fu_11307_p2                  |     |        | tz_162         | add       | fabric    | 0       |
+|   add_ln76_164_fu_14153_p2            |     |        | add_ln76_164   | add       | fabric    | 0       |
+|   sub_ln77_162_fu_14159_p2            |     |        | sub_ln77_162   | sub       | fabric    | 0       |
+|   sub_ln81_162_fu_14165_p2            |     |        | sub_ln81_162   | sub       | fabric    | 0       |
+|   add_ln82_168_fu_14171_p2            |     |        | add_ln82_168   | add       | fabric    | 0       |
+|   tx_166_fu_14177_p3                  |     |        | tx_166         | select    | auto_sel  | 0       |
+|   ty_165_fu_14184_p3                  |     |        | ty_165         | select    | auto_sel  | 0       |
+|   tz_380_v_cast_fu_12017_p3           |     |        | tz_380_v_cast  | select    | auto_sel  | 0       |
+|   tz_163_fu_12024_p2                  |     |        | tz_163         | add       | fabric    | 0       |
+|   add_ln76_165_fu_14673_p2            |     |        | add_ln76_165   | add       | fabric    | 0       |
+|   sub_ln77_163_fu_14678_p2            |     |        | sub_ln77_163   | sub       | fabric    | 0       |
+|   sub_ln81_163_fu_14683_p2            |     |        | sub_ln81_163   | sub       | fabric    | 0       |
+|   add_ln82_169_fu_14688_p2            |     |        | add_ln82_169   | add       | fabric    | 0       |
+|   tx_167_fu_14693_p3                  |     |        | tx_167         | select    | auto_sel  | 0       |
+|   ty_166_fu_14700_p3                  |     |        | ty_166         | select    | auto_sel  | 0       |
+|   tz_381_v_cast_fu_12037_p3           |     |        | tz_381_v_cast  | select    | auto_sel  | 0       |
+|   tz_164_fu_12045_p2                  |     |        | tz_164         | add       | fabric    | 0       |
+|   add_ln76_166_fu_14735_p2            |     |        | add_ln76_166   | add       | fabric    | 0       |
+|   sub_ln77_164_fu_14741_p2            |     |        | sub_ln77_164   | sub       | fabric    | 0       |
+|   sub_ln81_164_fu_14747_p2            |     |        | sub_ln81_164   | sub       | fabric    | 0       |
+|   add_ln82_170_fu_14753_p2            |     |        | add_ln82_170   | add       | fabric    | 0       |
+|   tx_168_fu_14759_p3                  |     |        | tx_168         | select    | auto_sel  | 0       |
+|   ty_167_fu_14766_p3                  |     |        | ty_167         | select    | auto_sel  | 0       |
+|   tz_382_v_cast_fu_12059_p3           |     |        | tz_382_v_cast  | select    | auto_sel  | 0       |
+|   tz_165_fu_12067_p2                  |     |        | tz_165         | add       | fabric    | 0       |
+|   add_ln76_167_fu_15177_p2            |     |        | add_ln76_167   | add       | fabric    | 0       |
+|   sub_ln77_165_fu_15182_p2            |     |        | sub_ln77_165   | sub       | fabric    | 0       |
+|   sub_ln81_165_fu_15187_p2            |     |        | sub_ln81_165   | sub       | fabric    | 0       |
+|   add_ln82_171_fu_15192_p2            |     |        | add_ln82_171   | add       | fabric    | 0       |
+|   tx_169_fu_15197_p3                  |     |        | tx_169         | select    | auto_sel  | 0       |
+|   ty_168_fu_15204_p3                  |     |        | ty_168         | select    | auto_sel  | 0       |
+|   tz_383_v_cast_fu_12791_p3           |     |        | tz_383_v_cast  | select    | auto_sel  | 0       |
+|   tz_166_fu_12798_p2                  |     |        | tz_166         | add       | fabric    | 0       |
+|   add_ln76_168_fu_15239_p2            |     |        | add_ln76_168   | add       | fabric    | 0       |
+|   sub_ln77_166_fu_15245_p2            |     |        | sub_ln77_166   | sub       | fabric    | 0       |
+|   sub_ln81_166_fu_15251_p2            |     |        | sub_ln81_166   | sub       | fabric    | 0       |
+|   add_ln82_172_fu_15257_p2            |     |        | add_ln82_172   | add       | fabric    | 0       |
+|   tx_170_fu_15263_p3                  |     |        | tx_170         | select    | auto_sel  | 0       |
+|   ty_169_fu_15270_p3                  |     |        | ty_169         | select    | auto_sel  | 0       |
+|   tz_384_v_cast_fu_12811_p3           |     |        | tz_384_v_cast  | select    | auto_sel  | 0       |
+|   tz_167_fu_12819_p2                  |     |        | tz_167         | add       | fabric    | 0       |
+|   add_ln76_169_fu_15681_p2            |     |        | add_ln76_169   | add       | fabric    | 0       |
+|   sub_ln77_167_fu_15686_p2            |     |        | sub_ln77_167   | sub       | fabric    | 0       |
+|   sub_ln81_167_fu_15691_p2            |     |        | sub_ln81_167   | sub       | fabric    | 0       |
+|   add_ln82_173_fu_15696_p2            |     |        | add_ln82_173   | add       | fabric    | 0       |
+|   tx_171_fu_15701_p3                  |     |        | tx_171         | select    | auto_sel  | 0       |
+|   ty_170_fu_15708_p3                  |     |        | ty_170         | select    | auto_sel  | 0       |
+|   tz_385_v_cast_fu_12833_p3           |     |        | tz_385_v_cast  | select    | auto_sel  | 0       |
+|   tz_168_fu_12841_p2                  |     |        | tz_168         | add       | fabric    | 0       |
+|   add_ln76_170_fu_15743_p2            |     |        | add_ln76_170   | add       | fabric    | 0       |
+|   sub_ln77_168_fu_15749_p2            |     |        | sub_ln77_168   | sub       | fabric    | 0       |
+|   sub_ln81_168_fu_15755_p2            |     |        | sub_ln81_168   | sub       | fabric    | 0       |
+|   add_ln82_174_fu_15761_p2            |     |        | add_ln82_174   | add       | fabric    | 0       |
+|   tx_172_fu_15767_p3                  |     |        | tx_172         | select    | auto_sel  | 0       |
+|   ty_171_fu_15774_p3                  |     |        | ty_171         | select    | auto_sel  | 0       |
+|   tz_386_v_cast_fu_13487_p3           |     |        | tz_386_v_cast  | select    | auto_sel  | 0       |
+|   tz_169_fu_13494_p2                  |     |        | tz_169         | add       | fabric    | 0       |
+|   add_ln76_171_fu_16239_p2            |     |        | add_ln76_171   | add       | fabric    | 0       |
+|   sub_ln77_169_fu_16244_p2            |     |        | sub_ln77_169   | sub       | fabric    | 0       |
+|   sub_ln81_169_fu_16249_p2            |     |        | sub_ln81_169   | sub       | fabric    | 0       |
+|   add_ln82_175_fu_16254_p2            |     |        | add_ln82_175   | add       | fabric    | 0       |
+|   tx_173_fu_16259_p3                  |     |        | tx_173         | select    | auto_sel  | 0       |
+|   ty_172_fu_16266_p3                  |     |        | ty_172         | select    | auto_sel  | 0       |
+|   tz_387_v_cast_fu_13507_p3           |     |        | tz_387_v_cast  | select    | auto_sel  | 0       |
+|   tz_170_fu_13515_p2                  |     |        | tz_170         | add       | fabric    | 0       |
+|   add_ln76_172_fu_16301_p2            |     |        | add_ln76_172   | add       | fabric    | 0       |
+|   sub_ln77_170_fu_16307_p2            |     |        | sub_ln77_170   | sub       | fabric    | 0       |
+|   sub_ln81_170_fu_16313_p2            |     |        | sub_ln81_170   | sub       | fabric    | 0       |
+|   add_ln82_176_fu_16319_p2            |     |        | add_ln82_176   | add       | fabric    | 0       |
+|   tx_174_fu_16325_p3                  |     |        | tx_174         | select    | auto_sel  | 0       |
+|   ty_173_fu_16332_p3                  |     |        | ty_173         | select    | auto_sel  | 0       |
+|   tz_388_v_cast_fu_13529_p3           |     |        | tz_388_v_cast  | select    | auto_sel  | 0       |
+|   tz_171_fu_13537_p2                  |     |        | tz_171         | add       | fabric    | 0       |
+|   add_ln76_173_fu_16856_p2            |     |        | add_ln76_173   | add       | fabric    | 0       |
+|   sub_ln77_171_fu_16861_p2            |     |        | sub_ln77_171   | sub       | fabric    | 0       |
+|   sub_ln81_171_fu_16866_p2            |     |        | sub_ln81_171   | sub       | fabric    | 0       |
+|   add_ln82_177_fu_16871_p2            |     |        | add_ln82_177   | add       | fabric    | 0       |
+|   tx_175_fu_16876_p3                  |     |        | tx_175         | select    | auto_sel  | 0       |
+|   ty_174_fu_16883_p3                  |     |        | ty_174         | select    | auto_sel  | 0       |
+|   tz_389_v_cast_fu_14211_p3           |     |        | tz_389_v_cast  | select    | auto_sel  | 0       |
+|   tz_172_fu_14218_p2                  |     |        | tz_172         | add       | fabric    | 0       |
+|   add_ln76_174_fu_16918_p2            |     |        | add_ln76_174   | add       | fabric    | 0       |
+|   sub_ln77_172_fu_16924_p2            |     |        | sub_ln77_172   | sub       | fabric    | 0       |
+|   sub_ln81_172_fu_16930_p2            |     |        | sub_ln81_172   | sub       | fabric    | 0       |
+|   add_ln82_178_fu_16936_p2            |     |        | add_ln82_178   | add       | fabric    | 0       |
+|   tx_176_fu_16942_p3                  |     |        | tx_176         | select    | auto_sel  | 0       |
+|   ty_175_fu_16949_p3                  |     |        | ty_175         | select    | auto_sel  | 0       |
+|   tz_390_v_cast_fu_14231_p3           |     |        | tz_390_v_cast  | select    | auto_sel  | 0       |
+|   tz_173_fu_14239_p2                  |     |        | tz_173         | add       | fabric    | 0       |
+|   add_ln76_175_fu_17464_p2            |     |        | add_ln76_175   | add       | fabric    | 0       |
+|   sub_ln77_173_fu_17469_p2            |     |        | sub_ln77_173   | sub       | fabric    | 0       |
+|   add_ln78_4_fu_14253_p2              |     |        | add_ln78_4     | add       | fabric    | 0       |
+|   sub_ln81_173_fu_17474_p2            |     |        | sub_ln81_173   | sub       | fabric    | 0       |
+|   add_ln82_179_fu_17479_p2            |     |        | add_ln82_179   | add       | fabric    | 0       |
+|   add_ln83_4_fu_14259_p2              |     |        | add_ln83_4     | add       | fabric    | 0       |
+|   tx_177_fu_17484_p3                  |     |        | tx_177         | select    | auto_sel  | 0       |
+|   ty_176_fu_17491_p3                  |     |        | ty_176         | select    | auto_sel  | 0       |
+|   d_183_fu_14281_p3                   |     |        | d_183          | select    | auto_sel  | 0       |
+|   add_ln76_176_fu_17526_p2            |     |        | add_ln76_176   | add       | fabric    | 0       |
+|   sub_ln77_174_fu_17532_p2            |     |        | sub_ln77_174   | sub       | fabric    | 0       |
+|   select_ln58_12_fu_17546_p3          |     |        | select_ln58_12 | select    | auto_sel  | 0       |
+|   select_ln58_13_fu_17562_p3          |     |        | select_ln58_13 | select    | auto_sel  | 0       |
+|   add_ln77_8_fu_17570_p2              |     |        | add_ln77_8     | add       | fabric    | 0       |
+|   sub_ln72_3_fu_17576_p2              |     |        | sub_ln72_3     | sub       | fabric    | 0       |
+|   select_ln76_11_fu_18130_p3          |     |        | select_ln76_11 | select    | auto_sel  | 0       |
+|   add_ln76_177_fu_18138_p2            |     |        | add_ln76_177   | add       | fabric    | 0       |
+|   sub_ln81_174_fu_17582_p2            |     |        | sub_ln81_174   | sub       | fabric    | 0       |
+|   add_ln82_180_fu_17588_p2            |     |        | add_ln82_180   | add       | fabric    | 0       |
+|   select_ln72_4_fu_17602_p3           |     |        | select_ln72_4  | select    | auto_sel  | 0       |
+|   select_ln81_8_fu_17618_p3           |     |        | select_ln81_8  | select    | auto_sel  | 0       |
+|   sub_ln82_4_fu_17626_p2              |     |        | sub_ln82_4     | sub       | fabric    | 0       |
+|   add_ln82_181_fu_17632_p2            |     |        | add_ln82_181   | add       | fabric    | 0       |
+|   add_ln81_3_fu_18161_p2              |     |        | add_ln81_3     | add       | fabric    | 0       |
+|   tx_183_fu_18166_p3                  |     |        | tx_183         | select    | auto_sel  | 0       |
+|   sub_ln254_4_fu_18183_p2             |     |        | sub_ln254_4    | sub       | fabric    | 0       |
+|   icmp_ln248_8_fu_18199_p2            |     |        | icmp_ln248_8   | seteq     | auto      | 0       |
+|   icmp_ln248_9_fu_18204_p2            |     |        | icmp_ln248_9   | seteq     | auto      | 0       |
+|   sparsemux_9_3_26_1_1_U22            |     |        | outcos_14      | sparsemux | auto      | 0       |
+|   sub_ln13_6_fu_18626_p2              |     |        | sub_ln13_6     | sub       | fabric    | 0       |
+|   sub_ln13_7_fu_18642_p2              |     |        | sub_ln13_7     | sub       | fabric    | 0       |
+|   w4_real_fu_18661_p3                 |     |        | w4_real        | select    | auto_sel  | 0       |
+|   add_ln77_3_fu_18272_p2              |     |        | add_ln77_3     | add       | fabric    | 0       |
+|   select_ln58_14_fu_18285_p3          |     |        | select_ln58_14 | select    | auto_sel  | 0       |
+|   add_ln82_182_fu_18293_p2            |     |        | add_ln82_182   | add       | fabric    | 0       |
+|   ty_181_fu_18298_p3                  |     |        | ty_181         | select    | auto_sel  | 0       |
+|   sub_ln261_3_fu_18305_p2             |     |        | sub_ln261_3    | sub       | fabric    | 0       |
+|   sparsemux_9_3_26_1_1_U23            |     |        | outsin_17      | sparsemux | auto      | 0       |
+|   outsin_18_fu_18668_p2               |     |        | outsin_18      | sub       | fabric    | 0       |
+|   outsin_19_fu_18673_p3               |     |        | outsin_19      | select    | auto_sel  | 0       |
+|   sub_ln14_6_fu_18691_p2              |     |        | sub_ln14_6     | sub       | fabric    | 0       |
+|   sub_ln14_7_fu_18707_p2              |     |        | sub_ln14_7     | sub       | fabric    | 0       |
+|   w4_imag_fu_18737_p3                 |     |        | w4_imag        | select    | auto_sel  | 0       |
+|   mac_muladd_16s_16s_31s_31_4_1_U27   | 1   |        | mul_ln83       | mul       | dsp_slice | 3       |
+|   mul_16s_16s_31_1_1_U24              | 1   |        | mul_ln83_1     | mul       | auto      | 0       |
+|   mac_muladd_16s_16s_31s_31_4_1_U27   | 1   |        | add_ln83_5     | add       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U29  | 1   |        | mul_ln84       | mul       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U29  | 1   |        | add_ln84       | add       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U31  | 1   |        | mul_ln84_1     | mul       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U31  | 1   |        | add_ln84_1     | add       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U33  | 1   |        | mul_ln85       | mul       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U33  | 1   |        | add_ln85       | add       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U35  | 1   |        | mul_ln85_1     | mul       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U35  | 1   |        | add_ln85_1     | add       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U37  | 1   |        | mul_ln86       | mul       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U37  | 1   |        | add_ln86       | add       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U39  | 1   |        | mul_ln86_1     | mul       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U39  | 1   |        | add_ln86_1     | add       | dsp_slice | 3       |
+|   mul_16s_16s_31_1_1_U25              | 1   |        | mul_ln88       | mul       | auto      | 0       |
+|   mac_mulsub_16s_16s_31s_31_4_1_U28   | 1   |        | mul_ln88_1     | mul       | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31s_31_4_1_U28   | 1   |        | sub_ln88       | sub       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U30  | 1   |        | mul_ln89       | mul       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U30  | 1   |        | add_ln89       | add       | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U32  | 1   |        | mul_ln89_1     | mul       | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U32  | 1   |        | sub_ln89       | sub       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U34  | 1   |        | mul_ln90       | mul       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U34  | 1   |        | add_ln90       | add       | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U36  | 1   |        | mul_ln90_1     | mul       | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U36  | 1   |        | sub_ln90       | sub       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U38  | 1   |        | mul_ln91       | mul       | dsp_slice | 3       |
+|   mac_muladd_16s_16s_31ns_31_4_1_U38  | 1   |        | add_ln91       | add       | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U40  | 1   |        | mul_ln91_1     | mul       | dsp_slice | 3       |
+|   mac_mulsub_16s_16s_31ns_31_4_1_U40  | 1   |        | sub_ln91       | sub       | dsp_slice | 3       |
++---------------------------------------+-----+--------+----------------+-----------+-----------+---------+
 
 
 ================================================================
@@ -181,29 +1794,26 @@
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+-----------------------------+---------------------------------------------+
-| Type      | Options                     | Location                                    |
-+-----------+-----------------------------+---------------------------------------------+
-| top       | name=DelayAndSum            | DelayAndSum.cpp:23 in delayandsum           |
-| interface | mode=axis port=in1_real     | DelayAndSum.cpp:26 in delayandsum, in1_real |
-| interface | mode=axis port=in1_imag     | DelayAndSum.cpp:27 in delayandsum, in1_imag |
-| interface | mode=axis port=in2_real     | DelayAndSum.cpp:28 in delayandsum, in2_real |
-| interface | mode=axis port=in2_imag     | DelayAndSum.cpp:29 in delayandsum, in2_imag |
-| interface | mode=axis port=in3_real     | DelayAndSum.cpp:30 in delayandsum, in3_real |
-| interface | mode=axis port=in3_imag     | DelayAndSum.cpp:31 in delayandsum, in3_imag |
-| interface | mode=axis port=in4_real     | DelayAndSum.cpp:32 in delayandsum, in4_real |
-| interface | mode=axis port=in4_imag     | DelayAndSum.cpp:33 in delayandsum, in4_imag |
-| interface | mode=axis port=out_real     | DelayAndSum.cpp:36 in delayandsum, out_real |
-| interface | mode=axis port=out_imag     | DelayAndSum.cpp:37 in delayandsum, out_imag |
-| interface | mode=s_axilite port=w1_real | DelayAndSum.cpp:40 in delayandsum, w1_real  |
-| interface | mode=s_axilite port=w1_imag | DelayAndSum.cpp:41 in delayandsum, w1_imag  |
-| interface | mode=s_axilite port=w2_real | DelayAndSum.cpp:42 in delayandsum, w2_real  |
-| interface | mode=s_axilite port=w2_imag | DelayAndSum.cpp:43 in delayandsum, w2_imag  |
-| interface | mode=s_axilite port=w3_real | DelayAndSum.cpp:44 in delayandsum, w3_real  |
-| interface | mode=s_axilite port=w3_imag | DelayAndSum.cpp:45 in delayandsum, w3_imag  |
-| interface | mode=s_axilite port=w4_real | DelayAndSum.cpp:46 in delayandsum, w4_real  |
-| interface | mode=s_axilite port=w4_imag | DelayAndSum.cpp:47 in delayandsum, w4_imag  |
-| pipeline  | II=1                        | DelayAndSum.cpp:49 in delayandsum           |
-+-----------+-----------------------------+---------------------------------------------+
++-----------+---------------------------+---------------------------------------------+
+| Type      | Options                   | Location                                    |
++-----------+---------------------------+---------------------------------------------+
+| top       | name=DelayAndSum          | DelayAndSum.cpp:26 in delayandsum           |
+| interface | mode=axis port=in1_real   | DelayAndSum.cpp:29 in delayandsum, in1_real |
+| interface | mode=axis port=in1_imag   | DelayAndSum.cpp:30 in delayandsum, in1_imag |
+| interface | mode=axis port=in2_real   | DelayAndSum.cpp:31 in delayandsum, in2_real |
+| interface | mode=axis port=in2_imag   | DelayAndSum.cpp:32 in delayandsum, in2_imag |
+| interface | mode=axis port=in3_real   | DelayAndSum.cpp:33 in delayandsum, in3_real |
+| interface | mode=axis port=in3_imag   | DelayAndSum.cpp:34 in delayandsum, in3_imag |
+| interface | mode=axis port=in4_real   | DelayAndSum.cpp:35 in delayandsum, in4_real |
+| interface | mode=axis port=in4_imag   | DelayAndSum.cpp:36 in delayandsum, in4_imag |
+| interface | mode=axis port=out_real   | DelayAndSum.cpp:39 in delayandsum, out_real |
+| interface | mode=axis port=out_imag   | DelayAndSum.cpp:40 in delayandsum, out_imag |
+| interface | mode=s_axilite port=phi   | DelayAndSum.cpp:43 in delayandsum, phi      |
+| interface | mode=s_axilite port=xpos1 | DelayAndSum.cpp:44 in delayandsum, xpos1    |
+| interface | mode=s_axilite port=xpos2 | DelayAndSum.cpp:45 in delayandsum, xpos2    |
+| interface | mode=s_axilite port=xpos3 | DelayAndSum.cpp:46 in delayandsum, xpos3    |
+| interface | mode=s_axilite port=xpos4 | DelayAndSum.cpp:47 in delayandsum, xpos4    |
+| pipeline  | II=1                      | DelayAndSum.cpp:49 in delayandsum           |
++-----------+---------------------------+---------------------------------------------+
 
 

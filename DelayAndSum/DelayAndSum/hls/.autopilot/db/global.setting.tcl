@@ -42,8 +42,8 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xczu48dr:-ffvg1517:-2-e
-set SourceFiles {sc {} c ../../DelayAndSum.cpp}
-set SourceFlags {sc {} c {{}}}
+set SourceFiles {sc {} c {../../CalculateWeights.cpp ../../DelayAndSum.cpp}}
+set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile {}
 set TBFiles {verilog {../../TestData.hpp ../../DelayAndSumTB.cpp} bc {../../TestData.hpp ../../DelayAndSumTB.cpp} sc {../../TestData.hpp ../../DelayAndSumTB.cpp} vhdl {../../TestData.hpp ../../DelayAndSumTB.cpp} c {} cas {../../TestData.hpp ../../DelayAndSumTB.cpp}}
 set SpecLanguage C

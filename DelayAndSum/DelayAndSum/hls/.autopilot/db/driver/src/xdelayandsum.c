@@ -21,139 +21,88 @@ int XDelayandsum_CfgInitialize(XDelayandsum *InstancePtr, XDelayandsum_Config *C
 }
 #endif
 
-void XDelayandsum_Set_w1_real(XDelayandsum *InstancePtr, u32 Data) {
+void XDelayandsum_Set_phi(XDelayandsum *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W1_REAL_DATA, Data);
+    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_PHI_DATA, Data);
 }
 
-u32 XDelayandsum_Get_w1_real(XDelayandsum *InstancePtr) {
+u32 XDelayandsum_Get_phi(XDelayandsum *InstancePtr) {
     u32 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W1_REAL_DATA);
+    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_PHI_DATA);
     return Data;
 }
 
-void XDelayandsum_Set_w1_imag(XDelayandsum *InstancePtr, u32 Data) {
+void XDelayandsum_Set_xpos1(XDelayandsum *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W1_IMAG_DATA, Data);
+    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_XPOS1_DATA, Data);
 }
 
-u32 XDelayandsum_Get_w1_imag(XDelayandsum *InstancePtr) {
+u32 XDelayandsum_Get_xpos1(XDelayandsum *InstancePtr) {
     u32 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W1_IMAG_DATA);
+    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_XPOS1_DATA);
     return Data;
 }
 
-void XDelayandsum_Set_w2_real(XDelayandsum *InstancePtr, u32 Data) {
+void XDelayandsum_Set_xpos2(XDelayandsum *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W2_REAL_DATA, Data);
+    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_XPOS2_DATA, Data);
 }
 
-u32 XDelayandsum_Get_w2_real(XDelayandsum *InstancePtr) {
+u32 XDelayandsum_Get_xpos2(XDelayandsum *InstancePtr) {
     u32 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W2_REAL_DATA);
+    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_XPOS2_DATA);
     return Data;
 }
 
-void XDelayandsum_Set_w2_imag(XDelayandsum *InstancePtr, u32 Data) {
+void XDelayandsum_Set_xpos3(XDelayandsum *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W2_IMAG_DATA, Data);
+    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_XPOS3_DATA, Data);
 }
 
-u32 XDelayandsum_Get_w2_imag(XDelayandsum *InstancePtr) {
+u32 XDelayandsum_Get_xpos3(XDelayandsum *InstancePtr) {
     u32 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W2_IMAG_DATA);
+    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_XPOS3_DATA);
     return Data;
 }
 
-void XDelayandsum_Set_w3_real(XDelayandsum *InstancePtr, u32 Data) {
+void XDelayandsum_Set_xpos4(XDelayandsum *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W3_REAL_DATA, Data);
+    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_XPOS4_DATA, Data);
 }
 
-u32 XDelayandsum_Get_w3_real(XDelayandsum *InstancePtr) {
+u32 XDelayandsum_Get_xpos4(XDelayandsum *InstancePtr) {
     u32 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W3_REAL_DATA);
-    return Data;
-}
-
-void XDelayandsum_Set_w3_imag(XDelayandsum *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W3_IMAG_DATA, Data);
-}
-
-u32 XDelayandsum_Get_w3_imag(XDelayandsum *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W3_IMAG_DATA);
-    return Data;
-}
-
-void XDelayandsum_Set_w4_real(XDelayandsum *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W4_REAL_DATA, Data);
-}
-
-u32 XDelayandsum_Get_w4_real(XDelayandsum *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W4_REAL_DATA);
-    return Data;
-}
-
-void XDelayandsum_Set_w4_imag(XDelayandsum *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W4_IMAG_DATA, Data);
-}
-
-u32 XDelayandsum_Get_w4_imag(XDelayandsum *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_W4_IMAG_DATA);
+    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_XPOS4_DATA);
     return Data;
 }
 

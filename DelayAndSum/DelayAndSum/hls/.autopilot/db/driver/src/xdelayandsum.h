@@ -93,22 +93,16 @@ int XDelayandsum_Release(XDelayandsum *InstancePtr);
 #endif
 
 
-void XDelayandsum_Set_w1_real(XDelayandsum *InstancePtr, u32 Data);
-u32 XDelayandsum_Get_w1_real(XDelayandsum *InstancePtr);
-void XDelayandsum_Set_w1_imag(XDelayandsum *InstancePtr, u32 Data);
-u32 XDelayandsum_Get_w1_imag(XDelayandsum *InstancePtr);
-void XDelayandsum_Set_w2_real(XDelayandsum *InstancePtr, u32 Data);
-u32 XDelayandsum_Get_w2_real(XDelayandsum *InstancePtr);
-void XDelayandsum_Set_w2_imag(XDelayandsum *InstancePtr, u32 Data);
-u32 XDelayandsum_Get_w2_imag(XDelayandsum *InstancePtr);
-void XDelayandsum_Set_w3_real(XDelayandsum *InstancePtr, u32 Data);
-u32 XDelayandsum_Get_w3_real(XDelayandsum *InstancePtr);
-void XDelayandsum_Set_w3_imag(XDelayandsum *InstancePtr, u32 Data);
-u32 XDelayandsum_Get_w3_imag(XDelayandsum *InstancePtr);
-void XDelayandsum_Set_w4_real(XDelayandsum *InstancePtr, u32 Data);
-u32 XDelayandsum_Get_w4_real(XDelayandsum *InstancePtr);
-void XDelayandsum_Set_w4_imag(XDelayandsum *InstancePtr, u32 Data);
-u32 XDelayandsum_Get_w4_imag(XDelayandsum *InstancePtr);
+void XDelayandsum_Set_phi(XDelayandsum *InstancePtr, u32 Data);
+u32 XDelayandsum_Get_phi(XDelayandsum *InstancePtr);
+void XDelayandsum_Set_xpos1(XDelayandsum *InstancePtr, u32 Data);
+u32 XDelayandsum_Get_xpos1(XDelayandsum *InstancePtr);
+void XDelayandsum_Set_xpos2(XDelayandsum *InstancePtr, u32 Data);
+u32 XDelayandsum_Get_xpos2(XDelayandsum *InstancePtr);
+void XDelayandsum_Set_xpos3(XDelayandsum *InstancePtr, u32 Data);
+u32 XDelayandsum_Get_xpos3(XDelayandsum *InstancePtr);
+void XDelayandsum_Set_xpos4(XDelayandsum *InstancePtr, u32 Data);
+u32 XDelayandsum_Get_xpos4(XDelayandsum *InstancePtr);
 
 #ifdef __cplusplus
 }

@@ -1,14 +1,18 @@
 {
   "0": {
-    "basicblocks": 1,
+    "basicblocks": 1481,
     "calls": "",
     "file": "DelayAndSum.cpp",
-    "fileloc": 3,
-    "instructions": 115,
+    "fileloc": 4,
+    "instructions": 14559,
     "loads": {
-      "T": 8
+      "L": 2,
+      "T": 5
     },
     "name": "DelayAndSum",
-    "total_instructions": 115
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 14559
   }
 }

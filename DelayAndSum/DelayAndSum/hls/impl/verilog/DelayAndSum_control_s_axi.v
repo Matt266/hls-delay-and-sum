@@ -8,7 +8,7 @@
 `timescale 1ns/1ps
 module DelayAndSum_control_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 7,
+    C_S_AXI_ADDR_WIDTH = 6,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -31,14 +31,11 @@ module DelayAndSum_control_s_axi
     output wire [1:0]                    RRESP,
     output wire                          RVALID,
     input  wire                          RREADY,
-    output wire [15:0]                   w1_real,
-    output wire [15:0]                   w1_imag,
-    output wire [15:0]                   w2_real,
-    output wire [15:0]                   w2_imag,
-    output wire [15:0]                   w3_real,
-    output wire [15:0]                   w3_imag,
-    output wire [15:0]                   w4_real,
-    output wire [15:0]                   w4_imag
+    output wire [15:0]                   phi,
+    output wire [15:0]                   xpos1,
+    output wire [15:0]                   xpos2,
+    output wire [15:0]                   xpos3,
+    output wire [15:0]                   xpos4
 );
 //------------------------Address Info-------------------
 // Protocol Used: ap_ctrl_none
@@ -47,66 +44,48 @@ module DelayAndSum_control_s_axi
 // 0x04 : reserved
 // 0x08 : reserved
 // 0x0c : reserved
-// 0x10 : Data signal of w1_real
-//        bit 15~0 - w1_real[15:0] (Read/Write)
+// 0x10 : Data signal of phi
+//        bit 15~0 - phi[15:0] (Read/Write)
 //        others   - reserved
 // 0x14 : reserved
-// 0x18 : Data signal of w1_imag
-//        bit 15~0 - w1_imag[15:0] (Read/Write)
+// 0x18 : Data signal of xpos1
+//        bit 15~0 - xpos1[15:0] (Read/Write)
 //        others   - reserved
 // 0x1c : reserved
-// 0x20 : Data signal of w2_real
-//        bit 15~0 - w2_real[15:0] (Read/Write)
+// 0x20 : Data signal of xpos2
+//        bit 15~0 - xpos2[15:0] (Read/Write)
 //        others   - reserved
 // 0x24 : reserved
-// 0x28 : Data signal of w2_imag
-//        bit 15~0 - w2_imag[15:0] (Read/Write)
+// 0x28 : Data signal of xpos3
+//        bit 15~0 - xpos3[15:0] (Read/Write)
 //        others   - reserved
 // 0x2c : reserved
-// 0x30 : Data signal of w3_real
-//        bit 15~0 - w3_real[15:0] (Read/Write)
+// 0x30 : Data signal of xpos4
+//        bit 15~0 - xpos4[15:0] (Read/Write)
 //        others   - reserved
 // 0x34 : reserved
-// 0x38 : Data signal of w3_imag
-//        bit 15~0 - w3_imag[15:0] (Read/Write)
-//        others   - reserved
-// 0x3c : reserved
-// 0x40 : Data signal of w4_real
-//        bit 15~0 - w4_real[15:0] (Read/Write)
-//        others   - reserved
-// 0x44 : reserved
-// 0x48 : Data signal of w4_imag
-//        bit 15~0 - w4_imag[15:0] (Read/Write)
-//        others   - reserved
-// 0x4c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_W1_REAL_DATA_0 = 7'h10,
-    ADDR_W1_REAL_CTRL   = 7'h14,
-    ADDR_W1_IMAG_DATA_0 = 7'h18,
-    ADDR_W1_IMAG_CTRL   = 7'h1c,
-    ADDR_W2_REAL_DATA_0 = 7'h20,
-    ADDR_W2_REAL_CTRL   = 7'h24,
-    ADDR_W2_IMAG_DATA_0 = 7'h28,
-    ADDR_W2_IMAG_CTRL   = 7'h2c,
-    ADDR_W3_REAL_DATA_0 = 7'h30,
-    ADDR_W3_REAL_CTRL   = 7'h34,
-    ADDR_W3_IMAG_DATA_0 = 7'h38,
-    ADDR_W3_IMAG_CTRL   = 7'h3c,
-    ADDR_W4_REAL_DATA_0 = 7'h40,
-    ADDR_W4_REAL_CTRL   = 7'h44,
-    ADDR_W4_IMAG_DATA_0 = 7'h48,
-    ADDR_W4_IMAG_CTRL   = 7'h4c,
-    WRIDLE              = 2'd0,
-    WRDATA              = 2'd1,
-    WRRESP              = 2'd2,
-    WRRESET             = 2'd3,
-    RDIDLE              = 2'd0,
-    RDDATA              = 2'd1,
-    RDRESET             = 2'd2,
-    ADDR_BITS                = 7;
+    ADDR_PHI_DATA_0   = 6'h10,
+    ADDR_PHI_CTRL     = 6'h14,
+    ADDR_XPOS1_DATA_0 = 6'h18,
+    ADDR_XPOS1_CTRL   = 6'h1c,
+    ADDR_XPOS2_DATA_0 = 6'h20,
+    ADDR_XPOS2_CTRL   = 6'h24,
+    ADDR_XPOS3_DATA_0 = 6'h28,
+    ADDR_XPOS3_CTRL   = 6'h2c,
+    ADDR_XPOS4_DATA_0 = 6'h30,
+    ADDR_XPOS4_CTRL   = 6'h34,
+    WRIDLE            = 2'd0,
+    WRDATA            = 2'd1,
+    WRRESP            = 2'd2,
+    WRRESET           = 2'd3,
+    RDIDLE            = 2'd0,
+    RDDATA            = 2'd1,
+    RDRESET           = 2'd2,
+    ADDR_BITS                = 6;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -121,14 +100,11 @@ localparam
     wire                          ar_hs;
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
-    reg  [15:0]                   int_w1_real = 'b0;
-    reg  [15:0]                   int_w1_imag = 'b0;
-    reg  [15:0]                   int_w2_real = 'b0;
-    reg  [15:0]                   int_w2_imag = 'b0;
-    reg  [15:0]                   int_w3_real = 'b0;
-    reg  [15:0]                   int_w3_imag = 'b0;
-    reg  [15:0]                   int_w4_real = 'b0;
-    reg  [15:0]                   int_w4_imag = 'b0;
+    reg  [15:0]                   int_phi = 'b0;
+    reg  [15:0]                   int_xpos1 = 'b0;
+    reg  [15:0]                   int_xpos2 = 'b0;
+    reg  [15:0]                   int_xpos3 = 'b0;
+    reg  [15:0]                   int_xpos4 = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -221,29 +197,20 @@ always @(posedge ACLK) begin
         if (ar_hs) begin
             rdata <= 'b0;
             case (raddr)
-                ADDR_W1_REAL_DATA_0: begin
-                    rdata <= int_w1_real[15:0];
+                ADDR_PHI_DATA_0: begin
+                    rdata <= int_phi[15:0];
                 end
-                ADDR_W1_IMAG_DATA_0: begin
-                    rdata <= int_w1_imag[15:0];
+                ADDR_XPOS1_DATA_0: begin
+                    rdata <= int_xpos1[15:0];
                 end
-                ADDR_W2_REAL_DATA_0: begin
-                    rdata <= int_w2_real[15:0];
+                ADDR_XPOS2_DATA_0: begin
+                    rdata <= int_xpos2[15:0];
                 end
-                ADDR_W2_IMAG_DATA_0: begin
-                    rdata <= int_w2_imag[15:0];
+                ADDR_XPOS3_DATA_0: begin
+                    rdata <= int_xpos3[15:0];
                 end
-                ADDR_W3_REAL_DATA_0: begin
-                    rdata <= int_w3_real[15:0];
-                end
-                ADDR_W3_IMAG_DATA_0: begin
-                    rdata <= int_w3_imag[15:0];
-                end
-                ADDR_W4_REAL_DATA_0: begin
-                    rdata <= int_w4_real[15:0];
-                end
-                ADDR_W4_IMAG_DATA_0: begin
-                    rdata <= int_w4_imag[15:0];
+                ADDR_XPOS4_DATA_0: begin
+                    rdata <= int_xpos4[15:0];
                 end
             endcase
         end
@@ -252,91 +219,58 @@ end
 
 
 //------------------------Register logic-----------------
-assign w1_real = int_w1_real;
-assign w1_imag = int_w1_imag;
-assign w2_real = int_w2_real;
-assign w2_imag = int_w2_imag;
-assign w3_real = int_w3_real;
-assign w3_imag = int_w3_imag;
-assign w4_real = int_w4_real;
-assign w4_imag = int_w4_imag;
-// int_w1_real[15:0]
+assign phi   = int_phi;
+assign xpos1 = int_xpos1;
+assign xpos2 = int_xpos2;
+assign xpos3 = int_xpos3;
+assign xpos4 = int_xpos4;
+// int_phi[15:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_w1_real[15:0] <= 0;
+        int_phi[15:0] <= 0;
     else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_W1_REAL_DATA_0)
-            int_w1_real[15:0] <= (WDATA[31:0] & wmask) | (int_w1_real[15:0] & ~wmask);
+        if (w_hs && waddr == ADDR_PHI_DATA_0)
+            int_phi[15:0] <= (WDATA[31:0] & wmask) | (int_phi[15:0] & ~wmask);
     end
 end
 
-// int_w1_imag[15:0]
+// int_xpos1[15:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_w1_imag[15:0] <= 0;
+        int_xpos1[15:0] <= 0;
     else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_W1_IMAG_DATA_0)
-            int_w1_imag[15:0] <= (WDATA[31:0] & wmask) | (int_w1_imag[15:0] & ~wmask);
+        if (w_hs && waddr == ADDR_XPOS1_DATA_0)
+            int_xpos1[15:0] <= (WDATA[31:0] & wmask) | (int_xpos1[15:0] & ~wmask);
     end
 end
 
-// int_w2_real[15:0]
+// int_xpos2[15:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_w2_real[15:0] <= 0;
+        int_xpos2[15:0] <= 0;
     else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_W2_REAL_DATA_0)
-            int_w2_real[15:0] <= (WDATA[31:0] & wmask) | (int_w2_real[15:0] & ~wmask);
+        if (w_hs && waddr == ADDR_XPOS2_DATA_0)
+            int_xpos2[15:0] <= (WDATA[31:0] & wmask) | (int_xpos2[15:0] & ~wmask);
     end
 end
 
-// int_w2_imag[15:0]
+// int_xpos3[15:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_w2_imag[15:0] <= 0;
+        int_xpos3[15:0] <= 0;
     else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_W2_IMAG_DATA_0)
-            int_w2_imag[15:0] <= (WDATA[31:0] & wmask) | (int_w2_imag[15:0] & ~wmask);
+        if (w_hs && waddr == ADDR_XPOS3_DATA_0)
+            int_xpos3[15:0] <= (WDATA[31:0] & wmask) | (int_xpos3[15:0] & ~wmask);
     end
 end
 
-// int_w3_real[15:0]
+// int_xpos4[15:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_w3_real[15:0] <= 0;
+        int_xpos4[15:0] <= 0;
     else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_W3_REAL_DATA_0)
-            int_w3_real[15:0] <= (WDATA[31:0] & wmask) | (int_w3_real[15:0] & ~wmask);
-    end
-end
-
-// int_w3_imag[15:0]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_w3_imag[15:0] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_W3_IMAG_DATA_0)
-            int_w3_imag[15:0] <= (WDATA[31:0] & wmask) | (int_w3_imag[15:0] & ~wmask);
-    end
-end
-
-// int_w4_real[15:0]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_w4_real[15:0] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_W4_REAL_DATA_0)
-            int_w4_real[15:0] <= (WDATA[31:0] & wmask) | (int_w4_real[15:0] & ~wmask);
-    end
-end
-
-// int_w4_imag[15:0]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_w4_imag[15:0] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_W4_IMAG_DATA_0)
-            int_w4_imag[15:0] <= (WDATA[31:0] & wmask) | (int_w4_imag[15:0] & ~wmask);
+        if (w_hs && waddr == ADDR_XPOS4_DATA_0)
+            int_xpos4[15:0] <= (WDATA[31:0] & wmask) | (int_xpos4[15:0] & ~wmask);
     end
 end
 

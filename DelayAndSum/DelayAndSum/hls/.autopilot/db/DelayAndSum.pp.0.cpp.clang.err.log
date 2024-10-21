@@ -1,64 +1,55 @@
 directive:1:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=name=DelayAndSum_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=DelayAndSum
         ^
-DelayAndSum.cpp:23:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=name=DelayAndSum_XLX_SEP_ [-Wdump-hls-pragmas]
+DelayAndSum.cpp:26:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=name=DelayAndSum_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS top name=DelayAndSum
         ^
-DelayAndSum.cpp:26:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in1_real_XLX_SEP_ [-Wdump-hls-pragmas]
+DelayAndSum.cpp:29:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in1_real_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=axis port=in1_real
         ^
-DelayAndSum.cpp:27:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in1_imag_XLX_SEP_ [-Wdump-hls-pragmas]
+DelayAndSum.cpp:30:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in1_imag_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=axis port=in1_imag
         ^
-DelayAndSum.cpp:28:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in2_real_XLX_SEP_ [-Wdump-hls-pragmas]
+DelayAndSum.cpp:31:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in2_real_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=axis port=in2_real
         ^
-DelayAndSum.cpp:29:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in2_imag_XLX_SEP_ [-Wdump-hls-pragmas]
+DelayAndSum.cpp:32:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in2_imag_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=axis port=in2_imag
         ^
-DelayAndSum.cpp:30:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in3_real_XLX_SEP_ [-Wdump-hls-pragmas]
+DelayAndSum.cpp:33:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in3_real_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=axis port=in3_real
         ^
-DelayAndSum.cpp:31:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in3_imag_XLX_SEP_ [-Wdump-hls-pragmas]
+DelayAndSum.cpp:34:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in3_imag_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=axis port=in3_imag
         ^
-DelayAndSum.cpp:32:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in4_real_XLX_SEP_ [-Wdump-hls-pragmas]
+DelayAndSum.cpp:35:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in4_real_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=axis port=in4_real
         ^
-DelayAndSum.cpp:33:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in4_imag_XLX_SEP_ [-Wdump-hls-pragmas]
+DelayAndSum.cpp:36:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=in4_imag_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=axis port=in4_imag
         ^
-DelayAndSum.cpp:36:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=out_real_XLX_SEP_ [-Wdump-hls-pragmas]
+DelayAndSum.cpp:39:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=out_real_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=axis port=out_real
         ^
-DelayAndSum.cpp:37:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=out_imag_XLX_SEP_ [-Wdump-hls-pragmas]
+DelayAndSum.cpp:40:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=axis port=out_imag_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE mode=axis port=out_imag
         ^
-DelayAndSum.cpp:40:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w1_real_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE mode=s_axilite port=w1_real
+DelayAndSum.cpp:43:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=phi_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=phi
         ^
-DelayAndSum.cpp:41:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w1_imag_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE mode=s_axilite port=w1_imag
+DelayAndSum.cpp:44:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=xpos1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=xpos1
         ^
-DelayAndSum.cpp:42:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w2_real_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE mode=s_axilite port=w2_real
+DelayAndSum.cpp:45:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=xpos2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=xpos2
         ^
-DelayAndSum.cpp:43:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w2_imag_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE mode=s_axilite port=w2_imag
+DelayAndSum.cpp:46:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=xpos3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=xpos3
         ^
-DelayAndSum.cpp:44:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w3_real_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE mode=s_axilite port=w3_real
-        ^
-DelayAndSum.cpp:45:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w3_imag_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE mode=s_axilite port=w3_imag
-        ^
-DelayAndSum.cpp:46:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w4_real_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE mode=s_axilite port=w4_real
-        ^
-DelayAndSum.cpp:47:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w4_imag_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE mode=s_axilite port=w4_imag
+DelayAndSum.cpp:47:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=xpos4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=xpos4
         ^
 DelayAndSum.cpp:49:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS pipeline II=1
         ^
-21 warnings generated.
+18 warnings generated.

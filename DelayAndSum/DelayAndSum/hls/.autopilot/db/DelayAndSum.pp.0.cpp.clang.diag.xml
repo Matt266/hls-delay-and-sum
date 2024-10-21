@@ -25,7 +25,7 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>23</integer>
+      <integer>26</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -41,7 +41,7 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>26</integer>
+      <integer>29</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -57,7 +57,7 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>27</integer>
+      <integer>30</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -73,7 +73,7 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>28</integer>
+      <integer>31</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -89,7 +89,7 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>29</integer>
+      <integer>32</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -105,7 +105,7 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>30</integer>
+      <integer>33</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -121,7 +121,7 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>31</integer>
+      <integer>34</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -137,7 +137,7 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>32</integer>
+      <integer>35</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -153,7 +153,7 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>33</integer>
+      <integer>36</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -169,7 +169,7 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>36</integer>
+      <integer>39</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -185,7 +185,7 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>37</integer>
+      <integer>40</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -201,59 +201,11 @@
       <key>filename</key>
       <string>DelayAndSum.cpp</string>
       <key>line</key>
-      <integer>40</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w1_real_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>DelayAndSum.cpp</string>
-      <key>line</key>
-      <integer>41</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w1_imag_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>DelayAndSum.cpp</string>
-      <key>line</key>
-      <integer>42</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w2_real_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>DelayAndSum.cpp</string>
-      <key>line</key>
       <integer>43</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w2_imag_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=phi_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -269,7 +221,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w3_real_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=xpos1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -285,7 +237,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w3_imag_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=xpos2_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -301,7 +253,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w4_real_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=xpos3_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -317,7 +269,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=w4_imag_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=DelayAndSum_XLX_SEP_ PragmaOptions=mode=s_axilite port=xpos4_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
