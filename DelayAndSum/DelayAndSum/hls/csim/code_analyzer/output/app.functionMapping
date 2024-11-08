@@ -17760,8 +17760,8 @@
       <Return>
         <Default/>
       </Return>
-      <Argument declaration="phi (fxd_12_4_t*)" id="_v10262" name="phi">
-        <PragmaOrigin id="_fi3885_10262">
+      <Argument declaration="phi (fxd_12_4_t*)" id="_v10280" name="phi">
+        <PragmaOrigin id="_fi3885_10280">
           <CodeSection beginColumn="0" beginLine="47" endColumn="0" endLine="47" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Lite>
@@ -17774,8 +17774,8 @@
           <PortBitwidth>32</PortBitwidth>
         </AXI-Lite>
       </Argument>
-      <Argument declaration="fc (fxd_32_27_t*)" id="_v10263" name="fc">
-        <PragmaOrigin id="_fi3885_10263">
+      <Argument declaration="fc (fxd_32_27_t*)" id="_v10281" name="fc">
+        <PragmaOrigin id="_fi3885_10281">
           <CodeSection beginColumn="0" beginLine="48" endColumn="0" endLine="48" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Lite>
@@ -17788,8 +17788,8 @@
           <PortBitwidth>32</PortBitwidth>
         </AXI-Lite>
       </Argument>
-      <Argument declaration="xpos1 (fxd_16_8_t*)" id="_v10264" name="xpos1">
-        <PragmaOrigin id="_fi3885_10264">
+      <Argument declaration="xpos1 (fxd_16_8_t*)" id="_v10282" name="xpos1">
+        <PragmaOrigin id="_fi3885_10282">
           <CodeSection beginColumn="0" beginLine="49" endColumn="0" endLine="49" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Lite>
@@ -17802,8 +17802,8 @@
           <PortBitwidth>32</PortBitwidth>
         </AXI-Lite>
       </Argument>
-      <Argument declaration="xpos2 (fxd_16_8_t*)" id="_v10265" name="xpos2">
-        <PragmaOrigin id="_fi3885_10265">
+      <Argument declaration="xpos2 (fxd_16_8_t*)" id="_v10283" name="xpos2">
+        <PragmaOrigin id="_fi3885_10283">
           <CodeSection beginColumn="0" beginLine="50" endColumn="0" endLine="50" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Lite>
@@ -17816,8 +17816,8 @@
           <PortBitwidth>32</PortBitwidth>
         </AXI-Lite>
       </Argument>
-      <Argument declaration="xpos3 (fxd_16_8_t*)" id="_v10266" name="xpos3">
-        <PragmaOrigin id="_fi3885_10266">
+      <Argument declaration="xpos3 (fxd_16_8_t*)" id="_v10284" name="xpos3">
+        <PragmaOrigin id="_fi3885_10284">
           <CodeSection beginColumn="0" beginLine="51" endColumn="0" endLine="51" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Lite>
@@ -17830,8 +17830,8 @@
           <PortBitwidth>32</PortBitwidth>
         </AXI-Lite>
       </Argument>
-      <Argument declaration="xpos4 (fxd_16_8_t*)" id="_v10267" name="xpos4">
-        <PragmaOrigin id="_fi3885_10267">
+      <Argument declaration="xpos4 (fxd_16_8_t*)" id="_v10285" name="xpos4">
+        <PragmaOrigin id="_fi3885_10285">
           <CodeSection beginColumn="0" beginLine="52" endColumn="0" endLine="52" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Lite>
@@ -17844,8 +17844,8 @@
           <PortBitwidth>32</PortBitwidth>
         </AXI-Lite>
       </Argument>
-      <Argument declaration="in1_real (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10268" name="in1_real">
-        <PragmaOrigin id="_fi3885_10268">
+      <Argument declaration="in1_real (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10286" name="in1_real">
+        <PragmaOrigin id="_fi3885_10286">
           <CodeSection beginColumn="0" beginLine="33" endColumn="0" endLine="33" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Stream>
@@ -17856,8 +17856,8 @@
           <PortBitwidth>128</PortBitwidth>
         </AXI-Stream>
       </Argument>
-      <Argument declaration="in1_imag (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10269" name="in1_imag">
-        <PragmaOrigin id="_fi3885_10269">
+      <Argument declaration="in1_imag (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10287" name="in1_imag">
+        <PragmaOrigin id="_fi3885_10287">
           <CodeSection beginColumn="0" beginLine="34" endColumn="0" endLine="34" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Stream>
@@ -17868,8 +17868,8 @@
           <PortBitwidth>128</PortBitwidth>
         </AXI-Stream>
       </Argument>
-      <Argument declaration="in2_real (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10270" name="in2_real">
-        <PragmaOrigin id="_fi3885_10270">
+      <Argument declaration="in2_real (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10288" name="in2_real">
+        <PragmaOrigin id="_fi3885_10288">
           <CodeSection beginColumn="0" beginLine="35" endColumn="0" endLine="35" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Stream>
@@ -17880,8 +17880,8 @@
           <PortBitwidth>128</PortBitwidth>
         </AXI-Stream>
       </Argument>
-      <Argument declaration="in2_imag (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10271" name="in2_imag">
-        <PragmaOrigin id="_fi3885_10271">
+      <Argument declaration="in2_imag (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10289" name="in2_imag">
+        <PragmaOrigin id="_fi3885_10289">
           <CodeSection beginColumn="0" beginLine="36" endColumn="0" endLine="36" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Stream>
@@ -17892,8 +17892,8 @@
           <PortBitwidth>128</PortBitwidth>
         </AXI-Stream>
       </Argument>
-      <Argument declaration="in3_real (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10272" name="in3_real">
-        <PragmaOrigin id="_fi3885_10272">
+      <Argument declaration="in3_real (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10290" name="in3_real">
+        <PragmaOrigin id="_fi3885_10290">
           <CodeSection beginColumn="0" beginLine="37" endColumn="0" endLine="37" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Stream>
@@ -17904,8 +17904,8 @@
           <PortBitwidth>128</PortBitwidth>
         </AXI-Stream>
       </Argument>
-      <Argument declaration="in3_imag (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10273" name="in3_imag">
-        <PragmaOrigin id="_fi3885_10273">
+      <Argument declaration="in3_imag (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10291" name="in3_imag">
+        <PragmaOrigin id="_fi3885_10291">
           <CodeSection beginColumn="0" beginLine="38" endColumn="0" endLine="38" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Stream>
@@ -17916,8 +17916,8 @@
           <PortBitwidth>128</PortBitwidth>
         </AXI-Stream>
       </Argument>
-      <Argument declaration="in4_real (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10274" name="in4_real">
-        <PragmaOrigin id="_fi3885_10274">
+      <Argument declaration="in4_real (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10292" name="in4_real">
+        <PragmaOrigin id="_fi3885_10292">
           <CodeSection beginColumn="0" beginLine="39" endColumn="0" endLine="39" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Stream>
@@ -17928,8 +17928,8 @@
           <PortBitwidth>128</PortBitwidth>
         </AXI-Stream>
       </Argument>
-      <Argument declaration="in4_imag (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10275" name="in4_imag">
-        <PragmaOrigin id="_fi3885_10275">
+      <Argument declaration="in4_imag (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10293" name="in4_imag">
+        <PragmaOrigin id="_fi3885_10293">
           <CodeSection beginColumn="0" beginLine="40" endColumn="0" endLine="40" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Stream>
@@ -17940,8 +17940,8 @@
           <PortBitwidth>128</PortBitwidth>
         </AXI-Stream>
       </Argument>
-      <Argument declaration="out_real (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10276" name="out_real">
-        <PragmaOrigin id="_fi3885_10276">
+      <Argument declaration="out_real (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10294" name="out_real">
+        <PragmaOrigin id="_fi3885_10294">
           <CodeSection beginColumn="0" beginLine="43" endColumn="0" endLine="43" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Stream>
@@ -17952,8 +17952,8 @@
           <PortBitwidth>128</PortBitwidth>
         </AXI-Stream>
       </Argument>
-      <Argument declaration="out_imag (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10277" name="out_imag">
-        <PragmaOrigin id="_fi3885_10277">
+      <Argument declaration="out_imag (stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0>, 0>*)" id="_v10295" name="out_imag">
+        <PragmaOrigin id="_fi3885_10295">
           <CodeSection beginColumn="0" beginLine="44" endColumn="0" endLine="44" file="DelayAndSum.cpp"/>
         </PragmaOrigin>
         <AXI-Stream>

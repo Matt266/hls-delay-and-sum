@@ -1,0 +1,74 @@
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_DelayAndSum_top glbl -Oenable_linking_all_libraries -prj DelayAndSum.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_23 -L floating_point_v7_1_18 --lib ieee_proposed=./ieee_proposed -s DelayAndSum 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_axi_s_in1_imag.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in1_imag
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_axi_s_in1_real.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in1_real
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_axi_s_in2_imag.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in2_imag
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_axi_s_in2_real.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in2_real
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_axi_s_in3_imag.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in3_imag
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_axi_s_in3_real.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in3_real
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_axi_s_in4_imag.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in4_imag
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_axi_s_in4_real.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in4_real
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_axi_s_out_imag.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_out_imag
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_axi_s_out_real.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_out_real
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/DelayAndSum.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_DelayAndSum_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/DelayAndSum.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DelayAndSum
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/DelayAndSum_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DelayAndSum_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/DelayAndSum_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DelayAndSum_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.DelayAndSum_control_s_axi
+Compiling module xil_defaultlib.DelayAndSum_regslice_both(DataWi...
+Compiling module xil_defaultlib.DelayAndSum
+Compiling module xil_defaultlib.fifo(DEPTH=2,WIDTH=16)
+Compiling module xil_defaultlib.AESL_axi_s_in1_real
+Compiling module xil_defaultlib.AESL_axi_s_in1_imag
+Compiling module xil_defaultlib.AESL_axi_s_in2_real
+Compiling module xil_defaultlib.AESL_axi_s_in2_imag
+Compiling module xil_defaultlib.AESL_axi_s_in3_real
+Compiling module xil_defaultlib.AESL_axi_s_in3_imag
+Compiling module xil_defaultlib.AESL_axi_s_in4_real
+Compiling module xil_defaultlib.AESL_axi_s_in4_imag
+Compiling module xil_defaultlib.AESL_axi_s_out_real
+Compiling module xil_defaultlib.AESL_axi_s_out_imag
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_DelayAndSum_top
+Compiling module work.glbl
+Built simulation snapshot DelayAndSum

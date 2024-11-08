@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'DelayAndSum'
 ================================================================
-* Date:           Fri Nov  8 17:51:33 2024
+* Date:           Fri Nov  8 19:42:36 2024
 
 * Version:        2024.1 (Build 5069499 on May 21 2024)
 * Project:        DelayAndSum
@@ -86,12 +86,12 @@
     +----------------------------------+----------+----+---+----+------------+------------+
     |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |add_ln91_1_fu_172_p2              |         +|   0|  0|  25|          18|          18|
-    |add_ln91_fu_162_p2                |         +|   0|  0|  24|          17|          17|
-    |add_ln92_fu_198_p2                |         +|   0|  0|  38|          31|          31|
-    |add_ln96_1_fu_237_p2              |         +|   0|  0|  25|          18|          18|
-    |add_ln96_fu_227_p2                |         +|   0|  0|  24|          17|          17|
-    |add_ln97_fu_263_p2                |         +|   0|  0|  38|          31|          31|
+    |add_ln90_1_fu_172_p2              |         +|   0|  0|  25|          18|          18|
+    |add_ln90_fu_162_p2                |         +|   0|  0|  24|          17|          17|
+    |add_ln91_fu_198_p2                |         +|   0|  0|  38|          31|          31|
+    |add_ln95_1_fu_237_p2              |         +|   0|  0|  25|          18|          18|
+    |add_ln95_fu_227_p2                |         +|   0|  0|  24|          17|          17|
+    |add_ln96_fu_263_p2                |         +|   0|  0|  38|          31|          31|
     |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
     |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
     |ap_block_state1_io                |        or|   0|  0|   2|           1|           1|
@@ -245,28 +245,28 @@ ST_1 : Operation 9 [1/1] (0.07ns)   --->   "%in4_real_buffer = read i16 @_ssdm_o
 ST_1 : Operation 10 [1/1] (0.07ns)   --->   "%in4_imag_buffer = read i16 @_ssdm_op_Read.axis.volatile.i16P128A, i16 %in4_imag" [DelayAndSum.cpp:63]   --->   Operation 10 'read' 'in4_imag_buffer' <Predicate = true> <Delay = 0.07> <CoreInst = "regslice">   --->   Core 148 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%in1_real_buffer_cast = sext i16 %in1_real_buffer" [DelayAndSum.cpp:56]   --->   Operation 11 'sext' 'in1_real_buffer_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%in2_real_buffer_cast = sext i16 %in2_real_buffer" [DelayAndSum.cpp:58]   --->   Operation 12 'sext' 'in2_real_buffer_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sext_ln91 = sext i16 %in3_real_buffer" [DelayAndSum.cpp:91]   --->   Operation 13 'sext' 'sext_ln91' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.85ns)   --->   "%add_ln91 = add i17 %in1_real_buffer_cast, i17 %sext_ln91" [DelayAndSum.cpp:91]   --->   Operation 14 'add' 'add_ln91' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%sext_ln91_1 = sext i17 %add_ln91" [DelayAndSum.cpp:91]   --->   Operation 15 'sext' 'sext_ln91_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.86ns)   --->   "%add_ln91_1 = add i18 %sext_ln91_1, i18 %in2_real_buffer_cast" [DelayAndSum.cpp:91]   --->   Operation 16 'add' 'add_ln91_1' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i31 @_ssdm_op_BitConcatenate.i31.i18.i13, i18 %add_ln91_1, i13 0" [DelayAndSum.cpp:91]   --->   Operation 17 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%shl_ln1 = bitconcatenate i29 @_ssdm_op_BitConcatenate.i29.i16.i13, i16 %in4_real_buffer, i13 0" [DelayAndSum.cpp:92]   --->   Operation 18 'bitconcatenate' 'shl_ln1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%sext_ln92 = sext i29 %shl_ln1" [DelayAndSum.cpp:92]   --->   Operation 19 'sext' 'sext_ln92' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (1.00ns)   --->   "%add_ln92 = add i31 %sext_ln92, i31 %shl_ln" [DelayAndSum.cpp:92]   --->   Operation 20 'add' 'add_ln92' <Predicate = true> <Delay = 1.00> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_s = partselect i16 @_ssdm_op_PartSelect.i16.i31.i32.i32, i31 %add_ln92, i32 15, i32 30" [DelayAndSum.cpp:89]   --->   Operation 21 'partselect' 'p_s' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [2/2] (0.45ns)   --->   "%write_ln89 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %out_real, i16 %p_s" [DelayAndSum.cpp:89]   --->   Operation 22 'write' 'write_ln89' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 148 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sext_ln90 = sext i16 %in3_real_buffer" [DelayAndSum.cpp:90]   --->   Operation 13 'sext' 'sext_ln90' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.85ns)   --->   "%add_ln90 = add i17 %in1_real_buffer_cast, i17 %sext_ln90" [DelayAndSum.cpp:90]   --->   Operation 14 'add' 'add_ln90' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%sext_ln90_1 = sext i17 %add_ln90" [DelayAndSum.cpp:90]   --->   Operation 15 'sext' 'sext_ln90_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.86ns)   --->   "%add_ln90_1 = add i18 %sext_ln90_1, i18 %in2_real_buffer_cast" [DelayAndSum.cpp:90]   --->   Operation 16 'add' 'add_ln90_1' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i31 @_ssdm_op_BitConcatenate.i31.i18.i13, i18 %add_ln90_1, i13 0" [DelayAndSum.cpp:90]   --->   Operation 17 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%shl_ln1 = bitconcatenate i29 @_ssdm_op_BitConcatenate.i29.i16.i13, i16 %in4_real_buffer, i13 0" [DelayAndSum.cpp:91]   --->   Operation 18 'bitconcatenate' 'shl_ln1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%sext_ln91 = sext i29 %shl_ln1" [DelayAndSum.cpp:91]   --->   Operation 19 'sext' 'sext_ln91' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.00ns)   --->   "%add_ln91 = add i31 %sext_ln91, i31 %shl_ln" [DelayAndSum.cpp:91]   --->   Operation 20 'add' 'add_ln91' <Predicate = true> <Delay = 1.00> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_s = partselect i16 @_ssdm_op_PartSelect.i16.i31.i32.i32, i31 %add_ln91, i32 15, i32 30" [DelayAndSum.cpp:88]   --->   Operation 21 'partselect' 'p_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [2/2] (0.45ns)   --->   "%write_ln88 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %out_real, i16 %p_s" [DelayAndSum.cpp:88]   --->   Operation 22 'write' 'write_ln88' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 148 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
 ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%in1_imag_buffer_cast = sext i16 %in1_imag_buffer" [DelayAndSum.cpp:57]   --->   Operation 23 'sext' 'in1_imag_buffer_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%in2_imag_buffer_cast = sext i16 %in2_imag_buffer" [DelayAndSum.cpp:59]   --->   Operation 24 'sext' 'in2_imag_buffer_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%sext_ln96 = sext i16 %in3_imag_buffer" [DelayAndSum.cpp:96]   --->   Operation 25 'sext' 'sext_ln96' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.85ns)   --->   "%add_ln96 = add i17 %in1_imag_buffer_cast, i17 %sext_ln96" [DelayAndSum.cpp:96]   --->   Operation 26 'add' 'add_ln96' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%sext_ln96_1 = sext i17 %add_ln96" [DelayAndSum.cpp:96]   --->   Operation 27 'sext' 'sext_ln96_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (0.86ns)   --->   "%add_ln96_1 = add i18 %sext_ln96_1, i18 %in2_imag_buffer_cast" [DelayAndSum.cpp:96]   --->   Operation 28 'add' 'add_ln96_1' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%shl_ln2 = bitconcatenate i31 @_ssdm_op_BitConcatenate.i31.i18.i13, i18 %add_ln96_1, i13 0" [DelayAndSum.cpp:96]   --->   Operation 29 'bitconcatenate' 'shl_ln2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%shl_ln3 = bitconcatenate i29 @_ssdm_op_BitConcatenate.i29.i16.i13, i16 %in4_imag_buffer, i13 0" [DelayAndSum.cpp:97]   --->   Operation 30 'bitconcatenate' 'shl_ln3' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%sext_ln97 = sext i29 %shl_ln3" [DelayAndSum.cpp:97]   --->   Operation 31 'sext' 'sext_ln97' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 32 [1/1] (1.00ns)   --->   "%add_ln97 = add i31 %sext_ln97, i31 %shl_ln2" [DelayAndSum.cpp:97]   --->   Operation 32 'add' 'add_ln97' <Predicate = true> <Delay = 1.00> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_0 = partselect i16 @_ssdm_op_PartSelect.i16.i31.i32.i32, i31 %add_ln97, i32 15, i32 30" [DelayAndSum.cpp:94]   --->   Operation 33 'partselect' 'p_0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 34 [2/2] (0.45ns)   --->   "%write_ln94 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %out_imag, i16 %p_0" [DelayAndSum.cpp:94]   --->   Operation 34 'write' 'write_ln94' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 148 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%sext_ln95 = sext i16 %in3_imag_buffer" [DelayAndSum.cpp:95]   --->   Operation 25 'sext' 'sext_ln95' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.85ns)   --->   "%add_ln95 = add i17 %in1_imag_buffer_cast, i17 %sext_ln95" [DelayAndSum.cpp:95]   --->   Operation 26 'add' 'add_ln95' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%sext_ln95_1 = sext i17 %add_ln95" [DelayAndSum.cpp:95]   --->   Operation 27 'sext' 'sext_ln95_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.86ns)   --->   "%add_ln95_1 = add i18 %sext_ln95_1, i18 %in2_imag_buffer_cast" [DelayAndSum.cpp:95]   --->   Operation 28 'add' 'add_ln95_1' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%shl_ln2 = bitconcatenate i31 @_ssdm_op_BitConcatenate.i31.i18.i13, i18 %add_ln95_1, i13 0" [DelayAndSum.cpp:95]   --->   Operation 29 'bitconcatenate' 'shl_ln2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%shl_ln3 = bitconcatenate i29 @_ssdm_op_BitConcatenate.i29.i16.i13, i16 %in4_imag_buffer, i13 0" [DelayAndSum.cpp:96]   --->   Operation 30 'bitconcatenate' 'shl_ln3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%sext_ln96 = sext i29 %shl_ln3" [DelayAndSum.cpp:96]   --->   Operation 31 'sext' 'sext_ln96' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (1.00ns)   --->   "%add_ln96 = add i31 %sext_ln96, i31 %shl_ln2" [DelayAndSum.cpp:96]   --->   Operation 32 'add' 'add_ln96' <Predicate = true> <Delay = 1.00> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_0 = partselect i16 @_ssdm_op_PartSelect.i16.i31.i32.i32, i31 %add_ln96, i32 15, i32 30" [DelayAndSum.cpp:93]   --->   Operation 33 'partselect' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [2/2] (0.45ns)   --->   "%write_ln93 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %out_imag, i16 %p_0" [DelayAndSum.cpp:93]   --->   Operation 34 'write' 'write_ln93' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 148 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
 
 State 2 <SV = 1> <Delay = 0.45>
 ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%specpipeline_ln54 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_3" [DelayAndSum.cpp:54]   --->   Operation 35 'specpipeline' 'specpipeline_ln54' <Predicate = true> <Delay = 0.00>
@@ -309,9 +309,9 @@ ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface 
 ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %out_real"   --->   Operation 72 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %out_imag, void @empty_10, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 73 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %out_imag"   --->   Operation 74 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 75 [1/2] (0.45ns)   --->   "%write_ln89 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %out_real, i16 %p_s" [DelayAndSum.cpp:89]   --->   Operation 75 'write' 'write_ln89' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 148 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
-ST_2 : Operation 76 [1/2] (0.45ns)   --->   "%write_ln94 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %out_imag, i16 %p_0" [DelayAndSum.cpp:94]   --->   Operation 76 'write' 'write_ln94' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 148 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
-ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%ret_ln99 = ret" [DelayAndSum.cpp:99]   --->   Operation 77 'ret' 'ret_ln99' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/2] (0.45ns)   --->   "%write_ln88 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %out_real, i16 %p_s" [DelayAndSum.cpp:88]   --->   Operation 75 'write' 'write_ln88' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 148 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 76 [1/2] (0.45ns)   --->   "%write_ln93 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %out_imag, i16 %p_0" [DelayAndSum.cpp:93]   --->   Operation 76 'write' 'write_ln93' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 148 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%ret_ln97 = ret" [DelayAndSum.cpp:97]   --->   Operation 77 'ret' 'ret_ln97' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -357,25 +357,25 @@ in4_real_buffer      (read          ) [ 000]
 in4_imag_buffer      (read          ) [ 000]
 in1_real_buffer_cast (sext          ) [ 000]
 in2_real_buffer_cast (sext          ) [ 000]
-sext_ln91            (sext          ) [ 000]
-add_ln91             (add           ) [ 000]
-sext_ln91_1          (sext          ) [ 000]
-add_ln91_1           (add           ) [ 000]
+sext_ln90            (sext          ) [ 000]
+add_ln90             (add           ) [ 000]
+sext_ln90_1          (sext          ) [ 000]
+add_ln90_1           (add           ) [ 000]
 shl_ln               (bitconcatenate) [ 000]
 shl_ln1              (bitconcatenate) [ 000]
-sext_ln92            (sext          ) [ 000]
-add_ln92             (add           ) [ 000]
+sext_ln91            (sext          ) [ 000]
+add_ln91             (add           ) [ 000]
 p_s                  (partselect    ) [ 011]
 in1_imag_buffer_cast (sext          ) [ 000]
 in2_imag_buffer_cast (sext          ) [ 000]
-sext_ln96            (sext          ) [ 000]
-add_ln96             (add           ) [ 000]
-sext_ln96_1          (sext          ) [ 000]
-add_ln96_1           (add           ) [ 000]
+sext_ln95            (sext          ) [ 000]
+add_ln95             (add           ) [ 000]
+sext_ln95_1          (sext          ) [ 000]
+add_ln95_1           (add           ) [ 000]
 shl_ln2              (bitconcatenate) [ 000]
 shl_ln3              (bitconcatenate) [ 000]
-sext_ln97            (sext          ) [ 000]
-add_ln97             (add           ) [ 000]
+sext_ln96            (sext          ) [ 000]
+add_ln96             (add           ) [ 000]
 p_0                  (partselect    ) [ 011]
 specpipeline_ln54    (specpipeline  ) [ 000]
 spectopmodule_ln5    (spectopmodule ) [ 000]
@@ -417,9 +417,9 @@ specinterface_ln0    (specinterface ) [ 000]
 specbitsmap_ln0      (specbitsmap   ) [ 000]
 specinterface_ln0    (specinterface ) [ 000]
 specbitsmap_ln0      (specbitsmap   ) [ 000]
-write_ln89           (write         ) [ 000]
-write_ln94           (write         ) [ 000]
-ret_ln99             (ret           ) [ 000]
+write_ln88           (write         ) [ 000]
+write_ln93           (write         ) [ 000]
+ret_ln97             (ret           ) [ 000]
 </LifeTime>
 
 <model>
@@ -926,7 +926,7 @@ ret_ln99             (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln89/1 "/>
+<opset="write_ln88/1 "/>
 </bind>
 </comp>
 
@@ -939,7 +939,7 @@ ret_ln99             (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln94/1 "/>
+<opset="write_ln93/1 "/>
 </bind>
 </comp>
 
@@ -965,18 +965,18 @@ ret_ln99             (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="158" class="1004" name="sext_ln91_fu_158">
+<comp id="158" class="1004" name="sext_ln90_fu_158">
 <pin_list>
 <pin id="159" dir="0" index="0" bw="16" slack="0"/>
 <pin id="160" dir="1" index="1" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="sext_ln91/1 "/>
+<opset="sext_ln90/1 "/>
 </bind>
 </comp>
 
-<comp id="162" class="1004" name="add_ln91_fu_162">
+<comp id="162" class="1004" name="add_ln90_fu_162">
 <pin_list>
 <pin id="163" dir="0" index="0" bw="16" slack="0"/>
 <pin id="164" dir="0" index="1" bw="16" slack="0"/>
@@ -984,22 +984,22 @@ ret_ln99             (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln91/1 "/>
+<opset="add_ln90/1 "/>
 </bind>
 </comp>
 
-<comp id="168" class="1004" name="sext_ln91_1_fu_168">
+<comp id="168" class="1004" name="sext_ln90_1_fu_168">
 <pin_list>
 <pin id="169" dir="0" index="0" bw="17" slack="0"/>
 <pin id="170" dir="1" index="1" bw="18" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="sext_ln91_1/1 "/>
+<opset="sext_ln90_1/1 "/>
 </bind>
 </comp>
 
-<comp id="172" class="1004" name="add_ln91_1_fu_172">
+<comp id="172" class="1004" name="add_ln90_1_fu_172">
 <pin_list>
 <pin id="173" dir="0" index="0" bw="17" slack="0"/>
 <pin id="174" dir="0" index="1" bw="16" slack="0"/>
@@ -1007,7 +1007,7 @@ ret_ln99             (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln91_1/1 "/>
+<opset="add_ln90_1/1 "/>
 </bind>
 </comp>
 
@@ -1037,18 +1037,18 @@ ret_ln99             (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="194" class="1004" name="sext_ln92_fu_194">
+<comp id="194" class="1004" name="sext_ln91_fu_194">
 <pin_list>
 <pin id="195" dir="0" index="0" bw="29" slack="0"/>
 <pin id="196" dir="1" index="1" bw="31" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="sext_ln92/1 "/>
+<opset="sext_ln91/1 "/>
 </bind>
 </comp>
 
-<comp id="198" class="1004" name="add_ln92_fu_198">
+<comp id="198" class="1004" name="add_ln91_fu_198">
 <pin_list>
 <pin id="199" dir="0" index="0" bw="29" slack="0"/>
 <pin id="200" dir="0" index="1" bw="31" slack="0"/>
@@ -1056,7 +1056,7 @@ ret_ln99             (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln92/1 "/>
+<opset="add_ln91/1 "/>
 </bind>
 </comp>
 
@@ -1096,18 +1096,18 @@ ret_ln99             (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="223" class="1004" name="sext_ln96_fu_223">
+<comp id="223" class="1004" name="sext_ln95_fu_223">
 <pin_list>
 <pin id="224" dir="0" index="0" bw="16" slack="0"/>
 <pin id="225" dir="1" index="1" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="sext_ln96/1 "/>
+<opset="sext_ln95/1 "/>
 </bind>
 </comp>
 
-<comp id="227" class="1004" name="add_ln96_fu_227">
+<comp id="227" class="1004" name="add_ln95_fu_227">
 <pin_list>
 <pin id="228" dir="0" index="0" bw="16" slack="0"/>
 <pin id="229" dir="0" index="1" bw="16" slack="0"/>
@@ -1115,22 +1115,22 @@ ret_ln99             (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln96/1 "/>
+<opset="add_ln95/1 "/>
 </bind>
 </comp>
 
-<comp id="233" class="1004" name="sext_ln96_1_fu_233">
+<comp id="233" class="1004" name="sext_ln95_1_fu_233">
 <pin_list>
 <pin id="234" dir="0" index="0" bw="17" slack="0"/>
 <pin id="235" dir="1" index="1" bw="18" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="sext_ln96_1/1 "/>
+<opset="sext_ln95_1/1 "/>
 </bind>
 </comp>
 
-<comp id="237" class="1004" name="add_ln96_1_fu_237">
+<comp id="237" class="1004" name="add_ln95_1_fu_237">
 <pin_list>
 <pin id="238" dir="0" index="0" bw="17" slack="0"/>
 <pin id="239" dir="0" index="1" bw="16" slack="0"/>
@@ -1138,7 +1138,7 @@ ret_ln99             (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln96_1/1 "/>
+<opset="add_ln95_1/1 "/>
 </bind>
 </comp>
 
@@ -1168,18 +1168,18 @@ ret_ln99             (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="259" class="1004" name="sext_ln97_fu_259">
+<comp id="259" class="1004" name="sext_ln96_fu_259">
 <pin_list>
 <pin id="260" dir="0" index="0" bw="29" slack="0"/>
 <pin id="261" dir="1" index="1" bw="31" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="sext_ln97/1 "/>
+<opset="sext_ln96/1 "/>
 </bind>
 </comp>
 
-<comp id="263" class="1004" name="add_ln97_fu_263">
+<comp id="263" class="1004" name="add_ln96_fu_263">
 <pin_list>
 <pin id="264" dir="0" index="0" bw="29" slack="0"/>
 <pin id="265" dir="0" index="1" bw="31" slack="0"/>
@@ -1187,7 +1187,7 @@ ret_ln99             (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln97/1 "/>
+<opset="add_ln96/1 "/>
 </bind>
 </comp>
 
@@ -1384,22 +1384,22 @@ ret_ln99             (ret           ) [ 000]
 	Port: DelayAndSum : in4_imag | {1 }
   - Chain level:
 	State 1
-		add_ln91 : 1
-		sext_ln91_1 : 2
-		add_ln91_1 : 3
+		add_ln90 : 1
+		sext_ln90_1 : 2
+		add_ln90_1 : 3
 		shl_ln : 4
-		sext_ln92 : 1
-		add_ln92 : 5
+		sext_ln91 : 1
+		add_ln91 : 5
 		p_s : 6
-		write_ln89 : 7
-		add_ln96 : 1
-		sext_ln96_1 : 2
-		add_ln96_1 : 3
+		write_ln88 : 7
+		add_ln95 : 1
+		sext_ln95_1 : 2
+		add_ln95_1 : 3
 		shl_ln2 : 4
-		sext_ln97 : 1
-		add_ln97 : 5
+		sext_ln96 : 1
+		add_ln96 : 5
 		p_0 : 6
-		write_ln94 : 7
+		write_ln93 : 7
 	State 2
 
 
@@ -1411,12 +1411,12 @@ ret_ln99             (ret           ) [ 000]
 |----------|-----------------------------|---------|---------|
 | Operation|       Functional Unit       |    FF   |   LUT   |
 |----------|-----------------------------|---------|---------|
-|          |       add_ln91_fu_162       |    0    |    23   |
-|          |      add_ln91_1_fu_172      |    0    |    24   |
-|    add   |       add_ln92_fu_198       |    0    |    38   |
-|          |       add_ln96_fu_227       |    0    |    23   |
-|          |      add_ln96_1_fu_237      |    0    |    24   |
-|          |       add_ln97_fu_263       |    0    |    38   |
+|          |       add_ln90_fu_162       |    0    |    23   |
+|          |      add_ln90_1_fu_172      |    0    |    24   |
+|    add   |       add_ln91_fu_198       |    0    |    38   |
+|          |       add_ln95_fu_227       |    0    |    23   |
+|          |      add_ln95_1_fu_237      |    0    |    24   |
+|          |       add_ln96_fu_263       |    0    |    38   |
 |----------|-----------------------------|---------|---------|
 |          |  in1_real_buffer_read_fu_88 |    0    |    0    |
 |          |  in1_imag_buffer_read_fu_94 |    0    |    0    |
@@ -1432,14 +1432,14 @@ ret_ln99             (ret           ) [ 000]
 |----------|-----------------------------|---------|---------|
 |          | in1_real_buffer_cast_fu_150 |    0    |    0    |
 |          | in2_real_buffer_cast_fu_154 |    0    |    0    |
-|          |       sext_ln91_fu_158      |    0    |    0    |
-|          |      sext_ln91_1_fu_168     |    0    |    0    |
-|   sext   |       sext_ln92_fu_194      |    0    |    0    |
+|          |       sext_ln90_fu_158      |    0    |    0    |
+|          |      sext_ln90_1_fu_168     |    0    |    0    |
+|   sext   |       sext_ln91_fu_194      |    0    |    0    |
 |          | in1_imag_buffer_cast_fu_215 |    0    |    0    |
 |          | in2_imag_buffer_cast_fu_219 |    0    |    0    |
-|          |       sext_ln96_fu_223      |    0    |    0    |
-|          |      sext_ln96_1_fu_233     |    0    |    0    |
-|          |       sext_ln97_fu_259      |    0    |    0    |
+|          |       sext_ln95_fu_223      |    0    |    0    |
+|          |      sext_ln95_1_fu_233     |    0    |    0    |
+|          |       sext_ln96_fu_259      |    0    |    0    |
 |----------|-----------------------------|---------|---------|
 |          |        shl_ln_fu_178        |    0    |    0    |
 |bitconcatenate|        shl_ln1_fu_186       |    0    |    0    |

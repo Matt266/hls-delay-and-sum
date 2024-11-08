@@ -163,25 +163,25 @@ reg    out_imag_TDATA_blk_n;
 reg    ap_block_pp0_stage0_11001;
 reg    ap_block_pp0_stage0_01001;
 wire  signed [16:0] in1_real_buffer_cast_fu_150_p1;
-wire  signed [16:0] sext_ln91_fu_158_p1;
-wire   [16:0] add_ln91_fu_162_p2;
-wire  signed [17:0] sext_ln91_1_fu_168_p1;
+wire  signed [16:0] sext_ln90_fu_158_p1;
+wire   [16:0] add_ln90_fu_162_p2;
+wire  signed [17:0] sext_ln90_1_fu_168_p1;
 wire  signed [17:0] in2_real_buffer_cast_fu_154_p1;
-wire   [17:0] add_ln91_1_fu_172_p2;
+wire   [17:0] add_ln90_1_fu_172_p2;
 wire   [28:0] shl_ln1_fu_186_p3;
-wire  signed [30:0] sext_ln92_fu_194_p1;
+wire  signed [30:0] sext_ln91_fu_194_p1;
 wire   [30:0] shl_ln_fu_178_p3;
-wire   [30:0] add_ln92_fu_198_p2;
+wire   [30:0] add_ln91_fu_198_p2;
 wire  signed [16:0] in1_imag_buffer_cast_fu_215_p1;
-wire  signed [16:0] sext_ln96_fu_223_p1;
-wire   [16:0] add_ln96_fu_227_p2;
-wire  signed [17:0] sext_ln96_1_fu_233_p1;
+wire  signed [16:0] sext_ln95_fu_223_p1;
+wire   [16:0] add_ln95_fu_227_p2;
+wire  signed [17:0] sext_ln95_1_fu_233_p1;
 wire  signed [17:0] in2_imag_buffer_cast_fu_219_p1;
-wire   [17:0] add_ln96_1_fu_237_p2;
+wire   [17:0] add_ln95_1_fu_237_p2;
 wire   [28:0] shl_ln3_fu_251_p3;
-wire  signed [30:0] sext_ln97_fu_259_p1;
+wire  signed [30:0] sext_ln96_fu_259_p1;
 wire   [30:0] shl_ln2_fu_243_p3;
-wire   [30:0] add_ln97_fu_263_p2;
+wire   [30:0] add_ln96_fu_263_p2;
 reg   [0:0] ap_NS_fsm;
 reg    ap_idle_pp0_0to0;
 reg    ap_reset_idle_pp0;
@@ -651,17 +651,17 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln91_1_fu_172_p2 = ($signed(sext_ln91_1_fu_168_p1) + $signed(in2_real_buffer_cast_fu_154_p1));
+assign add_ln90_1_fu_172_p2 = ($signed(sext_ln90_1_fu_168_p1) + $signed(in2_real_buffer_cast_fu_154_p1));
 
-assign add_ln91_fu_162_p2 = ($signed(in1_real_buffer_cast_fu_150_p1) + $signed(sext_ln91_fu_158_p1));
+assign add_ln90_fu_162_p2 = ($signed(in1_real_buffer_cast_fu_150_p1) + $signed(sext_ln90_fu_158_p1));
 
-assign add_ln92_fu_198_p2 = ($signed(sext_ln92_fu_194_p1) + $signed(shl_ln_fu_178_p3));
+assign add_ln91_fu_198_p2 = ($signed(sext_ln91_fu_194_p1) + $signed(shl_ln_fu_178_p3));
 
-assign add_ln96_1_fu_237_p2 = ($signed(sext_ln96_1_fu_233_p1) + $signed(in2_imag_buffer_cast_fu_219_p1));
+assign add_ln95_1_fu_237_p2 = ($signed(sext_ln95_1_fu_233_p1) + $signed(in2_imag_buffer_cast_fu_219_p1));
 
-assign add_ln96_fu_227_p2 = ($signed(in1_imag_buffer_cast_fu_215_p1) + $signed(sext_ln96_fu_223_p1));
+assign add_ln95_fu_227_p2 = ($signed(in1_imag_buffer_cast_fu_215_p1) + $signed(sext_ln95_fu_223_p1));
 
-assign add_ln97_fu_263_p2 = ($signed(sext_ln97_fu_259_p1) + $signed(shl_ln2_fu_243_p3));
+assign add_ln96_fu_263_p2 = ($signed(sext_ln96_fu_259_p1) + $signed(shl_ln2_fu_243_p3));
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -727,32 +727,32 @@ assign in4_imag_TREADY = regslice_both_in4_imag_U_ack_in;
 
 assign in4_real_TREADY = regslice_both_in4_real_U_ack_in;
 
-assign out_imag_TDATA_int_regslice = {{add_ln97_fu_263_p2[30:15]}};
+assign out_imag_TDATA_int_regslice = {{add_ln96_fu_263_p2[30:15]}};
 
 assign out_imag_TVALID = regslice_both_out_imag_U_vld_out;
 
-assign out_real_TDATA_int_regslice = {{add_ln92_fu_198_p2[30:15]}};
+assign out_real_TDATA_int_regslice = {{add_ln91_fu_198_p2[30:15]}};
 
 assign out_real_TVALID = regslice_both_out_real_U_vld_out;
 
-assign sext_ln91_1_fu_168_p1 = $signed(add_ln91_fu_162_p2);
+assign sext_ln90_1_fu_168_p1 = $signed(add_ln90_fu_162_p2);
 
-assign sext_ln91_fu_158_p1 = $signed(in3_real_TDATA_int_regslice);
+assign sext_ln90_fu_158_p1 = $signed(in3_real_TDATA_int_regslice);
 
-assign sext_ln92_fu_194_p1 = $signed(shl_ln1_fu_186_p3);
+assign sext_ln91_fu_194_p1 = $signed(shl_ln1_fu_186_p3);
 
-assign sext_ln96_1_fu_233_p1 = $signed(add_ln96_fu_227_p2);
+assign sext_ln95_1_fu_233_p1 = $signed(add_ln95_fu_227_p2);
 
-assign sext_ln96_fu_223_p1 = $signed(in3_imag_TDATA_int_regslice);
+assign sext_ln95_fu_223_p1 = $signed(in3_imag_TDATA_int_regslice);
 
-assign sext_ln97_fu_259_p1 = $signed(shl_ln3_fu_251_p3);
+assign sext_ln96_fu_259_p1 = $signed(shl_ln3_fu_251_p3);
 
 assign shl_ln1_fu_186_p3 = {{in4_real_TDATA_int_regslice}, {13'd0}};
 
-assign shl_ln2_fu_243_p3 = {{add_ln96_1_fu_237_p2}, {13'd0}};
+assign shl_ln2_fu_243_p3 = {{add_ln95_1_fu_237_p2}, {13'd0}};
 
 assign shl_ln3_fu_251_p3 = {{in4_imag_TDATA_int_regslice}, {13'd0}};
 
-assign shl_ln_fu_178_p3 = {{add_ln91_1_fu_172_p2}, {13'd0}};
+assign shl_ln_fu_178_p3 = {{add_ln90_1_fu_172_p2}, {13'd0}};
 
 endmodule //DelayAndSum

@@ -4,16 +4,16 @@
     "calls": "",
     "file": "DelayAndSum.cpp",
     "fileloc": 5,
-    "instructions": 181,
+    "instructions": 183,
     "loads": {
       "L": 8,
-      "T": 4
+      "T": 6
     },
     "name": "DelayAndSum",
     "stores": {
       "L": 8
     },
-    "total_instructions": 7005
+    "total_instructions": 7007
   },
   "1": {
     "basicblocks": 43,

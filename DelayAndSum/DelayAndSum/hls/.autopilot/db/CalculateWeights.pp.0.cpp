@@ -27317,19 +27317,19 @@ void DelayAndSum(
     hls::stream<fxd_16_1_t> &out_imag
 );
 # 5 "./CalculateWeights.hpp" 2
-
+void CalculateElement(fxd_12_4_t phi, fxd_32_27_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
 void CalculateWeights(
 
-    fxd_12_4_t &phi,
+    fxd_12_4_t phi,
 
 
-    fxd_32_27_t &fc,
+    fxd_32_27_t fc,
 
 
-    fxd_16_8_t &xpos1,
-    fxd_16_8_t &xpos2,
-    fxd_16_8_t &xpos3,
-    fxd_16_8_t &xpos4,
+    fxd_16_8_t xpos1,
+    fxd_16_8_t xpos2,
+    fxd_16_8_t xpos3,
+    fxd_16_8_t xpos4,
 
 
     fxd_16_1_t &w1_real,
@@ -27343,7 +27343,7 @@ void CalculateWeights(
 );
 # 3 "CalculateWeights.cpp" 2
 
-void CalculateElement(fxd_12_4_t &phi, fxd_32_27_t &fc, fxd_16_8_t &xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag){
+void CalculateElement(fxd_12_4_t phi, fxd_32_27_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag){
 
     fxd_32_27_t temp = (2*3.14159265359)/(2.99792458*1e5);
     fxd_16_8_t k = temp*fc;
@@ -27351,21 +27351,20 @@ void CalculateElement(fxd_12_4_t &phi, fxd_32_27_t &fc, fxd_16_8_t &xpos, fxd_16
 
     w_real = hls::cos(k*hls::cos(phi)*xpos)/4;
     w_imag = hls::sin(k*hls::cos(phi)*xpos)/4;
-    return;
 }
 
 void CalculateWeights(
 
-    fxd_12_4_t &phi,
+    fxd_12_4_t phi,
 
 
-    fxd_32_27_t &fc,
+    fxd_32_27_t fc,
 
 
-    fxd_16_8_t &xpos1,
-    fxd_16_8_t &xpos2,
-    fxd_16_8_t &xpos3,
-    fxd_16_8_t &xpos4,
+    fxd_16_8_t xpos1,
+    fxd_16_8_t xpos2,
+    fxd_16_8_t xpos3,
+    fxd_16_8_t xpos4,
 
 
     fxd_16_1_t &w1_real,
@@ -27381,5 +27380,4 @@ void CalculateWeights(
     CalculateElement(phi, fc, xpos2, w2_real, w2_imag);
     CalculateElement(phi, fc, xpos3, w3_real, w3_imag);
     CalculateElement(phi, fc, xpos4, w4_real, w4_imag);
-    return;
 }

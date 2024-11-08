@@ -2,12 +2,12 @@
     <item name="Total Instructions per Compilation Phase">
         <table>
             <keys size="4">Phase, Step, Instructions, Description</keys>
-            <column name="Compile/Link">, 83827, After all functions are compiled and linked into a single design</column>
+            <column name="Compile/Link">, 83881, After all functions are compiled and linked into a single design</column>
             <column name="">, , </column>
             <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
-            <column name="">(1) unroll, 24241, user unroll pragmas are applied</column>
-            <column name="">(2) simplification,  7271, simplification of applied user unroll pragmas</column>
-            <column name="">(3) inline,  7005, user inline pragmas are applied</column>
+            <column name="">(1) unroll, 24239, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,  7273, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,  7007, user inline pragmas are applied</column>
             <column name="">(4) simplification,  5488, simplification of applied user inline pragmas</column>
             <column name="">, , </column>
             <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
@@ -32,9 +32,9 @@
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="DelayAndSum" col1="DelayAndSum.cpp:5" col2="83827" col3="5488" col4="5408" col5="71" col6="115">
-                    <row id="2" col0="CalculateWeights" col1="CalculateWeights.cpp:15" col2="78845" col3="" col4="" col5="" col6="">
-                        <row id="8" col0="CalculateElement" col1="CalculateWeights.cpp:4" col2="78840" col2_disp="78,840 (4 calls)" col3="" col4="" col5="" col6=""/>
+                <row id="0" col0="DelayAndSum" col1="DelayAndSum.cpp:5" col2="83881" col3="5488" col4="5408" col5="71" col6="115">
+                    <row id="5" col0="CalculateWeights" col1="CalculateWeights.cpp:14" col2="78881" col3="" col4="" col5="" col6="">
+                        <row id="3" col0="CalculateElement" col1="CalculateWeights.cpp:4" col2="78840" col2_disp="78,840 (4 calls)" col3="" col4="" col5="" col6=""/>
                     </row>
                 </row>
             </rows>

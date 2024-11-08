@@ -16173,6 +16173,19 @@ instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug informa
 instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
 instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
 instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
 instrumenter::VERBO: spec:0:0: warning: [IRBuilder] Function/Basic Block for the instruction has no debug information, recompile and retry (13)
 instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
 instrumenter::VERBO: spec:0:0: warning: [IRBuilder] Function/Basic Block for the instruction has no debug information, recompile and retry (13)
@@ -16889,7 +16902,7 @@ instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZN10ap_pri
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_CalculateWeights.cpp
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.19
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __dtor__ZStL8__ioinit.21
-instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z16CalculateElementR8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EERS_ILi32ELi27ELS0_5ELS1_3ELi0EERS_ILi16ELi8ELS0_5ELS1_3ELi0EERS_ILi16ELi1ELS0_5ELS1_3ELi0EES9_
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z16CalculateElement8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES_ILi32ELi27ELS0_5ELS1_3ELi0EES_ILi16ELi8ELS0_5ELS1_3ELi0EERS_ILi16ELi1ELS0_5ELS1_3ELi0EES6_
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZN8ap_fixedILi32ELi27EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ed
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNK13ap_fixed_baseILi32ELi27ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEmlILi32ELi27ELb1ELS0_5ELS1_3ELi0EEENS2_5RTypeIXT_EXT0_EXT1_EE4multERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZN8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi64ELi54ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE
@@ -20140,7 +20153,7 @@ instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZN8ap_fixe
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZN13ap_fixed_baseILi32ELi27ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ed
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZN10ap_privateILi32ELb1ELb1EEaSILi54ELb1EEERS0_RKS_IXT_EXT0_EXleT_Li64EEE
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZN13ap_fixed_baseILi32ELi27ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EE6reportEv
-instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z16CalculateWeightsR8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EERS_ILi32ELi27ELS0_5ELS1_3ELi0EERS_ILi16ELi8ELS0_5ELS1_3ELi0EES7_S7_S7_RS_ILi16ELi1ELS0_5ELS1_3ELi0EES9_S9_S9_S9_S9_S9_S9_
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z16CalculateWeights8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES_ILi32ELi27ELS0_5ELS1_3ELi0EES_ILi16ELi8ELS0_5ELS1_3ELi0EES4_S4_S4_RS_ILi16ELi1ELS0_5ELS1_3ELi0EES6_S6_S6_S6_S6_S6_S6_
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_DelayAndSum.cpp
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.75
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __dtor__ZStL8__ioinit.77
@@ -20152,9 +20165,9 @@ instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_globa
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __dtor__ZStL8__ioinit.84
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z11DelayAndSumP8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi27ELS0_5ELS1_3ELi0EEPS_ILi16ELi8ELS0_5ELS1_3ELi0EES7_S7_S7_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESC_SC_SC_SC_SC_SC_SC_SC_SC_
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: llvm.sideeffect
-instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z16CalculateWeightsR8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EERS_ILi32ELi27ELS0_5ELS1_3ELi0EERS_ILi16ELi8ELS0_5ELS1_3ELi0EES7_S7_S7_RS_ILi16ELi1ELS0_5ELS1_3ELi0EES9_S9_S9_S9_S9_S9_S9_.87
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z16CalculateWeights8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES_ILi32ELi27ELS0_5ELS1_3ELi0EES_ILi16ELi8ELS0_5ELS1_3ELi0EES4_S4_S4_RS_ILi16ELi1ELS0_5ELS1_3ELi0EES6_S6_S6_S6_S6_S6_S6_.87
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: llvm.fpga.fifo.push.s_struct.ap_fixed_base.9s.p0s_struct.ap_fixed_base.9s
-instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z16CalculateElementR8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EERS_ILi32ELi27ELS0_5ELS1_3ELi0EERS_ILi16ELi8ELS0_5ELS1_3ELi0EERS_ILi16ELi1ELS0_5ELS1_3ELi0EES9_.91
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z16CalculateElement8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES_ILi32ELi27ELS0_5ELS1_3ELi0EES_ILi16ELi8ELS0_5ELS1_3ELi0EERS_ILi16ELi1ELS0_5ELS1_3ELi0EES6_.91
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZN3hls3cosILi12ELi4EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE.95
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZN3hls3cosILi42ELi18EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE.98
 instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZN3hls3sinILi42ELi18EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE.101

@@ -79,15 +79,15 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            Inline
-DebugLoc:        { File: CalculateWeights.cpp, Line: 37, Column: 0 }
-Function:        _Z16CalculateWeightsR8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EERS_ILi32ELi27ELS0_5ELS1_3ELi0EERS_ILi16ELi8ELS0_5ELS1_3ELi0EES7_S7_S7_RS_ILi16ELi1ELS0_5ELS1_3ELi0EES9_S9_S9_S9_S9_S9_S9_
+DebugLoc:        { File: CalculateWeights.cpp, Line: 36, Column: 0 }
+Function:        _Z16CalculateWeights8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES_ILi32ELi27ELS0_5ELS1_3ELi0EES_ILi16ELi8ELS0_5ELS1_3ELi0EES4_S4_S4_RS_ILi16ELi1ELS0_5ELS1_3ELi0EES6_S6_S6_S6_S6_S6_S6_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'CalculateElement(ap_fixed<12, 4, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<32, 27, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'CalculateElement(ap_fixed<12, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 27, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: CalculateWeights.cpp, Line: 4, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'CalculateWeights(ap_fixed<12, 4, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<32, 27, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
-    DebugLoc:        { File: CalculateWeights.cpp, Line: 37, Column: 0 }
+  - Caller:          'CalculateWeights(ap_fixed<12, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 27, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: CalculateWeights.cpp, Line: 36, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -97,8 +97,8 @@ DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
 Function:        _Z11DelayAndSumP8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi27ELS0_5ELS1_3ELi0EEPS_ILi16ELi8ELS0_5ELS1_3ELi0EES7_S7_S7_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESC_SC_SC_SC_SC_SC_SC_SC_SC_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'CalculateWeights(ap_fixed<12, 4, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<32, 27, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
-    DebugLoc:        { File: CalculateWeights.cpp, Line: 37, Column: 0 }
+  - Callee:          'CalculateWeights(ap_fixed<12, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 27, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: CalculateWeights.cpp, Line: 36, Column: 0 }
   - String:          ''' into '''
   - Caller:          'DelayAndSum(ap_fixed<12, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 27, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }

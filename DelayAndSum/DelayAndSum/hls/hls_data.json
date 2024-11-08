@@ -254,7 +254,7 @@
     "Name": "DelayAndSum",
     "Version": "1.0",
     "DisplayName": "DelayAndSum",
-    "Revision": "2113813911",
+    "Revision": "2113814022",
     "Description": "4 channel delay and sum beamformer",
     "Taxonomy": "\/VITIS_HLS_IP",
     "AutoFamilySupport": "",
@@ -964,7 +964,7 @@
   "ModuleInfo": {
     "Hierarchy": {
       "ModuleName": "DelayAndSum",
-      "BindInstances": "add_ln91_fu_162_p2 add_ln91_1_fu_172_p2 add_ln92_fu_198_p2 add_ln96_fu_227_p2 add_ln96_1_fu_237_p2 add_ln97_fu_263_p2 control_s_axi_U"
+      "BindInstances": "add_ln90_fu_162_p2 add_ln90_1_fu_172_p2 add_ln91_fu_198_p2 add_ln95_fu_227_p2 add_ln95_1_fu_237_p2 add_ln96_fu_263_p2 control_s_axi_U"
     },
     "Info": {"DelayAndSum": {
         "FunctionProtocol": "ap_ctrl_hs",
@@ -1009,7 +1009,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2024-11-08 17:51:35 +0100",
+    "Time": "2024-11-08 19:42:38 +0100",
     "ToolName": "vitis_hls",
     "ToolVersion": "2024.1"
   }
