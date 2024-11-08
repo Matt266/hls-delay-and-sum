@@ -1,6 +1,6 @@
-INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlsrun_csim_summary, at 10/21/24 15:51:16
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlsrun_csim_summary, at 11/08/24 17:48:05
 INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum -config C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg -cmdlineconfig C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline
-INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Mon Oct 21 15:51:18 +0200 2024
+INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Fri Nov 08 17:48:08 +0100 2024
 INFO: [HLS 200-10] In directory 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum'
 INFO: [HLS 200-2005] Using work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
@@ -25,67 +25,28 @@ INFO: [HLS 200-1465] Applying ini 'part=xczu48dr-ffvg1517-2-e' from C:/Users/mat
 INFO: [HLS 200-1611] Setting target device to 'xczu48dr-ffvg1517-2-e'
 INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
-INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
 INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
 INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
 INFO: [HLS 200-1465] Applying ini 'package.ip.description=4 channel delay and sum beamformer' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
 INFO: [HLS 200-1465] Applying ini 'package.ip.display_name=DelayAndSum' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
 INFO: [HLS 200-1465] Applying ini 'package.output.file=C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\DelayAndSum.zip' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
-INFO: [HLS 200-2036] Building debug C Simulation binaries
-   Compiling ../../../../DelayAndSumTB.cpp in debug mode
-   Compiling ../../../../CalculateWeights.cpp in debug mode
-   Compiling ../../../../DelayAndSum.cpp in debug mode
-   Generating csim.exe
-In file included from ../../../../DelayAndSumTB.cpp:2:
-In file included from ../../../../DelayAndSum.hpp:5:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h:9:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
-C:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
-#define __GMP_LIBGMP_DLL  0
-        ^
-C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
-#define __GMP_LIBGMP_DLL 1
-        ^
-1 warning generated.
-In file included from ../../../../CalculateWeights.cpp:1:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_math.h:27:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
-C:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
-#define __GMP_LIBGMP_DLL  0
-        ^
-C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
-#define __GMP_LIBGMP_DLL 1
-        ^
-1 warning generated.
-In file included from ../../../../DelayAndSum.cpp:1:
-In file included from ../../../../DelayAndSum.hpp:5:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h:9:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
-In file included from C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
-C:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
-#define __GMP_LIBGMP_DLL  0
-        ^
-C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
-#define __GMP_LIBGMP_DLL 1
-        ^
-1 warning generated.
-INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 24.138 seconds; peak allocated memory: 231.676 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 28s
+INFO: [SIM 211-200] Executing Code Analyzer instead of classic HLS C simulation
+INFO: [SIM 211-200] Compiling source code DelayAndSum.cpp as hardware code with instrumentation
+INFO: [SIM 211-200] Compiling source code CalculateWeights.cpp as hardware code with instrumentation
+INFO: [SIM 211-200] Compiling source code CalculateWeights.cpp as test bench code with instrumentation
+INFO: [SIM 211-200] Compiling source code DelayAndSum.cpp as test bench code with instrumentation
+INFO: [SIM 211-200] Linking hardware code
+INFO: [SIM 211-200] Transforming hardware bitcode
+INFO: [SIM 211-200] Linking executable
+INFO: [SIM 211-200] Determining source code dependencies
+INFO: [SIM 211-200] Generating static call graph
+INFO: [SIM 211-200] Analyzing Interfaces
+INFO: [SIM 211-200] Running executable
+INFO: [SIM 211-200] Analyzing trace data
+INFO: [SIM 211-208] Running Code Analyzer
+WARNING: [SIM 211-207] Code Analyzer does not display the impact of the pipeline pragma in dataflow regions (:0:0)
+INFO: [SIM 211-210] Code Analyzer finished
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 81.16 seconds; peak allocated memory: 230.598 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 1m 26s

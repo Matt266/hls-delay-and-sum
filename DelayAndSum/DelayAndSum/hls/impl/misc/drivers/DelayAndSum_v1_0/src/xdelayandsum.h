@@ -95,6 +95,8 @@ int XDelayandsum_Release(XDelayandsum *InstancePtr);
 
 void XDelayandsum_Set_phi(XDelayandsum *InstancePtr, u32 Data);
 u32 XDelayandsum_Get_phi(XDelayandsum *InstancePtr);
+void XDelayandsum_Set_fc(XDelayandsum *InstancePtr, u32 Data);
+u32 XDelayandsum_Get_fc(XDelayandsum *InstancePtr);
 void XDelayandsum_Set_xpos1(XDelayandsum *InstancePtr, u32 Data);
 u32 XDelayandsum_Get_xpos1(XDelayandsum *InstancePtr);
 void XDelayandsum_Set_xpos2(XDelayandsum *InstancePtr, u32 Data);

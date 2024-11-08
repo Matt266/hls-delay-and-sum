@@ -2,9 +2,9 @@
     "0": {
         "name": "DelayAndSum",
         "file": "DelayAndSum.cpp",
-        "fileloc": "4",
-        "instructions": "2784",
-        "total_instructions": "2784",
+        "fileloc": "5",
+        "instructions": "73",
+        "total_instructions": "73",
         "calls": "",
         "basicblocks": "1"
     }

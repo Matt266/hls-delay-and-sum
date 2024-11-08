@@ -32,6 +32,7 @@ module DelayAndSum_control_s_axi
     output wire                          RVALID,
     input  wire                          RREADY,
     output wire [11:0]                   phi,
+    output wire [31:0]                   fc,
     output wire [15:0]                   xpos1,
     output wire [15:0]                   xpos2,
     output wire [15:0]                   xpos3,
@@ -48,36 +49,41 @@ module DelayAndSum_control_s_axi
 //        bit 11~0 - phi[11:0] (Read/Write)
 //        others   - reserved
 // 0x14 : reserved
-// 0x18 : Data signal of xpos1
+// 0x18 : Data signal of fc
+//        bit 31~0 - fc[31:0] (Read/Write)
+// 0x1c : reserved
+// 0x20 : Data signal of xpos1
 //        bit 15~0 - xpos1[15:0] (Read/Write)
 //        others   - reserved
-// 0x1c : reserved
-// 0x20 : Data signal of xpos2
+// 0x24 : reserved
+// 0x28 : Data signal of xpos2
 //        bit 15~0 - xpos2[15:0] (Read/Write)
 //        others   - reserved
-// 0x24 : reserved
-// 0x28 : Data signal of xpos3
+// 0x2c : reserved
+// 0x30 : Data signal of xpos3
 //        bit 15~0 - xpos3[15:0] (Read/Write)
 //        others   - reserved
-// 0x2c : reserved
-// 0x30 : Data signal of xpos4
+// 0x34 : reserved
+// 0x38 : Data signal of xpos4
 //        bit 15~0 - xpos4[15:0] (Read/Write)
 //        others   - reserved
-// 0x34 : reserved
+// 0x3c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
     ADDR_PHI_DATA_0   = 6'h10,
     ADDR_PHI_CTRL     = 6'h14,
-    ADDR_XPOS1_DATA_0 = 6'h18,
-    ADDR_XPOS1_CTRL   = 6'h1c,
-    ADDR_XPOS2_DATA_0 = 6'h20,
-    ADDR_XPOS2_CTRL   = 6'h24,
-    ADDR_XPOS3_DATA_0 = 6'h28,
-    ADDR_XPOS3_CTRL   = 6'h2c,
-    ADDR_XPOS4_DATA_0 = 6'h30,
-    ADDR_XPOS4_CTRL   = 6'h34,
+    ADDR_FC_DATA_0    = 6'h18,
+    ADDR_FC_CTRL      = 6'h1c,
+    ADDR_XPOS1_DATA_0 = 6'h20,
+    ADDR_XPOS1_CTRL   = 6'h24,
+    ADDR_XPOS2_DATA_0 = 6'h28,
+    ADDR_XPOS2_CTRL   = 6'h2c,
+    ADDR_XPOS3_DATA_0 = 6'h30,
+    ADDR_XPOS3_CTRL   = 6'h34,
+    ADDR_XPOS4_DATA_0 = 6'h38,
+    ADDR_XPOS4_CTRL   = 6'h3c,
     WRIDLE            = 2'd0,
     WRDATA            = 2'd1,
     WRRESP            = 2'd2,
@@ -101,6 +107,7 @@ localparam
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
     reg  [11:0]                   int_phi = 'b0;
+    reg  [31:0]                   int_fc = 'b0;
     reg  [15:0]                   int_xpos1 = 'b0;
     reg  [15:0]                   int_xpos2 = 'b0;
     reg  [15:0]                   int_xpos3 = 'b0;
@@ -200,6 +207,9 @@ always @(posedge ACLK) begin
                 ADDR_PHI_DATA_0: begin
                     rdata <= int_phi[11:0];
                 end
+                ADDR_FC_DATA_0: begin
+                    rdata <= int_fc[31:0];
+                end
                 ADDR_XPOS1_DATA_0: begin
                     rdata <= int_xpos1[15:0];
                 end
@@ -220,6 +230,7 @@ end
 
 //------------------------Register logic-----------------
 assign phi   = int_phi;
+assign fc    = int_fc;
 assign xpos1 = int_xpos1;
 assign xpos2 = int_xpos2;
 assign xpos3 = int_xpos3;
@@ -231,6 +242,16 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_PHI_DATA_0)
             int_phi[11:0] <= (WDATA[31:0] & wmask) | (int_phi[11:0] & ~wmask);
+    end
+end
+
+// int_fc[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_fc[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_FC_DATA_0)
+            int_fc[31:0] <= (WDATA[31:0] & wmask) | (int_fc[31:0] & ~wmask);
     end
 end
 

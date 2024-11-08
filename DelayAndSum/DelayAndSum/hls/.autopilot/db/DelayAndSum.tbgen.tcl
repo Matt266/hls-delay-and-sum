@@ -16,11 +16,12 @@ set C_modelName {DelayAndSum}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
 set C_modelArgList {
-	{ phi int 12 regular {axi_slave 0}  }
-	{ xpos1 int 16 regular {axi_slave 0}  }
-	{ xpos2 int 16 regular {axi_slave 0}  }
-	{ xpos3 int 16 regular {axi_slave 0}  }
-	{ xpos4 int 16 regular {axi_slave 0}  }
+	{ phi int 12 unused {axi_slave 0}  }
+	{ fc int 32 unused {axi_slave 0}  }
+	{ xpos1 int 16 unused {axi_slave 0}  }
+	{ xpos2 int 16 unused {axi_slave 0}  }
+	{ xpos3 int 16 unused {axi_slave 0}  }
+	{ xpos4 int 16 unused {axi_slave 0}  }
 	{ in1_real int 16 regular {axi_s 0 volatile  { in1_real Data } }  }
 	{ in1_imag int 16 regular {axi_s 0 volatile  { in1_imag Data } }  }
 	{ in2_real int 16 regular {axi_s 0 volatile  { in2_real Data } }  }
@@ -37,10 +38,11 @@ set hasAXIML2Cache 0
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
 	{ "Name" : "phi", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 12, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":23}} , 
- 	{ "Name" : "xpos1", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":24}, "offset_end" : {"in":31}} , 
- 	{ "Name" : "xpos2", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":32}, "offset_end" : {"in":39}} , 
- 	{ "Name" : "xpos3", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":47}} , 
- 	{ "Name" : "xpos4", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":48}, "offset_end" : {"in":55}} , 
+ 	{ "Name" : "fc", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":24}, "offset_end" : {"in":31}} , 
+ 	{ "Name" : "xpos1", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":32}, "offset_end" : {"in":39}} , 
+ 	{ "Name" : "xpos2", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":47}} , 
+ 	{ "Name" : "xpos3", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":48}, "offset_end" : {"in":55}} , 
+ 	{ "Name" : "xpos4", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":56}, "offset_end" : {"in":63}} , 
  	{ "Name" : "in1_real", "interface" : "axis", "bitwidth" : 16, "direction" : "READONLY"} , 
  	{ "Name" : "in1_imag", "interface" : "axis", "bitwidth" : 16, "direction" : "READONLY"} , 
  	{ "Name" : "in2_real", "interface" : "axis", "bitwidth" : 16, "direction" : "READONLY"} , 
@@ -60,36 +62,36 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ in1_real_TVALID sc_in sc_logic 1 invld 5 } 
-	{ in1_imag_TVALID sc_in sc_logic 1 invld 6 } 
-	{ in2_real_TVALID sc_in sc_logic 1 invld 7 } 
-	{ in2_imag_TVALID sc_in sc_logic 1 invld 8 } 
-	{ in3_real_TVALID sc_in sc_logic 1 invld 9 } 
-	{ in3_imag_TVALID sc_in sc_logic 1 invld 10 } 
-	{ in4_real_TVALID sc_in sc_logic 1 invld 11 } 
-	{ in4_imag_TVALID sc_in sc_logic 1 invld 12 } 
-	{ out_real_TREADY sc_in sc_logic 1 outacc 13 } 
-	{ out_imag_TREADY sc_in sc_logic 1 outacc 14 } 
-	{ in1_real_TDATA sc_in sc_lv 16 signal 5 } 
-	{ in1_real_TREADY sc_out sc_logic 1 inacc 5 } 
-	{ in1_imag_TDATA sc_in sc_lv 16 signal 6 } 
-	{ in1_imag_TREADY sc_out sc_logic 1 inacc 6 } 
-	{ in2_real_TDATA sc_in sc_lv 16 signal 7 } 
-	{ in2_real_TREADY sc_out sc_logic 1 inacc 7 } 
-	{ in2_imag_TDATA sc_in sc_lv 16 signal 8 } 
-	{ in2_imag_TREADY sc_out sc_logic 1 inacc 8 } 
-	{ in3_real_TDATA sc_in sc_lv 16 signal 9 } 
-	{ in3_real_TREADY sc_out sc_logic 1 inacc 9 } 
-	{ in3_imag_TDATA sc_in sc_lv 16 signal 10 } 
-	{ in3_imag_TREADY sc_out sc_logic 1 inacc 10 } 
-	{ in4_real_TDATA sc_in sc_lv 16 signal 11 } 
-	{ in4_real_TREADY sc_out sc_logic 1 inacc 11 } 
-	{ in4_imag_TDATA sc_in sc_lv 16 signal 12 } 
-	{ in4_imag_TREADY sc_out sc_logic 1 inacc 12 } 
-	{ out_real_TDATA sc_out sc_lv 16 signal 13 } 
-	{ out_real_TVALID sc_out sc_logic 1 outvld 13 } 
-	{ out_imag_TDATA sc_out sc_lv 16 signal 14 } 
-	{ out_imag_TVALID sc_out sc_logic 1 outvld 14 } 
+	{ in1_real_TVALID sc_in sc_logic 1 invld 6 } 
+	{ in1_imag_TVALID sc_in sc_logic 1 invld 7 } 
+	{ in2_real_TVALID sc_in sc_logic 1 invld 8 } 
+	{ in2_imag_TVALID sc_in sc_logic 1 invld 9 } 
+	{ in3_real_TVALID sc_in sc_logic 1 invld 10 } 
+	{ in3_imag_TVALID sc_in sc_logic 1 invld 11 } 
+	{ in4_real_TVALID sc_in sc_logic 1 invld 12 } 
+	{ in4_imag_TVALID sc_in sc_logic 1 invld 13 } 
+	{ out_real_TREADY sc_in sc_logic 1 outacc 14 } 
+	{ out_imag_TREADY sc_in sc_logic 1 outacc 15 } 
+	{ in1_real_TDATA sc_in sc_lv 16 signal 6 } 
+	{ in1_real_TREADY sc_out sc_logic 1 inacc 6 } 
+	{ in1_imag_TDATA sc_in sc_lv 16 signal 7 } 
+	{ in1_imag_TREADY sc_out sc_logic 1 inacc 7 } 
+	{ in2_real_TDATA sc_in sc_lv 16 signal 8 } 
+	{ in2_real_TREADY sc_out sc_logic 1 inacc 8 } 
+	{ in2_imag_TDATA sc_in sc_lv 16 signal 9 } 
+	{ in2_imag_TREADY sc_out sc_logic 1 inacc 9 } 
+	{ in3_real_TDATA sc_in sc_lv 16 signal 10 } 
+	{ in3_real_TREADY sc_out sc_logic 1 inacc 10 } 
+	{ in3_imag_TDATA sc_in sc_lv 16 signal 11 } 
+	{ in3_imag_TREADY sc_out sc_logic 1 inacc 11 } 
+	{ in4_real_TDATA sc_in sc_lv 16 signal 12 } 
+	{ in4_real_TREADY sc_out sc_logic 1 inacc 12 } 
+	{ in4_imag_TDATA sc_in sc_lv 16 signal 13 } 
+	{ in4_imag_TREADY sc_out sc_logic 1 inacc 13 } 
+	{ out_real_TDATA sc_out sc_lv 16 signal 14 } 
+	{ out_real_TVALID sc_out sc_logic 1 outvld 14 } 
+	{ out_imag_TDATA sc_out sc_lv 16 signal 15 } 
+	{ out_imag_TVALID sc_out sc_logic 1 outvld 15 } 
 	{ s_axi_control_AWVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_AWREADY sc_out sc_logic 1 signal -1 } 
 	{ s_axi_control_AWADDR sc_in sc_lv 6 signal -1 } 
@@ -109,7 +111,7 @@ set portList {
 	{ s_axi_control_BRESP sc_out sc_lv 2 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"phi","role":"data","value":"16"},{"name":"xpos1","role":"data","value":"24"},{"name":"xpos2","role":"data","value":"32"},{"name":"xpos3","role":"data","value":"40"},{"name":"xpos4","role":"data","value":"48"}] },
+	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"phi","role":"data","value":"16"},{"name":"fc","role":"data","value":"24"},{"name":"xpos1","role":"data","value":"32"},{"name":"xpos2","role":"data","value":"40"},{"name":"xpos3","role":"data","value":"48"},{"name":"xpos4","role":"data","value":"56"}] },
 	{ "name": "s_axi_control_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWVALID" } },
 	{ "name": "s_axi_control_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWREADY" } },
 	{ "name": "s_axi_control_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WVALID" } },
@@ -164,13 +166,13 @@ set NewPortList {[
  	{ "name": "out_imag_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "out_imag", "role": "TVALID" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
 		"CDFG" : "DelayAndSum",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "50", "EstimateLatencyMin" : "50", "EstimateLatencyMax" : "50",
+		"VariableLatency" : "0", "ExactLatency" : "1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -180,6 +182,7 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "phi", "Type" : "None", "Direction" : "I"},
+			{"Name" : "fc", "Type" : "None", "Direction" : "I"},
 			{"Name" : "xpos1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "xpos2", "Type" : "None", "Direction" : "I"},
 			{"Name" : "xpos3", "Type" : "None", "Direction" : "I"},
@@ -215,66 +218,26 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "out_imag_TDATA_blk_n", "Type" : "RtlSignal"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9ns_43ns_44_2_1_U1", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9ns_43ns_44_2_1_U2", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9ns_43ns_44_2_1_U3", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9ns_43ns_44_2_1_U4", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_34ns_62ns_94_3_1_U5", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_34ns_62ns_94_3_1_U6", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_34ns_62ns_94_3_1_U7", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_34ns_62ns_94_3_1_U8", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_12ns_18ns_29_1_1_U9", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_10_1_1_U10", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_10s_11ns_21_1_1_U11", "Parent" : "0"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_21s_16s_36_1_1_U12", "Parent" : "0"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_21s_16s_36_1_1_U13", "Parent" : "0"},
-	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_21s_16s_36_1_1_U14", "Parent" : "0"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_21s_16s_36_1_1_U15", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_26_1_1_U16", "Parent" : "0"},
-	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_26_1_1_U17", "Parent" : "0"},
-	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_26_1_1_U18", "Parent" : "0"},
-	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_26_1_1_U19", "Parent" : "0"},
-	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_26_1_1_U20", "Parent" : "0"},
-	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_26_1_1_U21", "Parent" : "0"},
-	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_26_1_1_U22", "Parent" : "0"},
-	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_26_1_1_U23", "Parent" : "0"},
-	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_31_1_1_U24", "Parent" : "0"},
-	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_31_1_1_U25", "Parent" : "0"},
-	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_12ns_4ns_14ns_14_4_1_U26", "Parent" : "0"},
-	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31s_31_4_1_U27", "Parent" : "0"},
-	{"ID" : "29", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_mulsub_16s_16s_31s_31_4_1_U28", "Parent" : "0"},
-	{"ID" : "30", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U29", "Parent" : "0"},
-	{"ID" : "31", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U30", "Parent" : "0"},
-	{"ID" : "32", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U31", "Parent" : "0"},
-	{"ID" : "33", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_mulsub_16s_16s_31ns_31_4_1_U32", "Parent" : "0"},
-	{"ID" : "34", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U33", "Parent" : "0"},
-	{"ID" : "35", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U34", "Parent" : "0"},
-	{"ID" : "36", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U35", "Parent" : "0"},
-	{"ID" : "37", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_mulsub_16s_16s_31ns_31_4_1_U36", "Parent" : "0"},
-	{"ID" : "38", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U37", "Parent" : "0"},
-	{"ID" : "39", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U38", "Parent" : "0"},
-	{"ID" : "40", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U39", "Parent" : "0"},
-	{"ID" : "41", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_mulsub_16s_16s_31ns_31_4_1_U40", "Parent" : "0"},
-	{"ID" : "42", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.frp_pipeline_valid_U", "Parent" : "0"},
-	{"ID" : "43", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.pf_out_imag_U", "Parent" : "0"},
-	{"ID" : "44", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.pf_out_real_U", "Parent" : "0"},
-	{"ID" : "45", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in1_real_U", "Parent" : "0"},
-	{"ID" : "46", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in1_imag_U", "Parent" : "0"},
-	{"ID" : "47", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in2_real_U", "Parent" : "0"},
-	{"ID" : "48", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in2_imag_U", "Parent" : "0"},
-	{"ID" : "49", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in3_real_U", "Parent" : "0"},
-	{"ID" : "50", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in3_imag_U", "Parent" : "0"},
-	{"ID" : "51", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in4_real_U", "Parent" : "0"},
-	{"ID" : "52", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in4_imag_U", "Parent" : "0"}]}
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in1_real_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in1_imag_U", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in2_real_U", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in2_imag_U", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in3_real_U", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in3_imag_U", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in4_real_U", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in4_imag_U", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_out_real_U", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_out_imag_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	DelayAndSum {
-		phi {Type I LastRead 0 FirstWrite -1}
-		xpos1 {Type I LastRead 0 FirstWrite -1}
-		xpos2 {Type I LastRead 0 FirstWrite -1}
-		xpos3 {Type I LastRead 0 FirstWrite -1}
-		xpos4 {Type I LastRead 0 FirstWrite -1}
+		phi {Type I LastRead -1 FirstWrite -1}
+		fc {Type I LastRead -1 FirstWrite -1}
+		xpos1 {Type I LastRead -1 FirstWrite -1}
+		xpos2 {Type I LastRead -1 FirstWrite -1}
+		xpos3 {Type I LastRead -1 FirstWrite -1}
+		xpos4 {Type I LastRead -1 FirstWrite -1}
 		in1_real {Type I LastRead 0 FirstWrite -1}
 		in1_imag {Type I LastRead 0 FirstWrite -1}
 		in2_real {Type I LastRead 0 FirstWrite -1}
@@ -283,13 +246,13 @@ set ArgLastReadFirstWriteLatency {
 		in3_imag {Type I LastRead 0 FirstWrite -1}
 		in4_real {Type I LastRead 0 FirstWrite -1}
 		in4_imag {Type I LastRead 0 FirstWrite -1}
-		out_real {Type O LastRead -1 FirstWrite 49}
-		out_imag {Type O LastRead -1 FirstWrite 49}}}
+		out_real {Type O LastRead -1 FirstWrite 0}
+		out_imag {Type O LastRead -1 FirstWrite 0}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "50", "Max" : "50"}
+	{"Name" : "Latency", "Min" : "1", "Max" : "1"}
 	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 

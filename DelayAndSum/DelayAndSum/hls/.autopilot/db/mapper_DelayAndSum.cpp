@@ -263,8 +263,8 @@ static AESL_RUNTIME_BC __xlx_out_real_V_size_Reader("../tv/stream_size/stream_si
 unsigned int ap_apatb_out_imag_cap_bc;
 static AESL_RUNTIME_BC __xlx_out_imag_V_size_Reader("../tv/stream_size/stream_size_out_out_imag.dat");
 using hls::sim::Byte;
-extern "C" void DelayAndSum(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, short*, short*, short*, short*, short*, short*, short*, short*, short*, short*);
-extern "C" void apatb_DelayAndSum_hw(volatile void * __xlx_apatb_param_phi, volatile void * __xlx_apatb_param_xpos1, volatile void * __xlx_apatb_param_xpos2, volatile void * __xlx_apatb_param_xpos3, volatile void * __xlx_apatb_param_xpos4, volatile void * __xlx_apatb_param_in1_real, volatile void * __xlx_apatb_param_in1_imag, volatile void * __xlx_apatb_param_in2_real, volatile void * __xlx_apatb_param_in2_imag, volatile void * __xlx_apatb_param_in3_real, volatile void * __xlx_apatb_param_in3_imag, volatile void * __xlx_apatb_param_in4_real, volatile void * __xlx_apatb_param_in4_imag, volatile void * __xlx_apatb_param_out_real, volatile void * __xlx_apatb_param_out_imag) {
+extern "C" void DelayAndSum(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, short*, short*, short*, short*, short*, short*, short*, short*, short*, short*);
+extern "C" void apatb_DelayAndSum_hw(volatile void * __xlx_apatb_param_phi, volatile void * __xlx_apatb_param_fc, volatile void * __xlx_apatb_param_xpos1, volatile void * __xlx_apatb_param_xpos2, volatile void * __xlx_apatb_param_xpos3, volatile void * __xlx_apatb_param_xpos4, volatile void * __xlx_apatb_param_in1_real, volatile void * __xlx_apatb_param_in1_imag, volatile void * __xlx_apatb_param_in2_real, volatile void * __xlx_apatb_param_in2_imag, volatile void * __xlx_apatb_param_in3_real, volatile void * __xlx_apatb_param_in3_imag, volatile void * __xlx_apatb_param_in4_real, volatile void * __xlx_apatb_param_in4_imag, volatile void * __xlx_apatb_param_out_real, volatile void * __xlx_apatb_param_out_imag) {
 using hls::sim::createStream;
 auto* sin1_real = createStream((hls::stream<short>*)__xlx_apatb_param_in1_real);
 auto* sin1_imag = createStream((hls::stream<short>*)__xlx_apatb_param_in1_imag);
@@ -283,7 +283,7 @@ auto* sout_real = createStream((hls::stream<short>*)__xlx_apatb_param_out_real);
   short* __xlx_out_imag_input_buffer= new short[ap_apatb_out_imag_cap_bc];
 auto* sout_imag = createStream((hls::stream<short>*)__xlx_apatb_param_out_imag);
   // DUT call
-  DelayAndSum(__xlx_apatb_param_phi, __xlx_apatb_param_xpos1, __xlx_apatb_param_xpos2, __xlx_apatb_param_xpos3, __xlx_apatb_param_xpos4, sin1_real->data<short>(), sin1_imag->data<short>(), sin2_real->data<short>(), sin2_imag->data<short>(), sin3_real->data<short>(), sin3_imag->data<short>(), sin4_real->data<short>(), sin4_imag->data<short>(), sout_real->data<short>(), sout_imag->data<short>());
+  DelayAndSum(__xlx_apatb_param_phi, __xlx_apatb_param_fc, __xlx_apatb_param_xpos1, __xlx_apatb_param_xpos2, __xlx_apatb_param_xpos3, __xlx_apatb_param_xpos4, sin1_real->data<short>(), sin1_imag->data<short>(), sin2_real->data<short>(), sin2_imag->data<short>(), sin3_real->data<short>(), sin3_imag->data<short>(), sin4_real->data<short>(), sin4_imag->data<short>(), sout_real->data<short>(), sout_imag->data<short>());
 sin1_real->transfer((hls::stream<short>*)__xlx_apatb_param_in1_real);
 sin1_imag->transfer((hls::stream<short>*)__xlx_apatb_param_in1_imag);
 sin2_real->transfer((hls::stream<short>*)__xlx_apatb_param_in2_real);

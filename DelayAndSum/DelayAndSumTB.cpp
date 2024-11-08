@@ -4,25 +4,26 @@
 
 constexpr double pi = 3.14159265359;
 
-hls::stream<in1_t> in1_real;
-hls::stream<in1_t> in1_imag;
-hls::stream<in1_t> in2_real;
-hls::stream<in1_t> in2_imag;
-hls::stream<in1_t> in3_real;
-hls::stream<in1_t> in3_imag;
-hls::stream<in1_t> in4_real;
-hls::stream<in1_t> in4_imag;
-hls::stream<out_t> out_real;
-hls::stream<out_t> out_imag;
+hls::stream<fxd_16_1_t> in1_real;
+hls::stream<fxd_16_1_t> in1_imag;
+hls::stream<fxd_16_1_t> in2_real;
+hls::stream<fxd_16_1_t> in2_imag;
+hls::stream<fxd_16_1_t> in3_real;
+hls::stream<fxd_16_1_t> in3_imag;
+hls::stream<fxd_16_1_t> in4_real;
+hls::stream<fxd_16_1_t> in4_imag;
+hls::stream<fxd_16_1_t> out_real;
+hls::stream<fxd_16_1_t> out_imag;
 
-in2_t phi = 70 * 2*pi/360;
-in3_t xpos1 = -60; // mm
-in3_t xpos2 = -20; // mm
-in3_t xpos3 = 20; // mm
-in3_t xpos4 = 60; // mm
+fxd_12_4_t phi = 70 * 2*pi/360; // in rad
+fxd_32_27_t fc = 3750; // in MHz
+fxd_16_8_t xpos1 = -60; // mm
+fxd_16_8_t xpos2 = -20; // mm
+fxd_16_8_t xpos3 = 20; // mm
+fxd_16_8_t xpos4 = 60; // mm
 
-out_t outputs_real[NUM_ANGLES];
-out_t outputs_imag[NUM_ANGLES];
+fxd_16_1_t outputs_real[NUM_ANGLES];
+fxd_16_1_t outputs_imag[NUM_ANGLES];
 
 int main(){
     int ret = 0;
@@ -38,7 +39,8 @@ int main(){
         in4_imag << inputs_imag[i][3];
 
         DelayAndSum(
-            &phi, 
+            &phi,
+            &fc,
             &xpos1,
             &xpos2,
             &xpos3,

@@ -27282,98 +27282,104 @@ class stream : public stream<__STREAM_T__, 0> {
 # 13 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\hls_stream.h" 2
 # 7 "./DelayAndSum.hpp" 2
 
-typedef ap_fixed<16,1> in1_t;
 
 
 
 
-
-typedef ap_fixed<12,4> in2_t;
-typedef ap_fixed<16,8> in3_t;
-
-typedef ap_fixed<16,1> out_t;
+typedef ap_fixed<12,4> fxd_12_4_t;
+typedef ap_fixed<16,8> fxd_16_8_t;
+typedef ap_fixed<32,27> fxd_32_27_t;
+typedef ap_fixed<16,1> fxd_16_1_t;
 
 void DelayAndSum(
 
-    in2_t *phi,
+    fxd_12_4_t *phi,
 
 
-    in3_t *xpos1,
-    in3_t *xpos2,
-    in3_t *xpos3,
-    in3_t *xpos4,
+    fxd_32_27_t *fc,
 
 
-    hls::stream<in1_t> &in1_real,
-    hls::stream<in1_t> &in1_imag,
-    hls::stream<in1_t> &in2_real,
-    hls::stream<in1_t> &in2_imag,
-    hls::stream<in1_t> &in3_real,
-    hls::stream<in1_t> &in3_imag,
-    hls::stream<in1_t> &in4_real,
-    hls::stream<in1_t> &in4_imag,
-    hls::stream<out_t> &out_real,
-    hls::stream<out_t> &out_imag
+    fxd_16_8_t *xpos1,
+    fxd_16_8_t *xpos2,
+    fxd_16_8_t *xpos3,
+    fxd_16_8_t *xpos4,
+
+
+    hls::stream<fxd_16_1_t> &in1_real,
+    hls::stream<fxd_16_1_t> &in1_imag,
+    hls::stream<fxd_16_1_t> &in2_real,
+    hls::stream<fxd_16_1_t> &in2_imag,
+    hls::stream<fxd_16_1_t> &in3_real,
+    hls::stream<fxd_16_1_t> &in3_imag,
+    hls::stream<fxd_16_1_t> &in4_real,
+    hls::stream<fxd_16_1_t> &in4_imag,
+    hls::stream<fxd_16_1_t> &out_real,
+    hls::stream<fxd_16_1_t> &out_imag
 );
 # 5 "./CalculateWeights.hpp" 2
 
 void CalculateWeights(
 
-    in2_t phi,
+    fxd_12_4_t &phi,
 
 
-    in3_t xpos1,
-    in3_t xpos2,
-    in3_t xpos3,
-    in3_t xpos4,
+    fxd_32_27_t &fc,
 
 
-    in1_t &w1_real,
-    in1_t &w1_imag,
-    in1_t &w2_real,
-    in1_t &w2_imag,
-    in1_t &w3_real,
-    in1_t &w3_imag,
-    in1_t &w4_real,
-    in1_t &w4_imag
+    fxd_16_8_t &xpos1,
+    fxd_16_8_t &xpos2,
+    fxd_16_8_t &xpos3,
+    fxd_16_8_t &xpos4,
+
+
+    fxd_16_1_t &w1_real,
+    fxd_16_1_t &w1_imag,
+    fxd_16_1_t &w2_real,
+    fxd_16_1_t &w2_imag,
+    fxd_16_1_t &w3_real,
+    fxd_16_1_t &w3_imag,
+    fxd_16_1_t &w4_real,
+    fxd_16_1_t &w4_imag
 );
 # 3 "CalculateWeights.cpp" 2
 
-void CalculateElement(in2_t phi, in3_t xpos, in1_t &w_real, in1_t &w_imag){
-    constexpr double pi = 3.14159265359;
-    constexpr double c_0 = 299792458;
-    constexpr double f_c = 3750000000;
-    constexpr double mm_to_m = 1000;
-    const in3_t k = 2*pi*f_c/c_0*mm_to_m;
+void CalculateElement(fxd_12_4_t &phi, fxd_32_27_t &fc, fxd_16_8_t &xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag){
 
+    fxd_32_27_t temp = (2*3.14159265359)/(2.99792458*1e5);
+    fxd_16_8_t k = temp*fc;
 
 
     w_real = hls::cos(k*hls::cos(phi)*xpos)/4;
     w_imag = hls::sin(k*hls::cos(phi)*xpos)/4;
+    return;
 }
 
 void CalculateWeights(
 
-    in2_t phi,
+    fxd_12_4_t &phi,
 
 
-    in3_t xpos1,
-    in3_t xpos2,
-    in3_t xpos3,
-    in3_t xpos4,
+    fxd_32_27_t &fc,
 
 
-    in1_t &w1_real,
-    in1_t &w1_imag,
-    in1_t &w2_real,
-    in1_t &w2_imag,
-    in1_t &w3_real,
-    in1_t &w3_imag,
-    in1_t &w4_real,
-    in1_t &w4_imag
+    fxd_16_8_t &xpos1,
+    fxd_16_8_t &xpos2,
+    fxd_16_8_t &xpos3,
+    fxd_16_8_t &xpos4,
+
+
+    fxd_16_1_t &w1_real,
+    fxd_16_1_t &w1_imag,
+    fxd_16_1_t &w2_real,
+    fxd_16_1_t &w2_imag,
+    fxd_16_1_t &w3_real,
+    fxd_16_1_t &w3_imag,
+    fxd_16_1_t &w4_real,
+    fxd_16_1_t &w4_imag
 ){
-    CalculateElement(phi, xpos1, w1_real, w1_imag);
-    CalculateElement(phi, xpos2, w2_real, w2_imag);
-    CalculateElement(phi, xpos3, w3_real, w3_imag);
-    CalculateElement(phi, xpos4, w4_real, w4_imag);
+    CalculateElement(phi, fc, xpos1, w1_real, w1_imag);
+    CalculateElement(phi, fc, xpos2, w2_real, w2_imag);
+    CalculateElement(phi, fc, xpos3, w3_real, w3_imag);
+    CalculateElement(phi, fc, xpos4, w4_real, w4_imag);
+    return;
 }

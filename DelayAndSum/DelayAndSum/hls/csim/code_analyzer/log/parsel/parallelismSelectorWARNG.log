@@ -1,0 +1,1 @@
+parallelismSelector::WARNG: WARNING: [SIM 211-207] Code Analyzer does not display the impact of the pipeline pragma in dataflow regions (:0:0)

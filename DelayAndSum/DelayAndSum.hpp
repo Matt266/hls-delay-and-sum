@@ -5,38 +5,39 @@
 #include <ap_fixed.h>
 #include <hls_stream.h>
 
-typedef ap_fixed<16,1> in1_t;
-
 // Used for calculation of weight vector
 // sin and cos from hls_math (CORDIC) are used
 // increasing the bitwidth drastically increases LUT usage
 // 16% with ap_fixed<16,8> and 64% for ap_fixed<32,8> for in2_t and in3_t
-typedef ap_fixed<12,4> in2_t;
-typedef ap_fixed<16,8> in3_t;
-
-typedef ap_fixed<16,1> out_t;
+typedef ap_fixed<12,4> fxd_12_4_t;
+typedef ap_fixed<16,8> fxd_16_8_t;
+typedef ap_fixed<32,27> fxd_32_27_t;
+typedef ap_fixed<16,1> fxd_16_1_t;
 
 void DelayAndSum(
     // in rad
-    in2_t *phi,
+    fxd_12_4_t *phi,
+
+    // in MHz
+    fxd_32_27_t *fc,
     
     // in mm
-    in3_t *xpos1,
-    in3_t *xpos2,
-    in3_t *xpos3,
-    in3_t *xpos4,
+    fxd_16_8_t *xpos1,
+    fxd_16_8_t *xpos2,
+    fxd_16_8_t *xpos3,
+    fxd_16_8_t *xpos4,
 
     //
-    hls::stream<in1_t> &in1_real,
-    hls::stream<in1_t> &in1_imag,
-    hls::stream<in1_t> &in2_real,
-    hls::stream<in1_t> &in2_imag,
-    hls::stream<in1_t> &in3_real,
-    hls::stream<in1_t> &in3_imag,
-    hls::stream<in1_t> &in4_real,
-    hls::stream<in1_t> &in4_imag,
-    hls::stream<out_t> &out_real,
-    hls::stream<out_t> &out_imag
+    hls::stream<fxd_16_1_t> &in1_real,
+    hls::stream<fxd_16_1_t> &in1_imag,
+    hls::stream<fxd_16_1_t> &in2_real,
+    hls::stream<fxd_16_1_t> &in2_imag,
+    hls::stream<fxd_16_1_t> &in3_real,
+    hls::stream<fxd_16_1_t> &in3_imag,
+    hls::stream<fxd_16_1_t> &in4_real,
+    hls::stream<fxd_16_1_t> &in4_imag,
+    hls::stream<fxd_16_1_t> &out_real,
+    hls::stream<fxd_16_1_t> &out_imag
 );
 		
 #endif //DELAY_AND_SUM_HPP

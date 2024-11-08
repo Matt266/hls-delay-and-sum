@@ -1,6 +1,0 @@
-
-Family       : zynquplus
-Device       : xczu48dr
-Package      : -ffvg1517
-Speed Grade  : -2-e
-Clock Period : 5

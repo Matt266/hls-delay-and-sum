@@ -1,5 +1,5 @@
 C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\csim\code_analyzer\.internal\build\DelayAndSumTB.cpp.0.o: \
-  DelayAndSumTB.cpp DelayAndSum.hpp \
+  DelayAndSumTB.cpp TestData.hpp DelayAndSum.hpp \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/stdio.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/corecrt.h \
@@ -12,7 +12,7 @@ C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndS
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/_mingw_off_t.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/swprintf.inl \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
-  c:/xilinx/vitis_hls/2024.1/vcxx/data/include/ap_int.h \
+  c:/xilinx/vitis_hls/2024.1/vcxx/data/include/ap_fixed.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/include/etc/ap_common.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/include/etc/ap_decl.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/assert.h \
@@ -174,11 +174,11 @@ C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndS
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/bits/uses_allocator.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/bits/invoke.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/bits/quoted_string.h \
+  c:/xilinx/vitis_hls/2024.1/vcxx/data/include/etc/ap_fixed_base.h \
+  c:/xilinx/vitis_hls/2024.1/vcxx/data/include/ap_int.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/include/etc/ap_int_base.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/include/etc/ap_int_ref.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/include/etc/ap_int_special.h \
-  c:/xilinx/vitis_hls/2024.1/vcxx/data/include/ap_fixed.h \
-  c:/xilinx/vitis_hls/2024.1/vcxx/data/include/etc/ap_fixed_base.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/cfenv \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/fenv.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/fenv.h \
@@ -226,8 +226,4 @@ C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndS
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/condition_variable \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/cxxabi.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/x86_64-w64-mingw32/bits/cxxabi_tweaks.h \
-  C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/fstream \
-  C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/x86_64-w64-mingw32/bits/basic_file.h \
-  C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/x86_64-w64-mingw32/bits/c++io.h \
-  C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/bits/fstream.tcc \
-  stub.cpp
+  CalculateWeights.hpp

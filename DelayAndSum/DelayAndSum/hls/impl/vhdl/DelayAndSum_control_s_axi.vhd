@@ -35,6 +35,7 @@ port (
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
     phi                   :out  STD_LOGIC_VECTOR(11 downto 0);
+    fc                    :out  STD_LOGIC_VECTOR(31 downto 0);
     xpos1                 :out  STD_LOGIC_VECTOR(15 downto 0);
     xpos2                 :out  STD_LOGIC_VECTOR(15 downto 0);
     xpos3                 :out  STD_LOGIC_VECTOR(15 downto 0);
@@ -53,22 +54,25 @@ end entity DelayAndSum_control_s_axi;
 --        bit 11~0 - phi[11:0] (Read/Write)
 --        others   - reserved
 -- 0x14 : reserved
--- 0x18 : Data signal of xpos1
+-- 0x18 : Data signal of fc
+--        bit 31~0 - fc[31:0] (Read/Write)
+-- 0x1c : reserved
+-- 0x20 : Data signal of xpos1
 --        bit 15~0 - xpos1[15:0] (Read/Write)
 --        others   - reserved
--- 0x1c : reserved
--- 0x20 : Data signal of xpos2
+-- 0x24 : reserved
+-- 0x28 : Data signal of xpos2
 --        bit 15~0 - xpos2[15:0] (Read/Write)
 --        others   - reserved
--- 0x24 : reserved
--- 0x28 : Data signal of xpos3
+-- 0x2c : reserved
+-- 0x30 : Data signal of xpos3
 --        bit 15~0 - xpos3[15:0] (Read/Write)
 --        others   - reserved
--- 0x2c : reserved
--- 0x30 : Data signal of xpos4
+-- 0x34 : reserved
+-- 0x38 : Data signal of xpos4
 --        bit 15~0 - xpos4[15:0] (Read/Write)
 --        others   - reserved
--- 0x34 : reserved
+-- 0x3c : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of DelayAndSum_control_s_axi is
@@ -78,14 +82,16 @@ architecture behave of DelayAndSum_control_s_axi is
     signal wnext, rnext: states;
     constant ADDR_PHI_DATA_0   : INTEGER := 16#10#;
     constant ADDR_PHI_CTRL     : INTEGER := 16#14#;
-    constant ADDR_XPOS1_DATA_0 : INTEGER := 16#18#;
-    constant ADDR_XPOS1_CTRL   : INTEGER := 16#1c#;
-    constant ADDR_XPOS2_DATA_0 : INTEGER := 16#20#;
-    constant ADDR_XPOS2_CTRL   : INTEGER := 16#24#;
-    constant ADDR_XPOS3_DATA_0 : INTEGER := 16#28#;
-    constant ADDR_XPOS3_CTRL   : INTEGER := 16#2c#;
-    constant ADDR_XPOS4_DATA_0 : INTEGER := 16#30#;
-    constant ADDR_XPOS4_CTRL   : INTEGER := 16#34#;
+    constant ADDR_FC_DATA_0    : INTEGER := 16#18#;
+    constant ADDR_FC_CTRL      : INTEGER := 16#1c#;
+    constant ADDR_XPOS1_DATA_0 : INTEGER := 16#20#;
+    constant ADDR_XPOS1_CTRL   : INTEGER := 16#24#;
+    constant ADDR_XPOS2_DATA_0 : INTEGER := 16#28#;
+    constant ADDR_XPOS2_CTRL   : INTEGER := 16#2c#;
+    constant ADDR_XPOS3_DATA_0 : INTEGER := 16#30#;
+    constant ADDR_XPOS3_CTRL   : INTEGER := 16#34#;
+    constant ADDR_XPOS4_DATA_0 : INTEGER := 16#38#;
+    constant ADDR_XPOS4_CTRL   : INTEGER := 16#3c#;
     constant ADDR_BITS         : INTEGER := 6;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -101,6 +107,7 @@ architecture behave of DelayAndSum_control_s_axi is
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
     signal int_phi             : UNSIGNED(11 downto 0) := (others => '0');
+    signal int_fc              : UNSIGNED(31 downto 0) := (others => '0');
     signal int_xpos1           : UNSIGNED(15 downto 0) := (others => '0');
     signal int_xpos2           : UNSIGNED(15 downto 0) := (others => '0');
     signal int_xpos3           : UNSIGNED(15 downto 0) := (others => '0');
@@ -222,6 +229,8 @@ begin
                     case (TO_INTEGER(raddr)) is
                     when ADDR_PHI_DATA_0 =>
                         rdata_data <= RESIZE(int_phi(11 downto 0), 32);
+                    when ADDR_FC_DATA_0 =>
+                        rdata_data <= RESIZE(int_fc(31 downto 0), 32);
                     when ADDR_XPOS1_DATA_0 =>
                         rdata_data <= RESIZE(int_xpos1(15 downto 0), 32);
                     when ADDR_XPOS2_DATA_0 =>
@@ -240,6 +249,7 @@ begin
 
 -- ----------------------- Register logic ----------------
     phi                  <= STD_LOGIC_VECTOR(int_phi);
+    fc                   <= STD_LOGIC_VECTOR(int_fc);
     xpos1                <= STD_LOGIC_VECTOR(int_xpos1);
     xpos2                <= STD_LOGIC_VECTOR(int_xpos2);
     xpos3                <= STD_LOGIC_VECTOR(int_xpos3);
@@ -253,6 +263,19 @@ begin
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_PHI_DATA_0) then
                     int_phi(11 downto 0) <= (UNSIGNED(WDATA(11 downto 0)) and wmask(11 downto 0)) or ((not wmask(11 downto 0)) and int_phi(11 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_fc(31 downto 0) <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_FC_DATA_0) then
+                    int_fc(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_fc(31 downto 0));
                 end if;
             end if;
         end if;

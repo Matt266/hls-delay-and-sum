@@ -38,6 +38,23 @@ u32 XDelayandsum_Get_phi(XDelayandsum *InstancePtr) {
     return Data;
 }
 
+void XDelayandsum_Set_fc(XDelayandsum *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_FC_DATA, Data);
+}
+
+u32 XDelayandsum_Get_fc(XDelayandsum *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_FC_DATA);
+    return Data;
+}
+
 void XDelayandsum_Set_xpos1(XDelayandsum *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
