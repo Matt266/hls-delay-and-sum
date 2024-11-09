@@ -1,7 +1,0 @@
-Running: xsim.dir/DelayAndSum/xsimk.exe -simmode gui -wdb DelayAndSum.wdb -simrunnum 0 -socket 61261
-Design successfully loaded
-Design Loading Memory Usage: 9432 KB (Peak: 9432 KB)
-Design Loading CPU Usage: 62 ms
-Simulation completed
-Simulation Memory Usage: 11656 KB (Peak: 11656 KB)
-Simulation CPU Usage: 62 ms

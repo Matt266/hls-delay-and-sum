@@ -7,7 +7,8 @@
 //        others   - reserved
 // 0x14 : reserved
 // 0x18 : Data signal of fc
-//        bit 31~0 - fc[31:0] (Read/Write)
+//        bit 15~0 - fc[15:0] (Read/Write)
+//        others   - reserved
 // 0x1c : reserved
 // 0x20 : Data signal of xpos1
 //        bit 15~0 - xpos1[15:0] (Read/Write)
@@ -30,7 +31,7 @@
 #define CONTROL_ADDR_PHI_DATA   0x10
 #define CONTROL_BITS_PHI_DATA   12
 #define CONTROL_ADDR_FC_DATA    0x18
-#define CONTROL_BITS_FC_DATA    32
+#define CONTROL_BITS_FC_DATA    16
 #define CONTROL_ADDR_XPOS1_DATA 0x20
 #define CONTROL_BITS_XPOS1_DATA 16
 #define CONTROL_ADDR_XPOS2_DATA 0x28

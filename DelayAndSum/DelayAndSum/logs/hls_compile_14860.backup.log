@@ -1,0 +1,53 @@
+INFO: [v++ 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlscompile_summary, at 11/09/24 16:42:43
+INFO: [v++ 82-31] Launching vitis_hls: vitis_hls -nolog -run csynth -work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum -config C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg -cmdlineconfig C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline
+INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Sat Nov 09 16:42:46 +0100 2024
+INFO: [HLS 200-10] In directory 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum'
+INFO: [HLS 200-2005] Using work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=CalculateWeights.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/CalculateWeights.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=CalculateWeights.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/CalculateWeights.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=TestData.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/TestData.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=DelayAndSum' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying ini 'package.ip.description=4 channel delay and sum beamformer' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+INFO: [HLS 200-1465] Applying ini 'package.ip.display_name=DelayAndSum' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
+INFO: [HLS 200-1465] Applying ini 'package.output.file=C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\DelayAndSum.zip' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying ini 'vivado.rtl=vhdl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(21)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.63 seconds; current allocated memory: 231.488 MB.
+INFO: [HLS 200-10] Analyzing design file 'CalculateWeights.cpp' ... 
+ERROR: [HLS 207-1219] expected ';' at end of declaration (CalculateWeights.cpp:6:21)
+WARNING: [HLS 207-5169] shift count is negative (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\etc/ap_fixed_base.h:992:13)
+INFO: [HLS 207-4526] in instantiation of member function 'ap_fixed_base<17, 4, false, AP_TRN, AP_WRAP, 0>::to_ap_int_base' requested here (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\etc/ap_int_base.h:363:18)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'ap_int_base<4, false>::ap_int_base<17, 4, false, AP_TRN, AP_WRAP, 0>' requested here (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\ap_int.h:237:9)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'ap_uint<4>::ap_uint<17, 4, AP_TRN, AP_WRAP, 0>' requested here (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:39:23)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'cordic_apfixed::circ_range_redux<12, 4, 13>' requested here (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:217:5)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'cordic_apfixed::generic_sincos<12, 4>' requested here (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h:1944:25)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'hls::cos<12, 4>' requested here (CalculateWeights.cpp:10:30)
+INFO: [HLS 207-4526] in instantiation of member function 'ap_fixed_base<61, 18, false, AP_TRN, AP_WRAP, 0>::to_ap_int_base' requested here (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\etc/ap_int_base.h:363:18)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'ap_int_base<18, false>::ap_int_base<61, 18, false, AP_TRN, AP_WRAP, 0>' requested here (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\ap_int.h:237:9)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'ap_uint<18>::ap_uint<61, 18, AP_TRN, AP_WRAP, 0>' requested here (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:39:23)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'cordic_apfixed::circ_range_redux<42, 18, 43>' requested here (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:217:5)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'cordic_apfixed::generic_sincos<42, 18>' requested here (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h:1925:25)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'hls::sin<42, 18>' requested here (CalculateWeights.cpp:10:19)
+ERROR:  
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 0 seconds. Total elapsed time: 8.49 seconds; peak allocated memory: 233.590 MB.

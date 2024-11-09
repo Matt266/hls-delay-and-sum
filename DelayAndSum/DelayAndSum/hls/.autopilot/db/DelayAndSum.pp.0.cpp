@@ -6624,16 +6624,16 @@ class stream : public stream<__STREAM_T__, 0> {
 
 
 typedef ap_fixed<12,4> fxd_12_4_t;
-typedef ap_fixed<16,8> fxd_16_8_t;
-typedef ap_fixed<32,27> fxd_32_27_t;
 typedef ap_fixed<16,1> fxd_16_1_t;
+typedef ap_fixed<16,8> fxd_16_8_t;
+typedef ap_fixed<16,11> fxd_16_11_t;
 
 __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
     fxd_12_4_t *phi,
 
 
-    fxd_32_27_t *fc,
+    fxd_16_11_t *fc,
 
 
     fxd_16_8_t *xpos1,
@@ -6659,13 +6659,13 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
 
 
-void CalculateElement(fxd_12_4_t phi, fxd_32_27_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
+void CalculateElement(fxd_12_4_t phi, fxd_16_11_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
 void CalculateWeights(
 
     fxd_12_4_t phi,
 
 
-    fxd_32_27_t fc,
+    fxd_16_11_t fc,
 
 
     fxd_16_8_t xpos1,
@@ -11420,7 +11420,7 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     fxd_12_4_t *phi,
 
 
-    fxd_32_27_t *fc,
+    fxd_16_11_t *fc,
 
 
     fxd_16_8_t *xpos1,
@@ -11445,6 +11445,7 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 # 29 "DelayAndSum.cpp"
 
 #pragma HLS top name=DelayAndSum
+#pragma HLS interface mode=ap_ctrl_none port=return
 
 
 #pragma HLS INTERFACE mode=axis port=in1_real
@@ -11480,7 +11481,7 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     fxd_16_1_t in4_imag_buffer = in4_imag.read();
 
     fxd_12_4_t phi_buffer = *phi;
-    fxd_32_27_t fc_buffer = *fc;
+    fxd_16_11_t fc_buffer = *fc;
     fxd_16_8_t xpos1_buffer = *xpos1;
     fxd_16_8_t xpos2_buffer = *xpos2;
     fxd_16_8_t xpos3_buffer = *xpos3;

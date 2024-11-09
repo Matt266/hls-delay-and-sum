@@ -14,23 +14,23 @@
 <TargetClockPeriod>5.00</TargetClockPeriod>
 <ClockUncertainty>1.35</ClockUncertainty>
 <TargetInitiationInterval>1</TargetInitiationInterval>
-<EstimatedClockPeriod>3.254</EstimatedClockPeriod>
+<EstimatedClockPeriod>3.587</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>1</Best-caseLatency>
-<Average-caseLatency>1</Average-caseLatency>
-<Worst-caseLatency>1</Worst-caseLatency>
-<Best-caseRealTimeLatency>5.000 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>5.000 ns</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>5.000 ns</Worst-caseRealTimeLatency>
+<Best-caseLatency>27</Best-caseLatency>
+<Average-caseLatency>27</Average-caseLatency>
+<Worst-caseLatency>27</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.135 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.135 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.135 us</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>2</PipelineDepth>
+<PipelineDepth>28</PipelineDepth>
 <PipelineType>yes</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>DelayAndSum.cpp:54</SourceLocation>
+<SourceLocation>DelayAndSum.cpp:55</SourceLocation>
 </SummaryOfViolations>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -38,18 +38,18 @@
 <BRAM_18K>0</BRAM_18K>
 <AVAIL_BRAM>2160</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
-<FF>176</FF>
+<DSP>33</DSP>
+<AVAIL_DSP>4272</AVAIL_DSP>
+<UTIL_DSP>~0</UTIL_DSP>
+<FF>3916</FF>
 <AVAIL_FF>850560</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>532</LUT>
+<LUT>12862</LUT>
 <AVAIL_LUT>425280</AVAIL_LUT>
-<UTIL_LUT>~0</UTIL_LUT>
+<UTIL_LUT>3</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>80</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
-<DSP>0</DSP>
-<AVAIL_DSP>4272</AVAIL_DSP>
-<UTIL_DSP>0</UTIL_DSP>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
@@ -245,7 +245,7 @@
 <Object>DelayAndSum</Object>
 <Type>return value</Type>
 <Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOProtocol>ap_ctrl_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
@@ -256,67 +256,11 @@
 <Object>DelayAndSum</Object>
 <Type>return value</Type>
 <Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOProtocol>ap_ctrl_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_start</name>
-<Object>DelayAndSum</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_done</name>
-<Object>DelayAndSum</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_idle</name>
-<Object>DelayAndSum</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_ready</name>
-<Object>DelayAndSum</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>in1_real_TVALID</name>
-<Object>in1_real</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
 </RtlPorts>
 <RtlPorts>
 <name>in1_real_TDATA</name>
@@ -331,6 +275,18 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
+<name>in1_real_TVALID</name>
+<Object>in1_real</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
 <name>in1_real_TREADY</name>
 <Object>in1_real</Object>
 <Type>pointer</Type>
@@ -338,18 +294,6 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>in1_imag_TVALID</name>
-<Object>in1_imag</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
@@ -367,6 +311,18 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
+<name>in1_imag_TVALID</name>
+<Object>in1_imag</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
 <name>in1_imag_TREADY</name>
 <Object>in1_imag</Object>
 <Type>pointer</Type>
@@ -374,18 +330,6 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>in2_real_TVALID</name>
-<Object>in2_real</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
@@ -403,6 +347,18 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
+<name>in2_real_TVALID</name>
+<Object>in2_real</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
 <name>in2_real_TREADY</name>
 <Object>in2_real</Object>
 <Type>pointer</Type>
@@ -410,18 +366,6 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>in2_imag_TVALID</name>
-<Object>in2_imag</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
@@ -439,6 +383,18 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
+<name>in2_imag_TVALID</name>
+<Object>in2_imag</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
 <name>in2_imag_TREADY</name>
 <Object>in2_imag</Object>
 <Type>pointer</Type>
@@ -446,18 +402,6 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>in3_real_TVALID</name>
-<Object>in3_real</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
@@ -475,6 +419,18 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
+<name>in3_real_TVALID</name>
+<Object>in3_real</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
 <name>in3_real_TREADY</name>
 <Object>in3_real</Object>
 <Type>pointer</Type>
@@ -482,18 +438,6 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>in3_imag_TVALID</name>
-<Object>in3_imag</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
@@ -511,6 +455,18 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
+<name>in3_imag_TVALID</name>
+<Object>in3_imag</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
 <name>in3_imag_TREADY</name>
 <Object>in3_imag</Object>
 <Type>pointer</Type>
@@ -518,18 +474,6 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>in4_real_TVALID</name>
-<Object>in4_real</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
@@ -547,6 +491,18 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
+<name>in4_real_TVALID</name>
+<Object>in4_real</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
 <name>in4_real_TREADY</name>
 <Object>in4_real</Object>
 <Type>pointer</Type>
@@ -554,18 +510,6 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>in4_imag_TVALID</name>
-<Object>in4_imag</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
@@ -583,6 +527,18 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
+<name>in4_imag_TVALID</name>
+<Object>in4_imag</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
 <name>in4_imag_TREADY</name>
 <Object>in4_imag</Object>
 <Type>pointer</Type>
@@ -590,18 +546,6 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>out_real_TREADY</name>
-<Object>out_real</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
@@ -631,8 +575,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>out_imag_TREADY</name>
-<Object>out_imag</Object>
+<name>out_real_TREADY</name>
+<Object>out_real</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -662,6 +606,18 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>out_imag_TREADY</name>
+<Object>out_imag</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>

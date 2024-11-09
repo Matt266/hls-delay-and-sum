@@ -1,14 +1,17 @@
 #include <hls_math.h>
 #include "CalculateWeights.hpp"
 
-void CalculateElement(fxd_12_4_t phi, fxd_32_27_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag){
-    // 2pi/c_0 and unit conversions from mm to m, MHz to Hz and 10^8 from c_0
-    fxd_32_27_t temp = (2*3.14159265359)/(2.99792458*1e5);
-    fxd_16_8_t k = temp*fc;
+void CalculateElement(fxd_12_4_t phi, fxd_16_11_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag){
+    // 2pi/c_0 and conversions:  10^-8 from 1/c_0, 10^-3 from mm->m conversion, 10^6 from MHz to Hz conversion ==> 10^-5 overall
+    ap_fixed<16,-15> factor = (2*3.14159265359)/(2.99792458*1e5);
+
     // -1 in complex exponent and -1 from propagation direction (incoming wave) 
     // cancel each other out
-    w_real = hls::cos(k*hls::cos(phi)*xpos)/4;
-    w_imag = hls::sin(k*hls::cos(phi)*xpos)/4;
+    //
+    // cast before hls::sin or hls::cos drastically reduces resource consumption and improves timing.
+    // --> bitwidth seems to be adjusted automatically and therefore needs to be manually truncated 
+    w_real = hls::cos(ap_fixed<8,1>((factor*fc*hls::cos(phi)*xpos)))/4;
+    w_imag = hls::sin(ap_fixed<8,1>((factor*fc*hls::cos(phi)*xpos)))/4;
 }
 
 void CalculateWeights(
@@ -16,7 +19,7 @@ void CalculateWeights(
     fxd_12_4_t phi,
 
     // in Mhz
-    fxd_32_27_t fc,
+    fxd_16_11_t fc,
     
     // in m
     fxd_16_8_t xpos1,

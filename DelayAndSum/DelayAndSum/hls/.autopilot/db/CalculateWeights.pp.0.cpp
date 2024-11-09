@@ -27287,16 +27287,16 @@ class stream : public stream<__STREAM_T__, 0> {
 
 
 typedef ap_fixed<12,4> fxd_12_4_t;
-typedef ap_fixed<16,8> fxd_16_8_t;
-typedef ap_fixed<32,27> fxd_32_27_t;
 typedef ap_fixed<16,1> fxd_16_1_t;
+typedef ap_fixed<16,8> fxd_16_8_t;
+typedef ap_fixed<16,11> fxd_16_11_t;
 
 void DelayAndSum(
 
     fxd_12_4_t *phi,
 
 
-    fxd_32_27_t *fc,
+    fxd_16_11_t *fc,
 
 
     fxd_16_8_t *xpos1,
@@ -27317,13 +27317,13 @@ void DelayAndSum(
     hls::stream<fxd_16_1_t> &out_imag
 );
 # 5 "./CalculateWeights.hpp" 2
-void CalculateElement(fxd_12_4_t phi, fxd_32_27_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
+void CalculateElement(fxd_12_4_t phi, fxd_16_11_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
 void CalculateWeights(
 
     fxd_12_4_t phi,
 
 
-    fxd_32_27_t fc,
+    fxd_16_11_t fc,
 
 
     fxd_16_8_t xpos1,
@@ -27343,14 +27343,17 @@ void CalculateWeights(
 );
 # 3 "CalculateWeights.cpp" 2
 
-void CalculateElement(fxd_12_4_t phi, fxd_32_27_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag){
+void CalculateElement(fxd_12_4_t phi, fxd_16_11_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag){
 
-    fxd_32_27_t temp = (2*3.14159265359)/(2.99792458*1e5);
-    fxd_16_8_t k = temp*fc;
+    ap_fixed<16,-15> factor = (2*3.14159265359)/(2.99792458*1e5);
 
 
-    w_real = hls::cos(k*hls::cos(phi)*xpos)/4;
-    w_imag = hls::sin(k*hls::cos(phi)*xpos)/4;
+
+
+
+
+    w_real = hls::cos(ap_fixed<8,1>((factor*fc*hls::cos(phi)*xpos)))/4;
+    w_imag = hls::sin(ap_fixed<8,1>((factor*fc*hls::cos(phi)*xpos)))/4;
 }
 
 void CalculateWeights(
@@ -27358,7 +27361,7 @@ void CalculateWeights(
     fxd_12_4_t phi,
 
 
-    fxd_32_27_t fc,
+    fxd_16_11_t fc,
 
 
     fxd_16_8_t xpos1,

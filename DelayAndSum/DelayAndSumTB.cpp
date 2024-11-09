@@ -16,7 +16,7 @@ hls::stream<fxd_16_1_t> out_real;
 hls::stream<fxd_16_1_t> out_imag;
 
 fxd_12_4_t phi = 70 * 2*pi/360; // in rad
-fxd_32_27_t fc = 3750; // in MHz
+fxd_16_11_t fc = 3750; // in MHz
 fxd_16_8_t xpos1 = -60; // mm
 fxd_16_8_t xpos2 = -20; // mm
 fxd_16_8_t xpos3 = 20; // mm

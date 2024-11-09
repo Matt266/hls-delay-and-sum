@@ -2,13 +2,13 @@
 #define __CALCULATE_WEIGHTS_HPP
 
 #include "DelayAndSum.hpp"
-void CalculateElement(fxd_12_4_t phi, fxd_32_27_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
+void CalculateElement(fxd_12_4_t phi, fxd_16_11_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
 void CalculateWeights(
     // in rad
     fxd_12_4_t phi,
 
     // in Mhz
-    fxd_32_27_t fc,
+    fxd_16_11_t fc,
     
     // in m
     fxd_16_8_t xpos1,

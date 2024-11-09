@@ -4,7 +4,7 @@ set isCombinational 0
 set isDatapathOnly 0
 set isPipelined 1
 set pipeline_type function
-set FunctionProtocol ap_ctrl_hs
+set FunctionProtocol ap_ctrl_none
 set isOneStateSeq 0
 set ProfileFlag 0
 set StallSigGenFlag 0
@@ -16,12 +16,12 @@ set C_modelName {DelayAndSum}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
 set C_modelArgList {
-	{ phi int 12 unused {axi_slave 0}  }
-	{ fc int 32 unused {axi_slave 0}  }
-	{ xpos1 int 16 unused {axi_slave 0}  }
-	{ xpos2 int 16 unused {axi_slave 0}  }
-	{ xpos3 int 16 unused {axi_slave 0}  }
-	{ xpos4 int 16 unused {axi_slave 0}  }
+	{ phi int 12 regular {axi_slave 0}  }
+	{ fc int 16 regular {axi_slave 0}  }
+	{ xpos1 int 16 regular {axi_slave 0}  }
+	{ xpos2 int 16 regular {axi_slave 0}  }
+	{ xpos3 int 16 regular {axi_slave 0}  }
+	{ xpos4 int 16 regular {axi_slave 0}  }
 	{ in1_real int 16 regular {axi_s 0 volatile  { in1_real Data } }  }
 	{ in1_imag int 16 regular {axi_s 0 volatile  { in1_imag Data } }  }
 	{ in2_real int 16 regular {axi_s 0 volatile  { in2_real Data } }  }
@@ -38,7 +38,7 @@ set hasAXIML2Cache 0
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
 	{ "Name" : "phi", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 12, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":23}} , 
- 	{ "Name" : "fc", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":24}, "offset_end" : {"in":31}} , 
+ 	{ "Name" : "fc", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":24}, "offset_end" : {"in":31}} , 
  	{ "Name" : "xpos1", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":32}, "offset_end" : {"in":39}} , 
  	{ "Name" : "xpos2", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":47}} , 
  	{ "Name" : "xpos3", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":48}, "offset_end" : {"in":55}} , 
@@ -54,44 +54,40 @@ set C_modelArgMapList {[
  	{ "Name" : "out_real", "interface" : "axis", "bitwidth" : 16, "direction" : "WRITEONLY"} , 
  	{ "Name" : "out_imag", "interface" : "axis", "bitwidth" : 16, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
-set portNum 53
+set portNum 49
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
-	{ ap_start sc_in sc_logic 1 start -1 } 
-	{ ap_done sc_out sc_logic 1 predone -1 } 
-	{ ap_idle sc_out sc_logic 1 done -1 } 
-	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ in1_real_TVALID sc_in sc_logic 1 invld 6 } 
-	{ in1_imag_TVALID sc_in sc_logic 1 invld 7 } 
-	{ in2_real_TVALID sc_in sc_logic 1 invld 8 } 
-	{ in2_imag_TVALID sc_in sc_logic 1 invld 9 } 
-	{ in3_real_TVALID sc_in sc_logic 1 invld 10 } 
-	{ in3_imag_TVALID sc_in sc_logic 1 invld 11 } 
-	{ in4_real_TVALID sc_in sc_logic 1 invld 12 } 
-	{ in4_imag_TVALID sc_in sc_logic 1 invld 13 } 
-	{ out_real_TREADY sc_in sc_logic 1 outacc 14 } 
-	{ out_imag_TREADY sc_in sc_logic 1 outacc 15 } 
 	{ in1_real_TDATA sc_in sc_lv 16 signal 6 } 
+	{ in1_real_TVALID sc_in sc_logic 1 invld 6 } 
 	{ in1_real_TREADY sc_out sc_logic 1 inacc 6 } 
 	{ in1_imag_TDATA sc_in sc_lv 16 signal 7 } 
+	{ in1_imag_TVALID sc_in sc_logic 1 invld 7 } 
 	{ in1_imag_TREADY sc_out sc_logic 1 inacc 7 } 
 	{ in2_real_TDATA sc_in sc_lv 16 signal 8 } 
+	{ in2_real_TVALID sc_in sc_logic 1 invld 8 } 
 	{ in2_real_TREADY sc_out sc_logic 1 inacc 8 } 
 	{ in2_imag_TDATA sc_in sc_lv 16 signal 9 } 
+	{ in2_imag_TVALID sc_in sc_logic 1 invld 9 } 
 	{ in2_imag_TREADY sc_out sc_logic 1 inacc 9 } 
 	{ in3_real_TDATA sc_in sc_lv 16 signal 10 } 
+	{ in3_real_TVALID sc_in sc_logic 1 invld 10 } 
 	{ in3_real_TREADY sc_out sc_logic 1 inacc 10 } 
 	{ in3_imag_TDATA sc_in sc_lv 16 signal 11 } 
+	{ in3_imag_TVALID sc_in sc_logic 1 invld 11 } 
 	{ in3_imag_TREADY sc_out sc_logic 1 inacc 11 } 
 	{ in4_real_TDATA sc_in sc_lv 16 signal 12 } 
+	{ in4_real_TVALID sc_in sc_logic 1 invld 12 } 
 	{ in4_real_TREADY sc_out sc_logic 1 inacc 12 } 
 	{ in4_imag_TDATA sc_in sc_lv 16 signal 13 } 
+	{ in4_imag_TVALID sc_in sc_logic 1 invld 13 } 
 	{ in4_imag_TREADY sc_out sc_logic 1 inacc 13 } 
 	{ out_real_TDATA sc_out sc_lv 16 signal 14 } 
 	{ out_real_TVALID sc_out sc_logic 1 outvld 14 } 
+	{ out_real_TREADY sc_in sc_logic 1 outacc 14 } 
 	{ out_imag_TDATA sc_out sc_lv 16 signal 15 } 
 	{ out_imag_TVALID sc_out sc_logic 1 outvld 15 } 
+	{ out_imag_TREADY sc_in sc_logic 1 outacc 15 } 
 	{ s_axi_control_AWVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_AWREADY sc_out sc_logic 1 signal -1 } 
 	{ s_axi_control_AWADDR sc_in sc_lv 6 signal -1 } 
@@ -130,49 +126,45 @@ set NewPortList {[
 	{ "name": "s_axi_control_BRESP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "control", "role": "BRESP" } }, 
  	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
  	{ "name": "ap_rst_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst_n", "role": "default" }} , 
- 	{ "name": "ap_start", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "start", "bundle":{"name": "ap_start", "role": "default" }} , 
- 	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
- 	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
- 	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "in1_real_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in1_real", "role": "TVALID" }} , 
- 	{ "name": "in1_imag_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in1_imag", "role": "TVALID" }} , 
- 	{ "name": "in2_real_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in2_real", "role": "TVALID" }} , 
- 	{ "name": "in2_imag_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in2_imag", "role": "TVALID" }} , 
- 	{ "name": "in3_real_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in3_real", "role": "TVALID" }} , 
- 	{ "name": "in3_imag_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in3_imag", "role": "TVALID" }} , 
- 	{ "name": "in4_real_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in4_real", "role": "TVALID" }} , 
- 	{ "name": "in4_imag_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in4_imag", "role": "TVALID" }} , 
- 	{ "name": "out_real_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "out_real", "role": "TREADY" }} , 
- 	{ "name": "out_imag_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "out_imag", "role": "TREADY" }} , 
  	{ "name": "in1_real_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "in1_real", "role": "TDATA" }} , 
+ 	{ "name": "in1_real_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in1_real", "role": "TVALID" }} , 
  	{ "name": "in1_real_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in1_real", "role": "TREADY" }} , 
  	{ "name": "in1_imag_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "in1_imag", "role": "TDATA" }} , 
+ 	{ "name": "in1_imag_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in1_imag", "role": "TVALID" }} , 
  	{ "name": "in1_imag_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in1_imag", "role": "TREADY" }} , 
  	{ "name": "in2_real_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "in2_real", "role": "TDATA" }} , 
+ 	{ "name": "in2_real_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in2_real", "role": "TVALID" }} , 
  	{ "name": "in2_real_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in2_real", "role": "TREADY" }} , 
  	{ "name": "in2_imag_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "in2_imag", "role": "TDATA" }} , 
+ 	{ "name": "in2_imag_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in2_imag", "role": "TVALID" }} , 
  	{ "name": "in2_imag_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in2_imag", "role": "TREADY" }} , 
  	{ "name": "in3_real_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "in3_real", "role": "TDATA" }} , 
+ 	{ "name": "in3_real_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in3_real", "role": "TVALID" }} , 
  	{ "name": "in3_real_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in3_real", "role": "TREADY" }} , 
  	{ "name": "in3_imag_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "in3_imag", "role": "TDATA" }} , 
+ 	{ "name": "in3_imag_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in3_imag", "role": "TVALID" }} , 
  	{ "name": "in3_imag_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in3_imag", "role": "TREADY" }} , 
  	{ "name": "in4_real_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "in4_real", "role": "TDATA" }} , 
+ 	{ "name": "in4_real_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in4_real", "role": "TVALID" }} , 
  	{ "name": "in4_real_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in4_real", "role": "TREADY" }} , 
  	{ "name": "in4_imag_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "in4_imag", "role": "TDATA" }} , 
+ 	{ "name": "in4_imag_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in4_imag", "role": "TVALID" }} , 
  	{ "name": "in4_imag_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in4_imag", "role": "TREADY" }} , 
  	{ "name": "out_real_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "out_real", "role": "TDATA" }} , 
  	{ "name": "out_real_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "out_real", "role": "TVALID" }} , 
+ 	{ "name": "out_real_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "out_real", "role": "TREADY" }} , 
  	{ "name": "out_imag_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "out_imag", "role": "TDATA" }} , 
- 	{ "name": "out_imag_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "out_imag", "role": "TVALID" }}  ]}
+ 	{ "name": "out_imag_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "out_imag", "role": "TVALID" }} , 
+ 	{ "name": "out_imag_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "out_imag", "role": "TREADY" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45"],
 		"CDFG" : "DelayAndSum",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Protocol" : "ap_ctrl_none",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0", "real_start" : "0",
 		"Pipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "27", "EstimateLatencyMin" : "27", "EstimateLatencyMax" : "27",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -218,26 +210,60 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "out_imag_TDATA_blk_n", "Type" : "RtlSignal"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in1_real_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in1_imag_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in2_real_U", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in2_imag_U", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in3_real_U", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in3_imag_U", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in4_real_U", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in4_imag_U", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_out_real_U", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_out_imag_U", "Parent" : "0"}]}
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_10s_41_1_1_U1", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_41s_16s_53_1_1_U2", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_41s_16s_53_1_1_U3", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_41s_16s_53_1_1_U4", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_41s_16s_53_1_1_U5", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_12ns_18ns_29_1_1_U6", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_32_1_1_U7", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_9_3_10_1_1_U8", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_8ns_11ns_18_1_1_U9", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_8ns_11ns_18_1_1_U10", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_8ns_11ns_18_1_1_U11", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_8ns_11ns_18_1_1_U12", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_7_2_9_1_1_U13", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_7_2_9_1_1_U14", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_31_1_1_U15", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_16s_31_1_1_U16", "Parent" : "0"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_7_2_9_1_1_U17", "Parent" : "0"},
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_7_2_9_1_1_U18", "Parent" : "0"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_12ns_4ns_14ns_14_4_1_U19", "Parent" : "0"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31s_31_4_1_U20", "Parent" : "0"},
+	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_mulsub_16s_16s_31s_31_4_1_U21", "Parent" : "0"},
+	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U22", "Parent" : "0"},
+	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U23", "Parent" : "0"},
+	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U24", "Parent" : "0"},
+	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_mulsub_16s_16s_31ns_31_4_1_U25", "Parent" : "0"},
+	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U26", "Parent" : "0"},
+	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U27", "Parent" : "0"},
+	{"ID" : "29", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U28", "Parent" : "0"},
+	{"ID" : "30", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_mulsub_16s_16s_31ns_31_4_1_U29", "Parent" : "0"},
+	{"ID" : "31", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U30", "Parent" : "0"},
+	{"ID" : "32", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U31", "Parent" : "0"},
+	{"ID" : "33", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_16s_16s_31ns_31_4_1_U32", "Parent" : "0"},
+	{"ID" : "34", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_mulsub_16s_16s_31ns_31_4_1_U33", "Parent" : "0"},
+	{"ID" : "35", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.frp_pipeline_valid_U", "Parent" : "0"},
+	{"ID" : "36", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.pf_out_imag_U", "Parent" : "0"},
+	{"ID" : "37", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.pf_out_real_U", "Parent" : "0"},
+	{"ID" : "38", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in1_real_U", "Parent" : "0"},
+	{"ID" : "39", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in1_imag_U", "Parent" : "0"},
+	{"ID" : "40", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in2_real_U", "Parent" : "0"},
+	{"ID" : "41", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in2_imag_U", "Parent" : "0"},
+	{"ID" : "42", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in3_real_U", "Parent" : "0"},
+	{"ID" : "43", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in3_imag_U", "Parent" : "0"},
+	{"ID" : "44", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in4_real_U", "Parent" : "0"},
+	{"ID" : "45", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in4_imag_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	DelayAndSum {
-		phi {Type I LastRead -1 FirstWrite -1}
-		fc {Type I LastRead -1 FirstWrite -1}
-		xpos1 {Type I LastRead -1 FirstWrite -1}
-		xpos2 {Type I LastRead -1 FirstWrite -1}
-		xpos3 {Type I LastRead -1 FirstWrite -1}
-		xpos4 {Type I LastRead -1 FirstWrite -1}
+		phi {Type I LastRead 0 FirstWrite -1}
+		fc {Type I LastRead 0 FirstWrite -1}
+		xpos1 {Type I LastRead 0 FirstWrite -1}
+		xpos2 {Type I LastRead 0 FirstWrite -1}
+		xpos3 {Type I LastRead 0 FirstWrite -1}
+		xpos4 {Type I LastRead 0 FirstWrite -1}
 		in1_real {Type I LastRead 0 FirstWrite -1}
 		in1_imag {Type I LastRead 0 FirstWrite -1}
 		in2_real {Type I LastRead 0 FirstWrite -1}
@@ -246,13 +272,13 @@ set ArgLastReadFirstWriteLatency {
 		in3_imag {Type I LastRead 0 FirstWrite -1}
 		in4_real {Type I LastRead 0 FirstWrite -1}
 		in4_imag {Type I LastRead 0 FirstWrite -1}
-		out_real {Type O LastRead -1 FirstWrite 0}
-		out_imag {Type O LastRead -1 FirstWrite 0}}}
+		out_real {Type O LastRead -1 FirstWrite 26}
+		out_imag {Type O LastRead -1 FirstWrite 26}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1", "Max" : "1"}
+	{"Name" : "Latency", "Min" : "27", "Max" : "27"}
 	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 
@@ -261,16 +287,16 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	in1_real { axis {  { in1_real_TVALID in_vld 0 1 }  { in1_real_TDATA in_data 0 16 }  { in1_real_TREADY in_acc 1 1 } } }
-	in1_imag { axis {  { in1_imag_TVALID in_vld 0 1 }  { in1_imag_TDATA in_data 0 16 }  { in1_imag_TREADY in_acc 1 1 } } }
-	in2_real { axis {  { in2_real_TVALID in_vld 0 1 }  { in2_real_TDATA in_data 0 16 }  { in2_real_TREADY in_acc 1 1 } } }
-	in2_imag { axis {  { in2_imag_TVALID in_vld 0 1 }  { in2_imag_TDATA in_data 0 16 }  { in2_imag_TREADY in_acc 1 1 } } }
-	in3_real { axis {  { in3_real_TVALID in_vld 0 1 }  { in3_real_TDATA in_data 0 16 }  { in3_real_TREADY in_acc 1 1 } } }
-	in3_imag { axis {  { in3_imag_TVALID in_vld 0 1 }  { in3_imag_TDATA in_data 0 16 }  { in3_imag_TREADY in_acc 1 1 } } }
-	in4_real { axis {  { in4_real_TVALID in_vld 0 1 }  { in4_real_TDATA in_data 0 16 }  { in4_real_TREADY in_acc 1 1 } } }
-	in4_imag { axis {  { in4_imag_TVALID in_vld 0 1 }  { in4_imag_TDATA in_data 0 16 }  { in4_imag_TREADY in_acc 1 1 } } }
-	out_real { axis {  { out_real_TREADY out_acc 0 1 }  { out_real_TDATA out_data 1 16 }  { out_real_TVALID out_vld 1 1 } } }
-	out_imag { axis {  { out_imag_TREADY out_acc 0 1 }  { out_imag_TDATA out_data 1 16 }  { out_imag_TVALID out_vld 1 1 } } }
+	in1_real { axis {  { in1_real_TDATA in_data 0 16 }  { in1_real_TVALID in_vld 0 1 }  { in1_real_TREADY in_acc 1 1 } } }
+	in1_imag { axis {  { in1_imag_TDATA in_data 0 16 }  { in1_imag_TVALID in_vld 0 1 }  { in1_imag_TREADY in_acc 1 1 } } }
+	in2_real { axis {  { in2_real_TDATA in_data 0 16 }  { in2_real_TVALID in_vld 0 1 }  { in2_real_TREADY in_acc 1 1 } } }
+	in2_imag { axis {  { in2_imag_TDATA in_data 0 16 }  { in2_imag_TVALID in_vld 0 1 }  { in2_imag_TREADY in_acc 1 1 } } }
+	in3_real { axis {  { in3_real_TDATA in_data 0 16 }  { in3_real_TVALID in_vld 0 1 }  { in3_real_TREADY in_acc 1 1 } } }
+	in3_imag { axis {  { in3_imag_TDATA in_data 0 16 }  { in3_imag_TVALID in_vld 0 1 }  { in3_imag_TREADY in_acc 1 1 } } }
+	in4_real { axis {  { in4_real_TDATA in_data 0 16 }  { in4_real_TVALID in_vld 0 1 }  { in4_real_TREADY in_acc 1 1 } } }
+	in4_imag { axis {  { in4_imag_TDATA in_data 0 16 }  { in4_imag_TVALID in_vld 0 1 }  { in4_imag_TREADY in_acc 1 1 } } }
+	out_real { axis {  { out_real_TDATA out_data 1 16 }  { out_real_TVALID out_vld 1 1 }  { out_real_TREADY out_acc 0 1 } } }
+	out_imag { axis {  { out_imag_TDATA out_data 1 16 }  { out_imag_TVALID out_vld 1 1 }  { out_imag_TREADY out_acc 0 1 } } }
 }
 
 set maxi_interface_dict [dict create]

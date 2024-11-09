@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'DelayAndSum'" level="0">
-<item name = "Date">Fri Nov  8 19:42:34 2024
+<item name = "Date">Sat Nov  9 17:56:21 2024
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">DelayAndSum</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00 ns, 3.254 ns, 1.35 ns</column>
+<column name="ap_clk">5.00 ns, 3.587 ns, 1.35 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 1, 5.000 ns, 5.000 ns, 1, 1, yes</column>
+<column name="">27, 27, 0.135 us, 0.135 us, 1, 1, yes</column>
 </table>
 </item>
 <item name = "Detail">

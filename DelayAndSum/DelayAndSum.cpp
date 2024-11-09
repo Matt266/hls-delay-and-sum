@@ -7,7 +7,7 @@ void DelayAndSum(
     fxd_12_4_t *phi,
     
     // in MHz
-    fxd_32_27_t *fc,
+    fxd_16_11_t *fc,
 
     // in m
     fxd_16_8_t *xpos1,
@@ -28,6 +28,7 @@ void DelayAndSum(
     hls::stream<fxd_16_1_t> &out_imag
 ){
 	#pragma HLS top name=DelayAndSum
+    #pragma HLS interface mode=ap_ctrl_none port=return
 	
 	//AXI Stream Inputs
 	#pragma HLS INTERFACE mode=axis port=in1_real
@@ -63,7 +64,7 @@ void DelayAndSum(
     fxd_16_1_t in4_imag_buffer = in4_imag.read();
 
     fxd_12_4_t phi_buffer = *phi;
-    fxd_32_27_t fc_buffer = *fc;
+    fxd_16_11_t fc_buffer = *fc;
     fxd_16_8_t xpos1_buffer = *xpos1;
     fxd_16_8_t xpos2_buffer = *xpos2;
     fxd_16_8_t xpos3_buffer = *xpos3;
