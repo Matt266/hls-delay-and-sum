@@ -32,11 +32,11 @@ module DelayAndSum_control_s_axi
     output wire                          RVALID,
     input  wire                          RREADY,
     output wire [11:0]                   phi,
-    output wire [15:0]                   fc,
-    output wire [15:0]                   xpos1,
-    output wire [15:0]                   xpos2,
-    output wire [15:0]                   xpos3,
-    output wire [15:0]                   xpos4
+    output wire [31:0]                   fc,
+    output wire [31:0]                   xpos1,
+    output wire [31:0]                   xpos2,
+    output wire [31:0]                   xpos3,
+    output wire [31:0]                   xpos4
 );
 //------------------------Address Info-------------------
 // Protocol Used: ap_ctrl_none
@@ -50,24 +50,19 @@ module DelayAndSum_control_s_axi
 //        others   - reserved
 // 0x14 : reserved
 // 0x18 : Data signal of fc
-//        bit 15~0 - fc[15:0] (Read/Write)
-//        others   - reserved
+//        bit 31~0 - fc[31:0] (Read/Write)
 // 0x1c : reserved
 // 0x20 : Data signal of xpos1
-//        bit 15~0 - xpos1[15:0] (Read/Write)
-//        others   - reserved
+//        bit 31~0 - xpos1[31:0] (Read/Write)
 // 0x24 : reserved
 // 0x28 : Data signal of xpos2
-//        bit 15~0 - xpos2[15:0] (Read/Write)
-//        others   - reserved
+//        bit 31~0 - xpos2[31:0] (Read/Write)
 // 0x2c : reserved
 // 0x30 : Data signal of xpos3
-//        bit 15~0 - xpos3[15:0] (Read/Write)
-//        others   - reserved
+//        bit 31~0 - xpos3[31:0] (Read/Write)
 // 0x34 : reserved
 // 0x38 : Data signal of xpos4
-//        bit 15~0 - xpos4[15:0] (Read/Write)
-//        others   - reserved
+//        bit 31~0 - xpos4[31:0] (Read/Write)
 // 0x3c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
@@ -108,11 +103,11 @@ localparam
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
     reg  [11:0]                   int_phi = 'b0;
-    reg  [15:0]                   int_fc = 'b0;
-    reg  [15:0]                   int_xpos1 = 'b0;
-    reg  [15:0]                   int_xpos2 = 'b0;
-    reg  [15:0]                   int_xpos3 = 'b0;
-    reg  [15:0]                   int_xpos4 = 'b0;
+    reg  [31:0]                   int_fc = 'b0;
+    reg  [31:0]                   int_xpos1 = 'b0;
+    reg  [31:0]                   int_xpos2 = 'b0;
+    reg  [31:0]                   int_xpos3 = 'b0;
+    reg  [31:0]                   int_xpos4 = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -209,19 +204,19 @@ always @(posedge ACLK) begin
                     rdata <= int_phi[11:0];
                 end
                 ADDR_FC_DATA_0: begin
-                    rdata <= int_fc[15:0];
+                    rdata <= int_fc[31:0];
                 end
                 ADDR_XPOS1_DATA_0: begin
-                    rdata <= int_xpos1[15:0];
+                    rdata <= int_xpos1[31:0];
                 end
                 ADDR_XPOS2_DATA_0: begin
-                    rdata <= int_xpos2[15:0];
+                    rdata <= int_xpos2[31:0];
                 end
                 ADDR_XPOS3_DATA_0: begin
-                    rdata <= int_xpos3[15:0];
+                    rdata <= int_xpos3[31:0];
                 end
                 ADDR_XPOS4_DATA_0: begin
-                    rdata <= int_xpos4[15:0];
+                    rdata <= int_xpos4[31:0];
                 end
             endcase
         end
@@ -246,53 +241,53 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_fc[15:0]
+// int_fc[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_fc[15:0] <= 0;
+        int_fc[31:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_FC_DATA_0)
-            int_fc[15:0] <= (WDATA[31:0] & wmask) | (int_fc[15:0] & ~wmask);
+            int_fc[31:0] <= (WDATA[31:0] & wmask) | (int_fc[31:0] & ~wmask);
     end
 end
 
-// int_xpos1[15:0]
+// int_xpos1[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_xpos1[15:0] <= 0;
+        int_xpos1[31:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_XPOS1_DATA_0)
-            int_xpos1[15:0] <= (WDATA[31:0] & wmask) | (int_xpos1[15:0] & ~wmask);
+            int_xpos1[31:0] <= (WDATA[31:0] & wmask) | (int_xpos1[31:0] & ~wmask);
     end
 end
 
-// int_xpos2[15:0]
+// int_xpos2[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_xpos2[15:0] <= 0;
+        int_xpos2[31:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_XPOS2_DATA_0)
-            int_xpos2[15:0] <= (WDATA[31:0] & wmask) | (int_xpos2[15:0] & ~wmask);
+            int_xpos2[31:0] <= (WDATA[31:0] & wmask) | (int_xpos2[31:0] & ~wmask);
     end
 end
 
-// int_xpos3[15:0]
+// int_xpos3[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_xpos3[15:0] <= 0;
+        int_xpos3[31:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_XPOS3_DATA_0)
-            int_xpos3[15:0] <= (WDATA[31:0] & wmask) | (int_xpos3[15:0] & ~wmask);
+            int_xpos3[31:0] <= (WDATA[31:0] & wmask) | (int_xpos3[31:0] & ~wmask);
     end
 end
 
-// int_xpos4[15:0]
+// int_xpos4[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_xpos4[15:0] <= 0;
+        int_xpos4[31:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_XPOS4_DATA_0)
-            int_xpos4[15:0] <= (WDATA[31:0] & wmask) | (int_xpos4[15:0] & ~wmask);
+            int_xpos4[31:0] <= (WDATA[31:0] & wmask) | (int_xpos4[31:0] & ~wmask);
     end
 end
 

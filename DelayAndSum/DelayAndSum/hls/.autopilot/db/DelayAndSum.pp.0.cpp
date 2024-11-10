@@ -6623,23 +6623,22 @@ class stream : public stream<__STREAM_T__, 0> {
 
 
 
-typedef ap_fixed<12,4> fxd_12_4_t;
+typedef ap_fixed<12,3> fxd_12_3_t;
 typedef ap_fixed<16,1> fxd_16_1_t;
-typedef ap_fixed<16,8> fxd_16_8_t;
-typedef ap_fixed<16,11> fxd_16_11_t;
+typedef ap_fixed<32,16> fxd_32_16_t;
 
 __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
-    fxd_12_4_t *phi,
+    fxd_12_3_t *phi,
 
 
-    fxd_16_11_t *fc,
+    fxd_32_16_t *fc,
 
 
-    fxd_16_8_t *xpos1,
-    fxd_16_8_t *xpos2,
-    fxd_16_8_t *xpos3,
-    fxd_16_8_t *xpos4,
+    fxd_32_16_t *xpos1,
+    fxd_32_16_t *xpos2,
+    fxd_32_16_t *xpos3,
+    fxd_32_16_t *xpos4,
 
 
     hls::stream<fxd_16_1_t> &in1_real,
@@ -6659,19 +6658,19 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
 
 
-void CalculateElement(fxd_12_4_t phi, fxd_16_11_t fc, fxd_16_8_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
+void CalculateElement(fxd_12_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
 void CalculateWeights(
 
-    fxd_12_4_t phi,
+    fxd_12_3_t phi,
 
 
-    fxd_16_11_t fc,
+    fxd_32_16_t fc,
 
 
-    fxd_16_8_t xpos1,
-    fxd_16_8_t xpos2,
-    fxd_16_8_t xpos3,
-    fxd_16_8_t xpos4,
+    fxd_32_16_t xpos1,
+    fxd_32_16_t xpos2,
+    fxd_32_16_t xpos3,
+    fxd_32_16_t xpos4,
 
 
     fxd_16_1_t &w1_real,
@@ -11417,16 +11416,16 @@ namespace std
 
 __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
-    fxd_12_4_t *phi,
+    fxd_12_3_t *phi,
 
 
-    fxd_16_11_t *fc,
+    fxd_32_16_t *fc,
 
 
-    fxd_16_8_t *xpos1,
-    fxd_16_8_t *xpos2,
-    fxd_16_8_t *xpos3,
-    fxd_16_8_t *xpos4,
+    fxd_32_16_t *xpos1,
+    fxd_32_16_t *xpos2,
+    fxd_32_16_t *xpos3,
+    fxd_32_16_t *xpos4,
 
 
     hls::stream<fxd_16_1_t> &in1_real,
@@ -11480,12 +11479,12 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     fxd_16_1_t in4_real_buffer = in4_real.read();
     fxd_16_1_t in4_imag_buffer = in4_imag.read();
 
-    fxd_12_4_t phi_buffer = *phi;
-    fxd_16_11_t fc_buffer = *fc;
-    fxd_16_8_t xpos1_buffer = *xpos1;
-    fxd_16_8_t xpos2_buffer = *xpos2;
-    fxd_16_8_t xpos3_buffer = *xpos3;
-    fxd_16_8_t xpos4_buffer = *xpos4;
+    fxd_12_3_t phi_buffer = *phi;
+    fxd_32_16_t fc_buffer = *fc;
+    fxd_32_16_t xpos1_buffer = *xpos1;
+    fxd_32_16_t xpos2_buffer = *xpos2;
+    fxd_32_16_t xpos3_buffer = *xpos3;
+    fxd_32_16_t xpos4_buffer = *xpos4;
 
     fxd_16_1_t w1_real;
     fxd_16_1_t w1_imag;

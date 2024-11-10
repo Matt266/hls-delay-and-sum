@@ -1,42 +1,42 @@
 # This script segment is generated automatically by AutoPilot
 
-set name DelayAndSum_mul_32s_10s_41_1_1
+set name DelayAndSum_mul_32s_32s_63_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
-set name DelayAndSum_mul_41s_16s_53_1_1
+set name DelayAndSum_mul_63s_11s_73_3_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
-set name DelayAndSum_mul_12ns_18ns_29_1_1
+set name DelayAndSum_mul_73s_32s_89_3_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
-set name DelayAndSum_mul_16s_16s_32_1_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_sparsemux_9_3_10_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
-}
-
-
-set name DelayAndSum_mul_8ns_11ns_18_1_1
+set name DelayAndSum_mul_12ns_17ns_28_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_sparsemux_7_2_9_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
+	::AP::rtl_comp_handler DelayAndSum_sparsemux_9_3_11_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
+}
+
+
+set name DelayAndSum_mul_16ns_19ns_34_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler DelayAndSum_sparsemux_7_2_17_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
 }
 
 
@@ -47,7 +47,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_mac_muladd_12ns_4ns_14ns_14_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+	::AP::rtl_comp_handler DelayAndSum_mac_muladd_12ns_3ns_14ns_14_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
@@ -120,7 +120,7 @@ phi {
 }
 fc { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 24
@@ -128,7 +128,7 @@ fc {
 }
 xpos1 { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 32
@@ -136,7 +136,7 @@ xpos1 {
 }
 xpos2 { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 40
@@ -144,7 +144,7 @@ xpos2 {
 }
 xpos3 { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 48
@@ -152,7 +152,7 @@ xpos3 {
 }
 xpos4 { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 56

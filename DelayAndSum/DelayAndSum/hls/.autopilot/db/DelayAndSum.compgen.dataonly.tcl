@@ -12,7 +12,7 @@ phi {
 }
 fc { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 24
@@ -20,7 +20,7 @@ fc {
 }
 xpos1 { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 32
@@ -28,7 +28,7 @@ xpos1 {
 }
 xpos2 { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 40
@@ -36,7 +36,7 @@ xpos2 {
 }
 xpos3 { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 48
@@ -44,7 +44,7 @@ xpos3 {
 }
 xpos4 { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 56

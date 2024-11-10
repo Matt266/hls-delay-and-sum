@@ -1214,7 +1214,7 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_phi, void* __xlx_apatb_param_f
 
   static hls::sim::Register port1 {
     .name = "fc",
-    .width = 16,
+    .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
@@ -1225,7 +1225,7 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_phi, void* __xlx_apatb_param_f
 
   static hls::sim::Register port2 {
     .name = "xpos1",
-    .width = 16,
+    .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
@@ -1236,7 +1236,7 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_phi, void* __xlx_apatb_param_f
 
   static hls::sim::Register port3 {
     .name = "xpos2",
-    .width = 16,
+    .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
@@ -1247,7 +1247,7 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_phi, void* __xlx_apatb_param_f
 
   static hls::sim::Register port4 {
     .name = "xpos3",
-    .width = 16,
+    .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
@@ -1258,7 +1258,7 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_phi, void* __xlx_apatb_param_f
 
   static hls::sim::Register port5 {
     .name = "xpos4",
-    .width = 16,
+    .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,

@@ -1,6 +1,6 @@
 [
     {
-        "name": "_Z11DelayAndSumP8ap_fixedILi12ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi16ELi11ELS0_5ELS1_3ELi0EEPS_ILi16ELi8ELS0_5ELS1_3ELi0EES7_S7_S7_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESC_SC_SC_SC_SC_SC_SC_SC_SC_",
+        "name": "_Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_",
         "df_function": "%F3284",
         "df_type": "Function",
         "project": "SLX",
@@ -53,7 +53,7 @@
                     "end_loc": {
                         "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
                         "line": 71,
-                        "column": 37
+                        "column": 38
                     }
                 },
                 "display_name": "Process 1",
@@ -67,7 +67,7 @@
                                     "line": 19,
                                     "column": 0
                                 },
-                                "id": "VId_8416_*0(0,64)arg.A0(0,64)",
+                                "id": "VId_8542_*0(0,64)arg.A0(0,64)",
                                 "name": "in1_real.Handle",
                                 "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
                             },
@@ -94,7 +94,7 @@
                                     "line": 20,
                                     "column": 0
                                 },
-                                "id": "VId_8417_*0(0,64)arg.A0(0,64)",
+                                "id": "VId_8543_*0(0,64)arg.A0(0,64)",
                                 "name": "in1_imag.Handle",
                                 "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
                             },
@@ -121,7 +121,7 @@
                                     "line": 21,
                                     "column": 0
                                 },
-                                "id": "VId_8418_*0(0,64)arg.A0(0,64)",
+                                "id": "VId_8544_*0(0,64)arg.A0(0,64)",
                                 "name": "in2_real.Handle",
                                 "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
                             },
@@ -148,7 +148,7 @@
                                     "line": 22,
                                     "column": 0
                                 },
-                                "id": "VId_8419_*0(0,64)arg.A0(0,64)",
+                                "id": "VId_8545_*0(0,64)arg.A0(0,64)",
                                 "name": "in2_imag.Handle",
                                 "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
                             },
@@ -175,7 +175,7 @@
                                     "line": 23,
                                     "column": 0
                                 },
-                                "id": "VId_8420_*0(0,64)arg.A0(0,64)",
+                                "id": "VId_8546_*0(0,64)arg.A0(0,64)",
                                 "name": "in3_real.Handle",
                                 "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
                             },
@@ -202,7 +202,7 @@
                                     "line": 24,
                                     "column": 0
                                 },
-                                "id": "VId_8421_*0(0,64)arg.A0(0,64)",
+                                "id": "VId_8547_*0(0,64)arg.A0(0,64)",
                                 "name": "in3_imag.Handle",
                                 "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
                             },
@@ -229,7 +229,7 @@
                                     "line": 25,
                                     "column": 0
                                 },
-                                "id": "VId_8422_*0(0,64)arg.A0(0,64)",
+                                "id": "VId_8548_*0(0,64)arg.A0(0,64)",
                                 "name": "in4_real.Handle",
                                 "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
                             },
@@ -256,7 +256,7 @@
                                     "line": 26,
                                     "column": 0
                                 },
-                                "id": "VId_8423_*0(0,64)arg.A0(0,64)",
+                                "id": "VId_8549_*0(0,64)arg.A0(0,64)",
                                 "name": "in4_imag.Handle",
                                 "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
                             },
@@ -283,9 +283,9 @@
                                     "line": 7,
                                     "column": 0
                                 },
-                                "id": "VId_8410_*0(0,16)arg",
+                                "id": "VId_8536_*0(0,16)arg",
                                 "name": "(*phi)",
-                                "display_name": "fxd_12_4_t *phi"
+                                "display_name": "fxd_12_3_t *phi"
                             },
                             "reads": [
                                 {
@@ -315,9 +315,9 @@
                                     "line": 10,
                                     "column": 0
                                 },
-                                "id": "VId_8411_*0(0,16)arg",
+                                "id": "VId_8537_*0(0,32)arg",
                                 "name": "(*fc)",
-                                "display_name": "fxd_16_11_t *fc"
+                                "display_name": "fxd_32_16_t *fc"
                             },
                             "reads": [
                                 {
@@ -326,7 +326,7 @@
                                         "ranges": [
                                             {
                                                 "start": 0,
-                                                "end": 2,
+                                                "end": 4,
                                                 "is_exact": true
                                             }
                                         ]
@@ -347,9 +347,9 @@
                                     "line": 13,
                                     "column": 0
                                 },
-                                "id": "VId_8412_*0(0,16)arg",
+                                "id": "VId_8538_*0(0,32)arg",
                                 "name": "(*xpos1)",
-                                "display_name": "fxd_16_8_t *xpos1"
+                                "display_name": "fxd_32_16_t *xpos1"
                             },
                             "reads": [
                                 {
@@ -358,7 +358,7 @@
                                         "ranges": [
                                             {
                                                 "start": 0,
-                                                "end": 2,
+                                                "end": 4,
                                                 "is_exact": true
                                             }
                                         ]
@@ -379,9 +379,9 @@
                                     "line": 14,
                                     "column": 0
                                 },
-                                "id": "VId_8413_*0(0,16)arg",
+                                "id": "VId_8539_*0(0,32)arg",
                                 "name": "(*xpos2)",
-                                "display_name": "fxd_16_8_t *xpos2"
+                                "display_name": "fxd_32_16_t *xpos2"
                             },
                             "reads": [
                                 {
@@ -390,7 +390,7 @@
                                         "ranges": [
                                             {
                                                 "start": 0,
-                                                "end": 2,
+                                                "end": 4,
                                                 "is_exact": true
                                             }
                                         ]
@@ -411,9 +411,9 @@
                                     "line": 15,
                                     "column": 0
                                 },
-                                "id": "VId_8414_*0(0,16)arg",
+                                "id": "VId_8540_*0(0,32)arg",
                                 "name": "(*xpos3)",
-                                "display_name": "fxd_16_8_t *xpos3"
+                                "display_name": "fxd_32_16_t *xpos3"
                             },
                             "reads": [
                                 {
@@ -422,7 +422,7 @@
                                         "ranges": [
                                             {
                                                 "start": 0,
-                                                "end": 2,
+                                                "end": 4,
                                                 "is_exact": true
                                             }
                                         ]
@@ -443,9 +443,9 @@
                                     "line": 16,
                                     "column": 0
                                 },
-                                "id": "VId_8415_*0(0,16)arg",
+                                "id": "VId_8541_*0(0,32)arg",
                                 "name": "(*xpos4)",
-                                "display_name": "fxd_16_8_t *xpos4"
+                                "display_name": "fxd_32_16_t *xpos4"
                             },
                             "reads": [
                                 {
@@ -454,7 +454,7 @@
                                         "ranges": [
                                             {
                                                 "start": 0,
-                                                "end": 2,
+                                                "end": 4,
                                                 "is_exact": true
                                             }
                                         ]
@@ -475,7 +475,7 @@
                                     "line": 57,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2b1c0_!c?(?,?)",
+                                "id": "V_0x0x2ba0f562330_!c?(?,?)",
                                 "name": "i29",
                                 "display_name": "i16 i29"
                             },
@@ -501,7 +501,7 @@
                                     "line": 58,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2bbd0_!c?(?,?)",
+                                "id": "V_0x0x2ba0f562480_!c?(?,?)",
                                 "name": "i32",
                                 "display_name": "i16 i32"
                             },
@@ -527,7 +527,7 @@
                                     "line": 59,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2a900_!c?(?,?)",
+                                "id": "V_0x0x2ba0f563130_!c?(?,?)",
                                 "name": "i35",
                                 "display_name": "i16 i35"
                             },
@@ -553,7 +553,7 @@
                                     "line": 60,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2add0_!c?(?,?)",
+                                "id": "V_0x0x2ba0f563440_!c?(?,?)",
                                 "name": "i38",
                                 "display_name": "i16 i38"
                             },
@@ -579,7 +579,7 @@
                                     "line": 61,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2d680_!c?(?,?)",
+                                "id": "V_0x0x2ba0f562cd0_!c?(?,?)",
                                 "name": "i41",
                                 "display_name": "i16 i41"
                             },
@@ -605,7 +605,7 @@
                                     "line": 62,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2c340_!c?(?,?)",
+                                "id": "V_0x0x2ba0f563590_!c?(?,?)",
                                 "name": "i44",
                                 "display_name": "i16 i44"
                             },
@@ -631,7 +631,7 @@
                                     "line": 63,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2bd90_!c?(?,?)",
+                                "id": "V_0x0x2ba0f5621e0_!c?(?,?)",
                                 "name": "i47",
                                 "display_name": "i16 i47"
                             },
@@ -657,7 +657,7 @@
                                     "line": 64,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2c180_!c?(?,?)",
+                                "id": "V_0x0x2ba0f5628e0_!c?(?,?)",
                                 "name": "i50",
                                 "display_name": "i16 i50"
                             },
@@ -683,7 +683,7 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2d610_!c?(?,?)",
+                                "id": "V_0x0x2ba0f564ef0_!c?(?,?)",
                                 "name": "i52",
                                 "display_name": "i12 i52"
                             },
@@ -709,9 +709,9 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2c260_!c?(?,?)",
+                                "id": "V_0x0x2ba0f564c50_!c?(?,?)",
                                 "name": "i54",
-                                "display_name": "i16 i54"
+                                "display_name": "i32 i54"
                             },
                             "reads": [],
                             "writes": [
@@ -735,9 +735,9 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2d140_!c?(?,?)",
+                                "id": "V_0x0x2ba0f564cc0_!c?(?,?)",
                                 "name": "i56",
-                                "display_name": "i16 i56"
+                                "display_name": "i32 i56"
                             },
                             "reads": [],
                             "writes": [
@@ -761,9 +761,9 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2c9d0_!c?(?,?)",
+                                "id": "V_0x0x2ba0f564710_!c?(?,?)",
                                 "name": "i58",
-                                "display_name": "i16 i58"
+                                "display_name": "i32 i58"
                             },
                             "reads": [],
                             "writes": [
@@ -787,9 +787,9 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2ca40_!c?(?,?)",
+                                "id": "V_0x0x2ba0f563910_!c?(?,?)",
                                 "name": "i60",
-                                "display_name": "i16 i60"
+                                "display_name": "i32 i60"
                             },
                             "reads": [],
                             "writes": [
@@ -813,9 +813,9 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2ce30_!c?(?,?)",
+                                "id": "V_0x0x2ba0f563980_!c?(?,?)",
                                 "name": "i62",
-                                "display_name": "i16 i62"
+                                "display_name": "i32 i62"
                             },
                             "reads": [],
                             "writes": [
@@ -847,7 +847,7 @@
                             "end_loc": {
                                 "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
                                 "line": 71,
-                                "column": 37
+                                "column": 38
                             }
                         }
                     }
@@ -880,7 +880,7 @@
                                     "line": 73,
                                     "column": 16
                                 },
-                                "id": "VId_8440_!c?(?,?)",
+                                "id": "VId_8566_!c?(?,?)",
                                 "name": "w1_real",
                                 "display_name": "fxd_16_1_t w1_real"
                             },
@@ -911,7 +911,7 @@
                                     "line": 74,
                                     "column": 16
                                 },
-                                "id": "VId_8441_!c?(?,?)",
+                                "id": "VId_8567_!c?(?,?)",
                                 "name": "w1_imag",
                                 "display_name": "fxd_16_1_t w1_imag"
                             },
@@ -942,7 +942,7 @@
                                     "line": 75,
                                     "column": 16
                                 },
-                                "id": "VId_8442_!c?(?,?)",
+                                "id": "VId_8568_!c?(?,?)",
                                 "name": "w2_real",
                                 "display_name": "fxd_16_1_t w2_real"
                             },
@@ -973,7 +973,7 @@
                                     "line": 76,
                                     "column": 16
                                 },
-                                "id": "VId_8443_!c?(?,?)",
+                                "id": "VId_8569_!c?(?,?)",
                                 "name": "w2_imag",
                                 "display_name": "fxd_16_1_t w2_imag"
                             },
@@ -1004,7 +1004,7 @@
                                     "line": 77,
                                     "column": 16
                                 },
-                                "id": "VId_8444_!c?(?,?)",
+                                "id": "VId_8570_!c?(?,?)",
                                 "name": "w3_real",
                                 "display_name": "fxd_16_1_t w3_real"
                             },
@@ -1035,7 +1035,7 @@
                                     "line": 78,
                                     "column": 16
                                 },
-                                "id": "VId_8445_!c?(?,?)",
+                                "id": "VId_8571_!c?(?,?)",
                                 "name": "w3_imag",
                                 "display_name": "fxd_16_1_t w3_imag"
                             },
@@ -1066,7 +1066,7 @@
                                     "line": 79,
                                     "column": 16
                                 },
-                                "id": "VId_8446_!c?(?,?)",
+                                "id": "VId_8572_!c?(?,?)",
                                 "name": "w4_real",
                                 "display_name": "fxd_16_1_t w4_real"
                             },
@@ -1097,7 +1097,7 @@
                                     "line": 80,
                                     "column": 16
                                 },
-                                "id": "VId_8447_!c?(?,?)",
+                                "id": "VId_8573_!c?(?,?)",
                                 "name": "w4_imag",
                                 "display_name": "fxd_16_1_t w4_imag"
                             },
@@ -1128,7 +1128,7 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2d610_!c?(?,?)",
+                                "id": "V_0x0x2ba0f564ef0_!c?(?,?)",
                                 "name": "i52",
                                 "display_name": "i12 i52"
                             },
@@ -1154,9 +1154,9 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2c260_!c?(?,?)",
+                                "id": "V_0x0x2ba0f564c50_!c?(?,?)",
                                 "name": "i54",
-                                "display_name": "i16 i54"
+                                "display_name": "i32 i54"
                             },
                             "reads": [
                                 {
@@ -1180,9 +1180,9 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2d140_!c?(?,?)",
+                                "id": "V_0x0x2ba0f564cc0_!c?(?,?)",
                                 "name": "i56",
-                                "display_name": "i16 i56"
+                                "display_name": "i32 i56"
                             },
                             "reads": [
                                 {
@@ -1206,9 +1206,9 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2c9d0_!c?(?,?)",
+                                "id": "V_0x0x2ba0f564710_!c?(?,?)",
                                 "name": "i58",
-                                "display_name": "i16 i58"
+                                "display_name": "i32 i58"
                             },
                             "reads": [
                                 {
@@ -1232,9 +1232,9 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2ca40_!c?(?,?)",
+                                "id": "V_0x0x2ba0f563910_!c?(?,?)",
                                 "name": "i60",
-                                "display_name": "i16 i60"
+                                "display_name": "i32 i60"
                             },
                             "reads": [
                                 {
@@ -1258,9 +1258,9 @@
                                     "line": 4294967295,
                                     "column": 0
                                 },
-                                "id": "V_0x0x1801cc2ce30_!c?(?,?)",
+                                "id": "V_0x0x2ba0f563980_!c?(?,?)",
                                 "name": "i62",
-                                "display_name": "i16 i62"
+                                "display_name": "i32 i62"
                             },
                             "reads": [
                                 {
@@ -1279,9 +1279,9 @@
                         },
                         {
                             "variable": {
-                                "id": "V_0x0x1801df08290_[?(?,128)]",
+                                "id": "V_0x0x2ba08efb510_[?(?,128)]",
                                 "name": "_ZN14cordic_apfixed21circ_table_arctan_128E[*]",
-                                "display_name": "[128 x %struct.ap_ufixed.213]* _ZN14cordic_apfixed21circ_table_arctan_128E"
+                                "display_name": "[128 x %struct.ap_fixed.18]* _ZN14cordic_apfixed21circ_table_arctan_128E"
                             },
                             "reads": [
                                 {
@@ -1410,7 +1410,7 @@
                                     "line": 73,
                                     "column": 16
                                 },
-                                "id": "VId_8440_!c?(?,?)",
+                                "id": "VId_8566_!c?(?,?)",
                                 "name": "w1_real",
                                 "display_name": "fxd_16_1_t w1_real"
                             },
@@ -1455,7 +1455,7 @@
                                     "line": 74,
                                     "column": 16
                                 },
-                                "id": "VId_8441_!c?(?,?)",
+                                "id": "VId_8567_!c?(?,?)",
                                 "name": "w1_imag",
                                 "display_name": "fxd_16_1_t w1_imag"
                             },
@@ -1500,7 +1500,7 @@
                                     "line": 75,
                                     "column": 16
                                 },
-                                "id": "VId_8442_!c?(?,?)",
+                                "id": "VId_8568_!c?(?,?)",
                                 "name": "w2_real",
                                 "display_name": "fxd_16_1_t w2_real"
                             },
@@ -1545,7 +1545,7 @@
                                     "line": 76,
                                     "column": 16
                                 },
-                                "id": "VId_8443_!c?(?,?)",
+                                "id": "VId_8569_!c?(?,?)",
                                 "name": "w2_imag",
                                 "display_name": "fxd_16_1_t w2_imag"
                             },
@@ -1590,7 +1590,7 @@
                                     "line": 77,
                                     "column": 16
                                 },
-                                "id": "VId_8444_!c?(?,?)",
+                                "id": "VId_8570_!c?(?,?)",
                                 "name": "w3_real",
                                 "display_name": "fxd_16_1_t w3_real"
                             },
@@ -1635,7 +1635,7 @@
                                     "line": 78,
                                     "column": 16
                                 },
-                                "id": "VId_8445_!c?(?,?)",
+                                "id": "VId_8571_!c?(?,?)",
                                 "name": "w3_imag",
                                 "display_name": "fxd_16_1_t w3_imag"
                             },
@@ -1680,7 +1680,7 @@
                                     "line": 79,
                                     "column": 16
                                 },
-                                "id": "VId_8446_!c?(?,?)",
+                                "id": "VId_8572_!c?(?,?)",
                                 "name": "w4_real",
                                 "display_name": "fxd_16_1_t w4_real"
                             },
@@ -1725,7 +1725,7 @@
                                     "line": 80,
                                     "column": 16
                                 },
-                                "id": "VId_8447_!c?(?,?)",
+                                "id": "VId_8573_!c?(?,?)",
                                 "name": "w4_imag",
                                 "display_name": "fxd_16_1_t w4_imag"
                             },
@@ -1770,7 +1770,7 @@
                                     "line": 27,
                                     "column": 0
                                 },
-                                "id": "VId_8424_*0(0,64)arg.A0(0,64)",
+                                "id": "VId_8550_*0(0,64)arg.A0(0,64)",
                                 "name": "out_real.Handle",
                                 "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
                             },
@@ -1797,7 +1797,7 @@
                                     "line": 28,
                                     "column": 0
                                 },
-                                "id": "VId_8425_*0(0,64)arg.A0(0,64)",
+                                "id": "VId_8551_*0(0,64)arg.A0(0,64)",
                                 "name": "out_imag.Handle",
                                 "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
                             },
@@ -1824,7 +1824,7 @@
                                     "line": 57,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2b1c0_!c?(?,?)",
+                                "id": "V_0x0x2ba0f562330_!c?(?,?)",
                                 "name": "i29",
                                 "display_name": "i16 i29"
                             },
@@ -1859,7 +1859,7 @@
                                     "line": 58,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2bbd0_!c?(?,?)",
+                                "id": "V_0x0x2ba0f562480_!c?(?,?)",
                                 "name": "i32",
                                 "display_name": "i16 i32"
                             },
@@ -1894,7 +1894,7 @@
                                     "line": 59,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2a900_!c?(?,?)",
+                                "id": "V_0x0x2ba0f563130_!c?(?,?)",
                                 "name": "i35",
                                 "display_name": "i16 i35"
                             },
@@ -1929,7 +1929,7 @@
                                     "line": 60,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2add0_!c?(?,?)",
+                                "id": "V_0x0x2ba0f563440_!c?(?,?)",
                                 "name": "i38",
                                 "display_name": "i16 i38"
                             },
@@ -1964,7 +1964,7 @@
                                     "line": 61,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2d680_!c?(?,?)",
+                                "id": "V_0x0x2ba0f562cd0_!c?(?,?)",
                                 "name": "i41",
                                 "display_name": "i16 i41"
                             },
@@ -1999,7 +1999,7 @@
                                     "line": 62,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2c340_!c?(?,?)",
+                                "id": "V_0x0x2ba0f563590_!c?(?,?)",
                                 "name": "i44",
                                 "display_name": "i16 i44"
                             },
@@ -2034,7 +2034,7 @@
                                     "line": 63,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2bd90_!c?(?,?)",
+                                "id": "V_0x0x2ba0f5621e0_!c?(?,?)",
                                 "name": "i47",
                                 "display_name": "i16 i47"
                             },
@@ -2069,7 +2069,7 @@
                                     "line": 64,
                                     "column": 43
                                 },
-                                "id": "V_0x0x1801cc2c180_!c?(?,?)",
+                                "id": "V_0x0x2ba0f5628e0_!c?(?,?)",
                                 "name": "i50",
                                 "display_name": "i16 i50"
                             },
@@ -2123,9 +2123,9 @@
         "channels": {
             "(*phi)_RAW_1_3_#0": {
                 "name": "(*phi)_RAW_1_3_#0",
-                "variable_id": "VId_8410_*0(0,16)arg",
+                "variable_id": "VId_8536_*0(0,16)arg",
                 "variable_name": "(*phi)",
-                "declaration": "fxd_12_4_t *phi",
+                "declaration": "fxd_12_3_t *phi",
                 "kind": "Ptr",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2139,9 +2139,9 @@
             },
             "(*fc)_RAW_1_3_#1": {
                 "name": "(*fc)_RAW_1_3_#1",
-                "variable_id": "VId_8411_*0(0,16)arg",
+                "variable_id": "VId_8537_*0(0,32)arg",
                 "variable_name": "(*fc)",
-                "declaration": "fxd_16_11_t *fc",
+                "declaration": "fxd_32_16_t *fc",
                 "kind": "Ptr",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2155,9 +2155,9 @@
             },
             "(*xpos1)_RAW_1_3_#2": {
                 "name": "(*xpos1)_RAW_1_3_#2",
-                "variable_id": "VId_8412_*0(0,16)arg",
+                "variable_id": "VId_8538_*0(0,32)arg",
                 "variable_name": "(*xpos1)",
-                "declaration": "fxd_16_8_t *xpos1",
+                "declaration": "fxd_32_16_t *xpos1",
                 "kind": "Ptr",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2171,9 +2171,9 @@
             },
             "(*xpos2)_RAW_1_3_#3": {
                 "name": "(*xpos2)_RAW_1_3_#3",
-                "variable_id": "VId_8413_*0(0,16)arg",
+                "variable_id": "VId_8539_*0(0,32)arg",
                 "variable_name": "(*xpos2)",
-                "declaration": "fxd_16_8_t *xpos2",
+                "declaration": "fxd_32_16_t *xpos2",
                 "kind": "Ptr",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2187,9 +2187,9 @@
             },
             "(*xpos3)_RAW_1_3_#4": {
                 "name": "(*xpos3)_RAW_1_3_#4",
-                "variable_id": "VId_8414_*0(0,16)arg",
+                "variable_id": "VId_8540_*0(0,32)arg",
                 "variable_name": "(*xpos3)",
-                "declaration": "fxd_16_8_t *xpos3",
+                "declaration": "fxd_32_16_t *xpos3",
                 "kind": "Ptr",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2203,9 +2203,9 @@
             },
             "(*xpos4)_RAW_1_3_#5": {
                 "name": "(*xpos4)_RAW_1_3_#5",
-                "variable_id": "VId_8415_*0(0,16)arg",
+                "variable_id": "VId_8541_*0(0,32)arg",
                 "variable_name": "(*xpos4)",
-                "declaration": "fxd_16_8_t *xpos4",
+                "declaration": "fxd_32_16_t *xpos4",
                 "kind": "Ptr",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2219,7 +2219,7 @@
             },
             "in1_real.Handle_RAW_1_3_#6": {
                 "name": "in1_real.Handle_RAW_1_3_#6",
-                "variable_id": "VId_8416_*0(0,64)arg.A0(0,64)",
+                "variable_id": "VId_8542_*0(0,64)arg.A0(0,64)",
                 "variable_name": "in1_real.Handle",
                 "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
                 "kind": "Fifo",
@@ -2235,7 +2235,7 @@
             },
             "in1_imag.Handle_RAW_1_3_#7": {
                 "name": "in1_imag.Handle_RAW_1_3_#7",
-                "variable_id": "VId_8417_*0(0,64)arg.A0(0,64)",
+                "variable_id": "VId_8543_*0(0,64)arg.A0(0,64)",
                 "variable_name": "in1_imag.Handle",
                 "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
                 "kind": "Fifo",
@@ -2251,7 +2251,7 @@
             },
             "in2_real.Handle_RAW_1_3_#8": {
                 "name": "in2_real.Handle_RAW_1_3_#8",
-                "variable_id": "VId_8418_*0(0,64)arg.A0(0,64)",
+                "variable_id": "VId_8544_*0(0,64)arg.A0(0,64)",
                 "variable_name": "in2_real.Handle",
                 "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
                 "kind": "Fifo",
@@ -2267,7 +2267,7 @@
             },
             "in2_imag.Handle_RAW_1_3_#9": {
                 "name": "in2_imag.Handle_RAW_1_3_#9",
-                "variable_id": "VId_8419_*0(0,64)arg.A0(0,64)",
+                "variable_id": "VId_8545_*0(0,64)arg.A0(0,64)",
                 "variable_name": "in2_imag.Handle",
                 "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
                 "kind": "Fifo",
@@ -2283,7 +2283,7 @@
             },
             "in3_real.Handle_RAW_1_3_#10": {
                 "name": "in3_real.Handle_RAW_1_3_#10",
-                "variable_id": "VId_8420_*0(0,64)arg.A0(0,64)",
+                "variable_id": "VId_8546_*0(0,64)arg.A0(0,64)",
                 "variable_name": "in3_real.Handle",
                 "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
                 "kind": "Fifo",
@@ -2299,7 +2299,7 @@
             },
             "in3_imag.Handle_RAW_1_3_#11": {
                 "name": "in3_imag.Handle_RAW_1_3_#11",
-                "variable_id": "VId_8421_*0(0,64)arg.A0(0,64)",
+                "variable_id": "VId_8547_*0(0,64)arg.A0(0,64)",
                 "variable_name": "in3_imag.Handle",
                 "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
                 "kind": "Fifo",
@@ -2315,7 +2315,7 @@
             },
             "in4_real.Handle_RAW_1_3_#12": {
                 "name": "in4_real.Handle_RAW_1_3_#12",
-                "variable_id": "VId_8422_*0(0,64)arg.A0(0,64)",
+                "variable_id": "VId_8548_*0(0,64)arg.A0(0,64)",
                 "variable_name": "in4_real.Handle",
                 "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
                 "kind": "Fifo",
@@ -2331,7 +2331,7 @@
             },
             "in4_imag.Handle_RAW_1_3_#13": {
                 "name": "in4_imag.Handle_RAW_1_3_#13",
-                "variable_id": "VId_8423_*0(0,64)arg.A0(0,64)",
+                "variable_id": "VId_8549_*0(0,64)arg.A0(0,64)",
                 "variable_name": "in4_imag.Handle",
                 "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
                 "kind": "Fifo",
@@ -2347,7 +2347,7 @@
             },
             "i52_RAW_3_4_#14": {
                 "name": "i52_RAW_3_4_#14",
-                "variable_id": "V_0x0x1801cc2d610_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f564ef0_!c?(?,?)",
                 "variable_name": "i52",
                 "declaration": "i12 i52",
                 "kind": "SSA",
@@ -2363,9 +2363,9 @@
             },
             "i54_RAW_3_4_#15": {
                 "name": "i54_RAW_3_4_#15",
-                "variable_id": "V_0x0x1801cc2c260_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f564c50_!c?(?,?)",
                 "variable_name": "i54",
-                "declaration": "i16 i54",
+                "declaration": "i32 i54",
                 "kind": "SSA",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2379,9 +2379,9 @@
             },
             "i56_RAW_3_4_#16": {
                 "name": "i56_RAW_3_4_#16",
-                "variable_id": "V_0x0x1801cc2d140_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f564cc0_!c?(?,?)",
                 "variable_name": "i56",
-                "declaration": "i16 i56",
+                "declaration": "i32 i56",
                 "kind": "SSA",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2395,9 +2395,9 @@
             },
             "i58_RAW_3_4_#17": {
                 "name": "i58_RAW_3_4_#17",
-                "variable_id": "V_0x0x1801cc2c9d0_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f564710_!c?(?,?)",
                 "variable_name": "i58",
-                "declaration": "i16 i58",
+                "declaration": "i32 i58",
                 "kind": "SSA",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2411,9 +2411,9 @@
             },
             "i60_RAW_3_4_#18": {
                 "name": "i60_RAW_3_4_#18",
-                "variable_id": "V_0x0x1801cc2ca40_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f563910_!c?(?,?)",
                 "variable_name": "i60",
-                "declaration": "i16 i60",
+                "declaration": "i32 i60",
                 "kind": "SSA",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2427,9 +2427,9 @@
             },
             "i62_RAW_3_4_#19": {
                 "name": "i62_RAW_3_4_#19",
-                "variable_id": "V_0x0x1801cc2ce30_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f563980_!c?(?,?)",
                 "variable_name": "i62",
-                "declaration": "i16 i62",
+                "declaration": "i32 i62",
                 "kind": "SSA",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2443,9 +2443,9 @@
             },
             "_ZN14cordic_apfixed21circ_table_arctan_128E[*]_RAW_1_4_#20": {
                 "name": "_ZN14cordic_apfixed21circ_table_arctan_128E[*]_RAW_1_4_#20",
-                "variable_id": "V_0x0x1801df08290_[?(?,128)]",
+                "variable_id": "V_0x0x2ba08efb510_[?(?,128)]",
                 "variable_name": "_ZN14cordic_apfixed21circ_table_arctan_128E[*]",
-                "declaration": "[128 x %struct.ap_ufixed.213]* _ZN14cordic_apfixed21circ_table_arctan_128E",
+                "declaration": "[128 x %struct.ap_fixed.18]* _ZN14cordic_apfixed21circ_table_arctan_128E",
                 "kind": "Ptr",
                 "dependence": "RAW",
                 "channel_width": 0,
@@ -2454,7 +2454,7 @@
             },
             "w1_real_RAW_4_5_#21": {
                 "name": "w1_real_RAW_4_5_#21",
-                "variable_id": "VId_8440_!c?(?,?)",
+                "variable_id": "VId_8566_!c?(?,?)",
                 "variable_name": "w1_real",
                 "declaration": "fxd_16_1_t w1_real",
                 "kind": "Ptr",
@@ -2470,7 +2470,7 @@
             },
             "w1_imag_RAW_4_5_#22": {
                 "name": "w1_imag_RAW_4_5_#22",
-                "variable_id": "VId_8441_!c?(?,?)",
+                "variable_id": "VId_8567_!c?(?,?)",
                 "variable_name": "w1_imag",
                 "declaration": "fxd_16_1_t w1_imag",
                 "kind": "Ptr",
@@ -2486,7 +2486,7 @@
             },
             "w2_real_RAW_4_5_#23": {
                 "name": "w2_real_RAW_4_5_#23",
-                "variable_id": "VId_8442_!c?(?,?)",
+                "variable_id": "VId_8568_!c?(?,?)",
                 "variable_name": "w2_real",
                 "declaration": "fxd_16_1_t w2_real",
                 "kind": "Ptr",
@@ -2502,7 +2502,7 @@
             },
             "w2_imag_RAW_4_5_#24": {
                 "name": "w2_imag_RAW_4_5_#24",
-                "variable_id": "VId_8443_!c?(?,?)",
+                "variable_id": "VId_8569_!c?(?,?)",
                 "variable_name": "w2_imag",
                 "declaration": "fxd_16_1_t w2_imag",
                 "kind": "Ptr",
@@ -2518,7 +2518,7 @@
             },
             "w3_real_RAW_4_5_#25": {
                 "name": "w3_real_RAW_4_5_#25",
-                "variable_id": "VId_8444_!c?(?,?)",
+                "variable_id": "VId_8570_!c?(?,?)",
                 "variable_name": "w3_real",
                 "declaration": "fxd_16_1_t w3_real",
                 "kind": "Ptr",
@@ -2534,7 +2534,7 @@
             },
             "w3_imag_RAW_4_5_#26": {
                 "name": "w3_imag_RAW_4_5_#26",
-                "variable_id": "VId_8445_!c?(?,?)",
+                "variable_id": "VId_8571_!c?(?,?)",
                 "variable_name": "w3_imag",
                 "declaration": "fxd_16_1_t w3_imag",
                 "kind": "Ptr",
@@ -2550,7 +2550,7 @@
             },
             "w4_real_RAW_4_5_#27": {
                 "name": "w4_real_RAW_4_5_#27",
-                "variable_id": "VId_8446_!c?(?,?)",
+                "variable_id": "VId_8572_!c?(?,?)",
                 "variable_name": "w4_real",
                 "declaration": "fxd_16_1_t w4_real",
                 "kind": "Ptr",
@@ -2566,7 +2566,7 @@
             },
             "w4_imag_RAW_4_5_#28": {
                 "name": "w4_imag_RAW_4_5_#28",
-                "variable_id": "VId_8447_!c?(?,?)",
+                "variable_id": "VId_8573_!c?(?,?)",
                 "variable_name": "w4_imag",
                 "declaration": "fxd_16_1_t w4_imag",
                 "kind": "Ptr",
@@ -2582,7 +2582,7 @@
             },
             "i29_RAW_3_5_#29": {
                 "name": "i29_RAW_3_5_#29",
-                "variable_id": "V_0x0x1801cc2b1c0_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f562330_!c?(?,?)",
                 "variable_name": "i29",
                 "declaration": "i16 i29",
                 "kind": "SSA",
@@ -2598,7 +2598,7 @@
             },
             "i32_RAW_3_5_#30": {
                 "name": "i32_RAW_3_5_#30",
-                "variable_id": "V_0x0x1801cc2bbd0_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f562480_!c?(?,?)",
                 "variable_name": "i32",
                 "declaration": "i16 i32",
                 "kind": "SSA",
@@ -2614,7 +2614,7 @@
             },
             "i35_RAW_3_5_#31": {
                 "name": "i35_RAW_3_5_#31",
-                "variable_id": "V_0x0x1801cc2a900_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f563130_!c?(?,?)",
                 "variable_name": "i35",
                 "declaration": "i16 i35",
                 "kind": "SSA",
@@ -2630,7 +2630,7 @@
             },
             "i38_RAW_3_5_#32": {
                 "name": "i38_RAW_3_5_#32",
-                "variable_id": "V_0x0x1801cc2add0_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f563440_!c?(?,?)",
                 "variable_name": "i38",
                 "declaration": "i16 i38",
                 "kind": "SSA",
@@ -2646,7 +2646,7 @@
             },
             "i41_RAW_3_5_#33": {
                 "name": "i41_RAW_3_5_#33",
-                "variable_id": "V_0x0x1801cc2d680_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f562cd0_!c?(?,?)",
                 "variable_name": "i41",
                 "declaration": "i16 i41",
                 "kind": "SSA",
@@ -2662,7 +2662,7 @@
             },
             "i44_RAW_3_5_#34": {
                 "name": "i44_RAW_3_5_#34",
-                "variable_id": "V_0x0x1801cc2c340_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f563590_!c?(?,?)",
                 "variable_name": "i44",
                 "declaration": "i16 i44",
                 "kind": "SSA",
@@ -2678,7 +2678,7 @@
             },
             "i47_RAW_3_5_#35": {
                 "name": "i47_RAW_3_5_#35",
-                "variable_id": "V_0x0x1801cc2bd90_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f5621e0_!c?(?,?)",
                 "variable_name": "i47",
                 "declaration": "i16 i47",
                 "kind": "SSA",
@@ -2694,7 +2694,7 @@
             },
             "i50_RAW_3_5_#36": {
                 "name": "i50_RAW_3_5_#36",
-                "variable_id": "V_0x0x1801cc2c180_!c?(?,?)",
+                "variable_id": "V_0x0x2ba0f5628e0_!c?(?,?)",
                 "variable_name": "i50",
                 "declaration": "i16 i50",
                 "kind": "SSA",
@@ -2710,7 +2710,7 @@
             },
             "out_real.Handle_RAW_5_2_#37": {
                 "name": "out_real.Handle_RAW_5_2_#37",
-                "variable_id": "VId_8424_*0(0,64)arg.A0(0,64)",
+                "variable_id": "VId_8550_*0(0,64)arg.A0(0,64)",
                 "variable_name": "out_real.Handle",
                 "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
                 "kind": "Fifo",
@@ -2726,7 +2726,7 @@
             },
             "out_imag.Handle_RAW_5_2_#38": {
                 "name": "out_imag.Handle_RAW_5_2_#38",
-                "variable_id": "VId_8425_*0(0,64)arg.A0(0,64)",
+                "variable_id": "VId_8551_*0(0,64)arg.A0(0,64)",
                 "variable_name": "out_imag.Handle",
                 "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
                 "kind": "Fifo",

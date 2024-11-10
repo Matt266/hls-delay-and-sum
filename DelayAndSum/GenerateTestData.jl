@@ -1,15 +1,12 @@
 using JSON
 using BeamLib
-using Unitful
-import Unitful: cm, GHz
-import UnitfulAngles: °
 
 using Format
 
-pa = PhasedArray1D(Vector(-6cm:4cm:6cm))
-weights = dsb_weights(pa, 3.75GHz, 70°)
-ϕaxis = LinRange(0°, 180°, 10)
-inputs = steerphi.(Ref(pa),  Ref(3.75GHz), ϕaxis)
+pa = PhasedArray1D(Vector(-6e-2:4e-2:6e-2))
+weights = dsb_weights(pa, 3.75e9, deg2rad(70))
+ϕaxis = LinRange(0, 180, 64)
+inputs = steerphi.(Ref(pa),  Ref(3.75e9), deg2rad.(ϕaxis))
 results = Ref(weights').* inputs
 
 fmt = 

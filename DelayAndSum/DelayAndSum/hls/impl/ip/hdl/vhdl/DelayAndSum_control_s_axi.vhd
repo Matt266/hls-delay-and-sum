@@ -35,11 +35,11 @@ port (
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
     phi                   :out  STD_LOGIC_VECTOR(11 downto 0);
-    fc                    :out  STD_LOGIC_VECTOR(15 downto 0);
-    xpos1                 :out  STD_LOGIC_VECTOR(15 downto 0);
-    xpos2                 :out  STD_LOGIC_VECTOR(15 downto 0);
-    xpos3                 :out  STD_LOGIC_VECTOR(15 downto 0);
-    xpos4                 :out  STD_LOGIC_VECTOR(15 downto 0)
+    fc                    :out  STD_LOGIC_VECTOR(31 downto 0);
+    xpos1                 :out  STD_LOGIC_VECTOR(31 downto 0);
+    xpos2                 :out  STD_LOGIC_VECTOR(31 downto 0);
+    xpos3                 :out  STD_LOGIC_VECTOR(31 downto 0);
+    xpos4                 :out  STD_LOGIC_VECTOR(31 downto 0)
 );
 end entity DelayAndSum_control_s_axi;
 
@@ -55,24 +55,19 @@ end entity DelayAndSum_control_s_axi;
 --        others   - reserved
 -- 0x14 : reserved
 -- 0x18 : Data signal of fc
---        bit 15~0 - fc[15:0] (Read/Write)
---        others   - reserved
+--        bit 31~0 - fc[31:0] (Read/Write)
 -- 0x1c : reserved
 -- 0x20 : Data signal of xpos1
---        bit 15~0 - xpos1[15:0] (Read/Write)
---        others   - reserved
+--        bit 31~0 - xpos1[31:0] (Read/Write)
 -- 0x24 : reserved
 -- 0x28 : Data signal of xpos2
---        bit 15~0 - xpos2[15:0] (Read/Write)
---        others   - reserved
+--        bit 31~0 - xpos2[31:0] (Read/Write)
 -- 0x2c : reserved
 -- 0x30 : Data signal of xpos3
---        bit 15~0 - xpos3[15:0] (Read/Write)
---        others   - reserved
+--        bit 31~0 - xpos3[31:0] (Read/Write)
 -- 0x34 : reserved
 -- 0x38 : Data signal of xpos4
---        bit 15~0 - xpos4[15:0] (Read/Write)
---        others   - reserved
+--        bit 31~0 - xpos4[31:0] (Read/Write)
 -- 0x3c : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
@@ -108,11 +103,11 @@ architecture behave of DelayAndSum_control_s_axi is
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
     signal int_phi             : UNSIGNED(11 downto 0) := (others => '0');
-    signal int_fc              : UNSIGNED(15 downto 0) := (others => '0');
-    signal int_xpos1           : UNSIGNED(15 downto 0) := (others => '0');
-    signal int_xpos2           : UNSIGNED(15 downto 0) := (others => '0');
-    signal int_xpos3           : UNSIGNED(15 downto 0) := (others => '0');
-    signal int_xpos4           : UNSIGNED(15 downto 0) := (others => '0');
+    signal int_fc              : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_xpos1           : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_xpos2           : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_xpos3           : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_xpos4           : UNSIGNED(31 downto 0) := (others => '0');
 
 
 begin
@@ -231,15 +226,15 @@ begin
                     when ADDR_PHI_DATA_0 =>
                         rdata_data <= RESIZE(int_phi(11 downto 0), 32);
                     when ADDR_FC_DATA_0 =>
-                        rdata_data <= RESIZE(int_fc(15 downto 0), 32);
+                        rdata_data <= RESIZE(int_fc(31 downto 0), 32);
                     when ADDR_XPOS1_DATA_0 =>
-                        rdata_data <= RESIZE(int_xpos1(15 downto 0), 32);
+                        rdata_data <= RESIZE(int_xpos1(31 downto 0), 32);
                     when ADDR_XPOS2_DATA_0 =>
-                        rdata_data <= RESIZE(int_xpos2(15 downto 0), 32);
+                        rdata_data <= RESIZE(int_xpos2(31 downto 0), 32);
                     when ADDR_XPOS3_DATA_0 =>
-                        rdata_data <= RESIZE(int_xpos3(15 downto 0), 32);
+                        rdata_data <= RESIZE(int_xpos3(31 downto 0), 32);
                     when ADDR_XPOS4_DATA_0 =>
-                        rdata_data <= RESIZE(int_xpos4(15 downto 0), 32);
+                        rdata_data <= RESIZE(int_xpos4(31 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -273,10 +268,10 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_fc(15 downto 0) <= (others => '0');
+                int_fc(31 downto 0) <= (others => '0');
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_FC_DATA_0) then
-                    int_fc(15 downto 0) <= (UNSIGNED(WDATA(15 downto 0)) and wmask(15 downto 0)) or ((not wmask(15 downto 0)) and int_fc(15 downto 0));
+                    int_fc(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_fc(31 downto 0));
                 end if;
             end if;
         end if;
@@ -286,10 +281,10 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_xpos1(15 downto 0) <= (others => '0');
+                int_xpos1(31 downto 0) <= (others => '0');
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_XPOS1_DATA_0) then
-                    int_xpos1(15 downto 0) <= (UNSIGNED(WDATA(15 downto 0)) and wmask(15 downto 0)) or ((not wmask(15 downto 0)) and int_xpos1(15 downto 0));
+                    int_xpos1(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_xpos1(31 downto 0));
                 end if;
             end if;
         end if;
@@ -299,10 +294,10 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_xpos2(15 downto 0) <= (others => '0');
+                int_xpos2(31 downto 0) <= (others => '0');
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_XPOS2_DATA_0) then
-                    int_xpos2(15 downto 0) <= (UNSIGNED(WDATA(15 downto 0)) and wmask(15 downto 0)) or ((not wmask(15 downto 0)) and int_xpos2(15 downto 0));
+                    int_xpos2(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_xpos2(31 downto 0));
                 end if;
             end if;
         end if;
@@ -312,10 +307,10 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_xpos3(15 downto 0) <= (others => '0');
+                int_xpos3(31 downto 0) <= (others => '0');
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_XPOS3_DATA_0) then
-                    int_xpos3(15 downto 0) <= (UNSIGNED(WDATA(15 downto 0)) and wmask(15 downto 0)) or ((not wmask(15 downto 0)) and int_xpos3(15 downto 0));
+                    int_xpos3(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_xpos3(31 downto 0));
                 end if;
             end if;
         end if;
@@ -325,10 +320,10 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_xpos4(15 downto 0) <= (others => '0');
+                int_xpos4(31 downto 0) <= (others => '0');
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_XPOS4_DATA_0) then
-                    int_xpos4(15 downto 0) <= (UNSIGNED(WDATA(15 downto 0)) and wmask(15 downto 0)) or ((not wmask(15 downto 0)) and int_xpos4(15 downto 0));
+                    int_xpos4(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_xpos4(31 downto 0));
                 end if;
             end if;
         end if;

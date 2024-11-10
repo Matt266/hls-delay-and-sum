@@ -9,23 +9,22 @@
 // sin and cos from hls_math (CORDIC) are used
 // increasing the bitwidth drastically increases LUT usage
 // 16% with ap_fixed<16,8> and 64% for ap_fixed<32,8> for in2_t and in3_t
-typedef ap_fixed<12,4> fxd_12_4_t;
+typedef ap_fixed<12,3> fxd_12_3_t;
 typedef ap_fixed<16,1> fxd_16_1_t;
-typedef ap_fixed<16,8> fxd_16_8_t;
-typedef ap_fixed<16,11> fxd_16_11_t;
+typedef ap_fixed<32,16> fxd_32_16_t;
 
 void DelayAndSum(
-    // in rad
-    fxd_12_4_t *phi,
+    // in rad -- -pi to pi
+    fxd_12_3_t *phi,
 
     // in MHz
-    fxd_16_11_t *fc,
+    fxd_32_16_t *fc,
     
     // in mm
-    fxd_16_8_t *xpos1,
-    fxd_16_8_t *xpos2,
-    fxd_16_8_t *xpos3,
-    fxd_16_8_t *xpos4,
+    fxd_32_16_t *xpos1,
+    fxd_32_16_t *xpos2,
+    fxd_32_16_t *xpos3,
+    fxd_32_16_t *xpos4,
 
     //
     hls::stream<fxd_16_1_t> &in1_real,

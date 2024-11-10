@@ -17,7 +17,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "fc"
-set BitWidth "16"
+set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -29,7 +29,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "xpos1"
-set BitWidth "16"
+set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -41,7 +41,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "xpos2"
-set BitWidth "16"
+set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -53,7 +53,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "xpos3"
-set BitWidth "16"
+set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -65,7 +65,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "xpos4"
-set BitWidth "16"
+set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"

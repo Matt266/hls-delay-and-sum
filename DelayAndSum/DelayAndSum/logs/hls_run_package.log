@@ -1,6 +1,6 @@
-INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlsrun_package_summary, at 11/09/24 17:59:05
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlsrun_package_summary, at 11/10/24 03:29:32
 INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run package -work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum -config C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg -cmdlineconfig C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline
-INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Sat Nov 09 17:59:07 +0100 2024
+INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Sun Nov 10 03:29:35 +0100 2024
 INFO: [HLS 200-10] In directory 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum'
 INFO: [HLS 200-2005] Using work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum 
 INFO: [HLS 200-1611] Setting target device to 'xczu48dr-ffvg1517-2-e'
@@ -39,7 +39,7 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Sat Nov  9 17:59:13 2024
+  **** Start of session at: Sun Nov 10 03:29:44 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -49,7 +49,7 @@ INFO: Copied 1 ipmisc file(s) to C:/Users/matt/OneDrive/Dokumente/__Master/Vivad
 INFO: Copied 20 verilog file(s) to C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/impl/ip/hdl/verilog
 INFO: Copied 18 vhdl file(s) to C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/impl/ip/hdl/vhdl
 INFO: Copied 10 swdriver file(s) to C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/impl/ip/drivers
-ipx::create_core: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 618.797 ; gain = 193.516
+ipx::create_core: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 618.211 ; gain = 193.684
 INFO: Import ports from HDL: C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/impl/ip/hdl/vhdl/DelayAndSum.vhd (DelayAndSum)
 INFO: Add axi4lite interface s_axi_control
 INFO: Add clock interface ap_clk
@@ -72,7 +72,7 @@ INFO: Calling post_process_sysgen to specialize IP
 Generating sysgen info xml from json file
 INFO: Created IP C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/impl/ip/component.xml
 INFO: Created IP archive C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/impl/ip/xilinx_com_hls_DelayAndSum_1_0.zip
-INFO: [Common 17-206] Exiting Vivado at Sat Nov  9 17:59:26 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 10 03:30:10 2024...
 INFO: [HLS 200-802] Generated output file UsersmattOneDriveDokumente__MasterVivadoVitis_HLSDelayAndSumDelayAndSumDelayAndSumDelayAndSum.zip
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 19.946 seconds; peak allocated memory: 290.562 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 24s
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 36.252 seconds; peak allocated memory: 292.617 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 41s

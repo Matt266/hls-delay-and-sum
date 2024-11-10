@@ -15,37 +15,32 @@
 //        others   - reserved
 // 0x14 : reserved
 // 0x18 : Data signal of fc
-//        bit 15~0 - fc[15:0] (Read/Write)
-//        others   - reserved
+//        bit 31~0 - fc[31:0] (Read/Write)
 // 0x1c : reserved
 // 0x20 : Data signal of xpos1
-//        bit 15~0 - xpos1[15:0] (Read/Write)
-//        others   - reserved
+//        bit 31~0 - xpos1[31:0] (Read/Write)
 // 0x24 : reserved
 // 0x28 : Data signal of xpos2
-//        bit 15~0 - xpos2[15:0] (Read/Write)
-//        others   - reserved
+//        bit 31~0 - xpos2[31:0] (Read/Write)
 // 0x2c : reserved
 // 0x30 : Data signal of xpos3
-//        bit 15~0 - xpos3[15:0] (Read/Write)
-//        others   - reserved
+//        bit 31~0 - xpos3[31:0] (Read/Write)
 // 0x34 : reserved
 // 0x38 : Data signal of xpos4
-//        bit 15~0 - xpos4[15:0] (Read/Write)
-//        others   - reserved
+//        bit 31~0 - xpos4[31:0] (Read/Write)
 // 0x3c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define XDELAYANDSUM_CONTROL_ADDR_PHI_DATA   0x10
 #define XDELAYANDSUM_CONTROL_BITS_PHI_DATA   12
 #define XDELAYANDSUM_CONTROL_ADDR_FC_DATA    0x18
-#define XDELAYANDSUM_CONTROL_BITS_FC_DATA    16
+#define XDELAYANDSUM_CONTROL_BITS_FC_DATA    32
 #define XDELAYANDSUM_CONTROL_ADDR_XPOS1_DATA 0x20
-#define XDELAYANDSUM_CONTROL_BITS_XPOS1_DATA 16
+#define XDELAYANDSUM_CONTROL_BITS_XPOS1_DATA 32
 #define XDELAYANDSUM_CONTROL_ADDR_XPOS2_DATA 0x28
-#define XDELAYANDSUM_CONTROL_BITS_XPOS2_DATA 16
+#define XDELAYANDSUM_CONTROL_BITS_XPOS2_DATA 32
 #define XDELAYANDSUM_CONTROL_ADDR_XPOS3_DATA 0x30
-#define XDELAYANDSUM_CONTROL_BITS_XPOS3_DATA 16
+#define XDELAYANDSUM_CONTROL_BITS_XPOS3_DATA 32
 #define XDELAYANDSUM_CONTROL_ADDR_XPOS4_DATA 0x38
-#define XDELAYANDSUM_CONTROL_BITS_XPOS4_DATA 16
+#define XDELAYANDSUM_CONTROL_BITS_XPOS4_DATA 32
 
