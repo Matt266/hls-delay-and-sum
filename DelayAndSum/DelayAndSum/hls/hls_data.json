@@ -234,8 +234,7 @@
       "config_export -display_name=DelayAndSum",
       "config_export -output=C:UsersmattOneDriveDokumente__MasterVivadoVitis_HLSDelayAndSumDelayAndSumDelayAndSumDelayAndSum.zip",
       "config_export -format=ip_catalog",
-      "config_export -rtl=vhdl",
-      "config_export -flow=none"
+      "config_export -rtl=vhdl"
     ],
     "ProfileOption": "0",
     "ProfileType": "none",
@@ -256,7 +255,7 @@
     "Name": "DelayAndSum",
     "Version": "1.0",
     "DisplayName": "DelayAndSum",
-    "Revision": "2113815929",
+    "Revision": "2113843913",
     "Description": "4 channel delay and sum beamformer",
     "Taxonomy": "\/VITIS_HLS_IP",
     "AutoFamilySupport": "",
@@ -297,8 +296,6 @@
       "impl\/verilog\/DelayAndSum_control_s_axi.v",
       "impl\/verilog\/DelayAndSum_frp_fifoout.v",
       "impl\/verilog\/DelayAndSum_frp_pipeline_valid.v",
-      "impl\/verilog\/DelayAndSum_hls_deadlock_idx0_monitor.v",
-      "impl\/verilog\/DelayAndSum_hls_deadlock_kernel_monitor_top.vh",
       "impl\/verilog\/DelayAndSum_mac_muladd_12ns_3ns_14ns_14_4_1.v",
       "impl\/verilog\/DelayAndSum_mac_muladd_16s_16s_31ns_31_4_1.v",
       "impl\/verilog\/DelayAndSum_mac_muladd_16s_16s_31s_31_4_1.v",
@@ -974,7 +971,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2024-11-10 03:29:41 +0100",
+    "Time": "2024-11-29 13:53:35 +0100",
     "ToolName": "vitis_hls",
     "ToolVersion": "2024.1"
   }

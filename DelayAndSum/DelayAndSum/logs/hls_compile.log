@@ -1,6 +1,6 @@
-INFO: [v++ 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlscompile_summary, at 11/10/24 03:27:39
+INFO: [v++ 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlscompile_summary, at 11/29/24 13:51:55
 INFO: [v++ 82-31] Launching vitis_hls: vitis_hls -nolog -run csynth -work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum -config C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg -cmdlineconfig C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline
-INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Sun Nov 10 03:27:42 +0100 2024
+INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Fri Nov 29 13:51:58 +0100 2024
 INFO: [HLS 200-10] In directory 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum'
 INFO: [HLS 200-2005] Using work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
@@ -33,10 +33,10 @@ INFO: [HLS 200-1465] Applying ini 'package.ip.display_name=DelayAndSum' from C:/
 INFO: [HLS 200-1465] Applying ini 'package.output.file=C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\DelayAndSum.zip' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
 INFO: [HLS 200-1465] Applying ini 'vivado.rtl=vhdl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(21)
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 4.184 seconds; current allocated memory: 232.199 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 4.983 seconds; current allocated memory: 230.223 MB.
 INFO: [HLS 200-10] Analyzing design file 'CalculateWeights.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'DelayAndSum.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 33.537 seconds; current allocated memory: 239.410 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 38.282 seconds; current allocated memory: 237.727 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 200-1995] There were 83,642 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 53,720 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/syn/report/csynth_design_size.rpt
@@ -75,15 +75,15 @@ INFO: [HLS 214-364] Automatically inlining function 'ap_fixed<((12) - (3)) + (2)
 INFO: [HLS 214-364] Automatically inlining function 'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)' to improve effectiveness of pipeline pragma in function 'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:240:5)
 INFO: [HLS 214-364] Automatically inlining function 'ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)' to improve effectiveness of pipeline pragma in function 'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (CalculateWeights.cpp:14:49)
 INFO: [HLS 214-364] Automatically inlining function 'void cordic_apfixed::cordic_circ_apfixed<14, 3, 0>(ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)' to improve effectiveness of pipeline pragma in function 'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:240:5)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 15.688 seconds; current allocated memory: 241.258 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.007 seconds; current allocated memory: 241.258 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 16.454 seconds; current allocated memory: 239.414 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.017 seconds; current allocated memory: 239.430 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.242 seconds; current allocated memory: 261.152 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.587 seconds; current allocated memory: 258.594 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.307 seconds; current allocated memory: 266.895 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.59 seconds; current allocated memory: 265.047 MB.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (DelayAndSum.cpp:55:9) to (DelayAndSum.cpp:98:1) in function 'DelayAndSum'... converting 877 basic blocks.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.785 seconds; current allocated memory: 313.180 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.039 seconds; current allocated memory: 313.180 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.417 seconds; current allocated memory: 310.551 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.867 seconds; current allocated memory: 310.551 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'DelayAndSum' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -108,13 +108,13 @@ INFO: [HLS 200-486] Changing DSP latency (root=add_ln42) to 3 in order to utiliz
 INFO: [SCHED 204-61] Pipelining function 'DelayAndSum'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 37, function 'DelayAndSum'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.344 seconds; current allocated memory: 350.879 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 5.846 seconds; current allocated memory: 348.242 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.251 seconds; current allocated memory: 350.879 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.549 seconds; current allocated memory: 348.242 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'DelayAndSum' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -154,11 +154,11 @@ INFO: [RTGEN 206-100] Generating core module 'mul_73s_32s_89_3_1': 4 instance(s)
 INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_17_1_1': 4 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_3_11_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'DelayAndSum'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.458 seconds; current allocated memory: 369.664 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 3 seconds. Elapsed time: 8.373 seconds; current allocated memory: 429.109 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.373 seconds; current allocated memory: 450.340 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 5.021 seconds; current allocated memory: 367.617 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 3 seconds. Elapsed time: 13.508 seconds; current allocated memory: 426.660 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.816 seconds; current allocated memory: 447.789 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for DelayAndSum.
 INFO: [VLOG 209-307] Generating Verilog RTL for DelayAndSum.
 INFO: [HLS 200-789] **** Estimated Fmax: 278.48 MHz
-INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 4 seconds. Total elapsed time: 76.708 seconds; peak allocated memory: 450.340 MB.
-INFO: [v++ 60-791] Total elapsed time: 0h 1m 21s
+INFO: [HLS 200-112] Total CPU user time: 13 seconds. Total CPU system time: 5 seconds. Total elapsed time: 99.1 seconds; peak allocated memory: 447.789 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 43s

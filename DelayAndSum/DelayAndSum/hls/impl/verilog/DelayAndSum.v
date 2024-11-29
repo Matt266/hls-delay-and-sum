@@ -12010,11 +12010,4 @@ always @ (posedge ap_clk) begin
     zext_ln219_4_reg_21945[16] <= 1'b0;
 end
 
-
-reg find_kernel_block = 0;
-// synthesis translate_off
-`include "DelayAndSum_hls_deadlock_kernel_monitor_top.vh"
-// synthesis translate_on
-
 endmodule //DelayAndSum
-
