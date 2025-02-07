@@ -10,7 +10,7 @@ void CalculateWeights(
     // in Mhz
     fxd_32_16_t fc,
     
-    // in m
+    // in mm
     fxd_32_16_t xpos1,
     fxd_32_16_t xpos2,
     fxd_32_16_t xpos3,
