@@ -9,6 +9,10 @@ class DelayAndSum(DefaultIP):
 
     Attributes
     ----------
+    
+    # TODO: change range back to pi -pi  again (1 sign, 2 before comma, 8 bit length)
+            in driver and in ip. pi corresponds to 180° not 90°. 
+    
     phi: float
         Steering angle in rad. Takes values from -2pi to 2pi.
         Broadside steering is 90°. 
@@ -70,7 +74,7 @@ class DelayAndSum(DefaultIP):
         _value = self.read(self.__PHI_OFFSET)
         _value = Bits(uint=_value, length=self.__PHI_N_WORD).unpack(f'int:{self.__PHI_N_WORD}')
         _value = Fxp(_value, raw=True, dtype=self.__PHI_DTYPE).astype(float)
-        return _value
+        return _value[0]
     
     def set_phi(self, value: float):
         _value = int(Fxp(value, raw=False, dtype=self.__PHI_DTYPE).raw())
@@ -82,7 +86,7 @@ class DelayAndSum(DefaultIP):
         _value = self.read(self.__FC_OFFSET)
         _value = Bits(uint=_value, length=self.__FC_N_WORD).unpack(f'int:{self.__FC_N_WORD}')
         _value = Fxp(_value, raw=True, dtype=self.__FC_DTYPE).astype(float)
-        return _value
+        return _value[0]
     
     def set_fc(self, value: float):
         _value = int(Fxp(value, raw=False, dtype=self.__FC_DTYPE).val)
@@ -94,7 +98,7 @@ class DelayAndSum(DefaultIP):
         _value = self.read(self.__XPOS1_OFFSET)
         _value = Bits(uint=_value, length=self.__XPOS1_N_WORD).unpack(f'int:{self.__XPOS1_N_WORD}')
         _value = Fxp(_value, raw=True, dtype=self.__XPOS1_DTYPE).astype(float)
-        return _value
+        return _value[0]
     
     def set_xpos1(self, value: float):
         _value = int(Fxp(value, raw=False, dtype=self.__XPOS1_DTYPE).val)
@@ -106,7 +110,7 @@ class DelayAndSum(DefaultIP):
         _value = self.read(self.__XPOS2_OFFSET)
         _value = Bits(uint=_value, length=self.__XPOS2_N_WORD).unpack(f'int:{self.__XPOS2_N_WORD}')
         _value = Fxp(_value, raw=True, dtype=self.__XPOS2_DTYPE).astype(float)
-        return _value
+        return _value[0]
     
     def set_xpos2(self, value: float):
         _value = int(Fxp(value, raw=False, dtype=self.__XPOS2_DTYPE).val)
@@ -118,7 +122,7 @@ class DelayAndSum(DefaultIP):
         _value = self.read(self.__XPOS3_OFFSET)
         _value = Bits(uint=_value, length=self.__XPOS3_N_WORD).unpack(f'int:{self.__XPOS3_N_WORD}')
         _value = Fxp(_value, raw=True, dtype=self.__XPOS3_DTYPE).astype(float)
-        return _value
+        return _value[0]
     
     def set_xpos3(self, value: float):
         _value = int(Fxp(value, raw=False, dtype=self.__XPOS3_DTYPE).val)
@@ -130,7 +134,7 @@ class DelayAndSum(DefaultIP):
         _value = self.read(self.__XPOS4_OFFSET)
         _value = Bits(uint=_value, length=self.__XPOS4_N_WORD).unpack(f'int:{self.__XPOS4_N_WORD}')
         _value = Fxp(_value, raw=True, dtype=self.__XPOS4_DTYPE).astype(float)
-        return _value
+        return _value[0]
     
     def set_xpos4(self, value: float):
         _value = int(Fxp(value, raw=False, dtype=self.__XPOS4_DTYPE).val)
