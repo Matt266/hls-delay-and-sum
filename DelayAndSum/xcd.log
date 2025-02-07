@@ -790,3 +790,25 @@
 11/10/24 03:27:22: SERVER: destructor for server bound to port 53234
 11/10/24 03:27:22: Server exiting with status 0.
 11/10/24 03:27:22: Closing log file.
+02/07/25 15:37:16: Running xcd server. This server was NOT built by gradle, but presumably rdi.
+02/07/25 15:37:16: Server was asked to start on port: '51405'
+02/07/25 15:37:16: Server is using token UUID: '05bc2d90-e561-11ef-a12d-4c796ed68458'
+02/07/25 15:37:16: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+02/07/25 15:37:16: Attempting to start server on port '51405'
+02/07/25 15:37:16: Running Dispatch Server
+02/07/25 15:37:16: Version 2.2.0
+02/07/25 15:37:16: Dispatch Server: Accepted socket connection from client
+02/07/25 15:37:16: Starting Socket connection
+02/07/25 15:37:16: EXCHANGE_TOKEN received, server token: 05bc2d90-e561-11ef-a12d-4c796ed68458, passed token: 05bc2d90-e561-11ef-a12d-4c796ed68458
+02/07/25 15:37:16: SESSION_MGR: creating session with session uuid: '914e40e6-7719-448e-9efa-22f6258d80f4' and name 'Code Analyzer'
+02/07/25 15:37:16: KERNEL_SVC: creating session with uuid: '914e40e6-7719-448e-9efa-22f6258d80f4' and name 'Code Analyzer'
+02/07/25 15:37:16: GUIDANCE_SMGR: creating guidance session with uuid: '914e40e6-7719-448e-9efa-22f6258d80f4' and name 'Code Analyzer'
+02/07/25 15:39:00: SESSION_MGR: closing session for UUID '914e40e6-7719-448e-9efa-22f6258d80f4' with name ''
+02/07/25 15:39:00: KERNEL_SVC: closing session for UUID '914e40e6-7719-448e-9efa-22f6258d80f4' with name ''
+02/07/25 15:39:00: GUIDANCE_SMGR: closing session for UUID '914e40e6-7719-448e-9efa-22f6258d80f4' with name ''
+02/07/25 15:39:00: STOP_SERVER received, server token: 05bc2d90-e561-11ef-a12d-4c796ed68458, passed token: 05bc2d90-e561-11ef-a12d-4c796ed68458
+02/07/25 15:39:00: Socket received request to stop server.
+02/07/25 15:39:00: Dispatch Server: do_await_stop
+02/07/25 15:39:00: SERVER: destructor for server bound to port 51405
+02/07/25 15:39:00: Server exiting with status 0.
+02/07/25 15:39:00: Closing log file.

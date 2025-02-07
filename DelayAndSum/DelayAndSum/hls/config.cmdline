@@ -1,3 +1,3 @@
 relativeroot=C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum
-original_argv=-c --mode hls --config C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\hls_config.cfg --work_dir DelayAndSum 
+original_argv=--mode hls --package --config C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\hls_config.cfg --work_dir DelayAndSum 
 

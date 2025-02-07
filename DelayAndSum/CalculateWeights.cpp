@@ -1,7 +1,7 @@
 #include <hls_math.h>
 #include "CalculateWeights.hpp"
 
-void CalculateElement(fxd_12_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag){
+void CalculateElement(fxd_8_4_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag){
     // 2pi/c_0 and conversions:  10^-8 from 1/c_0, 10^-3 from mm->m conversion, 10^6 from MHz to Hz conversion ==> 10^-5 overall
     ap_fixed<32,-15> factor = (2*3.14159265359)/(2.99792458*1e5);
 
@@ -15,8 +15,8 @@ void CalculateElement(fxd_12_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1
 }
 
 void CalculateWeights(
-    // in rad -- -pi to pi
-    fxd_12_3_t phi,
+    // in rad -- -2pi to 2pi
+    fxd_8_4_t phi,
 
     // in Mhz
     fxd_32_16_t fc,

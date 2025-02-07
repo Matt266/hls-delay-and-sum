@@ -34,7 +34,7 @@ port (
     RRESP                 :out  STD_LOGIC_VECTOR(1 downto 0);
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
-    phi                   :out  STD_LOGIC_VECTOR(11 downto 0);
+    phi                   :out  STD_LOGIC_VECTOR(7 downto 0);
     fc                    :out  STD_LOGIC_VECTOR(31 downto 0);
     xpos1                 :out  STD_LOGIC_VECTOR(31 downto 0);
     xpos2                 :out  STD_LOGIC_VECTOR(31 downto 0);
@@ -51,8 +51,8 @@ end entity DelayAndSum_control_s_axi;
 -- 0x08 : reserved
 -- 0x0c : reserved
 -- 0x10 : Data signal of phi
---        bit 11~0 - phi[11:0] (Read/Write)
---        others   - reserved
+--        bit 7~0 - phi[7:0] (Read/Write)
+--        others  - reserved
 -- 0x14 : reserved
 -- 0x18 : Data signal of fc
 --        bit 31~0 - fc[31:0] (Read/Write)
@@ -102,7 +102,7 @@ architecture behave of DelayAndSum_control_s_axi is
     signal ARREADY_t           : STD_LOGIC;
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
-    signal int_phi             : UNSIGNED(11 downto 0) := (others => '0');
+    signal int_phi             : UNSIGNED(7 downto 0) := (others => '0');
     signal int_fc              : UNSIGNED(31 downto 0) := (others => '0');
     signal int_xpos1           : UNSIGNED(31 downto 0) := (others => '0');
     signal int_xpos2           : UNSIGNED(31 downto 0) := (others => '0');
@@ -224,7 +224,7 @@ begin
                     rdata_data <= (others => '0');
                     case (TO_INTEGER(raddr)) is
                     when ADDR_PHI_DATA_0 =>
-                        rdata_data <= RESIZE(int_phi(11 downto 0), 32);
+                        rdata_data <= RESIZE(int_phi(7 downto 0), 32);
                     when ADDR_FC_DATA_0 =>
                         rdata_data <= RESIZE(int_fc(31 downto 0), 32);
                     when ADDR_XPOS1_DATA_0 =>
@@ -255,10 +255,10 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_phi(11 downto 0) <= (others => '0');
+                int_phi(7 downto 0) <= (others => '0');
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_PHI_DATA_0) then
-                    int_phi(11 downto 0) <= (UNSIGNED(WDATA(11 downto 0)) and wmask(11 downto 0)) or ((not wmask(11 downto 0)) and int_phi(11 downto 0));
+                    int_phi(7 downto 0) <= (UNSIGNED(WDATA(7 downto 0)) and wmask(7 downto 0)) or ((not wmask(7 downto 0)) and int_phi(7 downto 0));
                 end if;
             end if;
         end if;

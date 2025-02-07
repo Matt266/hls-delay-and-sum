@@ -3,8 +3,8 @@
 // 0x08 : reserved
 // 0x0c : reserved
 // 0x10 : Data signal of phi
-//        bit 11~0 - phi[11:0] (Read/Write)
-//        others   - reserved
+//        bit 7~0 - phi[7:0] (Read/Write)
+//        others  - reserved
 // 0x14 : reserved
 // 0x18 : Data signal of fc
 //        bit 31~0 - fc[31:0] (Read/Write)
@@ -24,7 +24,7 @@
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define CONTROL_ADDR_PHI_DATA   0x10
-#define CONTROL_BITS_PHI_DATA   12
+#define CONTROL_BITS_PHI_DATA   8
 #define CONTROL_ADDR_FC_DATA    0x18
 #define CONTROL_BITS_FC_DATA    32
 #define CONTROL_ADDR_XPOS1_DATA 0x20

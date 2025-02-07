@@ -17,14 +17,14 @@
 <EstimatedClockPeriod>3.591</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>36</Best-caseLatency>
-<Average-caseLatency>36</Average-caseLatency>
-<Worst-caseLatency>36</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.180 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.180 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.180 us</Worst-caseRealTimeLatency>
+<Best-caseLatency>34</Best-caseLatency>
+<Average-caseLatency>34</Average-caseLatency>
+<Worst-caseLatency>34</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.170 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.170 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.170 us</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>37</PipelineDepth>
+<PipelineDepth>35</PipelineDepth>
 <PipelineType>yes</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
@@ -41,12 +41,12 @@
 <DSP>62</DSP>
 <AVAIL_DSP>4272</AVAIL_DSP>
 <UTIL_DSP>1</UTIL_DSP>
-<FF>10396</FF>
+<FF>10269</FF>
 <AVAIL_FF>850560</AVAIL_FF>
 <UTIL_FF>1</UTIL_FF>
-<LUT>34765</LUT>
+<LUT>34008</LUT>
 <AVAIL_LUT>425280</AVAIL_LUT>
-<UTIL_LUT>8</UTIL_LUT>
+<UTIL_LUT>7</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>80</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>

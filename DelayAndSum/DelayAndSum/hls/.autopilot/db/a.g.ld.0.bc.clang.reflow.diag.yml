@@ -14,7 +14,7 @@ Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 61, Column: 22 }
-Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi14ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
+Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi10ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
 Args:            
   - String:          'Loop '''
   - LoopName:        VITIS_LOOP_61_1
@@ -58,7 +58,7 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 53, Column: 0 }
-Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi14ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
+Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi10ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        VITIS_LOOP_61_1
@@ -66,16 +66,16 @@ Args:
   - LoopLoc:         'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:61:22'
   - String:          ') '
   - String:          'in function '''
-  - String:          'cordic_apfixed::cordic_circ_apfixed<14, 3, 0>'
+  - String:          'cordic_apfixed::cordic_circ_apfixed<10, 3, 0>'
   - String:          ''' completely with a factor of '
-  - Factor:          '14'
+  - Factor:          '10'
 ...
 --- !Missed
 Pass:            reflow-pragma-loop-unroll
 Name:            PipelineRemovedByUnroll
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 53, Column: 0 }
-Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi14ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
+Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi10ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
 Args:            
   - String:          'Pipeline directive for loop '''
   - LoopName:        VITIS_LOOP_61_1
@@ -83,7 +83,7 @@ Args:
   - LoopLoc:         'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:61:22'
   - String:          ') '
   - String:          'in function '''
-  - String:          'cordic_apfixed::cordic_circ_apfixed<14, 3, 0>'
+  - String:          'cordic_apfixed::cordic_circ_apfixed<10, 3, 0>'
   - String:          ''' has been removed because the loop is unrolled completely'
 ...
 --- !Passed
@@ -91,14 +91,14 @@ Pass:            reflow-inliner
 Name:            Inline
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 202, Column: 0 }
-Function:        _ZN14cordic_apfixed14generic_sincosILi12ELi3EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.64
+Function:        _ZN14cordic_apfixed14generic_sincosILi8ELi4EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.64
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'void cordic_apfixed::circ_range_redux<12, 3, 13>(ap_ufixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<13, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'void cordic_apfixed::circ_range_redux<8, 4, 9>(ap_ufixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<9, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 34, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void cordic_apfixed::generic_sincos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.64)'
+  - Caller:          'void cordic_apfixed::generic_sincos<8, 4>(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.64)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 202, Column: 0 }
   - String:          ''''
@@ -108,14 +108,14 @@ Pass:            reflow-inliner
 Name:            Inline
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                    Line: 1941, Column: 0 }
-Function:        _ZN3hls3cosILi12ELi3EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Function:        _ZN3hls3cosILi8ELi4EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'void cordic_apfixed::generic_sincos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.64)'
+  - Callee:          'void cordic_apfixed::generic_sincos<8, 4>(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.64)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 202, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - Caller:          'ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<8, 4>(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                        Line: 1941, Column: 0 }
   - String:          ''''
@@ -175,14 +175,14 @@ Args:
 Pass:            reflow-inliner
 Name:            Inline
 DebugLoc:        { File: CalculateWeights.cpp, Line: 4, Column: 0 }
-Function:        _Z16CalculateElement8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EES_ILi32ELi16ELS0_5ELS1_3ELi0EES3_RS_ILi16ELi1ELS0_5ELS1_3ELi0EES5_
+Function:        _Z16CalculateElement8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES_ILi32ELi16ELS0_5ELS1_3ELi0EES3_RS_ILi16ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'ap_fixed<((16) - (1)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<16, 1>(ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                        Line: 1941, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'CalculateElement(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Caller:          'CalculateElement(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: CalculateWeights.cpp, Line: 4, Column: 0 }
   - String:          ''''
 ...
@@ -190,14 +190,14 @@ Args:
 Pass:            reflow-inliner
 Name:            Inline
 DebugLoc:        { File: CalculateWeights.cpp, Line: 4, Column: 0 }
-Function:        _Z16CalculateElement8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EES_ILi32ELi16ELS0_5ELS1_3ELi0EES3_RS_ILi16ELi1ELS0_5ELS1_3ELi0EES5_
+Function:        _Z16CalculateElement8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EES_ILi32ELi16ELS0_5ELS1_3ELi0EES3_RS_ILi16ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'ap_fixed<((16) - (1)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<16, 1>(ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                        Line: 1922, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'CalculateElement(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Caller:          'CalculateElement(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: CalculateWeights.cpp, Line: 4, Column: 0 }
   - String:          ''''
 ...
@@ -205,13 +205,13 @@ Args:
 Pass:            reflow-inliner
 Name:            Inline
 DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'CalculateWeights(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'CalculateWeights(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: CalculateWeights.cpp, Line: 39, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -219,13 +219,13 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 40, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'CalculateElement(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'CalculateElement(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: CalculateWeights.cpp, Line: 4, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -233,13 +233,13 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 41, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'CalculateElement(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'CalculateElement(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: CalculateWeights.cpp, Line: 4, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -247,13 +247,13 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 42, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'CalculateElement(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'CalculateElement(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: CalculateWeights.cpp, Line: 4, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -261,13 +261,13 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 43, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'CalculateElement(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'CalculateElement(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: CalculateWeights.cpp, Line: 4, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -275,14 +275,14 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 13, Column: 49 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - Callee:          'ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<8, 4>(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                        Line: 1941, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -291,14 +291,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -307,14 +307,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -322,14 +322,14 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 14, Column: 49 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - Callee:          'ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<8, 4>(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                        Line: 1941, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -338,14 +338,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -353,14 +353,14 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 13, Column: 49 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - Callee:          'ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<8, 4>(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                        Line: 1941, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -369,14 +369,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -385,14 +385,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -400,14 +400,14 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 14, Column: 49 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - Callee:          'ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<8, 4>(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                        Line: 1941, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -416,14 +416,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -431,14 +431,14 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 13, Column: 49 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - Callee:          'ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<8, 4>(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                        Line: 1941, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -447,14 +447,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -463,14 +463,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -478,14 +478,14 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 14, Column: 49 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - Callee:          'ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<8, 4>(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                        Line: 1941, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -494,14 +494,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -509,14 +509,14 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 13, Column: 49 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - Callee:          'ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<8, 4>(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                        Line: 1941, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -525,14 +525,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -541,14 +541,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -556,14 +556,14 @@ Args:
 Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: CalculateWeights.cpp, Line: 14, Column: 49 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'ap_fixed<((12) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<12, 3>(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - Callee:          'ap_fixed<((8) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<8, 4>(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\hls_math.h', 
                        Line: 1941, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -572,14 +572,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
   - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -588,14 +588,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<14, 3, 0>(ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<10, 3, 0>(ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -604,14 +604,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<14, 3, 0>(ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<10, 3, 0>(ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -620,14 +620,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<14, 3, 0>(ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<10, 3, 0>(ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -636,14 +636,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<14, 3, 0>(ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<10, 3, 0>(ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -652,14 +652,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<14, 3, 0>(ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<10, 3, 0>(ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -668,14 +668,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<14, 3, 0>(ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<10, 3, 0>(ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -684,14 +684,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<14, 3, 0>(ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<10, 3, 0>(ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...
@@ -700,14 +700,14 @@ Pass:            reflow-auto-inline-performance-driven
 Name:            AutoInlinePerf
 DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                    Line: 240, Column: 5 }
-Function:        _Z11DelayAndSumP8ap_fixedILi12ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
+Function:        _Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_
 Args:            
   - String:          'Automatically inlining function '''
-  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<14, 3, 0>(ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<14, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<10, 3, 0>(ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<10, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
     DebugLoc:        { File: 'C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
                        Line: 53, Column: 0 }
   - String:          ''' to improve effectiveness of pipeline pragma in function '''
-  - Caller:          'DelayAndSum(ap_fixed<12, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'DelayAndSum(ap_fixed<8, 4, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: DelayAndSum.cpp, Line: 29, Column: 0 }
   - String:          ''''
 ...

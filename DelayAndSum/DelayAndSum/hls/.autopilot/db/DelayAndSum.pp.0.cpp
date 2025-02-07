@@ -6623,13 +6623,13 @@ class stream : public stream<__STREAM_T__, 0> {
 
 
 
-typedef ap_fixed<12,3> fxd_12_3_t;
+typedef ap_fixed<8,4> fxd_8_4_t;
 typedef ap_fixed<16,1> fxd_16_1_t;
 typedef ap_fixed<32,16> fxd_32_16_t;
 
 __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
-    fxd_12_3_t *phi,
+    fxd_8_4_t *phi,
 
 
     fxd_32_16_t *fc,
@@ -6658,10 +6658,10 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
 
 
-void CalculateElement(fxd_12_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
+void CalculateElement(fxd_8_4_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
 void CalculateWeights(
 
-    fxd_12_3_t phi,
+    fxd_8_4_t phi,
 
 
     fxd_32_16_t fc,
@@ -11416,7 +11416,7 @@ namespace std
 
 __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
-    fxd_12_3_t *phi,
+    fxd_8_4_t *phi,
 
 
     fxd_32_16_t *fc,
@@ -11479,7 +11479,7 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     fxd_16_1_t in4_real_buffer = in4_real.read();
     fxd_16_1_t in4_imag_buffer = in4_imag.read();
 
-    fxd_12_3_t phi_buffer = *phi;
+    fxd_8_4_t phi_buffer = *phi;
     fxd_32_16_t fc_buffer = *fc;
     fxd_32_16_t xpos1_buffer = *xpos1;
     fxd_32_16_t xpos2_buffer = *xpos2;

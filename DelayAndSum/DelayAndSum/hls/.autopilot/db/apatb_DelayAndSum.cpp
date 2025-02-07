@@ -1203,7 +1203,7 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_phi, void* __xlx_apatb_param_f
 {
   static hls::sim::Register port0 {
     .name = "phi",
-    .width = 12,
+    .width = 8,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,

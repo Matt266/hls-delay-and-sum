@@ -31,7 +31,7 @@ module DelayAndSum_control_s_axi
     output wire [1:0]                    RRESP,
     output wire                          RVALID,
     input  wire                          RREADY,
-    output wire [11:0]                   phi,
+    output wire [7:0]                    phi,
     output wire [31:0]                   fc,
     output wire [31:0]                   xpos1,
     output wire [31:0]                   xpos2,
@@ -46,8 +46,8 @@ module DelayAndSum_control_s_axi
 // 0x08 : reserved
 // 0x0c : reserved
 // 0x10 : Data signal of phi
-//        bit 11~0 - phi[11:0] (Read/Write)
-//        others   - reserved
+//        bit 7~0 - phi[7:0] (Read/Write)
+//        others  - reserved
 // 0x14 : reserved
 // 0x18 : Data signal of fc
 //        bit 31~0 - fc[31:0] (Read/Write)
@@ -102,7 +102,7 @@ localparam
     wire                          ar_hs;
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
-    reg  [11:0]                   int_phi = 'b0;
+    reg  [7:0]                    int_phi = 'b0;
     reg  [31:0]                   int_fc = 'b0;
     reg  [31:0]                   int_xpos1 = 'b0;
     reg  [31:0]                   int_xpos2 = 'b0;
@@ -201,7 +201,7 @@ always @(posedge ACLK) begin
             rdata <= 'b0;
             case (raddr)
                 ADDR_PHI_DATA_0: begin
-                    rdata <= int_phi[11:0];
+                    rdata <= int_phi[7:0];
                 end
                 ADDR_FC_DATA_0: begin
                     rdata <= int_fc[31:0];
@@ -231,13 +231,13 @@ assign xpos1 = int_xpos1;
 assign xpos2 = int_xpos2;
 assign xpos3 = int_xpos3;
 assign xpos4 = int_xpos4;
-// int_phi[11:0]
+// int_phi[7:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_phi[11:0] <= 0;
+        int_phi[7:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_PHI_DATA_0)
-            int_phi[11:0] <= (WDATA[31:0] & wmask) | (int_phi[11:0] & ~wmask);
+            int_phi[7:0] <= (WDATA[31:0] & wmask) | (int_phi[7:0] & ~wmask);
     end
 end
 

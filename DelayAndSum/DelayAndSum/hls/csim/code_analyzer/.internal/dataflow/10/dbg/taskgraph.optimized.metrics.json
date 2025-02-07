@@ -1,0 +1,2882 @@
+[
+    {
+        "name": "_Z11DelayAndSumP8ap_fixedILi8ELi4EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS_ILi32ELi16ELS0_5ELS1_3ELi0EES5_S5_S5_S5_RN3hls6streamIS_ILi16ELi1ELS0_5ELS1_3ELi0EELi0EEESA_SA_SA_SA_SA_SA_SA_SA_SA_",
+        "df_function": "%F3580",
+        "df_type": "Function",
+        "project": "SLX",
+        "processes": {
+            "1": {
+                "id": "1",
+                "name": "Artificial<Start>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                        "line": 5,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                        "line": 98,
+                        "column": 1
+                    }
+                },
+                "display_name": "<START>",
+                "kind": "start"
+            },
+            "2": {
+                "id": "2",
+                "name": "Artificial<End>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                        "line": 5,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                        "line": 98,
+                        "column": 1
+                    }
+                },
+                "display_name": "<END>",
+                "kind": "end"
+            },
+            "3": {
+                "id": "3",
+                "name": "Region<OutlineCall(R2 DelayAndSum) BB 'codeRepl' [Atomic] 'Outline_T3_F3580_R2_Atomic'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                        "line": 57,
+                        "column": 43
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                        "line": 64,
+                        "column": 43
+                    }
+                },
+                "display_name": "Process 1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 19,
+                                    "column": 0
+                                },
+                                "id": "VId_9237_*0(0,64)arg.A0(0,64)",
+                                "name": "in1_real.Handle",
+                                "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 6
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 20,
+                                    "column": 0
+                                },
+                                "id": "VId_9238_*0(0,64)arg.A0(0,64)",
+                                "name": "in1_imag.Handle",
+                                "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 7
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 21,
+                                    "column": 0
+                                },
+                                "id": "VId_9239_*0(0,64)arg.A0(0,64)",
+                                "name": "in2_real.Handle",
+                                "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 8
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 22,
+                                    "column": 0
+                                },
+                                "id": "VId_9240_*0(0,64)arg.A0(0,64)",
+                                "name": "in2_imag.Handle",
+                                "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 9
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 23,
+                                    "column": 0
+                                },
+                                "id": "VId_9241_*0(0,64)arg.A0(0,64)",
+                                "name": "in3_real.Handle",
+                                "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 10
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 24,
+                                    "column": 0
+                                },
+                                "id": "VId_9242_*0(0,64)arg.A0(0,64)",
+                                "name": "in3_imag.Handle",
+                                "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 11
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 25,
+                                    "column": 0
+                                },
+                                "id": "VId_9243_*0(0,64)arg.A0(0,64)",
+                                "name": "in4_real.Handle",
+                                "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 12
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 26,
+                                    "column": 0
+                                },
+                                "id": "VId_9244_*0(0,64)arg.A0(0,64)",
+                                "name": "in4_imag.Handle",
+                                "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 13
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 7,
+                                    "column": 0
+                                },
+                                "id": "VId_9231_*0(0,8)arg",
+                                "name": "(*phi)",
+                                "display_name": "fxd_8_4_t *phi"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 0
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 10,
+                                    "column": 0
+                                },
+                                "id": "VId_9232_*0(0,32)arg",
+                                "name": "(*fc)",
+                                "display_name": "fxd_32_16_t *fc"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 1
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 13,
+                                    "column": 0
+                                },
+                                "id": "VId_9233_*0(0,32)arg",
+                                "name": "(*xpos1)",
+                                "display_name": "fxd_32_16_t *xpos1"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 2
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 14,
+                                    "column": 0
+                                },
+                                "id": "VId_9234_*0(0,32)arg",
+                                "name": "(*xpos2)",
+                                "display_name": "fxd_32_16_t *xpos2"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 3
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 15,
+                                    "column": 0
+                                },
+                                "id": "VId_9235_*0(0,32)arg",
+                                "name": "(*xpos3)",
+                                "display_name": "fxd_32_16_t *xpos3"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 4
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 16,
+                                    "column": 0
+                                },
+                                "id": "VId_9236_*0(0,32)arg",
+                                "name": "(*xpos4)",
+                                "display_name": "fxd_32_16_t *xpos4"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 5
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 57,
+                                    "column": 0
+                                },
+                                "id": "VId_9653_!c?(?,?)",
+                                "name": "in1_real_buffer",
+                                "display_name": "fxd_16_1_t in1_real_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 58,
+                                    "column": 0
+                                },
+                                "id": "VId_9654_!c?(?,?)",
+                                "name": "in1_imag_buffer",
+                                "display_name": "fxd_16_1_t in1_imag_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 59,
+                                    "column": 0
+                                },
+                                "id": "VId_9655_!c?(?,?)",
+                                "name": "in2_real_buffer",
+                                "display_name": "fxd_16_1_t in2_real_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 60,
+                                    "column": 0
+                                },
+                                "id": "VId_9656_!c?(?,?)",
+                                "name": "in2_imag_buffer",
+                                "display_name": "fxd_16_1_t in2_imag_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 61,
+                                    "column": 0
+                                },
+                                "id": "VId_9657_!c?(?,?)",
+                                "name": "in3_real_buffer",
+                                "display_name": "fxd_16_1_t in3_real_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 62,
+                                    "column": 0
+                                },
+                                "id": "VId_9658_!c?(?,?)",
+                                "name": "in3_imag_buffer",
+                                "display_name": "fxd_16_1_t in3_imag_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 63,
+                                    "column": 0
+                                },
+                                "id": "VId_9659_!c?(?,?)",
+                                "name": "in4_real_buffer",
+                                "display_name": "fxd_16_1_t in4_real_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 64,
+                                    "column": 0
+                                },
+                                "id": "VId_9660_!c?(?,?)",
+                                "name": "in4_imag_buffer",
+                                "display_name": "fxd_16_1_t in4_imag_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 66,
+                                    "column": 0
+                                },
+                                "id": "VId_9661_!c?(?,?)",
+                                "name": "phi_buffer",
+                                "display_name": "fxd_8_4_t phi_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 67,
+                                    "column": 0
+                                },
+                                "id": "VId_9662_!c?(?,?)",
+                                "name": "fc_buffer",
+                                "display_name": "fxd_32_16_t fc_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 68,
+                                    "column": 0
+                                },
+                                "id": "VId_9663_!c?(?,?)",
+                                "name": "xpos1_buffer",
+                                "display_name": "fxd_32_16_t xpos1_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 69,
+                                    "column": 0
+                                },
+                                "id": "VId_9664_!c?(?,?)",
+                                "name": "xpos2_buffer",
+                                "display_name": "fxd_32_16_t xpos2_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 70,
+                                    "column": 0
+                                },
+                                "id": "VId_9665_!c?(?,?)",
+                                "name": "xpos3_buffer",
+                                "display_name": "fxd_32_16_t xpos3_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 71,
+                                    "column": 0
+                                },
+                                "id": "VId_9666_!c?(?,?)",
+                                "name": "xpos4_buffer",
+                                "display_name": "fxd_32_16_t xpos4_buffer"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 2
+                },
+                "subregions": [
+                    {
+                        "id": "%F3599_R1",
+                        "description": "<function entry>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                "line": 57,
+                                "column": 43
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                "line": 64,
+                                "column": 43
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": []
+            },
+            "4": {
+                "id": "4",
+                "name": "Region<OutlineCall(R3 DelayAndSum) BB 'codeRepl1' [Atomic,Call] 'Outline_T4_F3580_R3_Call'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                        "line": 82,
+                        "column": 5
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                        "line": 83,
+                        "column": 87
+                    }
+                },
+                "display_name": "Process 2",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 71,
+                                    "column": 0
+                                },
+                                "id": "VId_9666_!c?(?,?)",
+                                "name": "xpos4_buffer",
+                                "display_name": "fxd_32_16_t xpos4_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 70,
+                                    "column": 0
+                                },
+                                "id": "VId_9665_!c?(?,?)",
+                                "name": "xpos3_buffer",
+                                "display_name": "fxd_32_16_t xpos3_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 69,
+                                    "column": 0
+                                },
+                                "id": "VId_9664_!c?(?,?)",
+                                "name": "xpos2_buffer",
+                                "display_name": "fxd_32_16_t xpos2_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 68,
+                                    "column": 0
+                                },
+                                "id": "VId_9663_!c?(?,?)",
+                                "name": "xpos1_buffer",
+                                "display_name": "fxd_32_16_t xpos1_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 67,
+                                    "column": 0
+                                },
+                                "id": "VId_9662_!c?(?,?)",
+                                "name": "fc_buffer",
+                                "display_name": "fxd_32_16_t fc_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 66,
+                                    "column": 0
+                                },
+                                "id": "VId_9661_!c?(?,?)",
+                                "name": "phi_buffer",
+                                "display_name": "fxd_8_4_t phi_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 73,
+                                    "column": 16
+                                },
+                                "id": "VId_9261_!c?(?,?)",
+                                "name": "w1_real",
+                                "display_name": "fxd_16_1_t w1_real"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 74,
+                                    "column": 16
+                                },
+                                "id": "VId_9262_!c?(?,?)",
+                                "name": "w1_imag",
+                                "display_name": "fxd_16_1_t w1_imag"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 75,
+                                    "column": 16
+                                },
+                                "id": "VId_9263_!c?(?,?)",
+                                "name": "w2_real",
+                                "display_name": "fxd_16_1_t w2_real"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 76,
+                                    "column": 16
+                                },
+                                "id": "VId_9264_!c?(?,?)",
+                                "name": "w2_imag",
+                                "display_name": "fxd_16_1_t w2_imag"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 77,
+                                    "column": 16
+                                },
+                                "id": "VId_9265_!c?(?,?)",
+                                "name": "w3_real",
+                                "display_name": "fxd_16_1_t w3_real"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 78,
+                                    "column": 16
+                                },
+                                "id": "VId_9266_!c?(?,?)",
+                                "name": "w3_imag",
+                                "display_name": "fxd_16_1_t w3_imag"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 79,
+                                    "column": 16
+                                },
+                                "id": "VId_9267_!c?(?,?)",
+                                "name": "w4_real",
+                                "display_name": "fxd_16_1_t w4_real"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 80,
+                                    "column": 16
+                                },
+                                "id": "VId_9268_!c?(?,?)",
+                                "name": "w4_imag",
+                                "display_name": "fxd_16_1_t w4_imag"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "id": "V_0x0x1e2b1243b80_[?(?,128)]",
+                                "name": "_ZN14cordic_apfixed21circ_table_arctan_128E[*]",
+                                "display_name": "[128 x %struct.ap_fixed.18]* _ZN14cordic_apfixed21circ_table_arctan_128E"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 160,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 80
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 288,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 144
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 2598
+                },
+                "subregions": [
+                    {
+                        "id": "%F3600_R1",
+                        "description": "<function entry>"
+                    },
+                    {
+                        "id": "%F3600_R2",
+                        "description": "<call 'CalculateWeights'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                "line": 82,
+                                "column": 5
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                "line": 83,
+                                "column": 87
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%F3581",
+                        "region_type": "Function",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                "line": 82,
+                                "column": 5
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                "line": 83,
+                                "column": 87
+                            }
+                        }
+                    }
+                ],
+                "guidance": [
+                    {
+                        "type": "CallGuidance",
+                        "ti": {
+                            "min": 2597,
+                            "max": 2597
+                        },
+                        "ureg_id": "%F3581",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                "line": 82,
+                                "column": 5
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                "line": 83,
+                                "column": 87
+                            }
+                        }
+                    }
+                ]
+            },
+            "5": {
+                "id": "5",
+                "name": "Region<OutlineCall(R4 DelayAndSum) BB 'codeRepl2' [Atomic] 'Outline_T5_F3580_R4_Aggregate'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                        "line": 89,
+                        "column": 14
+                    },
+                    "end_loc": {
+                        "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                        "line": 97,
+                        "column": 62
+                    }
+                },
+                "display_name": "Process 3",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 58,
+                                    "column": 0
+                                },
+                                "id": "VId_9654_!c?(?,?)",
+                                "name": "in1_imag_buffer",
+                                "display_name": "fxd_16_1_t in1_imag_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 57,
+                                    "column": 0
+                                },
+                                "id": "VId_9653_!c?(?,?)",
+                                "name": "in1_real_buffer",
+                                "display_name": "fxd_16_1_t in1_real_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 59,
+                                    "column": 0
+                                },
+                                "id": "VId_9655_!c?(?,?)",
+                                "name": "in2_real_buffer",
+                                "display_name": "fxd_16_1_t in2_real_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 60,
+                                    "column": 0
+                                },
+                                "id": "VId_9656_!c?(?,?)",
+                                "name": "in2_imag_buffer",
+                                "display_name": "fxd_16_1_t in2_imag_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 61,
+                                    "column": 0
+                                },
+                                "id": "VId_9657_!c?(?,?)",
+                                "name": "in3_real_buffer",
+                                "display_name": "fxd_16_1_t in3_real_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 62,
+                                    "column": 0
+                                },
+                                "id": "VId_9658_!c?(?,?)",
+                                "name": "in3_imag_buffer",
+                                "display_name": "fxd_16_1_t in3_imag_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 63,
+                                    "column": 0
+                                },
+                                "id": "VId_9659_!c?(?,?)",
+                                "name": "in4_real_buffer",
+                                "display_name": "fxd_16_1_t in4_real_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 64,
+                                    "column": 0
+                                },
+                                "id": "VId_9660_!c?(?,?)",
+                                "name": "in4_imag_buffer",
+                                "display_name": "fxd_16_1_t in4_imag_buffer"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 73,
+                                    "column": 16
+                                },
+                                "id": "VId_9261_!c?(?,?)",
+                                "name": "w1_real",
+                                "display_name": "fxd_16_1_t w1_real"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 74,
+                                    "column": 16
+                                },
+                                "id": "VId_9262_!c?(?,?)",
+                                "name": "w1_imag",
+                                "display_name": "fxd_16_1_t w1_imag"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 75,
+                                    "column": 16
+                                },
+                                "id": "VId_9263_!c?(?,?)",
+                                "name": "w2_real",
+                                "display_name": "fxd_16_1_t w2_real"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 76,
+                                    "column": 16
+                                },
+                                "id": "VId_9264_!c?(?,?)",
+                                "name": "w2_imag",
+                                "display_name": "fxd_16_1_t w2_imag"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 77,
+                                    "column": 16
+                                },
+                                "id": "VId_9265_!c?(?,?)",
+                                "name": "w3_real",
+                                "display_name": "fxd_16_1_t w3_real"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 78,
+                                    "column": 16
+                                },
+                                "id": "VId_9266_!c?(?,?)",
+                                "name": "w3_imag",
+                                "display_name": "fxd_16_1_t w3_imag"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 79,
+                                    "column": 16
+                                },
+                                "id": "VId_9267_!c?(?,?)",
+                                "name": "w4_real",
+                                "display_name": "fxd_16_1_t w4_real"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 80,
+                                    "column": 16
+                                },
+                                "id": "VId_9268_!c?(?,?)",
+                                "name": "w4_imag",
+                                "display_name": "fxd_16_1_t w4_imag"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 2,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 27,
+                                    "column": 0
+                                },
+                                "id": "VId_9245_*0(0,64)arg.A0(0,64)",
+                                "name": "out_real.Handle",
+                                "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 14
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                    "line": 28,
+                                    "column": 0
+                                },
+                                "id": "VId_9246_*0(0,64)arg.A0(0,64)",
+                                "name": "out_imag.Handle",
+                                "display_name": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 15
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 16
+                },
+                "subregions": [
+                    {
+                        "id": "%F3601_R1",
+                        "description": "<function entry>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                "line": 89,
+                                "column": 14
+                            },
+                            "end_loc": {
+                                "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                                "line": 97,
+                                "column": 62
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": []
+            }
+        },
+        "channels": {
+            "(*phi)_RAW_1_3_#0": {
+                "name": "(*phi)_RAW_1_3_#0",
+                "variable_id": "VId_9231_*0(0,8)arg",
+                "variable_name": "(*phi)",
+                "declaration": "fxd_8_4_t *phi",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 8,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 7,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 8,
+                    "channel_rate": 3.079291762894534E-3
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "(*fc)_RAW_1_3_#1": {
+                "name": "(*fc)_RAW_1_3_#1",
+                "variable_id": "VId_9232_*0(0,32)arg",
+                "variable_name": "(*fc)",
+                "declaration": "fxd_32_16_t *fc",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 10,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 32,
+                    "channel_rate": 1.2317167051578136E-2
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "(*xpos1)_RAW_1_3_#2": {
+                "name": "(*xpos1)_RAW_1_3_#2",
+                "variable_id": "VId_9233_*0(0,32)arg",
+                "variable_name": "(*xpos1)",
+                "declaration": "fxd_32_16_t *xpos1",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 13,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 32,
+                    "channel_rate": 1.2317167051578136E-2
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "(*xpos2)_RAW_1_3_#3": {
+                "name": "(*xpos2)_RAW_1_3_#3",
+                "variable_id": "VId_9234_*0(0,32)arg",
+                "variable_name": "(*xpos2)",
+                "declaration": "fxd_32_16_t *xpos2",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 14,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 32,
+                    "channel_rate": 1.2317167051578136E-2
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "(*xpos3)_RAW_1_3_#4": {
+                "name": "(*xpos3)_RAW_1_3_#4",
+                "variable_id": "VId_9235_*0(0,32)arg",
+                "variable_name": "(*xpos3)",
+                "declaration": "fxd_32_16_t *xpos3",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 15,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 32,
+                    "channel_rate": 1.2317167051578136E-2
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "(*xpos4)_RAW_1_3_#5": {
+                "name": "(*xpos4)_RAW_1_3_#5",
+                "variable_id": "VId_9236_*0(0,32)arg",
+                "variable_name": "(*xpos4)",
+                "declaration": "fxd_32_16_t *xpos4",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 16,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 32,
+                    "channel_rate": 1.2317167051578136E-2
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "in1_real.Handle_RAW_1_3_#6": {
+                "name": "in1_real.Handle_RAW_1_3_#6",
+                "variable_id": "VId_9237_*0(0,64)arg.A0(0,64)",
+                "variable_name": "in1_real.Handle",
+                "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 19,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "in1_imag.Handle_RAW_1_3_#7": {
+                "name": "in1_imag.Handle_RAW_1_3_#7",
+                "variable_id": "VId_9238_*0(0,64)arg.A0(0,64)",
+                "variable_name": "in1_imag.Handle",
+                "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 20,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "in2_real.Handle_RAW_1_3_#8": {
+                "name": "in2_real.Handle_RAW_1_3_#8",
+                "variable_id": "VId_9239_*0(0,64)arg.A0(0,64)",
+                "variable_name": "in2_real.Handle",
+                "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 21,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "in2_imag.Handle_RAW_1_3_#9": {
+                "name": "in2_imag.Handle_RAW_1_3_#9",
+                "variable_id": "VId_9240_*0(0,64)arg.A0(0,64)",
+                "variable_name": "in2_imag.Handle",
+                "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 22,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "in3_real.Handle_RAW_1_3_#10": {
+                "name": "in3_real.Handle_RAW_1_3_#10",
+                "variable_id": "VId_9241_*0(0,64)arg.A0(0,64)",
+                "variable_name": "in3_real.Handle",
+                "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 23,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "in3_imag.Handle_RAW_1_3_#11": {
+                "name": "in3_imag.Handle_RAW_1_3_#11",
+                "variable_id": "VId_9242_*0(0,64)arg.A0(0,64)",
+                "variable_name": "in3_imag.Handle",
+                "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 24,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "in4_real.Handle_RAW_1_3_#12": {
+                "name": "in4_real.Handle_RAW_1_3_#12",
+                "variable_id": "VId_9243_*0(0,64)arg.A0(0,64)",
+                "variable_name": "in4_real.Handle",
+                "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 25,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "in4_imag.Handle_RAW_1_3_#13": {
+                "name": "in4_imag.Handle_RAW_1_3_#13",
+                "variable_id": "VId_9244_*0(0,64)arg.A0(0,64)",
+                "variable_name": "in4_imag.Handle",
+                "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 26,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "xpos4_buffer_RAW_3_4_#14": {
+                "name": "xpos4_buffer_RAW_3_4_#14",
+                "variable_id": "VId_9666_!c?(?,?)",
+                "variable_name": "xpos4_buffer",
+                "declaration": "fxd_32_16_t xpos4_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 71,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 32,
+                    "channel_rate": 1.2317167051578136E-2
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "xpos3_buffer_RAW_3_4_#15": {
+                "name": "xpos3_buffer_RAW_3_4_#15",
+                "variable_id": "VId_9665_!c?(?,?)",
+                "variable_name": "xpos3_buffer",
+                "declaration": "fxd_32_16_t xpos3_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 70,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 32,
+                    "channel_rate": 1.2317167051578136E-2
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "xpos2_buffer_RAW_3_4_#16": {
+                "name": "xpos2_buffer_RAW_3_4_#16",
+                "variable_id": "VId_9664_!c?(?,?)",
+                "variable_name": "xpos2_buffer",
+                "declaration": "fxd_32_16_t xpos2_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 69,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 32,
+                    "channel_rate": 1.2317167051578136E-2
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "xpos1_buffer_RAW_3_4_#17": {
+                "name": "xpos1_buffer_RAW_3_4_#17",
+                "variable_id": "VId_9663_!c?(?,?)",
+                "variable_name": "xpos1_buffer",
+                "declaration": "fxd_32_16_t xpos1_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 68,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 32,
+                    "channel_rate": 1.2317167051578136E-2
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "fc_buffer_RAW_3_4_#18": {
+                "name": "fc_buffer_RAW_3_4_#18",
+                "variable_id": "VId_9662_!c?(?,?)",
+                "variable_name": "fc_buffer",
+                "declaration": "fxd_32_16_t fc_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 67,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 32,
+                    "channel_rate": 1.2317167051578136E-2
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "phi_buffer_RAW_3_4_#19": {
+                "name": "phi_buffer_RAW_3_4_#19",
+                "variable_id": "VId_9661_!c?(?,?)",
+                "variable_name": "phi_buffer",
+                "declaration": "fxd_8_4_t phi_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 8,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 66,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 8,
+                    "channel_rate": 3.079291762894534E-3
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "_ZN14cordic_apfixed21circ_table_arctan_128E[*]_RAW_1_4_#20": {
+                "name": "_ZN14cordic_apfixed21circ_table_arctan_128E[*]_RAW_1_4_#20",
+                "variable_id": "V_0x0x1e2b1243b80_[?(?,128)]",
+                "variable_name": "_ZN14cordic_apfixed21circ_table_arctan_128E[*]",
+                "declaration": "[128 x %struct.ap_fixed.18]* _ZN14cordic_apfixed21circ_table_arctan_128E",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 128,
+                "metrics": {
+                    "volume": 28672,
+                    "channel_rate": 1.103618167821401E1
+                },
+                "source": "1",
+                "sink": "4"
+            },
+            "in4_imag_buffer_RAW_3_5_#21": {
+                "name": "in4_imag_buffer_RAW_3_5_#21",
+                "variable_id": "VId_9660_!c?(?,?)",
+                "variable_name": "in4_imag_buffer",
+                "declaration": "fxd_16_1_t in4_imag_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 64,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "in4_real_buffer_RAW_3_5_#22": {
+                "name": "in4_real_buffer_RAW_3_5_#22",
+                "variable_id": "VId_9659_!c?(?,?)",
+                "variable_name": "in4_real_buffer",
+                "declaration": "fxd_16_1_t in4_real_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 63,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "in3_imag_buffer_RAW_3_5_#23": {
+                "name": "in3_imag_buffer_RAW_3_5_#23",
+                "variable_id": "VId_9658_!c?(?,?)",
+                "variable_name": "in3_imag_buffer",
+                "declaration": "fxd_16_1_t in3_imag_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 62,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "in3_real_buffer_RAW_3_5_#24": {
+                "name": "in3_real_buffer_RAW_3_5_#24",
+                "variable_id": "VId_9657_!c?(?,?)",
+                "variable_name": "in3_real_buffer",
+                "declaration": "fxd_16_1_t in3_real_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 61,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "in2_imag_buffer_RAW_3_5_#25": {
+                "name": "in2_imag_buffer_RAW_3_5_#25",
+                "variable_id": "VId_9656_!c?(?,?)",
+                "variable_name": "in2_imag_buffer",
+                "declaration": "fxd_16_1_t in2_imag_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 60,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "in2_real_buffer_RAW_3_5_#26": {
+                "name": "in2_real_buffer_RAW_3_5_#26",
+                "variable_id": "VId_9655_!c?(?,?)",
+                "variable_name": "in2_real_buffer",
+                "declaration": "fxd_16_1_t in2_real_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 59,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "in1_imag_buffer_RAW_3_5_#27": {
+                "name": "in1_imag_buffer_RAW_3_5_#27",
+                "variable_id": "VId_9654_!c?(?,?)",
+                "variable_name": "in1_imag_buffer",
+                "declaration": "fxd_16_1_t in1_imag_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 58,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "in1_real_buffer_RAW_3_5_#28": {
+                "name": "in1_real_buffer_RAW_3_5_#28",
+                "variable_id": "VId_9653_!c?(?,?)",
+                "variable_name": "in1_real_buffer",
+                "declaration": "fxd_16_1_t in1_real_buffer",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 57,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "w1_real_RAW_4_5_#29": {
+                "name": "w1_real_RAW_4_5_#29",
+                "variable_id": "VId_9261_!c?(?,?)",
+                "variable_name": "w1_real",
+                "declaration": "fxd_16_1_t w1_real",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 73,
+                    "column": 16
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "w1_imag_RAW_4_5_#30": {
+                "name": "w1_imag_RAW_4_5_#30",
+                "variable_id": "VId_9262_!c?(?,?)",
+                "variable_name": "w1_imag",
+                "declaration": "fxd_16_1_t w1_imag",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 74,
+                    "column": 16
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "w2_real_RAW_4_5_#31": {
+                "name": "w2_real_RAW_4_5_#31",
+                "variable_id": "VId_9263_!c?(?,?)",
+                "variable_name": "w2_real",
+                "declaration": "fxd_16_1_t w2_real",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 75,
+                    "column": 16
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "w2_imag_RAW_4_5_#32": {
+                "name": "w2_imag_RAW_4_5_#32",
+                "variable_id": "VId_9264_!c?(?,?)",
+                "variable_name": "w2_imag",
+                "declaration": "fxd_16_1_t w2_imag",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 76,
+                    "column": 16
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "w3_real_RAW_4_5_#33": {
+                "name": "w3_real_RAW_4_5_#33",
+                "variable_id": "VId_9265_!c?(?,?)",
+                "variable_name": "w3_real",
+                "declaration": "fxd_16_1_t w3_real",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 77,
+                    "column": 16
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "w3_imag_RAW_4_5_#34": {
+                "name": "w3_imag_RAW_4_5_#34",
+                "variable_id": "VId_9266_!c?(?,?)",
+                "variable_name": "w3_imag",
+                "declaration": "fxd_16_1_t w3_imag",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 78,
+                    "column": 16
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "w4_real_RAW_4_5_#35": {
+                "name": "w4_real_RAW_4_5_#35",
+                "variable_id": "VId_9267_!c?(?,?)",
+                "variable_name": "w4_real",
+                "declaration": "fxd_16_1_t w4_real",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 79,
+                    "column": 16
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "w4_imag_RAW_4_5_#36": {
+                "name": "w4_imag_RAW_4_5_#36",
+                "variable_id": "VId_9268_!c?(?,?)",
+                "variable_name": "w4_imag",
+                "declaration": "fxd_16_1_t w4_imag",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 80,
+                    "column": 16
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "out_real.Handle_RAW_5_2_#37": {
+                "name": "out_real.Handle_RAW_5_2_#37",
+                "variable_id": "VId_9245_*0(0,64)arg.A0(0,64)",
+                "variable_name": "out_real.Handle",
+                "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 27,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "5",
+                "sink": "2"
+            },
+            "out_imag.Handle_RAW_5_2_#38": {
+                "name": "out_imag.Handle_RAW_5_2_#38",
+                "variable_id": "VId_9246_*0(0,64)arg.A0(0,64)",
+                "variable_name": "out_imag.Handle",
+                "declaration": "ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> *stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>::Handle",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 16,
+                "src_loc": {
+                    "file": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
+                    "line": 28,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 16,
+                    "channel_rate": 6.158583525789068E-3
+                },
+                "source": "5",
+                "sink": "2"
+            }
+        },
+        "control": [
+            {
+                "source": "3",
+                "sink": "4"
+            },
+            {
+                "source": "4",
+                "sink": "5"
+            },
+            {
+                "source": "1",
+                "sink": "3"
+            },
+            {
+                "source": "5",
+                "sink": "2"
+            }
+        ]
+    }
+]
