@@ -9,12 +9,9 @@ class DelayAndSum(DefaultIP):
 
     Attributes
     ----------
-    
-    # TODO: change range back to pi -pi  again (1 sign, 2 before comma, 8 bit length)
-            in driver and in ip. pi corresponds to 180° not 90°. 
-    
+
     phi: float
-        Steering angle in rad. Takes values from -2pi to 2pi.
+        Steering angle in rad. Takes values from -pi to pi.
         Broadside steering is 90°. 
 
     fc: float
@@ -42,33 +39,27 @@ class DelayAndSum(DefaultIP):
     
     __PHI_OFFSET = 0x10
     __PHI_N_WORD = 8
-    __PHI_DTYPE = 'fxp-s8/4'
-    __PHI_UNIT = 'rad'
+    __PHI_DTYPE = 'fxp-s8/5'
     
     __FC_OFFSET = 0x18
     __FC_N_WORD = 32
     __FC_DTYPE = 'fxp-s32/16'
-    __FC_UNIT = 'MHz'
     
     __XPOS1_OFFSET = 0x20
     __XPOS1_N_WORD = 32
     __XPOS1_DTYPE = 'fxp-s32/16'
-    __XPOS1_UNIT = 'mm'
     
     __XPOS2_OFFSET = 0x28
     __XPOS2_N_WORD = 32
     __XPOS2_DTYPE = 'fxp-s32/16'
-    __XPOS2_UNIT = 'mm'
     
     __XPOS3_OFFSET = 0x30
     __XPOS3_N_WORD = 32
     __XPOS3_DTYPE = 'fxp-s32/16'
-    __XPOS3_UNIT = 'mm'
     
     __XPOS4_OFFSET = 0x38
     __XPOS4_N_WORD = 32
     __XPOS4_DTYPE = 'fxp-s32/16'
-    __XPOS4_UNIT = 'mm'
     
     def get_phi(self):
         _value = self.read(self.__PHI_OFFSET)
