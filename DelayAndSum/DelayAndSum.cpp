@@ -3,8 +3,8 @@
 #include <atomic>
 
 void DelayAndSum(
-    // in rad -- -2pi to 2pi
-    fxd_8_4_t *phi,
+    // in rad -- -pi to pi
+    fxd_8_3_t *phi,
     
     // in MHz
     fxd_32_16_t *fc,
@@ -63,7 +63,7 @@ void DelayAndSum(
     fxd_16_1_t in4_real_buffer = in4_real.read();
     fxd_16_1_t in4_imag_buffer = in4_imag.read();
 
-    fxd_8_4_t phi_buffer = *phi;
+    fxd_8_3_t phi_buffer = *phi;
     fxd_32_16_t fc_buffer = *fc;
     fxd_32_16_t xpos1_buffer = *xpos1;
     fxd_32_16_t xpos2_buffer = *xpos2;

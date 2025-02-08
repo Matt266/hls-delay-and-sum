@@ -1,6 +1,6 @@
-INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlsrun_csim_summary, at 02/07/25 15:36:59
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlsrun_csim_summary, at 02/08/25 08:05:36
 INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum -config C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg -cmdlineconfig C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline
-INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Fri Feb 07 15:37:05 +0100 2025
+INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Sat Feb 08 08:05:39 +0100 2025
 INFO: [HLS 200-10] In directory 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum'
 INFO: [HLS 200-2005] Using work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
@@ -51,5 +51,5 @@ INFO: [SIM 211-200] Analyzing trace data
 INFO: [SIM 211-208] Running Code Analyzer
 WARNING: [SIM 211-207] Code Analyzer does not display the impact of the pipeline pragma in dataflow regions (:0:0)
 INFO: [SIM 211-210] Code Analyzer finished
-INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 118.121 seconds; peak allocated memory: 231.426 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 2m 3s
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 102.86 seconds; peak allocated memory: 230.676 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 1m 47s
