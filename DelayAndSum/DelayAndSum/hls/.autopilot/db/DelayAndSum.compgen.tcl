@@ -6,26 +6,26 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name DelayAndSum_mul_63s_6s_68_3_1
+set name DelayAndSum_mul_63s_7s_69_3_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
-set name DelayAndSum_mul_68s_32s_84_3_1
+set name DelayAndSum_mul_69s_32s_85_3_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
-set name DelayAndSum_mul_8ns_14ns_21_1_1
+set name DelayAndSum_mul_8ns_13ns_20_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_sparsemux_9_3_6_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
+	::AP::rtl_comp_handler DelayAndSum_sparsemux_9_3_7_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
 }
 
 
@@ -47,7 +47,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_mac_muladd_8ns_4ns_10ns_10_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+	::AP::rtl_comp_handler DelayAndSum_mac_muladd_8ns_3ns_10ns_10_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 

@@ -786,7 +786,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8cf8a342</spirit:value>
+            <spirit:value>8089e596</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -802,7 +802,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a36176f4</spirit:value>
+            <spirit:value>d0756a34</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -818,7 +818,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>01fdb4b9</spirit:value>
+            <spirit:value>d3331cf3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -834,7 +834,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e64420bb</spirit:value>
+            <spirit:value>b88de9a7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1650,7 +1650,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/DelayAndSum_mac_muladd_8ns_4ns_10ns_10_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/DelayAndSum_mac_muladd_8ns_3ns_10ns_10_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1670,7 +1670,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/DelayAndSum_mul_8ns_14ns_21_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/DelayAndSum_mul_8ns_13ns_20_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1686,11 +1686,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/DelayAndSum_mul_63s_6s_68_3_1.v</spirit:name>
+        <spirit:name>hdl/verilog/DelayAndSum_mul_63s_7s_69_3_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/DelayAndSum_mul_68s_32s_84_3_1.v</spirit:name>
+        <spirit:name>hdl/verilog/DelayAndSum_mul_69s_32s_85_3_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1702,7 +1702,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/DelayAndSum_sparsemux_9_3_6_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/DelayAndSum_sparsemux_9_3_7_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1738,7 +1738,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/DelayAndSum_mac_muladd_8ns_4ns_10ns_10_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/DelayAndSum_mac_muladd_8ns_3ns_10ns_10_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1763,7 +1763,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/DelayAndSum_mul_8ns_14ns_21_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/DelayAndSum_mul_8ns_13ns_20_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1783,12 +1783,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/DelayAndSum_mul_63s_6s_68_3_1.v</spirit:name>
+        <spirit:name>hdl/verilog/DelayAndSum_mul_63s_7s_69_3_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/DelayAndSum_mul_68s_32s_84_3_1.v</spirit:name>
+        <spirit:name>hdl/verilog/DelayAndSum_mul_69s_32s_85_3_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1803,7 +1803,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/DelayAndSum_sparsemux_9_3_6_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/DelayAndSum_sparsemux_9_3_7_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1833,7 +1833,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/DelayAndSum_mac_muladd_8ns_4ns_10ns_10_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/DelayAndSum_mac_muladd_8ns_3ns_10ns_10_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1853,7 +1853,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/DelayAndSum_mul_8ns_14ns_21_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/DelayAndSum_mul_8ns_13ns_20_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1869,11 +1869,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/DelayAndSum_mul_63s_6s_68_3_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/DelayAndSum_mul_63s_7s_69_3_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/DelayAndSum_mul_68s_32s_84_3_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/DelayAndSum_mul_69s_32s_85_3_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1885,13 +1885,13 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/DelayAndSum_sparsemux_9_3_6_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/DelayAndSum_sparsemux_9_3_7_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/DelayAndSum.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_8dae6dd0</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f48391fe</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1912,7 +1912,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/DelayAndSum_mac_muladd_8ns_4ns_10ns_10_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/DelayAndSum_mac_muladd_8ns_3ns_10ns_10_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1937,7 +1937,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/DelayAndSum_mul_8ns_14ns_21_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/DelayAndSum_mul_8ns_13ns_20_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1957,12 +1957,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/DelayAndSum_mul_63s_6s_68_3_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/DelayAndSum_mul_63s_7s_69_3_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/DelayAndSum_mul_68s_32s_84_3_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/DelayAndSum_mul_69s_32s_85_3_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1977,7 +1977,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/DelayAndSum_sparsemux_9_3_6_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/DelayAndSum_sparsemux_9_3_7_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2099,8 +2099,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>DelayAndSum</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113944822</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-02-07T14:42:49Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113945811</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-02-08T07:11:50Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -2110,7 +2110,7 @@
       <xilinx:xilinxVersion>2024.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3f42537c"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ef0c872e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="be316569"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5b3b3632"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="736aa432"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="383b71cc"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="da0244fa"/>

@@ -1,7 +1,7 @@
 <root versionMajor = "1" versionMinor = "5">
   <kernel src_name="DelayAndSum" language="c" hwCtrl="ap_ctrl_none" mem_layout="fpga64-xilinx-none">
     <args>
-      <arg id="0" access_type="r" src_name="phi" src_type="ap_fixed&lt;8, 4, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
+      <arg id="0" access_type="r" src_name="phi" src_type="ap_fixed&lt;8, 3, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="8" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16"/>
         </hw>
