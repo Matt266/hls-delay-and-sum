@@ -29,7 +29,7 @@
       "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
       "-fhls-tb",
       "-hls-sim-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\include",
-      "",
+      "-DALLOW_EMPTY_HLS_STREAM_READS",
       "-c",
       "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSumTB.cpp"
     ],

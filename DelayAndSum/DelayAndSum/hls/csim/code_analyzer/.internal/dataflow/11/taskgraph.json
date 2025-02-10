@@ -1382,7 +1382,7 @@
                         },
                         {
                             "variable": {
-                                "id": "V_0x0x14d694d3de0_[?(?,128)]",
+                                "id": "V_0x0x26e8a935460_[?(?,128)]",
                                 "name": "_ZN14cordic_apfixed21circ_table_arctan_128E[*]",
                                 "display_name": "[128 x %struct.ap_fixed.18]* _ZN14cordic_apfixed21circ_table_arctan_128E"
                             },
@@ -2622,7 +2622,7 @@
             },
             "_ZN14cordic_apfixed21circ_table_arctan_128E[*]_RAW_1_4_#20": {
                 "name": "_ZN14cordic_apfixed21circ_table_arctan_128E[*]_RAW_1_4_#20",
-                "variable_id": "V_0x0x14d694d3de0_[?(?,128)]",
+                "variable_id": "V_0x0x26e8a935460_[?(?,128)]",
                 "variable_name": "_ZN14cordic_apfixed21circ_table_arctan_128E[*]",
                 "declaration": "[128 x %struct.ap_fixed.18]* _ZN14cordic_apfixed21circ_table_arctan_128E",
                 "kind": "Ptr",
