@@ -1127,15 +1127,8 @@ extern "C" {
 }
 # 1573 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/stdio.h" 2 3
 # 5 "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp" 2
-# 1 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h" 1
-
-
-
-
-
-
-
-
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h" 1
+# 10 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h"
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h" 1
 # 41 "C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h"
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_decl.h" 1
@@ -49004,11 +48997,7 @@ inline half rawBitsToHalf(unsigned short pi) {
   return __D;
 
 }
-# 10 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h" 2
-# 1 "C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_fixed_base.h" 1
-# 16 "C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_fixed_base.h"
-# 1 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h" 1
-# 11 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h"
+# 11 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h" 2
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_int_base.h" 1
 # 21 "C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_int_base.h"
 #pragma GCC diagnostic push
@@ -51789,6 +51778,18 @@ inline bool operator!=(const ap_int<_AP_W> &__x, const complex<ap_int<_AP_W> > &
 
 }
 # 353 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h" 2
+
+
+
+
+
+
+
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h" 1
+# 10 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h"
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_fixed_base.h" 1
+# 16 "C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_fixed_base.h"
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h" 1
 # 17 "C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_fixed_base.h" 2
 # 32 "C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_fixed_base.h"
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/cfenv" 1 3
@@ -54977,7 +54978,9 @@ inline bool operator!=(
 
 }
 # 366 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_fixed.h" 2
+# 361 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h" 2
 # 6 "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp" 2
+
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/include/hls_stream.h" 1
 # 22 "C:/Xilinx/Vitis_HLS/2024.1/include/hls_stream.h"
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/queue" 1 3
@@ -77567,7 +77570,190 @@ public:
 };
 
 }
-# 7 "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp" 2
+# 8 "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp" 2
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_axi_sdata.h" 1
+# 15 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_axi_sdata.h"
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h" 1
+# 16 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_axi_sdata.h" 2
+
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/cassert" 1 3
+# 42 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/cassert" 3
+
+
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/assert.h" 1 3
+# 45 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/cassert" 2 3
+# 18 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_axi_sdata.h" 2
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/climits" 1 3
+# 40 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/climits" 3
+# 19 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_axi_sdata.h" 2
+
+
+
+
+
+
+
+
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
+struct ap_fixed;
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
+struct ap_ufixed;
+
+namespace hls {
+
+template <typename T> constexpr std::size_t bitwidth = sizeof(T) * 8;
+
+template <> constexpr static std::size_t bitwidth<void> = 1 * 8;
+
+
+
+
+template <std::size_t W> constexpr std::size_t bitwidth<ap_int<W>> = W;
+template <std::size_t W> constexpr std::size_t bitwidth<ap_uint<W>> = W;
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
+constexpr std::size_t bitwidth<ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>> =
+    _AP_W;
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
+constexpr std::size_t bitwidth<ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>> =
+    _AP_W;
+
+template <typename T>
+constexpr std::size_t bytewidth = (bitwidth<T> + 8 - 1) / 8;
+
+template <> constexpr static std::size_t bytewidth<void> = 1;
+
+
+
+
+struct axis_disabled_signal {};
+# 93 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_axi_sdata.h"
+template <typename T, std::size_t WUser = 0, std::size_t WId = 0,
+          std::size_t WDest = 0,
+          uint8_t EnableSignals =
+              (0b00001000 | 0b00010000 | 0b00100000),
+          bool StrictEnablement = false>
+struct axis {
+  static_assert((EnableSignals & 0b10000000) == 0,
+                "Template parameter 'EnableSignals' is invalid only "
+                "low 7 bits can be set!");
+  friend class stream<
+      axis<T, WUser, WId, WDest, EnableSignals, StrictEnablement>>;
+
+  static constexpr bool has_data = !std::is_void<T>::value;
+  static constexpr bool has_user = WUser > 0;
+  static constexpr bool has_id = WId > 0;
+  static constexpr bool has_dest = WDest > 0;
+  static constexpr bool has_keep = EnableSignals & 0b00001000;
+  static constexpr bool has_strb = EnableSignals & 0b00100000;
+  static constexpr bool has_last = EnableSignals & 0b00010000;
+
+  static constexpr std::size_t width_user = has_user ? WUser : 1;
+  static constexpr std::size_t width_id = has_id ? WId : 1;
+  static constexpr std::size_t width_dest = has_dest ? WDest : 1;
+  static constexpr std::size_t width_keep = bytewidth<T>;
+  static constexpr std::size_t width_strb = bytewidth<T>;
+  static constexpr std::size_t width_last = 1;
+
+  static_assert(has_data || has_user || has_id || has_dest || has_keep ||
+                    has_strb || has_last,
+                "No axis signals are enabled");
+
+  static_assert(StrictEnablement
+                    ? has_data == (bool)(EnableSignals & 0b00000001)
+                    : true,
+                "Found mismatched enablement for DATA signal");
+  static_assert(StrictEnablement
+                    ? has_user == (bool)(EnableSignals & 0b01000000)
+                    : true,
+                "Found mismatched enablement for USER signal");
+  static_assert(StrictEnablement
+                    ? has_id == (bool)(EnableSignals & 0b00000100)
+                    : true,
+                "Found mismatched enablement for ID signal");
+  static_assert(StrictEnablement
+                    ? has_dest == (bool)(EnableSignals & 0b00000010)
+                    : true,
+                "Found mismatched enablement for DEST signal");
+
+  typedef typename std::conditional<has_data, T, axis_disabled_signal>::type
+      Type_data;
+  Type_data data;
+# 176 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_axi_sdata.h"
+  Type_data get_data() const {
+    if (!has_data)
+      throw std::runtime_error("CHAN_NAME is not enabled");
+    return data;
+  }
+  void set_data(Type_data d) {
+    if (!has_data)
+      throw std::runtime_error("CHAN_NAME is not enabled");
+    data = d;
+  }
+# 205 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_axi_sdata.h"
+  typedef typename std::conditional<has_keep, ap_uint<width_keep>, axis_disabled_signal>::type Type_keep; Type_keep keep; Type_keep get_keep() const { if (!has_keep) throw std::runtime_error("CHAN_NAME is not enabled"); return keep; } void set_keep(Type_keep value) { if (!has_keep) throw std::runtime_error("CHAN_NAME is not enabled"); keep = value; }
+  typedef typename std::conditional<has_strb, ap_uint<width_strb>, axis_disabled_signal>::type Type_strb; Type_strb strb; Type_strb get_strb() const { if (!has_strb) throw std::runtime_error("CHAN_NAME is not enabled"); return strb; } void set_strb(Type_strb value) { if (!has_strb) throw std::runtime_error("CHAN_NAME is not enabled"); strb = value; }
+  typedef typename std::conditional<has_user, ap_uint<width_user>, axis_disabled_signal>::type Type_user; Type_user user; Type_user get_user() const { if (!has_user) throw std::runtime_error("CHAN_NAME is not enabled"); return user; } void set_user(Type_user value) { if (!has_user) throw std::runtime_error("CHAN_NAME is not enabled"); user = value; }
+  typedef typename std::conditional<has_last, ap_uint<width_last>, axis_disabled_signal>::type Type_last; Type_last last; Type_last get_last() const { if (!has_last) throw std::runtime_error("CHAN_NAME is not enabled"); return last; } void set_last(Type_last value) { if (!has_last) throw std::runtime_error("CHAN_NAME is not enabled"); last = value; }
+  typedef typename std::conditional<has_id, ap_uint<width_id>, axis_disabled_signal>::type Type_id; Type_id id; Type_id get_id() const { if (!has_id) throw std::runtime_error("CHAN_NAME is not enabled"); return id; } void set_id(Type_id value) { if (!has_id) throw std::runtime_error("CHAN_NAME is not enabled"); id = value; }
+  typedef typename std::conditional<has_dest, ap_uint<width_dest>, axis_disabled_signal>::type Type_dest; Type_dest dest; Type_dest get_dest() const { if (!has_dest) throw std::runtime_error("CHAN_NAME is not enabled"); return dest; } void set_dest(Type_dest value) { if (!has_dest) throw std::runtime_error("CHAN_NAME is not enabled"); dest = value; }
+
+
+
+
+
+
+  void keep_all() {
+#pragma HLS inline
+
+
+
+    if (!has_data)
+      throw std::runtime_error("CHAN_NAME is not enabled");
+
+    ap_uint<width_keep> k = 0;
+    keep = ~k;
+  }
+
+private:
+# 246 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_axi_sdata.h"
+};
+# 258 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_axi_sdata.h"
+template <typename TData, uint8_t EnableSignals = 0b00000001,
+          std::size_t WUser = 0, std::size_t WId = 0, std::size_t WDest = 0,
+          bool StrictEnablement = true>
+using axis_data = axis<TData, WUser, WId, WDest,
+                       (EnableSignals | 0b00000001), StrictEnablement>;
+# 271 "C:/Xilinx/Vitis_HLS/2024.1/include/ap_axi_sdata.h"
+template <std::size_t WUser, uint8_t EnableSignals = 0b01000000,
+          std::size_t WId = 0, std::size_t WDest = 0,
+          bool StrictEnablement = true>
+using axis_user = axis<void, WUser, WId, WDest,
+                       (EnableSignals & (0b11111111 ^ 0b00000001) & (0b11111111 ^ 0b00001000) & (0b11111111 ^ 0b00100000)), StrictEnablement>;
+
+}
+
+template <std::size_t WData, std::size_t WUser, std::size_t WId,
+          std::size_t WDest,
+          uint8_t EnableSignals =
+              (0b00001000 | 0b00010000 | 0b00100000),
+          bool StrictEnablement = false>
+using ap_axis = hls::axis<ap_int<WData>, WUser, WId, WDest, EnableSignals,
+                          StrictEnablement>;
+
+template <std::size_t WData, std::size_t WUser, std::size_t WId,
+          std::size_t WDest,
+          uint8_t EnableSignals =
+              (0b00001000 | 0b00010000 | 0b00100000),
+          bool StrictEnablement = false>
+using ap_axiu = hls::axis<ap_uint<WData>, WUser, WId, WDest, EnableSignals,
+                          StrictEnablement>;
+
+
+template <std::size_t WData, std::size_t WUser, std::size_t WId,
+          std::size_t WDest>
+using qdma_axis = hls::axis<ap_uint<WData>, WUser, WId, WDest,
+                            0b01111111 ^ 0b00100000, false>;
+# 9 "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp" 2
 
 
 
@@ -77577,7 +77763,17 @@ typedef ap_fixed<8,3> fxd_8_3_t;
 typedef ap_fixed<16,1> fxd_16_1_t;
 typedef ap_fixed<32,16> fxd_32_16_t;
 
+
+
+typedef ap_uint<26> uint_26_t;
+typedef hls::axis<fxd_16_1_t, 0, 0, 0, (0b00000001 | 0b00010000), true> fxd_16_1_pkt_t;
+
 void DelayAndSum(
+
+
+
+    uint_26_t *axis_packet_size,
+
 
     fxd_8_3_t *phi,
 
@@ -77599,8 +77795,8 @@ void DelayAndSum(
     hls::stream<fxd_16_1_t> &in3_imag,
     hls::stream<fxd_16_1_t> &in4_real,
     hls::stream<fxd_16_1_t> &in4_imag,
-    hls::stream<fxd_16_1_t> &out_real,
-    hls::stream<fxd_16_1_t> &out_imag
+    hls::stream<fxd_16_1_pkt_t> &out_real,
+    hls::stream<fxd_16_1_pkt_t> &out_imag
 );
 # 2 "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp" 2
 # 1 "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/CalculateWeights.hpp" 1
@@ -77637,6 +77833,12 @@ void CalculateWeights(
 
 void DelayAndSum(
 
+
+
+
+    uint_26_t *axis_packet_size,
+
+
     fxd_8_3_t *phi,
 
 
@@ -77657,8 +77859,8 @@ void DelayAndSum(
     hls::stream<fxd_16_1_t> &in3_imag,
     hls::stream<fxd_16_1_t> &in4_real,
     hls::stream<fxd_16_1_t> &in4_imag,
-    hls::stream<fxd_16_1_t> &out_real,
-    hls::stream<fxd_16_1_t> &out_imag
+    hls::stream<fxd_16_1_pkt_t> &out_real,
+    hls::stream<fxd_16_1_pkt_t> &out_imag
 ){
 #pragma HLS top name=DelayAndSum
 #pragma HLS interface mode=ap_ctrl_none port=return
@@ -77678,6 +77880,7 @@ void DelayAndSum(
 #pragma HLS INTERFACE mode=axis port=out_imag
 
 
+#pragma HLS INTERFACE mode=s_axilite port=axis_packet_size
 #pragma HLS INTERFACE mode=s_axilite port=phi
 #pragma HLS INTERFACE mode=s_axilite port=fc
 #pragma HLS INTERFACE mode=s_axilite port=xpos1
@@ -77696,6 +77899,7 @@ void DelayAndSum(
     fxd_16_1_t in4_real_buffer = in4_real.read();
     fxd_16_1_t in4_imag_buffer = in4_imag.read();
 
+    uint_26_t axis_packet_size_buffer = *axis_packet_size;
     fxd_8_3_t phi_buffer = *phi;
     fxd_32_16_t fc_buffer = *fc;
     fxd_32_16_t xpos1_buffer = *xpos1;
@@ -77715,30 +77919,57 @@ void DelayAndSum(
     CalculateWeights(phi_buffer, fc_buffer, xpos1_buffer, xpos2_buffer, xpos3_buffer, xpos4_buffer,
                 w1_real, w1_imag, w2_real, w2_imag, w3_real, w3_imag, w4_real, w4_imag);
 
+    fxd_16_1_pkt_t out_real_pkt;
+    fxd_16_1_pkt_t out_imag_pkt;
 
 
 
 
-    out_real << (in1_real_buffer * w1_real + in1_imag_buffer * w1_imag
+
+
+    out_real_pkt.data = (in1_real_buffer * w1_real + in1_imag_buffer * w1_imag
                 +in2_real_buffer * w2_real + in2_imag_buffer * w2_imag
                 +in3_real_buffer * w3_real + in3_imag_buffer * w3_imag
                 +in4_real_buffer * w4_real + in4_imag_buffer * w4_imag);
-
-    out_imag << (in1_imag_buffer * w1_real - in1_real_buffer * w1_imag
+    out_imag_pkt.data = (in1_imag_buffer * w1_real - in1_real_buffer * w1_imag
                 +in2_imag_buffer * w2_real - in2_real_buffer * w2_imag
                 +in3_imag_buffer * w3_real - in3_real_buffer * w3_imag
                 +in4_imag_buffer * w4_real - in4_real_buffer * w4_imag);
+
+
+    static uint_26_t count = 0;
+
+    if(axis_packet_size_buffer == 0){
+
+        count = 0;
+        out_real_pkt.last = false;
+        out_imag_pkt.last = false;
+    } else{
+
+        if(count < (axis_packet_size_buffer-1)){
+            count = count + 1;
+            out_real_pkt.last[0] = false;
+            out_imag_pkt.last[0] = false;
+        } else{
+            count = 0;
+            out_real_pkt.last[0] = true;
+            out_imag_pkt.last[0] = true;
+        }
+    }
+
+    out_real.write(out_real_pkt);
+    out_imag.write(out_imag_pkt);
 }
 #ifndef HLS_FASTSIM
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_DelayAndSum_ir(ap_fixed<8, 3, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &);
+void apatb_DelayAndSum_ir(ap_uint<26> *, ap_fixed<8, 3, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<hls::axis<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0, '\x11', true>, 0> &, hls::stream<hls::axis<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0, '\x11', true>, 0> &);
 #ifdef __cplusplus
 extern "C"
 #endif
-void DelayAndSum_hw_stub(ap_fixed<8, 3, AP_TRN, AP_WRAP, 0> *phi, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *fc, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos1, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos2, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos3, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos4, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in1_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in1_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in2_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in2_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in3_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in3_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in4_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in4_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &out_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &out_imag){
-DelayAndSum(phi, fc, xpos1, xpos2, xpos3, xpos4, in1_real, in1_imag, in2_real, in2_imag, in3_real, in3_imag, in4_real, in4_imag, out_real, out_imag);
+void DelayAndSum_hw_stub(ap_uint<26> *axis_packet_size, ap_fixed<8, 3, AP_TRN, AP_WRAP, 0> *phi, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *fc, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos1, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos2, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos3, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos4, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in1_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in1_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in2_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in2_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in3_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in3_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in4_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in4_imag, hls::stream<hls::axis<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0, '\x11', true>, 0> &out_real, hls::stream<hls::axis<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0, '\x11', true>, 0> &out_imag){
+DelayAndSum(axis_packet_size, phi, fc, xpos1, xpos2, xpos3, xpos4, in1_real, in1_imag, in2_real, in2_imag, in3_real, in3_imag, in4_real, in4_imag, out_real, out_imag);
 return ;
 }
 #ifdef __cplusplus
@@ -77748,11 +77979,11 @@ void refine_signal_handler();
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_DelayAndSum_sw(ap_fixed<8, 3, AP_TRN, AP_WRAP, 0> *phi, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *fc, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos1, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos2, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos3, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos4, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in1_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in1_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in2_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in2_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in3_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in3_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in4_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in4_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &out_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &out_imag){
+void apatb_DelayAndSum_sw(ap_uint<26> *axis_packet_size, ap_fixed<8, 3, AP_TRN, AP_WRAP, 0> *phi, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *fc, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos1, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos2, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos3, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *xpos4, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in1_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in1_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in2_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in2_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in3_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in3_imag, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in4_real, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &in4_imag, hls::stream<hls::axis<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0, '\x11', true>, 0> &out_real, hls::stream<hls::axis<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0, '\x11', true>, 0> &out_imag){
 refine_signal_handler();
-apatb_DelayAndSum_ir(phi, fc, xpos1, xpos2, xpos3, xpos4, in1_real, in1_imag, in2_real, in2_imag, in3_real, in3_imag, in4_real, in4_imag, out_real, out_imag);
+apatb_DelayAndSum_ir(axis_packet_size, phi, fc, xpos1, xpos2, xpos3, xpos4, in1_real, in1_imag, in2_real, in2_imag, in3_real, in3_imag, in4_real, in4_imag, out_real, out_imag);
 return ;
 }
 #endif
-# 98 "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp"
+# 133 "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.cpp"
 

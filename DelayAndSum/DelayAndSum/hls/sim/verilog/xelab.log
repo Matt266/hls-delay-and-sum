@@ -117,6 +117,7 @@ Compiling module xil_defaultlib.AESL_axi_s_in3_real
 Compiling module xil_defaultlib.AESL_axi_s_in3_imag
 Compiling module xil_defaultlib.AESL_axi_s_in4_real
 Compiling module xil_defaultlib.AESL_axi_s_in4_imag
+Compiling module xil_defaultlib.fifo(DEPTH=2,WIDTH=1)
 Compiling module xil_defaultlib.AESL_axi_s_out_real
 Compiling module xil_defaultlib.AESL_axi_s_out_imag
 Compiling module xil_defaultlib.AESL_axi_slave_control

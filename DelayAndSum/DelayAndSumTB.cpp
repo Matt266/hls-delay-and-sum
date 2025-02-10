@@ -1,6 +1,7 @@
 #include "TestData.hpp"
 #include "DelayAndSum.hpp"
 #include "CalculateWeights.hpp"
+#include <cstdint>
 
 constexpr double pi = 3.14159265359;
 
@@ -12,9 +13,12 @@ hls::stream<fxd_16_1_t> in3_real;
 hls::stream<fxd_16_1_t> in3_imag;
 hls::stream<fxd_16_1_t> in4_real;
 hls::stream<fxd_16_1_t> in4_imag;
-hls::stream<fxd_16_1_t> out_real;
-hls::stream<fxd_16_1_t> out_imag;
+hls::stream<fxd_16_1_pkt_t> out_real;
+hls::stream<fxd_16_1_pkt_t> out_imag;
+fxd_16_1_pkt_t out_real_pkt;
+fxd_16_1_pkt_t out_imag_pkt;
 
+uint_26_t axis_packet_size = 5;
 fxd_8_3_t phi = 70 * 2*pi/360; // in rad
 fxd_32_16_t fc = 3750; // in MHz
 fxd_32_16_t xpos1 = -60; // mm
@@ -27,6 +31,7 @@ fxd_16_1_t outputs_imag[NUM_ANGLES];
 
 int main(){
     int ret = 0;
+
     for(unsigned int i = 0; i < NUM_ANGLES; i++){
 
         in1_real << inputs_real[i][0];
@@ -38,7 +43,12 @@ int main(){
         in4_real << inputs_real[i][3];
         in4_imag << inputs_imag[i][3];
 
+        if(i >= NUM_ANGLES/2){
+            axis_packet_size = 0;
+        }
+
         DelayAndSum(
+            &axis_packet_size,
             &phi,
             &fc,
             &xpos1,
@@ -57,8 +67,10 @@ int main(){
             out_imag
         );
 
-        out_real >> outputs_real[i];
-        out_imag >> outputs_imag[i];
+        out_real >> out_real_pkt;
+        out_imag >> out_imag_pkt;
+        outputs_real[i] = out_real_pkt.data;
+        outputs_imag[i] = out_imag_pkt.data;
     }
 
     // margin slightly (10%) larger than machine epsilon (precision of used datatype)

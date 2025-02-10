@@ -12,13 +12,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0ns"></ZoomStartTime>
-      <ZoomEndTime time="2000ns"></ZoomEndTime>
-      <Cursor1Time time="0ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,154.184 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="257"></NameColumnWidth>
-      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
    <wvobject fp_name="HLS Process Summary Group" type="group">
@@ -34,6 +34,13 @@
          <wvobject fp_name="group4" type="group">
             <obj_property name="label">return(axis)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/out_imag_TLAST" type="array">
+               <obj_property name="ElementShortName">out_imag_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">out_imag_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
             <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/out_imag_TREADY" type="logic">
                <obj_property name="ElementShortName">out_imag_TREADY</obj_property>
                <obj_property name="ObjectShortName">out_imag_TREADY</obj_property>
@@ -49,6 +56,13 @@
             <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/out_imag_TDATA" type="array">
                <obj_property name="ElementShortName">out_imag_TDATA[15:0]</obj_property>
                <obj_property name="ObjectShortName">out_imag_TDATA[15:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/out_real_TLAST" type="array">
+               <obj_property name="ElementShortName">out_real_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">out_real_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/out_real_TREADY" type="logic">
@@ -70,10 +84,10 @@
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group11" type="group">
+      <wvobject fp_name="group13" type="group">
          <obj_property name="label">C Inputs</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group12" type="group">
+         <wvobject fp_name="group14" type="group">
             <obj_property name="label">return(axis)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/in4_imag_TREADY" type="logic">
@@ -213,8 +227,8 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group37" type="group">
-            <obj_property name="label">phi__fc__xpos1__xpos2__xpos3__xpos4(axi_slave)</obj_property>
+         <wvobject fp_name="group39" type="group">
+            <obj_property name="label">axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4(axi_slave)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_BRESP" type="array">
                <obj_property name="ElementShortName">s_axi_control_BRESP[1:0]</obj_property>
@@ -268,8 +282,8 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_ARADDR" type="array">
-               <obj_property name="ElementShortName">s_axi_control_ARADDR[5:0]</obj_property>
-               <obj_property name="ObjectShortName">s_axi_control_ARADDR[5:0]</obj_property>
+               <obj_property name="ElementShortName">s_axi_control_ARADDR[6:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_control_ARADDR[6:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_WSTRB" type="array">
@@ -307,13 +321,13 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_AWADDR" type="array">
-               <obj_property name="ElementShortName">s_axi_control_AWADDR[5:0]</obj_property>
-               <obj_property name="ObjectShortName">s_axi_control_AWADDR[5:0]</obj_property>
+               <obj_property name="ElementShortName">s_axi_control_AWADDR[6:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_control_AWADDR[6:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group55" type="group">
+      <wvobject fp_name="group57" type="group">
          <obj_property name="label">Reset</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/ap_rst_n" type="logic">
@@ -321,7 +335,7 @@
             <obj_property name="ObjectShortName">ap_rst_n</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group57" type="group">
+      <wvobject fp_name="group59" type="group">
          <obj_property name="label">Clock</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/ap_clk" type="logic">

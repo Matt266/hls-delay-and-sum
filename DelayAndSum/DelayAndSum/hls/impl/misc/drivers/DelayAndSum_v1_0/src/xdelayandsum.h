@@ -93,6 +93,8 @@ int XDelayandsum_Release(XDelayandsum *InstancePtr);
 #endif
 
 
+void XDelayandsum_Set_axis_packet_size(XDelayandsum *InstancePtr, u32 Data);
+u32 XDelayandsum_Get_axis_packet_size(XDelayandsum *InstancePtr);
 void XDelayandsum_Set_phi(XDelayandsum *InstancePtr, u32 Data);
 u32 XDelayandsum_Get_phi(XDelayandsum *InstancePtr);
 void XDelayandsum_Set_fc(XDelayandsum *InstancePtr, u32 Data);

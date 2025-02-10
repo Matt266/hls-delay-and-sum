@@ -7,6 +7,7 @@
 // ==============================================================
 
 extern "C" void AESL_WRAP_DelayAndSum (
+volatile void* axis_packet_size,
 volatile void* phi,
 volatile void* fc,
 volatile void* xpos1,
@@ -21,5 +22,5 @@ hls::stream<int > in3_real,
 hls::stream<int > in3_imag,
 hls::stream<int > in4_real,
 hls::stream<int > in4_imag,
-hls::stream<int > out_real,
-hls::stream<int > out_imag);
+hls::stream<struct ap_axis<32, 0, 0, 0 > > (&out_real),
+hls::stream<struct ap_axis<32, 0, 0, 0 > > (&out_imag));

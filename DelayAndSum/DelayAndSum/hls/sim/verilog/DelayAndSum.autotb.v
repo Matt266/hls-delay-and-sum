@@ -19,6 +19,7 @@
 `define AUTOTB_II 1
 `define AUTOTB_LATENCY 34
 
+`define AESL_DEPTH_axis_packet_size 1
 `define AESL_DEPTH_phi 1
 `define AESL_DEPTH_fc 1
 `define AESL_DEPTH_xpos1 1
@@ -33,8 +34,11 @@
 `define AESL_DEPTH_in3_imag 1
 `define AESL_DEPTH_in4_real 1
 `define AESL_DEPTH_in4_imag 1
-`define AESL_DEPTH_out_real 1
-`define AESL_DEPTH_out_imag 1
+`define AESL_DEPTH_out_real_V_data_V 1
+`define AESL_DEPTH_out_real_V_last_V 1
+`define AESL_DEPTH_out_imag_V_data_V 1
+`define AESL_DEPTH_out_imag_V_last_V 1
+`define AUTOTB_TVIN_axis_packet_size  "../tv/cdatafile/c.DelayAndSum.autotvin_axis_packet_size.dat"
 `define AUTOTB_TVIN_phi  "../tv/cdatafile/c.DelayAndSum.autotvin_phi.dat"
 `define AUTOTB_TVIN_fc  "../tv/cdatafile/c.DelayAndSum.autotvin_fc.dat"
 `define AUTOTB_TVIN_xpos1  "../tv/cdatafile/c.DelayAndSum.autotvin_xpos1.dat"
@@ -49,6 +53,7 @@
 `define AUTOTB_TVIN_in3_imag  "../tv/cdatafile/c.DelayAndSum.autotvin_in3_imag.dat"
 `define AUTOTB_TVIN_in4_real  "../tv/cdatafile/c.DelayAndSum.autotvin_in4_real.dat"
 `define AUTOTB_TVIN_in4_imag  "../tv/cdatafile/c.DelayAndSum.autotvin_in4_imag.dat"
+`define AUTOTB_TVIN_axis_packet_size_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_axis_packet_size.dat"
 `define AUTOTB_TVIN_phi_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_phi.dat"
 `define AUTOTB_TVIN_fc_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_fc.dat"
 `define AUTOTB_TVIN_xpos1_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_xpos1.dat"
@@ -63,15 +68,20 @@
 `define AUTOTB_TVIN_in3_imag_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_in3_imag.dat"
 `define AUTOTB_TVIN_in4_real_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_in4_real.dat"
 `define AUTOTB_TVIN_in4_imag_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_in4_imag.dat"
-`define AUTOTB_TVOUT_out_real  "../tv/cdatafile/c.DelayAndSum.autotvout_out_real.dat"
-`define AUTOTB_TVOUT_out_imag  "../tv/cdatafile/c.DelayAndSum.autotvout_out_imag.dat"
-`define AUTOTB_TVOUT_out_real_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvout_out_real.dat"
-`define AUTOTB_TVOUT_out_imag_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvout_out_imag.dat"
+`define AUTOTB_TVOUT_out_real_V_data_V  "../tv/cdatafile/c.DelayAndSum.autotvout_out_real_V_data_V.dat"
+`define AUTOTB_TVOUT_out_real_V_last_V  "../tv/cdatafile/c.DelayAndSum.autotvout_out_real_V_last_V.dat"
+`define AUTOTB_TVOUT_out_imag_V_data_V  "../tv/cdatafile/c.DelayAndSum.autotvout_out_imag_V_data_V.dat"
+`define AUTOTB_TVOUT_out_imag_V_last_V  "../tv/cdatafile/c.DelayAndSum.autotvout_out_imag_V_last_V.dat"
+`define AUTOTB_TVOUT_out_real_V_data_V_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvout_out_real_V_data_V.dat"
+`define AUTOTB_TVOUT_out_real_V_last_V_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvout_out_real_V_last_V.dat"
+`define AUTOTB_TVOUT_out_imag_V_data_V_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvout_out_imag_V_data_V.dat"
+`define AUTOTB_TVOUT_out_imag_V_last_V_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvout_out_imag_V_last_V.dat"
 module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 64;
 parameter PROGRESS_TIMEOUT = 10000000;
 parameter LATENCY_ESTIMATION = 34;
+parameter LENGTH_axis_packet_size = 1;
 parameter LENGTH_fc = 1;
 parameter LENGTH_in1_imag = 1;
 parameter LENGTH_in1_real = 1;
@@ -81,8 +91,10 @@ parameter LENGTH_in3_imag = 1;
 parameter LENGTH_in3_real = 1;
 parameter LENGTH_in4_imag = 1;
 parameter LENGTH_in4_real = 1;
-parameter LENGTH_out_imag = 1;
-parameter LENGTH_out_real = 1;
+parameter LENGTH_out_imag_V_data_V = 1;
+parameter LENGTH_out_imag_V_last_V = 1;
+parameter LENGTH_out_real_V_data_V = 1;
+parameter LENGTH_out_real_V_last_V = 1;
 parameter LENGTH_phi = 1;
 parameter LENGTH_xpos1 = 1;
 parameter LENGTH_xpos2 = 1;
@@ -118,14 +130,14 @@ reg AESL_done_delay2 = 0;
 reg AESL_ready_delay = 0;
 wire ready;
 wire ready_wire;
-wire [5 : 0] control_AWADDR;
+wire [6 : 0] control_AWADDR;
 wire  control_AWVALID;
 wire  control_AWREADY;
 wire  control_WVALID;
 wire  control_WREADY;
 wire [31 : 0] control_WDATA;
 wire [3 : 0] control_WSTRB;
-wire [5 : 0] control_ARADDR;
+wire [6 : 0] control_ARADDR;
 wire  control_ARVALID;
 wire  control_ARREADY;
 wire  control_RVALID;
@@ -162,9 +174,11 @@ wire  in4_imag_TREADY;
 wire [15 : 0] out_real_TDATA;
 wire  out_real_TVALID;
 wire  out_real_TREADY;
+wire [0 : 0] out_real_TLAST;
 wire [15 : 0] out_imag_TDATA;
 wire  out_imag_TVALID;
 wire  out_imag_TREADY;
+wire [0 : 0] out_imag_TLAST;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
 integer ready_cnt = 0;
@@ -240,9 +254,11 @@ wire ap_rst_n_n;
     .out_real_TDATA(out_real_TDATA),
     .out_real_TVALID(out_real_TVALID),
     .out_real_TREADY(out_real_TREADY),
+    .out_real_TLAST(out_real_TLAST),
     .out_imag_TDATA(out_imag_TDATA),
     .out_imag_TVALID(out_imag_TVALID),
-    .out_imag_TREADY(out_imag_TREADY));
+    .out_imag_TREADY(out_imag_TREADY),
+    .out_imag_TLAST(out_imag_TLAST));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
@@ -337,6 +353,9 @@ begin
     end
 end
 assign AESL_ready = ready;
+
+
+
 
 
 
@@ -507,6 +526,7 @@ AESL_axi_s_out_real AESL_AXI_S_out_real(
     .clk(AESL_clock),
     .reset(AESL_reset),
     .TRAN_out_real_TDATA(out_real_TDATA),
+    .TRAN_out_real_TLAST(out_real_TLAST),
     .TRAN_out_real_TVALID(out_real_TVALID),
     .TRAN_out_real_TREADY(out_real_TREADY),
     .ready(out_real_ready),
@@ -525,6 +545,7 @@ AESL_axi_s_out_imag AESL_AXI_S_out_imag(
     .clk(AESL_clock),
     .reset(AESL_reset),
     .TRAN_out_imag_TDATA(out_imag_TDATA),
+    .TRAN_out_imag_TLAST(out_imag_TLAST),
     .TRAN_out_imag_TVALID(out_imag_TVALID),
     .TRAN_out_imag_TREADY(out_imag_TREADY),
     .ready(out_imag_ready),
@@ -621,6 +642,9 @@ initial begin
 end
 
 
+reg end_axis_packet_size;
+reg [31:0] size_axis_packet_size;
+reg [31:0] size_axis_packet_size_backup;
 reg end_phi;
 reg [31:0] size_phi;
 reg [31:0] size_phi_backup;
@@ -663,12 +687,18 @@ reg [31:0] size_in4_real_backup;
 reg end_in4_imag;
 reg [31:0] size_in4_imag;
 reg [31:0] size_in4_imag_backup;
-reg end_out_real;
-reg [31:0] size_out_real;
-reg [31:0] size_out_real_backup;
-reg end_out_imag;
-reg [31:0] size_out_imag;
-reg [31:0] size_out_imag_backup;
+reg end_out_real_V_data_V;
+reg [31:0] size_out_real_V_data_V;
+reg [31:0] size_out_real_V_data_V_backup;
+reg end_out_real_V_last_V;
+reg [31:0] size_out_real_V_last_V;
+reg [31:0] size_out_real_V_last_V_backup;
+reg end_out_imag_V_data_V;
+reg [31:0] size_out_imag_V_data_V;
+reg [31:0] size_out_imag_V_data_V_backup;
+reg end_out_imag_V_last_V;
+reg [31:0] size_out_imag_V_last_V;
+reg [31:0] size_out_imag_V_last_V_backup;
 
 initial begin : initial_process
     integer proc_rand;
@@ -817,14 +847,14 @@ task write_binary;
     end
 endtask;
 
-reg dump_tvout_finish_out_real;
+reg dump_tvout_finish_out_real_V_data_V;
 
-initial begin : dump_tvout_runtime_sign_out_real
+initial begin : dump_tvout_runtime_sign_out_real_V_data_V
     integer fp;
-    dump_tvout_finish_out_real = 0;
-    fp = $fopen(`AUTOTB_TVOUT_out_real_out_wrapc, "w");
+    dump_tvout_finish_out_real_V_data_V = 0;
+    fp = $fopen(`AUTOTB_TVOUT_out_real_V_data_V_out_wrapc, "w");
     if (fp == 0) begin
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_real_out_wrapc);
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_real_V_data_V_out_wrapc);
         $display("ERROR: Simulation using HLS TB failed.");
         $finish;
     end
@@ -833,26 +863,26 @@ initial begin : dump_tvout_runtime_sign_out_real
     wait (done_cnt == AUTOTB_TRANSACTION_NUM);
     // last transaction is saved at negedge right after last done
     repeat(5) @ (posedge AESL_clock);
-    fp = $fopen(`AUTOTB_TVOUT_out_real_out_wrapc, "a");
+    fp = $fopen(`AUTOTB_TVOUT_out_real_V_data_V_out_wrapc, "a");
     if (fp == 0) begin
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_real_out_wrapc);
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_real_V_data_V_out_wrapc);
         $display("ERROR: Simulation using HLS TB failed.");
         $finish;
     end
     $fdisplay(fp,"[[[/runtime]]]");
     $fclose(fp);
-    dump_tvout_finish_out_real = 1;
+    dump_tvout_finish_out_real_V_data_V = 1;
 end
 
 
-reg dump_tvout_finish_out_imag;
+reg dump_tvout_finish_out_real_V_last_V;
 
-initial begin : dump_tvout_runtime_sign_out_imag
+initial begin : dump_tvout_runtime_sign_out_real_V_last_V
     integer fp;
-    dump_tvout_finish_out_imag = 0;
-    fp = $fopen(`AUTOTB_TVOUT_out_imag_out_wrapc, "w");
+    dump_tvout_finish_out_real_V_last_V = 0;
+    fp = $fopen(`AUTOTB_TVOUT_out_real_V_last_V_out_wrapc, "w");
     if (fp == 0) begin
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_imag_out_wrapc);
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_real_V_last_V_out_wrapc);
         $display("ERROR: Simulation using HLS TB failed.");
         $finish;
     end
@@ -861,15 +891,71 @@ initial begin : dump_tvout_runtime_sign_out_imag
     wait (done_cnt == AUTOTB_TRANSACTION_NUM);
     // last transaction is saved at negedge right after last done
     repeat(5) @ (posedge AESL_clock);
-    fp = $fopen(`AUTOTB_TVOUT_out_imag_out_wrapc, "a");
+    fp = $fopen(`AUTOTB_TVOUT_out_real_V_last_V_out_wrapc, "a");
     if (fp == 0) begin
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_imag_out_wrapc);
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_real_V_last_V_out_wrapc);
         $display("ERROR: Simulation using HLS TB failed.");
         $finish;
     end
     $fdisplay(fp,"[[[/runtime]]]");
     $fclose(fp);
-    dump_tvout_finish_out_imag = 1;
+    dump_tvout_finish_out_real_V_last_V = 1;
+end
+
+
+reg dump_tvout_finish_out_imag_V_data_V;
+
+initial begin : dump_tvout_runtime_sign_out_imag_V_data_V
+    integer fp;
+    dump_tvout_finish_out_imag_V_data_V = 0;
+    fp = $fopen(`AUTOTB_TVOUT_out_imag_V_data_V_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_imag_V_data_V_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    repeat(5) @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_out_imag_V_data_V_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_imag_V_data_V_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_out_imag_V_data_V = 1;
+end
+
+
+reg dump_tvout_finish_out_imag_V_last_V;
+
+initial begin : dump_tvout_runtime_sign_out_imag_V_last_V
+    integer fp;
+    dump_tvout_finish_out_imag_V_last_V = 0;
+    fp = $fopen(`AUTOTB_TVOUT_out_imag_V_last_V_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_imag_V_last_V_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    repeat(5) @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_out_imag_V_last_V_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_imag_V_last_V_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_out_imag_V_last_V = 1;
 end
 
 

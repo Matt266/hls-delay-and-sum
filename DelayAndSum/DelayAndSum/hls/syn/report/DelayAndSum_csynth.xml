@@ -37,7 +37,7 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>DelayAndSum.cpp:55</SourceLocation>
+<SourceLocation>DelayAndSum.cpp:62</SourceLocation>
 </SummaryOfViolations>
 </PerformanceEstimates>
 
@@ -45,8 +45,8 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <DSP>62</DSP>
-<FF>10272</FF>
-<LUT>34008</LUT>
+<FF>10363</FF>
+<LUT>34226</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -87,7 +87,7 @@
 <Type>pointer</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
-<Bits>6</Bits>
+<Bits>7</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>0</HasCtrl>
@@ -164,7 +164,7 @@
 <Type>pointer</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
-<Bits>6</Bits>
+<Bits>7</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>0</HasCtrl>
@@ -558,7 +558,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>out_real_TDATA</name>
-<Object>out_real</Object>
+<Object>out_real_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -570,7 +570,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>out_real_TVALID</name>
-<Object>out_real</Object>
+<Object>out_real_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -582,7 +582,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>out_real_TREADY</name>
-<Object>out_real</Object>
+<Object>out_real_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -593,8 +593,20 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
+<name>out_real_TLAST</name>
+<Object>out_real_V_last_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
 <name>out_imag_TDATA</name>
-<Object>out_imag</Object>
+<Object>out_imag_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -606,7 +618,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>out_imag_TVALID</name>
-<Object>out_imag</Object>
+<Object>out_imag_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -618,7 +630,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>out_imag_TREADY</name>
-<Object>out_imag</Object>
+<Object>out_imag_V_data_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>axis</IOProtocol>
@@ -626,6 +638,18 @@
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>out_imag_TLAST</name>
+<Object>out_imag_V_last_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
 </InterfaceSummary>

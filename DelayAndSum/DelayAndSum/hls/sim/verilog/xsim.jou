@@ -3,10 +3,10 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Feb 10 10:49:42 2025
-# Process ID: 38592
+# Start of session at: Mon Feb 10 22:29:59 2025
+# Process ID: 20352
 # Current directory: C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog
-# Command line: xsim.exe -mode tcl -source {xsim.dir/DelayAndSum/xsim_script.tcl}
+# Command line: xsim.exe -source {xsim.dir/DelayAndSum/xsim_script.tcl}
 # Log file: C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/xsim.log
 # Journal file: C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog\xsim.jou
 # Running On        :Laptop-Matt
@@ -19,8 +19,10 @@
 # Host memory       :16872 MB
 # Swap memory       :19327 MB
 # Total Virtual     :36199 MB
-# Available Virtual :14697 MB
+# Available Virtual :20050 MB
 #-----------------------------------------------------------
+start_gui
 source xsim.dir/DelayAndSum/xsim_script.tcl
 open_wave_config DelayAndSum_dataflow_ana.wcfg
 source DelayAndSum.tcl
+close_sim

@@ -2,23 +2,23 @@
 
 set axilite_register_dict [dict create]
 set port_control {
-phi { 
+axis_packet_size { 
 	dir I
-	width 8
+	width 26
 	depth 1
 	mode ap_none
 	offset 16
 	offset_end 23
 }
-fc { 
+phi { 
 	dir I
-	width 32
+	width 8
 	depth 1
 	mode ap_none
 	offset 24
 	offset_end 31
 }
-xpos1 { 
+fc { 
 	dir I
 	width 32
 	depth 1
@@ -26,7 +26,7 @@ xpos1 {
 	offset 32
 	offset_end 39
 }
-xpos2 { 
+xpos1 { 
 	dir I
 	width 32
 	depth 1
@@ -34,7 +34,7 @@ xpos2 {
 	offset 40
 	offset_end 47
 }
-xpos3 { 
+xpos2 { 
 	dir I
 	width 32
 	depth 1
@@ -42,13 +42,21 @@ xpos3 {
 	offset 48
 	offset_end 55
 }
-xpos4 { 
+xpos3 { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
 	offset 56
 	offset_end 63
+}
+xpos4 { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 64
+	offset_end 71
 }
 }
 dict set axilite_register_dict control $port_control

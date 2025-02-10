@@ -8,7 +8,7 @@
 `timescale 1ns/1ps
 module DelayAndSum_control_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 6,
+    C_S_AXI_ADDR_WIDTH = 7,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -31,6 +31,7 @@ module DelayAndSum_control_s_axi
     output wire [1:0]                    RRESP,
     output wire                          RVALID,
     input  wire                          RREADY,
+    output wire [25:0]                   axis_packet_size,
     output wire [7:0]                    phi,
     output wire [31:0]                   fc,
     output wire [31:0]                   xpos1,
@@ -45,49 +46,55 @@ module DelayAndSum_control_s_axi
 // 0x04 : reserved
 // 0x08 : reserved
 // 0x0c : reserved
-// 0x10 : Data signal of phi
+// 0x10 : Data signal of axis_packet_size
+//        bit 25~0 - axis_packet_size[25:0] (Read/Write)
+//        others   - reserved
+// 0x14 : reserved
+// 0x18 : Data signal of phi
 //        bit 7~0 - phi[7:0] (Read/Write)
 //        others  - reserved
-// 0x14 : reserved
-// 0x18 : Data signal of fc
-//        bit 31~0 - fc[31:0] (Read/Write)
 // 0x1c : reserved
-// 0x20 : Data signal of xpos1
-//        bit 31~0 - xpos1[31:0] (Read/Write)
+// 0x20 : Data signal of fc
+//        bit 31~0 - fc[31:0] (Read/Write)
 // 0x24 : reserved
-// 0x28 : Data signal of xpos2
-//        bit 31~0 - xpos2[31:0] (Read/Write)
+// 0x28 : Data signal of xpos1
+//        bit 31~0 - xpos1[31:0] (Read/Write)
 // 0x2c : reserved
-// 0x30 : Data signal of xpos3
-//        bit 31~0 - xpos3[31:0] (Read/Write)
+// 0x30 : Data signal of xpos2
+//        bit 31~0 - xpos2[31:0] (Read/Write)
 // 0x34 : reserved
-// 0x38 : Data signal of xpos4
-//        bit 31~0 - xpos4[31:0] (Read/Write)
+// 0x38 : Data signal of xpos3
+//        bit 31~0 - xpos3[31:0] (Read/Write)
 // 0x3c : reserved
+// 0x40 : Data signal of xpos4
+//        bit 31~0 - xpos4[31:0] (Read/Write)
+// 0x44 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_PHI_DATA_0   = 6'h10,
-    ADDR_PHI_CTRL     = 6'h14,
-    ADDR_FC_DATA_0    = 6'h18,
-    ADDR_FC_CTRL      = 6'h1c,
-    ADDR_XPOS1_DATA_0 = 6'h20,
-    ADDR_XPOS1_CTRL   = 6'h24,
-    ADDR_XPOS2_DATA_0 = 6'h28,
-    ADDR_XPOS2_CTRL   = 6'h2c,
-    ADDR_XPOS3_DATA_0 = 6'h30,
-    ADDR_XPOS3_CTRL   = 6'h34,
-    ADDR_XPOS4_DATA_0 = 6'h38,
-    ADDR_XPOS4_CTRL   = 6'h3c,
-    WRIDLE            = 2'd0,
-    WRDATA            = 2'd1,
-    WRRESP            = 2'd2,
-    WRRESET           = 2'd3,
-    RDIDLE            = 2'd0,
-    RDDATA            = 2'd1,
-    RDRESET           = 2'd2,
-    ADDR_BITS                = 6;
+    ADDR_AXIS_PACKET_SIZE_DATA_0 = 7'h10,
+    ADDR_AXIS_PACKET_SIZE_CTRL   = 7'h14,
+    ADDR_PHI_DATA_0              = 7'h18,
+    ADDR_PHI_CTRL                = 7'h1c,
+    ADDR_FC_DATA_0               = 7'h20,
+    ADDR_FC_CTRL                 = 7'h24,
+    ADDR_XPOS1_DATA_0            = 7'h28,
+    ADDR_XPOS1_CTRL              = 7'h2c,
+    ADDR_XPOS2_DATA_0            = 7'h30,
+    ADDR_XPOS2_CTRL              = 7'h34,
+    ADDR_XPOS3_DATA_0            = 7'h38,
+    ADDR_XPOS3_CTRL              = 7'h3c,
+    ADDR_XPOS4_DATA_0            = 7'h40,
+    ADDR_XPOS4_CTRL              = 7'h44,
+    WRIDLE                       = 2'd0,
+    WRDATA                       = 2'd1,
+    WRRESP                       = 2'd2,
+    WRRESET                      = 2'd3,
+    RDIDLE                       = 2'd0,
+    RDDATA                       = 2'd1,
+    RDRESET                      = 2'd2,
+    ADDR_BITS                = 7;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -102,6 +109,7 @@ localparam
     wire                          ar_hs;
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
+    reg  [25:0]                   int_axis_packet_size = 'b0;
     reg  [7:0]                    int_phi = 'b0;
     reg  [31:0]                   int_fc = 'b0;
     reg  [31:0]                   int_xpos1 = 'b0;
@@ -200,6 +208,9 @@ always @(posedge ACLK) begin
         if (ar_hs) begin
             rdata <= 'b0;
             case (raddr)
+                ADDR_AXIS_PACKET_SIZE_DATA_0: begin
+                    rdata <= int_axis_packet_size[25:0];
+                end
                 ADDR_PHI_DATA_0: begin
                     rdata <= int_phi[7:0];
                 end
@@ -225,12 +236,23 @@ end
 
 
 //------------------------Register logic-----------------
-assign phi   = int_phi;
-assign fc    = int_fc;
-assign xpos1 = int_xpos1;
-assign xpos2 = int_xpos2;
-assign xpos3 = int_xpos3;
-assign xpos4 = int_xpos4;
+assign axis_packet_size = int_axis_packet_size;
+assign phi              = int_phi;
+assign fc               = int_fc;
+assign xpos1            = int_xpos1;
+assign xpos2            = int_xpos2;
+assign xpos3            = int_xpos3;
+assign xpos4            = int_xpos4;
+// int_axis_packet_size[25:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_axis_packet_size[25:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_AXIS_PACKET_SIZE_DATA_0)
+            int_axis_packet_size[25:0] <= (WDATA[31:0] & wmask) | (int_axis_packet_size[25:0] & ~wmask);
+    end
+end
+
 // int_phi[7:0]
 always @(posedge ACLK) begin
     if (ARESET)

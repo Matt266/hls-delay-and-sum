@@ -3,12 +3,18 @@
 #include <atomic>
 
 void DelayAndSum(
+
+    // axi stream packet size 
+    // for tlast generation
+    // set to 0 to disable tlast generation
+    uint_26_t *axis_packet_size,
+
     // in rad -- -pi to pi
     fxd_8_3_t *phi,
-    
+
     // in MHz
     fxd_32_16_t *fc,
-
+    
     // in mm
     fxd_32_16_t *xpos1,
     fxd_32_16_t *xpos2,
@@ -24,8 +30,8 @@ void DelayAndSum(
     hls::stream<fxd_16_1_t> &in3_imag,
     hls::stream<fxd_16_1_t> &in4_real,
     hls::stream<fxd_16_1_t> &in4_imag,
-    hls::stream<fxd_16_1_t> &out_real,
-    hls::stream<fxd_16_1_t> &out_imag
+    hls::stream<fxd_16_1_pkt_t> &out_real,
+    hls::stream<fxd_16_1_pkt_t> &out_imag
 ){
 	#pragma HLS top name=DelayAndSum
     #pragma HLS interface mode=ap_ctrl_none port=return
@@ -45,6 +51,7 @@ void DelayAndSum(
     #pragma HLS INTERFACE mode=axis port=out_imag
 	
 	//AXI Lite Interface
+    #pragma HLS INTERFACE mode=s_axilite port=axis_packet_size
 	#pragma HLS INTERFACE mode=s_axilite port=phi
     #pragma HLS INTERFACE mode=s_axilite port=fc
     #pragma HLS INTERFACE mode=s_axilite port=xpos1
@@ -63,6 +70,7 @@ void DelayAndSum(
     fxd_16_1_t in4_real_buffer = in4_real.read();
     fxd_16_1_t in4_imag_buffer = in4_imag.read();
 
+    uint_26_t axis_packet_size_buffer = *axis_packet_size;
     fxd_8_3_t phi_buffer = *phi;
     fxd_32_16_t fc_buffer = *fc;
     fxd_32_16_t xpos1_buffer = *xpos1;
@@ -82,17 +90,44 @@ void DelayAndSum(
     CalculateWeights(phi_buffer, fc_buffer, xpos1_buffer, xpos2_buffer, xpos3_buffer, xpos4_buffer,
                 w1_real, w1_imag, w2_real, w2_imag, w3_real, w3_imag, w4_real, w4_imag);
 
-	/*Complex Conjugate Multiplication:
-	 a*conj(b) = (a_real + j*a_imag)*(b_real - j*b_imag) 
-	 = (a_real*b_real + a_imag*b_imag) + j*(a_imag*b_real - a_real*b_imag)
-	*/
-    out_real << (in1_real_buffer * w1_real + in1_imag_buffer * w1_imag
+    fxd_16_1_pkt_t out_real_pkt;
+    fxd_16_1_pkt_t out_imag_pkt;
+
+    /*Complex Conjugate Multiplication:
+     a*conj(b) = (a_real + j*a_imag)*(b_real - j*b_imag) 
+     = (a_real*b_real + a_imag*b_imag) + j*(a_imag*b_real - a_real*b_imag)
+    */
+
+    out_real_pkt.data = (in1_real_buffer * w1_real + in1_imag_buffer * w1_imag
                 +in2_real_buffer * w2_real + in2_imag_buffer * w2_imag
                 +in3_real_buffer * w3_real + in3_imag_buffer * w3_imag
                 +in4_real_buffer * w4_real + in4_imag_buffer * w4_imag);
-
-    out_imag << (in1_imag_buffer * w1_real - in1_real_buffer * w1_imag
+    out_imag_pkt.data = (in1_imag_buffer * w1_real - in1_real_buffer * w1_imag
                 +in2_imag_buffer * w2_real - in2_real_buffer * w2_imag
                 +in3_imag_buffer * w3_real - in3_real_buffer * w3_imag
                 +in4_imag_buffer * w4_real - in4_real_buffer * w4_imag);
+
+    // generate tlast with the current packet size
+    static uint_26_t count = 0;
+    
+    if(axis_packet_size_buffer == 0){
+        // don't generate tlast 
+        count = 0;
+        out_real_pkt.last = false;
+        out_imag_pkt.last = false;
+    } else{
+        // generate tlast at the and of the packet size
+        if(count < (axis_packet_size_buffer-1)){
+            count = count + 1;
+            out_real_pkt.last[0] = false;
+            out_imag_pkt.last[0] = false;
+        } else{
+            count = 0;
+            out_real_pkt.last[0] = true;
+            out_imag_pkt.last[0] = true;
+        }
+    }
+
+    out_real.write(out_real_pkt);
+    out_imag.write(out_imag_pkt);
 }

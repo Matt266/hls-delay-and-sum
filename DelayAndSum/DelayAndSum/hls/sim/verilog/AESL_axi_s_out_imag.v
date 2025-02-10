@@ -8,7 +8,10 @@
 
 `timescale 1 ns / 1 ps
 
-`define TV_OUT_out_imag_TDATA "../tv/rtldatafile/rtl.DelayAndSum.autotvout_out_imag.dat"
+`define TV_OUT_out_imag_TDATA "../tv/rtldatafile/rtl.DelayAndSum.autotvout_out_imag_V_data_V.dat"
+`define EGRESS_STATUS_out_imag_TDATA "../tv/stream_size/stream_egress_status_out_imag_V_data_V.dat"
+`define TV_OUT_out_imag_TLAST "../tv/rtldatafile/rtl.DelayAndSum.autotvout_out_imag_V_last_V.dat"
+`define EGRESS_STATUS_out_imag_TLAST "../tv/stream_size/stream_egress_status_out_imag_V_last_V.dat"
 
 `define AUTOTB_TRANSACTION_NUM 64
 
@@ -16,6 +19,7 @@ module AESL_axi_s_out_imag (
     input clk,
     input reset,
     input [16 - 1:0] TRAN_out_imag_TDATA,
+    input TRAN_out_imag_TLAST,
     input TRAN_out_imag_TVALID,
     output TRAN_out_imag_TREADY,
     input ready,
@@ -46,10 +50,33 @@ module AESL_axi_s_out_imag (
         out_imag_TDATA_write_data <= TRAN_out_imag_TDATA;
         out_imag_TDATA_read_en <= 0;
     end
+    wire out_imag_TLAST_full;
+    wire out_imag_TLAST_empty;
+    reg out_imag_TLAST_write_en;
+    reg [1 - 1:0] out_imag_TLAST_write_data;
+    reg out_imag_TLAST_read_en;
+    wire [1 - 1:0] out_imag_TLAST_read_data;
+    
+    fifo #(2, 1) fifo_out_imag_TLAST (
+        .reset(1'b0),
+        .write_clock(clk),
+        .write_en(out_imag_TLAST_write_en),
+        .write_data(out_imag_TLAST_write_data),
+        .read_clock(clk),
+        .read_en(out_imag_TLAST_read_en),
+        .read_data(out_imag_TLAST_read_data),
+        .full(out_imag_TLAST_full),
+        .empty(out_imag_TLAST_empty));
+    
+    always @ (*) begin
+        out_imag_TLAST_write_en <= TRAN_out_imag_TVALID;
+        out_imag_TLAST_write_data <= TRAN_out_imag_TLAST;
+        out_imag_TLAST_read_en <= 0;
+    end
     assign TRAN_out_imag_TVALID = TRAN_out_imag_TVALID_temp;
 
     
-    assign TRAN_out_imag_TREADY = ~(out_imag_TDATA_full);
+    assign TRAN_out_imag_TREADY = ~(out_imag_TDATA_full || out_imag_TLAST_full);
     
     function is_blank_char(input [7:0] in_char);
         if (in_char == " " || in_char == "\011" || in_char == "\012" || in_char == "\015") begin
@@ -119,6 +146,37 @@ module AESL_axi_s_out_imag (
                 $fdisplay(fp, "[[/transaction]]");
                 transaction_save_out_imag_TDATA = transaction_save_out_imag_TDATA + 1;
                 fifo_out_imag_TDATA.clear();
+                $fclose(fp);
+            end
+        end
+    end
+    
+    reg [31:0] transaction_save_out_imag_TLAST;
+    
+    initial begin : AXI_stream_receiver_out_imag_TLAST
+        integer fp;
+        reg [1 - 1:0] data;
+        reg [8 * 5:1] str;
+        
+        transaction_save_out_imag_TLAST = 0;
+        fifo_out_imag_TLAST.clear();
+        wait (reset === 1);
+        forever begin
+            @ (negedge clk);
+            if (done_1 == 1) begin
+                fp = $fopen(`TV_OUT_out_imag_TLAST, "a");
+                if (fp == 0) begin // Failed to open file
+                    $display("ERROR: Failed to open file \"%s\"!", `TV_OUT_out_imag_TLAST);
+                    $finish;
+                end
+                $fdisplay(fp, "[[transaction]] %d", transaction_save_out_imag_TLAST);
+                while (~fifo_out_imag_TLAST.empty) begin
+                    fifo_out_imag_TLAST.pop(data);
+                    $fdisplay(fp, "0x%x", data);
+                end
+                $fdisplay(fp, "[[/transaction]]");
+                transaction_save_out_imag_TLAST = transaction_save_out_imag_TLAST + 1;
+                fifo_out_imag_TLAST.clear();
                 $fclose(fp);
             end
         end

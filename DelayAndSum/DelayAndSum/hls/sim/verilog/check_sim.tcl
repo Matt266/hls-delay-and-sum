@@ -83,6 +83,7 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
+         "c.DelayAndSum.autotvin_axis_packet_size.dat"
          "c.DelayAndSum.autotvin_phi.dat"
          "c.DelayAndSum.autotvin_fc.dat"
          "c.DelayAndSum.autotvin_xpos1.dat"
@@ -116,8 +117,10 @@ proc check_tvout_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "rtl.DelayAndSum.autotvout_out_real.dat"
-         "rtl.DelayAndSum.autotvout_out_imag.dat"
+         "rtl.DelayAndSum.autotvout_out_real_V_data_V.dat"
+         "rtl.DelayAndSum.autotvout_out_real_V_last_V.dat"
+         "rtl.DelayAndSum.autotvout_out_imag_V_data_V.dat"
+         "rtl.DelayAndSum.autotvout_out_imag_V_last_V.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {

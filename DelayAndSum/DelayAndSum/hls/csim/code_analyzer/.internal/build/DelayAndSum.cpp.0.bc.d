@@ -14,12 +14,10 @@ C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndS
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/_mingw_off_t.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/swprintf.inl \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
-  c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/ap_fixed.h \
+  c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/ap_int.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/etc/ap_common.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/etc/ap_decl.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/etc/autopilot_ssdm_bits.h \
-  c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/etc/ap_fixed_base.h \
-  c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/ap_int.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/etc/ap_int_base.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/hls_half.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/iostream \
@@ -172,6 +170,8 @@ C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndS
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/bits/sstream.tcc \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/limits \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/etc/ap_int_special.h \
+  c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/ap_fixed.h \
+  c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/etc/ap_fixed_base.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/etc/ap_fixed_ref.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/etc/ap_fixed_special.h \
   c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/hls_stream.h \
@@ -217,4 +217,6 @@ C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndS
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/condition_variable \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/cxxabi.h \
   C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/x86_64-w64-mingw32/bits/cxxabi_tweaks.h \
+  c:/xilinx/vitis_hls/2024.1/vcxx/data/autopilot/ap_axi_sdata.h \
+  C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/10.0.0/win64.o/nt/include/c++/9.5.0/climits \
   CalculateWeights.hpp
