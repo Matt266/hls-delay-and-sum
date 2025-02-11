@@ -16,13 +16,13 @@ set C_modelName {DelayAndSum}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
 set C_modelArgList {
-	{ axis_packet_size int 26 regular {axi_slave 0}  }
 	{ phi int 8 regular {axi_slave 0}  }
 	{ fc int 32 regular {axi_slave 0}  }
 	{ xpos1 int 32 regular {axi_slave 0}  }
 	{ xpos2 int 32 regular {axi_slave 0}  }
 	{ xpos3 int 32 regular {axi_slave 0}  }
 	{ xpos4 int 32 regular {axi_slave 0}  }
+	{ axis_packet_size int 26 regular {axi_slave 0}  }
 	{ in1_real int 16 regular {axi_s 0 volatile  { in1_real Data } }  }
 	{ in1_imag int 16 regular {axi_s 0 volatile  { in1_imag Data } }  }
 	{ in2_real int 16 regular {axi_s 0 volatile  { in2_real Data } }  }
@@ -40,13 +40,13 @@ set hasAXIMCache 0
 set hasAXIML2Cache 0
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
-	{ "Name" : "axis_packet_size", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 26, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":23}} , 
- 	{ "Name" : "phi", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 8, "direction" : "READONLY", "offset" : {"in":24}, "offset_end" : {"in":31}} , 
- 	{ "Name" : "fc", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":32}, "offset_end" : {"in":39}} , 
- 	{ "Name" : "xpos1", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":47}} , 
- 	{ "Name" : "xpos2", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":48}, "offset_end" : {"in":55}} , 
- 	{ "Name" : "xpos3", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":56}, "offset_end" : {"in":63}} , 
- 	{ "Name" : "xpos4", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":64}, "offset_end" : {"in":71}} , 
+	{ "Name" : "phi", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 8, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":23}} , 
+ 	{ "Name" : "fc", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":24}, "offset_end" : {"in":31}} , 
+ 	{ "Name" : "xpos1", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":32}, "offset_end" : {"in":39}} , 
+ 	{ "Name" : "xpos2", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":47}} , 
+ 	{ "Name" : "xpos3", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":48}, "offset_end" : {"in":55}} , 
+ 	{ "Name" : "xpos4", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":56}, "offset_end" : {"in":63}} , 
+ 	{ "Name" : "axis_packet_size", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 26, "direction" : "READONLY", "offset" : {"in":64}, "offset_end" : {"in":71}} , 
  	{ "Name" : "in1_real", "interface" : "axis", "bitwidth" : 16, "direction" : "READONLY"} , 
  	{ "Name" : "in1_imag", "interface" : "axis", "bitwidth" : 16, "direction" : "READONLY"} , 
  	{ "Name" : "in2_real", "interface" : "axis", "bitwidth" : 16, "direction" : "READONLY"} , 
@@ -115,7 +115,7 @@ set portList {
 	{ s_axi_control_BRESP sc_out sc_lv 2 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"axis_packet_size","role":"data","value":"16"},{"name":"phi","role":"data","value":"24"},{"name":"fc","role":"data","value":"32"},{"name":"xpos1","role":"data","value":"40"},{"name":"xpos2","role":"data","value":"48"},{"name":"xpos3","role":"data","value":"56"},{"name":"xpos4","role":"data","value":"64"}] },
+	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"phi","role":"data","value":"16"},{"name":"fc","role":"data","value":"24"},{"name":"xpos1","role":"data","value":"32"},{"name":"xpos2","role":"data","value":"40"},{"name":"xpos3","role":"data","value":"48"},{"name":"xpos4","role":"data","value":"56"},{"name":"axis_packet_size","role":"data","value":"64"}] },
 	{ "name": "s_axi_control_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWVALID" } },
 	{ "name": "s_axi_control_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWREADY" } },
 	{ "name": "s_axi_control_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WVALID" } },
@@ -183,13 +183,13 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "axis_packet_size", "Type" : "None", "Direction" : "I"},
 			{"Name" : "phi", "Type" : "None", "Direction" : "I"},
 			{"Name" : "fc", "Type" : "None", "Direction" : "I"},
 			{"Name" : "xpos1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "xpos2", "Type" : "None", "Direction" : "I"},
 			{"Name" : "xpos3", "Type" : "None", "Direction" : "I"},
 			{"Name" : "xpos4", "Type" : "None", "Direction" : "I"},
+			{"Name" : "axis_packet_size", "Type" : "None", "Direction" : "I"},
 			{"Name" : "in1_real", "Type" : "Axis", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "in1_real_TDATA_blk_n", "Type" : "RtlSignal"}]},
@@ -272,13 +272,13 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	DelayAndSum {
-		axis_packet_size {Type I LastRead 0 FirstWrite -1}
 		phi {Type I LastRead 0 FirstWrite -1}
 		fc {Type I LastRead 0 FirstWrite -1}
 		xpos1 {Type I LastRead 0 FirstWrite -1}
 		xpos2 {Type I LastRead 0 FirstWrite -1}
 		xpos3 {Type I LastRead 0 FirstWrite -1}
 		xpos4 {Type I LastRead 0 FirstWrite -1}
+		axis_packet_size {Type I LastRead 0 FirstWrite -1}
 		in1_real {Type I LastRead 0 FirstWrite -1}
 		in1_imag {Type I LastRead 0 FirstWrite -1}
 		in2_real {Type I LastRead 0 FirstWrite -1}

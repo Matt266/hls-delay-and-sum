@@ -19,13 +19,13 @@
 `define AUTOTB_II 1
 `define AUTOTB_LATENCY 34
 
-`define AESL_DEPTH_axis_packet_size 1
 `define AESL_DEPTH_phi 1
 `define AESL_DEPTH_fc 1
 `define AESL_DEPTH_xpos1 1
 `define AESL_DEPTH_xpos2 1
 `define AESL_DEPTH_xpos3 1
 `define AESL_DEPTH_xpos4 1
+`define AESL_DEPTH_axis_packet_size 1
 `define AESL_DEPTH_in1_real 1
 `define AESL_DEPTH_in1_imag 1
 `define AESL_DEPTH_in2_real 1
@@ -38,13 +38,13 @@
 `define AESL_DEPTH_out_real_V_last_V 1
 `define AESL_DEPTH_out_imag_V_data_V 1
 `define AESL_DEPTH_out_imag_V_last_V 1
-`define AUTOTB_TVIN_axis_packet_size  "../tv/cdatafile/c.DelayAndSum.autotvin_axis_packet_size.dat"
 `define AUTOTB_TVIN_phi  "../tv/cdatafile/c.DelayAndSum.autotvin_phi.dat"
 `define AUTOTB_TVIN_fc  "../tv/cdatafile/c.DelayAndSum.autotvin_fc.dat"
 `define AUTOTB_TVIN_xpos1  "../tv/cdatafile/c.DelayAndSum.autotvin_xpos1.dat"
 `define AUTOTB_TVIN_xpos2  "../tv/cdatafile/c.DelayAndSum.autotvin_xpos2.dat"
 `define AUTOTB_TVIN_xpos3  "../tv/cdatafile/c.DelayAndSum.autotvin_xpos3.dat"
 `define AUTOTB_TVIN_xpos4  "../tv/cdatafile/c.DelayAndSum.autotvin_xpos4.dat"
+`define AUTOTB_TVIN_axis_packet_size  "../tv/cdatafile/c.DelayAndSum.autotvin_axis_packet_size.dat"
 `define AUTOTB_TVIN_in1_real  "../tv/cdatafile/c.DelayAndSum.autotvin_in1_real.dat"
 `define AUTOTB_TVIN_in1_imag  "../tv/cdatafile/c.DelayAndSum.autotvin_in1_imag.dat"
 `define AUTOTB_TVIN_in2_real  "../tv/cdatafile/c.DelayAndSum.autotvin_in2_real.dat"
@@ -53,13 +53,13 @@
 `define AUTOTB_TVIN_in3_imag  "../tv/cdatafile/c.DelayAndSum.autotvin_in3_imag.dat"
 `define AUTOTB_TVIN_in4_real  "../tv/cdatafile/c.DelayAndSum.autotvin_in4_real.dat"
 `define AUTOTB_TVIN_in4_imag  "../tv/cdatafile/c.DelayAndSum.autotvin_in4_imag.dat"
-`define AUTOTB_TVIN_axis_packet_size_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_axis_packet_size.dat"
 `define AUTOTB_TVIN_phi_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_phi.dat"
 `define AUTOTB_TVIN_fc_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_fc.dat"
 `define AUTOTB_TVIN_xpos1_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_xpos1.dat"
 `define AUTOTB_TVIN_xpos2_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_xpos2.dat"
 `define AUTOTB_TVIN_xpos3_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_xpos3.dat"
 `define AUTOTB_TVIN_xpos4_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_xpos4.dat"
+`define AUTOTB_TVIN_axis_packet_size_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_axis_packet_size.dat"
 `define AUTOTB_TVIN_in1_real_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_in1_real.dat"
 `define AUTOTB_TVIN_in1_imag_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_in1_imag.dat"
 `define AUTOTB_TVIN_in2_real_out_wrapc  "../tv/rtldatafile/rtl.DelayAndSum.autotvin_in2_real.dat"
@@ -642,9 +642,6 @@ initial begin
 end
 
 
-reg end_axis_packet_size;
-reg [31:0] size_axis_packet_size;
-reg [31:0] size_axis_packet_size_backup;
 reg end_phi;
 reg [31:0] size_phi;
 reg [31:0] size_phi_backup;
@@ -663,6 +660,9 @@ reg [31:0] size_xpos3_backup;
 reg end_xpos4;
 reg [31:0] size_xpos4;
 reg [31:0] size_xpos4_backup;
+reg end_axis_packet_size;
+reg [31:0] size_axis_packet_size;
+reg [31:0] size_axis_packet_size_backup;
 reg end_in1_real;
 reg [31:0] size_in1_real;
 reg [31:0] size_in1_real_backup;

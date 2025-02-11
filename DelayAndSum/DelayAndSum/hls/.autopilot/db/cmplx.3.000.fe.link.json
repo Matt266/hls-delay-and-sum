@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 9,
-    "calls": "1",
+    "calls": "8",
     "file": "DelayAndSum.cpp",
     "fileloc": 5,
     "instructions": 450,
@@ -19,113 +19,14 @@
   },
   "1": {
     "basicblocks": 1,
-    "calls": "3 3 3 3",
-    "file": "CalculateWeights.cpp",
-    "fileloc": 17,
-    "instructions": 41,
-    "loads": {
-      "L": 12
-    },
-    "name": "CalculateWeights",
-    "stores": {
-      "L": 12
-    },
-    "total_instructions": 78641
-  },
-  "10": {
-    "basicblocks": 19,
-    "calls": "5 8",
-    "file": "hls_cordic_apfixed.h",
-    "fileloc": 201,
-    "instructions": 261,
-    "loads": {
-      "L": 15
-    },
-    "name": "generic_sincos<8, 3>",
-    "stores": {
-      "L": 14
-    },
-    "total_instructions": 4532
-  },
-  "2": {
-    "basicblocks": 10,
-    "calls": "",
-    "file": "hls_cordic_apfixed.h",
-    "fileloc": 51,
-    "instructions": 194,
-    "loads": {
-      "L": 10
-    },
-    "name": "cordic_circ_apfixed<18, 3, 0>",
-    "stores": {
-      "L": 7
-    },
-    "total_instructions": 1824
-  },
-  "3": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "CalculateWeights.cpp",
-    "fileloc": 4,
-    "instructions": 107,
-    "loads": {
-      "L": 4
-    },
-    "name": "CalculateElement",
-    "stores": {
-      "L": 4
-    },
-    "total_instructions": 19650
-  },
-  "4": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_cordic_apfixed.cpp",
-    "fileloc": 41,
-    "instructions": 129,
-    "name": "__cxx_global_var_init",
-    "total_instructions": 2177
-  },
-  "5": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_cordic_apfixed.h",
-    "fileloc": 32,
-    "instructions": 67,
-    "loads": {
-      "L": 2
-    },
-    "name": "circ_range_redux<8, 3, 9>",
-    "stores": {
-      "L": 2
-    },
-    "total_instructions": 850
-  },
-  "6": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_cordic_apfixed.h",
-    "fileloc": 32,
-    "instructions": 67,
-    "loads": {
-      "L": 2
-    },
-    "name": "circ_range_redux<16, 1, 17>",
-    "stores": {
-      "L": 2
-    },
-    "total_instructions": 856
-  },
-  "7": {
-    "basicblocks": 1,
-    "calls": "4",
+    "calls": "6",
     "file": "hls_cordic_apfixed.pp.cpp",
     "fileloc": 0,
     "instructions": 2,
     "name": "",
     "total_instructions": 2179
   },
-  "8": {
+  "10": {
     "basicblocks": 10,
     "calls": "",
     "file": "hls_cordic_apfixed.h",
@@ -140,9 +41,24 @@
     },
     "total_instructions": 1824
   },
-  "9": {
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 32,
+    "instructions": 67,
+    "loads": {
+      "L": 2
+    },
+    "name": "circ_range_redux<8, 3, 9>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 850
+  },
+  "3": {
     "basicblocks": 19,
-    "calls": "6 2",
+    "calls": "5 7",
     "file": "hls_cordic_apfixed.h",
     "fileloc": 201,
     "instructions": 261,
@@ -154,5 +70,89 @@
       "L": 14
     },
     "total_instructions": 4442
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "CalculateWeights.cpp",
+    "fileloc": 4,
+    "instructions": 107,
+    "loads": {
+      "L": 4
+    },
+    "name": "CalculateElement",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 19650
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 32,
+    "instructions": 67,
+    "loads": {
+      "L": 2
+    },
+    "name": "circ_range_redux<16, 1, 17>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 856
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_cordic_apfixed.cpp",
+    "fileloc": 41,
+    "instructions": 129,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 2177
+  },
+  "7": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 51,
+    "instructions": 194,
+    "loads": {
+      "L": 10
+    },
+    "name": "cordic_circ_apfixed<18, 3, 0>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 1824
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "4 4 4 4",
+    "file": "CalculateWeights.cpp",
+    "fileloc": 17,
+    "instructions": 41,
+    "loads": {
+      "L": 12
+    },
+    "name": "CalculateWeights",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 78641
+  },
+  "9": {
+    "basicblocks": 19,
+    "calls": "2 10",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 201,
+    "instructions": 261,
+    "loads": {
+      "L": 15
+    },
+    "name": "generic_sincos<8, 3>",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 4532
   }
 }

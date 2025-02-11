@@ -83,13 +83,13 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "c.DelayAndSum.autotvin_axis_packet_size.dat"
          "c.DelayAndSum.autotvin_phi.dat"
          "c.DelayAndSum.autotvin_fc.dat"
          "c.DelayAndSum.autotvin_xpos1.dat"
          "c.DelayAndSum.autotvin_xpos2.dat"
          "c.DelayAndSum.autotvin_xpos3.dat"
          "c.DelayAndSum.autotvin_xpos4.dat"
+         "c.DelayAndSum.autotvin_axis_packet_size.dat"
          "c.DelayAndSum.autotvin_in1_real.dat"
          "c.DelayAndSum.autotvin_in1_imag.dat"
          "c.DelayAndSum.autotvin_in2_real.dat"

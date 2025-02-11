@@ -4,18 +4,6 @@ set moduleIsExternC "1"
 set rawDecl ""
 set globalVariable ""
 set PortList ""
-set PortName "axis_packet_size"
-set BitWidth "26"
-set ArrayOpt ""
-set Const "0"
-set Volatile "1"
-set Pointer "1"
-set Reference "0"
-set Dims [list 0]
-set Interface "wire"
-set DataType "void"
-set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
-lappend PortList $Port
 set PortName "phi"
 set BitWidth "8"
 set ArrayOpt ""
@@ -78,6 +66,18 @@ set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile
 lappend PortList $Port
 set PortName "xpos4"
 set BitWidth "32"
+set ArrayOpt ""
+set Const "0"
+set Volatile "1"
+set Pointer "1"
+set Reference "0"
+set Dims [list 0]
+set Interface "wire"
+set DataType "void"
+set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
+lappend PortList $Port
+set PortName "axis_packet_size"
+set BitWidth "26"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"

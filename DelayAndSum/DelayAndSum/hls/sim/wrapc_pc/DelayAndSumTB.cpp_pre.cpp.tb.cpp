@@ -77789,15 +77789,10 @@ typedef hls::axis<fxd_16_1_t, 0, 0, 0, (0b00000001 | 0b00010000), true> fxd_16_1
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_DelayAndSum_sw(ap_uint<26> *, ap_fixed<8, 3, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<hls::axis<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0, '\x11', true>, 0> &, hls::stream<hls::axis<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0, '\x11', true>, 0> &);
+void apatb_DelayAndSum_sw(ap_fixed<8, 3, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_fixed<32, 16, AP_TRN, AP_WRAP, 0> *, ap_uint<26> *, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0> &, hls::stream<hls::axis<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0, '\x11', true>, 0> &, hls::stream<hls::axis<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0, '\x11', true>, 0> &);
 #endif
 # 23 "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum.hpp"
 void DelayAndSum(
-
-
-
-    uint_26_t *axis_packet_size,
-
 
     fxd_8_3_t *phi,
 
@@ -77809,6 +77804,10 @@ void DelayAndSum(
     fxd_32_16_t *xpos2,
     fxd_32_16_t *xpos3,
     fxd_32_16_t *xpos4,
+
+
+
+    uint_26_t *axis_packet_size,
 
 
     hls::stream<fxd_16_1_t> &in1_real,
@@ -77870,7 +77869,7 @@ hls::stream<fxd_16_1_pkt_t> out_imag;
 fxd_16_1_pkt_t out_real_pkt;
 fxd_16_1_pkt_t out_imag_pkt;
 
-uint_26_t axis_packet_size = 5;
+uint_26_t axis_packet_size = 3;
 fxd_8_3_t phi = 70 * 2*pi/360;
 fxd_32_16_t fc = 3750;
 fxd_32_16_t xpos1 = -60;
@@ -77908,13 +77907,13 @@ int main(){
 #endif
 # 50 "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSumTB.cpp"
 DelayAndSum(
-            &axis_packet_size,
             &phi,
             &fc,
             &xpos1,
             &xpos2,
             &xpos3,
             &xpos4,
+            &axis_packet_size,
             in1_real,
             in1_imag,
             in2_real,

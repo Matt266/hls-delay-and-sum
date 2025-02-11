@@ -89,7 +89,7 @@
 0x0
 [[/transaction]]
 [[transaction]]         30
-0x0
+0x1
 [[/transaction]]
 [[transaction]]         31
 0x0
@@ -98,7 +98,7 @@
 0x0
 [[/transaction]]
 [[transaction]]         33
-0x0
+0x1
 [[/transaction]]
 [[transaction]]         34
 0x0
@@ -107,16 +107,16 @@
 0x0
 [[/transaction]]
 [[transaction]]         36
-0x0
+0x1
 [[/transaction]]
 [[transaction]]         37
-0x1
+0x0
 [[/transaction]]
 [[transaction]]         38
 0x0
 [[/transaction]]
 [[transaction]]         39
-0x0
+0x1
 [[/transaction]]
 [[transaction]]         40
 0x0
@@ -134,16 +134,16 @@
 0x0
 [[/transaction]]
 [[transaction]]         45
-0x0
+0x1
 [[/transaction]]
 [[transaction]]         46
 0x0
 [[/transaction]]
 [[transaction]]         47
-0x1
+0x0
 [[/transaction]]
 [[transaction]]         48
-0x0
+0x1
 [[/transaction]]
 [[transaction]]         49
 0x0
@@ -152,16 +152,16 @@
 0x0
 [[/transaction]]
 [[transaction]]         51
-0x0
+0x1
 [[/transaction]]
 [[transaction]]         52
-0x1
+0x0
 [[/transaction]]
 [[transaction]]         53
 0x0
 [[/transaction]]
 [[transaction]]         54
-0x0
+0x1
 [[/transaction]]
 [[transaction]]         55
 0x0
@@ -179,16 +179,16 @@
 0x0
 [[/transaction]]
 [[transaction]]         60
-0x0
+0x1
 [[/transaction]]
 [[transaction]]         61
 0x0
 [[/transaction]]
 [[transaction]]         62
-0x1
+0x0
 [[/transaction]]
 [[transaction]]         63
-0x0
+0x1
 [[/transaction]]
 [[transaction]]         64
 0x0

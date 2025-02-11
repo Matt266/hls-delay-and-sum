@@ -21,23 +21,6 @@ int XDelayandsum_CfgInitialize(XDelayandsum *InstancePtr, XDelayandsum_Config *C
 }
 #endif
 
-void XDelayandsum_Set_axis_packet_size(XDelayandsum *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_AXIS_PACKET_SIZE_DATA, Data);
-}
-
-u32 XDelayandsum_Get_axis_packet_size(XDelayandsum *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_AXIS_PACKET_SIZE_DATA);
-    return Data;
-}
-
 void XDelayandsum_Set_phi(XDelayandsum *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
@@ -137,6 +120,23 @@ u32 XDelayandsum_Get_xpos4(XDelayandsum *InstancePtr) {
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
     Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_XPOS4_DATA);
+    return Data;
+}
+
+void XDelayandsum_Set_axis_packet_size(XDelayandsum *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_AXIS_PACKET_SIZE_DATA, Data);
+}
+
+u32 XDelayandsum_Get_axis_packet_size(XDelayandsum *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_AXIS_PACKET_SIZE_DATA);
     return Data;
 }
 

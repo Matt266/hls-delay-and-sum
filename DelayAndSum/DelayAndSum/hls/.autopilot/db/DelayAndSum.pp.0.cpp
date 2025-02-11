@@ -10354,11 +10354,6 @@ typedef hls::axis<fxd_16_1_t, 0, 0, 0, (0b00000001 | 0b00010000), true> fxd_16_1
 
 __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
-
-
-    uint_26_t *axis_packet_size,
-
-
     fxd_8_3_t *phi,
 
 
@@ -10369,6 +10364,10 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     fxd_32_16_t *xpos2,
     fxd_32_16_t *xpos3,
     fxd_32_16_t *xpos4,
+
+
+
+    uint_26_t *axis_packet_size,
 
 
     hls::stream<fxd_16_1_t> &in1_real,
@@ -12598,12 +12597,6 @@ namespace std
 
 __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
-
-
-
-    uint_26_t *axis_packet_size,
-
-
     fxd_8_3_t *phi,
 
 
@@ -12614,6 +12607,10 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     fxd_32_16_t *xpos2,
     fxd_32_16_t *xpos3,
     fxd_32_16_t *xpos4,
+
+
+
+    uint_26_t *axis_packet_size,
 
 
     hls::stream<fxd_16_1_t> &in1_real,
@@ -12629,7 +12626,7 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 ){
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=DelayAndSum
-# 35 "DelayAndSum.cpp"
+# 33 "DelayAndSum.cpp"
 
 #pragma HLS top name=DelayAndSum
 #pragma HLS interface mode=ap_ctrl_none port=return
@@ -12649,13 +12646,13 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 #pragma HLS INTERFACE mode=axis port=out_imag
 
 
-#pragma HLS INTERFACE mode=s_axilite port=axis_packet_size
 #pragma HLS INTERFACE mode=s_axilite port=phi
 #pragma HLS INTERFACE mode=s_axilite port=fc
 #pragma HLS INTERFACE mode=s_axilite port=xpos1
 #pragma HLS INTERFACE mode=s_axilite port=xpos2
 #pragma HLS INTERFACE mode=s_axilite port=xpos3
 #pragma HLS INTERFACE mode=s_axilite port=xpos4
+#pragma HLS INTERFACE mode=s_axilite port=axis_packet_size
 
 #pragma HLS pipeline II=1
 
@@ -12688,26 +12685,10 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     CalculateWeights(phi_buffer, fc_buffer, xpos1_buffer, xpos2_buffer, xpos3_buffer, xpos4_buffer,
                 w1_real, w1_imag, w2_real, w2_imag, w3_real, w3_imag, w4_real, w4_imag);
 
-    fxd_16_1_pkt_t out_real_pkt;
-    fxd_16_1_pkt_t out_imag_pkt;
-
-
-
-
-
-
-    out_real_pkt.data = (in1_real_buffer * w1_real + in1_imag_buffer * w1_imag
-                +in2_real_buffer * w2_real + in2_imag_buffer * w2_imag
-                +in3_real_buffer * w3_real + in3_imag_buffer * w3_imag
-                +in4_real_buffer * w4_real + in4_imag_buffer * w4_imag);
-    out_imag_pkt.data = (in1_imag_buffer * w1_real - in1_real_buffer * w1_imag
-                +in2_imag_buffer * w2_real - in2_real_buffer * w2_imag
-                +in3_imag_buffer * w3_real - in3_real_buffer * w3_imag
-                +in4_imag_buffer * w4_real - in4_real_buffer * w4_imag);
-
 
     static uint_26_t count = 0;
-
+    fxd_16_1_pkt_t out_real_pkt;
+    fxd_16_1_pkt_t out_imag_pkt;
     if(axis_packet_size_buffer == 0){
 
         count = 0;
@@ -12725,6 +12706,20 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
             out_imag_pkt.last[0] = true;
         }
     }
+
+
+
+
+
+
+    out_real_pkt.data = (in1_real_buffer * w1_real + in1_imag_buffer * w1_imag
+                +in2_real_buffer * w2_real + in2_imag_buffer * w2_imag
+                +in3_real_buffer * w3_real + in3_imag_buffer * w3_imag
+                +in4_real_buffer * w4_real + in4_imag_buffer * w4_imag);
+    out_imag_pkt.data = (in1_imag_buffer * w1_real - in1_real_buffer * w1_imag
+                +in2_imag_buffer * w2_real - in2_real_buffer * w2_imag
+                +in3_imag_buffer * w3_real - in3_real_buffer * w3_imag
+                +in4_imag_buffer * w4_real - in4_real_buffer * w4_imag);
 
     out_real.write(out_real_pkt);
     out_imag.write(out_imag_pkt);

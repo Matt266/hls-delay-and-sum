@@ -37,18 +37,15 @@ module AESL_axi_slave_control (
     );
 
 //------------------------Parameter----------------------
-`define TV_IN_axis_packet_size "../tv/cdatafile/c.DelayAndSum.autotvin_axis_packet_size.dat"
 `define TV_IN_phi "../tv/cdatafile/c.DelayAndSum.autotvin_phi.dat"
 `define TV_IN_fc "../tv/cdatafile/c.DelayAndSum.autotvin_fc.dat"
 `define TV_IN_xpos1 "../tv/cdatafile/c.DelayAndSum.autotvin_xpos1.dat"
 `define TV_IN_xpos2 "../tv/cdatafile/c.DelayAndSum.autotvin_xpos2.dat"
 `define TV_IN_xpos3 "../tv/cdatafile/c.DelayAndSum.autotvin_xpos3.dat"
 `define TV_IN_xpos4 "../tv/cdatafile/c.DelayAndSum.autotvin_xpos4.dat"
+`define TV_IN_axis_packet_size "../tv/cdatafile/c.DelayAndSum.autotvin_axis_packet_size.dat"
 parameter ADDR_WIDTH = 7;
 parameter DATA_WIDTH = 32;
-parameter axis_packet_size_DEPTH = 1;
-reg [31 : 0] axis_packet_size_OPERATE_DEPTH = 0;
-parameter axis_packet_size_c_bitwidth = 26;
 parameter phi_DEPTH = 1;
 reg [31 : 0] phi_OPERATE_DEPTH = 0;
 parameter phi_c_bitwidth = 8;
@@ -67,13 +64,16 @@ parameter xpos3_c_bitwidth = 32;
 parameter xpos4_DEPTH = 1;
 reg [31 : 0] xpos4_OPERATE_DEPTH = 0;
 parameter xpos4_c_bitwidth = 32;
-parameter axis_packet_size_data_in_addr = 16;
-parameter phi_data_in_addr = 24;
-parameter fc_data_in_addr = 32;
-parameter xpos1_data_in_addr = 40;
-parameter xpos2_data_in_addr = 48;
-parameter xpos3_data_in_addr = 56;
-parameter xpos4_data_in_addr = 64;
+parameter axis_packet_size_DEPTH = 1;
+reg [31 : 0] axis_packet_size_OPERATE_DEPTH = 0;
+parameter axis_packet_size_c_bitwidth = 26;
+parameter phi_data_in_addr = 16;
+parameter fc_data_in_addr = 24;
+parameter xpos1_data_in_addr = 32;
+parameter xpos2_data_in_addr = 40;
+parameter xpos3_data_in_addr = 48;
+parameter xpos4_data_in_addr = 56;
+parameter axis_packet_size_data_in_addr = 64;
 
 output [ADDR_WIDTH - 1 : 0] TRAN_s_axi_control_AWADDR;
 output  TRAN_s_axi_control_AWVALID;
@@ -111,9 +111,6 @@ reg  ARVALID_reg = 0;
 reg  RREADY_reg = 0;
 reg [DATA_WIDTH - 1 : 0] RDATA_reg = 0;
 reg  BREADY_reg = 0;
-reg [DATA_WIDTH - 1 : 0] mem_axis_packet_size [axis_packet_size_DEPTH - 1 : 0] = '{default : 'h0};
-reg [DATA_WIDTH-1 : 0] image_mem_axis_packet_size [ (axis_packet_size_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * axis_packet_size_DEPTH -1 : 0] = '{default : 'hz};
-reg axis_packet_size_write_data_finish;
 reg [DATA_WIDTH - 1 : 0] mem_phi [phi_DEPTH - 1 : 0] = '{default : 'h0};
 reg [DATA_WIDTH-1 : 0] image_mem_phi [ (phi_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * phi_DEPTH -1 : 0] = '{default : 'hz};
 reg phi_write_data_finish;
@@ -132,6 +129,9 @@ reg xpos3_write_data_finish;
 reg [DATA_WIDTH - 1 : 0] mem_xpos4 [xpos4_DEPTH - 1 : 0] = '{default : 'h0};
 reg [DATA_WIDTH-1 : 0] image_mem_xpos4 [ (xpos4_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * xpos4_DEPTH -1 : 0] = '{default : 'hz};
 reg xpos4_write_data_finish;
+reg [DATA_WIDTH - 1 : 0] mem_axis_packet_size [axis_packet_size_DEPTH - 1 : 0] = '{default : 'h0};
+reg [DATA_WIDTH-1 : 0] image_mem_axis_packet_size [ (axis_packet_size_c_bitwidth+DATA_WIDTH-1)/DATA_WIDTH * axis_packet_size_DEPTH -1 : 0] = '{default : 'hz};
+reg axis_packet_size_write_data_finish;
 reg AESL_ready_out_index_reg = 0;
 reg AESL_write_start_finish = 0;
 reg AESL_ready_reg;
@@ -146,11 +146,6 @@ reg process_3_finish = 0;
 reg process_4_finish = 0;
 reg process_5_finish = 0;
 reg process_6_finish = 0;
-//write axis_packet_size reg
-reg [31 : 0] write_axis_packet_size_count = 0;
-reg [31 : 0] axis_packet_size_diff_count = 0;
-reg write_axis_packet_size_run_flag = 0;
-reg write_one_axis_packet_size_data_done = 0;
 //write phi reg
 reg [31 : 0] write_phi_count = 0;
 reg [31 : 0] phi_diff_count = 0;
@@ -181,6 +176,11 @@ reg [31 : 0] write_xpos4_count = 0;
 reg [31 : 0] xpos4_diff_count = 0;
 reg write_xpos4_run_flag = 0;
 reg write_one_xpos4_data_done = 0;
+//write axis_packet_size reg
+reg [31 : 0] write_axis_packet_size_count = 0;
+reg [31 : 0] axis_packet_size_diff_count = 0;
+reg write_axis_packet_size_run_flag = 0;
+reg write_one_axis_packet_size_data_done = 0;
 
 //===================process control=================
 reg [31 : 0] ongoing_process_number = 0;
@@ -197,7 +197,7 @@ assign TRAN_s_axi_control_ARADDR = ARADDR_reg;
 assign TRAN_s_axi_control_ARVALID = ARVALID_reg;
 assign TRAN_s_axi_control_RREADY = RREADY_reg;
 assign TRAN_s_axi_control_BREADY = BREADY_reg;
-assign TRAN_control_write_data_finish = 1 & axis_packet_size_write_data_finish & phi_write_data_finish & fc_write_data_finish & xpos1_write_data_finish & xpos2_write_data_finish & xpos3_write_data_finish & xpos4_write_data_finish;
+assign TRAN_control_write_data_finish = 1 & phi_write_data_finish & fc_write_data_finish & xpos1_write_data_finish & xpos2_write_data_finish & xpos3_write_data_finish & xpos4_write_data_finish & axis_packet_size_write_data_finish;
 always @(TRAN_control_done_in) 
 begin
     AESL_done_index_reg <= TRAN_control_done_in;
@@ -384,148 +384,6 @@ end
 
 always @(reset or posedge clk) begin
     if (reset == 0) begin
-        write_axis_packet_size_run_flag <= 0; 
-        count_operate_depth_by_bitwidth_and_depth (axis_packet_size_c_bitwidth, axis_packet_size_DEPTH, axis_packet_size_OPERATE_DEPTH);
-    end
-    else begin
-        if (AESL_ready_reg === 1) begin
-            write_axis_packet_size_run_flag <= 1; 
-        end
-        else if ((write_one_axis_packet_size_data_done == 1 && write_axis_packet_size_count == axis_packet_size_diff_count - 1) || axis_packet_size_diff_count == 0) begin
-            write_axis_packet_size_run_flag <= 0; 
-        end
-    end
-end
-
-always @(reset or posedge clk) begin
-    if (reset == 0) begin
-        write_axis_packet_size_count = 0;
-    end
-    else begin
-        if (AESL_ready_reg === 1) begin
-            write_axis_packet_size_count = 0;
-        end
-        if (write_one_axis_packet_size_data_done === 1) begin
-            write_axis_packet_size_count = write_axis_packet_size_count + 1;
-        end
-    end
-end
-
-always @(reset or posedge clk) begin
-    if (reset == 0) begin
-        axis_packet_size_write_data_finish <= 0;
-    end
-    else begin
-        if (TRAN_control_start_in === 1) begin
-            axis_packet_size_write_data_finish <= 0;
-        end
-        if (write_axis_packet_size_run_flag == 1 && write_axis_packet_size_count == axis_packet_size_diff_count) begin
-            axis_packet_size_write_data_finish <= 1;
-        end
-    end
-end
-
-initial begin : initial_diff_counter_axis_packet_size
-    integer four_byte_num;
-    integer ceil_align_to_pow_of_two_four_byte_num;
-    integer c_bitwidth;
-    integer i;
-    integer j;
-    integer k;
-    reg [31 : 0] axis_packet_size_data_tmp_reg;
-    wait(reset === 1);
-    @(posedge clk);
-    c_bitwidth = axis_packet_size_c_bitwidth;
-    count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num);
-    ceil_align_to_pow_of_two_four_byte_num = ceil_align_to_pow_of_two(four_byte_num);
-    while (1) begin
-        wait (AESL_ready_reg === 1);
-        axis_packet_size_diff_count = 0;
-
-        for (k = 0; k < axis_packet_size_OPERATE_DEPTH; k = k + 1) begin
-            for (i = 0; i < four_byte_num; i = i + 1) begin
-                if (axis_packet_size_c_bitwidth < 32) begin
-                    axis_packet_size_data_tmp_reg = mem_axis_packet_size[k];
-                end
-                else begin
-                    for (j = 0; j < 32; j = j + 1) begin
-                        if (i*32 + j < axis_packet_size_c_bitwidth) begin
-                            axis_packet_size_data_tmp_reg[j] = mem_axis_packet_size[k][i*32 + j];
-                        end
-                        else begin
-                            axis_packet_size_data_tmp_reg[j] = 0;
-                        end
-                    end
-                end
-                if(image_mem_axis_packet_size[k * four_byte_num  + i]!==axis_packet_size_data_tmp_reg) begin
-                axis_packet_size_diff_count = axis_packet_size_diff_count + 1;
-                end
-            end
-        end
-
-        @(posedge clk);
-    end
-end
-
-initial begin : write_axis_packet_size
-    integer write_axis_packet_size_resp;
-    integer process_num ;
-    integer get_ack;
-    integer four_byte_num;
-    integer ceil_align_to_pow_of_two_four_byte_num;
-    integer c_bitwidth;
-    integer i;
-    integer j;
-    integer check_axis_packet_size_count;
-    reg [31 : 0] axis_packet_size_data_tmp_reg;
-    wait(reset === 1);
-    @(posedge clk);
-    c_bitwidth = axis_packet_size_c_bitwidth;
-    process_num = 0;
-    count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num);
-    ceil_align_to_pow_of_two_four_byte_num = ceil_align_to_pow_of_two(four_byte_num);
-    while (1) begin
-        process_0_finish <= 0;
-
-        for (check_axis_packet_size_count = 0; check_axis_packet_size_count < axis_packet_size_OPERATE_DEPTH; check_axis_packet_size_count = check_axis_packet_size_count + 1) begin
-            wait (ongoing_process_number === process_num && process_busy === 0);
-            get_ack = 1;
-            if (write_axis_packet_size_run_flag === 1 && get_ack === 1) begin
-                process_busy = 1;
-                //write axis_packet_size data 
-                for (i = 0; i < four_byte_num; i = i + 1) begin
-                    if (axis_packet_size_c_bitwidth < 32) begin
-                        axis_packet_size_data_tmp_reg = mem_axis_packet_size[check_axis_packet_size_count];
-                    end
-                    else begin
-                        for (j = 0; j < 32; j = j + 1) begin
-                            if (i*32 + j < axis_packet_size_c_bitwidth) begin
-                                axis_packet_size_data_tmp_reg[j] = mem_axis_packet_size[check_axis_packet_size_count][i*32 + j];
-                            end
-                            else begin
-                                axis_packet_size_data_tmp_reg[j] = 0;
-                            end
-                        end
-                    end
-                    if(image_mem_axis_packet_size[check_axis_packet_size_count * four_byte_num  + i]!==axis_packet_size_data_tmp_reg) begin
-                        image_mem_axis_packet_size[check_axis_packet_size_count * four_byte_num + i]=axis_packet_size_data_tmp_reg;
-                        write (axis_packet_size_data_in_addr + check_axis_packet_size_count * ceil_align_to_pow_of_two_four_byte_num * 4 + i * 4, axis_packet_size_data_tmp_reg, write_axis_packet_size_resp);
-                        write_one_axis_packet_size_data_done <= 1;
-                        @(posedge clk);
-                        write_one_axis_packet_size_data_done <= 0;
-                    end
-                end
-            end
-            process_busy = 0;
-        end
-
-        process_0_finish <= 1;
-        @(posedge clk);
-    end    
-end
-
-always @(reset or posedge clk) begin
-    if (reset == 0) begin
         write_phi_run_flag <= 0; 
         count_operate_depth_by_bitwidth_and_depth (phi_c_bitwidth, phi_DEPTH, phi_OPERATE_DEPTH);
     end
@@ -623,11 +481,11 @@ initial begin : write_phi
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = phi_c_bitwidth;
-    process_num = 1;
+    process_num = 0;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num);
     ceil_align_to_pow_of_two_four_byte_num = ceil_align_to_pow_of_two(four_byte_num);
     while (1) begin
-        process_1_finish <= 0;
+        process_0_finish <= 0;
 
         for (check_phi_count = 0; check_phi_count < phi_OPERATE_DEPTH; check_phi_count = check_phi_count + 1) begin
             wait (ongoing_process_number === process_num && process_busy === 0);
@@ -661,7 +519,7 @@ initial begin : write_phi
             process_busy = 0;
         end
 
-        process_1_finish <= 1;
+        process_0_finish <= 1;
         @(posedge clk);
     end    
 end
@@ -765,11 +623,11 @@ initial begin : write_fc
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = fc_c_bitwidth;
-    process_num = 2;
+    process_num = 1;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num);
     ceil_align_to_pow_of_two_four_byte_num = ceil_align_to_pow_of_two(four_byte_num);
     while (1) begin
-        process_2_finish <= 0;
+        process_1_finish <= 0;
 
         for (check_fc_count = 0; check_fc_count < fc_OPERATE_DEPTH; check_fc_count = check_fc_count + 1) begin
             wait (ongoing_process_number === process_num && process_busy === 0);
@@ -803,7 +661,7 @@ initial begin : write_fc
             process_busy = 0;
         end
 
-        process_2_finish <= 1;
+        process_1_finish <= 1;
         @(posedge clk);
     end    
 end
@@ -907,11 +765,11 @@ initial begin : write_xpos1
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = xpos1_c_bitwidth;
-    process_num = 3;
+    process_num = 2;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num);
     ceil_align_to_pow_of_two_four_byte_num = ceil_align_to_pow_of_two(four_byte_num);
     while (1) begin
-        process_3_finish <= 0;
+        process_2_finish <= 0;
 
         for (check_xpos1_count = 0; check_xpos1_count < xpos1_OPERATE_DEPTH; check_xpos1_count = check_xpos1_count + 1) begin
             wait (ongoing_process_number === process_num && process_busy === 0);
@@ -945,7 +803,7 @@ initial begin : write_xpos1
             process_busy = 0;
         end
 
-        process_3_finish <= 1;
+        process_2_finish <= 1;
         @(posedge clk);
     end    
 end
@@ -1049,11 +907,11 @@ initial begin : write_xpos2
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = xpos2_c_bitwidth;
-    process_num = 4;
+    process_num = 3;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num);
     ceil_align_to_pow_of_two_four_byte_num = ceil_align_to_pow_of_two(four_byte_num);
     while (1) begin
-        process_4_finish <= 0;
+        process_3_finish <= 0;
 
         for (check_xpos2_count = 0; check_xpos2_count < xpos2_OPERATE_DEPTH; check_xpos2_count = check_xpos2_count + 1) begin
             wait (ongoing_process_number === process_num && process_busy === 0);
@@ -1087,7 +945,7 @@ initial begin : write_xpos2
             process_busy = 0;
         end
 
-        process_4_finish <= 1;
+        process_3_finish <= 1;
         @(posedge clk);
     end    
 end
@@ -1191,11 +1049,11 @@ initial begin : write_xpos3
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = xpos3_c_bitwidth;
-    process_num = 5;
+    process_num = 4;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num);
     ceil_align_to_pow_of_two_four_byte_num = ceil_align_to_pow_of_two(four_byte_num);
     while (1) begin
-        process_5_finish <= 0;
+        process_4_finish <= 0;
 
         for (check_xpos3_count = 0; check_xpos3_count < xpos3_OPERATE_DEPTH; check_xpos3_count = check_xpos3_count + 1) begin
             wait (ongoing_process_number === process_num && process_busy === 0);
@@ -1229,7 +1087,7 @@ initial begin : write_xpos3
             process_busy = 0;
         end
 
-        process_5_finish <= 1;
+        process_4_finish <= 1;
         @(posedge clk);
     end    
 end
@@ -1333,11 +1191,11 @@ initial begin : write_xpos4
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = xpos4_c_bitwidth;
-    process_num = 6;
+    process_num = 5;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num);
     ceil_align_to_pow_of_two_four_byte_num = ceil_align_to_pow_of_two(four_byte_num);
     while (1) begin
-        process_6_finish <= 0;
+        process_5_finish <= 0;
 
         for (check_xpos4_count = 0; check_xpos4_count < xpos4_OPERATE_DEPTH; check_xpos4_count = check_xpos4_count + 1) begin
             wait (ongoing_process_number === process_num && process_busy === 0);
@@ -1371,6 +1229,148 @@ initial begin : write_xpos4
             process_busy = 0;
         end
 
+        process_5_finish <= 1;
+        @(posedge clk);
+    end    
+end
+
+always @(reset or posedge clk) begin
+    if (reset == 0) begin
+        write_axis_packet_size_run_flag <= 0; 
+        count_operate_depth_by_bitwidth_and_depth (axis_packet_size_c_bitwidth, axis_packet_size_DEPTH, axis_packet_size_OPERATE_DEPTH);
+    end
+    else begin
+        if (AESL_ready_reg === 1) begin
+            write_axis_packet_size_run_flag <= 1; 
+        end
+        else if ((write_one_axis_packet_size_data_done == 1 && write_axis_packet_size_count == axis_packet_size_diff_count - 1) || axis_packet_size_diff_count == 0) begin
+            write_axis_packet_size_run_flag <= 0; 
+        end
+    end
+end
+
+always @(reset or posedge clk) begin
+    if (reset == 0) begin
+        write_axis_packet_size_count = 0;
+    end
+    else begin
+        if (AESL_ready_reg === 1) begin
+            write_axis_packet_size_count = 0;
+        end
+        if (write_one_axis_packet_size_data_done === 1) begin
+            write_axis_packet_size_count = write_axis_packet_size_count + 1;
+        end
+    end
+end
+
+always @(reset or posedge clk) begin
+    if (reset == 0) begin
+        axis_packet_size_write_data_finish <= 0;
+    end
+    else begin
+        if (TRAN_control_start_in === 1) begin
+            axis_packet_size_write_data_finish <= 0;
+        end
+        if (write_axis_packet_size_run_flag == 1 && write_axis_packet_size_count == axis_packet_size_diff_count) begin
+            axis_packet_size_write_data_finish <= 1;
+        end
+    end
+end
+
+initial begin : initial_diff_counter_axis_packet_size
+    integer four_byte_num;
+    integer ceil_align_to_pow_of_two_four_byte_num;
+    integer c_bitwidth;
+    integer i;
+    integer j;
+    integer k;
+    reg [31 : 0] axis_packet_size_data_tmp_reg;
+    wait(reset === 1);
+    @(posedge clk);
+    c_bitwidth = axis_packet_size_c_bitwidth;
+    count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num);
+    ceil_align_to_pow_of_two_four_byte_num = ceil_align_to_pow_of_two(four_byte_num);
+    while (1) begin
+        wait (AESL_ready_reg === 1);
+        axis_packet_size_diff_count = 0;
+
+        for (k = 0; k < axis_packet_size_OPERATE_DEPTH; k = k + 1) begin
+            for (i = 0; i < four_byte_num; i = i + 1) begin
+                if (axis_packet_size_c_bitwidth < 32) begin
+                    axis_packet_size_data_tmp_reg = mem_axis_packet_size[k];
+                end
+                else begin
+                    for (j = 0; j < 32; j = j + 1) begin
+                        if (i*32 + j < axis_packet_size_c_bitwidth) begin
+                            axis_packet_size_data_tmp_reg[j] = mem_axis_packet_size[k][i*32 + j];
+                        end
+                        else begin
+                            axis_packet_size_data_tmp_reg[j] = 0;
+                        end
+                    end
+                end
+                if(image_mem_axis_packet_size[k * four_byte_num  + i]!==axis_packet_size_data_tmp_reg) begin
+                axis_packet_size_diff_count = axis_packet_size_diff_count + 1;
+                end
+            end
+        end
+
+        @(posedge clk);
+    end
+end
+
+initial begin : write_axis_packet_size
+    integer write_axis_packet_size_resp;
+    integer process_num ;
+    integer get_ack;
+    integer four_byte_num;
+    integer ceil_align_to_pow_of_two_four_byte_num;
+    integer c_bitwidth;
+    integer i;
+    integer j;
+    integer check_axis_packet_size_count;
+    reg [31 : 0] axis_packet_size_data_tmp_reg;
+    wait(reset === 1);
+    @(posedge clk);
+    c_bitwidth = axis_packet_size_c_bitwidth;
+    process_num = 6;
+    count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num);
+    ceil_align_to_pow_of_two_four_byte_num = ceil_align_to_pow_of_two(four_byte_num);
+    while (1) begin
+        process_6_finish <= 0;
+
+        for (check_axis_packet_size_count = 0; check_axis_packet_size_count < axis_packet_size_OPERATE_DEPTH; check_axis_packet_size_count = check_axis_packet_size_count + 1) begin
+            wait (ongoing_process_number === process_num && process_busy === 0);
+            get_ack = 1;
+            if (write_axis_packet_size_run_flag === 1 && get_ack === 1) begin
+                process_busy = 1;
+                //write axis_packet_size data 
+                for (i = 0; i < four_byte_num; i = i + 1) begin
+                    if (axis_packet_size_c_bitwidth < 32) begin
+                        axis_packet_size_data_tmp_reg = mem_axis_packet_size[check_axis_packet_size_count];
+                    end
+                    else begin
+                        for (j = 0; j < 32; j = j + 1) begin
+                            if (i*32 + j < axis_packet_size_c_bitwidth) begin
+                                axis_packet_size_data_tmp_reg[j] = mem_axis_packet_size[check_axis_packet_size_count][i*32 + j];
+                            end
+                            else begin
+                                axis_packet_size_data_tmp_reg[j] = 0;
+                            end
+                        end
+                    end
+                    if(image_mem_axis_packet_size[check_axis_packet_size_count * four_byte_num  + i]!==axis_packet_size_data_tmp_reg) begin
+                        image_mem_axis_packet_size[check_axis_packet_size_count * four_byte_num + i]=axis_packet_size_data_tmp_reg;
+                        write (axis_packet_size_data_in_addr + check_axis_packet_size_count * ceil_align_to_pow_of_two_four_byte_num * 4 + i * 4, axis_packet_size_data_tmp_reg, write_axis_packet_size_resp);
+                        write_one_axis_packet_size_data_done <= 1;
+                        @(posedge clk);
+                        write_one_axis_packet_size_data_done <= 0;
+                    end
+                end
+            end
+            process_busy = 0;
+        end
+
         process_6_finish <= 1;
         @(posedge clk);
     end    
@@ -1389,139 +1389,6 @@ task read_token;
     end 
 endtask 
  
-//------------------------Read file------------------------ 
- 
-// Read data from file 
-initial begin : read_axis_packet_size_file_process 
-  integer fp; 
-  integer ret; 
-  integer factor; 
-  reg [127 : 0] token; 
-  reg [127 : 0] token_tmp; 
-  //reg [axis_packet_size_c_bitwidth - 1 : 0] token_tmp; 
-  reg [DATA_WIDTH - 1 : 0] tmp_cache_mem; 
-  reg [ 8*5 : 1] str;
-    reg [63:0] trans_depth;
-  integer transaction_idx; 
-  integer i; 
-  transaction_idx = 0; 
-  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
-  count_seperate_factor_by_bitwidth (axis_packet_size_c_bitwidth , factor);
-  fp = $fopen(`TV_IN_axis_packet_size ,"r"); 
-  if(fp == 0) begin                               // Failed to open file 
-      $display("Failed to open file \"%s\"!", `TV_IN_axis_packet_size); 
-      $finish; 
-  end 
-  read_token(fp, token); 
-  if (token != "[[[runtime]]]") begin             // Illegal format 
-      $display("ERROR: Simulation using HLS TB failed.");
-      $finish; 
-  end 
-  read_token(fp, token); 
-  while (token != "[[[/runtime]]]") begin 
-      if (token != "[[transaction]]") begin 
-          $display("ERROR: Simulation using HLS TB failed.");
-          $finish; 
-      end 
-      read_token(fp, token);                        // skip transaction number 
-      @(posedge clk);
-      # 0.2;
-      while(AESL_ready_reg !== 1) begin
-          @(posedge clk); 
-          # 0.2;
-      end
-      for(i = 0; i < axis_packet_size_DEPTH; i = i + 1) begin 
-          read_token(fp, token); 
-          ret = $sscanf(token, "0x%x", token_tmp); 
-          if (factor == 4) begin
-              if (i%factor == 0) begin
-                  tmp_cache_mem [7 : 0] = token_tmp;
-              end
-              if (i%factor == 1) begin
-                  tmp_cache_mem [15 : 8] = token_tmp;
-              end
-              if (i%factor == 2) begin
-                  tmp_cache_mem [23 : 16] = token_tmp;
-              end
-              if (i%factor == 3) begin
-                  tmp_cache_mem [31 : 24] = token_tmp;
-                  mem_axis_packet_size [i/factor] = tmp_cache_mem;
-                  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
-              end
-          end
-          if (factor == 2) begin
-              if (i%factor == 0) begin
-                  tmp_cache_mem [15 : 0] = token_tmp;
-              end
-              if (i%factor == 1) begin
-                  tmp_cache_mem [31 : 16] = token_tmp;
-                  mem_axis_packet_size [i/factor] = tmp_cache_mem;
-                  tmp_cache_mem [DATA_WIDTH - 1: 0] = 0;
-              end
-          end
-          if (factor == 1) begin
-              mem_axis_packet_size [i] = token_tmp;
-          end
-      end 
-      if (factor == 4) begin
-          if (i%factor != 0) begin
-              mem_axis_packet_size [i/factor] = tmp_cache_mem;
-          end
-      end
-      if (factor == 2) begin
-          if (i%factor != 0) begin
-              mem_axis_packet_size [i/factor] = tmp_cache_mem;
-          end
-      end 
-      read_token(fp, token); 
-      if(token != "[[/transaction]]") begin 
-          $display("ERROR: Simulation using HLS TB failed.");
-          $finish; 
-      end 
-      read_token(fp, token); 
-      transaction_idx = transaction_idx + 1; 
-  end 
-  $fclose(fp); 
-end 
- 
-task write_binary_axis_packet_size;
-    input integer fp;
-    input reg[64-1:0] in;
-    input integer in_bw;
-    reg [63:0] tmp_long;
-    reg[64-1:0] local_in;
-    integer char_num;
-    integer long_num;
-    integer i;
-    integer j;
-    begin
-        long_num = (in_bw + 63) / 64;
-        char_num = ((in_bw - 1) % 64 + 7) / 8;
-        for(i=long_num;i>0;i=i-1) begin
-             local_in = in;
-             tmp_long = local_in >> ((i-1)*64);
-             for(j=0;j<64;j=j+1)
-                 if (tmp_long[j] === 1'bx)
-                     tmp_long[j] = 1'b0;
-             if (i == long_num) begin
-                 case(char_num)
-                     1: $fwrite(fp,"%c",tmp_long[7:0]);
-                     2: $fwrite(fp,"%c%c",tmp_long[15:8],tmp_long[7:0]);
-                     3: $fwrite(fp,"%c%c%c",tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     4: $fwrite(fp,"%c%c%c%c",tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     5: $fwrite(fp,"%c%c%c%c%c",tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     6: $fwrite(fp,"%c%c%c%c%c%c",tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     7: $fwrite(fp,"%c%c%c%c%c%c%c",tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     8: $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-                     default: ;
-                 endcase
-             end
-             else begin
-                 $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
-             end
-        end
-    end
-endtask;
 //------------------------Read file------------------------ 
  
 // Read data from file 
@@ -2283,6 +2150,139 @@ initial begin : read_xpos4_file_process
 end 
  
 task write_binary_xpos4;
+    input integer fp;
+    input reg[64-1:0] in;
+    input integer in_bw;
+    reg [63:0] tmp_long;
+    reg[64-1:0] local_in;
+    integer char_num;
+    integer long_num;
+    integer i;
+    integer j;
+    begin
+        long_num = (in_bw + 63) / 64;
+        char_num = ((in_bw - 1) % 64 + 7) / 8;
+        for(i=long_num;i>0;i=i-1) begin
+             local_in = in;
+             tmp_long = local_in >> ((i-1)*64);
+             for(j=0;j<64;j=j+1)
+                 if (tmp_long[j] === 1'bx)
+                     tmp_long[j] = 1'b0;
+             if (i == long_num) begin
+                 case(char_num)
+                     1: $fwrite(fp,"%c",tmp_long[7:0]);
+                     2: $fwrite(fp,"%c%c",tmp_long[15:8],tmp_long[7:0]);
+                     3: $fwrite(fp,"%c%c%c",tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
+                     4: $fwrite(fp,"%c%c%c%c",tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
+                     5: $fwrite(fp,"%c%c%c%c%c",tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
+                     6: $fwrite(fp,"%c%c%c%c%c%c",tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
+                     7: $fwrite(fp,"%c%c%c%c%c%c%c",tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
+                     8: $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
+                     default: ;
+                 endcase
+             end
+             else begin
+                 $fwrite(fp,"%c%c%c%c%c%c%c%c",tmp_long[63:56],tmp_long[55:48],tmp_long[47:40],tmp_long[39:32],tmp_long[31:24],tmp_long[23:16],tmp_long[15:8],tmp_long[7:0]);
+             end
+        end
+    end
+endtask;
+//------------------------Read file------------------------ 
+ 
+// Read data from file 
+initial begin : read_axis_packet_size_file_process 
+  integer fp; 
+  integer ret; 
+  integer factor; 
+  reg [127 : 0] token; 
+  reg [127 : 0] token_tmp; 
+  //reg [axis_packet_size_c_bitwidth - 1 : 0] token_tmp; 
+  reg [DATA_WIDTH - 1 : 0] tmp_cache_mem; 
+  reg [ 8*5 : 1] str;
+    reg [63:0] trans_depth;
+  integer transaction_idx; 
+  integer i; 
+  transaction_idx = 0; 
+  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
+  count_seperate_factor_by_bitwidth (axis_packet_size_c_bitwidth , factor);
+  fp = $fopen(`TV_IN_axis_packet_size ,"r"); 
+  if(fp == 0) begin                               // Failed to open file 
+      $display("Failed to open file \"%s\"!", `TV_IN_axis_packet_size); 
+      $finish; 
+  end 
+  read_token(fp, token); 
+  if (token != "[[[runtime]]]") begin             // Illegal format 
+      $display("ERROR: Simulation using HLS TB failed.");
+      $finish; 
+  end 
+  read_token(fp, token); 
+  while (token != "[[[/runtime]]]") begin 
+      if (token != "[[transaction]]") begin 
+          $display("ERROR: Simulation using HLS TB failed.");
+          $finish; 
+      end 
+      read_token(fp, token);                        // skip transaction number 
+      @(posedge clk);
+      # 0.2;
+      while(AESL_ready_reg !== 1) begin
+          @(posedge clk); 
+          # 0.2;
+      end
+      for(i = 0; i < axis_packet_size_DEPTH; i = i + 1) begin 
+          read_token(fp, token); 
+          ret = $sscanf(token, "0x%x", token_tmp); 
+          if (factor == 4) begin
+              if (i%factor == 0) begin
+                  tmp_cache_mem [7 : 0] = token_tmp;
+              end
+              if (i%factor == 1) begin
+                  tmp_cache_mem [15 : 8] = token_tmp;
+              end
+              if (i%factor == 2) begin
+                  tmp_cache_mem [23 : 16] = token_tmp;
+              end
+              if (i%factor == 3) begin
+                  tmp_cache_mem [31 : 24] = token_tmp;
+                  mem_axis_packet_size [i/factor] = tmp_cache_mem;
+                  tmp_cache_mem [DATA_WIDTH - 1 : 0] = 0;
+              end
+          end
+          if (factor == 2) begin
+              if (i%factor == 0) begin
+                  tmp_cache_mem [15 : 0] = token_tmp;
+              end
+              if (i%factor == 1) begin
+                  tmp_cache_mem [31 : 16] = token_tmp;
+                  mem_axis_packet_size [i/factor] = tmp_cache_mem;
+                  tmp_cache_mem [DATA_WIDTH - 1: 0] = 0;
+              end
+          end
+          if (factor == 1) begin
+              mem_axis_packet_size [i] = token_tmp;
+          end
+      end 
+      if (factor == 4) begin
+          if (i%factor != 0) begin
+              mem_axis_packet_size [i/factor] = tmp_cache_mem;
+          end
+      end
+      if (factor == 2) begin
+          if (i%factor != 0) begin
+              mem_axis_packet_size [i/factor] = tmp_cache_mem;
+          end
+      end 
+      read_token(fp, token); 
+      if(token != "[[/transaction]]") begin 
+          $display("ERROR: Simulation using HLS TB failed.");
+          $finish; 
+      end 
+      read_token(fp, token); 
+      transaction_idx = transaction_idx + 1; 
+  end 
+  $fclose(fp); 
+end 
+ 
+task write_binary_axis_packet_size;
     input integer fp;
     input reg[64-1:0] in;
     input integer in_bw;

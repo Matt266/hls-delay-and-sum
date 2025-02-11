@@ -1,6 +1,6 @@
-INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlsrun_cosim_summary, at 02/10/25 22:28:48
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum\DelayAndSum.hlsrun_cosim_summary, at 02/11/25 19:05:21
 INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run cosim -work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum -config C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg -cmdlineconfig C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/config.cmdline
-INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Mon Feb 10 22:28:50 +0100 2025
+INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Tue Feb 11 19:05:24 +0100 2025
 INFO: [HLS 200-10] In directory 'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum'
 INFO: [HLS 200-2005] Using work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum 
 INFO: [HLS 200-1611] Setting target device to 'xczu48dr-ffvg1517-2-e'
@@ -32,13 +32,14 @@ INFO: [HLS 200-1465] Applying ini 'cosim.wave_debug=1' from C:/Users/matt/OneDri
 INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(9)
 INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(10)
 INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(8)
-INFO: [HLS 200-1465] Applying ini 'package.ip.description=4 channel delay and sum beamformer' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
+INFO: [HLS 200-1465] Applying ini 'package.ip.description=4 channel delay-and-sum beamformer' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(16)
 INFO: [HLS 200-1465] Applying ini 'package.ip.display_name=DelayAndSum' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(15)
 INFO: [HLS 200-1465] Applying ini 'package.ip.vendor=othr' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(22)
+INFO: [HLS 200-1465] Applying ini 'package.ip.version=2.0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(27)
 INFO: [HLS 200-1465] Applying ini 'package.output.file=C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\DelayAndSum.zip' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(14)
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(5)
 INFO: [HLS 200-1465] Applying ini 'vivado.rtl=vhdl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/hls_config.cfg(21)
-WARNING: [COSIM] found non-self-synchronizing top I/O axis_packet_size
+WARNING: [COSIM] found non-self-synchronizing top I/O phi
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
    Build using "C:/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang++"
@@ -196,16 +197,16 @@ Built simulation snapshot DelayAndSum
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Mon Feb 10 22:29:59 2025
+  **** Start of session at: Tue Feb 11 19:06:33 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 start_gui
-INFO: [Common 17-206] Exiting xsim at Mon Feb 10 22:36:57 2025...
+INFO: [Common 17-206] Exiting xsim at Tue Feb 11 19:08:20 2025...
 INFO: [COSIM 212-316] Starting C post checking ...
 WARNING [HLS SIM]: hls::stream 'hls::stream<hls::axis<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ull, 0ull, 0ull, (unsigned char)17, true>, 0>0' is read while empty, which may result in RTL simulation hanging.
 WARNING [HLS SIM]: hls::stream 'hls::stream<hls::axis<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ull, 0ull, 0ull, (unsigned char)17, true>, 0>1' is read while empty, which may result in RTL simulation hanging.
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 488.881 seconds; peak allocated memory: 297.797 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 8m 13s
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 178.241 seconds; peak allocated memory: 297.898 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 3m 2s

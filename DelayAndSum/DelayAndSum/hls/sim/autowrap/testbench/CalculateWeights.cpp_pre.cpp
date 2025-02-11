@@ -93559,11 +93559,6 @@ typedef hls::axis<fxd_16_1_t, 0, 0, 0, (0b00000001 | 0b00010000), true> fxd_16_1
 
 void DelayAndSum(
 
-
-
-    uint_26_t *axis_packet_size,
-
-
     fxd_8_3_t *phi,
 
 
@@ -93574,6 +93569,10 @@ void DelayAndSum(
     fxd_32_16_t *xpos2,
     fxd_32_16_t *xpos3,
     fxd_32_16_t *xpos4,
+
+
+
+    uint_26_t *axis_packet_size,
 
 
     hls::stream<fxd_16_1_t> &in1_real,

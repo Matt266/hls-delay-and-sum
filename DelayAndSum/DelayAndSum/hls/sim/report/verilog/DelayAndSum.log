@@ -156,12 +156,12 @@ Built simulation snapshot DelayAndSum
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Mon Feb 10 22:29:59 2025
+  **** Start of session at: Tue Feb 11 19:06:33 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 start_gui
-INFO: [Common 17-206] Exiting xsim at Mon Feb 10 22:36:57 2025...
+INFO: [Common 17-206] Exiting xsim at Tue Feb 11 19:08:20 2025...
 WARNING [HLS SIM]: hls::stream 'hls::stream<hls::axis<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ull, 0ull, 0ull, (unsigned char)17, true>, 0>0' is read while empty, which may result in RTL simulation hanging.
 WARNING [HLS SIM]: hls::stream 'hls::stream<hls::axis<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ull, 0ull, 0ull, (unsigned char)17, true>, 0>1' is read while empty, which may result in RTL simulation hanging.
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1

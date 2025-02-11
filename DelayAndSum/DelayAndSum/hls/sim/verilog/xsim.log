@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Feb 10 22:29:59 2025
-# Process ID: 20352
+# Start of session at: Tue Feb 11 19:06:33 2025
+# Process ID: 10500
 # Current directory: C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog
 # Command line: xsim.exe -source {xsim.dir/DelayAndSum/xsim_script.tcl}
 # Log file: C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/xsim.log
@@ -19,7 +19,7 @@
 # Host memory       :16872 MB
 # Swap memory       :19327 MB
 # Total Virtual     :36199 MB
-# Available Virtual :20050 MB
+# Available Virtual :18902 MB
 #-----------------------------------------------------------
 start_gui
 source xsim.dir/DelayAndSum/xsim_script.tcl
@@ -38,7 +38,7 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 avail
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
-current_fileset: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 1549.566 ; gain = 405.578
+current_fileset: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1532.977 ; gain = 348.266
 # xsim {DelayAndSum} -view {{DelayAndSum_dataflow_ana.wcfg}} -tclbatch {DelayAndSum.tcl} -protoinst {DelayAndSum.protoinst}
 INFO: [Wavedata 42-565] Reading protoinst file DelayAndSum.protoinst
 Time resolution is 1 ps
@@ -82,24 +82,24 @@ source DelayAndSum.tcl
 ## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/in1_real_TREADY -into $return_group -color #ffff00 -radix hex
 ## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/in1_real_TVALID -into $return_group -color #ffff00 -radix hex
 ## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/in1_real_TDATA -into $return_group -radix hex
-## set axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group [add_wave_group axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4(axi_slave) -into $cinputgroup]
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_BRESP -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_BREADY -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -color #ffff00 -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_BVALID -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -color #ffff00 -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_RRESP -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_RDATA -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_RREADY -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -color #ffff00 -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_RVALID -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -color #ffff00 -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_ARREADY -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -color #ffff00 -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_ARVALID -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -color #ffff00 -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_ARADDR -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_WSTRB -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_WDATA -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_WREADY -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -color #ffff00 -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_WVALID -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -color #ffff00 -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_AWREADY -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -color #ffff00 -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_AWVALID -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -color #ffff00 -radix hex
-## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_AWADDR -into $axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4_group -radix hex
+## set phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group [add_wave_group phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size(axi_slave) -into $cinputgroup]
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_BRESP -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_BREADY -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -color #ffff00 -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_BVALID -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -color #ffff00 -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_RRESP -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_RDATA -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_RREADY -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -color #ffff00 -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_RVALID -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -color #ffff00 -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_ARREADY -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -color #ffff00 -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_ARVALID -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -color #ffff00 -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_ARADDR -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_WSTRB -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_WDATA -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_WREADY -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -color #ffff00 -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_WVALID -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -color #ffff00 -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_AWREADY -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -color #ffff00 -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_AWVALID -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -color #ffff00 -radix hex
+## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_AWADDR -into $phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size_group -radix hex
 ## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
 ## add_wave /apatb_DelayAndSum_top/AESL_inst_DelayAndSum/ap_rst_n -into $resetgroup
 ## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
@@ -179,8 +179,8 @@ source DelayAndSum.tcl
 // RTL Simulation : 64 / 64 [100.00%] @ "603000"
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 632500 ps : File "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/sim/verilog/DelayAndSum.autotb.v" Line 636
-xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1591.078 ; gain = 41.512
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1603.332 ; gain = 70.355
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting xsim at Mon Feb 10 22:36:57 2025...
+INFO: [Common 17-206] Exiting xsim at Tue Feb 11 19:08:20 2025...

@@ -228,7 +228,7 @@
             </wvobject>
          </wvobject>
          <wvobject fp_name="group39" type="group">
-            <obj_property name="label">axis_packet_size__phi__fc__xpos1__xpos2__xpos3__xpos4(axi_slave)</obj_property>
+            <obj_property name="label">phi__fc__xpos1__xpos2__xpos3__xpos4__axis_packet_size(axi_slave)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_DelayAndSum_top/AESL_inst_DelayAndSum/s_axi_control_BRESP" type="array">
                <obj_property name="ElementShortName">s_axi_control_BRESP[1:0]</obj_property>

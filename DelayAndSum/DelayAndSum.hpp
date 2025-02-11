@@ -21,11 +21,6 @@ typedef ap_uint<26> uint_26_t;
 typedef hls::axis<fxd_16_1_t, 0, 0, 0, (AXIS_ENABLE_DATA | AXIS_ENABLE_LAST), true> fxd_16_1_pkt_t;
 
 void DelayAndSum(
-
-    // axi stream packet size (in 16 bit words!!) for tlast generation
-    // set to 0 to disable tlast generation
-    uint_26_t *axis_packet_size,
-
     // in rad -- -pi to pi
     fxd_8_3_t *phi,
 
@@ -37,6 +32,10 @@ void DelayAndSum(
     fxd_32_16_t *xpos2,
     fxd_32_16_t *xpos3,
     fxd_32_16_t *xpos4,
+
+    // axi stream packet size (in 16 bit words!!) for tlast generation
+    // set to 0 to disable tlast generation
+    uint_26_t *axis_packet_size,
 
     //
     hls::stream<fxd_16_1_t> &in1_real,

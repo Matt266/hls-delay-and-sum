@@ -18,7 +18,7 @@ hls::stream<fxd_16_1_pkt_t> out_imag;
 fxd_16_1_pkt_t out_real_pkt;
 fxd_16_1_pkt_t out_imag_pkt;
 
-uint_26_t axis_packet_size = 5;
+uint_26_t axis_packet_size = 3;
 fxd_8_3_t phi = 70 * 2*pi/360; // in rad
 fxd_32_16_t fc = 3750; // in MHz
 fxd_32_16_t xpos1 = -60; // mm
@@ -48,13 +48,13 @@ int main(){
         }
 
         DelayAndSum(
-            &axis_packet_size,
             &phi,
             &fc,
             &xpos1,
             &xpos2,
             &xpos3,
             &xpos4,
+            &axis_packet_size,
             in1_real,
             in1_imag,
             in2_real,

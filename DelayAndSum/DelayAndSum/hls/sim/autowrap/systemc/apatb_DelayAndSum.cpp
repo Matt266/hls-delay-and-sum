@@ -19,8 +19,6 @@
 using namespace std;
 
 // wrapc file define:
-#define AUTOTB_TVIN_axis_packet_size "../tv/cdatafile/c.DelayAndSum.autotvin_axis_packet_size.dat"
-#define AUTOTB_TVOUT_axis_packet_size "../tv/cdatafile/c.DelayAndSum.autotvout_axis_packet_size.dat"
 #define AUTOTB_TVIN_phi "../tv/cdatafile/c.DelayAndSum.autotvin_phi.dat"
 #define AUTOTB_TVOUT_phi "../tv/cdatafile/c.DelayAndSum.autotvout_phi.dat"
 #define AUTOTB_TVIN_fc "../tv/cdatafile/c.DelayAndSum.autotvin_fc.dat"
@@ -33,6 +31,8 @@ using namespace std;
 #define AUTOTB_TVOUT_xpos3 "../tv/cdatafile/c.DelayAndSum.autotvout_xpos3.dat"
 #define AUTOTB_TVIN_xpos4 "../tv/cdatafile/c.DelayAndSum.autotvin_xpos4.dat"
 #define AUTOTB_TVOUT_xpos4 "../tv/cdatafile/c.DelayAndSum.autotvout_xpos4.dat"
+#define AUTOTB_TVIN_axis_packet_size "../tv/cdatafile/c.DelayAndSum.autotvin_axis_packet_size.dat"
+#define AUTOTB_TVOUT_axis_packet_size "../tv/cdatafile/c.DelayAndSum.autotvout_axis_packet_size.dat"
 #define AUTOTB_TVIN_in1_real "../tv/cdatafile/c.DelayAndSum.autotvin_in1_real.dat"
 #define WRAPC_STREAM_SIZE_IN_in1_real "../tv/stream_size/stream_size_in_in1_real.dat"
 #define WRAPC_STREAM_INGRESS_STATUS_in1_real "../tv/stream_size/stream_ingress_status_in1_real.dat"
@@ -1213,20 +1213,9 @@ extern "C"
 void DelayAndSum_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
 
 extern "C"
-void apatb_DelayAndSum_hw(void* __xlx_apatb_param_axis_packet_size, void* __xlx_apatb_param_phi, void* __xlx_apatb_param_fc, void* __xlx_apatb_param_xpos1, void* __xlx_apatb_param_xpos2, void* __xlx_apatb_param_xpos3, void* __xlx_apatb_param_xpos4, void* __xlx_apatb_param_in1_real, void* __xlx_apatb_param_in1_imag, void* __xlx_apatb_param_in2_real, void* __xlx_apatb_param_in2_imag, void* __xlx_apatb_param_in3_real, void* __xlx_apatb_param_in3_imag, void* __xlx_apatb_param_in4_real, void* __xlx_apatb_param_in4_imag, void* __xlx_apatb_param_out_real_V_data_V, void* __xlx_apatb_param_out_real_V_last_V, void* __xlx_apatb_param_out_imag_V_data_V, void* __xlx_apatb_param_out_imag_V_last_V)
+void apatb_DelayAndSum_hw(void* __xlx_apatb_param_phi, void* __xlx_apatb_param_fc, void* __xlx_apatb_param_xpos1, void* __xlx_apatb_param_xpos2, void* __xlx_apatb_param_xpos3, void* __xlx_apatb_param_xpos4, void* __xlx_apatb_param_axis_packet_size, void* __xlx_apatb_param_in1_real, void* __xlx_apatb_param_in1_imag, void* __xlx_apatb_param_in2_real, void* __xlx_apatb_param_in2_imag, void* __xlx_apatb_param_in3_real, void* __xlx_apatb_param_in3_imag, void* __xlx_apatb_param_in4_real, void* __xlx_apatb_param_in4_imag, void* __xlx_apatb_param_out_real_V_data_V, void* __xlx_apatb_param_out_real_V_last_V, void* __xlx_apatb_param_out_imag_V_data_V, void* __xlx_apatb_param_out_imag_V_last_V)
 {
   static hls::sim::Register port0 {
-    .name = "axis_packet_size",
-    .width = 26,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_axis_packet_size),
-#endif
-  };
-  port0.param = __xlx_apatb_param_axis_packet_size;
-
-  static hls::sim::Register port1 {
     .name = "phi",
     .width = 8,
 #ifdef POST_CHECK
@@ -1235,9 +1224,9 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_axis_packet_size, void* __xlx_
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_phi),
 #endif
   };
-  port1.param = __xlx_apatb_param_phi;
+  port0.param = __xlx_apatb_param_phi;
 
-  static hls::sim::Register port2 {
+  static hls::sim::Register port1 {
     .name = "fc",
     .width = 32,
 #ifdef POST_CHECK
@@ -1246,9 +1235,9 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_axis_packet_size, void* __xlx_
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_fc),
 #endif
   };
-  port2.param = __xlx_apatb_param_fc;
+  port1.param = __xlx_apatb_param_fc;
 
-  static hls::sim::Register port3 {
+  static hls::sim::Register port2 {
     .name = "xpos1",
     .width = 32,
 #ifdef POST_CHECK
@@ -1257,9 +1246,9 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_axis_packet_size, void* __xlx_
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_xpos1),
 #endif
   };
-  port3.param = __xlx_apatb_param_xpos1;
+  port2.param = __xlx_apatb_param_xpos1;
 
-  static hls::sim::Register port4 {
+  static hls::sim::Register port3 {
     .name = "xpos2",
     .width = 32,
 #ifdef POST_CHECK
@@ -1268,9 +1257,9 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_axis_packet_size, void* __xlx_
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_xpos2),
 #endif
   };
-  port4.param = __xlx_apatb_param_xpos2;
+  port3.param = __xlx_apatb_param_xpos2;
 
-  static hls::sim::Register port5 {
+  static hls::sim::Register port4 {
     .name = "xpos3",
     .width = 32,
 #ifdef POST_CHECK
@@ -1279,9 +1268,9 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_axis_packet_size, void* __xlx_
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_xpos3),
 #endif
   };
-  port5.param = __xlx_apatb_param_xpos3;
+  port4.param = __xlx_apatb_param_xpos3;
 
-  static hls::sim::Register port6 {
+  static hls::sim::Register port5 {
     .name = "xpos4",
     .width = 32,
 #ifdef POST_CHECK
@@ -1290,7 +1279,18 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_axis_packet_size, void* __xlx_
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_xpos4),
 #endif
   };
-  port6.param = __xlx_apatb_param_xpos4;
+  port5.param = __xlx_apatb_param_xpos4;
+
+  static hls::sim::Register port6 {
+    .name = "axis_packet_size",
+    .width = 26,
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_axis_packet_size),
+#endif
+  };
+  port6.param = __xlx_apatb_param_axis_packet_size;
 
   static hls::sim::Stream<hls::sim::Byte<2>> port7 {
     .width = 16,
@@ -1513,7 +1513,7 @@ void apatb_DelayAndSum_hw(void* __xlx_apatb_param_axis_packet_size, void* __xlx_
     port17.markSize();
     port18.markSize();
     CodeState = CALL_C_DUT;
-    DelayAndSum_hw_stub_wrapper(__xlx_apatb_param_axis_packet_size, __xlx_apatb_param_phi, __xlx_apatb_param_fc, __xlx_apatb_param_xpos1, __xlx_apatb_param_xpos2, __xlx_apatb_param_xpos3, __xlx_apatb_param_xpos4, __xlx_apatb_param_in1_real, __xlx_apatb_param_in1_imag, __xlx_apatb_param_in2_real, __xlx_apatb_param_in2_imag, __xlx_apatb_param_in3_real, __xlx_apatb_param_in3_imag, __xlx_apatb_param_in4_real, __xlx_apatb_param_in4_imag, __xlx_apatb_param_out_real_V_data_V, __xlx_apatb_param_out_real_V_last_V, __xlx_apatb_param_out_imag_V_data_V, __xlx_apatb_param_out_imag_V_last_V);
+    DelayAndSum_hw_stub_wrapper(__xlx_apatb_param_phi, __xlx_apatb_param_fc, __xlx_apatb_param_xpos1, __xlx_apatb_param_xpos2, __xlx_apatb_param_xpos3, __xlx_apatb_param_xpos4, __xlx_apatb_param_axis_packet_size, __xlx_apatb_param_in1_real, __xlx_apatb_param_in1_imag, __xlx_apatb_param_in2_real, __xlx_apatb_param_in2_imag, __xlx_apatb_param_in3_real, __xlx_apatb_param_in3_imag, __xlx_apatb_param_in4_real, __xlx_apatb_param_in4_imag, __xlx_apatb_param_out_real_V_data_V, __xlx_apatb_param_out_real_V_last_V, __xlx_apatb_param_out_imag_V_data_V, __xlx_apatb_param_out_imag_V_last_V);
     port15.buffer();
     port16.buffer();
     port17.buffer();
