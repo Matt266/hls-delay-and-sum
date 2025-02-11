@@ -30,12 +30,16 @@ class DelayAndSum(DefaultIP):
 
     xpos4: float
         Position of the fourth antenna (ADCD) along the x-axis in mm.
+
+    axis_packet_size: int
+        Number of 16bit words that are combined to one axi stream packet.
+        (tlast will be asserted on the last word of a package) 
     '''
     
     def __init__(self, description):
         super().__init__(description=description)
         
-    bindto = ['othr:hls:DelayAndSum:1.0']
+    bindto = ['othr:hls:DelayAndSum:2.0']
     
     __PHI_OFFSET = 0x10
     __PHI_N_WORD = 8
@@ -60,6 +64,10 @@ class DelayAndSum(DefaultIP):
     __XPOS4_OFFSET = 0x38
     __XPOS4_N_WORD = 32
     __XPOS4_DTYPE = 'fxp-s32/16'
+
+    __AXIS_PACKET_SIZE_OFFSET = 0x40
+    __AXIS_PACKET_SIZE_N_WORD = 26
+    __AXIS_PACKET_SIZE_DTYPE = 'fxp-u26/0'
     
     def get_phi(self):
         _value = self.read(self.__PHI_OFFSET)
@@ -132,3 +140,15 @@ class DelayAndSum(DefaultIP):
         self.write(self.__XPOS4_OFFSET, _value)
          
     xpos4 = property(get_xpos4, set_xpos4)
+
+    def get_axis_packet_size(self):
+        _value = self.read(self.__AXIS_PACKET_SIZE_OFFSET)
+        _value = Bits(uint=_value, length=self.__AXIS_PACKET_SIZE_N_WORD).unpack(f'int:{self.__AXIS_PACKET_SIZE_N_WORD}')
+        _value = Fxp(_value, raw=True, dtype=self.__AXIS_PACKET_SIZE_DTYPE).astype(int)
+        return _value[0]
+    
+    def set_axis_packet_size(self, value: int):
+        _value = int(Fxp(value, raw=False, dtype=self.__AXIS_PACKET_SIZE_DTYPE).val)
+        self.write(self.__AXIS_PACKET_SIZE_OFFSET, _value)
+         
+    axis_packet_size = property(get_axis_packet_size, set_axis_packet_size)
