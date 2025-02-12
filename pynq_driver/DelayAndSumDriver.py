@@ -149,7 +149,7 @@ class DelayAndSum(DefaultIP):
         _value = Fxp(_value, raw=True, dtype=dtype).astype(int)
         return _value[0]
     
-    def __set_register_int(self, offset, dtype, value: int):
+    def __set_register_int(self, value: int, offset, dtype):
         _value = int(Fxp(value, raw=False, dtype=dtype).raw())
         self.write(offset, _value)
 
@@ -159,7 +159,7 @@ class DelayAndSum(DefaultIP):
         _value = Fxp(_value, raw=True, dtype=dtype).astype(float)
         return _value[0]
     
-    def __set_register_float(self, offset, dtype, value: float):
+    def __set_register_float(self, value: float, offset, dtype):
         _value = int(Fxp(value, raw=False, dtype=dtype).raw())
         self.write(offset, _value)
 
@@ -172,14 +172,14 @@ class DelayAndSum(DefaultIP):
         else: 
             register = (register & (~flag))
 
-    def __reg_property_int(self, offset, len, dtype):
-        return property(partial(self.__get_register_int, offset = offset, len = len, dtype = dtype), partial(self.__set_register_int, offset = offset, dtype = dtype))
+    def __reg_property_int(offset, len, dtype, get_func = __get_register_int, set_func = __set_register_int):
+        return property(partial(get_func, offset = offset, len = len, dtype = dtype), partial(set_func, offset = offset, dtype = dtype))
     
-    def __reg_property_float(self, offset, len, dtype):
-        return property(partial(self.__get_register_float, offset = offset, len = len, dtype = dtype), partial(self.__set_register_float, offset = offset, dtype = dtype))
+    def __reg_property_float(offset, len, dtype, get_func = __get_register_float, set_func = __set_register_float):
+        return property(partial(get_func, offset = offset, len = len, dtype = dtype), partial(set_func, offset = offset, dtype = dtype))
     
-    def __flag_property(self, register, flag):
-        return property(partial(self.__get_flag, register = register, flag = flag), partial(self.__set_flag, register = register, flag = flag))
+    def __flag_property(register, flag, get_func = __get_flag, set_func = __set_flag):
+        return property(partial(get_func, register = register, flag = flag), partial(set_func, register = register, flag = flag))
 
     ctrl = __reg_property_int(__CTRL_OFFSET, __CTRL_LEN, __CTRL_DTYPE)
     ctrl_ap_start = __flag_property(ctrl, __CTRL_AP_START)
