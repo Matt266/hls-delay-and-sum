@@ -178,6 +178,7 @@ auto_restart_counter_0 {
 	offset 16
 	offset_end 19
 }
+sw_reset { }
 interrupt {
 }
 }

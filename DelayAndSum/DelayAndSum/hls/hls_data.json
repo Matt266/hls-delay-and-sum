@@ -6,7 +6,7 @@
   "SourceLanguage": "cpp",
   "HostMachineBits": "64",
   "FunctionProtocol": "ap_ctrl_hs",
-  "ResetStyle": "control",
+  "ResetStyle": "state",
   "Target": {
     "Family": "zynquplus",
     "Device": "xczu48dr",
@@ -254,7 +254,9 @@
       "config_export -format=ip_catalog",
       "config_export -rtl=vhdl",
       "config_export -flow=none",
-      "config_interface -s_axilite_auto_restart_counter=1"
+      "config_interface -s_axilite_auto_restart_counter=1",
+      "config_interface -s_axilite_sw_reset=1",
+      "config_rtl -reset=state"
     ],
     "ProfileOption": "0",
     "ProfileType": "none",
@@ -275,7 +277,7 @@
     "Name": "DelayAndSum",
     "Version": "2.0",
     "DisplayName": "DelayAndSum",
-    "Revision": "2113952040",
+    "Revision": "2113952077",
     "Description": "4 channel delay-and-sum beamformer",
     "Taxonomy": "\/VITIS_HLS_IP",
     "AutoFamilySupport": "",
@@ -440,9 +442,9 @@
             {
               "offset": "8",
               "width": "1",
-              "name": "RESERVED_2",
-              "access": "R",
-              "description": "Reserved.  0s on read."
+              "name": "SW_RESET",
+              "access": "RW",
+              "description": "Control signal Register for 'sw_reset'."
             },
             {
               "offset": "9",
@@ -1205,7 +1207,7 @@
           "FF": "10369",
           "AVAIL_FF": "850560",
           "UTIL_FF": "1",
-          "LUT": "34242",
+          "LUT": "34244",
           "AVAIL_LUT": "425280",
           "UTIL_LUT": "8",
           "URAM": "0",
@@ -1217,7 +1219,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2025-02-12 16:00:10 +0100",
+    "Time": "2025-02-12 16:37:19 +0100",
     "ToolName": "vitis_hls",
     "ToolVersion": "2024.1"
   }

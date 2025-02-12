@@ -15,7 +15,7 @@ set intNbAccess 0
 set NewDSPMapping 1
 set HasDSPModule 1
 set ResetLevelFlag 0
-set ResetStyle control
+set ResetStyle state
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
 set ResetVariableFlag 0

@@ -4,6 +4,7 @@
 //        bit 2  - ap_idle (Read)
 //        bit 3  - ap_ready (Read/COR)
 //        bit 7  - auto_restart (Read/Write)
+//        bit 8  - sw_reset (Read/Write)
 //        bit 9  - interrupt (Read)
 //        others - reserved
 // 0x04 : Global Interrupt Enable Register

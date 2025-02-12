@@ -42,7 +42,8 @@ module DelayAndSum_control_s_axi
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
-    input  wire                          ap_idle
+    input  wire                          ap_idle,
+    output wire                          sw_reset
 );
 //------------------------Address Info-------------------
 // Protocol Used: ap_ctrl_hs
@@ -53,6 +54,7 @@ module DelayAndSum_control_s_axi
 //        bit 2  - ap_idle (Read)
 //        bit 3  - ap_ready (Read/COR)
 //        bit 7  - auto_restart (Read/Write)
+//        bit 8  - sw_reset (Read/Write)
 //        bit 9  - interrupt (Read)
 //        others - reserved
 // 0x04 : Global Interrupt Enable Register
@@ -136,6 +138,7 @@ localparam
     wire                          ar_hs;
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
+    reg                           int_sw_reset = 1'b0;
     reg                           int_ap_idle = 1'b0;
     reg                           int_ap_ready = 1'b0;
     wire                          task_ap_ready;
@@ -259,6 +262,7 @@ always @(posedge ACLK) begin
                     rdata[2] <= int_ap_idle;
                     rdata[3] <= int_ap_ready;
                     rdata[7] <= int_auto_restart;
+                    rdata[8] <= int_sw_reset;
                     rdata[9] <= int_interrupt;
                 end
                 ADDR_GIE: begin
@@ -306,6 +310,7 @@ assign ap_start            = int_ap_start;
 assign task_ap_done        = (ap_done && !auto_restart_status) || auto_restart_done;
 assign task_ap_ready       = ap_ready && !auto_restart_enable;
 assign auto_restart_done   = auto_restart_status && (ap_idle && !int_ap_idle);
+assign sw_reset            = int_sw_reset;
 assign infnt_auto_restart  = int_auto_restart || (int_auto_restart_counter_0 == {32{1'b1}});
 assign auto_restart_enable = infnt_auto_restart || (auto_restart_counter < int_auto_restart_counter_0);
 assign phi                 = int_phi;
@@ -400,6 +405,16 @@ always @(posedge ACLK) begin
             auto_restart_status <= 1'b1;
         else if (ap_idle)
             auto_restart_status <= 1'b0;
+    end
+end
+
+// int_sw_reset
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_sw_reset <= 1'b0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_AP_CTRL && WSTRB[1] && WDATA[8])
+            int_sw_reset <= 1'b1;
     end
 end
 

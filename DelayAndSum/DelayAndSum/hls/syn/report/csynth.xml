@@ -42,7 +42,7 @@
             <BRAM_18K>0</BRAM_18K>
             <DSP>62</DSP>
             <FF>10369</FF>
-            <LUT>34242</LUT>
+            <LUT>34244</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -703,7 +703,7 @@
                     <FF>10369</FF>
                     <AVAIL_FF>850560</AVAIL_FF>
                     <UTIL_FF>1</UTIL_FF>
-                    <LUT>34242</LUT>
+                    <LUT>34244</LUT>
                     <AVAIL_LUT>425280</AVAIL_LUT>
                     <UTIL_LUT>8</UTIL_LUT>
                     <URAM>0</URAM>
@@ -2448,7 +2448,8 @@
     <UserConfigCommands>
         <config_cosim rtl="vhdl" trace_level="port" wave_debug="1"/>
         <config_export description="4 channel delay-and-sum beamformer" display_name="DelayAndSum" output="C:UsersmattOneDriveDokumente__MasterVivadoVitis_HLSDelayAndSumDelayAndSumDelayAndSumDelayAndSum.zip" rtl="vhdl" vendor="othr" version="2.0"/>
-        <config_interface s_axilite_auto_restart_counter="1"/>
+        <config_interface s_axilite_auto_restart_counter="1" s_axilite_sw_reset="1"/>
+        <config_rtl reset="state"/>
     </UserConfigCommands>
     <Args>
         <Arg ArgName="phi" index="0" direction="in" srcType="ap_fixed&lt;8, 3, AP_TRN, AP_WRAP, 0&gt;*" srcSize="8">
@@ -2567,7 +2568,7 @@
                         <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
                         <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
                         <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
-                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="8" width="1" name="SW_RESET" access="RW" description="Control signal Register for 'sw_reset'."/>
                         <field offset="9" width="1" name="INTERRUPT" access="R" description="Control signal Register for 'interrupt'."/>
                         <field offset="10" width="22" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
                     </fields>
@@ -2793,7 +2794,7 @@
             <item name="S_AXILITE Registers">
                 <table>
                     <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
-                    <column name="s_axi_control">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT</column>
+                    <column name="s_axi_control">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 8=SW_RESET 9=INTERRUPT</column>
                     <column name="s_axi_control">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
                     <column name="s_axi_control">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
                     <column name="s_axi_control">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>

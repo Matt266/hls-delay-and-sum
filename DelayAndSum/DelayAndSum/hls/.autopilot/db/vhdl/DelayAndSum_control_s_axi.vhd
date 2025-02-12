@@ -45,7 +45,8 @@ port (
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
-    ap_idle               :in   STD_LOGIC
+    ap_idle               :in   STD_LOGIC;
+    sw_reset              :out  STD_LOGIC
 );
 end entity DelayAndSum_control_s_axi;
 
@@ -58,6 +59,7 @@ end entity DelayAndSum_control_s_axi;
 --        bit 2  - ap_idle (Read)
 --        bit 3  - ap_ready (Read/COR)
 --        bit 7  - auto_restart (Read/Write)
+--        bit 8  - sw_reset (Read/Write)
 --        bit 9  - interrupt (Read)
 --        others - reserved
 -- 0x04 : Global Interrupt Enable Register
@@ -136,6 +138,7 @@ architecture behave of DelayAndSum_control_s_axi is
     signal ARREADY_t           : STD_LOGIC;
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
+    signal int_sw_reset        : STD_LOGIC := '0';
     signal int_ap_idle         : STD_LOGIC := '0';
     signal int_ap_ready        : STD_LOGIC := '0';
     signal task_ap_ready       : STD_LOGIC;
@@ -279,6 +282,7 @@ begin
                     case (TO_INTEGER(raddr)) is
                     when ADDR_AP_CTRL =>
                         rdata_data(9) <= int_interrupt;
+                        rdata_data(8) <= int_sw_reset;
                         rdata_data(7) <= int_auto_restart;
                         rdata_data(3) <= int_ap_ready;
                         rdata_data(2) <= int_ap_idle;
@@ -320,6 +324,7 @@ begin
     task_ap_done         <= (ap_done and not auto_restart_status) or auto_restart_done;
     task_ap_ready        <= ap_ready and not auto_restart_enable;
     auto_restart_done    <= auto_restart_status and (ap_idle and not int_ap_idle);
+    sw_reset             <= int_sw_reset;
     infnt_auto_restart   <= '1' when int_auto_restart = '1' or (int_auto_restart_counter_0 = INFINITE) else '0';
     auto_restart_enable  <= '1' when infnt_auto_restart = '1' or (auto_restart_counter < int_auto_restart_counter_0) else '0';
     phi                  <= STD_LOGIC_VECTOR(int_phi);
@@ -439,6 +444,19 @@ begin
                     auto_restart_status <= '1';
                 elsif (ap_idle = '1') then
                     auto_restart_status <= '0';
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_sw_reset <= '0';
+            elsif (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_AP_CTRL and WSTRB(1) = '1' and WDATA(8) = '1') then
+                    int_sw_reset <= '1';
                 end if;
             end if;
         end if;

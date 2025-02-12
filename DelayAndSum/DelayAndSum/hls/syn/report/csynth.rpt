@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'DelayAndSum'
 ================================================================
 + General Information: 
-    * Date:           Wed Feb 12 15:58:36 2025
+    * Date:           Wed Feb 12 16:34:52 2025
     * Version:        2024.1 (Build 5069499 on May 21 2024)
     * Project:        DelayAndSum
     * Solution:       hls (Vivado IP Flow Target)
@@ -19,7 +19,7 @@
     |    Modules    | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |         |            |            |     |
     |    & Loops    | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF     |     LUT    | URAM|
     +---------------+------+------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
-    |+ DelayAndSum  |     -|  0.06|       34|  170.000|         -|        1|     -|       yes|     -|  62 (1%)|  10369 (1%)|  34242 (8%)|    -|
+    |+ DelayAndSum  |     -|  0.06|       34|  170.000|         -|        1|     -|       yes|     -|  62 (1%)|  10369 (1%)|  34244 (8%)|    -|
     +---------------+------+------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
 
 
@@ -34,22 +34,22 @@
 +---------------+------------+---------------+--------+----------+
 
 * S_AXILITE Registers
-+---------------+------------------------+--------+-------+--------+-------------------------------------+----------------------------------------------------------------------+
-| Interface     | Register               | Offset | Width | Access | Description                         | Bit Fields                                                           |
-+---------------+------------------------+--------+-------+--------+-------------------------------------+----------------------------------------------------------------------+
-| s_axi_control | CTRL                   | 0x00   | 32    | RW     | Control signals                     | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
-| s_axi_control | GIER                   | 0x04   | 32    | RW     | Global Interrupt Enable Register    | 0=Enable                                                             |
-| s_axi_control | IP_IER                 | 0x08   | 32    | RW     | IP Interrupt Enable Register        | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
-| s_axi_control | IP_ISR                 | 0x0c   | 32    | RW     | IP Interrupt Status Register        | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
-| s_axi_control | phi                    | 0x14   | 32    | W      | Data signal of phi                  |                                                                      |
-| s_axi_control | fc                     | 0x1c   | 32    | W      | Data signal of fc                   |                                                                      |
-| s_axi_control | xpos1                  | 0x24   | 32    | W      | Data signal of xpos1                |                                                                      |
-| s_axi_control | xpos2                  | 0x2c   | 32    | W      | Data signal of xpos2                |                                                                      |
-| s_axi_control | xpos3                  | 0x34   | 32    | W      | Data signal of xpos3                |                                                                      |
-| s_axi_control | xpos4                  | 0x3c   | 32    | W      | Data signal of xpos4                |                                                                      |
-| s_axi_control | axis_packet_size       | 0x44   | 32    | W      | Data signal of axis_packet_size     |                                                                      |
-| s_axi_control | auto_restart_counter_0 | 0x10   | 32    | RW     | Register for auto restart counter 0 | 0:32=auto_restart_counter_0                                          |
-+---------------+------------------------+--------+-------+--------+-------------------------------------+----------------------------------------------------------------------+
++---------------+------------------------+--------+-------+--------+-------------------------------------+---------------------------------------------------------------------------------+
+| Interface     | Register               | Offset | Width | Access | Description                         | Bit Fields                                                                      |
++---------------+------------------------+--------+-------+--------+-------------------------------------+---------------------------------------------------------------------------------+
+| s_axi_control | CTRL                   | 0x00   | 32    | RW     | Control signals                     | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 8=SW_RESET 9=INTERRUPT |
+| s_axi_control | GIER                   | 0x04   | 32    | RW     | Global Interrupt Enable Register    | 0=Enable                                                                        |
+| s_axi_control | IP_IER                 | 0x08   | 32    | RW     | IP Interrupt Enable Register        | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                   |
+| s_axi_control | IP_ISR                 | 0x0c   | 32    | RW     | IP Interrupt Status Register        | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                   |
+| s_axi_control | phi                    | 0x14   | 32    | W      | Data signal of phi                  |                                                                                 |
+| s_axi_control | fc                     | 0x1c   | 32    | W      | Data signal of fc                   |                                                                                 |
+| s_axi_control | xpos1                  | 0x24   | 32    | W      | Data signal of xpos1                |                                                                                 |
+| s_axi_control | xpos2                  | 0x2c   | 32    | W      | Data signal of xpos2                |                                                                                 |
+| s_axi_control | xpos3                  | 0x34   | 32    | W      | Data signal of xpos3                |                                                                                 |
+| s_axi_control | xpos4                  | 0x3c   | 32    | W      | Data signal of xpos4                |                                                                                 |
+| s_axi_control | axis_packet_size       | 0x44   | 32    | W      | Data signal of axis_packet_size     |                                                                                 |
+| s_axi_control | auto_restart_counter_0 | 0x10   | 32    | RW     | Register for auto restart counter 0 | 0:32=auto_restart_counter_0                                                     |
++---------------+------------------------+--------+-------+--------+-------------------------------------+---------------------------------------------------------------------------------+
 
 * AXIS
 +-----------+-----------+---------------+-------+-------+--------+--------+
