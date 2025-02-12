@@ -12629,7 +12629,11 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 # 33 "DelayAndSum.cpp"
 
 #pragma HLS top name=DelayAndSum
-#pragma HLS interface mode=ap_ctrl_none port=return
+#pragma HLS INTERFACE mode=s_axilite port=return
+
+
+
+
 
 
 #pragma HLS INTERFACE mode=axis port=in1_real

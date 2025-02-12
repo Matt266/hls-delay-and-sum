@@ -1,6 +1,6 @@
 <ENTRY>
 {
- "thisFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\DelayAndSum.hlsrun_csim_summary",
+ "thisFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\DelayAndSum.hlsrun_csim_summary",
  "connectId": "",
  "serverToken": "",
  "timestamp": "0"
@@ -9,34 +9,34 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "02/11/25 18:56:47",
- "timestampMillis": "4129820351",
+ "dateTimestamp": "02/12/25 14:56:23",
+ "timestampMillis": "4201795816",
  "buildStep": {
-  "cmdId": "c006bf2e-cbf3-445e-a04b-a3302c89ab16",
+  "cmdId": "9d8facb4-093d-4e71-b8cb-5f3a27e88cbc",
   "name": "vitis-run",
-  "logFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\logs\\DelayAndSum.steps.log",
-  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\hls_config.cfg --work_dir DelayAndSum ",
+  "logFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\logs\\DelayAndSum.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\hls_config.cfg --work_dir DelayAndSum ",
   "args": [
    "--mode",
    "hls",
    "--csim",
    "--config",
-   "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\hls_config.cfg",
+   "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\hls_config.cfg",
    "--work_dir",
    "DelayAndSum"
   ],
   "iniFiles": [],
-  "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
+  "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/11/25 18:56:47",
- "timestampMillis": "4129820351",
+ "dateTimestamp": "02/12/25 14:56:23",
+ "timestampMillis": "4201795816",
  "status": {
-  "cmdId": "c006bf2e-cbf3-445e-a04b-a3302c89ab16",
+  "cmdId": "9d8facb4-093d-4e71-b8cb-5f3a27e88cbc",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "02/11/25 18:56:53",
- "timestampMillis": "4129825613",
+ "dateTimestamp": "02/12/25 14:56:28",
+ "timestampMillis": "4201801092",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -64,10 +64,10 @@
      "uuid": ""
     },
     "sources": [
-     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
-     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.hpp",
-     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\CalculateWeights.cpp",
-     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\CalculateWeights.hpp"
+     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum.cpp",
+     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum.hpp",
+     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\CalculateWeights.cpp",
+     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\CalculateWeights.hpp"
     ],
     "psSources": [],
     "cuNames": [],
@@ -83,26 +83,26 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "02/11/25 18:56:53",
- "timestampMillis": "4129825615",
+ "dateTimestamp": "02/12/25 14:56:28",
+ "timestampMillis": "4201801094",
  "buildStep": {
-  "cmdId": "d3a739cd-ded0-49bc-bf8b-1f6cbe80b765",
+  "cmdId": "473d1d07-33d7-40c0-a312-6dbe4e984eca",
   "name": "csim_design",
-  "logFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\hls.log",
+  "logFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\hls\\hls.log",
   "commandLine": "csim_design",
   "args": [],
   "iniFiles": [],
-  "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
+  "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/11/25 18:56:53",
- "timestampMillis": "4129825616",
+ "dateTimestamp": "02/12/25 14:56:28",
+ "timestampMillis": "4201801096",
  "status": {
-  "cmdId": "d3a739cd-ded0-49bc-bf8b-1f6cbe80b765",
+  "cmdId": "473d1d07-33d7-40c0-a312-6dbe4e984eca",
   "state": "CS_RUNNING"
  }
 }
@@ -110,10 +110,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/11/25 18:57:15",
- "timestampMillis": "4129847953",
+ "dateTimestamp": "02/12/25 14:56:33",
+ "timestampMillis": "4201806252",
  "status": {
-  "cmdId": "d3a739cd-ded0-49bc-bf8b-1f6cbe80b765",
+  "cmdId": "473d1d07-33d7-40c0-a312-6dbe4e984eca",
   "state": "CS_PASSED"
  }
 }
@@ -121,10 +121,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/11/25 18:57:15",
- "timestampMillis": "4129848120",
+ "dateTimestamp": "02/12/25 14:56:33",
+ "timestampMillis": "4201806403",
  "status": {
-  "cmdId": "c006bf2e-cbf3-445e-a04b-a3302c89ab16",
+  "cmdId": "9d8facb4-093d-4e71-b8cb-5f3a27e88cbc",
   "state": "CS_PASSED"
  }
 }
@@ -132,8 +132,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/11/25 18:57:15",
- "timestampMillis": "4129848122",
+ "dateTimestamp": "02/12/25 14:56:33",
+ "timestampMillis": "4201806405",
  "report": {
   "path": "",
   "name": "",
@@ -146,8 +146,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/11/25 18:57:15",
- "timestampMillis": "4129848122",
+ "dateTimestamp": "02/12/25 14:56:33",
+ "timestampMillis": "4201806405",
  "report": {
   "path": "",
   "name": "",

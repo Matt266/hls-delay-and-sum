@@ -1,6 +1,6 @@
 <ENTRY>
 {
- "thisFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\DelayAndSum.hlscompile_summary",
+ "thisFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\DelayAndSum.hlscompile_summary",
  "connectId": "",
  "serverToken": "",
  "timestamp": "0"
@@ -9,39 +9,39 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "02/11/25 18:57:55",
- "timestampMillis": "4129888099",
+ "dateTimestamp": "02/12/25 15:57:15",
+ "timestampMillis": "4205447805",
  "buildStep": {
-  "cmdId": "775014ae-27c0-43a3-9c39-18d5ab257997",
+  "cmdId": "6a45138d-6bf6-4a2d-84cc-bebe9909a1e8",
   "name": "v++",
-  "logFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\logs\\DelayAndSum.steps.log",
-  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\hls_config.cfg --work_dir DelayAndSum ",
+  "logFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\logs\\DelayAndSum.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\hls_config.cfg --work_dir DelayAndSum ",
   "args": [
    "-c",
    "--mode",
    "hls",
    "--config",
-   "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\hls_config.cfg",
+   "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\hls_config.cfg",
    "--work_dir",
    "DelayAndSum"
   ],
   "iniFiles": [
    {
-    "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\hls_config.cfg",
-    "content": "part=xczu48dr-ffvg1517-2-e\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nclock=200MHz\ncsim.sanitize_undefined=0\ncsim.code_analyzer=0\ncsim.sanitize_address=0\nsyn.top=DelayAndSum\ntb.file=DelayAndSumTB.cpp\ntb.file=TestData.hpp\npackage.output.file=C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\DelayAndSum.zip\npackage.ip.display_name=DelayAndSum\npackage.ip.description=4 channel delay-and-sum beamformer\nsyn.file=DelayAndSum.cpp\nsyn.file=DelayAndSum.hpp\nsyn.file=CalculateWeights.cpp\nsyn.file=CalculateWeights.hpp\nvivado.rtl=vhdl\npackage.ip.vendor=othr\ncosim.trace_level=port\ntb.cflags=-DALLOW_EMPTY_HLS_STREAM_READS\ncosim.wave_debug=1\ncosim.rtl=verilog\npackage.ip.version=2.0"
+    "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\hls_config.cfg",
+    "content": "part=xczu48dr-ffvg1517-2-e\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nclock=200MHz\ncsim.sanitize_undefined=0\ncsim.code_analyzer=0\ncsim.sanitize_address=0\nsyn.top=DelayAndSum\ntb.file=DelayAndSumTB.cpp\ntb.file=TestData.hpp\npackage.output.file=C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\DelayAndSum.zip\npackage.ip.display_name=DelayAndSum\npackage.ip.description=4 channel delay-and-sum beamformer\nsyn.file=DelayAndSum.cpp\nsyn.file=DelayAndSum.hpp\nsyn.file=CalculateWeights.cpp\nsyn.file=CalculateWeights.hpp\nvivado.rtl=vhdl\npackage.ip.vendor=othr\ncosim.trace_level=port\ntb.cflags=-DALLOW_EMPTY_HLS_STREAM_READS\ncosim.wave_debug=1\ncosim.rtl=vhdl\npackage.ip.version=2.0\nsyn.interface.s_axilite_auto_restart_counter=1"
    }
   ],
-  "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
+  "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/11/25 18:57:55",
- "timestampMillis": "4129888100",
+ "dateTimestamp": "02/12/25 15:57:15",
+ "timestampMillis": "4205447807",
  "status": {
-  "cmdId": "775014ae-27c0-43a3-9c39-18d5ab257997",
+  "cmdId": "6a45138d-6bf6-4a2d-84cc-bebe9909a1e8",
   "state": "CS_RUNNING"
  }
 }
@@ -49,8 +49,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "02/11/25 18:58:01",
- "timestampMillis": "4129893534",
+ "dateTimestamp": "02/12/25 15:57:21",
+ "timestampMillis": "4205454023",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -69,10 +69,10 @@
      "uuid": ""
     },
     "sources": [
-     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.cpp",
-     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum.hpp",
-     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\CalculateWeights.cpp",
-     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\CalculateWeights.hpp"
+     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum.cpp",
+     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum.hpp",
+     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\CalculateWeights.cpp",
+     "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\CalculateWeights.hpp"
     ],
     "psSources": [],
     "cuNames": [],
@@ -88,26 +88,26 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "02/11/25 18:58:01",
- "timestampMillis": "4129893536",
+ "dateTimestamp": "02/12/25 15:57:21",
+ "timestampMillis": "4205454026",
  "buildStep": {
-  "cmdId": "527c2a2e-ac48-449c-aecf-0d15c9cdb87b",
+  "cmdId": "f6a704a0-d8c4-409c-b0f0-221685375a89",
   "name": "csynth_design",
-  "logFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\hls.log",
+  "logFile": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\hls\\hls.log",
   "commandLine": "csynth_design",
   "args": [],
   "iniFiles": [],
-  "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
+  "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/11/25 18:58:01",
- "timestampMillis": "4129893536",
+ "dateTimestamp": "02/12/25 15:57:21",
+ "timestampMillis": "4205454027",
  "status": {
-  "cmdId": "527c2a2e-ac48-449c-aecf-0d15c9cdb87b",
+  "cmdId": "f6a704a0-d8c4-409c-b0f0-221685375a89",
   "state": "CS_RUNNING"
  }
 }
@@ -115,10 +115,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/11/25 18:58:01",
- "timestampMillis": "4129893537",
+ "dateTimestamp": "02/12/25 15:57:21",
+ "timestampMillis": "4205454027",
  "report": {
-  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\hls_data.json",
+  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\hls\\hls_data.json",
   "name": "",
   "fileType": "JSON",
   "reportType": "HLS_SYNTHESIS",
@@ -129,10 +129,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/11/25 18:58:01",
- "timestampMillis": "4129893537",
+ "dateTimestamp": "02/12/25 15:57:21",
+ "timestampMillis": "4205454028",
  "report": {
-  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\syn\\report\\csynth.rpt",
+  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\hls\\syn\\report\\csynth.rpt",
   "name": "",
   "fileType": "TEXT",
   "reportType": "HLS_SYNTHESIS",
@@ -143,10 +143,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/11/25 18:58:01",
- "timestampMillis": "4129893538",
+ "dateTimestamp": "02/12/25 15:57:21",
+ "timestampMillis": "4205454029",
  "report": {
-  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\syn\\report\\csynth.xml",
+  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\hls\\syn\\report\\csynth.xml",
   "name": "",
   "fileType": "XML",
   "reportType": "HLS_SYNTHESIS",
@@ -157,10 +157,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/11/25 18:59:29",
- "timestampMillis": "4129981417",
+ "dateTimestamp": "02/12/25 15:58:48",
+ "timestampMillis": "4205541365",
  "report": {
-  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls",
+  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\hls",
   "name": "",
   "fileType": "DIR",
   "reportType": "HLS_DATAFLOW",
@@ -171,10 +171,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/11/25 18:59:29",
- "timestampMillis": "4129981418",
+ "dateTimestamp": "02/12/25 15:58:48",
+ "timestampMillis": "4205541367",
  "report": {
-  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls",
+  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\hls",
   "name": "",
   "fileType": "DIR",
   "reportType": "HLS_FUNCTION_CALL_GRAPH",
@@ -185,10 +185,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/11/25 18:59:29",
- "timestampMillis": "4129981419",
+ "dateTimestamp": "02/12/25 15:58:48",
+ "timestampMillis": "4205541368",
  "report": {
-  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls",
+  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\hls",
   "name": "",
   "fileType": "DIR",
   "reportType": "HLS_SCHEDULE",
@@ -199,10 +199,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/11/25 18:59:29",
- "timestampMillis": "4129981421",
+ "dateTimestamp": "02/12/25 15:58:48",
+ "timestampMillis": "4205541369",
  "status": {
-  "cmdId": "527c2a2e-ac48-449c-aecf-0d15c9cdb87b",
+  "cmdId": "f6a704a0-d8c4-409c-b0f0-221685375a89",
   "state": "CS_PASSED"
  }
 }
@@ -210,10 +210,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "02/11/25 18:59:29",
- "timestampMillis": "4129981828",
+ "dateTimestamp": "02/12/25 15:58:49",
+ "timestampMillis": "4205541698",
  "status": {
-  "cmdId": "775014ae-27c0-43a3-9c39-18d5ab257997",
+  "cmdId": "6a45138d-6bf6-4a2d-84cc-bebe9909a1e8",
   "state": "CS_PASSED"
  }
 }
@@ -221,10 +221,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/11/25 18:59:29",
- "timestampMillis": "4129981861",
+ "dateTimestamp": "02/12/25 15:58:49",
+ "timestampMillis": "4205541727",
  "report": {
-  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\reports\\v++_compile_DelayAndSum_guidance.html",
+  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\reports\\v++_compile_DelayAndSum_guidance.html",
   "name": "",
   "fileType": "HTML",
   "reportType": "GLOBAL_RULECHECK_GUIDANCE",
@@ -235,10 +235,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "02/11/25 18:59:29",
- "timestampMillis": "4129981863",
+ "dateTimestamp": "02/12/25 15:58:49",
+ "timestampMillis": "4205541729",
  "report": {
-  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\reports\\.db\\v++_compile_DelayAndSum_guidance.pb3",
+  "path": "C:/Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum\\DelayAndSum\\DelayAndSum\\reports\\.db\\v++_compile_DelayAndSum_guidance.pb3",
   "name": "",
   "fileType": "BINARY_PROTOBUF",
   "reportType": "GLOBAL_RULECHECK_GUIDANCE",

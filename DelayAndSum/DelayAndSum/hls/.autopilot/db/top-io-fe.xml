@@ -1,39 +1,39 @@
 <root versionMajor = "1" versionMinor = "5">
-  <kernel src_name="DelayAndSum" language="c" hwCtrl="ap_ctrl_none" mem_layout="fpga64-xilinx-none">
+  <kernel src_name="DelayAndSum" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
     <args>
       <arg id="0" access_type="r" src_name="phi" src_type="ap_fixed&lt;8, 3, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="8" hw_size_or_depth="1" hw_kernel_support="true">
-          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16"/>
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="20"/>
         </hw>
       </arg>
       <arg id="1" access_type="r" src_name="fc" src_type="ap_fixed&lt;32, 16, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
-          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24"/>
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="28"/>
         </hw>
       </arg>
       <arg id="2" access_type="r" src_name="xpos1" src_type="ap_fixed&lt;32, 16, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
-          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32"/>
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="36"/>
         </hw>
       </arg>
       <arg id="3" access_type="r" src_name="xpos2" src_type="ap_fixed&lt;32, 16, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
-          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40"/>
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="44"/>
         </hw>
       </arg>
       <arg id="4" access_type="r" src_name="xpos3" src_type="ap_fixed&lt;32, 16, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
-          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="48"/>
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="52"/>
         </hw>
       </arg>
       <arg id="5" access_type="r" src_name="xpos4" src_type="ap_fixed&lt;32, 16, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
-          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="56"/>
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="60"/>
         </hw>
       </arg>
       <arg id="6" access_type="r" src_name="axis_packet_size" src_type="ap_uint&lt;26&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="26" hw_size_or_depth="1" hw_kernel_support="true">
-          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64"/>
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="68"/>
         </hw>
       </arg>
       <arg id="7" access_type="r" src_name="in1_real" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">

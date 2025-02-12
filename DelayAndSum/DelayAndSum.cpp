@@ -32,7 +32,11 @@ void DelayAndSum(
     hls::stream<fxd_16_1_pkt_t> &out_imag
 ){
 	#pragma HLS top name=DelayAndSum
-    #pragma HLS interface mode=ap_ctrl_none port=return
+    #pragma HLS INTERFACE mode=s_axilite port=return
+
+    // default value of ap_ctrl_hs can be changed to ap_ctrl_chain
+    // AND be controlled over axi lite if necessary
+    //#pragma HLS INTERFACE mode=ap_ctrl_chain port=return
 	
 	//AXI Stream Inputs
 	#pragma HLS INTERFACE mode=axis port=in1_real

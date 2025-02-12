@@ -115,56 +115,70 @@ phi {
 	width 8
 	depth 1
 	mode ap_none
-	offset 16
-	offset_end 23
+	offset 20
+	offset_end 27
 }
 fc { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 24
-	offset_end 31
+	offset 28
+	offset_end 35
 }
 xpos1 { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 32
-	offset_end 39
+	offset 36
+	offset_end 43
 }
 xpos2 { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 40
-	offset_end 47
+	offset 44
+	offset_end 51
 }
 xpos3 { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 48
-	offset_end 55
+	offset 52
+	offset_end 59
 }
 xpos4 { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 56
-	offset_end 63
+	offset 60
+	offset_end 67
 }
 axis_packet_size { 
 	dir I
 	width 26
 	depth 1
 	mode ap_none
-	offset 64
-	offset_end 71
+	offset 68
+	offset_end 75
+}
+ap_start { }
+ap_done { }
+ap_ready { }
+ap_idle { }
+auto_restart_counter_0 { 
+	dir na
+	width 32
+	depth 1
+	mode ap_none
+	offset 16
+	offset_end 19
+}
+interrupt {
 }
 }
 dict set axilite_register_dict control $port_control
@@ -205,7 +219,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { in1_real_TDATA { I 16 vector } in1_real_TVALID { I 1 bit } in1_real_TREADY { O 1 bit } } \
+    ports { in1_real_TVALID { I 1 bit } in1_real_TDATA { I 16 vector } in1_real_TREADY { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in1_real'"
@@ -224,7 +238,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { in1_imag_TDATA { I 16 vector } in1_imag_TVALID { I 1 bit } in1_imag_TREADY { O 1 bit } } \
+    ports { in1_imag_TVALID { I 1 bit } in1_imag_TDATA { I 16 vector } in1_imag_TREADY { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in1_imag'"
@@ -243,7 +257,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { in2_real_TDATA { I 16 vector } in2_real_TVALID { I 1 bit } in2_real_TREADY { O 1 bit } } \
+    ports { in2_real_TVALID { I 1 bit } in2_real_TDATA { I 16 vector } in2_real_TREADY { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in2_real'"
@@ -262,7 +276,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { in2_imag_TDATA { I 16 vector } in2_imag_TVALID { I 1 bit } in2_imag_TREADY { O 1 bit } } \
+    ports { in2_imag_TVALID { I 1 bit } in2_imag_TDATA { I 16 vector } in2_imag_TREADY { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in2_imag'"
@@ -281,7 +295,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { in3_real_TDATA { I 16 vector } in3_real_TVALID { I 1 bit } in3_real_TREADY { O 1 bit } } \
+    ports { in3_real_TVALID { I 1 bit } in3_real_TDATA { I 16 vector } in3_real_TREADY { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in3_real'"
@@ -300,7 +314,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { in3_imag_TDATA { I 16 vector } in3_imag_TVALID { I 1 bit } in3_imag_TREADY { O 1 bit } } \
+    ports { in3_imag_TVALID { I 1 bit } in3_imag_TDATA { I 16 vector } in3_imag_TREADY { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in3_imag'"
@@ -319,7 +333,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { in4_real_TDATA { I 16 vector } in4_real_TVALID { I 1 bit } in4_real_TREADY { O 1 bit } } \
+    ports { in4_real_TVALID { I 1 bit } in4_real_TDATA { I 16 vector } in4_real_TREADY { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in4_real'"
@@ -338,7 +352,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { in4_imag_TDATA { I 16 vector } in4_imag_TVALID { I 1 bit } in4_imag_TREADY { O 1 bit } } \
+    ports { in4_imag_TVALID { I 1 bit } in4_imag_TDATA { I 16 vector } in4_imag_TREADY { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in4_imag'"
@@ -357,7 +371,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {out_real} \
     metadata {  } \
     op interface \
-    ports { out_real_TDATA { O 16 vector } out_real_TVALID { O 1 bit } out_real_TREADY { I 1 bit } } \
+    ports { out_real_TREADY { I 1 bit } out_real_TDATA { O 16 vector } out_real_TVALID { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_real_V_data_V'"
@@ -395,7 +409,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {out_imag} \
     metadata {  } \
     op interface \
-    ports { out_imag_TDATA { O 16 vector } out_imag_TVALID { O 1 bit } out_imag_TREADY { I 1 bit } } \
+    ports { out_imag_TREADY { I 1 bit } out_imag_TDATA { O 16 vector } out_imag_TVALID { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_imag_V_data_V'"

@@ -6,8 +6,8 @@
 # 
 # ==============================================================
 source -notrace "C:/Xilinx/Vitis_HLS/2024.1/common/scripts/ipxhls.tcl"
-set ip_dir "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/impl/ip"
-set data_file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/hls_data.json"
+set ip_dir "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum/hls/impl/ip"
+set data_file "C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum/hls/hls_data.json"
 set ip_types "vitis sysgen"
 if { [catch {::ipx::utils::package_hls_ip $ip_dir $data_file $ip_types } res] } {
   puts "Caught error:\n$::errorInfo"

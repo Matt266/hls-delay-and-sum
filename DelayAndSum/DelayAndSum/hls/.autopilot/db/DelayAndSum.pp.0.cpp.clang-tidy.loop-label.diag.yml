@@ -1,12 +1,12 @@
 ---
-MainSourceFile:  'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/DelayAndSum/DelayAndSum/DelayAndSum/hls/.autopilot/db/DelayAndSum.pp.0.cpp'
+MainSourceFile:  'C:/Users/matt/OneDrive/Dokumente/__Master/Vivado/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum/hls/.autopilot/db/DelayAndSum.pp.0.cpp'
 Diagnostics:     
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_1223_1:  '
     FileOffset:      1223
     FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_base.h'
     Replacements:    
-      - FilePath:        'C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\DelayAndSum.pp.0.cpp'
+      - FilePath:        'C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\hls-delay-and-sum\DelayAndSum\DelayAndSum\hls\.autopilot\db\DelayAndSum.pp.0.cpp'
         Offset:          94711
         Length:          0
         ReplacementText: 'VITIS_LOOP_1223_1: '
@@ -15,7 +15,7 @@ Diagnostics:
     FileOffset:      676
     FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_ref.h'
     Replacements:    
-      - FilePath:        'C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\DelayAndSum.pp.0.cpp'
+      - FilePath:        'C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\hls-delay-and-sum\DelayAndSum\DelayAndSum\hls\.autopilot\db\DelayAndSum.pp.0.cpp'
         Offset:          322077
         Length:          0
         ReplacementText: 'VITIS_LOOP_676_1: '
@@ -24,7 +24,7 @@ Diagnostics:
     FileOffset:      690
     FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_ref.h'
     Replacements:    
-      - FilePath:        'C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\DelayAndSum.pp.0.cpp'
+      - FilePath:        'C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\hls-delay-and-sum\DelayAndSum\DelayAndSum\hls\.autopilot\db\DelayAndSum.pp.0.cpp'
         Offset:          322541
         Length:          0
         ReplacementText: 'VITIS_LOOP_690_1: '
@@ -33,7 +33,7 @@ Diagnostics:
     FileOffset:      704
     FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_ref.h'
     Replacements:    
-      - FilePath:        'C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\DelayAndSum.pp.0.cpp'
+      - FilePath:        'C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\hls-delay-and-sum\DelayAndSum\DelayAndSum\hls\.autopilot\db\DelayAndSum.pp.0.cpp'
         Offset:          323006
         Length:          0
         ReplacementText: 'VITIS_LOOP_704_1: '
@@ -42,7 +42,7 @@ Diagnostics:
     FileOffset:      1247
     FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_fixed_base.h'
     Replacements:    
-      - FilePath:        'C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\hls\.autopilot\db\DelayAndSum.pp.0.cpp'
+      - FilePath:        'C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\hls-delay-and-sum\DelayAndSum\DelayAndSum\hls\.autopilot\db\DelayAndSum.pp.0.cpp'
         Offset:          606326
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
