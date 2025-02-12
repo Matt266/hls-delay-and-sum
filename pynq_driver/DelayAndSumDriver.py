@@ -146,7 +146,7 @@ class DelayAndSum(DefaultIP):
     def __get_register_int(self, offset, len, dtype):
         _value = self.read(offset)
         _value = Bits(uint=_value, length=len).unpack(f'int:{len}')
-        _value = Fxp(_value, raw=True, dtype=dtype).astype(int)
+        _value = Fxp(_value, raw=True, dtype=dtype).astype(int).tolist()
         return _value[0]
     
     def __set_register_int(self, value: int, offset, dtype):
@@ -164,13 +164,13 @@ class DelayAndSum(DefaultIP):
         self.write(offset, _value)
 
     def __get_flag(self, register, flag):
-        return bool(register & flag)
+        return bool(register.fget(self) & flag)
     
-    def __set_flag(self, register, flag, value: bool):
+    def __set_flag(self, value: bool, register, flag):
         if value:
-            register = (register | flag)
+            register.fset(self, register.fget(self) | flag)
         else: 
-            register = (register & (~flag))
+            register.fset(self, register.fget(self) & (~flag))
 
     def __reg_property_int(offset, len, dtype, get_func = __get_register_int, set_func = __set_register_int):
         return property(partial(get_func, offset = offset, len = len, dtype = dtype), partial(set_func, offset = offset, dtype = dtype))
