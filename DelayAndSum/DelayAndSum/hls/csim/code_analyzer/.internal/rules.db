@@ -18,7 +18,7 @@
                 "-o",
                 "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\build\\DelayAndSum.cpp.0.bc"
             ],
-            "exectime": 5.567837238311768,
+            "exectime": 2.0287013053894043,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\CalculateWeights.cpp.0.bc', 'C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\CalculateWeights.cpp.0.bc.d']": {
@@ -39,7 +39,7 @@
                 "-o",
                 "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\build\\CalculateWeights.cpp.0.bc"
             ],
-            "exectime": 23.456456184387207,
+            "exectime": 11.421036005020142,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\DelayAndSumTB.cpp.0.o', 'C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\DelayAndSumTB.cpp.0.o.d']": {
@@ -61,7 +61,7 @@
                 "-o",
                 "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\build\\DelayAndSumTB.cpp.0.o"
             ],
-            "exectime": 4.739499807357788,
+            "exectime": 2.236680269241333,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\CalculateWeights.cpp.0.o', 'C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\CalculateWeights.cpp.0.o.d']": {
@@ -82,7 +82,7 @@
                 "-o",
                 "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\build\\CalculateWeights.cpp.0.o"
             ],
-            "exectime": 14.749535322189331,
+            "exectime": 12.054084777832031,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\DelayAndSum.cpp.0.o', 'C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\DelayAndSum.cpp.0.o.d']": {
@@ -103,7 +103,7 @@
                 "-o",
                 "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\build\\DelayAndSum.cpp.0.o"
             ],
-            "exectime": 3.1466939449310303,
+            "exectime": 2.7428085803985596,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\syn_srcs.bc']": {
@@ -114,7 +114,7 @@
                 "-o",
                 "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.bc"
             ],
-            "exectime": 0.5173587799072266,
+            "exectime": 0.20490694046020508,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\syn_srcs.opt.bc']": {
@@ -126,7 +126,7 @@
                 "-o",
                 "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.opt.bc"
             ],
-            "exectime": 0.3004903793334961,
+            "exectime": 0.1979656219482422,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\app.exe']": {
@@ -147,7 +147,7 @@
                 "-lpthread",
                 "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt"
             ],
-            "exectime": 24.893772840499878,
+            "exectime": 14.92571210861206,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\instrument\\\\app_0\\\\binary_dependencies.json']": {
@@ -158,7 +158,7 @@
                 "--reuse-filemanager=false",
                 "--output=C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\binary_dependencies.json"
             ],
-            "exectime": 0.5547685623168945,
+            "exectime": 0.15539789199829102,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\output\\\\app.functionGraph']": {
@@ -169,7 +169,7 @@
                 "-o",
                 "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\output\\app.functionGraph"
             ],
-            "exectime": 8.617847919464111,
+            "exectime": 5.94266152381897,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\output\\\\app.functionMapping']": {
@@ -182,16 +182,16 @@
                 "--ir-module",
                 "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\project.symbols.bc",
                 "--fn",
-                "3565"
+                "3671"
             ],
-            "exectime": 4.200862884521484,
+            "exectime": 3.4031178951263428,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\bin\\\\.tracing_stdout.txt', 'C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\bin\\\\.tracing_stderr.txt']": {
             "command": [
                 "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\build\\app.exe"
             ],
-            "exectime": 0.5257749557495117,
+            "exectime": 0.36112046241760254,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\tracing\\csim\\build"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\output\\\\reduced_programmodel.app']": {
@@ -208,11 +208,11 @@
                 "-staticFile",
                 "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\static.xml",
                 "-traceFile",
-                "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\profiler\\0\\app_0_23\\thread0000-trace.txt",
+                "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\profiler\\0\\app_0_24\\thread0000-trace.txt",
                 "-o",
                 "nul"
             ],
-            "exectime": 5.439871788024902,
+            "exectime": 4.196115732192993,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         },
         "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\dataflow\\\\0\\\\taskgraph.json']": {
@@ -849,6 +849,59 @@
                 "%F3565"
             ],
             "exectime": 10.300049543380737,
+            "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
+        },
+        "['C:\\\\Users\\\\matt\\\\OneDrive\\\\Dokumente\\\\__Master\\\\Vivado\\\\Vitis_HLS\\\\DelayAndSum\\\\DelayAndSum\\\\DelayAndSum\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\dataflow\\\\12\\\\taskgraph.json']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/parallelismSelector.exe",
+                "-g",
+                "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\output\\reduced_programmodel.app",
+                "--basepath",
+                "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum",
+                "--static-xml",
+                "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\static.xml",
+                "--fpga-part",
+                "xczu48dr-ffvg1517-2-e",
+                "--device-totals",
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\platform\\logic\\fpga.devicetotals",
+                "--clock-frequency",
+                "200.0",
+                "--out-dir",
+                "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\output",
+                "--log-dir",
+                "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\log",
+                "--mapping",
+                "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\output\\app.functionMapping",
+                "--objective",
+                "none",
+                "--performance-target",
+                "target_both",
+                "--max-array-optimization-factor",
+                "1024",
+                "--complete-partition-limit",
+                "4",
+                "--lut-constraint",
+                "100.0",
+                "--ff-constraint",
+                "100.0",
+                "--dsp-constraint",
+                "100.0",
+                "--bram-constraint",
+                "100.0",
+                "--uram-constraint",
+                "100.0",
+                "--ir-module",
+                "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum\\DelayAndSum\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\project.symbols.bc",
+                "--max-iterations",
+                "1000",
+                "--max-iterations-branch-full-log",
+                "20",
+                "--df-id",
+                "12",
+                "--df-target",
+                "%F3582"
+            ],
+            "exectime": 7.799044132232666,
             "cwd": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\DelayAndSum\\DelayAndSum"
         }
     }

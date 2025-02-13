@@ -929,15 +929,8 @@ void __attribute__((__cdecl__)) __mingw_str_free(void *ptr);
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\_mingw_print_pop.h" 1 3
 # 1403 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdio.h" 2 3
 # 5 "./DelayAndSum.hpp" 2
-# 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_fixed.h" 1
-
-
-
-
-
-
-
-
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_int.h" 1
+# 10 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_int.h"
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\etc/ap_common.h" 1
 # 41 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\etc/ap_common.h"
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\etc/ap_decl.h" 1
@@ -1184,11 +1177,7 @@ inline __attribute__((always_inline)) half rawBitsToHalf(unsigned short pi) {
 
 
 }
-# 10 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_fixed.h" 2
-# 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\etc/ap_fixed_base.h" 1
-# 16 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\etc/ap_fixed_base.h"
-# 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_int.h" 1
-# 11 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_int.h"
+# 11 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_int.h" 2
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\etc/ap_int_base.h" 1
 # 56 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\etc/ap_int_base.h"
 template <int _AP_N, bool _AP_S>
@@ -3908,6 +3897,18 @@ inline __attribute__((nodebug)) bool operator!=(const ap_int<_AP_W> &__x, const 
 
 }
 # 353 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_int.h" 2
+
+
+
+
+
+
+
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_fixed.h" 1
+# 10 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_fixed.h"
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\etc/ap_fixed_base.h" 1
+# 16 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\etc/ap_fixed_base.h"
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_int.h" 1
 # 17 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\etc/ap_fixed_base.h" 2
 # 87 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\etc/ap_fixed_base.h"
 template <int _AP_W2, int _AP_I2, bool _AP_S2>
@@ -6487,7 +6488,9 @@ inline __attribute__((nodebug)) bool operator!=(
 
 }
 # 366 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_fixed.h" 2
+# 361 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_int.h" 2
 # 6 "./DelayAndSum.hpp" 2
+
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\hls_stream.h" 1
 # 12 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\hls_stream.h"
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/hls_stream_39.h" 1
@@ -6617,81 +6620,14 @@ class stream : public stream<__STREAM_T__, 0> {
 };
 }
 # 13 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\hls_stream.h" 2
-# 7 "./DelayAndSum.hpp" 2
+# 8 "./DelayAndSum.hpp" 2
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_axi_sdata.h" 1
+# 15 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_axi_sdata.h"
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/ap_int.h" 1
+# 16 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_axi_sdata.h" 2
 
-
-
-
-
-typedef ap_fixed<8,3> fxd_8_3_t;
-typedef ap_fixed<16,1> fxd_16_1_t;
-typedef ap_fixed<32,16> fxd_32_16_t;
-
-__attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
-
-    fxd_8_3_t *phi,
-
-
-    fxd_32_16_t *fc,
-
-
-    fxd_32_16_t *xpos1,
-    fxd_32_16_t *xpos2,
-    fxd_32_16_t *xpos3,
-    fxd_32_16_t *xpos4,
-
-
-    hls::stream<fxd_16_1_t> &in1_real,
-    hls::stream<fxd_16_1_t> &in1_imag,
-    hls::stream<fxd_16_1_t> &in2_real,
-    hls::stream<fxd_16_1_t> &in2_imag,
-    hls::stream<fxd_16_1_t> &in3_real,
-    hls::stream<fxd_16_1_t> &in3_imag,
-    hls::stream<fxd_16_1_t> &in4_real,
-    hls::stream<fxd_16_1_t> &in4_imag,
-    hls::stream<fxd_16_1_t> &out_real,
-    hls::stream<fxd_16_1_t> &out_imag
-);
-# 2 "DelayAndSum.cpp" 2
-# 1 "./CalculateWeights.hpp" 1
-
-
-
-
-void CalculateElement(fxd_8_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
-void CalculateWeights(
-
-    fxd_8_3_t phi,
-
-
-    fxd_32_16_t fc,
-
-
-    fxd_32_16_t xpos1,
-    fxd_32_16_t xpos2,
-    fxd_32_16_t xpos3,
-    fxd_32_16_t xpos4,
-
-
-    fxd_16_1_t &w1_real,
-    fxd_16_1_t &w1_imag,
-    fxd_16_1_t &w2_real,
-    fxd_16_1_t &w2_imag,
-    fxd_16_1_t &w3_real,
-    fxd_16_1_t &w3_imag,
-    fxd_16_1_t &w4_real,
-    fxd_16_1_t &w4_imag
-);
-# 3 "DelayAndSum.cpp" 2
-# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\atomic" 1 3
-# 36 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\atomic" 3
-
-
-
-
-
-# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 1 3
-# 34 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 3
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cassert" 1 3
+# 42 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cassert" 3
 
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\x86_64-w64-mingw32\\bits/c++config.h" 1 3
 # 236 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\x86_64-w64-mingw32\\bits/c++config.h" 3
@@ -6720,7 +6656,827 @@ namespace __gnu_cxx
 
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\x86_64-w64-mingw32\\bits/cpu_defines.h" 1 3
 # 512 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\x86_64-w64-mingw32\\bits/c++config.h" 2 3
-# 36 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 2 3
+# 44 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cassert" 2 3
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\assert.h" 1 3
+# 17 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\assert.h" 3
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\stdlib.h" 1 3
+# 36 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\stdlib.h" 3
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstdlib" 1 3
+# 40 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstdlib" 3
+# 75 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstdlib" 3
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 1 3
+# 10 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+# 1 "C:\\Xilinx\\Vitis_HLS\\2024.1\\win64\\tools\\clang-3.9-csynth\\lib\\clang\\7.0.0\\include\\limits.h" 1 3
+# 37 "C:\\Xilinx\\Vitis_HLS\\2024.1\\win64\\tools\\clang-3.9-csynth\\lib\\clang\\7.0.0\\include\\limits.h" 3
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\limits.h" 1 3
+# 38 "C:\\Xilinx\\Vitis_HLS\\2024.1\\win64\\tools\\clang-3.9-csynth\\lib\\clang\\7.0.0\\include\\limits.h" 2 3
+# 11 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 2 3
+# 25 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+#pragma pack(push,_CRT_PACKING)
+
+
+extern "C" {
+# 49 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+  typedef int (__attribute__((__cdecl__)) *_onexit_t)(void);
+# 59 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+  typedef struct _div_t {
+    int quot;
+    int rem;
+  } div_t;
+
+  typedef struct _ldiv_t {
+    long quot;
+    long rem;
+  } ldiv_t;
+
+
+
+
+
+#pragma pack(4)
+ typedef struct {
+    unsigned char ld[10];
+  } _LDOUBLE;
+#pragma pack()
+
+
+
+ typedef struct {
+    double x;
+  } _CRT_DOUBLE;
+
+  typedef struct {
+    float f;
+  } _CRT_FLOAT;
+
+
+
+
+  typedef struct {
+    long double x;
+  } _LONGDOUBLE;
+
+
+
+#pragma pack(4)
+ typedef struct {
+    unsigned char ld12[12];
+  } _LDBL12;
+#pragma pack()
+# 115 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+ extern int * __imp___mb_cur_max;
+
+
+
+
+__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) ___mb_cur_max_func(void);
+# 142 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+  typedef void (__attribute__((__cdecl__)) *_purecall_handler)(void);
+
+  __attribute__ ((__dllimport__)) _purecall_handler __attribute__((__cdecl__)) _set_purecall_handler(_purecall_handler _Handler);
+  __attribute__ ((__dllimport__)) _purecall_handler __attribute__((__cdecl__)) _get_purecall_handler(void);
+
+  typedef void (__attribute__((__cdecl__)) *_invalid_parameter_handler)(const wchar_t *,const wchar_t *,const wchar_t *,unsigned int,uintptr_t);
+  __attribute__ ((__dllimport__)) _invalid_parameter_handler __attribute__((__cdecl__)) _set_invalid_parameter_handler(_invalid_parameter_handler _Handler);
+  __attribute__ ((__dllimport__)) _invalid_parameter_handler __attribute__((__cdecl__)) _get_invalid_parameter_handler(void);
+
+
+
+  __attribute__ ((__dllimport__)) extern int *__attribute__((__cdecl__)) _errno(void);
+
+  errno_t __attribute__((__cdecl__)) _set_errno(int _Value);
+  errno_t __attribute__((__cdecl__)) _get_errno(int *_Value);
+
+  __attribute__ ((__dllimport__)) unsigned long *__attribute__((__cdecl__)) __doserrno(void);
+
+  errno_t __attribute__((__cdecl__)) _set_doserrno(unsigned long _Value);
+  errno_t __attribute__((__cdecl__)) _get_doserrno(unsigned long *_Value);
+# 172 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+  extern __attribute__((dllimport)) char *_sys_errlist[1];
+  extern __attribute__((dllimport)) int _sys_nerr;
+
+
+
+
+
+  __attribute__ ((__dllimport__)) char ***__attribute__((__cdecl__)) __p___argv(void);
+  __attribute__ ((__dllimport__)) int *__attribute__((__cdecl__)) __p__fmode(void);
+# 190 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+  errno_t __attribute__((__cdecl__)) _get_pgmptr(char **_Value);
+  errno_t __attribute__((__cdecl__)) _get_wpgmptr(wchar_t **_Value);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _set_fmode(int _Mode);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_fmode(int *_PMode);
+# 281 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+  extern int * __imp___argc;
+
+
+
+  extern char *** __imp___argv;
+
+
+
+  extern wchar_t *** __imp___wargv;
+
+
+
+
+
+  extern char *** __imp__environ;
+
+
+
+
+  extern wchar_t *** __imp__wenviron;
+
+
+
+
+
+  extern char ** __imp__pgmptr;
+
+
+
+
+  extern wchar_t ** __imp__wpgmptr;
+
+
+
+
+  extern unsigned int * __imp__osplatform;
+
+
+
+
+  extern unsigned int * __imp__osver;
+
+
+
+
+  extern unsigned int * __imp__winver;
+
+
+
+
+  extern unsigned int * __imp__winmajor;
+
+
+
+
+  extern unsigned int * __imp__winminor;
+
+
+
+
+
+  errno_t __attribute__((__cdecl__)) _get_osplatform(unsigned int *_Value);
+  errno_t __attribute__((__cdecl__)) _get_osver(unsigned int *_Value);
+  errno_t __attribute__((__cdecl__)) _get_winver(unsigned int *_Value);
+  errno_t __attribute__((__cdecl__)) _get_winmajor(unsigned int *_Value);
+  errno_t __attribute__((__cdecl__)) _get_winminor(unsigned int *_Value);
+
+
+
+
+  extern "C++" {
+    template <typename _CountofType,size_t _SizeOfArray> char (*__countof_helper( _CountofType (&_Array)[_SizeOfArray]))[_SizeOfArray];
+
+  }
+
+
+
+
+
+  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) exit(int _Code) __attribute__ ((__noreturn__));
+  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _exit(int _Code) __attribute__ ((__noreturn__));
+
+
+
+  void __attribute__((__cdecl__)) _Exit(int) __attribute__ ((__noreturn__));
+# 374 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+  void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) abort(void);
+
+
+
+
+  __attribute__ ((__dllimport__)) unsigned int __attribute__((__cdecl__)) _set_abort_behavior(unsigned int _Flags,unsigned int _Mask);
+
+
+
+  int __attribute__((__cdecl__)) abs(int _X);
+  long __attribute__((__cdecl__)) labs(long _X);
+
+
+  __extension__ long __attribute__((__cdecl__)) _abs64(long);
+
+  extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) long __attribute__((__cdecl__)) _abs64(long x) {
+    return __builtin_llabs(x);
+  }
+
+
+  int __attribute__((__cdecl__)) atexit(void (__attribute__((__cdecl__)) *)(void));
+
+
+  double __attribute__((__cdecl__)) atof(const char *_String);
+  double __attribute__((__cdecl__)) _atof_l(const char *_String,_locale_t _Locale);
+
+  int __attribute__((__cdecl__)) atoi(const char *_Str);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoi_l(const char *_Str,_locale_t _Locale);
+  long __attribute__((__cdecl__)) atol(const char *_Str);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _atol_l(const char *_Str,_locale_t _Locale);
+
+
+  void *__attribute__((__cdecl__)) bsearch(const void *_Key,const void *_Base,size_t _NumOfElements,size_t _SizeOfElements,int (__attribute__((__cdecl__)) *_PtFuncCompare)(const void *,const void *));
+  void __attribute__((__cdecl__)) qsort(void *_Base,size_t _NumOfElements,size_t _SizeOfElements,int (__attribute__((__cdecl__)) *_PtFuncCompare)(const void *,const void *));
+
+  unsigned short __attribute__((__cdecl__)) _byteswap_ushort(unsigned short _Short);
+  unsigned long __attribute__((__cdecl__)) _byteswap_ulong (unsigned long _Long);
+  __extension__ unsigned long __attribute__((__cdecl__)) _byteswap_uint64(unsigned long _Int64);
+  div_t __attribute__((__cdecl__)) div(int _Numerator,int _Denominator);
+  char *__attribute__((__cdecl__)) getenv(const char *_VarName) ;
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _itoa(int _Value,char *_Dest,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _i64toa(long _Val,char *_DstBuf,int _Radix) ;
+  __extension__ __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ui64toa(unsigned long _Val,char *_DstBuf,int _Radix) ;
+  __extension__ __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _atoi64(const char *_String);
+  __extension__ __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _atoi64_l(const char *_String,_locale_t _Locale);
+  __extension__ __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _strtoi64(const char *_String,char **_EndPtr,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _strtoi64_l(const char *_String,char **_EndPtr,int _Radix,_locale_t _Locale);
+  __extension__ __attribute__ ((__dllimport__)) unsigned long __attribute__((__cdecl__)) _strtoui64(const char *_String,char **_EndPtr,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) unsigned long __attribute__((__cdecl__)) _strtoui64_l(const char *_String,char **_EndPtr,int _Radix,_locale_t _Locale);
+  ldiv_t __attribute__((__cdecl__)) ldiv(long _Numerator,long _Denominator);
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ltoa(long _Value,char *_Dest,int _Radix) ;
+  int __attribute__((__cdecl__)) mblen(const char *_Ch,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _mblen_l(const char *_Ch,size_t _MaxCount,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrlen(const char *_Str);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrlen_l(const char *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrnlen(const char *_Str,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrnlen_l(const char *_Str,size_t _MaxCount,_locale_t _Locale);
+  int __attribute__((__cdecl__)) mbtowc(wchar_t * __restrict__ _DstCh,const char * __restrict__ _SrcCh,size_t _SrcSizeInBytes);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _mbtowc_l(wchar_t * __restrict__ _DstCh,const char * __restrict__ _SrcCh,size_t _SrcSizeInBytes,_locale_t _Locale);
+  size_t __attribute__((__cdecl__)) mbstowcs(wchar_t * __restrict__ _Dest,const char * __restrict__ _Source,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstowcs_l(wchar_t * __restrict__ _Dest,const char * __restrict__ _Source,size_t _MaxCount,_locale_t _Locale);
+  int __attribute__((__cdecl__)) mkstemp(char *template_name);
+  int __attribute__((__cdecl__)) rand(void);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _set_error_mode(int _Mode);
+  void __attribute__((__cdecl__)) srand(unsigned int _Seed);
+# 449 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+static __attribute__ ((__unused__)) __inline__ __attribute__((__cdecl__))
+double __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtod(const char * __restrict__ _Str,char ** __restrict__ _EndPtr)
+{
+  double __attribute__((__cdecl__)) __mingw_strtod (const char * __restrict__, char ** __restrict__);
+  return __mingw_strtod( _Str, _EndPtr);
+}
+
+static __attribute__ ((__unused__)) __inline__ __attribute__((__cdecl__))
+float __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtof(const char * __restrict__ _Str,char ** __restrict__ _EndPtr)
+{
+  float __attribute__((__cdecl__)) __mingw_strtof (const char * __restrict__, char ** __restrict__);
+  return __mingw_strtof( _Str, _EndPtr);
+}
+
+
+
+
+
+
+  long double __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtold(const char * __restrict__ , char ** __restrict__ );
+
+
+  extern double __attribute__((__cdecl__)) __attribute__ ((__nothrow__))
+  __strtod (const char * __restrict__ , char ** __restrict__);
+
+
+
+
+
+
+
+  float __attribute__((__cdecl__)) __mingw_strtof (const char * __restrict__, char ** __restrict__);
+  double __attribute__((__cdecl__)) __mingw_strtod (const char * __restrict__, char ** __restrict__);
+  long double __attribute__((__cdecl__)) __mingw_strtold(const char * __restrict__, char ** __restrict__);
+
+  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _strtod_l(const char * __restrict__ _Str,char ** __restrict__ _EndPtr,_locale_t _Locale);
+  long __attribute__((__cdecl__)) strtol(const char * __restrict__ _Str,char ** __restrict__ _EndPtr,int _Radix);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _strtol_l(const char * __restrict__ _Str,char ** __restrict__ _EndPtr,int _Radix,_locale_t _Locale);
+  unsigned long __attribute__((__cdecl__)) strtoul(const char * __restrict__ _Str,char ** __restrict__ _EndPtr,int _Radix);
+  __attribute__ ((__dllimport__)) unsigned long __attribute__((__cdecl__)) _strtoul_l(const char * __restrict__ _Str,char ** __restrict__ _EndPtr,int _Radix,_locale_t _Locale);
+
+
+  int __attribute__((__cdecl__)) system(const char *_Command);
+
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ultoa(unsigned long _Value,char *_Dest,int _Radix) ;
+  int __attribute__((__cdecl__)) wctomb(char *_MbCh,wchar_t _WCh) ;
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wctomb_l(char *_MbCh,wchar_t _WCh,_locale_t _Locale) ;
+  size_t __attribute__((__cdecl__)) wcstombs(char * __restrict__ _Dest,const wchar_t * __restrict__ _Source,size_t _MaxCount) ;
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _wcstombs_l(char * __restrict__ _Dest,const wchar_t * __restrict__ _Source,size_t _MaxCount,_locale_t _Locale) ;
+
+
+
+  void *__attribute__((__cdecl__)) calloc(size_t _NumOfElements,size_t _SizeOfElements);
+  void __attribute__((__cdecl__)) free(void *_Memory);
+  void *__attribute__((__cdecl__)) malloc(size_t _Size);
+  void *__attribute__((__cdecl__)) realloc(void *_Memory,size_t _NewSize);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _recalloc(void *_Memory,size_t _Count,size_t _Size);
+
+
+
+
+
+
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _aligned_free(void *_Memory);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_malloc(size_t _Size,size_t _Alignment);
+
+
+
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_offset_malloc(size_t _Size,size_t _Alignment,size_t _Offset);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_realloc(void *_Memory,size_t _Size,size_t _Alignment);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_recalloc(void *_Memory,size_t _Count,size_t _Size,size_t _Alignment);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_offset_realloc(void *_Memory,size_t _Size,size_t _Alignment,size_t _Offset);
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_offset_recalloc(void *_Memory,size_t _Count,size_t _Size,size_t _Alignment,size_t _Offset);
+
+
+
+
+
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _itow(int _Value,wchar_t *_Dest,int _Radix) ;
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _ltow(long _Value,wchar_t *_Dest,int _Radix) ;
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _ultow(unsigned long _Value,wchar_t *_Dest,int _Radix) ;
+
+  double __attribute__((__cdecl__)) __mingw_wcstod(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr);
+  float __attribute__((__cdecl__)) __mingw_wcstof(const wchar_t * __restrict__ nptr, wchar_t ** __restrict__ endptr);
+  long double __attribute__((__cdecl__)) __mingw_wcstold(const wchar_t * __restrict__, wchar_t ** __restrict__);
+
+
+  static __attribute__ ((__unused__)) __inline__ __attribute__((__cdecl__))
+  double __attribute__((__cdecl__)) wcstod(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr){
+    return __mingw_wcstod(_Str,_EndPtr);
+  }
+  static __attribute__ ((__unused__)) __inline__ __attribute__((__cdecl__))
+  float __attribute__((__cdecl__)) wcstof(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr){
+    return __mingw_wcstof(_Str,_EndPtr);
+  }
+
+
+
+
+
+
+  long double __attribute__((__cdecl__)) wcstold(const wchar_t * __restrict__, wchar_t ** __restrict__);
+
+  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _wcstod_l(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,_locale_t _Locale);
+  long __attribute__((__cdecl__)) wcstol(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _wcstol_l(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix,_locale_t _Locale);
+  unsigned long __attribute__((__cdecl__)) wcstoul(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix);
+  __attribute__ ((__dllimport__)) unsigned long __attribute__((__cdecl__)) _wcstoul_l(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr,int _Radix,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wgetenv(const wchar_t *_VarName) ;
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wsystem(const wchar_t *_Command);
+
+  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _wtof(const wchar_t *_Str);
+  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _wtof_l(const wchar_t *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wtoi(const wchar_t *_Str);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wtoi_l(const wchar_t *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _wtol(const wchar_t *_Str);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _wtol_l(const wchar_t *_Str,_locale_t _Locale);
+
+  __extension__ __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _i64tow(long _Val,wchar_t *_DstBuf,int _Radix) ;
+  __extension__ __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _ui64tow(unsigned long _Val,wchar_t *_DstBuf,int _Radix) ;
+  __extension__ __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _wtoi64(const wchar_t *_Str);
+  __extension__ __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _wtoi64_l(const wchar_t *_Str,_locale_t _Locale);
+  __extension__ __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _wcstoi64(const wchar_t *_Str,wchar_t **_EndPtr,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _wcstoi64_l(const wchar_t *_Str,wchar_t **_EndPtr,int _Radix,_locale_t _Locale);
+  __extension__ __attribute__ ((__dllimport__)) unsigned long __attribute__((__cdecl__)) _wcstoui64(const wchar_t *_Str,wchar_t **_EndPtr,int _Radix);
+  __extension__ __attribute__ ((__dllimport__)) unsigned long __attribute__((__cdecl__)) _wcstoui64_l(const wchar_t *_Str ,wchar_t **_EndPtr,int _Radix,_locale_t _Locale);
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _putenv(const char *_EnvString);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wputenv(const wchar_t *_EnvString);
+
+
+
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _fullpath(char *_FullPath,const char *_Path,size_t _SizeInBytes);
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ecvt(double _Val,int _NumOfDigits,int *_PtDec,int *_PtSign) ;
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _fcvt(double _Val,int _NumOfDec,int *_PtDec,int *_PtSign) ;
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _gcvt(double _Val,int _NumOfDigits,char *_DstBuf) ;
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atodbl(_CRT_DOUBLE *_Result,char *_Str);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoldbl(_LDOUBLE *_Result,char *_Str);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoflt(_CRT_FLOAT *_Result,char *_Str);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atodbl_l(_CRT_DOUBLE *_Result,char *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoldbl_l(_LDOUBLE *_Result,char *_Str,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoflt_l(_CRT_FLOAT *_Result,char *_Str,_locale_t _Locale);
+# 609 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+unsigned long __attribute__((__cdecl__)) _lrotl(unsigned long,int);
+unsigned long __attribute__((__cdecl__)) _lrotr(unsigned long,int);
+
+
+
+
+
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _makepath(char *_Path,const char *_Drive,const char *_Dir,const char *_Filename,const char *_Ext);
+  _onexit_t __attribute__((__cdecl__)) _onexit(_onexit_t _Func);
+# 627 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+  __extension__ unsigned long __attribute__((__cdecl__)) _rotl64(unsigned long _Val,int _Shift);
+  __extension__ unsigned long __attribute__((__cdecl__)) _rotr64(unsigned long Value,int Shift);
+
+
+
+
+
+
+  unsigned int __attribute__((__cdecl__)) _rotr(unsigned int _Val,int _Shift);
+  unsigned int __attribute__((__cdecl__)) _rotl(unsigned int _Val,int _Shift);
+
+
+  __extension__ unsigned long __attribute__((__cdecl__)) _rotr64(unsigned long _Val,int _Shift);
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _searchenv(const char *_Filename,const char *_EnvVar,char *_ResultPath) ;
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _splitpath(const char *_FullPath,char *_Drive,char *_Dir,char *_Filename,char *_Ext) ;
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _swab(char *_Buf1,char *_Buf2,int _SizeInBytes);
+
+
+
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wfullpath(wchar_t *_FullPath,const wchar_t *_Path,size_t _SizeInWords);
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _wmakepath(wchar_t *_ResultPath,const wchar_t *_Drive,const wchar_t *_Dir,const wchar_t *_Filename,const wchar_t *_Ext);
+
+
+
+
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _wsearchenv(const wchar_t *_Filename,const wchar_t *_EnvVar,wchar_t *_ResultPath) ;
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _wsplitpath(const wchar_t *_FullPath,wchar_t *_Drive,wchar_t *_Dir,wchar_t *_Filename,wchar_t *_Ext) ;
+
+
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _beep(unsigned _Frequency,unsigned _Duration) __attribute__ ((__deprecated__));
+
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _seterrormode(int _Mode) __attribute__ ((__deprecated__));
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _sleep(unsigned long _Duration) __attribute__ ((__deprecated__));
+# 680 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+  char *__attribute__((__cdecl__)) ecvt(double _Val,int _NumOfDigits,int *_PtDec,int *_PtSign) ;
+  char *__attribute__((__cdecl__)) fcvt(double _Val,int _NumOfDec,int *_PtDec,int *_PtSign) ;
+  char *__attribute__((__cdecl__)) gcvt(double _Val,int _NumOfDigits,char *_DstBuf) ;
+  char *__attribute__((__cdecl__)) itoa(int _Val,char *_DstBuf,int _Radix) ;
+  char *__attribute__((__cdecl__)) ltoa(long _Val,char *_DstBuf,int _Radix) ;
+  int __attribute__((__cdecl__)) putenv(const char *_EnvString) ;
+
+
+
+  void __attribute__((__cdecl__)) swab(char *_Buf1,char *_Buf2,int _SizeInBytes) ;
+
+
+  char *__attribute__((__cdecl__)) ultoa(unsigned long _Val,char *_Dstbuf,int _Radix) ;
+  _onexit_t __attribute__((__cdecl__)) onexit(_onexit_t _Func);
+
+
+
+
+
+  typedef struct { __extension__ long long quot, rem; } lldiv_t;
+
+  __extension__ lldiv_t __attribute__((__cdecl__)) lldiv(long long, long long);
+
+  __extension__ long long __attribute__((__cdecl__)) llabs(long long);
+
+
+
+
+  __extension__ long long __attribute__((__cdecl__)) strtoll(const char * __restrict__, char ** __restrict, int);
+  __extension__ unsigned long long __attribute__((__cdecl__)) strtoull(const char * __restrict__, char ** __restrict__, int);
+
+
+  __extension__ long long __attribute__((__cdecl__)) atoll (const char *);
+
+
+  __extension__ long long __attribute__((__cdecl__)) wtoll (const wchar_t *);
+  __extension__ char *__attribute__((__cdecl__)) lltoa (long long, char *, int);
+  __extension__ char *__attribute__((__cdecl__)) ulltoa (unsigned long long , char *, int);
+  __extension__ wchar_t *__attribute__((__cdecl__)) lltow (long long, wchar_t *, int);
+  __extension__ wchar_t *__attribute__((__cdecl__)) ulltow (unsigned long long, wchar_t *, int);
+# 735 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 3
+}
+
+
+#pragma pack(pop)
+
+
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\sec_api/stdlib_s.h" 1 3
+
+
+
+
+
+
+
+
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\stdlib.h" 1 3
+# 30 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\stdlib.h" 3
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 1 3
+# 31 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\stdlib.h" 2 3
+# 10 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\sec_api/stdlib_s.h" 2 3
+# 741 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 2 3
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\malloc.h" 1 3
+# 11 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\malloc.h" 3
+#pragma pack(push,_CRT_PACKING)
+
+
+extern "C" {
+# 46 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\malloc.h" 3
+  typedef struct _heapinfo {
+    int *_pentry;
+    size_t _size;
+    int _useflag;
+  } _HEAPINFO;
+
+
+  extern unsigned int _amblksiz;
+# 103 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\malloc.h" 3
+void * __mingw_aligned_malloc (size_t _Size, size_t _Alignment);
+void __mingw_aligned_free (void *_Memory);
+void * __mingw_aligned_offset_realloc (void *_Memory, size_t _Size, size_t _Alignment, size_t _Offset);
+void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
+
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _resetstkoflw (void);
+  __attribute__ ((__dllimport__)) unsigned long __attribute__((__cdecl__)) _set_malloc_crt_max_wait(unsigned long _NewValue);
+
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _expand(void *_Memory,size_t _NewSize);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _msize(void *_Memory);
+
+
+
+
+
+
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _get_sbh_threshold(void);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _set_sbh_threshold(size_t _NewValue);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _set_amblksiz(size_t _Value);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_amblksiz(size_t *_Value);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _heapadd(void *_Memory,size_t _Size);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _heapchk(void);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _heapmin(void);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _heapset(unsigned int _Fill);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _heapwalk(_HEAPINFO *_EntryInfo);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _heapused(size_t *_Used,size_t *_Commit);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _get_heap_handle(void);
+# 144 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\malloc.h" 3
+  static __inline void *_MarkAllocaS(void *_Ptr,unsigned int _Marker) {
+    if(_Ptr) {
+      *((unsigned int*)_Ptr) = _Marker;
+      _Ptr = (char*)_Ptr + 16;
+    }
+    return _Ptr;
+  }
+# 163 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\malloc.h" 3
+  static __inline void __attribute__((__cdecl__)) _freea(void *_Memory) {
+    unsigned int _Marker;
+    if(_Memory) {
+      _Memory = (char*)_Memory - 16;
+      _Marker = *(unsigned int *)_Memory;
+      if(_Marker==0xDDDD) {
+ free(_Memory);
+      }
+
+
+
+
+
+    }
+  }
+# 206 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\malloc.h" 3
+}
+
+
+#pragma pack(pop)
+# 742 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdlib.h" 2 3
+# 76 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstdlib" 2 3
+
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/std_abs.h" 1 3
+# 34 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/std_abs.h" 3
+# 46 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/std_abs.h" 3
+extern "C++"
+{
+namespace std
+{
+
+
+  using ::abs;
+
+
+  inline long
+  abs(long __i) { return __builtin_labs(__i); }
+
+
+
+  inline long long
+  abs(long long __x) { return __builtin_llabs (__x); }
+
+
+
+
+
+
+
+  inline constexpr double
+  abs(double __x)
+  { return __builtin_fabs(__x); }
+
+  inline constexpr float
+  abs(float __x)
+  { return __builtin_fabsf(__x); }
+
+  inline constexpr long double
+  abs(long double __x)
+  { return __builtin_fabsl(__x); }
+
+
+
+  inline constexpr __int128
+  abs(__int128 __x) { return __x >= 0 ? __x : -__x; }
+# 107 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/std_abs.h" 3
+}
+}
+# 78 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstdlib" 2 3
+# 121 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstdlib" 3
+extern "C++"
+{
+namespace std
+{
+
+
+  using ::div_t;
+  using ::ldiv_t;
+
+  using ::abort;
+
+
+
+  using ::atexit;
+
+
+
+
+
+  using ::atof;
+  using ::atoi;
+  using ::atol;
+  using ::bsearch;
+  using ::calloc;
+  using ::div;
+  using ::exit;
+  using ::free;
+  using ::getenv;
+  using ::labs;
+  using ::ldiv;
+  using ::malloc;
+
+  using ::mblen;
+  using ::mbstowcs;
+  using ::mbtowc;
+
+  using ::qsort;
+
+
+
+
+
+  using ::rand;
+  using ::realloc;
+  using ::srand;
+  using ::strtod;
+  using ::strtol;
+  using ::strtoul;
+  using ::system;
+
+  using ::wcstombs;
+  using ::wctomb;
+
+
+
+  inline ldiv_t
+  div(long __i, long __j) { return ldiv(__i, __j); }
+
+
+
+
+}
+# 195 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstdlib" 3
+namespace __gnu_cxx
+{
+
+
+
+  using ::lldiv_t;
+
+
+
+
+
+  using ::_Exit;
+
+
+
+  using ::llabs;
+
+  inline lldiv_t
+  div(long long __n, long long __d)
+  { lldiv_t __q; __q.quot = __n / __d; __q.rem = __n % __d; return __q; }
+
+  using ::lldiv;
+# 227 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstdlib" 3
+  using ::atoll;
+  using ::strtoll;
+  using ::strtoull;
+
+  using ::strtof;
+  using ::strtold;
+
+
+}
+
+namespace std
+{
+
+  using ::__gnu_cxx::lldiv_t;
+
+  using ::__gnu_cxx::_Exit;
+
+  using ::__gnu_cxx::llabs;
+  using ::__gnu_cxx::div;
+  using ::__gnu_cxx::lldiv;
+
+  using ::__gnu_cxx::atoll;
+  using ::__gnu_cxx::strtof;
+  using ::__gnu_cxx::strtoll;
+  using ::__gnu_cxx::strtoull;
+  using ::__gnu_cxx::strtold;
+}
+
+
+
+}
+# 37 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\stdlib.h" 2 3
+
+using std::abort;
+using std::atexit;
+using std::exit;
+# 51 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\stdlib.h" 3
+using std::div_t;
+using std::ldiv_t;
+
+using std::abs;
+using std::atof;
+using std::atoi;
+using std::atol;
+using std::bsearch;
+using std::calloc;
+using std::div;
+using std::free;
+using std::getenv;
+using std::labs;
+using std::ldiv;
+using std::malloc;
+
+using std::mblen;
+using std::mbstowcs;
+using std::mbtowc;
+
+using std::qsort;
+using std::rand;
+using std::realloc;
+using std::srand;
+using std::strtod;
+using std::strtol;
+using std::strtoul;
+using std::system;
+
+using std::wcstombs;
+using std::wctomb;
+# 18 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\assert.h" 2 3
+
+
+
+extern "C" {
+# 45 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\assert.h" 3
+extern void __attribute__((__cdecl__))
+_wassert(const wchar_t *_Message,const wchar_t *_File,unsigned _Line);
+extern void __attribute__((__cdecl__))
+_assert (const char *_Message, const char *_File, unsigned _Line);
+
+
+}
+# 45 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cassert" 2 3
+# 18 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_axi_sdata.h" 2
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\climits" 1 3
+# 40 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\climits" 3
+# 19 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_axi_sdata.h" 2
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstdint" 1 3
+# 33 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstdint" 3
+
+
+
+
+
+
+
+
 # 1 "C:\\Xilinx\\Vitis_HLS\\2024.1\\win64\\tools\\clang-3.9-csynth\\lib\\clang\\7.0.0\\include\\stdint.h" 1 3
 # 63 "C:\\Xilinx\\Vitis_HLS\\2024.1\\win64\\tools\\clang-3.9-csynth\\lib\\clang\\7.0.0\\include\\stdint.h" 3
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\stdint.h" 1 3
@@ -6765,748 +7521,50 @@ __extension__ typedef unsigned long long uint_fast64_t;
 __extension__ typedef long long intmax_t;
 __extension__ typedef unsigned long long uintmax_t;
 # 64 "C:\\Xilinx\\Vitis_HLS\\2024.1\\win64\\tools\\clang-3.9-csynth\\lib\\clang\\7.0.0\\include\\stdint.h" 2 3
-# 37 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 2 3
-# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_lockfree_defines.h" 1 3
-# 34 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_lockfree_defines.h" 3
-# 38 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 2 3
-
+# 42 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstdint" 2 3
 
 
 
 
 namespace std
 {
-# 55 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 3
-  typedef enum memory_order
-    {
-      memory_order_relaxed,
-      memory_order_consume,
-      memory_order_acquire,
-      memory_order_release,
-      memory_order_acq_rel,
-      memory_order_seq_cst
-    } memory_order;
-
-  enum __memory_order_modifier
-    {
-      __memory_order_mask = 0x0ffff,
-      __memory_order_modifier_mask = 0xffff0000,
-      __memory_order_hle_acquire = 0x10000,
-      __memory_order_hle_release = 0x20000
-    };
-
-  constexpr memory_order
-  operator|(memory_order __m, __memory_order_modifier __mod)
-  {
-    return memory_order(__m | int(__mod));
-  }
-
-  constexpr memory_order
-  operator&(memory_order __m, __memory_order_modifier __mod)
-  {
-    return memory_order(__m & int(__mod));
-  }
-
-
-  constexpr memory_order
-  __cmpexch_failure_order2(memory_order __m) noexcept
-  {
-    return __m == memory_order_acq_rel ? memory_order_acquire
-      : __m == memory_order_release ? memory_order_relaxed : __m;
-  }
-
-  constexpr memory_order
-  __cmpexch_failure_order(memory_order __m) noexcept
-  {
-    return memory_order(__cmpexch_failure_order2(__m & __memory_order_mask)
-      | (__m & __memory_order_modifier_mask));
-  }
-
-  inline __attribute__((__always_inline__)) void
-  atomic_thread_fence(memory_order __m) noexcept
-  { __atomic_thread_fence(__m); }
-
-  inline __attribute__((__always_inline__)) void
-  atomic_signal_fence(memory_order __m) noexcept
-  { __atomic_signal_fence(__m); }
-
-
-  template<typename _Tp>
-    inline _Tp
-    kill_dependency(_Tp __y) noexcept
-    {
-      _Tp __ret(__y);
-      return __ret;
-    }
-
-
-
-  template<typename _IntTp>
-    struct __atomic_base;
-
-
-
-
-  template<typename _Tp>
-    struct atomic;
-
-  template<typename _Tp>
-    struct atomic<_Tp*>;
-
-
-
-    typedef bool __atomic_flag_data_type;
-# 148 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 3
-  extern "C" {
-
-  struct __atomic_flag_base
-  {
-    __atomic_flag_data_type _M_i;
-  };
-
-  }
-
-
-
-
-  struct atomic_flag : public __atomic_flag_base
-  {
-    atomic_flag() noexcept = default;
-    ~atomic_flag() noexcept = default;
-    atomic_flag(const atomic_flag&) = delete;
-    atomic_flag& operator=(const atomic_flag&) = delete;
-    atomic_flag& operator=(const atomic_flag&) volatile = delete;
-
-
-    constexpr atomic_flag(bool __i) noexcept
-      : __atomic_flag_base{ _S_init(__i) }
-    { }
-
-    inline __attribute__((__always_inline__)) bool
-    test_and_set(memory_order __m = memory_order_seq_cst) noexcept
-    {
-      return __atomic_test_and_set (&_M_i, __m);
-    }
-
-    inline __attribute__((__always_inline__)) bool
-    test_and_set(memory_order __m = memory_order_seq_cst) volatile noexcept
-    {
-      return __atomic_test_and_set (&_M_i, __m);
-    }
-
-    inline __attribute__((__always_inline__)) void
-    clear(memory_order __m = memory_order_seq_cst) noexcept
-    {
-      memory_order __b = __m & __memory_order_mask;
-                                                   ;
-                                                   ;
-                                                   ;
-
-      __atomic_clear (&_M_i, __m);
-    }
-
-    inline __attribute__((__always_inline__)) void
-    clear(memory_order __m = memory_order_seq_cst) volatile noexcept
-    {
-      memory_order __b = __m & __memory_order_mask;
-                                                   ;
-                                                   ;
-                                                   ;
-
-      __atomic_clear (&_M_i, __m);
-    }
-
-  private:
-    static constexpr __atomic_flag_data_type
-    _S_init(bool __i)
-    { return __i ? 1 : 0; }
-  };
-# 237 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 3
-  template<typename _ITp>
-    struct __atomic_base
-    {
-    private:
-      typedef _ITp __int_type;
-
-      static constexpr int _S_alignment =
- sizeof(_ITp) > alignof(_ITp) ? sizeof(_ITp) : alignof(_ITp);
-
-      alignas(_S_alignment) __int_type _M_i;
-
-    public:
-      __atomic_base() noexcept = default;
-      ~__atomic_base() noexcept = default;
-      __atomic_base(const __atomic_base&) = delete;
-      __atomic_base& operator=(const __atomic_base&) = delete;
-      __atomic_base& operator=(const __atomic_base&) volatile = delete;
-
-
-      constexpr __atomic_base(__int_type __i) noexcept : _M_i (__i) { }
-
-      operator __int_type() const noexcept
-      { return load(); }
-
-      operator __int_type() const volatile noexcept
-      { return load(); }
-
-      __int_type
-      operator=(__int_type __i) noexcept
-      {
- store(__i);
- return __i;
-      }
-
-      __int_type
-      operator=(__int_type __i) volatile noexcept
-      {
- store(__i);
- return __i;
-      }
-
-      __int_type
-      operator++(int) noexcept
-      { return fetch_add(1); }
-
-      __int_type
-      operator++(int) volatile noexcept
-      { return fetch_add(1); }
-
-      __int_type
-      operator--(int) noexcept
-      { return fetch_sub(1); }
-
-      __int_type
-      operator--(int) volatile noexcept
-      { return fetch_sub(1); }
-
-      __int_type
-      operator++() noexcept
-      { return __atomic_add_fetch(&_M_i, 1, memory_order_seq_cst); }
-
-      __int_type
-      operator++() volatile noexcept
-      { return __atomic_add_fetch(&_M_i, 1, memory_order_seq_cst); }
-
-      __int_type
-      operator--() noexcept
-      { return __atomic_sub_fetch(&_M_i, 1, memory_order_seq_cst); }
-
-      __int_type
-      operator--() volatile noexcept
-      { return __atomic_sub_fetch(&_M_i, 1, memory_order_seq_cst); }
-
-      __int_type
-      operator+=(__int_type __i) noexcept
-      { return __atomic_add_fetch(&_M_i, __i, memory_order_seq_cst); }
-
-      __int_type
-      operator+=(__int_type __i) volatile noexcept
-      { return __atomic_add_fetch(&_M_i, __i, memory_order_seq_cst); }
-
-      __int_type
-      operator-=(__int_type __i) noexcept
-      { return __atomic_sub_fetch(&_M_i, __i, memory_order_seq_cst); }
-
-      __int_type
-      operator-=(__int_type __i) volatile noexcept
-      { return __atomic_sub_fetch(&_M_i, __i, memory_order_seq_cst); }
-
-      __int_type
-      operator&=(__int_type __i) noexcept
-      { return __atomic_and_fetch(&_M_i, __i, memory_order_seq_cst); }
-
-      __int_type
-      operator&=(__int_type __i) volatile noexcept
-      { return __atomic_and_fetch(&_M_i, __i, memory_order_seq_cst); }
-
-      __int_type
-      operator|=(__int_type __i) noexcept
-      { return __atomic_or_fetch(&_M_i, __i, memory_order_seq_cst); }
-
-      __int_type
-      operator|=(__int_type __i) volatile noexcept
-      { return __atomic_or_fetch(&_M_i, __i, memory_order_seq_cst); }
-
-      __int_type
-      operator^=(__int_type __i) noexcept
-      { return __atomic_xor_fetch(&_M_i, __i, memory_order_seq_cst); }
-
-      __int_type
-      operator^=(__int_type __i) volatile noexcept
-      { return __atomic_xor_fetch(&_M_i, __i, memory_order_seq_cst); }
-
-      bool
-      is_lock_free() const noexcept
-      {
-
- return __atomic_is_lock_free(sizeof(_M_i),
-     reinterpret_cast<void *>(-__alignof(_M_i)));
-      }
-
-      bool
-      is_lock_free() const volatile noexcept
-      {
-
- return __atomic_is_lock_free(sizeof(_M_i),
-     reinterpret_cast<void *>(-__alignof(_M_i)));
-      }
-
-      inline __attribute__((__always_inline__)) void
-      store(__int_type __i, memory_order __m = memory_order_seq_cst) noexcept
-      {
- memory_order __b = __m & __memory_order_mask;
-                                              ;
-                                              ;
-                                              ;
-
- __atomic_store_n(&_M_i, __i, __m);
-      }
-
-      inline __attribute__((__always_inline__)) void
-      store(__int_type __i,
-     memory_order __m = memory_order_seq_cst) volatile noexcept
-      {
- memory_order __b = __m & __memory_order_mask;
-                                              ;
-                                              ;
-                                              ;
-
- __atomic_store_n(&_M_i, __i, __m);
-      }
-
-      inline __attribute__((__always_inline__)) __int_type
-      load(memory_order __m = memory_order_seq_cst) const noexcept
-      {
- memory_order __b = __m & __memory_order_mask;
-                                              ;
-                                              ;
-
- return __atomic_load_n(&_M_i, __m);
-      }
-
-      inline __attribute__((__always_inline__)) __int_type
-      load(memory_order __m = memory_order_seq_cst) const volatile noexcept
-      {
- memory_order __b = __m & __memory_order_mask;
-                                              ;
-                                              ;
-
- return __atomic_load_n(&_M_i, __m);
-      }
-
-      inline __attribute__((__always_inline__)) __int_type
-      exchange(__int_type __i,
-        memory_order __m = memory_order_seq_cst) noexcept
-      {
- return __atomic_exchange_n(&_M_i, __i, __m);
-      }
-
-
-      inline __attribute__((__always_inline__)) __int_type
-      exchange(__int_type __i,
-        memory_order __m = memory_order_seq_cst) volatile noexcept
-      {
- return __atomic_exchange_n(&_M_i, __i, __m);
-      }
-
-      inline __attribute__((__always_inline__)) bool
-      compare_exchange_weak(__int_type& __i1, __int_type __i2,
-       memory_order __m1, memory_order __m2) noexcept
-      {
- memory_order __b2 = __m2 & __memory_order_mask;
- memory_order __b1 = __m1 & __memory_order_mask;
-                                               ;
-                                               ;
-                               ;
-
- return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 1, __m1, __m2);
-      }
-
-      inline __attribute__((__always_inline__)) bool
-      compare_exchange_weak(__int_type& __i1, __int_type __i2,
-       memory_order __m1,
-       memory_order __m2) volatile noexcept
-      {
- memory_order __b2 = __m2 & __memory_order_mask;
- memory_order __b1 = __m1 & __memory_order_mask;
-                                               ;
-                                               ;
-                               ;
-
- return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 1, __m1, __m2);
-      }
-
-      inline __attribute__((__always_inline__)) bool
-      compare_exchange_weak(__int_type& __i1, __int_type __i2,
-       memory_order __m = memory_order_seq_cst) noexcept
-      {
- return compare_exchange_weak(__i1, __i2, __m,
-         __cmpexch_failure_order(__m));
-      }
-
-      inline __attribute__((__always_inline__)) bool
-      compare_exchange_weak(__int_type& __i1, __int_type __i2,
-     memory_order __m = memory_order_seq_cst) volatile noexcept
-      {
- return compare_exchange_weak(__i1, __i2, __m,
-         __cmpexch_failure_order(__m));
-      }
-
-      inline __attribute__((__always_inline__)) bool
-      compare_exchange_strong(__int_type& __i1, __int_type __i2,
-         memory_order __m1, memory_order __m2) noexcept
-      {
- memory_order __b2 = __m2 & __memory_order_mask;
- memory_order __b1 = __m1 & __memory_order_mask;
-                                               ;
-                                               ;
-                               ;
-
- return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 0, __m1, __m2);
-      }
-
-      inline __attribute__((__always_inline__)) bool
-      compare_exchange_strong(__int_type& __i1, __int_type __i2,
-         memory_order __m1,
-         memory_order __m2) volatile noexcept
-      {
- memory_order __b2 = __m2 & __memory_order_mask;
- memory_order __b1 = __m1 & __memory_order_mask;
-
-                                               ;
-                                               ;
-                               ;
-
- return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 0, __m1, __m2);
-      }
-
-      inline __attribute__((__always_inline__)) bool
-      compare_exchange_strong(__int_type& __i1, __int_type __i2,
-         memory_order __m = memory_order_seq_cst) noexcept
-      {
- return compare_exchange_strong(__i1, __i2, __m,
-           __cmpexch_failure_order(__m));
-      }
-
-      inline __attribute__((__always_inline__)) bool
-      compare_exchange_strong(__int_type& __i1, __int_type __i2,
-   memory_order __m = memory_order_seq_cst) volatile noexcept
-      {
- return compare_exchange_strong(__i1, __i2, __m,
-           __cmpexch_failure_order(__m));
-      }
-
-      inline __attribute__((__always_inline__)) __int_type
-      fetch_add(__int_type __i,
-  memory_order __m = memory_order_seq_cst) noexcept
-      { return __atomic_fetch_add(&_M_i, __i, __m); }
-
-      inline __attribute__((__always_inline__)) __int_type
-      fetch_add(__int_type __i,
-  memory_order __m = memory_order_seq_cst) volatile noexcept
-      { return __atomic_fetch_add(&_M_i, __i, __m); }
-
-      inline __attribute__((__always_inline__)) __int_type
-      fetch_sub(__int_type __i,
-  memory_order __m = memory_order_seq_cst) noexcept
-      { return __atomic_fetch_sub(&_M_i, __i, __m); }
-
-      inline __attribute__((__always_inline__)) __int_type
-      fetch_sub(__int_type __i,
-  memory_order __m = memory_order_seq_cst) volatile noexcept
-      { return __atomic_fetch_sub(&_M_i, __i, __m); }
-
-      inline __attribute__((__always_inline__)) __int_type
-      fetch_and(__int_type __i,
-  memory_order __m = memory_order_seq_cst) noexcept
-      { return __atomic_fetch_and(&_M_i, __i, __m); }
-
-      inline __attribute__((__always_inline__)) __int_type
-      fetch_and(__int_type __i,
-  memory_order __m = memory_order_seq_cst) volatile noexcept
-      { return __atomic_fetch_and(&_M_i, __i, __m); }
-
-      inline __attribute__((__always_inline__)) __int_type
-      fetch_or(__int_type __i,
-        memory_order __m = memory_order_seq_cst) noexcept
-      { return __atomic_fetch_or(&_M_i, __i, __m); }
-
-      inline __attribute__((__always_inline__)) __int_type
-      fetch_or(__int_type __i,
-        memory_order __m = memory_order_seq_cst) volatile noexcept
-      { return __atomic_fetch_or(&_M_i, __i, __m); }
-
-      inline __attribute__((__always_inline__)) __int_type
-      fetch_xor(__int_type __i,
-  memory_order __m = memory_order_seq_cst) noexcept
-      { return __atomic_fetch_xor(&_M_i, __i, __m); }
-
-      inline __attribute__((__always_inline__)) __int_type
-      fetch_xor(__int_type __i,
-  memory_order __m = memory_order_seq_cst) volatile noexcept
-      { return __atomic_fetch_xor(&_M_i, __i, __m); }
-    };
-
-
-
-  template<typename _PTp>
-    struct __atomic_base<_PTp*>
-    {
-    private:
-      typedef _PTp* __pointer_type;
-
-      __pointer_type _M_p;
-
-
-      constexpr ptrdiff_t
-      _M_type_size(ptrdiff_t __d) const { return __d * sizeof(_PTp); }
-
-      constexpr ptrdiff_t
-      _M_type_size(ptrdiff_t __d) const volatile { return __d * sizeof(_PTp); }
-
-    public:
-      __atomic_base() noexcept = default;
-      ~__atomic_base() noexcept = default;
-      __atomic_base(const __atomic_base&) = delete;
-      __atomic_base& operator=(const __atomic_base&) = delete;
-      __atomic_base& operator=(const __atomic_base&) volatile = delete;
-
-
-      constexpr __atomic_base(__pointer_type __p) noexcept : _M_p (__p) { }
-
-      operator __pointer_type() const noexcept
-      { return load(); }
-
-      operator __pointer_type() const volatile noexcept
-      { return load(); }
-
-      __pointer_type
-      operator=(__pointer_type __p) noexcept
-      {
- store(__p);
- return __p;
-      }
-
-      __pointer_type
-      operator=(__pointer_type __p) volatile noexcept
-      {
- store(__p);
- return __p;
-      }
-
-      __pointer_type
-      operator++(int) noexcept
-      { return fetch_add(1); }
-
-      __pointer_type
-      operator++(int) volatile noexcept
-      { return fetch_add(1); }
-
-      __pointer_type
-      operator--(int) noexcept
-      { return fetch_sub(1); }
-
-      __pointer_type
-      operator--(int) volatile noexcept
-      { return fetch_sub(1); }
-
-      __pointer_type
-      operator++() noexcept
-      { return __atomic_add_fetch(&_M_p, _M_type_size(1),
-      memory_order_seq_cst); }
-
-      __pointer_type
-      operator++() volatile noexcept
-      { return __atomic_add_fetch(&_M_p, _M_type_size(1),
-      memory_order_seq_cst); }
-
-      __pointer_type
-      operator--() noexcept
-      { return __atomic_sub_fetch(&_M_p, _M_type_size(1),
-      memory_order_seq_cst); }
-
-      __pointer_type
-      operator--() volatile noexcept
-      { return __atomic_sub_fetch(&_M_p, _M_type_size(1),
-      memory_order_seq_cst); }
-
-      __pointer_type
-      operator+=(ptrdiff_t __d) noexcept
-      { return __atomic_add_fetch(&_M_p, _M_type_size(__d),
-      memory_order_seq_cst); }
-
-      __pointer_type
-      operator+=(ptrdiff_t __d) volatile noexcept
-      { return __atomic_add_fetch(&_M_p, _M_type_size(__d),
-      memory_order_seq_cst); }
-
-      __pointer_type
-      operator-=(ptrdiff_t __d) noexcept
-      { return __atomic_sub_fetch(&_M_p, _M_type_size(__d),
-      memory_order_seq_cst); }
-
-      __pointer_type
-      operator-=(ptrdiff_t __d) volatile noexcept
-      { return __atomic_sub_fetch(&_M_p, _M_type_size(__d),
-      memory_order_seq_cst); }
-
-      bool
-      is_lock_free() const noexcept
-      {
-
- return __atomic_is_lock_free(sizeof(_M_p),
-     reinterpret_cast<void *>(-__alignof(_M_p)));
-      }
-
-      bool
-      is_lock_free() const volatile noexcept
-      {
-
- return __atomic_is_lock_free(sizeof(_M_p),
-     reinterpret_cast<void *>(-__alignof(_M_p)));
-      }
-
-      inline __attribute__((__always_inline__)) void
-      store(__pointer_type __p,
-     memory_order __m = memory_order_seq_cst) noexcept
-      {
-        memory_order __b = __m & __memory_order_mask;
-
-                                              ;
-                                              ;
-                                              ;
-
- __atomic_store_n(&_M_p, __p, __m);
-      }
-
-      inline __attribute__((__always_inline__)) void
-      store(__pointer_type __p,
-     memory_order __m = memory_order_seq_cst) volatile noexcept
-      {
- memory_order __b = __m & __memory_order_mask;
-                                              ;
-                                              ;
-                                              ;
-
- __atomic_store_n(&_M_p, __p, __m);
-      }
-
-      inline __attribute__((__always_inline__)) __pointer_type
-      load(memory_order __m = memory_order_seq_cst) const noexcept
-      {
- memory_order __b = __m & __memory_order_mask;
-                                              ;
-                                              ;
-
- return __atomic_load_n(&_M_p, __m);
-      }
-
-      inline __attribute__((__always_inline__)) __pointer_type
-      load(memory_order __m = memory_order_seq_cst) const volatile noexcept
-      {
- memory_order __b = __m & __memory_order_mask;
-                                              ;
-                                              ;
-
- return __atomic_load_n(&_M_p, __m);
-      }
-
-      inline __attribute__((__always_inline__)) __pointer_type
-      exchange(__pointer_type __p,
-        memory_order __m = memory_order_seq_cst) noexcept
-      {
- return __atomic_exchange_n(&_M_p, __p, __m);
-      }
-
-
-      inline __attribute__((__always_inline__)) __pointer_type
-      exchange(__pointer_type __p,
-        memory_order __m = memory_order_seq_cst) volatile noexcept
-      {
- return __atomic_exchange_n(&_M_p, __p, __m);
-      }
-
-      inline __attribute__((__always_inline__)) bool
-      compare_exchange_strong(__pointer_type& __p1, __pointer_type __p2,
-         memory_order __m1,
-         memory_order __m2) noexcept
-      {
- memory_order __b2 = __m2 & __memory_order_mask;
- memory_order __b1 = __m1 & __memory_order_mask;
-                                               ;
-                                               ;
-                               ;
-
- return __atomic_compare_exchange_n(&_M_p, &__p1, __p2, 0, __m1, __m2);
-      }
-
-      inline __attribute__((__always_inline__)) bool
-      compare_exchange_strong(__pointer_type& __p1, __pointer_type __p2,
-         memory_order __m1,
-         memory_order __m2) volatile noexcept
-      {
- memory_order __b2 = __m2 & __memory_order_mask;
- memory_order __b1 = __m1 & __memory_order_mask;
-
-                                               ;
-                                               ;
-                               ;
-
- return __atomic_compare_exchange_n(&_M_p, &__p1, __p2, 0, __m1, __m2);
-      }
-
-      inline __attribute__((__always_inline__)) __pointer_type
-      fetch_add(ptrdiff_t __d,
-  memory_order __m = memory_order_seq_cst) noexcept
-      { return __atomic_fetch_add(&_M_p, _M_type_size(__d), __m); }
-
-      inline __attribute__((__always_inline__)) __pointer_type
-      fetch_add(ptrdiff_t __d,
-  memory_order __m = memory_order_seq_cst) volatile noexcept
-      { return __atomic_fetch_add(&_M_p, _M_type_size(__d), __m); }
-
-      inline __attribute__((__always_inline__)) __pointer_type
-      fetch_sub(ptrdiff_t __d,
-  memory_order __m = memory_order_seq_cst) noexcept
-      { return __atomic_fetch_sub(&_M_p, _M_type_size(__d), __m); }
-
-      inline __attribute__((__always_inline__)) __pointer_type
-      fetch_sub(ptrdiff_t __d,
-  memory_order __m = memory_order_seq_cst) volatile noexcept
-      { return __atomic_fetch_sub(&_M_p, _M_type_size(__d), __m); }
-    };
-
-
-
-
+  using ::int8_t;
+  using ::int16_t;
+  using ::int32_t;
+  using ::int64_t;
+
+  using ::int_fast8_t;
+  using ::int_fast16_t;
+  using ::int_fast32_t;
+  using ::int_fast64_t;
+
+  using ::int_least8_t;
+  using ::int_least16_t;
+  using ::int_least32_t;
+  using ::int_least64_t;
+
+  using ::intmax_t;
+  using ::intptr_t;
+
+  using ::uint8_t;
+  using ::uint16_t;
+  using ::uint32_t;
+  using ::uint64_t;
+
+  using ::uint_fast8_t;
+  using ::uint_fast16_t;
+  using ::uint_fast32_t;
+  using ::uint_fast64_t;
+
+  using ::uint_least8_t;
+  using ::uint_least16_t;
+  using ::uint_least32_t;
+  using ::uint_least64_t;
+
+  using ::uintmax_t;
+  using ::uintptr_t;
 }
-# 42 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\atomic" 2 3
-# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/move.h" 1 3
-# 34 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/move.h" 3
-# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/concept_check.h" 1 3
-# 34 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/concept_check.h" 3
-# 35 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/move.h" 2 3
-
-namespace std
-{
-
-
-
-
-
-
-
-  template<typename _Tp>
-    inline constexpr _Tp*
-    __addressof(_Tp& __r) noexcept
-    { return __builtin_addressof(__r); }
-
-
-
-
-}
-
-
+# 20 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_axi_sdata.h" 2
 # 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\type_traits" 1 3
 # 33 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\type_traits" 3
 
@@ -9983,7 +10041,1130 @@ namespace std
   };
 # 2974 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\type_traits" 3
 }
-# 56 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/move.h" 2 3
+# 21 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_axi_sdata.h" 2
+
+
+
+
+
+
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
+struct ap_fixed;
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
+struct ap_ufixed;
+
+namespace hls {
+
+template <typename T> constexpr std::size_t bitwidth = sizeof(T) * 8;
+
+
+
+template <> constexpr std::size_t bitwidth<void> = 1 * 8;
+
+
+template <std::size_t W> constexpr std::size_t bitwidth<ap_int<W>> = W;
+template <std::size_t W> constexpr std::size_t bitwidth<ap_uint<W>> = W;
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
+constexpr std::size_t bitwidth<ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>> =
+    _AP_W;
+template <int _AP_W, int _AP_I, ap_q_mode _AP_Q, ap_o_mode _AP_O, int _AP_N>
+constexpr std::size_t bitwidth<ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>> =
+    _AP_W;
+
+template <typename T>
+constexpr std::size_t bytewidth = (bitwidth<T> + 8 - 1) / 8;
+
+
+
+template <> constexpr std::size_t bytewidth<void> = 1;
+
+
+struct axis_disabled_signal {};
+# 93 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_axi_sdata.h"
+template <typename T, std::size_t WUser = 0, std::size_t WId = 0,
+          std::size_t WDest = 0,
+          uint8_t EnableSignals =
+              (0b00001000 | 0b00010000 | 0b00100000),
+          bool StrictEnablement = false>
+struct axis {
+  static_assert((EnableSignals & 0b10000000) == 0,
+                "Template parameter 'EnableSignals' is invalid only "
+                "low 7 bits can be set!");
+  friend class stream<
+      axis<T, WUser, WId, WDest, EnableSignals, StrictEnablement>>;
+
+  static constexpr bool has_data = !std::is_void<T>::value;
+  static constexpr bool has_user = WUser > 0;
+  static constexpr bool has_id = WId > 0;
+  static constexpr bool has_dest = WDest > 0;
+  static constexpr bool has_keep = EnableSignals & 0b00001000;
+  static constexpr bool has_strb = EnableSignals & 0b00100000;
+  static constexpr bool has_last = EnableSignals & 0b00010000;
+
+  static constexpr std::size_t width_user = has_user ? WUser : 1;
+  static constexpr std::size_t width_id = has_id ? WId : 1;
+  static constexpr std::size_t width_dest = has_dest ? WDest : 1;
+  static constexpr std::size_t width_keep = bytewidth<T>;
+  static constexpr std::size_t width_strb = bytewidth<T>;
+  static constexpr std::size_t width_last = 1;
+
+  static_assert(has_data || has_user || has_id || has_dest || has_keep ||
+                    has_strb || has_last,
+                "No axis signals are enabled");
+
+  static_assert(StrictEnablement
+                    ? has_data == (bool)(EnableSignals & 0b00000001)
+                    : true,
+                "Found mismatched enablement for DATA signal");
+  static_assert(StrictEnablement
+                    ? has_user == (bool)(EnableSignals & 0b01000000)
+                    : true,
+                "Found mismatched enablement for USER signal");
+  static_assert(StrictEnablement
+                    ? has_id == (bool)(EnableSignals & 0b00000100)
+                    : true,
+                "Found mismatched enablement for ID signal");
+  static_assert(StrictEnablement
+                    ? has_dest == (bool)(EnableSignals & 0b00000010)
+                    : true,
+                "Found mismatched enablement for DEST signal");
+
+  typedef typename std::conditional<has_data, T, axis_disabled_signal>::type
+      Type_data;
+  Type_data data;
+
+
+
+  __attribute__((nodebug)) Type_data get_data() const {
+#pragma HLS inline
+ ({ bool _AssertPred = has_data; __builtin_assume(_AssertPred); });
+    return data;
+  }
+  __attribute__((nodebug)) void set_data(Type_data d) {
+#pragma HLS inline
+ ({ bool _AssertPred = has_data; __builtin_assume(_AssertPred); });
+    data = d;
+  }
+# 205 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_axi_sdata.h"
+  typedef typename std::conditional<has_keep, ap_uint<width_keep>, axis_disabled_signal>::type Type_keep; Type_keep keep; __attribute__((nodebug)) __attribute__((always_inline)) Type_keep get_keep() const { ({ bool _AssertPred = has_keep; __builtin_assume(_AssertPred); }); return keep; } __attribute__((nodebug)) __attribute__( (always_inline)) void set_keep(Type_keep value) { ({ bool _AssertPred = has_keep; __builtin_assume(_AssertPred); }); keep = value; }
+  typedef typename std::conditional<has_strb, ap_uint<width_strb>, axis_disabled_signal>::type Type_strb; Type_strb strb; __attribute__((nodebug)) __attribute__((always_inline)) Type_strb get_strb() const { ({ bool _AssertPred = has_strb; __builtin_assume(_AssertPred); }); return strb; } __attribute__((nodebug)) __attribute__( (always_inline)) void set_strb(Type_strb value) { ({ bool _AssertPred = has_strb; __builtin_assume(_AssertPred); }); strb = value; }
+  typedef typename std::conditional<has_user, ap_uint<width_user>, axis_disabled_signal>::type Type_user; Type_user user; __attribute__((nodebug)) __attribute__((always_inline)) Type_user get_user() const { ({ bool _AssertPred = has_user; __builtin_assume(_AssertPred); }); return user; } __attribute__((nodebug)) __attribute__( (always_inline)) void set_user(Type_user value) { ({ bool _AssertPred = has_user; __builtin_assume(_AssertPred); }); user = value; }
+  typedef typename std::conditional<has_last, ap_uint<width_last>, axis_disabled_signal>::type Type_last; Type_last last; __attribute__((nodebug)) __attribute__((always_inline)) Type_last get_last() const { ({ bool _AssertPred = has_last; __builtin_assume(_AssertPred); }); return last; } __attribute__((nodebug)) __attribute__( (always_inline)) void set_last(Type_last value) { ({ bool _AssertPred = has_last; __builtin_assume(_AssertPred); }); last = value; }
+  typedef typename std::conditional<has_id, ap_uint<width_id>, axis_disabled_signal>::type Type_id; Type_id id; __attribute__((nodebug)) __attribute__((always_inline)) Type_id get_id() const { ({ bool _AssertPred = has_id; __builtin_assume(_AssertPred); }); return id; } __attribute__((nodebug)) __attribute__( (always_inline)) void set_id(Type_id value) { ({ bool _AssertPred = has_id; __builtin_assume(_AssertPred); }); id = value; }
+  typedef typename std::conditional<has_dest, ap_uint<width_dest>, axis_disabled_signal>::type Type_dest; Type_dest dest; __attribute__((nodebug)) __attribute__((always_inline)) Type_dest get_dest() const { ({ bool _AssertPred = has_dest; __builtin_assume(_AssertPred); }); return dest; } __attribute__((nodebug)) __attribute__( (always_inline)) void set_dest(Type_dest value) { ({ bool _AssertPred = has_dest; __builtin_assume(_AssertPred); }); dest = value; }
+
+
+
+
+  __attribute__((nodebug))
+
+  void keep_all() {
+#pragma HLS inline
+
+ ({ bool _AssertPred = has_keep; __builtin_assume(_AssertPred); });
+
+
+
+
+    ap_uint<width_keep> k = 0;
+    keep = ~k;
+  }
+
+private:
+
+
+
+
+
+
+
+  __attribute__((nodebug)) __attribute__((always_inline)) Type_data *get_data_ptr() { return (!has_data) ? nullptr : &data; }
+  __attribute__((nodebug)) __attribute__((always_inline)) Type_keep *get_keep_ptr() { return (!has_keep) ? nullptr : &keep; }
+  __attribute__((nodebug)) __attribute__((always_inline)) Type_strb *get_strb_ptr() { return (!has_strb) ? nullptr : &strb; }
+  __attribute__((nodebug)) __attribute__((always_inline)) Type_user *get_user_ptr() { return (!has_user) ? nullptr : &user; }
+  __attribute__((nodebug)) __attribute__((always_inline)) Type_last *get_last_ptr() { return (!has_last) ? nullptr : &last; }
+  __attribute__((nodebug)) __attribute__((always_inline)) Type_id *get_id_ptr() { return (!has_id) ? nullptr : &id; }
+  __attribute__((nodebug)) __attribute__((always_inline)) Type_dest *get_dest_ptr() { return (!has_dest) ? nullptr : &dest; }
+
+
+};
+# 258 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_axi_sdata.h"
+template <typename TData, uint8_t EnableSignals = 0b00000001,
+          std::size_t WUser = 0, std::size_t WId = 0, std::size_t WDest = 0,
+          bool StrictEnablement = true>
+using axis_data = axis<TData, WUser, WId, WDest,
+                       (EnableSignals | 0b00000001), StrictEnablement>;
+# 271 "C:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\\ap_axi_sdata.h"
+template <std::size_t WUser, uint8_t EnableSignals = 0b01000000,
+          std::size_t WId = 0, std::size_t WDest = 0,
+          bool StrictEnablement = true>
+using axis_user = axis<void, WUser, WId, WDest,
+                       (EnableSignals & (0b11111111 ^ 0b00000001) & (0b11111111 ^ 0b00001000) & (0b11111111 ^ 0b00100000)), StrictEnablement>;
+
+}
+
+template <std::size_t WData, std::size_t WUser, std::size_t WId,
+          std::size_t WDest,
+          uint8_t EnableSignals =
+              (0b00001000 | 0b00010000 | 0b00100000),
+          bool StrictEnablement = false>
+using ap_axis = hls::axis<ap_int<WData>, WUser, WId, WDest, EnableSignals,
+                          StrictEnablement>;
+
+template <std::size_t WData, std::size_t WUser, std::size_t WId,
+          std::size_t WDest,
+          uint8_t EnableSignals =
+              (0b00001000 | 0b00010000 | 0b00100000),
+          bool StrictEnablement = false>
+using ap_axiu = hls::axis<ap_uint<WData>, WUser, WId, WDest, EnableSignals,
+                          StrictEnablement>;
+
+
+template <std::size_t WData, std::size_t WUser, std::size_t WId,
+          std::size_t WDest>
+using qdma_axis = hls::axis<ap_uint<WData>, WUser, WId, WDest,
+                            0b01111111 ^ 0b00100000, false>;
+
+
+
+namespace hls {
+
+template <typename T, std::size_t WUser, std::size_t WId, std::size_t WDest,
+          uint8_t EnableSignals, bool StrictEnablement>
+class stream<axis<T, WUser, WId, WDest, EnableSignals, StrictEnablement>>
+    final {
+  typedef axis<T, WUser, WId, WDest, EnableSignals, StrictEnablement>
+      __STREAM_T__;
+
+public:
+
+  inline __attribute__((always_inline)) __attribute__((nodebug)) stream() {}
+
+  inline __attribute__((always_inline)) __attribute__((nodebug)) stream(const char *name) { (void)name; }
+
+
+private:
+  inline __attribute__((always_inline)) __attribute__((nodebug)) stream(const stream<__STREAM_T__> &chn) : V(chn.V) {}
+
+public:
+
+  inline __attribute__((always_inline)) __attribute__((nodebug)) void operator>>(__STREAM_T__ &rdata) { read(rdata); }
+
+  inline __attribute__((always_inline)) __attribute__((nodebug)) void operator<<(const __STREAM_T__ &wdata) { write(wdata); }
+
+
+  __attribute__((nodebug)) bool empty() {
+#pragma HLS inline
+ bool tmp = __fpga_axis_valid(
+        V.get_data_ptr(), V.get_keep_ptr(), V.get_strb_ptr(), V.get_user_ptr(),
+        V.get_last_ptr(), V.get_id_ptr(), V.get_dest_ptr());
+    return !tmp;
+  }
+
+  __attribute__((nodebug)) bool full() {
+#pragma HLS inline
+ bool tmp = __fpga_axis_ready(
+        V.get_data_ptr(), V.get_keep_ptr(), V.get_strb_ptr(), V.get_user_ptr(),
+        V.get_last_ptr(), V.get_id_ptr(), V.get_dest_ptr());
+    return !tmp;
+  }
+
+
+  __attribute__((nodebug)) void read(__STREAM_T__ &dout) {
+#pragma HLS inline
+ __STREAM_T__ tmp;
+    __fpga_axis_pop(V.get_data_ptr(), V.get_keep_ptr(), V.get_strb_ptr(),
+                    V.get_user_ptr(), V.get_last_ptr(), V.get_id_ptr(),
+                    V.get_dest_ptr(), tmp.get_data_ptr(), tmp.get_keep_ptr(),
+                    tmp.get_strb_ptr(), tmp.get_user_ptr(), tmp.get_last_ptr(),
+                    tmp.get_id_ptr(), tmp.get_dest_ptr());
+    dout = tmp;
+  }
+
+  __attribute__((nodebug)) __STREAM_T__ read() {
+#pragma HLS inline
+ __STREAM_T__ tmp;
+    __fpga_axis_pop(V.get_data_ptr(), V.get_keep_ptr(), V.get_strb_ptr(),
+                    V.get_user_ptr(), V.get_last_ptr(), V.get_id_ptr(),
+                    V.get_dest_ptr(), tmp.get_data_ptr(), tmp.get_keep_ptr(),
+                    tmp.get_strb_ptr(), tmp.get_user_ptr(), tmp.get_last_ptr(),
+                    tmp.get_id_ptr(), tmp.get_dest_ptr());
+    return tmp;
+  }
+
+
+  __attribute__((nodebug)) void write(const __STREAM_T__ &din) {
+#pragma HLS inline
+ __STREAM_T__ tmp = din;
+    __fpga_axis_push(V.get_data_ptr(), V.get_keep_ptr(), V.get_strb_ptr(),
+                     V.get_user_ptr(), V.get_last_ptr(), V.get_id_ptr(),
+                     V.get_dest_ptr(), tmp.get_data_ptr(), tmp.get_keep_ptr(),
+                     tmp.get_strb_ptr(), tmp.get_user_ptr(), tmp.get_last_ptr(),
+                     tmp.get_id_ptr(), tmp.get_dest_ptr());
+  }
+
+
+  __attribute__((nodebug)) bool read_nb(__STREAM_T__ &dout) {
+#pragma HLS inline
+ __STREAM_T__ tmp;
+    if (__fpga_axis_nb_pop(V.get_data_ptr(), V.get_keep_ptr(), V.get_strb_ptr(),
+                           V.get_user_ptr(), V.get_last_ptr(), V.get_id_ptr(),
+                           V.get_dest_ptr(), tmp.get_data_ptr(),
+                           tmp.get_keep_ptr(), tmp.get_strb_ptr(),
+                           tmp.get_user_ptr(), tmp.get_last_ptr(),
+                           tmp.get_id_ptr(), tmp.get_dest_ptr())) {
+      dout = tmp;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
+  __attribute__((nodebug)) bool write_nb(const __STREAM_T__ &in) {
+#pragma HLS inline
+ __STREAM_T__ tmp = in;
+    bool full_n = __fpga_axis_nb_push(
+        V.get_data_ptr(), V.get_keep_ptr(), V.get_strb_ptr(), V.get_user_ptr(),
+        V.get_last_ptr(), V.get_id_ptr(), V.get_dest_ptr(), tmp.get_data_ptr(),
+        tmp.get_keep_ptr(), tmp.get_strb_ptr(), tmp.get_user_ptr(),
+        tmp.get_last_ptr(), tmp.get_id_ptr(), tmp.get_dest_ptr());
+    return full_n;
+  }
+
+private:
+  __STREAM_T__ V __attribute__((no_ctor));
+};
+
+}
+# 9 "./DelayAndSum.hpp" 2
+
+
+
+
+
+typedef ap_fixed<8,3> fxd_8_3_t;
+typedef ap_fixed<16,1> fxd_16_1_t;
+typedef ap_fixed<32,16> fxd_32_16_t;
+
+
+
+typedef ap_uint<26> uint_26_t;
+typedef hls::axis<fxd_16_1_t, 0, 0, 0, (0b00000001 | 0b00010000), true> fxd_16_1_pkt_t;
+
+__attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
+
+    fxd_8_3_t *phi,
+
+
+    fxd_32_16_t *fc,
+
+
+    fxd_32_16_t *xpos1,
+    fxd_32_16_t *xpos2,
+    fxd_32_16_t *xpos3,
+    fxd_32_16_t *xpos4,
+
+
+
+    uint_26_t *axis_packet_size,
+
+
+    hls::stream<fxd_16_1_t> &in1_real,
+    hls::stream<fxd_16_1_t> &in1_imag,
+    hls::stream<fxd_16_1_t> &in2_real,
+    hls::stream<fxd_16_1_t> &in2_imag,
+    hls::stream<fxd_16_1_t> &in3_real,
+    hls::stream<fxd_16_1_t> &in3_imag,
+    hls::stream<fxd_16_1_t> &in4_real,
+    hls::stream<fxd_16_1_t> &in4_imag,
+    hls::stream<fxd_16_1_pkt_t> &out_real,
+    hls::stream<fxd_16_1_pkt_t> &out_imag
+);
+# 2 "DelayAndSum.cpp" 2
+# 1 "./CalculateWeights.hpp" 1
+
+
+
+
+void CalculateElement(fxd_8_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
+void CalculateWeights(
+
+    fxd_8_3_t phi,
+
+
+    fxd_32_16_t fc,
+
+
+    fxd_32_16_t xpos1,
+    fxd_32_16_t xpos2,
+    fxd_32_16_t xpos3,
+    fxd_32_16_t xpos4,
+
+
+    fxd_16_1_t &w1_real,
+    fxd_16_1_t &w1_imag,
+    fxd_16_1_t &w2_real,
+    fxd_16_1_t &w2_imag,
+    fxd_16_1_t &w3_real,
+    fxd_16_1_t &w3_imag,
+    fxd_16_1_t &w4_real,
+    fxd_16_1_t &w4_imag
+);
+# 3 "DelayAndSum.cpp" 2
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\atomic" 1 3
+# 36 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\atomic" 3
+
+
+
+
+
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 1 3
+# 34 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 3
+
+
+
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_lockfree_defines.h" 1 3
+# 34 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_lockfree_defines.h" 3
+# 38 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 2 3
+
+
+
+
+
+namespace std
+{
+# 55 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 3
+  typedef enum memory_order
+    {
+      memory_order_relaxed,
+      memory_order_consume,
+      memory_order_acquire,
+      memory_order_release,
+      memory_order_acq_rel,
+      memory_order_seq_cst
+    } memory_order;
+
+  enum __memory_order_modifier
+    {
+      __memory_order_mask = 0x0ffff,
+      __memory_order_modifier_mask = 0xffff0000,
+      __memory_order_hle_acquire = 0x10000,
+      __memory_order_hle_release = 0x20000
+    };
+
+  constexpr memory_order
+  operator|(memory_order __m, __memory_order_modifier __mod)
+  {
+    return memory_order(__m | int(__mod));
+  }
+
+  constexpr memory_order
+  operator&(memory_order __m, __memory_order_modifier __mod)
+  {
+    return memory_order(__m & int(__mod));
+  }
+
+
+  constexpr memory_order
+  __cmpexch_failure_order2(memory_order __m) noexcept
+  {
+    return __m == memory_order_acq_rel ? memory_order_acquire
+      : __m == memory_order_release ? memory_order_relaxed : __m;
+  }
+
+  constexpr memory_order
+  __cmpexch_failure_order(memory_order __m) noexcept
+  {
+    return memory_order(__cmpexch_failure_order2(__m & __memory_order_mask)
+      | (__m & __memory_order_modifier_mask));
+  }
+
+  inline __attribute__((__always_inline__)) void
+  atomic_thread_fence(memory_order __m) noexcept
+  { __atomic_thread_fence(__m); }
+
+  inline __attribute__((__always_inline__)) void
+  atomic_signal_fence(memory_order __m) noexcept
+  { __atomic_signal_fence(__m); }
+
+
+  template<typename _Tp>
+    inline _Tp
+    kill_dependency(_Tp __y) noexcept
+    {
+      _Tp __ret(__y);
+      return __ret;
+    }
+
+
+
+  template<typename _IntTp>
+    struct __atomic_base;
+
+
+
+
+  template<typename _Tp>
+    struct atomic;
+
+  template<typename _Tp>
+    struct atomic<_Tp*>;
+
+
+
+    typedef bool __atomic_flag_data_type;
+# 148 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 3
+  extern "C" {
+
+  struct __atomic_flag_base
+  {
+    __atomic_flag_data_type _M_i;
+  };
+
+  }
+
+
+
+
+  struct atomic_flag : public __atomic_flag_base
+  {
+    atomic_flag() noexcept = default;
+    ~atomic_flag() noexcept = default;
+    atomic_flag(const atomic_flag&) = delete;
+    atomic_flag& operator=(const atomic_flag&) = delete;
+    atomic_flag& operator=(const atomic_flag&) volatile = delete;
+
+
+    constexpr atomic_flag(bool __i) noexcept
+      : __atomic_flag_base{ _S_init(__i) }
+    { }
+
+    inline __attribute__((__always_inline__)) bool
+    test_and_set(memory_order __m = memory_order_seq_cst) noexcept
+    {
+      return __atomic_test_and_set (&_M_i, __m);
+    }
+
+    inline __attribute__((__always_inline__)) bool
+    test_and_set(memory_order __m = memory_order_seq_cst) volatile noexcept
+    {
+      return __atomic_test_and_set (&_M_i, __m);
+    }
+
+    inline __attribute__((__always_inline__)) void
+    clear(memory_order __m = memory_order_seq_cst) noexcept
+    {
+      memory_order __b = __m & __memory_order_mask;
+                                                   ;
+                                                   ;
+                                                   ;
+
+      __atomic_clear (&_M_i, __m);
+    }
+
+    inline __attribute__((__always_inline__)) void
+    clear(memory_order __m = memory_order_seq_cst) volatile noexcept
+    {
+      memory_order __b = __m & __memory_order_mask;
+                                                   ;
+                                                   ;
+                                                   ;
+
+      __atomic_clear (&_M_i, __m);
+    }
+
+  private:
+    static constexpr __atomic_flag_data_type
+    _S_init(bool __i)
+    { return __i ? 1 : 0; }
+  };
+# 237 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/atomic_base.h" 3
+  template<typename _ITp>
+    struct __atomic_base
+    {
+    private:
+      typedef _ITp __int_type;
+
+      static constexpr int _S_alignment =
+ sizeof(_ITp) > alignof(_ITp) ? sizeof(_ITp) : alignof(_ITp);
+
+      alignas(_S_alignment) __int_type _M_i;
+
+    public:
+      __atomic_base() noexcept = default;
+      ~__atomic_base() noexcept = default;
+      __atomic_base(const __atomic_base&) = delete;
+      __atomic_base& operator=(const __atomic_base&) = delete;
+      __atomic_base& operator=(const __atomic_base&) volatile = delete;
+
+
+      constexpr __atomic_base(__int_type __i) noexcept : _M_i (__i) { }
+
+      operator __int_type() const noexcept
+      { return load(); }
+
+      operator __int_type() const volatile noexcept
+      { return load(); }
+
+      __int_type
+      operator=(__int_type __i) noexcept
+      {
+ store(__i);
+ return __i;
+      }
+
+      __int_type
+      operator=(__int_type __i) volatile noexcept
+      {
+ store(__i);
+ return __i;
+      }
+
+      __int_type
+      operator++(int) noexcept
+      { return fetch_add(1); }
+
+      __int_type
+      operator++(int) volatile noexcept
+      { return fetch_add(1); }
+
+      __int_type
+      operator--(int) noexcept
+      { return fetch_sub(1); }
+
+      __int_type
+      operator--(int) volatile noexcept
+      { return fetch_sub(1); }
+
+      __int_type
+      operator++() noexcept
+      { return __atomic_add_fetch(&_M_i, 1, memory_order_seq_cst); }
+
+      __int_type
+      operator++() volatile noexcept
+      { return __atomic_add_fetch(&_M_i, 1, memory_order_seq_cst); }
+
+      __int_type
+      operator--() noexcept
+      { return __atomic_sub_fetch(&_M_i, 1, memory_order_seq_cst); }
+
+      __int_type
+      operator--() volatile noexcept
+      { return __atomic_sub_fetch(&_M_i, 1, memory_order_seq_cst); }
+
+      __int_type
+      operator+=(__int_type __i) noexcept
+      { return __atomic_add_fetch(&_M_i, __i, memory_order_seq_cst); }
+
+      __int_type
+      operator+=(__int_type __i) volatile noexcept
+      { return __atomic_add_fetch(&_M_i, __i, memory_order_seq_cst); }
+
+      __int_type
+      operator-=(__int_type __i) noexcept
+      { return __atomic_sub_fetch(&_M_i, __i, memory_order_seq_cst); }
+
+      __int_type
+      operator-=(__int_type __i) volatile noexcept
+      { return __atomic_sub_fetch(&_M_i, __i, memory_order_seq_cst); }
+
+      __int_type
+      operator&=(__int_type __i) noexcept
+      { return __atomic_and_fetch(&_M_i, __i, memory_order_seq_cst); }
+
+      __int_type
+      operator&=(__int_type __i) volatile noexcept
+      { return __atomic_and_fetch(&_M_i, __i, memory_order_seq_cst); }
+
+      __int_type
+      operator|=(__int_type __i) noexcept
+      { return __atomic_or_fetch(&_M_i, __i, memory_order_seq_cst); }
+
+      __int_type
+      operator|=(__int_type __i) volatile noexcept
+      { return __atomic_or_fetch(&_M_i, __i, memory_order_seq_cst); }
+
+      __int_type
+      operator^=(__int_type __i) noexcept
+      { return __atomic_xor_fetch(&_M_i, __i, memory_order_seq_cst); }
+
+      __int_type
+      operator^=(__int_type __i) volatile noexcept
+      { return __atomic_xor_fetch(&_M_i, __i, memory_order_seq_cst); }
+
+      bool
+      is_lock_free() const noexcept
+      {
+
+ return __atomic_is_lock_free(sizeof(_M_i),
+     reinterpret_cast<void *>(-__alignof(_M_i)));
+      }
+
+      bool
+      is_lock_free() const volatile noexcept
+      {
+
+ return __atomic_is_lock_free(sizeof(_M_i),
+     reinterpret_cast<void *>(-__alignof(_M_i)));
+      }
+
+      inline __attribute__((__always_inline__)) void
+      store(__int_type __i, memory_order __m = memory_order_seq_cst) noexcept
+      {
+ memory_order __b = __m & __memory_order_mask;
+                                              ;
+                                              ;
+                                              ;
+
+ __atomic_store_n(&_M_i, __i, __m);
+      }
+
+      inline __attribute__((__always_inline__)) void
+      store(__int_type __i,
+     memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ memory_order __b = __m & __memory_order_mask;
+                                              ;
+                                              ;
+                                              ;
+
+ __atomic_store_n(&_M_i, __i, __m);
+      }
+
+      inline __attribute__((__always_inline__)) __int_type
+      load(memory_order __m = memory_order_seq_cst) const noexcept
+      {
+ memory_order __b = __m & __memory_order_mask;
+                                              ;
+                                              ;
+
+ return __atomic_load_n(&_M_i, __m);
+      }
+
+      inline __attribute__((__always_inline__)) __int_type
+      load(memory_order __m = memory_order_seq_cst) const volatile noexcept
+      {
+ memory_order __b = __m & __memory_order_mask;
+                                              ;
+                                              ;
+
+ return __atomic_load_n(&_M_i, __m);
+      }
+
+      inline __attribute__((__always_inline__)) __int_type
+      exchange(__int_type __i,
+        memory_order __m = memory_order_seq_cst) noexcept
+      {
+ return __atomic_exchange_n(&_M_i, __i, __m);
+      }
+
+
+      inline __attribute__((__always_inline__)) __int_type
+      exchange(__int_type __i,
+        memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ return __atomic_exchange_n(&_M_i, __i, __m);
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_weak(__int_type& __i1, __int_type __i2,
+       memory_order __m1, memory_order __m2) noexcept
+      {
+ memory_order __b2 = __m2 & __memory_order_mask;
+ memory_order __b1 = __m1 & __memory_order_mask;
+                                               ;
+                                               ;
+                               ;
+
+ return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 1, __m1, __m2);
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_weak(__int_type& __i1, __int_type __i2,
+       memory_order __m1,
+       memory_order __m2) volatile noexcept
+      {
+ memory_order __b2 = __m2 & __memory_order_mask;
+ memory_order __b1 = __m1 & __memory_order_mask;
+                                               ;
+                                               ;
+                               ;
+
+ return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 1, __m1, __m2);
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_weak(__int_type& __i1, __int_type __i2,
+       memory_order __m = memory_order_seq_cst) noexcept
+      {
+ return compare_exchange_weak(__i1, __i2, __m,
+         __cmpexch_failure_order(__m));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_weak(__int_type& __i1, __int_type __i2,
+     memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ return compare_exchange_weak(__i1, __i2, __m,
+         __cmpexch_failure_order(__m));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__int_type& __i1, __int_type __i2,
+         memory_order __m1, memory_order __m2) noexcept
+      {
+ memory_order __b2 = __m2 & __memory_order_mask;
+ memory_order __b1 = __m1 & __memory_order_mask;
+                                               ;
+                                               ;
+                               ;
+
+ return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 0, __m1, __m2);
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__int_type& __i1, __int_type __i2,
+         memory_order __m1,
+         memory_order __m2) volatile noexcept
+      {
+ memory_order __b2 = __m2 & __memory_order_mask;
+ memory_order __b1 = __m1 & __memory_order_mask;
+
+                                               ;
+                                               ;
+                               ;
+
+ return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 0, __m1, __m2);
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__int_type& __i1, __int_type __i2,
+         memory_order __m = memory_order_seq_cst) noexcept
+      {
+ return compare_exchange_strong(__i1, __i2, __m,
+           __cmpexch_failure_order(__m));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__int_type& __i1, __int_type __i2,
+   memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ return compare_exchange_strong(__i1, __i2, __m,
+           __cmpexch_failure_order(__m));
+      }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_add(__int_type __i,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_add(&_M_i, __i, __m); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_add(__int_type __i,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_add(&_M_i, __i, __m); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_sub(__int_type __i,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_sub(&_M_i, __i, __m); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_sub(__int_type __i,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_sub(&_M_i, __i, __m); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_and(__int_type __i,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_and(&_M_i, __i, __m); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_and(__int_type __i,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_and(&_M_i, __i, __m); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_or(__int_type __i,
+        memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_or(&_M_i, __i, __m); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_or(__int_type __i,
+        memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_or(&_M_i, __i, __m); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_xor(__int_type __i,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_xor(&_M_i, __i, __m); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_xor(__int_type __i,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_xor(&_M_i, __i, __m); }
+    };
+
+
+
+  template<typename _PTp>
+    struct __atomic_base<_PTp*>
+    {
+    private:
+      typedef _PTp* __pointer_type;
+
+      __pointer_type _M_p;
+
+
+      constexpr ptrdiff_t
+      _M_type_size(ptrdiff_t __d) const { return __d * sizeof(_PTp); }
+
+      constexpr ptrdiff_t
+      _M_type_size(ptrdiff_t __d) const volatile { return __d * sizeof(_PTp); }
+
+    public:
+      __atomic_base() noexcept = default;
+      ~__atomic_base() noexcept = default;
+      __atomic_base(const __atomic_base&) = delete;
+      __atomic_base& operator=(const __atomic_base&) = delete;
+      __atomic_base& operator=(const __atomic_base&) volatile = delete;
+
+
+      constexpr __atomic_base(__pointer_type __p) noexcept : _M_p (__p) { }
+
+      operator __pointer_type() const noexcept
+      { return load(); }
+
+      operator __pointer_type() const volatile noexcept
+      { return load(); }
+
+      __pointer_type
+      operator=(__pointer_type __p) noexcept
+      {
+ store(__p);
+ return __p;
+      }
+
+      __pointer_type
+      operator=(__pointer_type __p) volatile noexcept
+      {
+ store(__p);
+ return __p;
+      }
+
+      __pointer_type
+      operator++(int) noexcept
+      { return fetch_add(1); }
+
+      __pointer_type
+      operator++(int) volatile noexcept
+      { return fetch_add(1); }
+
+      __pointer_type
+      operator--(int) noexcept
+      { return fetch_sub(1); }
+
+      __pointer_type
+      operator--(int) volatile noexcept
+      { return fetch_sub(1); }
+
+      __pointer_type
+      operator++() noexcept
+      { return __atomic_add_fetch(&_M_p, _M_type_size(1),
+      memory_order_seq_cst); }
+
+      __pointer_type
+      operator++() volatile noexcept
+      { return __atomic_add_fetch(&_M_p, _M_type_size(1),
+      memory_order_seq_cst); }
+
+      __pointer_type
+      operator--() noexcept
+      { return __atomic_sub_fetch(&_M_p, _M_type_size(1),
+      memory_order_seq_cst); }
+
+      __pointer_type
+      operator--() volatile noexcept
+      { return __atomic_sub_fetch(&_M_p, _M_type_size(1),
+      memory_order_seq_cst); }
+
+      __pointer_type
+      operator+=(ptrdiff_t __d) noexcept
+      { return __atomic_add_fetch(&_M_p, _M_type_size(__d),
+      memory_order_seq_cst); }
+
+      __pointer_type
+      operator+=(ptrdiff_t __d) volatile noexcept
+      { return __atomic_add_fetch(&_M_p, _M_type_size(__d),
+      memory_order_seq_cst); }
+
+      __pointer_type
+      operator-=(ptrdiff_t __d) noexcept
+      { return __atomic_sub_fetch(&_M_p, _M_type_size(__d),
+      memory_order_seq_cst); }
+
+      __pointer_type
+      operator-=(ptrdiff_t __d) volatile noexcept
+      { return __atomic_sub_fetch(&_M_p, _M_type_size(__d),
+      memory_order_seq_cst); }
+
+      bool
+      is_lock_free() const noexcept
+      {
+
+ return __atomic_is_lock_free(sizeof(_M_p),
+     reinterpret_cast<void *>(-__alignof(_M_p)));
+      }
+
+      bool
+      is_lock_free() const volatile noexcept
+      {
+
+ return __atomic_is_lock_free(sizeof(_M_p),
+     reinterpret_cast<void *>(-__alignof(_M_p)));
+      }
+
+      inline __attribute__((__always_inline__)) void
+      store(__pointer_type __p,
+     memory_order __m = memory_order_seq_cst) noexcept
+      {
+        memory_order __b = __m & __memory_order_mask;
+
+                                              ;
+                                              ;
+                                              ;
+
+ __atomic_store_n(&_M_p, __p, __m);
+      }
+
+      inline __attribute__((__always_inline__)) void
+      store(__pointer_type __p,
+     memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ memory_order __b = __m & __memory_order_mask;
+                                              ;
+                                              ;
+                                              ;
+
+ __atomic_store_n(&_M_p, __p, __m);
+      }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      load(memory_order __m = memory_order_seq_cst) const noexcept
+      {
+ memory_order __b = __m & __memory_order_mask;
+                                              ;
+                                              ;
+
+ return __atomic_load_n(&_M_p, __m);
+      }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      load(memory_order __m = memory_order_seq_cst) const volatile noexcept
+      {
+ memory_order __b = __m & __memory_order_mask;
+                                              ;
+                                              ;
+
+ return __atomic_load_n(&_M_p, __m);
+      }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      exchange(__pointer_type __p,
+        memory_order __m = memory_order_seq_cst) noexcept
+      {
+ return __atomic_exchange_n(&_M_p, __p, __m);
+      }
+
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      exchange(__pointer_type __p,
+        memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ return __atomic_exchange_n(&_M_p, __p, __m);
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__pointer_type& __p1, __pointer_type __p2,
+         memory_order __m1,
+         memory_order __m2) noexcept
+      {
+ memory_order __b2 = __m2 & __memory_order_mask;
+ memory_order __b1 = __m1 & __memory_order_mask;
+                                               ;
+                                               ;
+                               ;
+
+ return __atomic_compare_exchange_n(&_M_p, &__p1, __p2, 0, __m1, __m2);
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__pointer_type& __p1, __pointer_type __p2,
+         memory_order __m1,
+         memory_order __m2) volatile noexcept
+      {
+ memory_order __b2 = __m2 & __memory_order_mask;
+ memory_order __b1 = __m1 & __memory_order_mask;
+
+                                               ;
+                                               ;
+                               ;
+
+ return __atomic_compare_exchange_n(&_M_p, &__p1, __p2, 0, __m1, __m2);
+      }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      fetch_add(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_add(&_M_p, _M_type_size(__d), __m); }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      fetch_add(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_add(&_M_p, _M_type_size(__d), __m); }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      fetch_sub(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_sub(&_M_p, _M_type_size(__d), __m); }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      fetch_sub(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_sub(&_M_p, _M_type_size(__d), __m); }
+    };
+
+
+
+
+}
+# 42 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\atomic" 2 3
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/move.h" 1 3
+# 34 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/move.h" 3
+# 1 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/concept_check.h" 1 3
+# 34 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/concept_check.h" 3
+# 35 "C:/Xilinx/Vitis_HLS/2024.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\bits/move.h" 2 3
+
+namespace std
+{
+
+
+
+
+
+
+
+  template<typename _Tp>
+    inline constexpr _Tp*
+    __addressof(_Tp& __r) noexcept
+    { return __builtin_addressof(__r); }
+
+
+
+
+}
+
+
 
 namespace std
 {
@@ -11428,6 +12609,10 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     fxd_32_16_t *xpos4,
 
 
+
+    uint_26_t *axis_packet_size,
+
+
     hls::stream<fxd_16_1_t> &in1_real,
     hls::stream<fxd_16_1_t> &in1_imag,
     hls::stream<fxd_16_1_t> &in2_real,
@@ -11436,15 +12621,19 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     hls::stream<fxd_16_1_t> &in3_imag,
     hls::stream<fxd_16_1_t> &in4_real,
     hls::stream<fxd_16_1_t> &in4_imag,
-    hls::stream<fxd_16_1_t> &out_real,
-    hls::stream<fxd_16_1_t> &out_imag
+    hls::stream<fxd_16_1_pkt_t> &out_real,
+    hls::stream<fxd_16_1_pkt_t> &out_imag
 ){
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=DelayAndSum
-# 29 "DelayAndSum.cpp"
+# 33 "DelayAndSum.cpp"
 
 #pragma HLS top name=DelayAndSum
-#pragma HLS interface mode=ap_ctrl_none port=return
+#pragma HLS INTERFACE mode=s_axilite port=return
+
+
+
+
 
 
 #pragma HLS INTERFACE mode=axis port=in1_real
@@ -11467,6 +12656,7 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 #pragma HLS INTERFACE mode=s_axilite port=xpos2
 #pragma HLS INTERFACE mode=s_axilite port=xpos3
 #pragma HLS INTERFACE mode=s_axilite port=xpos4
+#pragma HLS INTERFACE mode=s_axilite port=axis_packet_size
 
 #pragma HLS pipeline II=1
 
@@ -11479,6 +12669,7 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     fxd_16_1_t in4_real_buffer = in4_real.read();
     fxd_16_1_t in4_imag_buffer = in4_imag.read();
 
+    uint_26_t axis_packet_size_buffer = *axis_packet_size;
     fxd_8_3_t phi_buffer = *phi;
     fxd_32_16_t fc_buffer = *fc;
     fxd_32_16_t xpos1_buffer = *xpos1;
@@ -11499,16 +12690,41 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
                 w1_real, w1_imag, w2_real, w2_imag, w3_real, w3_imag, w4_real, w4_imag);
 
 
+    static uint_26_t count = 0;
+    fxd_16_1_pkt_t out_real_pkt;
+    fxd_16_1_pkt_t out_imag_pkt;
+    if(axis_packet_size_buffer == 0){
+
+        count = 0;
+        out_real_pkt.last = false;
+        out_imag_pkt.last = false;
+    } else{
+
+        if(count < (axis_packet_size_buffer-1)){
+            count = count + 1;
+            out_real_pkt.last[0] = false;
+            out_imag_pkt.last[0] = false;
+        } else{
+            count = 0;
+            out_real_pkt.last[0] = true;
+            out_imag_pkt.last[0] = true;
+        }
+    }
 
 
 
-    out_real << (in1_real_buffer * w1_real + in1_imag_buffer * w1_imag
+
+
+
+    out_real_pkt.data = (in1_real_buffer * w1_real + in1_imag_buffer * w1_imag
                 +in2_real_buffer * w2_real + in2_imag_buffer * w2_imag
                 +in3_real_buffer * w3_real + in3_imag_buffer * w3_imag
                 +in4_real_buffer * w4_real + in4_imag_buffer * w4_imag);
-
-    out_imag << (in1_imag_buffer * w1_real - in1_real_buffer * w1_imag
+    out_imag_pkt.data = (in1_imag_buffer * w1_real - in1_real_buffer * w1_imag
                 +in2_imag_buffer * w2_real - in2_real_buffer * w2_imag
                 +in3_imag_buffer * w3_real - in3_real_buffer * w3_imag
                 +in4_imag_buffer * w4_real - in4_real_buffer * w4_imag);
+
+    out_real.write(out_real_pkt);
+    out_imag.write(out_imag_pkt);
 }

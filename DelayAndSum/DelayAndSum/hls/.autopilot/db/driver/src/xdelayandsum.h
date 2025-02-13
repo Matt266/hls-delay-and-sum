@@ -92,6 +92,12 @@ int XDelayandsum_Initialize(XDelayandsum *InstancePtr, const char* InstanceName)
 int XDelayandsum_Release(XDelayandsum *InstancePtr);
 #endif
 
+void XDelayandsum_Start(XDelayandsum *InstancePtr);
+u32 XDelayandsum_IsDone(XDelayandsum *InstancePtr);
+u32 XDelayandsum_IsIdle(XDelayandsum *InstancePtr);
+u32 XDelayandsum_IsReady(XDelayandsum *InstancePtr);
+void XDelayandsum_EnableAutoRestart(XDelayandsum *InstancePtr);
+void XDelayandsum_DisableAutoRestart(XDelayandsum *InstancePtr);
 
 void XDelayandsum_Set_phi(XDelayandsum *InstancePtr, u32 Data);
 u32 XDelayandsum_Get_phi(XDelayandsum *InstancePtr);
@@ -105,6 +111,16 @@ void XDelayandsum_Set_xpos3(XDelayandsum *InstancePtr, u32 Data);
 u32 XDelayandsum_Get_xpos3(XDelayandsum *InstancePtr);
 void XDelayandsum_Set_xpos4(XDelayandsum *InstancePtr, u32 Data);
 u32 XDelayandsum_Get_xpos4(XDelayandsum *InstancePtr);
+void XDelayandsum_Set_axis_packet_size(XDelayandsum *InstancePtr, u32 Data);
+u32 XDelayandsum_Get_axis_packet_size(XDelayandsum *InstancePtr);
+
+void XDelayandsum_InterruptGlobalEnable(XDelayandsum *InstancePtr);
+void XDelayandsum_InterruptGlobalDisable(XDelayandsum *InstancePtr);
+void XDelayandsum_InterruptEnable(XDelayandsum *InstancePtr, u32 Mask);
+void XDelayandsum_InterruptDisable(XDelayandsum *InstancePtr, u32 Mask);
+void XDelayandsum_InterruptClear(XDelayandsum *InstancePtr, u32 Mask);
+u32 XDelayandsum_InterruptGetEnabled(XDelayandsum *InstancePtr);
+u32 XDelayandsum_InterruptGetStatus(XDelayandsum *InstancePtr);
 
 #ifdef __cplusplus
 }

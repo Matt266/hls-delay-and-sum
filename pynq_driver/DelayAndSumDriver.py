@@ -2,6 +2,8 @@ from bitstring import Bits
 from fxpmath import Fxp
 from pynq import DefaultIP
 
+from functools import partial
+
 class DelayAndSum(DefaultIP):
     '''
     Driver for the DelayAndSum beamformer IP.
@@ -9,6 +11,46 @@ class DelayAndSum(DefaultIP):
 
     Attributes
     ----------
+
+    ctrl: int
+        Control signals
+        Bit fields:
+            0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 8=SW_RESET 9=INTERRUPT:
+        Accessable as:
+            ctrl_ap_start: bool
+            ctrl_ap_done: bool
+            ctrl_ap_idle: bool
+            ctrl_ap_ready: bool
+            ctrl_auto_restart: bool
+            ctrl_sw_reset: bool
+            ctrl_interrupt: bool
+
+    gier: int 
+        Global Interrupt Enable Register
+        Bit fields: 
+            0=Enable
+        Accessable as:
+        gier_enable: bool
+
+    ip_ier: int
+        IP Interrupt Enable Register
+        Bit fields: 
+            0=CHAN0_INT_EN 1=CHAN1_INT_EN
+        Accessable as: 
+            ip_ier_chan0_int_en: bool
+            ip_ier_chan1_int_en: bool
+
+    ip_isr: int
+        IP Interrupt Status Register
+        Bit fields:
+            0=CHAN0_INT_ST 1=CHAN1_INT_ST
+        Accessable as:
+            ip_isr_chan0_int_st: bool
+            ip_isr_chan1_int_st: bool
+
+    auto_restart_counter: int
+        Register for auto restart counter 0
+        Bit fields: 0:32=auto_restart_counter_0
 
     phi: float
         Steering angle in rad. Takes values from -pi to pi.
@@ -30,105 +72,141 @@ class DelayAndSum(DefaultIP):
 
     xpos4: float
         Position of the fourth antenna (ADCD) along the x-axis in mm.
+
+    axis_packet_size: int
+        Number of 16bit words that are combined to one axi stream packet.
+        (tlast will be asserted on the last word of a package) 
     '''
     
     def __init__(self, description):
         super().__init__(description=description)
         
-    bindto = ['othr:hls:DelayAndSum:1.0']
+    bindto = ['othr:hls:DelayAndSum:2.0']
+
+    __CTRL_OFFSET = 0x00
+    __CTRL_LEN = 32
+    __CTRL_DTYPE = 'fxp-u32/0'
+    __CTRL_AP_START = (1<<0)
+    __CTRL_AP_DONE = (1<<1)
+    __CTRL_AP_IDLE = (1<<2)
+    __CTRL_AP_READY = (1<<3)
+    __CTRL_AUTO_RESTART = (1<<7)
+    __CTRL_SW_RESET = (1<<8)
+    __CTRL_INTERRUPT = (1<<9)
+
+    __GIER_OFFSET = 0x04
+    __GIER_LEN = 32
+    __GIER_DTYPE = 'fxp-u32/0'
+    __GIER_ENABLE = (1<<0)
+
+    __IP_IER_OFFSET = 0x08
+    __IP_IER_LEN = 32
+    __IP_IER_DTYPE = 'fxp-u32/0'
+    __IP_IER_CHAN0_INT_EN = (1<<0)
+    __IP_IER_CHAN1_INT_EN = (1<<1)
+
+    __IP_ISR_OFFSET = 0x0c
+    __IP_ISR_LEN = 32
+    __IP_ISR_DTYPE = 'fxp-u32/0'
+    __IP_ISR_CHAN0_INT_ST = (1<<0)
+    __IP_ISR_CHAN1_INT_ST = (1<<1)
+
+    __AUTO_RESTART_COUNTER_0_OFFSET = 0x10
+    __AUTO_RESTART_COUNTER_0_LEN = 32
+    __AUTO_RESTART_COUNTER_0_DTYPE = 'fxp-u32/0'
     
-    __PHI_OFFSET = 0x10
-    __PHI_N_WORD = 8
+    __PHI_OFFSET = 0x14
+    __PHI_LEN = 8
     __PHI_DTYPE = 'fxp-s8/5'
     
-    __FC_OFFSET = 0x18
-    __FC_N_WORD = 32
+    __FC_OFFSET = 0x1c
+    __FC_LEN = 32
     __FC_DTYPE = 'fxp-s32/16'
     
-    __XPOS1_OFFSET = 0x20
-    __XPOS1_N_WORD = 32
+    __XPOS1_OFFSET = 0x24
+    __XPOS1_LEN = 32
     __XPOS1_DTYPE = 'fxp-s32/16'
     
-    __XPOS2_OFFSET = 0x28
-    __XPOS2_N_WORD = 32
+    __XPOS2_OFFSET = 0x2c
+    __XPOS2_LEN = 32
     __XPOS2_DTYPE = 'fxp-s32/16'
     
-    __XPOS3_OFFSET = 0x30
-    __XPOS3_N_WORD = 32
+    __XPOS3_OFFSET = 0x34
+    __XPOS3_LEN = 32
     __XPOS3_DTYPE = 'fxp-s32/16'
     
-    __XPOS4_OFFSET = 0x38
-    __XPOS4_N_WORD = 32
+    __XPOS4_OFFSET = 0x3c
+    __XPOS4_LEN = 32
     __XPOS4_DTYPE = 'fxp-s32/16'
-    
-    def get_phi(self):
-        _value = self.read(self.__PHI_OFFSET)
-        _value = Bits(uint=_value, length=self.__PHI_N_WORD).unpack(f'int:{self.__PHI_N_WORD}')
-        _value = Fxp(_value, raw=True, dtype=self.__PHI_DTYPE).astype(float)
+
+    __AXIS_PACKET_SIZE_OFFSET = 0x44
+    __AXIS_PACKET_SIZE_LEN = 26
+    __AXIS_PACKET_SIZE_DTYPE = 'fxp-u26/0'
+
+    def __get_register_int(self, offset, len, dtype):
+        _value = self.read(offset)
+        _value = Bits(uint=_value, length=len).unpack(f'int:{len}')
+        _value = Fxp(_value, raw=True, dtype=dtype).astype(int).tolist()
         return _value[0]
     
-    def set_phi(self, value: float):
-        _value = int(Fxp(value, raw=False, dtype=self.__PHI_DTYPE).raw())
-        self.write(self.__PHI_OFFSET, _value)
-         
-    phi = property(get_phi, set_phi)
-    
-    def get_fc(self):
-        _value = self.read(self.__FC_OFFSET)
-        _value = Bits(uint=_value, length=self.__FC_N_WORD).unpack(f'int:{self.__FC_N_WORD}')
-        _value = Fxp(_value, raw=True, dtype=self.__FC_DTYPE).astype(float)
+    def __set_register_int(self, value: int, offset, dtype):
+        _value = int(Fxp(value, raw=False, dtype=dtype).raw())
+        self.write(offset, _value)
+
+    def __get_register_float(self, offset, len, dtype):
+        _value = self.read(offset)
+        _value = Bits(uint=_value, length=len).unpack(f'int:{len}')
+        _value = Fxp(_value, raw=True, dtype=dtype).astype(float)
         return _value[0]
     
-    def set_fc(self, value: float):
-        _value = int(Fxp(value, raw=False, dtype=self.__FC_DTYPE).val)
-        self.write(self.__FC_OFFSET, _value)
+    def __set_register_float(self, value: float, offset, dtype):
+        _value = int(Fxp(value, raw=False, dtype=dtype).raw())
+        self.write(offset, _value)
+
+    def __get_flag(self, register, flag):
+        return bool(register.fget(self) & flag)
+    
+    def __set_flag(self, value: bool, register, flag):
+        if value:
+            register.fset(self, register.fget(self) | flag)
+        else: 
+            register.fset(self, register.fget(self) & (~flag))
+
+    def __reg_property_int(offset, len, dtype, get_func = __get_register_int, set_func = __set_register_int):
+        return property(partial(get_func, offset = offset, len = len, dtype = dtype), partial(set_func, offset = offset, dtype = dtype))
+    
+    def __reg_property_float(offset, len, dtype, get_func = __get_register_float, set_func = __set_register_float):
+        return property(partial(get_func, offset = offset, len = len, dtype = dtype), partial(set_func, offset = offset, dtype = dtype))
+    
+    def __flag_property(register, flag, get_func = __get_flag, set_func = __set_flag):
+        return property(partial(get_func, register = register, flag = flag), partial(set_func, register = register, flag = flag))
+
+    ctrl = __reg_property_int(__CTRL_OFFSET, __CTRL_LEN, __CTRL_DTYPE)
+    ctrl_ap_start = __flag_property(ctrl, __CTRL_AP_START)
+    ctrl_ap_done = __flag_property(ctrl, __CTRL_AP_DONE)
+    ctrl_ap_idle = __flag_property(ctrl, __CTRL_AP_IDLE)
+    ctrl_ap_ready = __flag_property(ctrl, __CTRL_AP_READY)
+    ctrl_ap_restart = __flag_property(ctrl, __CTRL_AUTO_RESTART)
+    ctrl_sw_reset = __flag_property(ctrl, __CTRL_SW_RESET)
+    ctrl_interrupt = __flag_property(ctrl, __CTRL_INTERRUPT)
+
+    gier = __reg_property_int(__GIER_OFFSET, __GIER_LEN, __GIER_DTYPE)
+    gier_enable = __flag_property(gier, __GIER_ENABLE)
          
-    fc = property(get_fc, set_fc)
-    
-    def get_xpos1(self):
-        _value = self.read(self.__XPOS1_OFFSET)
-        _value = Bits(uint=_value, length=self.__XPOS1_N_WORD).unpack(f'int:{self.__XPOS1_N_WORD}')
-        _value = Fxp(_value, raw=True, dtype=self.__XPOS1_DTYPE).astype(float)
-        return _value[0]
-    
-    def set_xpos1(self, value: float):
-        _value = int(Fxp(value, raw=False, dtype=self.__XPOS1_DTYPE).val)
-        self.write(self.__XPOS1_OFFSET, _value)
-         
-    xpos1 = property(get_xpos1, set_xpos1)
-    
-    def get_xpos2(self):
-        _value = self.read(self.__XPOS2_OFFSET)
-        _value = Bits(uint=_value, length=self.__XPOS2_N_WORD).unpack(f'int:{self.__XPOS2_N_WORD}')
-        _value = Fxp(_value, raw=True, dtype=self.__XPOS2_DTYPE).astype(float)
-        return _value[0]
-    
-    def set_xpos2(self, value: float):
-        _value = int(Fxp(value, raw=False, dtype=self.__XPOS2_DTYPE).val)
-        self.write(self.__XPOS2_OFFSET, _value)
-         
-    xpos2 = property(get_xpos2, set_xpos2)
-    
-    def get_xpos3(self):
-        _value = self.read(self.__XPOS3_OFFSET)
-        _value = Bits(uint=_value, length=self.__XPOS3_N_WORD).unpack(f'int:{self.__XPOS3_N_WORD}')
-        _value = Fxp(_value, raw=True, dtype=self.__XPOS3_DTYPE).astype(float)
-        return _value[0]
-    
-    def set_xpos3(self, value: float):
-        _value = int(Fxp(value, raw=False, dtype=self.__XPOS3_DTYPE).val)
-        self.write(self.__XPOS3_OFFSET, _value)
-         
-    xpos3 = property(get_xpos3, set_xpos3)
-    
-    def get_xpos4(self):
-        _value = self.read(self.__XPOS4_OFFSET)
-        _value = Bits(uint=_value, length=self.__XPOS4_N_WORD).unpack(f'int:{self.__XPOS4_N_WORD}')
-        _value = Fxp(_value, raw=True, dtype=self.__XPOS4_DTYPE).astype(float)
-        return _value[0]
-    
-    def set_xpos4(self, value: float):
-        _value = int(Fxp(value, raw=False, dtype=self.__XPOS4_DTYPE).val)
-        self.write(self.__XPOS4_OFFSET, _value)
-         
-    xpos4 = property(get_xpos4, set_xpos4)
+    ip_ier = __reg_property_int(__IP_IER_OFFSET, __IP_IER_LEN, __IP_IER_DTYPE)
+    ip_ier_chan0_int_en = __flag_property(ip_ier, __IP_IER_CHAN0_INT_EN)
+    ip_ier_chan1_int_en = __flag_property(ip_ier, __IP_IER_CHAN1_INT_EN)
+
+    ip_isr = __reg_property_int(__IP_ISR_OFFSET, __IP_ISR_LEN, __IP_ISR_DTYPE)
+    ip_isr_chan0_int_st = __flag_property(ip_isr, __IP_ISR_CHAN0_INT_ST)
+    ip_isr_chan1_int_st = __flag_property(ip_isr, __IP_ISR_CHAN1_INT_ST)
+
+    auto_restart_counter = __reg_property_int(__AUTO_RESTART_COUNTER_0_OFFSET, __AUTO_RESTART_COUNTER_0_LEN, __AUTO_RESTART_COUNTER_0_DTYPE)
+
+    phi = __reg_property_float(__PHI_OFFSET, __PHI_LEN, __PHI_DTYPE)
+    fc = __reg_property_float(__FC_OFFSET, __FC_LEN, __FC_DTYPE)
+    xpos1 = __reg_property_float(__XPOS1_OFFSET, __XPOS1_LEN, __XPOS1_DTYPE)
+    xpos2 = __reg_property_float(__XPOS2_OFFSET, __XPOS2_LEN, __XPOS2_DTYPE)
+    xpos3 = __reg_property_float(__XPOS3_OFFSET, __XPOS3_LEN, __XPOS3_DTYPE)
+    xpos4 = __reg_property_float(__XPOS4_OFFSET, __XPOS4_LEN, __XPOS4_DTYPE)
+    axis_packet_size = __reg_property_int(__AXIS_PACKET_SIZE_OFFSET, __AXIS_PACKET_SIZE_LEN, __AXIS_PACKET_SIZE_DTYPE)

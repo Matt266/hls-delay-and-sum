@@ -3,9 +3,15 @@
         "name": "DelayAndSum",
         "file": "DelayAndSum.cpp",
         "fileloc": "5",
-        "instructions": "2996",
-        "total_instructions": "2996",
+        "instructions": "3020",
+        "total_instructions": "3020",
         "calls": "",
-        "basicblocks": "1"
+        "basicblocks": "6",
+        "loads": {
+            "G": "1"
+        },
+        "stores": {
+            "G": "3"
+        }
     }
 }

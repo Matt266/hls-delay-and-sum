@@ -127,6 +127,11 @@
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
+        <name>out_imag_TLAST</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
         <name>out_imag_TREADY</name>
         <type>Signed</type>
         <fractionWidth>0</fractionWidth>
@@ -138,6 +143,11 @@
       </RtlPort>
       <RtlPort>
         <name>out_real_TDATA</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>out_real_TLAST</name>
         <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
