@@ -35,13 +35,14 @@ port (
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
     interrupt             :out  STD_LOGIC;
-    phi                   :out  STD_LOGIC_VECTOR(7 downto 0);
+    phi                   :out  STD_LOGIC_VECTOR(19 downto 0);
     fc                    :out  STD_LOGIC_VECTOR(31 downto 0);
     xpos1                 :out  STD_LOGIC_VECTOR(31 downto 0);
     xpos2                 :out  STD_LOGIC_VECTOR(31 downto 0);
     xpos3                 :out  STD_LOGIC_VECTOR(31 downto 0);
     xpos4                 :out  STD_LOGIC_VECTOR(31 downto 0);
     axis_packet_size      :out  STD_LOGIC_VECTOR(25 downto 0);
+    invert_channel        :out  STD_LOGIC_VECTOR(9 downto 0);
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
@@ -76,8 +77,8 @@ end entity DelayAndSum_control_s_axi;
 -- 0x10 : Auto Restart Counter 0
 --        bit 31~0 - auto_restart_counter_0 (Read/Write)
 -- 0x14 : Data signal of phi
---        bit 7~0 - phi[7:0] (Read/Write)
---        others  - reserved
+--        bit 19~0 - phi[19:0] (Read/Write)
+--        others   - reserved
 -- 0x18 : reserved
 -- 0x1c : Data signal of fc
 --        bit 31~0 - fc[31:0] (Read/Write)
@@ -98,6 +99,10 @@ end entity DelayAndSum_control_s_axi;
 --        bit 25~0 - axis_packet_size[25:0] (Read/Write)
 --        others   - reserved
 -- 0x48 : reserved
+-- 0x4c : Data signal of invert_channel
+--        bit 9~0 - invert_channel[9:0] (Read/Write)
+--        others  - reserved
+-- 0x50 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of DelayAndSum_control_s_axi is
@@ -124,6 +129,8 @@ architecture behave of DelayAndSum_control_s_axi is
     constant ADDR_XPOS4_CTRL              : INTEGER := 16#40#;
     constant ADDR_AXIS_PACKET_SIZE_DATA_0 : INTEGER := 16#44#;
     constant ADDR_AXIS_PACKET_SIZE_CTRL   : INTEGER := 16#48#;
+    constant ADDR_INVERT_CHANNEL_DATA_0   : INTEGER := 16#4c#;
+    constant ADDR_INVERT_CHANNEL_CTRL     : INTEGER := 16#50#;
     constant ADDR_BITS         : INTEGER := 7;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -158,13 +165,14 @@ architecture behave of DelayAndSum_control_s_axi is
     signal INFINITE            : UNSIGNED(31 downto 0) := (others => '1');
     signal auto_restart_counter : UNSIGNED(31 downto 0) := (others => '0');
     signal auto_restart_enable : STD_LOGIC;
-    signal int_phi             : UNSIGNED(7 downto 0) := (others => '0');
+    signal int_phi             : UNSIGNED(19 downto 0) := (others => '0');
     signal int_fc              : UNSIGNED(31 downto 0) := (others => '0');
     signal int_xpos1           : UNSIGNED(31 downto 0) := (others => '0');
     signal int_xpos2           : UNSIGNED(31 downto 0) := (others => '0');
     signal int_xpos3           : UNSIGNED(31 downto 0) := (others => '0');
     signal int_xpos4           : UNSIGNED(31 downto 0) := (others => '0');
     signal int_axis_packet_size : UNSIGNED(25 downto 0) := (others => '0');
+    signal int_invert_channel  : UNSIGNED(9 downto 0) := (others => '0');
 
 
 begin
@@ -297,7 +305,7 @@ begin
                     when ADDR_AUTO_RESTART_COUNTER_0 =>
                         rdata_data <= RESIZE(int_auto_restart_counter_0, 32);
                     when ADDR_PHI_DATA_0 =>
-                        rdata_data <= RESIZE(int_phi(7 downto 0), 32);
+                        rdata_data <= RESIZE(int_phi(19 downto 0), 32);
                     when ADDR_FC_DATA_0 =>
                         rdata_data <= RESIZE(int_fc(31 downto 0), 32);
                     when ADDR_XPOS1_DATA_0 =>
@@ -310,6 +318,8 @@ begin
                         rdata_data <= RESIZE(int_xpos4(31 downto 0), 32);
                     when ADDR_AXIS_PACKET_SIZE_DATA_0 =>
                         rdata_data <= RESIZE(int_axis_packet_size(25 downto 0), 32);
+                    when ADDR_INVERT_CHANNEL_DATA_0 =>
+                        rdata_data <= RESIZE(int_invert_channel(9 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -334,6 +344,7 @@ begin
     xpos3                <= STD_LOGIC_VECTOR(int_xpos3);
     xpos4                <= STD_LOGIC_VECTOR(int_xpos4);
     axis_packet_size     <= STD_LOGIC_VECTOR(int_axis_packet_size);
+    invert_channel       <= STD_LOGIC_VECTOR(int_invert_channel);
 
     process (ACLK)
     begin
@@ -552,10 +563,10 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_phi(7 downto 0) <= (others => '0');
+                int_phi(19 downto 0) <= (others => '0');
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_PHI_DATA_0) then
-                    int_phi(7 downto 0) <= (UNSIGNED(WDATA(7 downto 0)) and wmask(7 downto 0)) or ((not wmask(7 downto 0)) and int_phi(7 downto 0));
+                    int_phi(19 downto 0) <= (UNSIGNED(WDATA(19 downto 0)) and wmask(19 downto 0)) or ((not wmask(19 downto 0)) and int_phi(19 downto 0));
                 end if;
             end if;
         end if;
@@ -634,6 +645,19 @@ begin
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_AXIS_PACKET_SIZE_DATA_0) then
                     int_axis_packet_size(25 downto 0) <= (UNSIGNED(WDATA(25 downto 0)) and wmask(25 downto 0)) or ((not wmask(25 downto 0)) and int_axis_packet_size(25 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_invert_channel(9 downto 0) <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_INVERT_CHANNEL_DATA_0) then
+                    int_invert_channel(9 downto 0) <= (UNSIGNED(WDATA(9 downto 0)) and wmask(9 downto 0)) or ((not wmask(9 downto 0)) and int_invert_channel(9 downto 0));
                 end if;
             end if;
         end if;

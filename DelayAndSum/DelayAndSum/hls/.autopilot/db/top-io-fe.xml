@@ -1,8 +1,8 @@
 <root versionMajor = "1" versionMinor = "5">
   <kernel src_name="DelayAndSum" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
     <args>
-      <arg id="0" access_type="r" src_name="phi" src_type="ap_fixed&lt;8, 3, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="8" hw_size_or_depth="1" hw_kernel_support="true">
+      <arg id="0" access_type="r" src_name="phi" src_type="ap_fixed&lt;20, 3, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="20" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="20"/>
         </hw>
       </arg>
@@ -36,52 +36,57 @@
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="68"/>
         </hw>
       </arg>
-      <arg id="7" access_type="r" src_name="in1_real" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+      <arg id="7" access_type="r" src_name="invert_channel" src_type="ap_uint&lt;10&gt;*" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control" hw_bitwidth="10" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="76"/>
+        </hw>
+      </arg>
+      <arg id="8" access_type="r" src_name="in1_real" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="in1_real" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="8" access_type="r" src_name="in1_imag" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+      <arg id="9" access_type="r" src_name="in1_imag" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="in1_imag" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="9" access_type="r" src_name="in2_real" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+      <arg id="10" access_type="r" src_name="in2_real" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="in2_real" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="10" access_type="r" src_name="in2_imag" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+      <arg id="11" access_type="r" src_name="in2_imag" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="in2_imag" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="11" access_type="r" src_name="in3_real" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+      <arg id="12" access_type="r" src_name="in3_real" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="in3_real" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="12" access_type="r" src_name="in3_imag" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+      <arg id="13" access_type="r" src_name="in3_imag" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="in3_imag" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="13" access_type="r" src_name="in4_real" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+      <arg id="14" access_type="r" src_name="in4_real" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="in4_real" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="14" access_type="r" src_name="in4_imag" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+      <arg id="15" access_type="r" src_name="in4_imag" src_type="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="in4_imag" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="15" access_type="w" src_name="out_real" src_type="stream&lt;hls::axis&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0, 0, 0, &apos;\x11&apos;, true&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
+      <arg id="16" access_type="w" src_name="out_real" src_type="stream&lt;hls::axis&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0, 0, 0, &apos;\x11&apos;, true&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="out_real" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="16" access_type="w" src_name="out_imag" src_type="stream&lt;hls::axis&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0, 0, 0, &apos;\x11&apos;, true&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
+      <arg id="17" access_type="w" src_name="out_imag" src_type="stream&lt;hls::axis&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0, 0, 0, &apos;\x11&apos;, true&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="out_imag" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
         </hw>

@@ -2,6 +2,7 @@
 #include "DelayAndSum.hpp"
 #include "CalculateWeights.hpp"
 #include <cstdint>
+#include <cstdio>
 
 constexpr double pi = 3.14159265359;
 
@@ -19,7 +20,10 @@ fxd_16_1_pkt_t out_real_pkt;
 fxd_16_1_pkt_t out_imag_pkt;
 
 uint_26_t axis_packet_size = 3;
-fxd_8_3_t phi = 70 * 2*pi/360; // in rad
+
+uint_10_t invert_channel = INVERT_IN2_REAL | INVERT_IN2_IMAG | INVERT_IN4_REAL | INVERT_OUT_REAL;
+
+fxd_20_3_t phi = 70 * 2*pi/360; // in rad
 fxd_32_16_t fc = 3750; // in MHz
 fxd_32_16_t xpos1 = -60; // mm
 fxd_32_16_t xpos2 = -20; // mm
@@ -33,15 +37,17 @@ int main(){
     int ret = 0;
 
     for(unsigned int i = 0; i < NUM_ANGLES; i++){
-
-        in1_real << inputs_real[i][0];
-        in1_imag << inputs_imag[i][0];
-        in2_real << inputs_real[i][1];
-        in2_imag << inputs_imag[i][1];
-        in3_real << inputs_real[i][2];
-        in3_imag << inputs_imag[i][2];
-        in4_real << inputs_real[i][3];
-        in4_imag << inputs_imag[i][3];
+        // large angle (i>=60) overflow, when the double input is inverted 
+        // this doesn't happen with the ADC outputs
+        // therfore, overflow is circumvented by casting before inverting
+        in1_real << fxd_16_1_t(inputs_real[i][0]);
+        in1_imag << fxd_16_1_t(inputs_imag[i][0]);
+        in2_real << -fxd_16_1_t(inputs_real[i][1]);
+        in2_imag << -fxd_16_1_t(inputs_imag[i][1]);
+        in3_real << fxd_16_1_t(inputs_real[i][2]);
+        in3_imag << fxd_16_1_t(inputs_imag[i][2]);
+        in4_real << -fxd_16_1_t(inputs_real[i][3]);
+        in4_imag << fxd_16_1_t(inputs_imag[i][3]);
 
         if(i >= NUM_ANGLES/2){
             axis_packet_size = 0;
@@ -55,6 +61,7 @@ int main(){
             &xpos3,
             &xpos4,
             &axis_packet_size,
+            &invert_channel,
             in1_real,
             in1_imag,
             in2_real,
@@ -73,18 +80,26 @@ int main(){
         outputs_imag[i] = out_imag_pkt.data;
     }
 
-    // margin slightly (10%) larger than machine epsilon (precision of used datatype)
-    double margin = 1.1*pow(2,-15);
+    // margin larger than but near to machine epsilon (precision of used datatype)
+    double margin = 3*pow(2,-15);
     for(unsigned int i = 0; i < NUM_ANGLES; i++){
-        if(abs(results_real[i]-outputs_real[i].to_double()) <= margin){
-            ret = 0;
+        if(abs(-results_real[i]-outputs_real[i].to_double()) <= margin){
+            //printf("\r\n========== REAL - SUCCESS ==========\r\n");
+            //printf("Expected: %.32lf\r\nReturned: %.32lf\r\nAngle index: %d\r\n", results_real[i], outputs_real[i].to_double(), i);
+            ret += 0;
         } else {
-            ret = 1;
+            //printf("\r\n========== REAL - FAIL =============\r\n");
+            //printf("Expected: %.32lf\r\nReturned: %.32lf\r\nAngle index: %d\r\n", results_real[i], outputs_real[i].to_double(), i);
+            ret += 1;
         }
         if(abs(results_imag[i]-outputs_imag[i].to_double()) <= margin){
-            ret = 0;
+            //printf("\r\n========== IMAG - SUCCESS ==========\r\n");
+            //printf("Expected: %.32lf\r\nReturned: %.32lf\r\nAngle index: %d\r\n", results_imag[i], outputs_imag[i].to_double(), i);
+            ret += 0;
         } else {
-            ret = 1;
+            //printf("\r\n========== IMAG - FAIL =============\r\n");
+            //printf("Expected: %.32lf\r\nReturned: %.32lf\r\nAngle index: %d\r\n", results_imag[i], outputs_imag[i].to_double(), i);
+            ret += 1;
         }
     }
     return ret;

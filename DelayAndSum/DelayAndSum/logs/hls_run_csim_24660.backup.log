@@ -1,0 +1,472 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum\DelayAndSum.hlsrun_csim_summary, at 04/16/25 16:31:41
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum -config C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg -cmdlineconfig C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum/hls/config.cmdline
+INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Wed Apr 16 16:31:43 +0200 2025
+INFO: [HLS 200-10] In directory 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum'
+INFO: [HLS 200-2005] Using work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=CalculateWeights.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/CalculateWeights.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=CalculateWeights.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/CalculateWeights.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSumTB.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=TestData.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/TestData.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.cflags=-DALLOW_EMPTY_HLS_STREAM_READS' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(24)
+INFO: [HLS 200-1465] Applying ini 'syn.top=DelayAndSum' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu48dr-ffvg1517-2-e' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu48dr-ffvg1517-2-e'
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying ini 'cosim.rtl=vhdl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(26)
+INFO: [HLS 200-1465] Applying ini 'cosim.trace_level=port' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(23)
+INFO: [HLS 200-1465] Applying ini 'cosim.wave_debug=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(25)
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying ini 'package.ip.description=4 channel delay-and-sum beamformer' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(16)
+INFO: [HLS 200-1465] Applying ini 'package.ip.display_name=DelayAndSum' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(15)
+INFO: [HLS 200-1465] Applying ini 'package.ip.vendor=othr' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(22)
+INFO: [HLS 200-1465] Applying ini 'package.ip.version=2.0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(27)
+INFO: [HLS 200-1465] Applying ini 'package.output.file=C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\DelayAndSum.zip' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying ini 'syn.interface.s_axilite_auto_restart_counter=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(28)
+INFO: [HLS 200-1465] Applying ini 'syn.interface.s_axilite_sw_reset=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(29)
+INFO: [HLS 200-1465] Applying ini 'syn.rtl.reset=state' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(30)
+INFO: [HLS 200-1465] Applying ini 'vivado.rtl=vhdl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(21)
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../DelayAndSumTB.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../DelayAndSumTB.cpp:2:
+In file included from ../../../../DelayAndSum.hpp:5:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h:10:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.24404622914021273372142672997143
+Im2 float: 0.99999940873754156189789910058607
+Im2 fixed: 0.99996948242187500000000000000000
+
+========== IMAG ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.00000000000000001143496244875526
+Im2 float: 0.99999940873754156189789910058607
+Im2 fixed: 0.99996948242187500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.24308476376857335310432972619310
+Im2 float: 0.99999962455797464233597793281660
+Im2 fixed: 0.99996948242187500000000000000000
+
+========== IMAG ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.00000000000000001083297782807749
+Im2 float: 0.99999962455797464233597793281660
+Im2 fixed: 0.99996948242187500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.24010582178696551758356747541256
+Im2 float: 0.99997739666067775310409615485696
+Im2 fixed: 0.99996948242187500000000000000000
+
+========== IMAG ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.00000000000000001235018757642219
+Im2 float: 0.99997739666067775310409615485696
+Im2 fixed: 0.99996948242187500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.23482751032524265544232378033485
+Im2 float: 0.99986438573709734978223195867031
+Im2 fixed: 0.99984741210937500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.22678627599943551595984558844066
+Im2 float: 0.99954765783322674366218052455224
+Im2 fixed: 0.99954223632812500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.21534784982184165813556830926245
+Im2 float: 0.99887116232762818146539984809351
+Im2 fixed: 0.99887084960937500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.19972550701299154884971187584597
+Im2 float: 0.99763785926578729679192747425986
+Im2 fixed: 0.99761962890625000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.17900821912016429138247985974886
+Im2 float: 0.99561254706914592560451637837104
+Im2 fixed: 0.99560546875000000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.15220147138757167404321535286726
+Im2 float: 0.99252544629397454478691997792339
+Im2 fixed: 0.99252319335937500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.11828327438842695107368285789562
+Im2 float: 0.98807659285481230782011152768973
+Im2 fixed: 0.98806762695312500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.07627710669865943315937073521127
+Im2 float: 0.98194108401966628818513527221512
+Im2 fixed: 0.98193359375000000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.02534210312659199160201239919843
+Im2 float: 0.97377520199191858196741122810636
+Im2 fixed: 0.97375488281250000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.03512127447175944494617283453408
+Im2 float: 0.96322341295437763353248783460003
+Im2 fixed: 0.96319580078125000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.10535451465167998408301031076917
+Im2 float: 0.94992620455042164895331779916887
+Im2 fixed: 0.94992065429687500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.18512078548670479749560513482720
+Im2 float: 0.93352868300625535535886001525796
+Im2 fixed: 0.93350219726562500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.27359176950288738305872016098874
+Im2 float: 0.91368980417735556898151116911322
+Im2 fixed: 0.91366577148437500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.36925502285260425328061728578177
+Im2 float: 0.89009206306666621699719144089613
+Im2 fixed: 0.89007568359375000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.46985708440952000941592814342584
+Im2 float: 0.86245141669788694116505212150514
+Im2 fixed: 0.86242675781250000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.57239780442336529731051086855587
+Im2 float: 0.83052716894998424024265659681987
+Im2 fixed: 0.83050537109375000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.67318950533280819126247251915629
+Im2 float: 0.79413150663701292941709652950522
+Im2 fixed: 0.79412841796875000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.76799028874696184665538112312788
+Im2 float: 0.75313834734181261953978037126944
+Im2 fixed: 0.75311279296875000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.85221404963589297842929681792157
+Im2 float: 0.70749114462816575787940109876217
+Im2 fixed: 0.70748901367187500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.92121096871465690814062554636621
+Im2 float: 0.65720929807181360793322255631210
+Im2 fixed: 0.65719604492187500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.97060231510033645463408902287483
+Im2 float: 0.60239283605007543087594967801124
+Im2 fixed: 0.60238647460937500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.99664361357149322540038838269538
+Im2 float: 0.54322507931598917885196442512097
+Im2 fixed: 0.54321289062500000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.99658219302207806666871192646795
+Im2 float: 0.47997305268359691243773568203324
+Im2 fixed: 0.47994995117187500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.96897043502954938176685573125724
+Im2 float: 0.41298548891087033529956329402921
+Im2 fixed: 0.41296386718750000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.91389599818936007036285218418925
+Im2 float: 0.34268835994934976341141918965150
+Im2 fixed: 0.34268188476562500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.83309562632177325269822176778689
+Im2 float: 0.26957797173955883041074343964283
+Im2 fixed: 0.26956176757812500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.72992974877768201924510549361003
+Im2 float: 0.19421176425812863852726763980172
+Im2 fixed: 0.19418334960937500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.60920991301521965066712027692120
+Im2 float: 0.11719706249187172852899152530881
+Im2 fixed: 0.11718750000000000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.47688827287421581280213445097615
+Im2 float: 0.03917812012073253191690724861473
+Im2 fixed: 0.03915405273437500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.33963543475401791749135327336262
+Im2 float: -0.03917812012073199068318274385092
+Im2 fixed: -0.03918457031250000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.20434732211331613216387381726236
+Im2 float: -0.11719706249187153423996221590642
+Im2 fixed: -0.11721801757812500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.07763105992469798710686745835119
+Im2 float: -0.19421176425812844423823833039933
+Im2 fixed: -0.19421386718750000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.03467732984230220694144009030424
+Im2 float: -0.26957797173955860836613851461152
+Im2 fixed: -0.26959228515625000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.12791486199380436294958940379729
+Im2 float: -0.34268835994934920829990687707323
+Im2 fixed: -0.34271240234375000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.19887515160052826601599917921703
+Im2 float: -0.41298548891087022427726083151356
+Im2 fixed: -0.41299438476562500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.24595077999714626271199335860729
+Im2 float: -0.47997305268359685692658445077541
+Im2 fixed: -0.47998046875000000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.26912901546193601642897874626215
+Im2 float: -0.54322507931598917885196442512097
+Im2 fixed: -0.54324340820312500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.26985239214613970792910890850180
+Im2 float: -0.60239283605007498678673982794862
+Im2 fixed: -0.60241699218750000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.25076978741397959460357469652081
+Im2 float: -0.65720929807181360793322255631210
+Im2 fixed: -0.65722656250000000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.21541321714600708547848739726760
+Im2 float: -0.70749114462816542481249371121521
+Im2 fixed: -0.70751953125000000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.16783973187962086814906115250778
+Im2 float: -0.75313834734181261953978037126944
+Im2 fixed: -0.75314331054687500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.11227661712387504433507956491667
+Im2 float: -0.79413150663701248532788667944260
+Im2 fixed: -0.79415893554687500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: -0.05280245438288139192550829648098
+Im2 float: -0.83052716894998446228726152185118
+Im2 fixed: -0.83053588867187500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.00691209519433130803456322155398
+Im2 float: -0.86245141669788683014274965898949
+Im2 fixed: -0.86245727539062500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.06379001903612932511400401835999
+Im2 float: -0.89009206306666610597488897838048
+Im2 fixed: -0.89010620117187500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.11545635810044048430444973973863
+Im2 float: -0.91368980417735556898151116911322
+Im2 fixed: -0.91369628906250000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.16027396385674561041234653657739
+Im2 float: -0.93352868300625524433655755274231
+Im2 fixed: -0.93353271484375000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.19731756879044975994119681672601
+Im2 float: -0.94992620455042164895331779916887
+Im2 fixed: -0.94995117187500000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.22630086965307813495762445654691
+Im2 float: -0.96322341295437774455479029711569
+Im2 fixed: -0.96322631835937500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.24747261095184397428070610658324
+Im2 float: -0.97377520199191847094510876559070
+Im2 fixed: -0.97378540039062500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.26149690350036020047852503012109
+Im2 float: -0.98194108401966628818513527221512
+Im2 fixed: -0.98196411132812500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.26933080108060852841944665669871
+Im2 float: -0.98807659285481230782011152768973
+Im2 fixed: -0.98809814453125000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.27210911368260681797437428031117
+Im2 float: -0.99252544629397454478691997792339
+Im2 fixed: -0.99255371093750000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.27104312799787694254760594958498
+Im2 float: -0.99561254706914592560451637837104
+Im2 fixed: -0.99563598632812500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.26733678393136028894616629258962
+Im2 float: -0.99763785926578729679192747425986
+Im2 fixed: -0.99765014648437500000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.26212122180323493836340276175179
+Im2 float: -0.99887116232762818146539984809351
+Im2 fixed: -0.99890136718750000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.25640662722185703081834162730956
+Im2 float: -0.99954765783322674366218052455224
+Im2 fixed: -0.99957275390625000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.25104899863626706224550844126497
+Im2 float: -0.99986438573709734978223195867031
+Im2 fixed: -0.99987792968750000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.24672880024948143362628627528466
+Im2 float: -0.99997739666067775310409615485696
+Im2 fixed: -1.00000000000000000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.24393834369181033316920093056979
+Im2 float: -0.99999962455797464233597793281660
+Im2 fixed: -1.00000000000000000000000000000000
+
+========== REAL ==========
+Output:   0.00000000000000000000000000000000
+Expected: 0.24297504817531712095757256975048
+Im2 float: -0.99999940873754156189789910058607
+Im2 fixed: -1.00000000000000000000000000000000
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 7.584 seconds; peak allocated memory: 231.336 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 11s

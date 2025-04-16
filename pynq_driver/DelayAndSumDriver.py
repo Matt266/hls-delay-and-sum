@@ -76,12 +76,32 @@ class DelayAndSum(DefaultIP):
     axis_packet_size: int
         Number of 16bit words that are combined to one axi stream packet.
         (tlast will be asserted on the last word of a package) 
+
+    invert_channel: int
+        Register with bitflags to invert single input/output axi stream channels. 
+            E.g., the RFSoC4x2 has an inverse connection to ADCD, which can be corrected
+            for MTS with this feature. 
+        Bit fields: 
+            0=INVERT_IN1_REAL, 1=INVERT_IN1_IMAG, 2=INVERT_IN2_REAL, 3=INVERT_IN2_IMAG,
+            4=INVERT_IN3_REAL, 5=INVERT_IN3_IMAG, 6=INVERT_IN4_REAL, 7=INVERT_IN4_IMAG,
+            8=ONVERT_OUT_REAL, 9=INVERT_OUT_IMAG
+        Accessable as: 
+            invert_in1_real: bool
+            invert_in1_imag: bool
+            invert_in2_real: bool
+            invert_in2_imag: bool
+            invert_in3_real: bool
+            invert_in3_imag: bool
+            invert_in4_real: bool
+            invert_in4_imag: bool
+            invert_out_real: bool
+            invert_out_imag: bool
     '''
     
     def __init__(self, description):
         super().__init__(description=description)
         
-    bindto = ['othr:hls:DelayAndSum:2.0']
+    bindto = ['othr:hls:DelayAndSum:2.1']
 
     __CTRL_OFFSET = 0x00
     __CTRL_LEN = 32
@@ -116,8 +136,8 @@ class DelayAndSum(DefaultIP):
     __AUTO_RESTART_COUNTER_0_DTYPE = 'fxp-u32/0'
     
     __PHI_OFFSET = 0x14
-    __PHI_LEN = 8
-    __PHI_DTYPE = 'fxp-s8/5'
+    __PHI_LEN = 20
+    __PHI_DTYPE = 'fxp-s20/17'
     
     __FC_OFFSET = 0x1c
     __FC_LEN = 32
@@ -142,6 +162,20 @@ class DelayAndSum(DefaultIP):
     __AXIS_PACKET_SIZE_OFFSET = 0x44
     __AXIS_PACKET_SIZE_LEN = 26
     __AXIS_PACKET_SIZE_DTYPE = 'fxp-u26/0'
+
+    __INVERT_CHANNEL_OFFSET = 0x4c
+    __INVERT_CHANNEL_LEN = 10
+    __INVERT_CHANNEL_DTYPE = 'fxp-u10/0'
+    __INVERT_CHANNEL_INVERT_IN1_REAL = (1<<0)
+    __INVERT_CHANNEL_INVERT_IN1_IMAG = (1<<1)
+    __INVERT_CHANNEL_INVERT_IN2_REAL = (1<<2)
+    __INVERT_CHANNEL_INVERT_IN2_IMAG = (1<<3)
+    __INVERT_CHANNEL_INVERT_IN3_REAL = (1<<4)
+    __INVERT_CHANNEL_INVERT_IN3_IMAG = (1<<5)
+    __INVERT_CHANNEL_INVERT_IN4_REAL = (1<<6)
+    __INVERT_CHANNEL_INVERT_IN4_IMAG = (1<<7)
+    __INVERT_CHANNEL_INVERT_OUT_REAL = (1<<8)
+    __INVERT_CHANNEL_INVERT_OUT_IMAG = (1<<9)
 
     def __get_register_int(self, offset, len, dtype):
         _value = self.read(offset)
@@ -210,3 +244,15 @@ class DelayAndSum(DefaultIP):
     xpos3 = __reg_property_float(__XPOS3_OFFSET, __XPOS3_LEN, __XPOS3_DTYPE)
     xpos4 = __reg_property_float(__XPOS4_OFFSET, __XPOS4_LEN, __XPOS4_DTYPE)
     axis_packet_size = __reg_property_int(__AXIS_PACKET_SIZE_OFFSET, __AXIS_PACKET_SIZE_LEN, __AXIS_PACKET_SIZE_DTYPE)
+
+    invert_channel = __reg_property_int(__INVERT_CHANNEL_OFFSET, __INVERT_CHANNEL_LEN, __INVERT_CHANNEL_DTYPE)
+    invert_in1_real = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_IN1_REAL)
+    invert_in1_imag = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_IN1_IMAG)
+    invert_in2_real = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_IN2_REAL)
+    invert_in2_imag = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_IN2_IMAG)
+    invert_in3_real = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_IN3_REAL)
+    invert_in3_imag = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_IN3_IMAG)
+    invert_in4_real = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_IN4_REAL)
+    invert_in4_imag = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_IN4_IMAG)
+    invert_out_real = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_OUT_REAL)
+    invert_out_imag = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_OUT_IMAG)

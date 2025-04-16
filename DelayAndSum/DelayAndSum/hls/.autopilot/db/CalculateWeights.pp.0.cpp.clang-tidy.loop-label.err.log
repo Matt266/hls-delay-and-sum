@@ -1,4 +1,4 @@
 2 warnings and 26 errors generated.
-Error while processing C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\hls-delay-and-sum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp.
+Error while processing C:\Users\matt\OneDrive\Dokumente\__Master\Vitis_HLS\hls-delay-and-sum\DelayAndSum\DelayAndSum\hls\.autopilot\db\CalculateWeights.pp.0.cpp.
 clang-tidy applied 130 of 130 suggested fixes.
 Suppressed 2 warnings (2 with check filters).

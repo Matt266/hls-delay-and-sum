@@ -4,7 +4,7 @@
 
 void DelayAndSum(
     // in rad -- -pi to pi
-    fxd_8_3_t *phi,
+    fxd_20_3_t *phi,
 
     // in MHz
     fxd_32_16_t *fc,
@@ -18,6 +18,10 @@ void DelayAndSum(
     // axi stream packet size (in 16 bit words!!) for tlast generation
     // set to 0 to disable tlast generation
     uint_26_t *axis_packet_size,
+
+    // invert input or output axis channels as required
+    // e.g., RFSoC4x2 ADCD is connected inverted, which must be corrected
+    uint_10_t *invert_channel,
 
     //
     hls::stream<fxd_16_1_t> &in1_real,
@@ -60,8 +64,11 @@ void DelayAndSum(
     #pragma HLS INTERFACE mode=s_axilite port=xpos3
     #pragma HLS INTERFACE mode=s_axilite port=xpos4
     #pragma HLS INTERFACE mode=s_axilite port=axis_packet_size
+    #pragma HLS INTERFACE mode=s_axilite port=invert_channel
 
     #pragma HLS pipeline II=1
+
+    uint_10_t invert_channel_buffer = *invert_channel;
 
     fxd_16_1_t in1_real_buffer = in1_real.read();
     fxd_16_1_t in1_imag_buffer = in1_imag.read();
@@ -72,8 +79,18 @@ void DelayAndSum(
     fxd_16_1_t in4_real_buffer = in4_real.read();
     fxd_16_1_t in4_imag_buffer = in4_imag.read();
 
+    // invert input data if specified
+    if(invert_channel_buffer & INVERT_IN1_REAL){in1_real_buffer = -in1_real_buffer;}
+    if(invert_channel_buffer & INVERT_IN1_IMAG){in1_imag_buffer = -in1_imag_buffer;}
+    if(invert_channel_buffer & INVERT_IN2_REAL){in2_real_buffer = -in2_real_buffer;}
+    if(invert_channel_buffer & INVERT_IN2_IMAG){in2_imag_buffer = -in2_imag_buffer;}
+    if(invert_channel_buffer & INVERT_IN3_REAL){in3_real_buffer = -in3_real_buffer;}
+    if(invert_channel_buffer & INVERT_IN3_IMAG){in3_imag_buffer = -in3_imag_buffer;}
+    if(invert_channel_buffer & INVERT_IN4_REAL){in4_real_buffer = -in4_real_buffer;}
+    if(invert_channel_buffer & INVERT_IN4_IMAG){in4_imag_buffer = -in4_imag_buffer;}
+
     uint_26_t axis_packet_size_buffer = *axis_packet_size;
-    fxd_8_3_t phi_buffer = *phi;
+    fxd_20_3_t phi_buffer = *phi;
     fxd_32_16_t fc_buffer = *fc;
     fxd_32_16_t xpos1_buffer = *xpos1;
     fxd_32_16_t xpos2_buffer = *xpos2;
@@ -113,6 +130,7 @@ void DelayAndSum(
             out_imag_pkt.last[0] = true;
         }
     }
+    
 
     /*Complex Conjugate Multiplication:
      a*conj(b) = (a_real + j*a_imag)*(b_real - j*b_imag) 
@@ -122,11 +140,18 @@ void DelayAndSum(
     out_real_pkt.data = (in1_real_buffer * w1_real + in1_imag_buffer * w1_imag
                 +in2_real_buffer * w2_real + in2_imag_buffer * w2_imag
                 +in3_real_buffer * w3_real + in3_imag_buffer * w3_imag
-                +in4_real_buffer * w4_real + in4_imag_buffer * w4_imag);
+                +in4_real_buffer * w4_real + in4_imag_buffer * w4_imag)/4;
     out_imag_pkt.data = (in1_imag_buffer * w1_real - in1_real_buffer * w1_imag
                 +in2_imag_buffer * w2_real - in2_real_buffer * w2_imag
                 +in3_imag_buffer * w3_real - in3_real_buffer * w3_imag
-                +in4_imag_buffer * w4_real - in4_real_buffer * w4_imag);
+                +in4_imag_buffer * w4_real - in4_real_buffer * w4_imag)/4;
+
+    if(invert_channel_buffer & INVERT_OUT_REAL){
+        out_real_pkt.data = -out_real_pkt.data;
+    }
+    if(invert_channel_buffer & INVERT_OUT_IMAG){
+        out_imag_pkt.data = -out_imag_pkt.data;
+    }
 
     out_real.write(out_real_pkt);
     out_imag.write(out_imag_pkt);

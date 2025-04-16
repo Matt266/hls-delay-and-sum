@@ -195,6 +195,23 @@ u32 XDelayandsum_Get_axis_packet_size(XDelayandsum *InstancePtr) {
     return Data;
 }
 
+void XDelayandsum_Set_invert_channel(XDelayandsum *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XDelayandsum_WriteReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_INVERT_CHANNEL_DATA, Data);
+}
+
+u32 XDelayandsum_Get_invert_channel(XDelayandsum *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XDelayandsum_ReadReg(InstancePtr->Control_BaseAddress, XDELAYANDSUM_CONTROL_ADDR_INVERT_CHANNEL_DATA);
+    return Data;
+}
+
 void XDelayandsum_InterruptGlobalEnable(XDelayandsum *InstancePtr) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);

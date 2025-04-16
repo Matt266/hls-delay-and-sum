@@ -10343,9 +10343,21 @@ private:
 
 
 
-typedef ap_fixed<8,3> fxd_8_3_t;
+typedef ap_fixed<20,3> fxd_20_3_t;
 typedef ap_fixed<16,1> fxd_16_1_t;
 typedef ap_fixed<32,16> fxd_32_16_t;
+
+typedef ap_uint<10> uint_10_t;
+const uint_10_t INVERT_IN1_REAL = (1<<0);
+const uint_10_t INVERT_IN1_IMAG = (1<<1);
+const uint_10_t INVERT_IN2_REAL = (1<<2);
+const uint_10_t INVERT_IN2_IMAG = (1<<3);
+const uint_10_t INVERT_IN3_REAL = (1<<4);
+const uint_10_t INVERT_IN3_IMAG = (1<<5);
+const uint_10_t INVERT_IN4_REAL = (1<<6);
+const uint_10_t INVERT_IN4_IMAG = (1<<7);
+const uint_10_t INVERT_OUT_REAL = (1<<8);
+const uint_10_t INVERT_OUT_IMAG = (1<<9);
 
 
 
@@ -10354,7 +10366,7 @@ typedef hls::axis<fxd_16_1_t, 0, 0, 0, (0b00000001 | 0b00010000), true> fxd_16_1
 
 __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
-    fxd_8_3_t *phi,
+    fxd_20_3_t *phi,
 
 
     fxd_32_16_t *fc,
@@ -10368,6 +10380,10 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
 
     uint_26_t *axis_packet_size,
+
+
+
+    uint_10_t *invert_channel,
 
 
     hls::stream<fxd_16_1_t> &in1_real,
@@ -10387,10 +10403,10 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
 
 
-void CalculateElement(fxd_8_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
+void CalculateElement(fxd_20_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
 void CalculateWeights(
 
-    fxd_8_3_t phi,
+    fxd_20_3_t phi,
 
 
     fxd_32_16_t fc,
@@ -12597,7 +12613,7 @@ namespace std
 
 __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
-    fxd_8_3_t *phi,
+    fxd_20_3_t *phi,
 
 
     fxd_32_16_t *fc,
@@ -12613,6 +12629,10 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     uint_26_t *axis_packet_size,
 
 
+
+    uint_10_t *invert_channel,
+
+
     hls::stream<fxd_16_1_t> &in1_real,
     hls::stream<fxd_16_1_t> &in1_imag,
     hls::stream<fxd_16_1_t> &in2_real,
@@ -12626,7 +12646,7 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 ){
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=DelayAndSum
-# 33 "DelayAndSum.cpp"
+# 37 "DelayAndSum.cpp"
 
 #pragma HLS top name=DelayAndSum
 #pragma HLS INTERFACE mode=s_axilite port=return
@@ -12657,10 +12677,13 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 #pragma HLS INTERFACE mode=s_axilite port=xpos3
 #pragma HLS INTERFACE mode=s_axilite port=xpos4
 #pragma HLS INTERFACE mode=s_axilite port=axis_packet_size
+#pragma HLS INTERFACE mode=s_axilite port=invert_channel
 
 #pragma HLS pipeline II=1
 
- fxd_16_1_t in1_real_buffer = in1_real.read();
+ uint_10_t invert_channel_buffer = *invert_channel;
+
+    fxd_16_1_t in1_real_buffer = in1_real.read();
     fxd_16_1_t in1_imag_buffer = in1_imag.read();
     fxd_16_1_t in2_real_buffer = in2_real.read();
     fxd_16_1_t in2_imag_buffer = in2_imag.read();
@@ -12669,8 +12692,18 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
     fxd_16_1_t in4_real_buffer = in4_real.read();
     fxd_16_1_t in4_imag_buffer = in4_imag.read();
 
+
+    if(invert_channel_buffer & INVERT_IN1_REAL){in1_real_buffer = -in1_real_buffer;}
+    if(invert_channel_buffer & INVERT_IN1_IMAG){in1_imag_buffer = -in1_imag_buffer;}
+    if(invert_channel_buffer & INVERT_IN2_REAL){in2_real_buffer = -in2_real_buffer;}
+    if(invert_channel_buffer & INVERT_IN2_IMAG){in2_imag_buffer = -in2_imag_buffer;}
+    if(invert_channel_buffer & INVERT_IN3_REAL){in3_real_buffer = -in3_real_buffer;}
+    if(invert_channel_buffer & INVERT_IN3_IMAG){in3_imag_buffer = -in3_imag_buffer;}
+    if(invert_channel_buffer & INVERT_IN4_REAL){in4_real_buffer = -in4_real_buffer;}
+    if(invert_channel_buffer & INVERT_IN4_IMAG){in4_imag_buffer = -in4_imag_buffer;}
+
     uint_26_t axis_packet_size_buffer = *axis_packet_size;
-    fxd_8_3_t phi_buffer = *phi;
+    fxd_20_3_t phi_buffer = *phi;
     fxd_32_16_t fc_buffer = *fc;
     fxd_32_16_t xpos1_buffer = *xpos1;
     fxd_32_16_t xpos2_buffer = *xpos2;
@@ -12716,14 +12749,22 @@ __attribute__((sdx_kernel("DelayAndSum", 0))) void DelayAndSum(
 
 
 
+
     out_real_pkt.data = (in1_real_buffer * w1_real + in1_imag_buffer * w1_imag
                 +in2_real_buffer * w2_real + in2_imag_buffer * w2_imag
                 +in3_real_buffer * w3_real + in3_imag_buffer * w3_imag
-                +in4_real_buffer * w4_real + in4_imag_buffer * w4_imag);
+                +in4_real_buffer * w4_real + in4_imag_buffer * w4_imag)/4;
     out_imag_pkt.data = (in1_imag_buffer * w1_real - in1_real_buffer * w1_imag
                 +in2_imag_buffer * w2_real - in2_real_buffer * w2_imag
                 +in3_imag_buffer * w3_real - in3_real_buffer * w3_imag
-                +in4_imag_buffer * w4_real - in4_real_buffer * w4_imag);
+                +in4_imag_buffer * w4_real - in4_real_buffer * w4_imag)/4;
+
+    if(invert_channel_buffer & INVERT_OUT_REAL){
+        out_real_pkt.data = -out_real_pkt.data;
+    }
+    if(invert_channel_buffer & INVERT_OUT_IMAG){
+        out_imag_pkt.data = -out_imag_pkt.data;
+    }
 
     out_real.write(out_real_pkt);
     out_imag.write(out_imag_pkt);
