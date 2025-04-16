@@ -164,7 +164,8 @@ class DelayAndSum(DefaultIP):
     __AXIS_PACKET_SIZE_DTYPE = 'fxp-u26/0'
 
     __INVERT_CHANNEL_OFFSET = 0x4c
-    __INVERT_CHANNEL_LEN = 10
+    #TODO: length of 10 makes it impossible to set invert_out_imag to True. Check why this is, which parts of the code it affects and fix it.
+    __INVERT_CHANNEL_LEN = 11
     __INVERT_CHANNEL_DTYPE = 'fxp-u10/0'
     __INVERT_CHANNEL_INVERT_IN1_REAL = (1<<0)
     __INVERT_CHANNEL_INVERT_IN1_IMAG = (1<<1)
