@@ -1,5 +1,5 @@
 {
-  "workspaceRoot": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vivado\\Vitis_HLS\\hls-delay-and-sum",
+  "workspaceRoot": "C:\\Users\\matt\\OneDrive\\Dokumente\\__Master\\Vitis_HLS\\hls-delay-and-sum",
   "mapping": {
     "DelayAndSum\\CalculateWeights.cpp": "DelayAndSum",
     "DelayAndSum\\TestData.hpp": "DelayAndSum",

@@ -6,41 +6,41 @@
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 | Phase         | Step                        | Instructions | Description                                                                            |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
-| Compile/Link  |                             | 84,280       | After all functions are compiled and linked into a single design                       |
+| Compile/Link  |                             | 86,744       | After all functions are compiled and linked into a single design                       |
 |               |                             |              |                                                                                        |
 | Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
-|               | (1) unroll                  | 47,872       | user unroll pragmas are applied                                                        |
-|               | (2) simplification          | 14,432       | simplification of applied user unroll pragmas                                          |
-|               | (3) inline                  | 13,774       | user inline pragmas are applied                                                        |
-|               | (4) simplification          | 10,806       | simplification of applied user inline pragmas                                          |
+|               | (1) unroll                  | 68,794       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          | 20,672       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  | 20,034       | user inline pragmas are applied                                                        |
+|               | (4) simplification          | 15,986       | simplification of applied user inline pragmas                                          |
 |               |                             |              |                                                                                        |
 | Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
-|               | (1) array partition         | 13,802       | user array partition pragmas are applied                                               |
-|               | (2) simplification          | 13,802       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
-|               | (3) aggregate/disaggregate  | 13,802       | user struct aggregate/disaggregate pragmas are applied                                 |
-|               | (4) array reshape           | 13,802       | apply array reshape pragmas                                                            |
-|               | (5) access patterns         | 13,834       | array access pattern optmizations                                                      |
+|               | (1) array partition         | 16,082       | user array partition pragmas are applied                                               |
+|               | (2) simplification          | 16,082       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  | 16,082       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           | 16,082       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         | 16,114       | array access pattern optmizations                                                      |
 |               |                             |              |                                                                                        |
 | Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
-|               | (1) loop simplification     | 13,834       | loop and instruction simplification                                                    |
-|               | (2) parallelization         | 12,999       | loops are unrolled or pipelined to meet performance targets                            |
-|               | (3) array partition         | 12,165       | arrays are partitioned to meet performance targets                                     |
-|               | (4) simplification          | 12,165       | simplification of design after performance transformations                             |
+|               | (1) loop simplification     | 16,114       | loop and instruction simplification                                                    |
+|               | (2) parallelization         | 15,603       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         | 14,813       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          | 14,813       | simplification of design after performance transformations                             |
 |               |                             |              |                                                                                        |
 | HW Transforms |                             |              | After hardware transfomations                                                          |
-|               | (1) lowering                | 12,854       | initial conversion to HW specific instructions                                         |
-|               | (2) optimizations           | 10,070       | high level synthesis optimizations                                                     |
+|               | (1) lowering                | 15,675       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           | 12,231       | high level synthesis optimizations                                                     |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
 +-------------------------------------+-------------------------+------------------+------------------+------------------+-------------+---------------+
 | Function                            | Location                | Compile/Link     | Unroll/Inline    | Array/Struct     | Performance | HW Transforms |
 +-------------------------------------+-------------------------+------------------+------------------+------------------+-------------+---------------+
-| + DelayAndSum                       | DelayAndSum.cpp:5       | 84,280           | 10,806           | 13,834           | 12,165      | 10,070        |
-|  + CalculateWeights                 | CalculateWeights.cpp:17 | 78,641           |                  |                  |             |               |
-|     CalculateElement                | CalculateWeights.cpp:4  | 78,600 (4 calls) |                  |                  |             |               |
-|  + CalculateElement                 | CalculateWeights.cpp:4  |                  | 10,628 (4 calls) | 13,624 (4 calls) |             |               |
-|     cordic_circ_apfixed<18, 3, 0... | hls_cordic_apfixed.h:51 |                  | 6,032 (8 calls)  | 9,120 (12 calls) |             |               |
+| + DelayAndSum                       | DelayAndSum.cpp:5       | 86,744           | 15,986           | 16,114           | 14,813      | 12,231        |
+|  + CalculateWeights                 | CalculateWeights.cpp:17 | 79,109           |                  |                  |             |               |
+|     CalculateElement                | CalculateWeights.cpp:4  | 79,068 (4 calls) |                  |                  |             |               |
+|  + CalculateElement                 | CalculateWeights.cpp:4  |                  | 15,740 (4 calls) | 15,836 (4 calls) |             |               |
+|     cordic_circ_apfixed<20, 3, 0... | hls_cordic_apfixed.h:51 |                  | 6,736 (8 calls)  | 6,784 (8 calls)  |             |               |
 +-------------------------------------+-------------------------+------------------+------------------+------------------+-------------+---------------+
 
 * Design Size Message Settings

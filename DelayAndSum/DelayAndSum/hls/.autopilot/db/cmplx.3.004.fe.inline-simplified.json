@@ -4,40 +4,40 @@
     "calls": "2 2 2 2",
     "file": "DelayAndSum.cpp",
     "fileloc": 5,
-    "instructions": 178,
+    "instructions": 246,
     "loads": {
       "G": 1,
       "L": 8,
-      "T": 7
+      "T": 8
     },
     "name": "DelayAndSum",
     "stores": {
       "G": 3,
       "L": 4
     },
-    "total_instructions": 10806
+    "total_instructions": 15986
   },
   "1": {
-    "basicblocks": 55,
+    "basicblocks": 61,
     "calls": "",
     "file": "hls_cordic_apfixed.h",
     "fileloc": 51,
-    "instructions": 754,
+    "instructions": 842,
     "loads": {
       "L": 3
     },
-    "name": "cordic_circ_apfixed<18, 3, 0>",
+    "name": "cordic_circ_apfixed<20, 3, 0>",
     "stores": {
       "L": 3
     },
-    "total_instructions": 754
+    "total_instructions": 842
   },
   "2": {
-    "basicblocks": 12,
+    "basicblocks": 23,
     "calls": "1 1",
     "file": "CalculateWeights.cpp",
     "fileloc": 4,
-    "instructions": 169,
+    "instructions": 207,
     "loads": {
       "L": 4
     },
@@ -45,21 +45,21 @@
     "stores": {
       "L": 10
     },
-    "total_instructions": 2657
+    "total_instructions": 3935
   },
   "3": {
-    "basicblocks": 31,
+    "basicblocks": 67,
     "calls": "",
     "file": "hls_cordic_apfixed.h",
     "fileloc": 51,
-    "instructions": 402,
+    "instructions": 930,
     "loads": {
       "L": 3
     },
-    "name": "cordic_circ_apfixed<10, 3, 0>",
+    "name": "cordic_circ_apfixed<22, 3, 0>",
     "stores": {
       "L": 3
     },
-    "total_instructions": 402
+    "total_instructions": 930
   }
 }

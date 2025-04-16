@@ -113,6 +113,8 @@ void XDelayandsum_Set_xpos4(XDelayandsum *InstancePtr, u32 Data);
 u32 XDelayandsum_Get_xpos4(XDelayandsum *InstancePtr);
 void XDelayandsum_Set_axis_packet_size(XDelayandsum *InstancePtr, u32 Data);
 u32 XDelayandsum_Get_axis_packet_size(XDelayandsum *InstancePtr);
+void XDelayandsum_Set_invert_channel(XDelayandsum *InstancePtr, u32 Data);
+u32 XDelayandsum_Get_invert_channel(XDelayandsum *InstancePtr);
 
 void XDelayandsum_InterruptGlobalEnable(XDelayandsum *InstancePtr);
 void XDelayandsum_InterruptGlobalDisable(XDelayandsum *InstancePtr);

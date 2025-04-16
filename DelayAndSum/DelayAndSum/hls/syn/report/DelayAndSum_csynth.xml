@@ -19,25 +19,25 @@
 <PipelineType>yes</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>3.591</EstimatedClockPeriod>
+<EstimatedClockPeriod>3.540</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>34</Best-caseLatency>
-<Average-caseLatency>34</Average-caseLatency>
-<Worst-caseLatency>34</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.170 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.170 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.170 us</Worst-caseRealTimeLatency>
+<Best-caseLatency>43</Best-caseLatency>
+<Average-caseLatency>43</Average-caseLatency>
+<Worst-caseLatency>43</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.215 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.215 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.215 us</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>35</PipelineDepth>
+<PipelineDepth>44</PipelineDepth>
 <Interval-min>1</Interval-min>
 <Interval-max>1</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>DelayAndSum.cpp:64</SourceLocation>
+<SourceLocation>DelayAndSum.cpp:69</SourceLocation>
 </SummaryOfViolations>
 </PerformanceEstimates>
 
@@ -45,8 +45,8 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <DSP>62</DSP>
-<FF>10369</FF>
-<LUT>34244</LUT>
+<FF>8741</FF>
+<LUT>21477</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

@@ -3,8 +3,8 @@
         "name": "DelayAndSum",
         "file": "DelayAndSum.cpp",
         "fileloc": "5",
-        "instructions": "3020",
-        "total_instructions": "3020",
+        "instructions": "1705",
+        "total_instructions": "1705",
         "calls": "",
         "basicblocks": "6",
         "loads": {

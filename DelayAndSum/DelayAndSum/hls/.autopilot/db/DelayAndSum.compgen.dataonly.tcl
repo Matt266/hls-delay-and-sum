@@ -4,7 +4,7 @@ set axilite_register_dict [dict create]
 set port_control {
 phi { 
 	dir I
-	width 8
+	width 20
 	depth 1
 	mode ap_none
 	offset 20
@@ -57,6 +57,14 @@ axis_packet_size {
 	mode ap_none
 	offset 68
 	offset_end 75
+}
+invert_channel { 
+	dir I
+	width 10
+	depth 1
+	mode ap_none
+	offset 76
+	offset_end 83
 }
 ap_start { }
 ap_done { }

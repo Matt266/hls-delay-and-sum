@@ -1,78 +1,92 @@
 # This script segment is generated automatically by AutoPilot
 
-set name DelayAndSum_mul_32s_32s_63_1_1
+set name DelayAndSum_mul_20ns_25ns_44_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
-set name DelayAndSum_mul_63s_7s_69_3_1
+set name DelayAndSum_mul_50s_19s_67_2_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+}
+
+
+set name DelayAndSum_mul_67s_32s_85_3_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
-set name DelayAndSum_mul_69s_32s_85_3_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler DelayAndSum_sparsemux_9_3_19_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
 }
 
 
-set name DelayAndSum_mul_8ns_13ns_20_1_1
+set name DelayAndSum_mul_18ns_24ns_41_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_sparsemux_9_3_7_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
+	::AP::rtl_comp_handler DelayAndSum_sparsemux_9_3_15_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
 }
 
 
-set name DelayAndSum_mul_16ns_19ns_34_1_1
+set name DelayAndSum_mul_16s_16s_32_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_sparsemux_7_2_17_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {auto}
-}
-
-
-set name DelayAndSum_mul_16s_16s_31_1_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler DelayAndSum_mac_muladd_20ns_3ns_22ns_22_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_mac_muladd_8ns_3ns_10ns_10_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+	::AP::rtl_comp_handler DelayAndSum_mac_muladd_18ns_4ns_20ns_20_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_mac_muladd_16s_16s_31s_31_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+	::AP::rtl_comp_handler DelayAndSum_mac_muladd_16s_16s_32s_33_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_mac_mulsub_16s_16s_31s_31_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+	::AP::rtl_comp_handler DelayAndSum_mac_mulsub_16s_16s_32s_32_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_mac_muladd_16s_16s_31ns_31_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+	::AP::rtl_comp_handler DelayAndSum_mac_muladd_16s_16s_33s_33_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler DelayAndSum_mac_mulsub_16s_16s_31ns_31_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+	::AP::rtl_comp_handler DelayAndSum_mac_muladd_16s_16s_33s_34_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler DelayAndSum_mac_mulsub_16s_16s_33s_33_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler DelayAndSum_mac_muladd_16s_16s_34s_34_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler DelayAndSum_mac_mulsub_16s_16s_34s_34_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
 # FIFO definition:
-set ID 47
+set ID 57
 set FifoName DelayAndSum_frp_fifoout
 set InstName DelayAndSum_frp_fifoout_U
 set CoreName ap_simcore_frp_fifoout
@@ -112,7 +126,7 @@ set axilite_register_dict [dict create]
 set port_control {
 phi { 
 	dir I
-	width 8
+	width 20
 	depth 1
 	mode ap_none
 	offset 20
@@ -166,6 +180,14 @@ axis_packet_size {
 	offset 68
 	offset_end 75
 }
+invert_channel { 
+	dir I
+	width 10
+	depth 1
+	mode ap_none
+	offset 76
+	offset_end 83
+}
 ap_start { }
 ap_done { }
 ap_ready { }
@@ -189,7 +211,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 48 \
+			id 58 \
 			corename DelayAndSum_control_axilite \
 			name DelayAndSum_control_s_axi \
 			ports {$port_control} \
@@ -213,7 +235,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 49 \
+    id 59 \
     name in1_real \
     reset_level 0 \
     sync_rst true \
@@ -232,7 +254,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 50 \
+    id 60 \
     name in1_imag \
     reset_level 0 \
     sync_rst true \
@@ -251,7 +273,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 51 \
+    id 61 \
     name in2_real \
     reset_level 0 \
     sync_rst true \
@@ -270,7 +292,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 52 \
+    id 62 \
     name in2_imag \
     reset_level 0 \
     sync_rst true \
@@ -289,7 +311,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 53 \
+    id 63 \
     name in3_real \
     reset_level 0 \
     sync_rst true \
@@ -308,7 +330,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 54 \
+    id 64 \
     name in3_imag \
     reset_level 0 \
     sync_rst true \
@@ -327,7 +349,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 55 \
+    id 65 \
     name in4_real \
     reset_level 0 \
     sync_rst true \
@@ -346,7 +368,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 56 \
+    id 66 \
     name in4_imag \
     reset_level 0 \
     sync_rst true \
@@ -365,7 +387,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 57 \
+    id 67 \
     name out_real_V_data_V \
     reset_level 0 \
     sync_rst true \
@@ -384,7 +406,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 58 \
+    id 68 \
     name out_real_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -403,7 +425,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 59 \
+    id 69 \
     name out_imag_V_data_V \
     reset_level 0 \
     sync_rst true \
@@ -422,7 +444,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 60 \
+    id 70 \
     name out_imag_V_last_V \
     reset_level 0 \
     sync_rst true \

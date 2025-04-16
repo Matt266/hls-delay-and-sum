@@ -30118,9 +30118,21 @@ private:
 
 
 
-typedef ap_fixed<8,3> fxd_8_3_t;
+typedef ap_fixed<20,3> fxd_20_3_t;
 typedef ap_fixed<16,1> fxd_16_1_t;
 typedef ap_fixed<32,16> fxd_32_16_t;
+
+typedef ap_uint<10> uint_10_t;
+const uint_10_t INVERT_IN1_REAL = (1<<0);
+const uint_10_t INVERT_IN1_IMAG = (1<<1);
+const uint_10_t INVERT_IN2_REAL = (1<<2);
+const uint_10_t INVERT_IN2_IMAG = (1<<3);
+const uint_10_t INVERT_IN3_REAL = (1<<4);
+const uint_10_t INVERT_IN3_IMAG = (1<<5);
+const uint_10_t INVERT_IN4_REAL = (1<<6);
+const uint_10_t INVERT_IN4_IMAG = (1<<7);
+const uint_10_t INVERT_OUT_REAL = (1<<8);
+const uint_10_t INVERT_OUT_IMAG = (1<<9);
 
 
 
@@ -30129,7 +30141,7 @@ typedef hls::axis<fxd_16_1_t, 0, 0, 0, (0b00000001 | 0b00010000), true> fxd_16_1
 
 void DelayAndSum(
 
-    fxd_8_3_t *phi,
+    fxd_20_3_t *phi,
 
 
     fxd_32_16_t *fc,
@@ -30145,6 +30157,10 @@ void DelayAndSum(
     uint_26_t *axis_packet_size,
 
 
+
+    uint_10_t *invert_channel,
+
+
     hls::stream<fxd_16_1_t> &in1_real,
     hls::stream<fxd_16_1_t> &in1_imag,
     hls::stream<fxd_16_1_t> &in2_real,
@@ -30157,10 +30173,10 @@ void DelayAndSum(
     hls::stream<fxd_16_1_pkt_t> &out_imag
 );
 # 5 "./CalculateWeights.hpp" 2
-void CalculateElement(fxd_8_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
+void CalculateElement(fxd_20_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag);
 void CalculateWeights(
 
-    fxd_8_3_t phi,
+    fxd_20_3_t phi,
 
 
     fxd_32_16_t fc,
@@ -30183,22 +30199,22 @@ void CalculateWeights(
 );
 # 3 "CalculateWeights.cpp" 2
 
-void CalculateElement(fxd_8_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag){
+void CalculateElement(fxd_20_3_t phi, fxd_32_16_t fc, fxd_32_16_t xpos, fxd_16_1_t &w_real, fxd_16_1_t &w_imag){
 
-    ap_fixed<32,-15> factor = (2*3.14159265359)/(2.99792458*1e5);
-
-
+    ap_fixed<18, -14> factor = (2*3.14159265359)/(2.99792458*1e5);
 
 
 
 
-    w_real = hls::cos(ap_fixed<16,1>((factor*fc*hls::cos(phi)*xpos)))/4;
-    w_imag = hls::sin(ap_fixed<16,1>((factor*fc*hls::cos(phi)*xpos)))/4;
+
+
+    w_real = hls::cos(ap_fixed<18,4>((factor*fc*hls::cos(phi)*xpos)));
+    w_imag = hls::sin(ap_fixed<18,4>((factor*fc*hls::cos(phi)*xpos)));
 }
 
 void CalculateWeights(
 
-    fxd_8_3_t phi,
+    fxd_20_3_t phi,
 
 
     fxd_32_16_t fc,

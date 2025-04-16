@@ -1,0 +1,351 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum\DelayAndSum.hlsrun_csim_summary, at 04/16/25 16:11:18
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum -config C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg -cmdlineconfig C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum/hls/config.cmdline
+INFO: [HLS 200-10] For user 'matt' on host 'laptop-matt' (Windows NT_amd64 version 10.0) on Wed Apr 16 16:11:20 +0200 2025
+INFO: [HLS 200-10] In directory 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum'
+INFO: [HLS 200-2005] Using work_dir C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=DelayAndSum.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSum.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=CalculateWeights.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/CalculateWeights.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=CalculateWeights.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/CalculateWeights.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=DelayAndSumTB.cpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/DelayAndSumTB.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=TestData.hpp' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/TestData.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.cflags=-DALLOW_EMPTY_HLS_STREAM_READS' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(24)
+INFO: [HLS 200-1465] Applying ini 'syn.top=DelayAndSum' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu48dr-ffvg1517-2-e' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu48dr-ffvg1517-2-e'
+INFO: [HLS 200-1465] Applying ini 'clock=200MHz' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying ini 'cosim.rtl=vhdl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(26)
+INFO: [HLS 200-1465] Applying ini 'cosim.trace_level=port' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(23)
+INFO: [HLS 200-1465] Applying ini 'cosim.wave_debug=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(25)
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_address=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'csim.sanitize_undefined=0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying ini 'package.ip.description=4 channel delay-and-sum beamformer' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(16)
+INFO: [HLS 200-1465] Applying ini 'package.ip.display_name=DelayAndSum' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(15)
+INFO: [HLS 200-1465] Applying ini 'package.ip.vendor=othr' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(22)
+INFO: [HLS 200-1465] Applying ini 'package.ip.version=2.0' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(27)
+INFO: [HLS 200-1465] Applying ini 'package.output.file=C:\Users\matt\OneDrive\Dokumente\__Master\Vivado\Vitis_HLS\DelayAndSum\DelayAndSum\DelayAndSum\DelayAndSum.zip' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying ini 'syn.interface.s_axilite_auto_restart_counter=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(28)
+INFO: [HLS 200-1465] Applying ini 'syn.interface.s_axilite_sw_reset=1' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(29)
+INFO: [HLS 200-1465] Applying ini 'syn.rtl.reset=state' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(30)
+INFO: [HLS 200-1465] Applying ini 'vivado.rtl=vhdl' from C:/Users/matt/OneDrive/Dokumente/__Master/Vitis_HLS/hls-delay-and-sum/DelayAndSum/hls_config.cfg(21)
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../DelayAndSumTB.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../DelayAndSumTB.cpp:2:
+In file included from ../../../../DelayAndSum.hpp:5:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/ap_int.h:10:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis_HLS/2024.1/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis_HLS/2024.1/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.2440462291402127
+
+========== IMAG ==========
+Output:   0.0000000000000000
+Expected: -0.0000000000000000
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.2430847637685734
+
+========== IMAG ==========
+Output:   0.0000000000000000
+Expected: -0.0000000000000000
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.2401058217869655
+
+========== IMAG ==========
+Output:   0.0000000000000000
+Expected: 0.0000000000000000
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.2348275103252427
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.2267862759994355
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.2153478498218417
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.1997255070129915
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.1790082191201643
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.1522014713875717
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.1182832743884270
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.0762771066986594
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.0253421031265920
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.0351212744717594
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.1053545146516800
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.1851207854867048
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2735917695028874
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.3692550228526043
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.4698570844095200
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.5723978044233653
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.6731895053328082
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.7679902887469618
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.8522140496358930
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.9212109687146569
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.9706023151003365
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.9966436135714932
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.9965821930220781
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.9689704350295494
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.9138959981893601
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.8330956263217733
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.7299297487776820
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.6092099130152197
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.4768882728742158
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.3396354347540179
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2043473221133161
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.0776310599246980
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.0346773298423022
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.1279148619938044
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.1988751516005283
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.2459507799971463
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.2691290154619360
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.2698523921461397
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.2507697874139796
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.2154132171460071
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.1678397318796209
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.1122766171238750
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: -0.0528024543828814
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.0069120951943313
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.0637900190361293
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.1154563581004405
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.1602739638567456
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.1973175687904498
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2263008696530781
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2474726109518440
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2614969035003602
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2693308010806085
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2721091136826068
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2710431279978769
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2673367839313603
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2621212218032349
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2564066272218570
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2510489986362671
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2467288002494814
+
+========== IMAG ==========
+Output:   0.0000000000000000
+Expected: -0.0000000000000000
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2439383436918103
+
+========== IMAG ==========
+Output:   0.0000000000000000
+Expected: 0.0000000000000000
+
+========== REAL ==========
+Output:   0.0000000000000000
+Expected: 0.2429750481753171
+
+========== IMAG ==========
+Output:   0.0000000000000000
+Expected: 0.0000000000000000
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1
+@E Simulation failed: Function 'main' returns nonzero value '1'.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: 4
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 0 seconds. Total elapsed time: 7.501 seconds; peak allocated memory: 231.012 MB.

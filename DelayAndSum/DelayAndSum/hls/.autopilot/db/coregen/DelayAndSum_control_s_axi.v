@@ -32,13 +32,14 @@ module DelayAndSum_control_s_axi
     output wire                          RVALID,
     input  wire                          RREADY,
     output wire                          interrupt,
-    output wire [7:0]                    phi,
+    output wire [19:0]                   phi,
     output wire [31:0]                   fc,
     output wire [31:0]                   xpos1,
     output wire [31:0]                   xpos2,
     output wire [31:0]                   xpos3,
     output wire [31:0]                   xpos4,
     output wire [25:0]                   axis_packet_size,
+    output wire [9:0]                    invert_channel,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
@@ -71,8 +72,8 @@ module DelayAndSum_control_s_axi
 // 0x10 : Auto Restart Counter 0
 //        bit 31~0 - auto_restart_counter_0 (Read/Write)
 // 0x14 : Data signal of phi
-//        bit 7~0 - phi[7:0] (Read/Write)
-//        others  - reserved
+//        bit 19~0 - phi[19:0] (Read/Write)
+//        others   - reserved
 // 0x18 : reserved
 // 0x1c : Data signal of fc
 //        bit 31~0 - fc[31:0] (Read/Write)
@@ -93,6 +94,10 @@ module DelayAndSum_control_s_axi
 //        bit 25~0 - axis_packet_size[25:0] (Read/Write)
 //        others   - reserved
 // 0x48 : reserved
+// 0x4c : Data signal of invert_channel
+//        bit 9~0 - invert_channel[9:0] (Read/Write)
+//        others  - reserved
+// 0x50 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
@@ -116,6 +121,8 @@ localparam
     ADDR_XPOS4_CTRL              = 7'h40,
     ADDR_AXIS_PACKET_SIZE_DATA_0 = 7'h44,
     ADDR_AXIS_PACKET_SIZE_CTRL   = 7'h48,
+    ADDR_INVERT_CHANNEL_DATA_0   = 7'h4c,
+    ADDR_INVERT_CHANNEL_CTRL     = 7'h50,
     WRIDLE                       = 2'd0,
     WRDATA                       = 2'd1,
     WRRESP                       = 2'd2,
@@ -157,13 +164,14 @@ localparam
     wire                          infnt_auto_restart;
     reg  [31:0]                   auto_restart_counter = 'b0;
     wire                          auto_restart_enable;
-    reg  [7:0]                    int_phi = 'b0;
+    reg  [19:0]                   int_phi = 'b0;
     reg  [31:0]                   int_fc = 'b0;
     reg  [31:0]                   int_xpos1 = 'b0;
     reg  [31:0]                   int_xpos2 = 'b0;
     reg  [31:0]                   int_xpos3 = 'b0;
     reg  [31:0]                   int_xpos4 = 'b0;
     reg  [25:0]                   int_axis_packet_size = 'b0;
+    reg  [9:0]                    int_invert_channel = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -278,7 +286,7 @@ always @(posedge ACLK) begin
                     rdata <= int_auto_restart_counter_0;
                 end
                 ADDR_PHI_DATA_0: begin
-                    rdata <= int_phi[7:0];
+                    rdata <= int_phi[19:0];
                 end
                 ADDR_FC_DATA_0: begin
                     rdata <= int_fc[31:0];
@@ -297,6 +305,9 @@ always @(posedge ACLK) begin
                 end
                 ADDR_AXIS_PACKET_SIZE_DATA_0: begin
                     rdata <= int_axis_packet_size[25:0];
+                end
+                ADDR_INVERT_CHANNEL_DATA_0: begin
+                    rdata <= int_invert_channel[9:0];
                 end
             endcase
         end
@@ -320,6 +331,7 @@ assign xpos2               = int_xpos2;
 assign xpos3               = int_xpos3;
 assign xpos4               = int_xpos4;
 assign axis_packet_size    = int_axis_packet_size;
+assign invert_channel      = int_invert_channel;
 // int_interrupt
 always @(posedge ACLK) begin
     if (ARESET)
@@ -486,13 +498,13 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_phi[7:0]
+// int_phi[19:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_phi[7:0] <= 0;
+        int_phi[19:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_PHI_DATA_0)
-            int_phi[7:0] <= (WDATA[31:0] & wmask) | (int_phi[7:0] & ~wmask);
+            int_phi[19:0] <= (WDATA[31:0] & wmask) | (int_phi[19:0] & ~wmask);
     end
 end
 
@@ -553,6 +565,16 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_AXIS_PACKET_SIZE_DATA_0)
             int_axis_packet_size[25:0] <= (WDATA[31:0] & wmask) | (int_axis_packet_size[25:0] & ~wmask);
+    end
+end
+
+// int_invert_channel[9:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_invert_channel[9:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_INVERT_CHANNEL_DATA_0)
+            int_invert_channel[9:0] <= (WDATA[31:0] & wmask) | (int_invert_channel[9:0] & ~wmask);
     end
 end
 

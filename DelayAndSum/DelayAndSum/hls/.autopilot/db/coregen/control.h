@@ -21,8 +21,8 @@
 // 0x10 : Auto Restart Counter 0
 //        bit 31~0 - auto_restart_counter_0 (Read/Write)
 // 0x14 : Data signal of phi
-//        bit 7~0 - phi[7:0] (Read/Write)
-//        others  - reserved
+//        bit 19~0 - phi[19:0] (Read/Write)
+//        others   - reserved
 // 0x18 : reserved
 // 0x1c : Data signal of fc
 //        bit 31~0 - fc[31:0] (Read/Write)
@@ -43,6 +43,10 @@
 //        bit 25~0 - axis_packet_size[25:0] (Read/Write)
 //        others   - reserved
 // 0x48 : reserved
+// 0x4c : Data signal of invert_channel
+//        bit 9~0 - invert_channel[9:0] (Read/Write)
+//        others  - reserved
+// 0x50 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define CONTROL_ADDR_AP_CTRL               0x00
@@ -50,7 +54,7 @@
 #define CONTROL_ADDR_IER                   0x08
 #define CONTROL_ADDR_ISR                   0x0c
 #define CONTROL_ADDR_PHI_DATA              0x14
-#define CONTROL_BITS_PHI_DATA              8
+#define CONTROL_BITS_PHI_DATA              20
 #define CONTROL_ADDR_FC_DATA               0x1c
 #define CONTROL_BITS_FC_DATA               32
 #define CONTROL_ADDR_XPOS1_DATA            0x24
@@ -63,3 +67,5 @@
 #define CONTROL_BITS_XPOS4_DATA            32
 #define CONTROL_ADDR_AXIS_PACKET_SIZE_DATA 0x44
 #define CONTROL_BITS_AXIS_PACKET_SIZE_DATA 26
+#define CONTROL_ADDR_INVERT_CHANNEL_DATA   0x4c
+#define CONTROL_BITS_INVERT_CHANNEL_DATA   10
