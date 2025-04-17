@@ -164,8 +164,7 @@ class DelayAndSum(DefaultIP):
     __AXIS_PACKET_SIZE_DTYPE = 'fxp-u26/0'
 
     __INVERT_CHANNEL_OFFSET = 0x4c
-    #TODO: length of 10 makes it impossible to set invert_out_imag to True. Check why this is, which parts of the code it affects and fix it.
-    __INVERT_CHANNEL_LEN = 11
+    __INVERT_CHANNEL_LEN = 10
     __INVERT_CHANNEL_DTYPE = 'fxp-u10/0'
     __INVERT_CHANNEL_INVERT_IN1_REAL = (1<<0)
     __INVERT_CHANNEL_INVERT_IN1_IMAG = (1<<1)
@@ -187,6 +186,14 @@ class DelayAndSum(DefaultIP):
     def __set_register_int(self, value: int, offset, dtype):
         _value = int(Fxp(value, raw=False, dtype=dtype).raw())
         self.write(offset, _value)
+
+    def __get_register_uint(self, offset, len, dtype):
+        _value = self.read(offset)
+        _value = Bits(uint=_value, length=len).unpack(f'uint:{len}')
+        _value = Fxp(_value, raw=True, dtype=dtype).astype(int).tolist()
+        return _value[0]
+    
+    __set_register_uint = __set_register_int
 
     def __get_register_float(self, offset, len, dtype):
         _value = self.read(offset)
@@ -210,13 +217,16 @@ class DelayAndSum(DefaultIP):
     def __reg_property_int(offset, len, dtype, get_func = __get_register_int, set_func = __set_register_int):
         return property(partial(get_func, offset = offset, len = len, dtype = dtype), partial(set_func, offset = offset, dtype = dtype))
     
+    def __reg_property_uint(offset, len, dtype, get_func = __get_register_uint, set_func = __set_register_uint):
+        return property(partial(get_func, offset = offset, len = len, dtype = dtype), partial(set_func, offset = offset, dtype = dtype))
+    
     def __reg_property_float(offset, len, dtype, get_func = __get_register_float, set_func = __set_register_float):
         return property(partial(get_func, offset = offset, len = len, dtype = dtype), partial(set_func, offset = offset, dtype = dtype))
     
     def __flag_property(register, flag, get_func = __get_flag, set_func = __set_flag):
         return property(partial(get_func, register = register, flag = flag), partial(set_func, register = register, flag = flag))
 
-    ctrl = __reg_property_int(__CTRL_OFFSET, __CTRL_LEN, __CTRL_DTYPE)
+    ctrl = __reg_property_uint(__CTRL_OFFSET, __CTRL_LEN, __CTRL_DTYPE)
     ctrl_ap_start = __flag_property(ctrl, __CTRL_AP_START)
     ctrl_ap_done = __flag_property(ctrl, __CTRL_AP_DONE)
     ctrl_ap_idle = __flag_property(ctrl, __CTRL_AP_IDLE)
@@ -225,18 +235,18 @@ class DelayAndSum(DefaultIP):
     ctrl_sw_reset = __flag_property(ctrl, __CTRL_SW_RESET)
     ctrl_interrupt = __flag_property(ctrl, __CTRL_INTERRUPT)
 
-    gier = __reg_property_int(__GIER_OFFSET, __GIER_LEN, __GIER_DTYPE)
+    gier = __reg_property_uint(__GIER_OFFSET, __GIER_LEN, __GIER_DTYPE)
     gier_enable = __flag_property(gier, __GIER_ENABLE)
          
-    ip_ier = __reg_property_int(__IP_IER_OFFSET, __IP_IER_LEN, __IP_IER_DTYPE)
+    ip_ier = __reg_property_uint(__IP_IER_OFFSET, __IP_IER_LEN, __IP_IER_DTYPE)
     ip_ier_chan0_int_en = __flag_property(ip_ier, __IP_IER_CHAN0_INT_EN)
     ip_ier_chan1_int_en = __flag_property(ip_ier, __IP_IER_CHAN1_INT_EN)
 
-    ip_isr = __reg_property_int(__IP_ISR_OFFSET, __IP_ISR_LEN, __IP_ISR_DTYPE)
+    ip_isr = __reg_property_uint(__IP_ISR_OFFSET, __IP_ISR_LEN, __IP_ISR_DTYPE)
     ip_isr_chan0_int_st = __flag_property(ip_isr, __IP_ISR_CHAN0_INT_ST)
     ip_isr_chan1_int_st = __flag_property(ip_isr, __IP_ISR_CHAN1_INT_ST)
 
-    auto_restart_counter = __reg_property_int(__AUTO_RESTART_COUNTER_0_OFFSET, __AUTO_RESTART_COUNTER_0_LEN, __AUTO_RESTART_COUNTER_0_DTYPE)
+    auto_restart_counter = __reg_property_uint(__AUTO_RESTART_COUNTER_0_OFFSET, __AUTO_RESTART_COUNTER_0_LEN, __AUTO_RESTART_COUNTER_0_DTYPE)
 
     phi = __reg_property_float(__PHI_OFFSET, __PHI_LEN, __PHI_DTYPE)
     fc = __reg_property_float(__FC_OFFSET, __FC_LEN, __FC_DTYPE)
@@ -244,9 +254,9 @@ class DelayAndSum(DefaultIP):
     xpos2 = __reg_property_float(__XPOS2_OFFSET, __XPOS2_LEN, __XPOS2_DTYPE)
     xpos3 = __reg_property_float(__XPOS3_OFFSET, __XPOS3_LEN, __XPOS3_DTYPE)
     xpos4 = __reg_property_float(__XPOS4_OFFSET, __XPOS4_LEN, __XPOS4_DTYPE)
-    axis_packet_size = __reg_property_int(__AXIS_PACKET_SIZE_OFFSET, __AXIS_PACKET_SIZE_LEN, __AXIS_PACKET_SIZE_DTYPE)
+    axis_packet_size = __reg_property_uint(__AXIS_PACKET_SIZE_OFFSET, __AXIS_PACKET_SIZE_LEN, __AXIS_PACKET_SIZE_DTYPE)
 
-    invert_channel = __reg_property_int(__INVERT_CHANNEL_OFFSET, __INVERT_CHANNEL_LEN, __INVERT_CHANNEL_DTYPE)
+    invert_channel = __reg_property_uint(__INVERT_CHANNEL_OFFSET, __INVERT_CHANNEL_LEN, __INVERT_CHANNEL_DTYPE)
     invert_in1_real = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_IN1_REAL)
     invert_in1_imag = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_IN1_IMAG)
     invert_in2_real = __flag_property(invert_channel, __INVERT_CHANNEL_INVERT_IN2_REAL)
