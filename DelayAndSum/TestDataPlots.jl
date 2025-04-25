@@ -2,7 +2,7 @@ using BeamLib
 using Plots
 import Measures
 xpos1 = [-6e-2, -2e-2, 2e-2, 6e-2]
-pa = BeamLib.PhasedArray1D(xpos1)
+pa = BeamLib.IsotropicArray(xpos1)
 weights = BeamLib.dsb_weights(pa, 3.75e9, deg2rad(110))
 faxis = LinRange(3.7e9, 3.8e9, 1024)
 ϕaxis = LinRange(0, 180, 128)
@@ -15,7 +15,7 @@ xlabel!("Angle in degree")
 ylabel!("Frequency in GHz")
 
 xpos2 = xpos1*10
-pa = BeamLib.PhasedArray1D(xpos2)
+pa = BeamLib.IsotropicArray(xpos2)
 weights = BeamLib.dsb_weights(pa, 433e6, deg2rad(110))
 faxis = LinRange(432e6, 434e6, 1024)
 ϕaxis = LinRange(0, 180, 128)
@@ -28,7 +28,7 @@ xlabel!("Angle in degree")
 ylabel!("Frequency in MHz")
 
 xpos2 = xpos1*1000
-pa = BeamLib.PhasedArray1D(xpos2)
+pa = BeamLib.IsotropicArray(xpos2)
 weights = BeamLib.dsb_weights(pa, 4e6, deg2rad(110))
 faxis = LinRange(3.5e6, 4.5e6, 1024)
 ϕaxis = LinRange(0, 180, 128)

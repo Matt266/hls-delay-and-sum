@@ -3,7 +3,7 @@ using BeamLib
 
 using Format
 
-pa = PhasedArray1D(Vector(-6e-2:4e-2:6e-2))
+pa = IsotropicArray(Vector(-6e-2:4e-2:6e-2))
 weights = dsb_weights(pa, 3.75e9, deg2rad(70))
 ϕaxis = LinRange(0, 180, 64)
 inputs = steerphi.(Ref(pa),  Ref(3.75e9), deg2rad.(ϕaxis))
@@ -28,7 +28,7 @@ constexpr double results_imag[NUM_ANGLES] = {:};
 #endif //__TEST_DATA_HPP__"
 
 content = format(fmt, 
-    length(pa.elements),
+    size(pa.r)[2],
     length(ϕaxis),
     replace(string(real.(weights)),"["=>"{", "]"=>"}"),
     replace(string(imag.(weights)),"["=>"{", "]"=>"}"),
