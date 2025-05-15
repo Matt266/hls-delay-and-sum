@@ -1,1 +1,1 @@
-# Delay and Sum implementation in Vitis HLS
+# Delay-and-Sum Beamformer for the RFSoC4x2 in Vitis HLS
