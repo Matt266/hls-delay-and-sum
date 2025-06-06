@@ -7,4 +7,4 @@ The HLS code can be found under `DelayAndSum/`.
 `pynq_driver/` contains a driver for usage of the HLS design with the [PYNQ framework](https://www.pynq.io/).
 
 To rerun the test data generation, execute the Julia file `GenerateTestData.jl`. The required `BeamLib.jl` package
-can be found on [GitHub](https://github.com/Matt266/beamlib.git), alongside installation instructions.
+can be found on [GitHub](https://github.com/Matt266/beamlib/releases/tag/ARC2025), alongside installation instructions.
